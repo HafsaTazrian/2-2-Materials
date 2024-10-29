@@ -1,0 +1,39 @@
+1.Setbits
+
+2.amk dhorche, 
+string a kon char highest bar ase r kotobar ase
+
+3.ekta array te element gualr frequency count korte bolse
+
+4.Ekta word er first ar last digit 2 ta register e show kora
+
+5.fibonacci
+6.Lower case to upper case
+7.5423h er 5 ar 3 alada korte diche
+8.ekta number er binary te koyta 1 ase eita jigaise amare
+9.Ekta 4 digit er number er first ar 
+last digit 2 ta register e show korte hobe
+10.Aabbcdefa 
+Ei string thke sobcheye je char besibar ase seta ber 
+kore print kra.  
+Mane  konta besibar ase and seta koto
+11.AX register e 1234h ase
+Akhane 1 2 3 4 alada kore jog
+12.Amk k akta string theke character 
+gula k alada korte bolchilo
+13.array er maximum ar second maximum element
+14.Uppercase to lower 
+abar lowercase to upper case convert korte dise
+15.Akta number theke digit winged gluttony kore 
+summation ber kora
+16.hex to bcd
+17.String theke number remove kore...only alphabet show kora
+18.ekta number er 1st and last digit
+19.1234 ei number theke 
+1,2,3,4 alada kore sum kor
+1+2+3+4=10=done
+20.Lowercase to upercase=alif
+
+
+
+

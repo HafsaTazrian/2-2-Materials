@@ -1,0 +1,13 @@
+1.armstrong disilo..divide overflow ase 
+tokhon bollo logic bujhao
+2.Delete duplicate without sort
+3.Hexa to bcd
+4.Armstrong number
+5.ekta 8 bit hex number e koyta 1 ache eitao dite pare
+6.Amake duita string anagram kina check korte disilo
+7.Write an assembly program to remove trplicate element
+from array
+8.Palindrome krte dislo proc dye
+9.স্ট্রিং রিভার্স ট্রাভার্স করার সময় প্রতি ৩য় ক্যারেক্টার 
+অন্য একটা যায়গায় এসেন্ডিং অরডার এ রাখতে বলছে
+10.

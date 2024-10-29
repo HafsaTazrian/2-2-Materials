@@ -1,0 +1,35 @@
+1.Write an assemly program to find the number 1 in an 8-bit
+hexadecimal number. (done)
+
+2.Suppose you have a string "kuet cse batch eighteen". Now
+count the vowel and store it into a memory location.
+
+3.Suppose you have a string "hy7hdsf9h88k", now separete
+the character and number and store it in different 
+memory location. (done)
+
+4.Suppose you have password in different memory location
+and input password from different memory location and if 
+match or umatch store y/n in different memory location.
+
+5.find Maximum minimum
+
+6.Ekta Substring onno ekta string e ase kina check korte 
+bolse
+
+7.celsius to farenheit using proc (done)
+
+8.Hex to BCD
+
+9.Array hote duplicate element delete
+
+10.find 2nd and 1st max number from array
+
+11.ekta string ulta kore one interval e print korte hbe
+
+
+
+
+
+
+
