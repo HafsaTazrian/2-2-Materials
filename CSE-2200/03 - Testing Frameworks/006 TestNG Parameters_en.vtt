@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00.210 --> 00:01.630
+Best, best, parametres.
+
+00:01.950 --> 00:08.760
+So if you come across a problem that you want to run a single best case for multiple input values,
+
+00:09.210 --> 00:17.670
+then in that case, it's very easy to give multiple values and run the same best guess multiple times
+
+00:17.670 --> 00:19.210
+using best in Japan.
+
+00:20.010 --> 00:26.580
+So suppose you want to perform a logging best case and they want to pass different username and password
+
+00:26.820 --> 00:29.610
+to test different, different users.
+
+00:30.150 --> 00:35.610
+So in this case you can use test in Japan it and provide data using these parameters.
+
+00:36.580 --> 00:40.690
+Actually the better approach is to do using external data provider.
+
+00:41.080 --> 00:45.970
+But we are going to learn from the thing like how we can do the basic this in your family does.
+
+00:46.000 --> 00:52.750
+And then we will go on to the next part where we can get it from the data provider object and we can
+
+00:52.750 --> 00:54.220
+get it from the Excel as well.
+
+00:55.460 --> 01:00.340
+So that is the example, you know, and so we will be more closed.
+
+01:04.970 --> 01:07.200
+So let us open this one.
+
+01:07.220 --> 01:09.320
+This and you permit us or give.
+
+01:09.320 --> 01:10.970
+So I have ordered dinner.
+
+01:10.970 --> 01:14.300
+A desk is for my oversight search box.
+
+01:14.510 --> 01:19.040
+So I want to use the search functionality and that's due to four different search buttons.
+
+01:19.400 --> 01:22.160
+So that is how can I pass the baton with that?
+
+01:22.580 --> 01:30.920
+So here we are using this act by meters annotation and they're passing such textbooks, which is again
+
+01:30.920 --> 01:35.570
+and I are, which is the barometer of the disk is adequate.
+
+01:36.140 --> 01:42.170
+So here we are opening the browser, Chrome browser and launching the United Q automated.
+
+01:43.250 --> 01:50.660
+Then we are using send used to on send the values in the search boxes and that value is coming from
+
+01:50.660 --> 01:51.440
+this barometer.
+
+01:51.950 --> 01:57.160
+So actually from there we are getting this value is from our test and you don't excuse.
+
+01:58.480 --> 02:02.560
+So if you open this here in the middle.
+
+02:02.830 --> 02:03.240
+Yes.
+
+02:03.250 --> 02:05.650
+I think the value here as Adam.
+
+02:06.460 --> 02:06.850
+Okay.
+
+02:07.180 --> 02:08.890
+So now let's run this.
+
+02:09.460 --> 02:12.310
+So then you're using destiny to set up a value.
+
+02:12.520 --> 02:16.470
+You have to run this file and you have to run this suit.
+
+02:17.380 --> 02:21.280
+If you run individual this, it will give you an exceptionally blockbuster.
+
+02:23.540 --> 02:25.100
+Is something went wrong.
+
+02:25.130 --> 02:27.760
+Okay, this is not the name of the class.
+
+02:28.130 --> 02:32.810
+I have to give the name of the best class here, which is dense energy.
+
+02:34.070 --> 02:35.960
+Maran does.
+
+02:37.690 --> 02:38.080
+Okay.
+
+02:38.170 --> 02:39.670
+So let's run this one.
+
+02:53.290 --> 02:53.680
+Okay.
+
+02:54.160 --> 02:56.020
+We'll start Chrome browser now.
+
+03:09.830 --> 03:15.410
+So it will right up in this large box and click on the search button.
+
+03:19.200 --> 03:19.640
+Okay.
+
+03:21.160 --> 03:27.740
+So in this way we can pass the value from our testing you detect from inside and how many values we
+
+03:27.740 --> 03:32.480
+are passing for the barometer that many times the test case will execute.

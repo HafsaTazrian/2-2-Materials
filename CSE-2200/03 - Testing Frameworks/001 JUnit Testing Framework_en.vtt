@@ -1,0 +1,589 @@
+WEBVTT
+
+00:00.540 --> 00:05.130
+In this video we are going to learn about J unit testing framework in Java.
+
+00:05.880 --> 00:11.760
+What is g j unit is widely used testing framework along with Java programming language.
+
+00:12.180 --> 00:18.420
+You can use this automation framework for both unit testing as well as your UI testing, selenium testing,
+
+00:18.420 --> 00:23.790
+mobile application testing, API testing, any type of testing you can use this framework.
+
+00:24.420 --> 00:27.510
+It help us to define the flow of execution of our code.
+
+00:28.440 --> 00:30.960
+That means our test cases.
+
+00:30.960 --> 00:35.430
+What are the things we want to do before this test case begins?
+
+00:35.730 --> 00:39.990
+And so filter down activities that we want to do after our test execution.
+
+00:40.290 --> 00:45.810
+So basically, to define this particular game and it helps us.
+
+00:46.530 --> 00:50.070
+JAY And it is built on idea first testing and then coding.
+
+00:50.400 --> 00:55.350
+That's why it helps us to increase our productivity in terms of writing our test cases.
+
+00:55.680 --> 01:01.350
+So what it provides, it provides kind of annotations like we have seen right in override that is then
+
+01:01.350 --> 01:03.840
+patient direct and then we write already.
+
+01:04.410 --> 01:07.950
+So these are nothing but game and provides us multiple annotations.
+
+01:09.160 --> 01:13.820
+To specify our species and therefore look, okay, so we know how to do it.
+
+01:13.840 --> 01:14.800
+A mentoring job.
+
+01:15.220 --> 01:20.170
+If you add annotation access to it, the method becomes your best guess.
+
+01:20.650 --> 01:24.940
+Okay, so this is what I meant by testing framework.
+
+01:26.110 --> 01:26.680
+Definitely.
+
+01:26.680 --> 01:28.960
+We will get into more examples.
+
+01:29.350 --> 01:29.860
+Example.
+
+01:30.910 --> 01:33.590
+So what are the features of this gene?
+
+01:33.760 --> 01:34.420
+Distinctive.
+
+01:36.010 --> 01:37.540
+First of all, it is open source.
+
+01:38.050 --> 01:38.520
+Yes.
+
+01:38.530 --> 01:41.500
+It allows users to write and run test effectively.
+
+01:41.740 --> 01:46.270
+It provides various types of patients to identify test methods.
+
+01:46.270 --> 01:49.990
+Like I said, if you lose access, the method becomes the best case.
+
+01:50.890 --> 01:53.150
+It's always different types of assertion.
+
+01:53.170 --> 01:58.720
+So assertions are very important part of when we are executing our test, like we want to compare the
+
+01:58.720 --> 02:04.430
+expected test results with what actually we are getting and we want to have the best solution that 30
+
+02:04.430 --> 02:06.790
+to 30 folds and things like that.
+
+02:07.120 --> 02:08.660
+So that's the position.
+
+02:08.680 --> 02:14.830
+My thoughts are they had a provider in their third class of gene, which it also gives test that I'm
+
+02:14.830 --> 02:21.550
+not running test effect gives it are not one of the best suited gives runners for test cases or some
+
+02:21.550 --> 02:24.490
+classes we want to execute before our test.
+
+02:25.270 --> 02:28.420
+It is very simple and hence it saves lots of time.
+
+02:28.870 --> 02:32.740
+It provides a way to organize your test cases in the form of the suit.
+
+02:33.070 --> 02:40.300
+It gives test cases results in simple and elegant way, and we can integrate different types of reports.
+
+02:40.300 --> 02:47.500
+Also, reporting frameworks are also they're supported by Java and you reports extended so we can integrate
+
+02:47.500 --> 02:51.370
+with the unit to get, you know, beautiful sets.
+
+02:53.120 --> 02:57.470
+You can integrate your unit with the cleat under Studio, Malvern and Bridle.
+
+02:57.470 --> 03:00.590
+Any types of things now like in Village.
+
+03:01.190 --> 03:04.200
+So all these things we can integrate them into with Jane.
+
+03:04.970 --> 03:10.400
+Now let us move to the example, but getting started with the example.
+
+03:10.610 --> 03:14.380
+We need to add the gym with our language lives in our eclipse.
+
+03:14.750 --> 03:15.620
+So let us run.
+
+03:15.980 --> 03:17.600
+Let us learn how to do that.
+
+03:18.050 --> 03:21.170
+So for this project, I want to add gene libraries.
+
+03:21.200 --> 03:24.200
+What I will do is I click on this project.
+
+03:24.590 --> 03:30.500
+I will go to the base part, click on Add libraries, select join it.
+
+03:31.720 --> 03:32.140
+Jane.
+
+03:32.180 --> 03:34.150
+It is the latest one here.
+
+03:34.840 --> 03:35.410
+Finish.
+
+03:37.620 --> 03:47.700
+City unified is the latest one said okay so yeah June five libraries were added to add eclipse so as
+
+03:47.700 --> 03:55.710
+we added the Jane June five libraries now let us see how we can use Jane locations and create this.
+
+03:56.430 --> 03:58.920
+So first Sam adding that particular.
+
+04:00.370 --> 04:02.350
+That is my best guess.
+
+04:02.350 --> 04:02.650
+One.
+
+04:04.790 --> 04:06.320
+Public void.
+
+04:07.510 --> 04:08.410
+Best case one.
+
+04:09.560 --> 04:10.370
+This is America.
+
+04:10.490 --> 04:11.750
+This is not here to test.
+
+04:12.560 --> 04:14.500
+Now take it as a best case.
+
+04:14.510 --> 04:15.020
+I am one.
+
+04:15.230 --> 04:20.300
+I need to adhere to annotation at best and import the required.
+
+04:22.080 --> 04:22.470
+Plus.
+
+04:23.380 --> 04:27.610
+So now this automatically becomes my best guess.
+
+04:27.880 --> 04:28.140
+But.
+
+04:29.460 --> 04:29.880
+Okay.
+
+04:30.270 --> 04:33.240
+So let's write the first case.
+
+04:37.730 --> 04:38.030
+Okay.
+
+04:38.840 --> 04:39.830
+Now we will.
+
+04:39.840 --> 04:45.320
+I want to add another method which I want to execute before each my best case.
+
+04:45.680 --> 04:47.630
+So here I have this one.
+
+04:48.200 --> 04:49.960
+Let us add another basket.
+
+04:50.240 --> 04:51.350
+Is this is to.
+
+04:52.390 --> 04:52.660
+Okay.
+
+04:52.930 --> 04:56.410
+But each test case, I want to execute the method.
+
+04:57.550 --> 04:58.210
+That is.
+
+04:59.810 --> 05:03.110
+That I can call it as my setup method.
+
+05:03.380 --> 05:08.360
+I want to do some kind of set up like logging before my best guess execution rate.
+
+05:08.720 --> 05:11.630
+So for that, I will add this.
+
+05:14.700 --> 05:15.270
+Before.
+
+05:16.490 --> 05:20.030
+It's it has to execute before each and every test.
+
+05:20.630 --> 05:25.400
+So for this, we will use annotation before test.
+
+05:29.240 --> 05:30.980
+Add in G.
+
+05:31.670 --> 05:31.930
+Okay.
+
+05:32.270 --> 05:37.610
+And now I need to do some third action activities.
+
+05:37.610 --> 05:42.680
+Also, after each test, maybe I have to log out after each of my test execution.
+
+05:43.370 --> 05:46.910
+So I'm writing another method that is out there now.
+
+05:49.620 --> 05:50.100
+And.
+
+05:52.280 --> 06:01.660
+It should be executed the best for the suspension of this and Legal Aid and nationhood act after.
+
+06:03.880 --> 06:04.960
+Let us import important.
+
+06:06.660 --> 06:07.140
+This.
+
+06:09.740 --> 06:10.360
+Actor.
+
+06:12.070 --> 06:18.910
+Now I want to add so it doesn't matter which I want to run before the class execution.
+
+06:19.510 --> 06:27.280
+So I want to open the browser specific browser, say Chrome browser, and I want to launch particular.
+
+06:27.280 --> 06:34.780
+You are looking before even the execution of any setup method starts before this class execute.
+
+06:34.780 --> 06:37.030
+I want to do certain actions.
+
+06:37.090 --> 06:37.420
+Right.
+
+06:37.840 --> 06:41.050
+That should be mine before class.
+
+06:42.230 --> 06:42.740
+Midterm.
+
+06:46.350 --> 06:48.210
+I want to do this before class.
+
+06:49.260 --> 06:50.100
+So I tried.
+
+06:50.250 --> 06:51.540
+Oh, I don't know.
+
+06:53.560 --> 06:53.840
+Class.
+
+06:57.560 --> 06:57.890
+Okay.
+
+06:58.640 --> 07:01.340
+And I lose ambition before.
+
+07:02.540 --> 07:02.930
+Plus.
+
+07:04.560 --> 07:06.120
+Add the required imports.
+
+07:07.130 --> 07:16.640
+And similarly, I want to create the class which I am going to use after the complete class execution.
+
+07:17.390 --> 07:20.420
+So I'm learning them to the class.
+
+07:21.690 --> 07:24.540
+And I was on location after Lassie.
+
+07:27.040 --> 07:27.340
+Okay.
+
+07:28.220 --> 07:29.860
+And the requirements.
+
+07:33.080 --> 07:33.830
+That's it.
+
+07:34.430 --> 07:34.760
+Okay.
+
+07:35.060 --> 07:39.590
+This is how you can define the flow of your best execution plan.
+
+07:39.890 --> 07:41.950
+You can have a number of cases.
+
+07:41.960 --> 07:49.670
+You can have your set up method, which you want to run before each and every test method to run each
+
+07:49.670 --> 07:52.370
+and every test before class and after class.
+
+07:53.360 --> 07:58.820
+Now, let us run this and check how the execution happens here.
+
+07:58.830 --> 07:59.250
+So.
+
+08:01.620 --> 08:04.890
+But then, as you see here, differences.
+
+08:04.890 --> 08:06.960
+Now, it's not a Java application.
+
+08:07.230 --> 08:13.500
+So normally than learning the Java board, whenever we were executing the class, it was like running
+
+08:13.500 --> 08:18.720
+as a Java application and the execution flow should start from main method.
+
+08:19.230 --> 08:21.720
+But here for J unit it is not like that.
+
+08:21.780 --> 08:27.570
+It will execute as the unit best and it will show you awesome field of assertions.
+
+08:28.590 --> 08:29.570
+Like what best?
+
+08:32.000 --> 08:33.500
+Now again in this.
+
+08:34.860 --> 08:35.650
+As a g unit.
+
+08:35.670 --> 08:36.090
+This.
+
+08:38.360 --> 08:38.630
+Okay.
+
+08:40.230 --> 08:42.290
+In the class in.
+
+08:45.190 --> 08:45.450
+No.
+
+08:45.880 --> 08:51.310
+So in this, if they mentioned before class, then the class method should be static.
+
+08:51.800 --> 08:52.000
+Okay.
+
+08:52.420 --> 08:55.180
+So let us make it a static method.
+
+09:04.210 --> 09:06.890
+Like This is how you debug it.
+
+09:07.000 --> 09:12.010
+That's why I'm writing this code in front of you so you understand what kind of error you'll get when
+
+09:12.010 --> 09:14.000
+you write the code, right?
+
+09:14.620 --> 09:19.840
+So now you can select the class from the little so that I click game and run this.
+
+09:25.090 --> 09:30.700
+We chose Green Bull best cases that ran rate best case one tickets to.
+
+09:31.940 --> 09:36.260
+And it passed ones we did not have added any assertion to it.
+
+09:36.620 --> 09:42.800
+It also shows the floor of the execution here and in so we can see output also.
+
+09:43.100 --> 09:45.590
+So first of all, before class get executed.
+
+09:46.340 --> 09:53.120
+And lastly, after class, then before test or test case, one of the parties given before test were
+
+09:53.120 --> 09:53.990
+discussed too.
+
+09:54.260 --> 09:56.720
+And after this one too.
+
+09:57.200 --> 10:02.780
+So exactly how we wanted the execution happened in this room.
+
+10:03.440 --> 10:07.430
+So this is the purpose of AJ, you need three, right?
+
+10:07.430 --> 10:11.150
+So this is the main purpose to define the floor of your execution.
+
+10:12.020 --> 10:12.410
+Okay.
+
+10:12.710 --> 10:14.480
+So try this example yourself.
+
+10:14.750 --> 10:18.430
+Now let's move on to learning different types of assertions.
+
+10:22.530 --> 10:23.430
+So, Jane.
+
+10:26.540 --> 10:32.090
+This example for an assertion so that we use this kind of assertion statements.
+
+10:32.090 --> 10:38.630
+There are multiple assertion statements because then you'll run your best case actual point perceived
+
+10:38.630 --> 10:43.330
+as to compare the to what is expected and what we are actually getting.
+
+10:43.340 --> 10:51.110
+So on that basis you can be cited that is is this passing or it is been so assert equals to uses to
+
+10:51.120 --> 10:58.370
+imagine the objects if that equals assert same is to match if they are exactly the same assert not see
+
+10:58.370 --> 11:00.020
+the string should not be seen.
+
+11:00.380 --> 11:01.810
+I said not none.
+
+11:02.030 --> 11:04.130
+It should spring, one should not be null.
+
+11:04.700 --> 11:07.160
+I said no string five should be null.
+
+11:07.700 --> 11:12.800
+Answer to that is variable one is less than variable two that is one is less than two.
+
+11:12.800 --> 11:17.480
+If we is that so the test case will pass if it is assert equals.
+
+11:17.660 --> 11:21.710
+So they need to equal the added at equals.
+
+11:22.310 --> 11:28.400
+So let us that in this particular note this and see how the actions are executed.
+
+11:29.000 --> 11:31.130
+Now then we can test case here.
+
+11:32.820 --> 11:36.930
+You can say the assertion, you know, all sessions have passed.
+
+11:37.230 --> 11:41.030
+So that's why you are seeing not just cases passing.
+
+11:42.040 --> 11:45.060
+So instead of none here, I will assign no value.
+
+11:46.060 --> 11:46.480
+Okay.
+
+11:46.720 --> 11:49.300
+And I will run this particular best piece.
+
+11:54.200 --> 11:54.920
+Now this.
+
+11:55.340 --> 11:57.320
+This particular session will fail.
+
+11:57.350 --> 12:00.760
+So the test case will also be right.
+
+12:01.830 --> 12:04.320
+So try this example yourself.
+
+12:05.070 --> 12:05.400
+Okay.
+
+12:05.400 --> 12:06.270
+This is about.
+
+12:08.100 --> 12:10.680
+This is about genital testing.
+
+12:11.280 --> 12:12.320
+This is basics.
+
+12:12.330 --> 12:20.100
+Actually, this is not completely complete about gene editing, but we have some more best configurations
+
+12:20.100 --> 12:21.030
+on that.
+
+12:21.420 --> 12:24.720
+But this is very important part to start with.
+
+12:24.750 --> 12:27.540
+You can override the way start writing your test case.
+
+12:27.570 --> 12:33.900
+So when you go through this video, you can start writing, you're creating a test area.
+
+12:33.900 --> 12:39.590
+So something like this is and you can start taking in their direction, look like this is the manual
+
+12:39.630 --> 12:45.030
+test case I'm having and now I can automate this, right?
+
+12:45.720 --> 12:52.050
+So this is very important, fundamental fact before you start writing, actually you are still in human
+
+12:52.050 --> 12:52.860
+error this.
+
+12:53.790 --> 12:55.560
+Okay, so thank you for watching.
+
+12:55.560 --> 12:57.390
+Let's move to the next month.

@@ -1,0 +1,229 @@
+WEBVTT
+
+00:00.210 --> 00:00.990
+In this video.
+
+00:00.990 --> 00:07.680
+We're going to learn about this energy assertions and what is the difference between hard assault and
+
+00:07.680 --> 00:08.490
+soft assault?
+
+00:11.660 --> 00:13.040
+What is assertions?
+
+00:13.490 --> 00:17.670
+You know that in or best case is complete without assertions.
+
+00:17.990 --> 00:24.410
+Because at the end of the test case, we need assertions of what is expected value and what is the actual
+
+00:24.410 --> 00:24.800
+value.
+
+00:25.190 --> 00:30.890
+On the basis of that we can involve which test is is passed and which discourse is free.
+
+00:31.250 --> 00:33.770
+So that's why assertions are very important.
+
+00:33.770 --> 00:42.700
+Part of writing any test is let us say this test gives a mention here in this we have and it does assert
+
+00:42.710 --> 00:50.030
+not assert equals there we are launching this Google dot com and comparing the title with this Google.
+
+00:50.270 --> 00:55.100
+So in this case, the test case didn't fail that because the expected will be Google.
+
+00:55.490 --> 01:01.970
+But so the expected will be this Google and the actual value will be this billing.
+
+01:02.210 --> 01:08.420
+So in this case, you'll get an exception drawn, which will show what is the expected value and what
+
+01:08.420 --> 01:09.410
+is the actual value.
+
+01:09.710 --> 01:12.420
+So this is how the assertions will.
+
+01:12.710 --> 01:17.750
+So you write of this steps and then you assert what is the expected value of that?
+
+01:17.750 --> 01:19.970
+This is to qualify it as a pass.
+
+01:21.560 --> 01:25.610
+So some assert equals which we have seen in that example.
+
+01:25.610 --> 01:30.740
+There are some more commonly used assertions which is used very widely.
+
+01:31.040 --> 01:39.260
+So these are all like assert equals which we have seen comparing the strings then of assert equals comparing
+
+01:39.260 --> 01:41.070
+the string with the message.
+
+01:41.090 --> 01:45.890
+If if the test case fails, then it shows this message.
+
+01:46.370 --> 01:47.630
+Then that is boolean.
+
+01:47.900 --> 01:52.700
+The expected boolean value is expected to be true or expected to be false.
+
+01:52.700 --> 01:54.380
+And what is the actual?
+
+01:54.410 --> 01:56.810
+We are getting it then we have.
+
+01:58.270 --> 01:59.860
+We can measure utils.
+
+02:00.190 --> 02:04.460
+So actual utils, that is the that is the collection types.
+
+02:05.470 --> 02:07.750
+So to collection orders we can match.
+
+02:07.750 --> 02:13.780
+And if the task is failing, then we get in the message, then we can afford it.
+
+02:13.780 --> 02:17.680
+As a true the condition should be true, then the discourse will pass.
+
+02:17.680 --> 02:22.390
+We can ascertain the true with condition and the message to be displayed.
+
+02:22.390 --> 02:30.520
+Then the discourse claims as it falls is asserting the condition is to for then in the in this case
+
+02:30.520 --> 02:33.010
+the expected condition is false.
+
+02:33.430 --> 02:36.220
+In this case, the condition is expected to be false.
+
+02:36.220 --> 02:43.030
+And if the disk is passed so that if the disk is fail, then it will display this message.
+
+02:45.150 --> 02:47.100
+Let's see what is hard effort.
+
+02:47.730 --> 02:55.480
+Hard effort is also a type of this energy assertion which draws an exception immediately if the assert
+
+02:55.500 --> 02:58.860
+statement says and move on to the next test.
+
+02:59.820 --> 03:07.530
+So in this case, if there is any good written in the current state or test case after that effort statement,
+
+03:07.830 --> 03:10.140
+it will not execute that statement.
+
+03:10.650 --> 03:14.010
+So if you see the previous example of Google.
+
+03:14.990 --> 03:15.740
+Let us see that.
+
+03:16.160 --> 03:23.090
+So in this example, if there is some code written after this third statement, it will not execute
+
+03:23.090 --> 03:23.600
+that school.
+
+03:23.960 --> 03:29.600
+It will just move on to the next discus if available or otherwise, it will stop execution.
+
+03:32.150 --> 03:35.030
+Now let us see what is soft effort.
+
+03:35.600 --> 03:39.200
+Sort to deal with the disadvantage of hard assertions.
+
+03:39.650 --> 03:46.700
+We have a customized error handling provided by test engine, which is called a soft assertion.
+
+03:47.000 --> 03:55.880
+So we have seen that the test and test in jihad assert execution will stop the test case once the assertion
+
+03:55.880 --> 03:56.870
+statement fails.
+
+03:57.560 --> 04:01.340
+So this is usually used in artistic by multiple assertions.
+
+04:01.940 --> 04:09.620
+So in this case, what will happen is it will record the session values, but the all the results are
+
+04:10.460 --> 04:12.530
+calculated at the end.
+
+04:12.860 --> 04:17.060
+So we will see example of both hard and soft assert.
+
+04:20.330 --> 04:23.270
+See the example of heart assault in the heart.
+
+04:23.270 --> 04:24.270
+A third girl.
+
+04:24.290 --> 04:25.850
+Focus on this one.
+
+04:26.120 --> 04:30.950
+In this, there aren't multiple other statements in this test case.
+
+04:31.370 --> 04:40.070
+And the first test is it says a third two that five is less than one in, so it will return false value.
+
+04:40.250 --> 04:44.780
+So this test gives this assertion one thing and hence the next.
+
+04:45.350 --> 04:49.870
+The statement in the court did not get executed because this is the hardest.
+
+04:50.090 --> 04:57.830
+So in this case, whenever the assertion statement fails, the execution stops between and the execution
+
+04:57.830 --> 04:59.570
+flow moves on to the next desk.
+
+05:00.200 --> 05:04.300
+So this to address this issue, we use soft effort.
+
+05:04.640 --> 05:08.840
+So let us see how we can address this issue in soft asset.
+
+05:10.800 --> 05:18.090
+To answer this test case, we are creating object of this class of acid and are using this object to
+
+05:18.480 --> 05:20.160
+add the assertions method.
+
+05:20.580 --> 05:22.320
+So in this we're asserting this.
+
+05:22.320 --> 05:28.020
+This disk is will see it will record in this that the disk is has failed.
+
+05:28.110 --> 05:30.630
+It will move on to the next asset statement.
+
+05:30.960 --> 05:38.310
+Then it will record that this this is a this also fields then it will record that this also fills and
+
+05:38.310 --> 05:46.590
+then then at the end it will do assert or is then it will calculate all the results together.
+
+05:47.190 --> 05:54.510
+So this is how the of effort bulk and in this is all the session statement inside the one this piece
+
+05:54.780 --> 05:58.950
+can be executed one by one, even though the Excel statements are failing.

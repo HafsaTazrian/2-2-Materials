@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.270 --> 00:04.830
+In this video, we are going to see what is this new priority and sequencing.
+
+00:05.430 --> 00:10.710
+If you have noticed many times you want a specific sequence for running our test cases.
+
+00:10.980 --> 00:15.120
+We want one disk to run after another and then one after another.
+
+00:15.450 --> 00:21.090
+So this can be achieved easily using priority parameter one at best annotation.
+
+00:21.420 --> 00:26.270
+So in this video, we are going to see how we can prioritize and sequence our test cases.
+
+00:26.280 --> 00:27.990
+As for our requirement.
+
+00:30.320 --> 00:32.350
+So let us see this example.
+
+00:32.590 --> 00:39.010
+In this example, we have around four test cases with the names one, two, three, four, and it is
+
+00:39.010 --> 00:39.520
+printing.
+
+00:39.520 --> 00:42.760
+This is disk is one, this is two, this is three and this is four.
+
+00:43.300 --> 00:47.500
+So if you run it, let's see what happens when you run this class.
+
+00:52.580 --> 00:56.660
+So I'm running this absolute test.
+
+00:56.660 --> 00:57.590
+And you test.
+
+01:01.770 --> 01:02.120
+Can't.
+
+01:03.270 --> 01:03.720
+Okay.
+
+01:04.080 --> 01:05.040
+So let us see.
+
+01:05.460 --> 01:07.230
+So this is the fourth one.
+
+01:07.230 --> 01:08.280
+One, three, two.
+
+01:08.460 --> 01:11.700
+So this has picked up the best guesses randomly.
+
+01:12.000 --> 01:13.650
+There is no proper sequence.
+
+01:13.920 --> 01:18.240
+If you run it again, it will run in another sequence, any random sequence.
+
+01:18.570 --> 01:24.600
+But what you want to do is you want to run this as a first, second, third and fourth in a given order.
+
+01:24.990 --> 01:28.800
+You can add to this using this for additive.
+
+01:31.580 --> 01:32.210
+Attribute.
+
+01:33.050 --> 01:37.070
+So you can set the priority from zero.
+
+01:38.150 --> 01:39.290
+And then highest.
+
+01:42.650 --> 01:52.490
+So I'm adding you want to do and would rather be equal to three.
+
+01:53.000 --> 01:54.560
+Now let's run this.
+
+02:02.210 --> 02:03.400
+But you.
+
+02:05.720 --> 02:07.650
+Then this unsophisticated.
+
+02:11.290 --> 02:11.680
+Okay.
+
+02:11.920 --> 02:13.150
+Now let's see the output.
+
+02:13.420 --> 02:14.040
+So let's see.
+
+02:14.050 --> 02:18.040
+The output is in a specific order as specified here.
+
+02:18.280 --> 02:23.140
+So if you change, priority of the task is the order of execution change.
+
+02:24.550 --> 02:30.760
+Suppose you have given a priority, but sometimes you want to run a test case and sometimes you want
+
+02:30.760 --> 02:31.510
+to skip one.
+
+02:32.410 --> 02:38.740
+So in that case, what you can do is you can add another attribute that is event and level is equal
+
+02:38.740 --> 02:39.310
+to force.
+
+02:41.690 --> 02:42.220
+The.
+
+02:43.780 --> 02:49.270
+So in this case, this particular test case will be the.
+
+02:50.570 --> 02:54.560
+You think, okay, so now let's run this.
+
+02:54.560 --> 02:57.410
+So it should not run this particular biscuits.
+
+02:58.850 --> 03:01.400
+It will skip this one, the C.
+
+03:02.610 --> 03:03.510
+The output.
+
+03:05.980 --> 03:06.380
+Okay.
+
+03:07.910 --> 03:12.590
+So if you see one three for the segment, this case is not executed.
+
+03:12.860 --> 03:19.460
+So in this will begin prioritize and sequence out those guys we can skip if we want to avoid some pesky
+
+03:19.980 --> 03:20.660
+from running.

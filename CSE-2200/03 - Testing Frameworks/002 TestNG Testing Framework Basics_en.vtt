@@ -1,0 +1,376 @@
+WEBVTT
+
+00:00.300 --> 00:05.340
+In this video, we are going to see basics of this engine testing framework.
+
+00:05.670 --> 00:10.320
+The diesel engine framework is chosen by many people over tuning.
+
+00:10.530 --> 00:17.070
+So in this video, we will not only see what is distant, you bring up the advantages of the unit.
+
+00:17.400 --> 00:21.810
+Along with that, we will see how to install and setup it in the eclipse.
+
+00:22.110 --> 00:23.240
+Let's move right out.
+
+00:23.250 --> 00:26.910
+The first test is using testing as well.
+
+00:27.120 --> 00:30.990
+We'll see how to write multiple test cases using testing.
+
+00:32.970 --> 00:34.140
+What is testing?
+
+00:34.500 --> 00:41.970
+Testing is a testing framework that overcomes limitations of other testing framework and hence it is
+
+00:41.970 --> 00:45.090
+called as best in next generation framework.
+
+00:45.540 --> 00:53.400
+So most of the Selenium users nowadays use and prefer SD and G, although g unit because of its many
+
+00:53.400 --> 00:59.400
+advantages and there are so many features of testing G which we are going to see in this review.
+
+01:00.180 --> 01:09.360
+So major advantages of testing G over g unit are we can use annotations which are more easy to understand.
+
+01:10.110 --> 01:17.280
+We can use grouping of test cases easily, which will add to the flow of execution.
+
+01:17.730 --> 01:22.410
+We can also use parallel testing using test and g ambitions.
+
+01:24.680 --> 01:30.890
+Why do we need best energy in Selenium or APM or any type of testing framework?
+
+01:31.190 --> 01:37.160
+Benson Chicken use can be used to generate reports based on our Selenium test cases.
+
+01:37.760 --> 01:46.700
+The driver has no native mechanism for generating reports, so any or any tool which is for automation
+
+01:46.700 --> 01:50.690
+like Selenium or app view, they don't generate reports easily.
+
+01:51.080 --> 01:56.840
+So we need to have a framework which can generate reports for our best pieces.
+
+01:57.680 --> 02:04.130
+So we are using test that SMG can generate reports in a remote readable format.
+
+02:05.350 --> 02:12.110
+The test in G is used to generate three types of reports and which is very well understandable at the
+
+02:12.110 --> 02:13.130
+end of the test.
+
+02:13.130 --> 02:13.790
+So different.
+
+02:14.690 --> 02:18.140
+Our test simplifies the way the tests are reported.
+
+02:18.680 --> 02:22.550
+That means there is no more need for a static main method in our test.
+
+02:22.820 --> 02:29.960
+The sequence of action is regulated by easy to understand annotations provided by test and I will see
+
+02:29.960 --> 02:32.540
+how we can install the test engine eclipse.
+
+02:35.710 --> 02:44.020
+Your eclipse has opened eclipse marketplace and that search for.
+
+02:46.560 --> 02:46.950
+Yes.
+
+02:47.040 --> 02:47.700
+And she.
+
+02:49.800 --> 02:53.190
+This is the latest release inside this new frame book.
+
+02:54.150 --> 02:56.940
+So here you can find destined for Eclipsed.
+
+02:57.240 --> 02:59.340
+And here I have already installed it.
+
+02:59.340 --> 03:00.690
+So the showing installed.
+
+03:01.110 --> 03:06.420
+So if it's not installed already, it means you're just installed and you can click on it and it will
+
+03:06.420 --> 03:07.980
+install based on your eclipse.
+
+03:10.690 --> 03:12.070
+We have installed a plug in.
+
+03:12.070 --> 03:18.610
+We need to add the library in our project to right click on the project configure but add library.
+
+03:19.300 --> 03:22.690
+Select this test engine next and finish.
+
+03:23.230 --> 03:27.520
+So this will add the library here and now we can use test and.
+
+03:29.290 --> 03:30.310
+So that is right.
+
+03:31.000 --> 03:32.920
+Test case and see how it works.
+
+03:33.580 --> 03:35.980
+So I'm writing this letter.
+
+03:41.260 --> 03:42.340
+First stars.
+
+03:43.330 --> 03:47.110
+Now I want this to be my best.
+
+03:47.920 --> 03:53.350
+So to do that, what I'll do is I'll add animation to it.
+
+03:55.240 --> 03:56.860
+This is destined generation.
+
+03:56.860 --> 03:59.590
+We need to select best and you could not reunite once.
+
+04:00.940 --> 04:10.980
+But once we select this one, it will add the import statement with the test entry packet and that the
+
+04:11.170 --> 04:13.420
+glass is a bit different.
+
+04:13.810 --> 04:18.420
+So let's forget that this now becomes artist.
+
+04:19.090 --> 04:21.550
+Let's write something.
+
+04:24.150 --> 04:26.580
+Inside this office is all right.
+
+04:27.330 --> 04:31.000
+This is my first desk.
+
+04:32.610 --> 04:39.360
+Now, if you want to write your duties, if again can select the desk right, click on it and run as
+
+04:40.170 --> 04:43.140
+best it will run your desk if.
+
+04:46.750 --> 04:48.040
+This is my first case.
+
+04:49.030 --> 04:53.200
+It has proved that this is my first case.
+
+04:53.590 --> 04:55.640
+This one alerted us.
+
+04:56.890 --> 04:57.280
+Okay.
+
+04:57.820 --> 05:01.600
+So now I want to add another test case.
+
+05:07.600 --> 05:08.470
+Second test.
+
+05:11.340 --> 05:11.610
+Okay.
+
+05:13.710 --> 05:22.740
+And I want to define order for this one that I want to run this discourse about as opposed to force
+
+05:22.740 --> 05:24.750
+and this force discussed in a second.
+
+05:25.290 --> 05:28.800
+So what I can do is I can add priority.
+
+05:31.800 --> 05:33.480
+So priority zero for this.
+
+05:34.440 --> 05:35.670
+Priority one for this.
+
+05:41.780 --> 05:42.990
+And right here.
+
+05:46.450 --> 05:46.940
+Choice.
+
+05:48.310 --> 05:50.420
+This is my second
+
+05:54.490 --> 05:55.030
+chance.
+
+05:56.440 --> 05:57.610
+Now let us run this.
+
+05:58.210 --> 06:02.920
+All of this is from clicking on the blogs that I played as a test introduced.
+
+06:05.620 --> 06:07.960
+I'll get to discuss with them now.
+
+06:07.960 --> 06:10.720
+The second executed post and the first.
+
+06:11.860 --> 06:14.140
+So this way we can refine the order.
+
+06:15.460 --> 06:27.970
+So suppose if you want to run some some part before them each biscuit, then we can add that or.
+
+06:29.760 --> 06:30.630
+Just to give.
+
+06:35.430 --> 06:36.560
+Let's see.
+
+06:38.610 --> 06:42.870
+This is an address.
+
+06:42.870 --> 06:46.110
+We need to add something after this.
+
+06:46.870 --> 06:47.490
+Just copy.
+
+06:47.490 --> 06:48.450
+Paste this.
+
+06:53.490 --> 06:55.050
+So this is this.
+
+06:55.050 --> 06:57.300
+I want after each test.
+
+07:00.910 --> 07:04.720
+So I'll use the annotation
+
+07:06.910 --> 07:07.690
+before
+
+07:10.720 --> 07:12.370
+and after.
+
+07:13.970 --> 07:14.390
+Better.
+
+07:16.860 --> 07:20.790
+Okay, so now let us run this and see what is the output.
+
+07:27.940 --> 07:28.470
+Okay.
+
+07:28.690 --> 07:29.290
+So see.
+
+07:31.930 --> 07:36.590
+So before and after this is executed for each test?
+
+07:36.610 --> 07:36.910
+Yes.
+
+07:37.510 --> 07:44.410
+So if there is some part of audio visual monitoring before and after each test, guess we can articulate
+
+07:44.410 --> 07:46.060
+and define the flow in that.
+
+07:48.920 --> 08:00.050
+Similarly, we can add before suit and after suit, which will run after executing of the suit and before
+
+08:00.200 --> 08:02.570
+starting the execution of the suit.
+
+08:04.770 --> 08:05.900
+Two point.
+
+08:06.660 --> 08:10.940
+Okay, now let us run this and see how the is.
+
+08:22.500 --> 08:31.050
+So before test and after test, execute it before this whole trance and after this whole trance.
+
+08:42.460 --> 08:44.530
+When taking off the suit is not executed.
+
+08:44.530 --> 08:45.970
+I think I didn't save the chance.
+
+08:46.360 --> 08:47.650
+Let's execute once again.
+
+08:54.620 --> 08:55.160
+Okay.
+
+09:22.400 --> 09:24.680
+So this is it.
+
+09:28.670 --> 09:35.410
+In this basic building we have before class for test annotation and we can use this to define us.
+
+09:35.930 --> 09:43.190
+Apart from this, we can use a best in that segment where we can write how we want to execute this.
+
+09:43.190 --> 09:47.390
+So what if we can also consider different tools for that?
+
+09:47.690 --> 09:54.610
+So let us see how to do that right click on your project and select this to convert to distance.
+
+09:55.580 --> 10:01.610
+So this will create a sample test in G using all your classes inside the project.
+
+10:02.810 --> 10:08.810
+S classes so you can click on this and click on source you will get to see.
+
+10:09.170 --> 10:19.310
+So here it is a source that that has test test cases, then the class of the test cases and in this
+
+10:19.310 --> 10:23.030
+order this will execute each class one by one.
+
+10:23.600 --> 10:26.240
+So this is so for class level.
+
+10:28.210 --> 10:33.760
+So in the class level, if you want to order are just getting the diffusion, then we can do it in the.
+
+10:35.200 --> 10:42.190
+See more things in the XML because we can the test cases we can define no.
+
+10:42.820 --> 10:46.200
+The running pattern of the test cases with the help of groups.
+
+10:46.390 --> 10:50.190
+So in this they look into it in the future tutorials.
+
+10:51.160 --> 10:56.710
+For now, what we have seen is we have seen what exactly this is.
+
+10:57.100 --> 11:03.400
+We have seen how we can write the test cases, how we can do the setup of testing, and how we can define
+
+11:03.400 --> 11:07.060
+the flow using different annotations and priority.
+
+11:07.480 --> 11:09.370
+All of the test cases.

@@ -1,0 +1,208 @@
+WEBVTT
+
+00:00.120 --> 00:07.590
+In this video, we are going to see what is destined your grouping and what does depends on industry
+
+00:07.950 --> 00:15.180
+and let us see indeed in that example, in a previous course we have learnt about this energy ambitions
+
+00:15.450 --> 00:22.590
+and in this post we will see how we can group the test cases and specify dependent test cases using
+
+00:22.590 --> 00:24.000
+test energy ambitions.
+
+00:26.490 --> 00:27.400
+So let's see.
+
+00:27.420 --> 00:28.980
+What are the groups?
+
+00:29.400 --> 00:33.930
+Groups is nothing, but it is a barometer of innovation at best.
+
+00:34.770 --> 00:41.520
+So earlier we have seen in our tests and annotations video that they do the annotation as best we can
+
+00:41.520 --> 00:43.920
+specify which method is a test case.
+
+00:44.340 --> 00:52.860
+So groups is a barometer of the annotations which we can use to execute multiple test scores as a single
+
+00:52.860 --> 00:53.160
+group.
+
+00:53.610 --> 01:01.790
+But let's say you have hundreds of test cases for class devices and it then matters are for laptops,
+
+01:01.800 --> 01:04.440
+ten metres are for not notebooks and so on.
+
+01:04.890 --> 01:11.610
+And you probably like to run all the notebooks, test pieces together in a batch and you want all to
+
+01:11.610 --> 01:12.810
+be in a single test.
+
+01:13.620 --> 01:19.950
+With the help of grouping, you can easily and effectively address this kind of situation.
+
+01:20.370 --> 01:23.670
+So let us see with example how we can do it.
+
+01:24.720 --> 01:26.780
+To see the example in detail.
+
+01:27.050 --> 01:34.670
+In this, we have two groups that is laptops and notebooks, and there is one more group that is a touch
+
+01:34.670 --> 01:38.570
+screen laptops book, which is which is a subset of laptops.
+
+01:39.080 --> 01:46.340
+So suppose if I want to run this test cases, laptop one and laptop to test cases which are specifically
+
+01:46.340 --> 01:52.490
+designed for these laptops, then I am grouping it with this label and the second group.
+
+01:52.490 --> 01:59.270
+I have notebooks that I want to run this to test cases as a part of this group execution.
+
+01:59.270 --> 02:04.550
+So I am labeling this to test cases notebook and notebook to ASM notebooks.
+
+02:05.410 --> 02:13.520
+Then today we have a touch screen laptop test case, which is also a laptop test case.
+
+02:13.840 --> 02:20.170
+So I want to run this when I'm running test case for this particular group and as well as this particular
+
+02:20.170 --> 02:20.400
+group.
+
+02:20.410 --> 02:23.350
+So I'm labeling it as a boat.
+
+02:24.370 --> 02:29.890
+So in this way, we can label this test cases to form a different group.
+
+02:30.460 --> 02:32.920
+Now we'll come to the back there.
+
+02:32.920 --> 02:38.080
+We want to run it in the test and you don't examine so.
+
+02:43.160 --> 02:44.010
+Let us open.
+
+02:44.030 --> 02:46.400
+What is the configuration required for this change?
+
+02:47.060 --> 02:47.890
+That excitement?
+
+02:49.780 --> 02:50.110
+Okay.
+
+02:50.500 --> 02:55.600
+So here then you declare a suit, you need to give your best name.
+
+02:56.260 --> 03:00.820
+Then in that we add this include name laptops.
+
+03:01.270 --> 03:06.820
+So when you add this, include name laptop inside these groups and run that.
+
+03:07.240 --> 03:11.590
+So this particular best cases of laptops will run.
+
+03:11.890 --> 03:14.530
+So suppose in this case what test cases will run?
+
+03:15.100 --> 03:23.230
+Three test cases will the first one is for laptop one, laptop two, and this one does screen lap.
+
+03:23.950 --> 03:31.120
+So this is if you want to run this to test cases, then you just need to change your notebooks.
+
+03:31.780 --> 03:34.990
+This will affect now.
+
+03:39.120 --> 03:41.610
+Let us see what is dependent test.
+
+03:42.180 --> 03:48.990
+You may need to involve some methods in a best case in a particular order so that you want to share
+
+03:48.990 --> 03:52.680
+some data in between the test cases during the flu.
+
+03:53.040 --> 04:00.330
+So suppose you have a test vs say signing and you have a test case for sign up.
+
+04:00.690 --> 04:07.200
+So sign out this case to the partner, not sign because first you have to do the signing and then you
+
+04:07.200 --> 04:08.410
+can do the same.
+
+04:08.820 --> 04:15.720
+So in this case you can use the depends on method attribute also at this innovation.
+
+04:16.720 --> 04:19.330
+Then see example how we are doing it.
+
+04:21.440 --> 04:22.460
+So I'm opening this.
+
+04:24.050 --> 04:25.700
+So this is.
+
+04:26.120 --> 04:26.810
+There are.
+
+04:28.080 --> 04:29.170
+Three best guesses.
+
+04:29.190 --> 04:30.370
+One is signing.
+
+04:30.420 --> 04:33.150
+One is open browser and one is sign.
+
+04:33.780 --> 04:38.190
+So signing that can occur when the browser is open.
+
+04:38.550 --> 04:41.550
+So signing is dependent on open browser.
+
+04:42.000 --> 04:48.570
+So in this case, open browser test case will execute first, and then that signing test will execute
+
+04:49.230 --> 04:52.080
+irrespective of how you have rejected it.
+
+04:52.080 --> 04:59.160
+If you have plans, then if you go to sign out what it is dependent on, it's depending on signing.
+
+04:59.430 --> 05:03.120
+So for signing will execute before execution of signup.
+
+05:03.510 --> 05:09.930
+So this is also a be where you get define the order of your best is execution.
+
+05:10.650 --> 05:16.980
+I hope you understood the concept of this grouping and why we need to group the test cases in order
+
+05:16.980 --> 05:22.080
+to execute it in a batch for a single type of group.
+
+05:22.500 --> 05:26.070
+Then second, we have understood the depends on concept.
+
+05:26.520 --> 05:34.070
+We need to define the flow of execution of this case in such a way that our test case is dependent on
+
+05:34.080 --> 05:36.480
+execution of some other discrete.
