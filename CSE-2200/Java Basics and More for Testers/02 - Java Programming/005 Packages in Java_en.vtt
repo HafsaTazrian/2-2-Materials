@@ -1,0 +1,262 @@
+WEBVTT
+
+00:00.090 --> 00:03.270
+In this video we will learn about packages in Java.
+
+00:03.510 --> 00:12.870
+Packages in Java is nothing but a group of classes, sub packages and interfaces interfaces WIP packages
+
+00:12.870 --> 00:13.740
+are required.
+
+00:13.890 --> 00:17.010
+First of all, it avoids naming conflict.
+
+00:17.370 --> 00:21.810
+So there can be two different packages having the same class name.
+
+00:22.410 --> 00:29.070
+But you can have a class name like all students and two different packages.
+
+00:29.070 --> 00:35.880
+Package one and package two can have the class named to and it will not create any kind of conflict
+
+00:36.990 --> 00:44.250
+making, searching and locating and usage of classes, interfaces, annotations easier.
+
+00:44.250 --> 00:48.660
+So packages create a different true hierarchy.
+
+00:49.080 --> 00:58.170
+And that's why it is very convenient to access your code through your classes interfaces and make the
+
+00:58.170 --> 00:59.700
+searching also simpler.
+
+01:00.330 --> 01:02.940
+It also provides controlled access.
+
+01:03.240 --> 01:10.560
+So there are two axis specified that is protected and default which have package label access control.
+
+01:11.040 --> 01:19.740
+A protected member is accessible by the class in the same package and its subclasses are default member.
+
+01:19.740 --> 01:25.590
+That is, then we don't provide any access specified like public, protected or private.
+
+01:25.590 --> 01:32.730
+If we don't provide anything that goes under default category and that is accessible by classes in the
+
+01:32.730 --> 01:34.260
+same package only.
+
+01:36.360 --> 01:43.680
+So this the packages are also considered as a way of data encapsulation.
+
+01:44.700 --> 01:48.420
+So let's learn more about different types of packages.
+
+01:49.860 --> 01:56.670
+So in Java there are two types of packages which are building packages and user defined packages.
+
+01:57.210 --> 02:03.240
+So if you see your this is a package which I have and I'm sure that is a user defined package.
+
+02:03.240 --> 02:12.030
+And whatever is already written in Java, that is Java dot, IO, all these things which we use.
+
+02:12.030 --> 02:13.380
+So that is a
+
+02:17.030 --> 02:18.000
+built in package.
+
+02:18.360 --> 02:18.750
+Okay.
+
+02:19.110 --> 02:26.070
+So we can use Java I or Java DOT or AWP.
+
+02:27.900 --> 02:29.880
+So I thought I.
+
+02:35.590 --> 02:37.390
+This is a moving package.
+
+02:38.230 --> 02:44.680
+So if you want to use any building package, we need to add our respective dependencies also in this.
+
+02:49.400 --> 02:53.480
+So this is saying the import is done, but it is not used.
+
+02:53.480 --> 02:56.720
+We have not used it to say that it is showing like that.
+
+02:56.720 --> 03:01.710
+But there are a number of building classes in Java which we can use.
+
+03:01.710 --> 03:10.160
+So with this, if we import any particular package in our code, that means whatever those packages
+
+03:10.160 --> 03:17.660
+and classes are there in this package we can access and utilize in our code.
+
+03:18.440 --> 03:18.830
+Okay.
+
+03:19.370 --> 03:21.530
+So similarly, let us try.
+
+03:22.250 --> 03:24.710
+So this is my package.
+
+03:24.710 --> 03:26.660
+We have added a sample code.
+
+03:27.230 --> 03:35.870
+Basic naming convention followed for the package will be something like all dot automated, dot based,
+
+03:36.200 --> 03:39.140
+all dot automated dot UI.
+
+03:40.040 --> 03:45.110
+This way the package naming convention is followed in this event.
+
+03:45.110 --> 03:52.140
+You consider it in the directory level, how it is utilized, how the packages are useful, as like
+
+03:52.340 --> 03:54.110
+you will get on different folders.
+
+03:54.110 --> 04:01.730
+If you see this project's structure, you will get a sample code folder and inside that folder all your
+
+04:01.730 --> 04:03.290
+Java classes will be present.
+
+04:03.680 --> 04:09.620
+So then you have or not automated board best gift.
+
+04:09.890 --> 04:11.990
+Then you will have a folder with named org.
+
+04:12.410 --> 04:17.900
+Then you will have a folder with name to a automated and then you will have a folder with name based.
+
+04:17.900 --> 04:22.310
+And inside this folder you will have all your this java classes.
+
+04:24.170 --> 04:25.490
+So let us check that.
+
+04:25.500 --> 04:27.470
+Let's add a new package.
+
+04:29.980 --> 04:38.890
+So the package name I'm going to give you is all the automated dot est.
+
+04:42.250 --> 04:42.730
+Okay.
+
+04:43.660 --> 04:45.160
+So this is a package.
+
+04:45.550 --> 04:49.270
+This is a naming convention for creating a package.
+
+04:50.020 --> 04:53.260
+Okay, now let's add a new class inside the package.
+
+04:53.260 --> 04:58.660
+We can add a package also and we can add in this class.
+
+04:58.780 --> 05:01.270
+So let us add best.
+
+05:02.660 --> 05:03.110
+Set.
+
+05:14.350 --> 05:14.740
+Okay.
+
+05:15.310 --> 05:24.100
+So for this, if I want to use this particular class in any of the Java classes in the other package.
+
+05:24.190 --> 05:24.570
+Okay.
+
+05:25.180 --> 05:32.050
+So I can import this particular package and use this.
+
+05:35.380 --> 05:35.670
+Okay.
+
+05:37.860 --> 05:42.270
+So what I can do here, I can import.
+
+05:44.870 --> 05:45.280
+Okay.
+
+05:46.670 --> 05:51.050
+And then I can use the class here.
+
+05:53.580 --> 05:56.970
+Is this spelling mistake.
+
+05:57.450 --> 05:58.890
+Let us write this.
+
+05:58.890 --> 06:00.680
+The leader.
+
+06:11.120 --> 06:11.600
+Okay.
+
+06:12.680 --> 06:18.740
+So I can access this particular class from another package here.
+
+06:19.280 --> 06:19.640
+Okay.
+
+06:24.190 --> 06:32.290
+So I'm importing the specific class here and utilizing the creating object of the class.
+
+06:32.860 --> 06:38.080
+This allows me to utilize all the methods already done inside this class.
+
+06:38.890 --> 06:39.250
+Okay.
+
+06:39.820 --> 06:41.850
+So this gives me that access.
+
+06:43.570 --> 06:47.130
+So this is about the packages in Java.
+
+06:47.530 --> 06:50.170
+What is a proper nomenclature to follow?
+
+06:50.530 --> 06:54.430
+How you can access other classes from the other packages.
+
+06:54.910 --> 07:03.340
+And then you have access specifies that is protected only default, which are package level access specifiers.
+
+07:04.090 --> 07:10.270
+So this is this is useful when you're creating your test frameworks and stuff, right?
+
+07:10.360 --> 07:18.040
+The package of the packages, the grouping of your test cases, grouping of your different classes is
+
+07:18.040 --> 07:25.480
+very much important when you're working on the bigger project, which involves a lot of classes, interfaces,
+
+07:25.480 --> 07:26.020
+etc..
+
+07:26.770 --> 07:28.300
+So that's it about packages.
+
+07:28.330 --> 07:30.100
+Let's move on to the next module.

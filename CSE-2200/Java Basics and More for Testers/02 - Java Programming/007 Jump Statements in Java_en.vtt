@@ -1,0 +1,319 @@
+WEBVTT
+
+00:00.690 --> 00:01.870
+Welcome to this video.
+
+00:01.890 --> 00:10.200
+In this video, we will be learning about Jin Jun statements in Java that is continue, break, etc.
+
+00:10.740 --> 00:13.190
+So let's get going with examples.
+
+00:19.860 --> 00:23.820
+So you can see here's an example which I have added here.
+
+00:27.210 --> 00:32.150
+To execute the continuous statement here give.
+
+00:32.670 --> 00:36.450
+So we will be checking out the continue statement.
+
+00:38.670 --> 00:39.030
+Okay.
+
+00:39.660 --> 00:47.940
+So Steve, in the fourth loop there is the iteration said from 0 to 15 and there is a condition inside
+
+00:48.540 --> 00:53.150
+that is equal to ten or is equal to equal to twin.
+
+00:53.550 --> 00:58.710
+So in both these cases, we added a jump statement that is continue.
+
+00:59.550 --> 01:07.920
+That means what it will do, it will keep any or which we are after this line to not execute any code
+
+01:07.920 --> 01:08.910
+after this line.
+
+01:09.510 --> 01:09.900
+Okay.
+
+01:10.080 --> 01:10.500
+It is.
+
+01:10.620 --> 01:11.400
+Give this.
+
+01:11.640 --> 01:14.280
+So this particular part will not be executed.
+
+01:15.390 --> 01:20.850
+See, that's where it will show an error because the code is unreachable.
+
+01:21.350 --> 01:21.630
+Right.
+
+01:21.630 --> 01:28.460
+You can see it shows it's unreachable because the continuous statement will continue inside the loop.
+
+01:28.470 --> 01:28.680
+No.
+
+01:29.460 --> 01:29.850
+Okay.
+
+01:30.180 --> 01:31.010
+It will not.
+
+01:31.020 --> 01:37.870
+If you if we if we execute this now, it will not print number ten and number 12.
+
+01:38.490 --> 01:38.850
+Okay.
+
+01:39.270 --> 01:40.770
+So let us execute.
+
+01:40.770 --> 01:41.610
+Uncheck this.
+
+01:44.970 --> 01:53.920
+She is not slowing down, but this is how continual statement is used to jump, right?
+
+01:54.180 --> 01:56.370
+To skip some steps and jump.
+
+01:58.080 --> 01:59.130
+So yeah.
+
+01:59.190 --> 02:01.320
+Let's move on to the big statement.
+
+02:01.320 --> 02:01.590
+No.
+
+02:02.190 --> 02:04.430
+Of the break statement here.
+
+02:04.440 --> 02:09.240
+Get rid of 1 to 3 numbers from is equal to 0 to 10.
+
+02:09.690 --> 02:12.120
+Right then is equal to equal to five.
+
+02:12.120 --> 02:13.860
+The added a break statement.
+
+02:14.100 --> 02:14.420
+Right.
+
+02:14.820 --> 02:19.710
+We want don't want to continue the execution or we want to break and come out of it.
+
+02:20.250 --> 02:20.610
+Okay.
+
+02:21.000 --> 02:25.430
+Then nothing will be printed after the five years.
+
+02:25.740 --> 02:26.130
+Okay.
+
+02:26.400 --> 02:27.720
+So let us execute this.
+
+02:27.720 --> 02:32.580
+So this and execute this code and check you.
+
+02:34.110 --> 02:35.760
+See after five.
+
+02:36.270 --> 02:39.810
+It's not printing the numbers because we added break statement.
+
+02:40.200 --> 02:42.450
+So in continuing statement, what happened?
+
+02:42.810 --> 02:44.910
+It just skip that part.
+
+02:45.150 --> 02:48.750
+So when is equal to equal to ten and a is equal to 12?
+
+02:48.750 --> 02:49.260
+Was there.
+
+02:49.260 --> 02:52.230
+It skipped that, but it continued the execution.
+
+02:52.770 --> 02:57.930
+In break statement, it is breaking and coming outside the loop, but it is it will not continue the
+
+02:58.200 --> 02:59.010
+execution.
+
+02:59.010 --> 03:02.250
+So this is the difference between continue and break.
+
+03:02.940 --> 03:08.220
+So the use cases will be also different when to use continue and when to use brick.
+
+03:08.670 --> 03:08.940
+Right.
+
+03:09.870 --> 03:14.490
+So let's go to return statement for written statement.
+
+03:14.970 --> 03:15.510
+Okay.
+
+03:16.050 --> 03:20.190
+So for this, I'll be adding another method here.
+
+03:21.510 --> 03:26.010
+Inside the glass, which will return some value.
+
+03:26.100 --> 03:31.290
+So from main method we have added here to avoid because it is not returning any value.
+
+03:31.770 --> 03:37.750
+But I want to use here return statement and I want to return a valid volume value.
+
+03:38.550 --> 03:39.240
+So.
+
+03:41.780 --> 03:42.820
+I'm writing.
+
+03:42.830 --> 03:43.700
+Oh.
+
+03:45.900 --> 03:46.710
+Function.
+
+03:46.710 --> 03:48.660
+That is some of two numbers.
+
+03:49.180 --> 03:49.560
+Okay.
+
+03:50.130 --> 03:56.640
+We are passing two numbers here in E, in B.
+
+03:58.290 --> 03:58.740
+Okay.
+
+03:59.070 --> 04:01.050
+And we're returning this up.
+
+04:01.650 --> 04:02.070
+Okay.
+
+04:02.790 --> 04:07.050
+So let's do it.
+
+04:07.110 --> 04:14.430
+So some is equal to A-plus B, but it does some.
+
+04:17.880 --> 04:17.950
+You.
+
+04:18.260 --> 04:23.740
+So we are returning an integer value here and here within threaded.
+
+04:24.180 --> 04:24.470
+Okay.
+
+04:25.040 --> 04:26.150
+So in.
+
+04:29.300 --> 04:30.020
+Addiction.
+
+04:32.750 --> 04:33.530
+Equal to.
+
+04:35.760 --> 04:37.700
+Let's call this method.
+
+04:37.710 --> 04:38.520
+Some do.
+
+04:39.530 --> 04:42.830
+And bus values for A and B, who?
+
+04:44.390 --> 04:44.790
+Okay.
+
+04:46.340 --> 04:50.840
+So it will return the value you give.
+
+04:59.920 --> 05:00.190
+Okay.
+
+05:00.220 --> 05:07.360
+If it throws an exception, we need to add a cricket block here to showing that otherwise we can make
+
+05:07.360 --> 05:09.640
+it as a static method.
+
+05:10.330 --> 05:13.930
+So I'm just changing it to subject matter for now.
+
+05:14.350 --> 05:17.500
+And it does bring the value of the sum.
+
+05:29.090 --> 05:29.690
+Addiction.
+
+05:30.440 --> 05:30.860
+Okay.
+
+05:31.430 --> 05:32.000
+So it will.
+
+05:32.000 --> 05:32.570
+Sure.
+
+05:33.350 --> 05:35.470
+But in the addition of the two numbers.
+
+05:35.470 --> 05:36.800
+So let us put on this.
+
+05:38.310 --> 05:39.020
+Chalkboard.
+
+05:42.720 --> 05:43.200
+Pretty.
+
+05:44.060 --> 05:50.490
+See, so these two numbers we are passing to this method, we are calling this method and what it is
+
+05:50.490 --> 05:55.320
+returning, it is returning the sum in this variable and we're printing this.
+
+05:55.740 --> 06:05.060
+So the task or the purpose of return statement is when we want to return some values in a method, right.
+
+06:06.120 --> 06:07.650
+So we have seen continue.
+
+06:07.660 --> 06:10.740
+We have seen break and we have seen the return.
+
+06:11.310 --> 06:11.610
+Okay.
+
+06:12.060 --> 06:13.680
+So do practice with this.
+
+06:13.680 --> 06:17.550
+And if you have any questions, you can of course, write that to me.
+
+06:18.450 --> 06:19.890
+So thank you for watching.
+
+06:19.890 --> 06:22.050
+Let's go to the next one.

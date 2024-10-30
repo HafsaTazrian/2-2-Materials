@@ -1,0 +1,364 @@
+WEBVTT
+
+00:00.120 --> 00:03.360
+In this video, we will learn about operators in Java.
+
+00:04.050 --> 00:10.190
+So let's get started with some commonly used operators that are smart operators.
+
+00:10.200 --> 00:17.100
+When you want to perform some mathematical operations, but not all that is plus minus region, modulo,
+
+00:17.670 --> 00:27.300
+etc., then other unit or unit operators that is used for incrementing the value that is plus, minus,
+
+00:27.300 --> 00:30.320
+minus or things like that.
+
+00:30.330 --> 00:38.760
+Then they're assignment operators equal to to assign a value or less equal to things and then no data
+
+00:38.760 --> 00:46.440
+relational operators and and or real excited data relational operator so greater than equal to less
+
+00:46.440 --> 00:55.740
+than equal to and that are logical operators that is an and or so these are the most commonly used operators
+
+00:55.740 --> 00:59.910
+in Java and you will learn about them with the help of example.
+
+01:00.870 --> 01:05.790
+So let's get started writing the code and using different types of operator.
+
+01:08.100 --> 01:08.780
+Okay.
+
+01:08.790 --> 01:16.320
+I'm naming this class as operators, adding the network finish.
+
+01:18.750 --> 01:23.820
+Q So first we will learn about it at home.
+
+01:23.820 --> 01:33.360
+So that is adding two integers, your E and E and of your writing.
+
+01:34.820 --> 01:36.530
+And let us add one more.
+
+01:37.890 --> 01:39.030
+That is some.
+
+01:40.980 --> 01:41.340
+Okay.
+
+01:41.580 --> 01:44.040
+Otherwise you can add it to the eight.
+
+01:44.310 --> 01:44.610
+Okay.
+
+01:44.970 --> 01:49.910
+So it is equal to A plus B.
+
+01:52.700 --> 01:54.540
+Eat less the.
+
+01:55.720 --> 01:56.080
+Okay.
+
+01:56.710 --> 01:58.840
+And we want to bring.
+
+02:01.000 --> 02:02.830
+The value of your.
+
+02:04.710 --> 02:08.610
+Systems don't out that print.
+
+02:12.970 --> 02:14.230
+Here we are printing the law.
+
+02:16.790 --> 02:23.290
+Then we need to initialize it so close to ten and 20.
+
+02:24.890 --> 02:25.280
+Okay.
+
+02:25.760 --> 02:27.830
+Now let us run this class.
+
+02:33.780 --> 02:34.110
+Okay.
+
+02:34.620 --> 02:36.420
+So see this?
+
+02:36.780 --> 02:39.870
+This plus is the arithmetic operation.
+
+02:40.260 --> 02:43.140
+And this equal two is assignment operation.
+
+02:43.590 --> 02:45.360
+So this is equal to ten.
+
+02:45.360 --> 02:48.570
+B is equal to A is an assignment operator.
+
+02:49.020 --> 02:53.340
+And now we are getting saving the value in E here.
+
+02:53.730 --> 02:54.090
+Right.
+
+02:54.660 --> 03:00.080
+Or instead of using all this so arithmetic operations we can use.
+
+03:00.090 --> 03:04.950
+So minus we can use in we can use division.
+
+03:06.530 --> 03:08.870
+We can use modular things like that.
+
+03:09.260 --> 03:09.680
+Okay.
+
+03:09.980 --> 03:19.220
+And there is also a one way to do this is that instead of writing eight is equal to E plus B, we can
+
+03:19.220 --> 03:21.860
+see it is equal to.
+
+03:25.550 --> 03:29.790
+E this to we can say like this as well.
+
+03:30.230 --> 03:33.470
+It will be it will give us the same result.
+
+03:34.250 --> 03:36.750
+This is called as an assignment operator.
+
+03:37.880 --> 03:43.070
+Instead of a plus, we can mention your two minus and run it.
+
+03:43.880 --> 03:45.110
+This will also work.
+
+03:45.530 --> 03:47.840
+It will perform A minus B.
+
+03:49.100 --> 03:49.330
+Right.
+
+03:49.400 --> 03:50.990
+That's why we're getting minus ten.
+
+03:50.990 --> 03:54.590
+It will perform E minus B and save the value inside it.
+
+03:55.460 --> 03:58.310
+We can add multiplication also here.
+
+04:00.500 --> 04:02.930
+All these are all these things.
+
+04:03.050 --> 04:06.110
+What we are trying right now is an assignment.
+
+04:06.530 --> 04:06.950
+Okay.
+
+04:09.110 --> 04:10.060
+Seen to be.
+
+04:10.500 --> 04:10.820
+Okay.
+
+04:11.490 --> 04:20.930
+So this is these are these are the assignment end all arithmetical arithmetic of three those which we
+
+04:20.930 --> 04:21.830
+have seen so far.
+
+04:22.670 --> 04:31.400
+Now, up next, coming to the next one, let's look at relational or relational operated.
+
+04:32.210 --> 04:38.210
+So for this, I want to bring the value which is smaller here.
+
+04:38.720 --> 04:39.110
+Okay.
+
+04:39.470 --> 04:43.670
+So I will add a if condition to check which one is a smaller.
+
+04:44.060 --> 04:49.430
+And to compare that I'll use relational operator if it is less then.
+
+04:50.830 --> 04:57.430
+Be okay if Liz is less than adequate to be put in doubt.
+
+04:58.420 --> 04:59.490
+Smallest pizza.
+
+04:59.840 --> 05:01.120
+E right.
+
+05:01.120 --> 05:02.200
+Let's put it in that.
+
+05:03.510 --> 05:04.470
+Smallest.
+
+05:06.060 --> 05:06.430
+If.
+
+05:14.900 --> 05:15.170
+Okay.
+
+05:15.470 --> 05:25.940
+So this this particular door operator, less than equal to which we using here isn't relational operator.
+
+05:26.540 --> 05:27.440
+So.
+
+05:30.400 --> 05:31.720
+Let us put in that.
+
+05:34.390 --> 05:35.020
+As.
+
+05:40.350 --> 05:42.630
+Bring me the smallest one.
+
+05:44.610 --> 05:44.970
+Thank.
+
+05:47.270 --> 05:49.130
+So let us run this one.
+
+05:51.480 --> 05:58.010
+Small as just the value of a we apparently think so.
+
+05:58.410 --> 05:59.610
+This is relational.
+
+05:59.700 --> 06:04.140
+Now we will go to all logical operators.
+
+06:04.530 --> 06:04.890
+Okay.
+
+06:05.430 --> 06:10.320
+So logical operators we can use when we want to add two conditions here.
+
+06:10.920 --> 06:11.310
+Okay.
+
+06:11.790 --> 06:14.190
+So I have another number.
+
+06:14.730 --> 06:21.280
+FT is equal to 70 and I want to check which one is the smallest.
+
+06:23.160 --> 06:25.980
+So if it is less, I need to be.
+
+06:26.070 --> 06:35.670
+And it is less well to see if it is less than both EMC, B and C, then it is the smallest one.
+
+06:36.270 --> 06:36.660
+Right.
+
+06:37.670 --> 06:39.920
+So in this case.
+
+06:41.640 --> 06:44.550
+Maybe we can use this and operate it here.
+
+06:45.060 --> 06:47.910
+Okay, because we want both the conditions to be two.
+
+06:48.840 --> 06:57.600
+If we want only one condition to be true and still move on, go inside the conditional statement.
+
+06:57.600 --> 07:00.210
+Then we use or operate this.
+
+07:00.210 --> 07:09.000
+If or operated, if any of the two conditions is true, then we will execute the code inside this if
+
+07:09.000 --> 07:19.590
+block and in case of and we need both the conditions must be to go inside the block.
+
+07:20.550 --> 07:26.760
+Okay so this is the difference between and interpret this and these are the logical operators.
+
+07:27.300 --> 07:32.010
+Okay, now let us learn about unity operators.
+
+07:32.580 --> 07:40.230
+So unity operator, most commonly used are plus plus or less plus or minus minus.
+
+07:41.580 --> 07:46.230
+Now we have ABC, we have initialize them with some value.
+
+07:46.740 --> 07:50.010
+Now I'm incrementing e okay.
+
+07:50.100 --> 07:51.420
+And I'm printing it.
+
+07:56.640 --> 07:57.800
+And control space.
+
+07:57.810 --> 08:07.530
+Also you going to have this system not a delivered here this is a eclipse shortcut so I have the used
+
+08:07.530 --> 08:08.640
+A-plus plus.
+
+08:08.940 --> 08:09.420
+Okay.
+
+08:09.810 --> 08:12.000
+And now I will put the value of E!
+
+08:13.410 --> 08:18.030
+Let us do B minus, minus and bring the value of B here.
+
+08:20.810 --> 08:22.370
+And let us sit on this for.
+
+08:29.510 --> 08:29.870
+Okay.
+
+08:30.260 --> 08:33.050
+So ten plus 111.
+
+08:33.590 --> 08:35.270
+20 -119.
+
+08:36.530 --> 08:40.750
+So this is how environment recruitment work in Job II.
+
+08:40.760 --> 08:45.970
+Most common use case for this is in dope deals and followed by loop.
+
+08:45.980 --> 08:49.070
+All the kind of looks that we want to increment the value.
+
+08:49.930 --> 08:59.690
+Okay, so these, these are simple examples of most commonly used operators in Java and definitely in
+
+08:59.690 --> 09:04.550
+know your problem solving your coding, you will need these operators.
+
+09:05.000 --> 09:11.990
+So pick up some more problem statements and you use this operators and try to use this operators.
+
+09:12.740 --> 09:17.930
+And in case you have any questions, you can write to me and thank you for watching.
+
+09:18.080 --> 09:19.160
+Let's get to the next.

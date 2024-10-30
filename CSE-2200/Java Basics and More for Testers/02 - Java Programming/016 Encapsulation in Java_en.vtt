@@ -1,0 +1,184 @@
+WEBVTT
+
+00:00.300 --> 00:05.670
+This is again yet another important Java concept that is encapsulation.
+
+00:06.720 --> 00:08.370
+So what is encapsulation?
+
+00:08.970 --> 00:15.660
+It is defined as a wrapping up of data under a single unit that is inside the capsule.
+
+00:15.660 --> 00:17.040
+The density captured.
+
+00:17.040 --> 00:17.310
+Right.
+
+00:17.730 --> 00:22.920
+It is the mechanism that binds together code and the data it manipulates.
+
+00:23.490 --> 00:30.600
+Another way to think about encapsulation is it is a protective shield that prevents the data from being
+
+00:30.600 --> 00:33.180
+accessed by the cold outside the shield.
+
+00:33.870 --> 00:40.650
+Technically, in encapsulation, the variables or data of a class is hidden from any other class and
+
+00:40.650 --> 00:48.060
+can be access only to any member functions of its own class, of its own class in which it is declared.
+
+00:49.080 --> 00:55.680
+As an encapsulation, the data in a class is hidden from another class, using the data hiding concept,
+
+00:56.100 --> 01:02.040
+which is achieved by making the member methods of the class private and the class is exposed to the
+
+01:02.040 --> 01:10.560
+end user or the world without providing any details behind implementation implementation using the abstraction
+
+01:10.560 --> 01:11.010
+concept.
+
+01:11.490 --> 01:16.260
+So it is also known as a combination of data hiding and data abstraction.
+
+01:16.920 --> 01:23.760
+Encapsulation can be achieved by declaring all the variables in the class as a private and writing public
+
+01:23.760 --> 01:30.660
+methods in the class to actually set and get the values, make the member variables private, and use
+
+01:30.660 --> 01:33.900
+the public methods to set some values and get some values.
+
+01:34.350 --> 01:36.830
+That is also one of the thing.
+
+01:36.880 --> 01:43.980
+The example we can use to explain encapsulation is a use case commonly used in encapsulation.
+
+01:45.150 --> 01:49.350
+So what are the advantages of encapsulation data hiding?
+
+01:49.620 --> 01:54.540
+Oh that is, the user will have no idea about the inner implementation of the class.
+
+01:54.960 --> 01:57.810
+Yes, it will not be visible to the user.
+
+01:58.200 --> 02:01.260
+How the class is storing the values in the variable.
+
+02:01.320 --> 02:04.440
+The user will only know what that we are passing.
+
+02:04.440 --> 02:12.030
+The values using the sector methods and new variables are getting initialized inside that it increases
+
+02:12.030 --> 02:13.650
+the flexibility we can make.
+
+02:13.650 --> 02:18.450
+The variables of the class read only or write only depending on our requirement.
+
+02:18.870 --> 02:24.390
+If you wish to make the variables read only, then we have to omit the sector methods like set names,
+
+02:24.390 --> 02:28.080
+id, age, etc. from the about program.
+
+02:28.080 --> 02:32.840
+Or if we wish to make the variable as a write only then we can all mitigator methods.
+
+02:33.540 --> 02:35.820
+We are just allowed to write to those variables.
+
+02:37.410 --> 02:44.490
+Then the reusability encapsulation also improves the usability and is easy to change with the new requirements.
+
+02:45.960 --> 02:49.740
+Encapsulated code is very easy for unit testing.
+
+02:50.730 --> 02:58.140
+Okay, so now let us get to the example of encapsulation and understand the concept in detail.
+
+02:58.920 --> 03:08.790
+So in encapsulation or as we said here, we can make the class encapsulated by initial by making all
+
+03:08.790 --> 03:15.000
+its variable as a private seed as this methods this.
+
+03:15.390 --> 03:22.200
+So it is so variable and we make this as private, but we made the methods that public.
+
+03:22.200 --> 03:29.610
+So we want to give these methods available for other classes to get the value of the variable or to
+
+03:29.610 --> 03:31.680
+set the value of the variables.
+
+03:32.220 --> 03:38.880
+Now we saw in the flexibility point here, if we want to make it only, do it only and we don't want
+
+03:38.880 --> 03:45.330
+to say allow users to set any values or write any values, then we will not make these public sector
+
+03:45.330 --> 03:45.780
+methods.
+
+03:45.790 --> 03:52.650
+We can make this method as a private and if we want to make one layer right and don't allow user to
+
+03:52.650 --> 03:58.050
+fetch the values, then we can make get methods getter method as a private.
+
+03:58.920 --> 03:59.340
+Okay.
+
+03:59.790 --> 04:06.810
+So for this, the private members or the get the method will get the values and certain methods will
+
+04:06.810 --> 04:08.550
+set the values.
+
+04:09.510 --> 04:17.280
+Right now let us create another class with the main method we create object of the encapsulate class.
+
+04:18.450 --> 04:22.500
+And this said the values of name, age and roll number.
+
+04:23.190 --> 04:30.060
+And then we will use this object to get the name, age and roll number and printing it here.
+
+04:31.050 --> 04:34.110
+Okay, so this is as simple as this.
+
+04:34.110 --> 04:41.010
+So it's like you make the member variables private, method private and encapsulate and hide the behavior
+
+04:41.790 --> 04:46.230
+of the members member functions and member variables.
+
+04:46.920 --> 04:48.240
+Now, let us on this.
+
+04:50.530 --> 04:56.590
+See whatever values I to the private member functions of another class, you can get it.
+
+04:57.310 --> 05:04.300
+But the functionality of how it is said we can keep it inside it and we get hide encapsulated.
+
+05:04.750 --> 05:08.950
+Okay, so this is a simple example of encapsulation.
+
+05:08.950 --> 05:09.930
+Try it yourself.
+
+05:09.930 --> 05:12.940
+If you if you have any questions, you can write back to me.
+
+05:13.420 --> 05:14.500
+Thank you for watching.

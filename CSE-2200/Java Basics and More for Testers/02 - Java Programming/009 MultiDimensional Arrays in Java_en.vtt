@@ -1,0 +1,187 @@
+WEBVTT
+
+00:00.090 --> 00:04.290
+This video we will learn about multi dimensional array with an example.
+
+00:04.950 --> 00:10.620
+So suppose we have an array declared with this variable name.
+
+00:11.670 --> 00:14.850
+We have three indexes in the array.
+
+00:14.850 --> 00:20.940
+That means we have specified the land of the early as three, but it is a multi dimensional.
+
+00:20.940 --> 00:22.620
+That is it is a to the early.
+
+00:22.830 --> 00:23.220
+Okay.
+
+00:23.580 --> 00:30.030
+So each index of the array stores three values here.
+
+00:30.600 --> 00:38.130
+So it will be a three by three adding date three location three values.
+
+00:38.130 --> 00:41.310
+So to itself to dimensional Larry, which is three by three.
+
+00:41.940 --> 00:50.250
+First index will have this value to seven 9/2 index will have this value three, six one and a third
+
+00:50.250 --> 00:54.300
+one will have this value seven forward two okay.
+
+00:54.720 --> 01:00.960
+So the code, let us see how we can initialize this type of multidimensional array, how we can assign
+
+01:00.960 --> 01:03.750
+value to it in how you can access this value.
+
+01:04.440 --> 01:05.550
+So let's get started.
+
+01:06.000 --> 01:09.140
+So this is an example of multi dimensional early.
+
+01:09.180 --> 01:11.880
+We are specifying a two dimensional array.
+
+01:11.880 --> 01:18.390
+This two square basis specify a square basis specified that this is up to date.
+
+01:18.720 --> 01:27.600
+Okay and the value of index since hero value of index one and value of index two is this.
+
+01:27.840 --> 01:30.690
+So the length of the array will be three here.
+
+01:31.320 --> 01:31.680
+Okay.
+
+01:32.040 --> 01:36.240
+So we are writing a for a loop starting from 0 to 3.
+
+01:36.750 --> 01:37.140
+Okay.
+
+01:37.410 --> 01:45.870
+And again, we will add another for loop here starting from 0 to 3 like we need to for loops here because
+
+01:45.870 --> 01:47.420
+it's a two dimensional Larry.
+
+01:47.880 --> 01:48.330
+Okay.
+
+01:48.540 --> 01:54.720
+So it's now it can be two by four, it can be three by three can be three by eight.
+
+01:55.230 --> 01:59.670
+So these are in g values can be different, upper limit can be different.
+
+01:59.670 --> 02:07.320
+But in this particular example, it's a C, that's why the oh for loop here shows that the same value
+
+02:07.320 --> 02:17.250
+you will get and we need to specify the value, but in the value of I and G in this date and we are
+
+02:17.250 --> 02:21.320
+printing the value of this particular idea.
+
+02:21.960 --> 02:35.160
+Okay, so this is I consider this is g we want to make I increment g101 to bring the value, then we
+
+02:35.160 --> 02:38.490
+want to increment the eight to the next.
+
+02:38.910 --> 02:45.960
+Again, we want to initialize g0g to one g to do okay.
+
+02:46.350 --> 02:55.680
+Then again, we want to increment the I do to date and g to zero, g to one and D to three.
+
+02:56.430 --> 02:56.760
+Okay.
+
+02:57.210 --> 03:03.180
+And then we will print this value and again increment I and then it will be three.
+
+03:03.180 --> 03:07.530
+Three is less than three false and then it will stop printing the value.
+
+03:07.860 --> 03:14.970
+So this is how we can we the use too far looks here to bring that two dimensional three.
+
+03:16.110 --> 03:19.590
+Okay, so let's run this and check.
+
+03:26.940 --> 03:33.600
+3279361742.
+
+03:34.860 --> 03:38.610
+Like you did all these early values that bring you.
+
+03:40.070 --> 03:40.430
+Okay.
+
+03:41.270 --> 03:47.660
+Also, I have to inform you that we can pass this audit as an input to a method.
+
+03:48.080 --> 03:48.440
+Okay.
+
+03:48.770 --> 03:58.340
+What I meant by that, it's like if you're adding another mental HULETT public void and one that is
+
+03:58.420 --> 04:05.930
+pentathlon and you want to pass it in as a barometer, you can do that.
+
+04:06.350 --> 04:06.710
+Okay.
+
+04:07.520 --> 04:16.910
+And if you want to return an audit as a barometer, then also you can do that instead of very well.
+
+04:17.120 --> 04:19.970
+Why do you can use this and return?
+
+04:22.110 --> 04:22.620
+Audie.
+
+04:28.710 --> 04:29.070
+Okay.
+
+04:42.320 --> 04:42.570
+Okay.
+
+04:43.070 --> 04:45.800
+In this way, you can return a particular area.
+
+04:46.190 --> 04:50.900
+You can specify the added ingredient.
+
+04:50.900 --> 04:51.860
+Exactly.
+
+04:52.280 --> 04:53.570
+So this is possible with.
+
+04:58.930 --> 04:59.320
+Okay.
+
+05:01.150 --> 05:07.000
+Now, next Monday, we will see array of objects how to create a ray of object and utilize them.
+
+05:07.330 --> 05:07.660
+Okay.
+
+05:08.980 --> 05:10.150
+So that's it for this module.
+
+05:10.150 --> 05:11.620
+Try it yourself.
+
+05:11.980 --> 05:17.380
+To use this example for multidimensional learning, let me know if you face any doubts.

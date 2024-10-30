@@ -1,0 +1,226 @@
+WEBVTT
+
+00:00.390 --> 00:06.680
+In this video we will covered about interfaces in Java, interfaces in Java.
+
+00:06.690 --> 00:12.480
+We have already seen a little bit of example where we wanted to achieve multiple inheritance in Java.
+
+00:12.960 --> 00:19.230
+So this is the more topmost advantage of interfaces in Java.
+
+00:19.950 --> 00:28.290
+First is to achieve data abstraction and second one is to implement multiple inheritance, which is
+
+00:28.290 --> 00:29.520
+not supported in Java.
+
+00:29.520 --> 00:31.650
+We can do it with only interfaces.
+
+00:32.280 --> 00:33.810
+So what is an interface?
+
+00:33.810 --> 00:40.050
+It is a budget and Java programming language is defined as an abstract type used to specify the behavior
+
+00:40.050 --> 00:40.650
+of a class.
+
+00:41.190 --> 00:46.710
+So in interfaces you will just find method declarations and not the definitions.
+
+00:47.790 --> 00:50.310
+Interface in Java is a blueprint of a class.
+
+00:50.310 --> 00:52.580
+It acts as a blueprint of a class.
+
+00:52.580 --> 01:00.360
+So the class which implement that interface, what all methods for it should implement, write it to
+
+01:00.780 --> 01:02.160
+override or it should.
+
+01:02.800 --> 01:07.920
+I have access to declaring it like a Java interface?
+
+01:07.920 --> 01:10.800
+Constant static constants and abstract methods.
+
+01:11.250 --> 01:15.150
+The interface in Java is a mechanism to achieve abstraction.
+
+01:15.150 --> 01:22.290
+Yes, and there can only be or can be only abstract methods in the Java interface and not the method
+
+01:22.290 --> 01:26.400
+body are used to achieve abstraction and multiple inheritance.
+
+01:26.400 --> 01:33.000
+As I told you, these are the two key advantages benefits and purposes of using interfaces in Java.
+
+01:33.810 --> 01:37.710
+Now leaders understand the difference between the class and interfaces.
+
+01:38.100 --> 01:43.260
+In class you can instantiate variables and create an object in an interface.
+
+01:43.260 --> 01:47.460
+You can't instantiate variables and create an object of an interface.
+
+01:48.360 --> 01:55.770
+Class can contain concrete with implementation methods also, but the interface cannot contain concrete
+
+01:55.770 --> 01:56.520
+methods.
+
+01:57.540 --> 01:59.400
+The Xs specify the use of IT.
+
+01:59.400 --> 02:07.680
+Classes are private, protected and public in interfaces only one specified is used that is public.
+
+02:08.130 --> 02:09.720
+So these are the difference.
+
+02:09.720 --> 02:13.350
+And apart from that, interfaces only has the abstract methods.
+
+02:13.410 --> 02:13.740
+Right?
+
+02:15.120 --> 02:22.980
+So let us get to the example of interface and check out interface example.
+
+02:22.980 --> 02:23.250
+Right.
+
+02:24.150 --> 02:24.570
+Okay.
+
+02:24.570 --> 02:33.510
+So if you see the vehicle, so vehicle is a very generic category and you can have different types of
+
+02:33.510 --> 02:38.600
+vehicles that is a bicycle, god drug, anything, right?
+
+02:39.000 --> 02:44.730
+So we, what we are doing in this example, we are we are making interface of a vehicle, okay?
+
+02:45.150 --> 02:47.860
+And the vehicle can have same methods.
+
+02:47.970 --> 02:51.480
+I changed the gears, speed up, apply brakes.
+
+02:51.690 --> 02:54.300
+These can be the common methods for the vehicles.
+
+02:54.720 --> 02:59.070
+So we in the interface we will create this as an abstract method.
+
+02:59.400 --> 03:05.100
+So if you can see it, there is a limited declaration and not definition, although an implementation
+
+03:05.100 --> 03:05.670
+is written.
+
+03:06.660 --> 03:13.200
+So now let us create another class that is bicycle, which implements the interface vehicle.
+
+03:13.650 --> 03:23.640
+So when we want to extend or when we want to use the methods or inside the interface, we need to use
+
+03:23.640 --> 03:26.100
+this key keyword implements with the interface.
+
+03:26.400 --> 03:34.650
+So for inheritance we use extend skyward in when it's a class, but for interface we need to use implements
+
+03:34.650 --> 03:35.040
+keyword.
+
+03:35.970 --> 03:46.440
+So we are adding two integers in a speed and in here we are overwriting the interchanged yield via overriding
+
+03:46.440 --> 03:52.290
+the method speed up and we are overwriting the method to apply.
+
+03:53.010 --> 04:00.600
+So speed will be decrement data and we are printing the value of the speed and yield here.
+
+04:01.140 --> 04:01.380
+Right.
+
+04:02.010 --> 04:05.550
+So there there is another class which is bike.
+
+04:06.090 --> 04:11.760
+Same way we override adding method of a change gears or speed of speed down apply brake.
+
+04:12.600 --> 04:16.230
+Now let us see what we what we are writing in the driver class.
+
+04:16.230 --> 04:17.010
+You first.
+
+04:17.010 --> 04:19.470
+We are creating the object of bicycle class.
+
+04:19.950 --> 04:23.370
+Then we are changing the gear to speeding up.
+
+04:23.550 --> 04:27.480
+That is to try apply brakes to one.
+
+04:27.930 --> 04:31.950
+Okay, they are creating object of the class bike.
+
+04:31.950 --> 04:33.810
+We are changing gears here.
+
+04:34.200 --> 04:40.200
+They are speeding up from for applying the brakes by prison state and bicycle prison state.
+
+04:40.410 --> 04:44.730
+What is that it is found out and this that in this particular example you.
+
+04:47.110 --> 04:51.730
+See bicycle parade in state is speed is equal to two, gear is equal to two.
+
+04:52.030 --> 04:58.300
+After performing all this operations, what is the value of gear and what is the value of speed?
+
+04:58.600 --> 05:00.520
+That is what it is showing.
+
+05:00.750 --> 05:01.140
+Okay.
+
+05:01.570 --> 05:09.490
+So in this case, both the classes, bike and bicycle are implementing the interface vehicle, which
+
+05:09.490 --> 05:13.070
+act as a blueprint of these two classes there.
+
+05:13.450 --> 05:20.050
+Then the the bicycle and bike should implement all these methods and.
+
+05:22.200 --> 05:27.690
+The functionality of the glasses are dependent on the implementation of this method here.
+
+05:28.300 --> 05:33.720
+Right then, as these methods are abstract data abstraction is achieved.
+
+05:35.100 --> 05:42.360
+In this scenario, in this example, again, you can try this out with different example of interfaces
+
+05:43.020 --> 05:45.300
+and let me know if you have any questions.
+
+05:45.450 --> 05:46.560
+Thank you for watching.
+
+05:46.590 --> 05:48.150
+Let's get to the next module.

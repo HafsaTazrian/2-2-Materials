@@ -1,0 +1,337 @@
+WEBVTT
+
+00:00.240 --> 00:07.650
+Yes, an exception is an unwanted or unexplained expected event which occurs during execution of any
+
+00:07.650 --> 00:10.590
+code that is at runtime.
+
+00:10.860 --> 00:13.080
+It disrupts the flow of execution.
+
+00:13.470 --> 00:19.920
+So what happens when there is an exceptions in there not executing a program or, quote, it will stop
+
+00:19.920 --> 00:22.650
+its execution as soon as the exception offers.
+
+00:23.130 --> 00:30.720
+But there might be possibilities that we want to continue execution of our life that is known and that
+
+00:30.720 --> 00:33.240
+is known as exception handling.
+
+00:34.590 --> 00:41.120
+So to catch the expression exception that is drawn by a program, okay.
+
+00:41.310 --> 00:47.250
+And to share the specific trace or betas of that exception.
+
+00:47.580 --> 00:50.940
+But we don't want to stop the execution of the program.
+
+00:51.270 --> 00:51.600
+Okay.
+
+00:51.600 --> 00:55.650
+That's that's why I call this exception handling in Java.
+
+00:55.770 --> 00:56.100
+Okay.
+
+00:56.970 --> 00:58.540
+So this is very important.
+
+00:58.540 --> 01:02.700
+No concept in Java and no to handle exceptions.
+
+01:03.470 --> 01:03.720
+Right.
+
+01:04.470 --> 01:06.240
+So my exceptions.
+
+01:06.780 --> 01:07.050
+Course.
+
+01:08.250 --> 01:14.130
+There are multiple reasons that exception can offer that is invalid.
+
+01:14.910 --> 01:20.220
+So we are writing a board very that is giving some value as an input.
+
+01:20.910 --> 01:21.230
+Right.
+
+01:21.550 --> 01:27.120
+But what we want to do, we know what the user doesn't know, what is expected of the system if the
+
+01:27.120 --> 01:28.170
+string is expected.
+
+01:29.010 --> 01:32.940
+I mean, that is giving us a venue, then this will not work out.
+
+01:33.030 --> 01:41.070
+It will throw an exception, a device value, loss of network connectivity or some limitations that
+
+01:41.070 --> 01:45.870
+is memory limitations of photos, opening and unavailable files.
+
+01:45.900 --> 01:50.790
+So if there is a old file and we are trying to write the file or try to win the claim.
+
+01:51.540 --> 01:55.190
+So these kind of things will throw an extension.
+
+01:55.710 --> 01:59.300
+I agree to disturb the flow of the execution, if not part.
+
+01:59.760 --> 02:05.790
+And then there is a difference between what is an error in the program and what is the exception in
+
+02:05.790 --> 02:06.180
+the pool.
+
+02:07.020 --> 02:12.600
+An error indicates a serious problem that no reasonable application should not try to get right.
+
+02:12.870 --> 02:20.430
+If there is an error, that means if in the code in condition statement instead of the condition operator,
+
+02:20.430 --> 02:23.160
+some other character sequence is used.
+
+02:23.880 --> 02:26.240
+In this case, the code cannot be executed.
+
+02:26.550 --> 02:32.910
+We cannot catch this kind of error and we cannot continue the execution of the course because basic
+
+02:33.180 --> 02:35.550
+part of the conditional statement is missing it.
+
+02:35.590 --> 02:39.300
+So it will double error compiler time itself.
+
+02:39.300 --> 02:40.800
+It will not let you complete.
+
+02:41.700 --> 02:47.910
+That is error and exception indicates the condition that a reasonable application might try to catch.
+
+02:48.390 --> 02:51.600
+So if you are trying to open a file which is not present.
+
+02:52.600 --> 02:52.980
+Okay.
+
+02:53.170 --> 02:55.450
+You don't want to stop the Division of order.
+
+02:55.570 --> 03:02.530
+You just want the user to know that this you are the file that you're trying to offer is not present.
+
+03:02.680 --> 03:08.980
+So you want to catch the exception I'm showing the user when you want to continue the rest of the program
+
+03:08.980 --> 03:09.610
+execution.
+
+03:10.330 --> 03:10.610
+Okay.
+
+03:10.930 --> 03:13.210
+This will not throw you any combined limit.
+
+03:13.540 --> 03:13.820
+Okay.
+
+03:15.070 --> 03:17.620
+So this is a difference between exception and.
+
+03:19.560 --> 03:21.540
+What are different types of exceptions?
+
+03:21.960 --> 03:23.860
+There are user defined exceptions.
+
+03:23.940 --> 03:28.440
+That means you can create your own exceptions and there are some building exceptions.
+
+03:28.950 --> 03:33.750
+So in building exceptions you can set checked exceptions and unchecked exceptions.
+
+03:34.680 --> 03:43.170
+Chip exceptions are the place not found in an execution file not found exception and unchecked exception
+
+03:43.180 --> 03:46.650
+set arithmetic exception plus gas expansion.
+
+03:46.650 --> 03:47.760
+None point at exception.
+
+03:47.760 --> 03:54.000
+Why most of the time you will the unchecked expect at this they saw.
+
+03:55.160 --> 04:02.720
+Now we will see a simple example of exception how to handle the exception, if the exception is to how
+
+04:02.720 --> 04:06.380
+to catch the exception and still continue the execution.
+
+04:06.650 --> 04:07.780
+Let us see that video.
+
+04:08.060 --> 04:11.000
+So let's see an example of exceptions here.
+
+04:11.780 --> 04:13.810
+Exception throughout the class.
+
+04:13.880 --> 04:19.160
+Exception to that is the class it throws.
+
+04:19.160 --> 04:21.800
+The exception, which is a diplomatic section.
+
+04:22.190 --> 04:23.780
+I appreciate exception.
+
+04:23.780 --> 04:25.730
+Handler is not found within the method.
+
+04:26.090 --> 04:27.530
+Okay, so let's see.
+
+04:27.560 --> 04:30.380
+In this class, it is trying to divide by zero.
+
+04:31.340 --> 04:34.790
+It will throw an exception, but it is not handled here.
+
+04:35.120 --> 04:35.480
+Okay.
+
+04:35.990 --> 04:37.700
+But there is another matter here.
+
+04:37.970 --> 04:41.360
+There there is a diplomatic operation divided by zero.
+
+04:41.870 --> 04:44.300
+And it is inside the try control.
+
+04:44.420 --> 04:46.400
+That means the exception is handled.
+
+04:46.970 --> 04:48.650
+Cash number, format exception.
+
+04:49.400 --> 04:49.820
+Sorry.
+
+04:50.090 --> 04:50.480
+What?
+
+04:50.490 --> 04:52.310
+What exception is open?
+
+04:52.640 --> 04:53.030
+Okay.
+
+04:53.570 --> 04:56.020
+So then we run this two methods.
+
+05:00.380 --> 05:06.350
+So see, here we are trying to get the exemption and put in the message.
+
+05:06.350 --> 05:07.280
+Exception message.
+
+05:08.270 --> 05:08.550
+Again.
+
+05:09.320 --> 05:09.890
+So.
+
+05:11.760 --> 05:14.130
+We are calling this particular method.
+
+05:15.090 --> 05:23.070
+Compute division maternity and be a value will be one value will be zero and you're all two.
+
+05:23.070 --> 05:24.540
+We're getting the exception.
+
+05:25.170 --> 05:28.980
+Now, let us run this particular example and check how this looks.
+
+05:32.590 --> 05:32.980
+Okay.
+
+05:33.400 --> 05:36.250
+See, slash by the.
+
+05:37.380 --> 05:42.840
+Get message will bring a description of the exception we know what is the description of the exhibition
+
+05:42.840 --> 05:43.070
+here?
+
+05:45.680 --> 05:48.500
+Because it is dividing by the state.
+
+05:48.770 --> 05:51.020
+That is the exception you're expecting.
+
+05:51.590 --> 05:53.240
+And that is what we are getting.
+
+05:55.620 --> 05:57.590
+See message.
+
+05:58.080 --> 05:58.470
+Okay.
+
+05:58.920 --> 06:01.650
+So this is how you get first.
+
+06:01.740 --> 06:06.540
+Whatever program statement you feel that will throw exception.
+
+06:06.870 --> 06:09.690
+You need to add that code in to try block.
+
+06:10.050 --> 06:10.410
+Okay.
+
+06:10.850 --> 06:15.720
+And you need to start the exception here and show the message.
+
+06:15.730 --> 06:17.200
+What is the exception that.
+
+06:17.220 --> 06:17.480
+Okay.
+
+06:18.180 --> 06:18.450
+Right.
+
+06:19.140 --> 06:25.710
+So in this way, in the edge, regimented, you can find out if this line of code is throwing the exception,
+
+06:25.710 --> 06:28.920
+then get you to do it and continue the block execution.
+
+06:29.890 --> 06:30.220
+Okay.
+
+06:30.430 --> 06:33.370
+So this is about exception in Java.
+
+06:34.000 --> 06:37.540
+And if you have any questions, you can write back to.
+
+06:37.780 --> 06:38.290
+Thank you.

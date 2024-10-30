@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.150 --> 00:01.470
+Structures in Java.
+
+00:02.220 --> 00:08.490
+Constructors in Java is a special method that is used for initializing objects.
+
+00:08.940 --> 00:13.500
+The constructor is called when an object of a class is created.
+
+00:14.220 --> 00:18.120
+It can be used to set initial values for object attribute.
+
+00:18.570 --> 00:22.020
+Constructors has the same name as of class.
+
+00:22.680 --> 00:22.830
+Okay.
+
+00:23.370 --> 00:25.620
+Why do we need a constructor?
+
+00:26.010 --> 00:27.840
+So consider the result.
+
+00:28.110 --> 00:30.000
+Class name box.
+
+00:30.240 --> 00:30.660
+Okay.
+
+00:31.080 --> 00:33.840
+And we created the first box of it.
+
+00:33.900 --> 00:38.280
+Lent seven centimetre break to centimetre hide eight centimetres.
+
+00:38.880 --> 00:39.270
+Okay.
+
+00:39.540 --> 00:44.760
+And we want to create multiple boxes, but with different dimensions.
+
+00:45.120 --> 00:52.830
+So what we can do here, we can create the constructor of the class box and we can initialize the values
+
+00:52.830 --> 00:57.630
+of land, brake and height whenever we are creating new object of the class.
+
+00:58.350 --> 01:03.450
+Okay, so this this is an example use case of the constructor.
+
+01:05.420 --> 01:08.730
+And what are the rules for writing constructors in Java?
+
+01:09.540 --> 01:14.760
+So constructors of a class must have the same name as the class name, which I mentioned earlier.
+
+01:15.240 --> 01:18.120
+A constructor in Java cannot be abstract.
+
+01:18.150 --> 01:26.580
+Final static or synchronized access modifiers can be used in constructor declaration to control its
+
+01:26.580 --> 01:30.070
+axes that its which other class can call.
+
+01:30.090 --> 01:36.450
+This particular constructor that we can specify so we can use X as modifiers, but we cannot use static
+
+01:36.450 --> 01:39.210
+final keyboard, abstract keyword, organized keyword.
+
+01:39.940 --> 01:42.480
+Now there are two types of constructors.
+
+01:42.690 --> 01:50.430
+First, which exits arguments where you can pass parameters and constructor, which they are not passing
+
+01:50.430 --> 01:51.210
+the parameters.
+
+01:51.210 --> 01:53.090
+So we will check examples.
+
+01:53.310 --> 01:55.350
+But this constructor does not.
+
+01:59.660 --> 02:00.050
+Okay.
+
+02:00.350 --> 02:03.720
+So first, let's go to no argument constructively.
+
+02:03.740 --> 02:05.300
+We are not passing anything.
+
+02:06.800 --> 02:06.980
+Okay.
+
+02:07.520 --> 02:12.800
+So this is a class geek named Geek and this is the constructor of the class.
+
+02:13.040 --> 02:15.730
+There is no access specified.
+
+02:15.740 --> 02:17.930
+We have not gotten one human to pass.
+
+02:18.500 --> 02:18.890
+Okay.
+
+02:19.010 --> 02:24.680
+Then we create the object of this class and it will get printed.
+
+02:24.980 --> 02:25.310
+Okay.
+
+02:26.540 --> 02:30.500
+So what we are doing in name, we are creating new object of this class.
+
+02:31.280 --> 02:38.360
+It's a default constructor provides the default so that access specified for this will be default value
+
+02:38.360 --> 02:39.230
+to the object.
+
+02:39.230 --> 02:44.600
+So will be zero and null as we have not passing anything.
+
+02:45.980 --> 02:47.180
+In other argument.
+
+02:47.630 --> 02:47.990
+Okay.
+
+02:48.380 --> 02:52.760
+So now let us run here and check what is the output we are getting.
+
+02:58.410 --> 02:58.750
+Okay.
+
+02:58.980 --> 03:05.730
+You will get to know when the constructor will be called and what what values will be there for Newman.
+
+03:06.210 --> 03:11.250
+No, see, it is zero and none null for the name.
+
+03:11.250 --> 03:12.300
+Zero for the number.
+
+03:12.630 --> 03:17.550
+No, because we are not parsing any arguments, they are not initializing anything in the constructor.
+
+03:18.180 --> 03:20.940
+But then we create the new object of the class.
+
+03:20.940 --> 03:24.060
+The constructed gets going here.
+
+03:24.330 --> 03:24.690
+Okay.
+
+03:24.990 --> 03:27.390
+This is how the flow of the constructor works.
+
+03:27.870 --> 03:31.350
+Now let us see the net of passing parameters to the constructor.
+
+03:33.960 --> 03:34.250
+Yeah.
+
+03:34.260 --> 03:39.250
+We have a glass wall and we are going to pass.
+
+03:39.290 --> 03:43.860
+Name and I.D. for this particular constructor.
+
+03:44.190 --> 03:44.550
+Okay.
+
+03:45.000 --> 03:47.130
+And we are assigning the values here.
+
+03:47.790 --> 03:55.620
+This dot name that means this not needs no variable inside the class will be assigned a value which
+
+03:55.620 --> 03:58.380
+is buzz from this particular argument.
+
+03:58.680 --> 04:05.880
+And this dot only means that this I.D variable will get the value of it, which is passed as a barometer
+
+04:05.880 --> 04:07.590
+from another class.
+
+04:08.850 --> 04:16.140
+Okay, so in main method we are creating the object to it and we are passing the values item and one.
+
+04:16.470 --> 04:16.860
+Okay.
+
+04:17.280 --> 04:24.940
+And this will get assigned here in the class and when we are printing it, we will get the values here.
+
+04:27.530 --> 04:28.580
+Let us sit on this one.
+
+04:33.550 --> 04:35.740
+See name I.D..
+
+04:36.160 --> 04:43.270
+So this is how we can initialize the values in facet as a parameter to the constructor.
+
+04:44.620 --> 04:45.000
+Okay.
+
+04:45.010 --> 04:47.080
+So this is about constructors.

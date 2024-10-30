@@ -1,0 +1,175 @@
+WEBVTT
+
+00:00.090 --> 00:04.500
+Basic structure of Dharma Buddhism, the hallowed program.
+
+00:04.890 --> 00:08.460
+So start writing your first program here with me.
+
+00:09.210 --> 00:15.140
+First of all, I have already shared a video on how to install Eclipse.
+
+00:15.210 --> 00:23.870
+Once you have installed Eclipse, you should go to file new and approach Java project.
+
+00:25.080 --> 00:28.650
+Once you had your project, you can add a package.
+
+00:28.680 --> 00:34.490
+You will see the facade, see a folder here, and you can start adding your package.
+
+00:35.490 --> 00:38.440
+Like this one sample could look.
+
+00:39.360 --> 00:46.260
+So I have added this package and let this start adding a new class here.
+
+00:51.610 --> 00:56.970
+Q So what is the name of the class is the latest?
+
+00:58.610 --> 00:59.120
+What?
+
+01:02.370 --> 01:09.790
+You want to have a public static word metal in that if you want to add construct those superclass inherited
+
+01:09.810 --> 01:12.660
+abstract plans, you can select those kind of things.
+
+01:13.290 --> 01:15.510
+So for now, we just run the main matter.
+
+01:16.380 --> 01:18.810
+I'll explain why you want this particular method.
+
+01:20.510 --> 01:23.570
+So as you know, Jeb is a glass bit language.
+
+01:24.050 --> 01:26.990
+Every line of code is written inside glass.
+
+01:29.620 --> 01:30.130
+Okay.
+
+01:30.130 --> 01:33.190
+So you can see here the classes ended.
+
+01:33.580 --> 01:33.900
+Okay.
+
+01:35.440 --> 01:43.090
+So as you know, we can argue and declare variables inside the plaza can add metals, oil or constructors,
+
+01:43.090 --> 01:46.330
+all the colors done inside the class.
+
+01:46.990 --> 01:50.350
+And this is public static would mean is the matter.
+
+01:50.800 --> 01:54.190
+From there, the execution of Java code starts.
+
+01:54.460 --> 01:54.860
+Okay.
+
+01:55.240 --> 01:58.470
+So this is the triggering point for Java code.
+
+01:58.840 --> 02:02.380
+So this method acts like the triggering point.
+
+02:02.920 --> 02:06.730
+Now what I want to do is I want to just the blueprint.
+
+02:06.730 --> 02:07.450
+Hello world.
+
+02:07.750 --> 02:08.050
+Right.
+
+02:08.740 --> 02:12.640
+So this public stand for the network, which is public.
+
+02:13.300 --> 02:15.430
+It's that big white.
+
+02:15.490 --> 02:17.920
+That means it doesn't return anything.
+
+02:17.920 --> 02:21.880
+If I write in integer here, then it will return.
+
+02:21.880 --> 02:24.070
+An integer will expect to return.
+
+02:24.240 --> 02:34.090
+Doing nothing is there to return it versus an argument in a string array format in case we want to take
+
+02:34.150 --> 02:34.780
+an input.
+
+02:36.800 --> 02:37.280
+Okay.
+
+02:38.390 --> 02:40.870
+So let's start writing the system.
+
+02:41.690 --> 02:42.650
+Look out.
+
+02:46.860 --> 02:47.240
+But.
+
+02:47.270 --> 02:47.760
+But in.
+
+02:50.050 --> 02:52.960
+Will help us bring anything under control.
+
+02:53.770 --> 02:56.250
+Okay, so let's bring.
+
+02:56.500 --> 02:57.340
+And what?
+
+03:03.520 --> 03:04.090
+Okay.
+
+03:06.190 --> 03:06.490
+See.
+
+03:07.710 --> 03:09.600
+So this is all in moodle.
+
+03:09.630 --> 03:17.070
+Method system to download print deliver and to run this model you can either select the platform or
+
+03:17.070 --> 03:21.930
+you can select a few it right click then as.
+
+03:23.820 --> 03:24.840
+Job application.
+
+03:28.550 --> 03:31.550
+So you will get the result in the console.
+
+03:31.550 --> 03:31.910
+Should.
+
+03:35.050 --> 03:35.680
+Hello World.
+
+03:37.090 --> 03:37.750
+That's it.
+
+03:38.020 --> 03:45.420
+So this is the this is how you can start writing your code, create your class, and add your main method
+
+03:45.430 --> 03:46.930
+and start writing your code.
+
+03:47.650 --> 03:49.330
+So that's it for this video.
+
+03:49.450 --> 03:51.010
+Let's move on to next model.

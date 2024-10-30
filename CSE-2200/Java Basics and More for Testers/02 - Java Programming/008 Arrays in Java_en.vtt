@@ -1,0 +1,220 @@
+WEBVTT
+
+00:00.120 --> 00:02.940
+In this video, we will learn about a rise in Java.
+
+00:04.320 --> 00:06.030
+So what are these in Java?
+
+00:06.330 --> 00:12.360
+An array in Java is a group of life type variables referred to by a common name.
+
+00:12.810 --> 00:21.870
+Yes, it is a group of variables which are of same type a raise in Java differently than it does in
+
+00:22.140 --> 00:23.010
+C++.
+
+00:23.700 --> 00:30.240
+In Java, all arrays are dynamically allocated since arrays are treated as objects.
+
+00:30.240 --> 00:35.040
+In Java, we can find their length using object property that is not length.
+
+00:35.760 --> 00:36.750
+This is different.
+
+00:37.140 --> 00:45.450
+In C++ we use size of a Java and a variable can also be declared like other variables that the square
+
+00:45.450 --> 00:46.020
+addresses.
+
+00:47.010 --> 00:53.640
+After the data type, the variables in the array are ordered and each has an index beginning from zero.
+
+00:54.180 --> 00:58.370
+So then you want to access the particular element inside an array.
+
+00:58.620 --> 01:04.700
+You need to specify the index of the three that we will see in Java.
+
+01:04.800 --> 01:10.110
+It can be also used as a static field, a local variable, a method parameter.
+
+01:10.470 --> 01:18.810
+Okay, that means we can return all an idea we can pass as a barometer to a method so that way we can
+
+01:18.810 --> 01:19.230
+use it.
+
+01:19.230 --> 01:28.080
+Is the size of the array must be specified by in our short it doesn't explore the direct subclass of
+
+01:28.080 --> 01:36.060
+an array type is object every array type implements interfaces clone symbol and see the symbol and other
+
+01:36.060 --> 01:45.090
+can contain primitives like in get etc. and object or non primitive references a class depending on
+
+01:45.090 --> 01:46.740
+the definition of the body.
+
+01:47.400 --> 01:52.200
+So also different types of areas we will be covering in our examples.
+
+01:52.920 --> 01:58.930
+In the case of primitive data types, the actual values are stored in the continuous memory locations.
+
+01:59.460 --> 02:03.480
+Also, we will be covering the memory locations, how that is stored.
+
+02:04.680 --> 02:08.760
+Okay, so this is how the array looks like.
+
+02:09.390 --> 02:12.000
+Okay, it is a array of data.
+
+02:12.240 --> 02:18.750
+There is data value here then and it is the length of data, right?
+
+02:19.140 --> 02:21.600
+The length of the other is here is nine.
+
+02:22.290 --> 02:25.890
+The index of the array starts from 0 to 8.
+
+02:26.400 --> 02:35.190
+It total length is nine will get and these are the value and zero to index values for p a first index
+
+02:35.190 --> 02:36.300
+values 53.
+
+02:36.660 --> 02:41.340
+This is how the ideas indexes are used to access the value inside.
+
+02:42.330 --> 02:48.510
+So let us see how we can declare an array we can here type type variable name.
+
+02:48.690 --> 03:00.360
+That means in a student ordinal begins bit of a type and no rectangle addresses and then variable name.
+
+03:00.660 --> 03:03.720
+So again, specific add student name.
+
+03:04.560 --> 03:07.110
+Okay, this way we can declare the adds.
+
+03:10.450 --> 03:11.680
+Sorry about this.
+
+03:16.270 --> 03:24.910
+Okay then how we can initialize the audio, we can initialize the array here in the like we can specify
+
+03:24.910 --> 03:27.700
+the name that is the name of the tree here.
+
+03:27.700 --> 03:28.810
+In this case, student.
+
+03:29.680 --> 03:35.900
+Student is equal to new integer and specify the size of three, right?
+
+03:36.580 --> 03:44.470
+So we can specify our integer entry is equal to new eight and then we're adding specifying the exact
+
+03:44.470 --> 03:46.360
+value in the array.
+
+03:46.690 --> 03:48.940
+Then it is called array literals.
+
+03:48.940 --> 03:50.050
+So this isn't a thing.
+
+03:50.050 --> 03:51.760
+We're declaring the array literal.
+
+03:51.760 --> 03:56.830
+We are literally declaring all the values that comes inside the O.D.
+
+03:57.800 --> 03:58.120
+Right?
+
+03:58.510 --> 04:07.180
+So before going to make two directional ideas, we will first check how we did example how we can implement
+
+04:07.180 --> 04:11.800
+declared initialize studies, how you can use it in a simple Java code.
+
+04:12.310 --> 04:13.420
+So let's get started.
+
+04:14.290 --> 04:16.510
+Example of the simple array here.
+
+04:16.840 --> 04:26.260
+Here we are declaring an array with the name order in the data type of this array is in there initializing
+
+04:26.260 --> 04:31.090
+it to the five so that it will stored phi integer.
+
+04:31.090 --> 04:32.800
+This is the length of the array.
+
+04:33.490 --> 04:38.230
+Then at the zero ID index we are storing the value ten.
+
+04:38.230 --> 04:41.050
+At the first index we are storing the value 20.
+
+04:41.050 --> 04:42.430
+So this is how we get.
+
+04:43.660 --> 04:53.320
+We can use the indexes rate to specify the particular location inside the array on the second, the
+
+04:53.320 --> 04:59.170
+one we are initializing it to 30, 40 and then 40 and 50.
+
+04:59.590 --> 04:59.950
+Okay.
+
+05:00.280 --> 05:02.650
+Now how we can access the element here.
+
+05:03.040 --> 05:10.240
+So we will need a for loop here for loop we starting from zero because the array index starts from zero.
+
+05:10.930 --> 05:19.290
+I is less than a red dot length that is the length of the rate will be five I plus plus okay so that
+
+05:20.080 --> 05:30.100
+for this particular loop zero to fight this print element and the index I is this so it will print these
+
+05:30.100 --> 05:30.550
+values.
+
+05:30.910 --> 05:33.400
+Now let's run this example and check here.
+
+05:38.390 --> 05:49.030
+Okay it will bring from zero to understand first index 22nd 33rd 44th 50 the way we have initialize
+
+05:49.040 --> 05:49.190
+it.
+
+05:49.190 --> 05:49.520
+Right.
+
+05:51.230 --> 05:57.650
+So this is a sample example how we can declare, initialize and access the element inside the array.
+
+05:58.430 --> 05:59.690
+Try this yourself.
+
+05:59.690 --> 06:03.860
+If you have any questions you can do it and write to me.
+
+06:04.580 --> 06:07.220
+Next model will cover multi dimensional at its.

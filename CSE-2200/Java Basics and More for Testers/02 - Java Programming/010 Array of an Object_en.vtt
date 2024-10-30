@@ -1,0 +1,157 @@
+WEBVTT
+
+00:00.120 --> 00:06.480
+It is in this video we will see about a for object, how we can create a real thin object.
+
+00:06.900 --> 00:11.740
+So to create object, we already know Java is object oriented language.
+
+00:12.120 --> 00:19.170
+All the code is specified in dozens of different classes and we create the object of this class to access
+
+00:19.170 --> 00:21.540
+the same class in another class.
+
+00:21.690 --> 00:22.020
+Right?
+
+00:22.680 --> 00:29.070
+So with that, we will see how we can create this particular class that is a student class.
+
+00:29.580 --> 00:29.970
+Okay.
+
+00:30.270 --> 00:37.470
+In the student class, we have a public variable that is integer that little number and we have a public
+
+00:37.470 --> 00:39.420
+string variable which is name.
+
+00:40.110 --> 00:40.530
+Okay.
+
+00:40.530 --> 00:42.840
+And this is a constructor of the class.
+
+00:42.840 --> 00:47.960
+What is a constructor and a main, main features of constructor?
+
+00:47.960 --> 00:53.820
+We will learn that in the upcoming videos, but for now, just remember we have created the constructor
+
+00:53.820 --> 01:01.260
+and we are passing this value and this assigns the value to this variable of the class.
+
+01:01.470 --> 01:01.890
+Okay.
+
+01:02.220 --> 01:06.870
+So constructor is used for initializing the value for this particular variable.
+
+01:07.350 --> 01:11.220
+Okay, now let's move on to the array object.
+
+01:11.330 --> 01:16.890
+Plus we are making the array of this class like this student.
+
+01:17.160 --> 01:24.360
+Okay, so see instead of int character data type we have specified here.
+
+01:24.780 --> 01:27.720
+Student Because we are creating a early on.
+
+01:27.720 --> 01:35.460
+Student Today, then we initialize it to five like the length of the array will be five.
+
+01:36.240 --> 01:40.560
+Then as per indexes we are adding the values here.
+
+01:41.190 --> 01:43.050
+So what values it is expecting?
+
+01:43.350 --> 01:51.750
+Let us check again once is expecting growing them but any rate, so it is expecting rule number one
+
+01:51.960 --> 01:52.410
+name.
+
+01:53.100 --> 01:59.760
+Okay, so this way we are specifying values for all the indexes that the 0 to 4 as the size of that
+
+01:59.760 --> 02:00.300
+is five.
+
+02:00.850 --> 02:01.120
+Okay.
+
+02:02.340 --> 02:09.870
+Now we will bring the values as we are done in the previous example, same the with the index if you
+
+02:09.870 --> 02:15.180
+will be accessing 0 to 4 and we will be printing the rule number here.
+
+02:15.720 --> 02:19.920
+So a reader either rule number, listener either name.
+
+02:21.060 --> 02:21.410
+Right.
+
+02:21.750 --> 02:25.020
+So this is how you can initialize the object.
+
+02:26.230 --> 02:33.810
+Oh you can say declare the array of object, you can initialize the array of object, you can specify
+
+02:33.810 --> 02:34.620
+the value.
+
+02:35.130 --> 02:41.130
+And this is how you can access particular element in the order.
+
+02:41.790 --> 02:44.280
+Now let us run this example and check.
+
+02:49.410 --> 02:49.820
+Okay.
+
+02:50.580 --> 02:52.140
+See, it is showing.
+
+02:52.590 --> 02:55.260
+And what index, what value is present here?
+
+02:56.130 --> 02:56.520
+Okay.
+
+02:56.850 --> 03:00.720
+This is how simple it is to create a create a class.
+
+03:00.720 --> 03:07.890
+And you can create an array of that array of object of that class and utilize it in your code.
+
+03:08.520 --> 03:10.160
+Okay, so try this out.
+
+03:10.290 --> 03:20.290
+These are very important concepts in Java and you will be needing this a lot in overriding your, you
+
+03:20.400 --> 03:22.650
+know, test food and things like that.
+
+03:22.650 --> 03:26.960
+And there are a lot of use cases also where you can use a raise in jobs.
+
+03:27.240 --> 03:34.890
+Okay, so focus on this topic and if you have any doubt or you can ask me and I'd suggest try it yourself.
+
+03:35.310 --> 03:42.520
+All these examples, try it yourself so you can have a hands on experience like you are learning.
+
+03:43.230 --> 03:43.500
+Okay.
+
+03:44.250 --> 03:45.330
+So thank you for watching.
+
+03:45.600 --> 03:46.650
+Let's get to the next.

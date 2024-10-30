@@ -1,0 +1,319 @@
+WEBVTT
+
+00:00.210 --> 00:08.070
+Strings in Java, strings in Java, objects that are backed internally by a character audit.
+
+00:08.640 --> 00:14.550
+Since all these are immutable and cannot grow, strings are mutable, immutable as well.
+
+00:15.120 --> 00:21.510
+Whenever a change or a to a string is made, an entirely new string is created.
+
+00:22.230 --> 00:25.380
+Okay, so string is internally corrected authorities.
+
+00:25.380 --> 00:32.310
+So you can see your if the string is gigs here it is the character ending with slash zero.
+
+00:32.310 --> 00:36.840
+So character array in its zero to understand where the string ends.
+
+00:37.560 --> 00:37.980
+Okay.
+
+00:38.100 --> 00:42.920
+And this is the address of the array and you can use the indexes here, right?
+
+00:43.620 --> 00:50.220
+The syntax for this is a type the specify the type that is string specify the variable name equal to
+
+00:50.220 --> 00:51.420
+the interval course.
+
+00:51.420 --> 00:54.390
+You can specify the string with which you want to do initially.
+
+00:54.900 --> 00:56.820
+So here is the example.
+
+00:56.820 --> 00:59.880
+String estimate is equal to two way automated.
+
+01:00.810 --> 01:03.270
+Okay, so this is about string.
+
+01:03.270 --> 01:07.530
+And now let's see a simple example about string.
+
+01:07.890 --> 01:12.780
+This is example where we have initialized the string string as is equal to two.
+
+01:12.780 --> 01:16.350
+We automated we are printing this string.
+
+01:16.620 --> 01:20.280
+Okay, we are declaring the string with new operator.
+
+01:20.490 --> 01:24.690
+See there are two different these two declared a string.
+
+01:24.840 --> 01:26.130
+You can check here.
+
+01:26.760 --> 01:33.690
+We can use this as is equal to clear sign and we can use a new operator that is a new leg.
+
+01:33.690 --> 01:35.340
+We create object of the class.
+
+01:35.340 --> 01:38.830
+Right this way we can also initialize the street.
+
+01:39.210 --> 01:45.120
+We will see what is the difference when we are very clear sign and what is the difference.
+
+01:45.360 --> 01:50.850
+So there is a basic difference with the storage and memory allocation inside JVM here.
+
+01:51.360 --> 01:51.750
+Okay.
+
+01:52.200 --> 01:54.090
+Then we are printing the value of S.
+
+01:54.090 --> 01:57.510
+Well, in both the case, it will print the same value.
+
+01:57.630 --> 02:01.560
+However we declare, let us sit on this.
+
+02:05.460 --> 02:09.870
+Okay so the declaration but can we do this and what is.
+
+02:09.870 --> 02:14.580
+Well the this too is how they are different that we will cover in the next example.
+
+02:15.750 --> 02:23.040
+So now let's learn more about strings and the string classes and interfaces which we use.
+
+02:25.110 --> 02:28.230
+Get to interfaces and classes in strings.
+
+02:29.100 --> 02:30.660
+That is a parable for class.
+
+02:31.170 --> 02:34.620
+This class implements the car to sequence interface.
+
+02:34.860 --> 02:40.530
+This class is used to allow character buffers to be used in place of character sequences.
+
+02:40.980 --> 02:44.700
+But an example of such you said you can see in regular expression.
+
+02:45.240 --> 02:45.570
+Okay.
+
+02:46.020 --> 02:49.410
+That is 30 gigs of baggage provided by Java.
+
+02:49.560 --> 02:57.300
+In Java that we get string class string is a sequence of characters in Java.
+
+02:57.720 --> 03:05.160
+Objects of string and mutable, which means a constant and cannot be changed once created like we saw
+
+03:06.600 --> 03:08.250
+string before string.
+
+03:08.250 --> 03:13.110
+The four is a pure class of a string that provides much of the functionality of strings.
+
+03:13.620 --> 03:17.580
+The string represent fixed length, immutable character sequence.
+
+03:17.580 --> 03:22.260
+Light string buffer is little web and it is right developed.
+
+03:23.010 --> 03:27.150
+So there are multiple use cases of string for how you can use it.
+
+03:27.150 --> 03:33.030
+Because when you create a string or declare a string, you cannot grow the particular thing you have
+
+03:33.030 --> 03:33.630
+to create.
+
+03:33.630 --> 03:41.130
+If you change anything in that the completely new string is created but in single form the right operations.
+
+03:41.130 --> 03:42.120
+You couldn't grow that.
+
+03:42.420 --> 03:43.110
+It did that.
+
+03:43.630 --> 03:48.930
+Okay, so this is the difference between string and string before string builder.
+
+03:49.050 --> 03:52.800
+The string builder in Java represents a mutable sequence of character.
+
+03:53.240 --> 03:53.450
+Right?
+
+03:54.300 --> 04:01.020
+Since the string class in Java create immutable sequencing, builder class provides the alternative
+
+04:01.020 --> 04:01.800
+of the string.
+
+04:02.610 --> 04:10.380
+Okay, so this is also C means we can write this, we can grow this, we can open to this, we can go
+
+04:10.380 --> 04:11.370
+and get to this, right?
+
+04:11.670 --> 04:14.510
+So we can grow this too.
+
+04:14.550 --> 04:20.520
+So mutable and alternative of does string plus what is string organizer?
+
+04:21.090 --> 04:26.970
+String organizer class in Java is used to break a string into the three tokens.
+
+04:27.270 --> 04:35.650
+Write a string tokenized object internally, maintain a current position within the string to be tokenize.
+
+04:35.940 --> 04:40.320
+Okay, some operations advance this current position past.
+
+04:40.320 --> 04:46.260
+The characters are open as written by taking the substring of the string that was used to create the
+
+04:46.260 --> 04:47.370
+tokenizing object.
+
+04:47.700 --> 04:55.350
+So many of many times there are used pieces where we want to pass a string and separate the string based
+
+04:55.770 --> 05:00.570
+based on a column, a semicolon or comma or space.
+
+05:00.570 --> 05:06.390
+And we want to make tokens out of it, or you can make the substring out of it.
+
+05:06.390 --> 05:13.770
+And utilizing the opcode for further processing for this kind of use is this string token that is used.
+
+05:14.910 --> 05:19.020
+Okay, so now we will see memory allocation industry.
+
+05:19.350 --> 05:19.710
+Okay.
+
+05:20.010 --> 05:22.500
+Why this memory allocations are different.
+
+05:22.770 --> 05:23.130
+Okay.
+
+05:23.550 --> 05:31.050
+So before coming to this notice to understand the code and then come back to this.
+
+05:31.050 --> 05:31.380
+Okay.
+
+05:33.380 --> 05:34.370
+Same story.
+
+05:34.610 --> 05:45.230
+So here, if you can see we have strong S1 and S2 where we are directly initializing to a stream and
+
+05:45.230 --> 05:52.790
+we have S3 and S4 where we are using new operator like the initial is the object and we are sending
+
+05:52.790 --> 05:56.990
+the string and we are printing the values of this land in a string instrument.
+
+05:56.990 --> 06:04.490
+As for all these things, we will bring the same values, but the memory allocation inside JVM is different
+
+06:04.490 --> 06:05.840
+for all these things.
+
+06:06.440 --> 06:08.450
+How it is different, let's see that.
+
+06:11.390 --> 06:19.700
+Okay, so now you know as when an S2 we initialized with equal to sign, then we initialize a new string
+
+06:19.700 --> 06:24.530
+with equal sign, then it goes into a string constant.
+
+06:25.520 --> 06:33.200
+I mean, for both of these S1 in the store, it's pointing to the same memory location where the string
+
+06:33.200 --> 06:34.010
+is same, right?
+
+06:34.550 --> 06:42.620
+But in case of S3 and S4, where we use new operated every time a new memory location is created, even
+
+06:42.620 --> 06:50.710
+though the string that you referenced string is C it's all this memory is created inside the heap for
+
+06:50.730 --> 06:51.350
+job added.
+
+06:52.010 --> 06:57.230
+So here if you use equal to operator, then the string constant pool is used.
+
+06:57.230 --> 07:00.380
+If the string is already present, it will just point.
+
+07:00.380 --> 07:06.560
+So as you will point to the same location, memory, location will not create any new member relocation,
+
+07:06.560 --> 07:10.100
+but in this case it will create the new location.
+
+07:10.790 --> 07:11.050
+Right?
+
+07:11.360 --> 07:15.680
+So this is a different difference when we are allocating string differently.
+
+07:16.280 --> 07:25.280
+Now, let us execute the program and check any ways it is going to bring the same thing four times.
+
+07:26.420 --> 07:26.810
+Yes.
+
+07:26.810 --> 07:31.070
+So in the in output there is no difference.
+
+07:31.070 --> 07:33.050
+But the back end is to retry.
+
+07:33.050 --> 07:34.730
+So there is a difference with this.
+
+07:35.330 --> 07:38.500
+So this is about strings, strings, basics.
+
+07:38.500 --> 07:40.400
+So practice this yourself.
+
+07:40.400 --> 07:48.080
+There are multiple questions available in problem statement, interview questions have to be on strings
+
+07:48.620 --> 07:50.930
+and as well as our previous topic arrays.
+
+07:51.290 --> 07:55.010
+So practice that and if you have any doubts, you can ask me.
+
+07:55.550 --> 07:56.570
+Thank you for watching.

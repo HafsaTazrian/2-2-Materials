@@ -1,0 +1,346 @@
+WEBVTT
+
+00:01.840 --> 00:02.770
+Hello, everyone.
+
+00:03.250 --> 00:04.570
+Welcome to this video.
+
+00:04.600 --> 00:10.840
+In this video, we are going to learn about mental overloading and method or method over writing in
+
+00:10.840 --> 00:11.290
+Java.
+
+00:11.710 --> 00:15.520
+These are very interesting concept of polymorphism in Java.
+
+00:16.750 --> 00:19.720
+So what is method overloading then?
+
+00:19.720 --> 00:21.940
+You want to write a method of it.
+
+00:21.940 --> 00:24.820
+Same name, but different parameters.
+
+00:25.270 --> 00:27.250
+You can use method overloading.
+
+00:27.730 --> 00:32.290
+So what is the benefit of method overloading vi to go for?
+
+00:32.290 --> 00:33.480
+For method overloading.
+
+00:33.490 --> 00:35.980
+All these things we will check out with example.
+
+00:35.980 --> 00:42.340
+If you have an example in front of you, it is much more clear than I'm adding entity for this particular
+
+00:42.760 --> 00:43.210
+topic.
+
+00:43.810 --> 00:45.550
+And what is method overwriting?
+
+00:45.910 --> 00:51.250
+We have seen already in our previous example that in interface we have added a method, declared the
+
+00:51.250 --> 00:55.180
+method, and overriding and added a logic for that.
+
+00:55.180 --> 01:03.490
+Inside that method, overriding is a concept when you want to update any of the existing method, utilize
+
+01:03.490 --> 01:04.360
+the same method.
+
+01:04.360 --> 01:11.410
+Instead of creating a new method, it is used in case of inheritance interfaces, so etc..
+
+01:11.980 --> 01:15.880
+So how I know how to do this?
+
+01:16.390 --> 01:17.740
+Let us see of it.
+
+01:17.740 --> 01:18.190
+Both.
+
+01:18.430 --> 01:20.680
+Both of these concepts with examples here.
+
+01:28.080 --> 01:30.690
+He does go to overloading for us.
+
+01:34.700 --> 01:35.780
+Metal overload.
+
+01:36.230 --> 01:36.420
+Ready?
+
+01:36.920 --> 01:41.030
+So here in this example, you can see the method with names.
+
+01:41.030 --> 01:51.290
+So some some great first metal passes store in the accepts two integers as a barometer and it returns
+
+01:51.290 --> 02:01.340
+to some second method, accepts three integers and returns for some third methods and accepts a double.
+
+02:02.700 --> 02:07.630
+To double by two metres and stay there as a double length.
+
+02:08.440 --> 02:14.550
+So then you are in the main and you want to call this method.
+
+02:15.180 --> 02:16.020
+So you can.
+
+02:16.080 --> 02:19.140
+But then you want to make the addition of two integers.
+
+02:19.470 --> 02:24.660
+This method method will be called when you are passing the three integers.
+
+02:24.660 --> 02:27.990
+That means the compiler will decide which method to call.
+
+02:30.690 --> 02:31.020
+Right.
+
+02:31.680 --> 02:38.820
+And this we then you want to add to doubles, then this method will be called.
+
+02:40.440 --> 02:43.350
+So the acronym time, this vector will go.
+
+02:43.680 --> 02:44.040
+Okay.
+
+02:44.550 --> 02:47.940
+So why this is important concept?
+
+02:48.480 --> 02:49.080
+Why we.
+
+02:49.500 --> 02:54.060
+So see, if we don't have overloading concept in Java.
+
+02:54.390 --> 02:59.940
+What you have to do is you have to name this methods with different names.
+
+02:59.940 --> 03:03.480
+Some one, some two, some three, something like that.
+
+03:03.930 --> 03:10.410
+And then you are using this method, all these methods of performing the same operation that is so.
+
+03:10.860 --> 03:14.580
+But still you need to remember the name of all different methods.
+
+03:14.580 --> 03:19.500
+If you have ten methods, then some combinations of some, right.
+
+03:20.040 --> 03:22.260
+And you want to use it like that.
+
+03:22.530 --> 03:26.910
+You would need to remember all the names like same.
+
+03:27.180 --> 03:30.600
+Some ten is for adding to doubles.
+
+03:31.290 --> 03:33.390
+It's very hard to remember like that.
+
+03:33.390 --> 03:33.690
+Right?
+
+03:34.110 --> 03:41.400
+So if it is automatically detect detected which method to call based on the parameters.
+
+03:41.400 --> 03:48.690
+But then it is much more simpler for us as a developer, as a user of this language, right?
+
+03:49.410 --> 03:53.250
+So that no matter overloading is a very important conceptual.
+
+03:53.820 --> 04:00.330
+Okay, so then you pass integers to integers, this will be called, then you by three digits, this
+
+04:00.330 --> 04:01.920
+will be called okay.
+
+04:02.190 --> 04:10.050
+So this is how execution of the program will happen on the go, depending upon the parameters.
+
+04:10.440 --> 04:15.330
+So now let us run this example and check out the output.
+
+04:17.400 --> 04:21.930
+You can also see do some three and double.
+
+04:22.590 --> 04:22.860
+Okay?
+
+04:23.130 --> 04:30.680
+You can also try to you to work this out with the different example like you can try with all.
+
+04:30.750 --> 04:38.850
+So instead of some you can try with subtraction here you can try with any of the methods you feel it
+
+04:38.850 --> 04:45.930
+is use total multiple times with 20 parameters and apply this overloading concept and check the name
+
+04:45.930 --> 04:50.520
+of the methods team and change the parameters and return types.
+
+04:50.910 --> 04:52.590
+Okay, try this out.
+
+04:52.590 --> 04:54.360
+Let me know if you face any issues.
+
+04:54.810 --> 04:57.300
+Now let us go to all the writing and set.
+
+05:01.900 --> 05:02.320
+Okay.
+
+05:02.920 --> 05:05.140
+So this is overriding concept.
+
+05:05.170 --> 05:09.730
+There is a class pennant which has a method named short.
+
+05:10.610 --> 05:10.830
+Okay.
+
+05:10.960 --> 05:14.560
+And there is a child class which extends parent.
+
+05:14.860 --> 05:17.170
+That means it inherits from the parent.
+
+05:17.200 --> 05:20.530
+Now it has access to this particular method.
+
+05:21.220 --> 05:21.640
+Okay.
+
+05:21.910 --> 05:25.180
+But the child wants to override the method.
+
+05:25.510 --> 05:31.590
+Child wants to change the implementation of the method according to each parameters.
+
+05:31.600 --> 05:31.780
+Right.
+
+05:32.230 --> 05:35.200
+So now it uses this annotation.
+
+05:35.500 --> 05:38.090
+When we write I did it in Java here.
+
+05:38.110 --> 05:44.170
+This is called annotation tool and we need to add override annotation for this method.
+
+05:44.170 --> 05:45.100
+Keep the method.
+
+05:45.100 --> 05:52.930
+Definitions seem like while it returns, avoid the name issue and then add the different logic inside.
+
+05:53.230 --> 05:54.670
+So now it is child.
+
+05:54.730 --> 05:55.150
+Sure.
+
+05:55.750 --> 05:56.080
+Right.
+
+05:57.010 --> 06:03.880
+So when we create object of the parent and when we call this particular method, it will print an integer.
+
+06:04.600 --> 06:07.600
+And then we create the object of the child.
+
+06:09.560 --> 06:11.060
+And we say, sure.
+
+06:11.840 --> 06:12.860
+Then what will happen?
+
+06:12.890 --> 06:13.940
+It will stop.
+
+06:14.300 --> 06:15.560
+It will change.
+
+06:16.490 --> 06:16.880
+Okay.
+
+06:17.330 --> 06:23.330
+So this is overriding, overriding existing network with the same name, with different logic.
+
+06:24.080 --> 06:27.680
+Now, let us run this method and then this clause and take.
+
+06:43.180 --> 06:43.660
+Okay.
+
+06:44.470 --> 06:51.480
+Actually, the name of the matter I have changed by mistake here.
+
+06:52.840 --> 06:55.360
+The name of the class would be changed.
+
+06:57.680 --> 06:58.020
+Right.
+
+06:58.900 --> 07:01.780
+So it will understand which class to run, right?
+
+07:01.780 --> 07:05.800
+The execution of Java program starts where the main method is.
+
+07:05.800 --> 07:06.910
+Read that.
+
+07:06.910 --> 07:12.970
+That is why it was not running and asking which class with the main method we should run.
+
+07:13.360 --> 07:13.660
+Right.
+
+07:14.170 --> 07:18.430
+So this is also an issue you might face when you are running or practicing.
+
+07:18.820 --> 07:25.870
+So now when they did the class name with the NE class name there, I want to run with the main method
+
+07:26.260 --> 07:31.740
+it was see the parent object shows parent with the child object.
+
+07:31.750 --> 07:32.880
+It should change.
+
+07:34.540 --> 07:34.810
+Right.
+
+07:34.960 --> 07:38.390
+So this is overloading and overriding for you guys.
+
+07:38.440 --> 07:39.490
+Practice your surf.
+
+07:39.490 --> 07:42.250
+If you have any more questions, you can write back to me.
+
+07:42.760 --> 07:44.380
+Let's get to the next module.

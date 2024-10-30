@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00.090 --> 00:04.500
+Basic structure of Dharma Buddhism, the hallowed program.
+
+00:04.890 --> 00:08.460
+So start writing your first program here with me.
+
+00:09.210 --> 00:15.140
+First of all, I have already shared a video on how to install Eclipse.
+
+00:15.210 --> 00:23.870
+Once you have installed Eclipse, you should go to file new and approach Java project.
+
+00:25.080 --> 00:28.650
+Once you had your project, you can add a package.
+
+00:28.680 --> 00:34.490
+You will see the facade, see a folder here, and you can start adding your package.
+
+00:35.490 --> 00:38.440
+Like this one sample could look.
+
+00:39.360 --> 00:46.260
+So I have added this package and let this start adding a new class here.
+
+00:51.610 --> 00:56.970
+Q So what is the name of the class is the latest?
+
+00:58.610 --> 00:59.120
+What?
+
+01:02.370 --> 01:09.790
+You want to have a public static word metal in that if you want to add construct those superclass inherited
+
+01:09.810 --> 01:12.660
+abstract plans, you can select those kind of things.
+
+01:13.290 --> 01:15.510
+So for now, we just run the main matter.
+
+01:16.380 --> 01:18.810
+I'll explain why you want this particular method.
+
+01:20.510 --> 01:23.570
+So as you know, Jeb is a glass bit language.
+
+01:24.050 --> 01:26.990
+Every line of code is written inside glass.
+
+01:29.620 --> 01:30.130
+Okay.
+
+01:30.130 --> 01:33.190
+So you can see here the classes ended.
+
+01:33.580 --> 01:33.900
+Okay.
+
+01:35.440 --> 01:43.090
+So as you know, we can argue and declare variables inside the plaza can add metals, oil or constructors,
+
+01:43.090 --> 01:46.330
+all the colors done inside the class.
+
+01:46.990 --> 01:50.350
+And this is public static would mean is the matter.
+
+01:50.800 --> 01:54.190
+From there, the execution of Java code starts.
+
+01:54.460 --> 01:54.860
+Okay.
+
+01:55.240 --> 01:58.470
+So this is the triggering point for Java code.
+
+01:58.840 --> 02:02.380
+So this method acts like the triggering point.
+
+02:02.920 --> 02:06.730
+Now what I want to do is I want to just the blueprint.
+
+02:06.730 --> 02:07.450
+Hello world.
+
+02:07.750 --> 02:08.050
+Right.
+
+02:08.740 --> 02:12.640
+So this public stand for the network, which is public.
+
+02:13.300 --> 02:15.430
+It's that big white.
+
+02:15.490 --> 02:17.920
+That means it doesn't return anything.
+
+02:17.920 --> 02:21.880
+If I write in integer here, then it will return.
+
+02:21.880 --> 02:24.070
+An integer will expect to return.
+
+02:24.240 --> 02:34.090
+Doing nothing is there to return it versus an argument in a string array format in case we want to take
+
+02:34.150 --> 02:34.780
+an input.
+
+02:36.800 --> 02:37.280
+Okay.
+
+02:38.390 --> 02:40.870
+So let's start writing the system.
+
+02:41.690 --> 02:42.650
+Look out.
+
+02:46.860 --> 02:47.240
+But.
+
+02:47.270 --> 02:47.760
+But in.
+
+02:50.050 --> 02:52.960
+Will help us bring anything under control.
+
+02:53.770 --> 02:56.250
+Okay, so let's bring.
+
+02:56.500 --> 02:57.340
+And what?
+
+03:03.520 --> 03:04.090
+Okay.
+
+03:06.190 --> 03:06.490
+See.
+
+03:07.710 --> 03:09.600
+So this is all in moodle.
+
+03:09.630 --> 03:17.070
+Method system to download print deliver and to run this model you can either select the platform or
+
+03:17.070 --> 03:21.930
+you can select a few it right click then as.
+
+03:23.820 --> 03:24.840
+Job application.
+
+03:28.550 --> 03:31.550
+So you will get the result in the console.
+
+03:31.550 --> 03:31.910
+Should.
+
+03:35.050 --> 03:35.680
+Hello World.
+
+03:37.090 --> 03:37.750
+That's it.
+
+03:38.020 --> 03:45.420
+So this is the this is how you can start writing your code, create your class, and add your main method
+
+03:45.430 --> 03:46.930
+and start writing your code.
+
+03:47.650 --> 03:49.330
+So that's it for this video.
+
+03:49.450 --> 03:51.010
+Let's move on to next model.
+
+03:51.730 --> 03:53.170
+This is a class.
+
+03:53.560 --> 03:58.420
+Let us see the example of some of the primitive data types with the code.
+
+03:59.290 --> 04:08.260
+So this is a data type class that I've added the top and we're using data type, boolean, boolean can
+
+04:08.260 --> 04:10.930
+hold two values, true and false.
+
+04:11.410 --> 04:13.150
+So here it is.
+
+04:13.180 --> 04:16.120
+In the logic, we are initializing B to two.
+
+04:16.540 --> 04:20.260
+And if B is true, then representing high and this.
+
+04:26.300 --> 04:27.830
+It will show high geeks.
+
+04:28.130 --> 04:32.120
+Right now I am making the value of be as a false right.
+
+04:32.630 --> 04:39.050
+Then it gets off that this will not get printed instead.
+
+04:41.150 --> 04:42.880
+I will bring this.
+
+04:44.170 --> 04:44.530
+Right.
+
+04:48.020 --> 04:48.200
+Oh.
+
+04:54.400 --> 04:55.750
+It does run this.
+
+05:00.190 --> 05:00.450
+Yeah.
+
+05:00.700 --> 05:01.630
+It's printing this.
+
+05:01.630 --> 05:01.930
+Hello.
+
+05:02.800 --> 05:07.750
+So let's take another example here for some of the primitive data types.
+
+05:08.170 --> 05:11.110
+So here we are declaring a character.
+
+05:11.980 --> 05:14.200
+This is in is for integer.
+
+05:14.800 --> 05:21.640
+We can just give the data type name, go the variable name and its value.
+
+05:22.880 --> 05:27.140
+Indigenous numeric value bite holds bite.
+
+05:27.140 --> 05:31.460
+In short, if memory is a constraint, then you can use this particular detective.
+
+05:33.000 --> 05:37.350
+This will give Ed Asner what is larger than the bite range.
+
+05:37.650 --> 05:38.100
+Okay.
+
+05:38.490 --> 05:42.510
+So if the memories are constant, then you can use this data, right?
+
+05:42.900 --> 05:43.830
+That is a short.
+
+05:45.070 --> 05:50.160
+This will give error as is the number larger than short range, this range.
+
+05:51.030 --> 05:58.380
+So if you want to use fractional numbers, you can use float and double and girlfriend doing all this
+
+05:58.380 --> 05:59.880
+so variable.
+
+05:59.970 --> 06:00.300
+Sure.
+
+06:00.330 --> 06:02.820
+So let's run this example and also.
+
+06:10.650 --> 06:11.180
+Okay.
+
+06:11.610 --> 06:12.180
+So.
+
+06:13.270 --> 06:16.990
+Chicago teachers might short and double.
+
+06:17.920 --> 06:22.300
+So these are some of the optimal pacing, non primitive data type.
+
+06:22.300 --> 06:30.940
+So as we go ahead in dozens of strings and arrays currently, let's focus on the primitive data types
+
+06:30.940 --> 06:39.940
+and try to utilize in your code different types of data types and so you can practice that in this way.
+
+06:40.660 --> 06:44.670
+So that said about data types, let's move on to the next part.

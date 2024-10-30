@@ -1,0 +1,391 @@
+WEBVTT
+
+00:00.180 --> 00:01.080
+Hello, everyone.
+
+00:01.290 --> 00:04.800
+In this video we will learn about obstruction in Java.
+
+00:05.130 --> 00:14.400
+This is again very important concept of Java there that we draw only essential details or data to the
+
+00:14.400 --> 00:19.860
+user and we abstract and hide the most important part of it.
+
+00:20.910 --> 00:27.450
+The trivial or the non-essential units are not allowed or not displayed to the user data.
+
+00:27.450 --> 00:32.970
+Abstraction may also be defined as a process of identifying only the required characteristics of an
+
+00:32.970 --> 00:36.240
+object and ignoring the irrelevant details.
+
+00:36.720 --> 00:40.440
+Okay, so that is the purpose of data abstraction.
+
+00:40.830 --> 00:42.600
+So let me simplify this.
+
+00:42.600 --> 00:50.130
+So with a simple example of got okay, then you see a car when you drive a car, you don't know how
+
+00:50.130 --> 00:52.920
+the brakes are functional, functioning internally.
+
+00:53.220 --> 00:57.300
+But do you know when you press a brick, it will stop.
+
+00:58.140 --> 01:04.110
+You know how the string moves when you want to take a left turn, when you want to take a right, then
+
+01:04.110 --> 01:04.800
+what to do.
+
+01:05.130 --> 01:11.730
+But you don't know internal functionality of that that is abstracted from from you, right?
+
+01:12.090 --> 01:18.570
+So when you drive a car, you are not clear with what is actually happening inside.
+
+01:19.110 --> 01:25.380
+So there are two things with which you can achieve data abstractions that is interfaces and abstract
+
+01:25.380 --> 01:25.890
+classes.
+
+01:26.340 --> 01:33.780
+These to help us to achieve that data abstraction so to hide non-essential part so user doesn't want
+
+01:33.780 --> 01:41.430
+to know how everything inside the break there may might be so many components inside the brick to make
+
+01:41.430 --> 01:42.420
+the brick work.
+
+01:42.690 --> 01:50.280
+We don't know anything about that, but we know how to use the right so user knows what exactly should
+
+01:50.280 --> 01:57.240
+be known to user and non relevant non useful non-essential tools are hidden from the user.
+
+01:57.660 --> 02:03.120
+This is data abstraction that is like the I mentioned.
+
+02:03.150 --> 02:08.310
+It is it can be done with the abstract classes and on it can be also it interfaces.
+
+02:08.610 --> 02:13.680
+But in this video we will focus on abstract classes and abstract methods.
+
+02:14.280 --> 02:19.190
+And abstract class is a class that is declared with the keyword abstract right.
+
+02:19.470 --> 02:24.180
+When we declare any class, we just specify class and the class name.
+
+02:24.570 --> 02:31.140
+Or if we want to make it public or private, then we need to add x, specify and specify the class keyword
+
+02:31.140 --> 02:31.800
+and then class.
+
+02:32.490 --> 02:35.580
+But for abstract we will add abstract class.
+
+02:35.850 --> 02:42.390
+Then class and abstract method is a method that is declared without implementation.
+
+02:42.810 --> 02:49.110
+That means a method is just declared and the implementation part is not yet added to an abstract class
+
+02:49.110 --> 02:51.810
+may or may not have all abstract methods.
+
+02:52.140 --> 02:54.570
+Some of them can be concrete methods.
+
+02:55.290 --> 03:03.360
+A method defined abstract must always be defined in subclass, thus making overriding compulsory or
+
+03:03.360 --> 03:05.820
+either make the subclass itself abstract.
+
+03:06.840 --> 03:12.210
+So as we have seen the art in abstract, abstract methods are only death.
+
+03:12.720 --> 03:16.590
+These are all only declarations, there is no method definition.
+
+03:16.950 --> 03:22.590
+So basically manual event and subclass extend and abstract class right.
+
+03:22.710 --> 03:28.080
+Then overriding is compulsory to use if you need to add some definition to it.
+
+03:28.080 --> 03:28.440
+Right.
+
+03:29.010 --> 03:30.090
+Otherwise you can.
+
+03:30.090 --> 03:33.360
+What you're going to do is make that subclass also abstract class.
+
+03:33.360 --> 03:38.580
+Then you don't need to add any definition to it and you don't need to override.
+
+03:38.730 --> 03:41.130
+Otherwise it's a mandatory to override.
+
+03:42.120 --> 03:49.380
+Any class that contains one or more abstract methods must also be declared as an act with an extra keyword.
+
+03:50.010 --> 03:55.950
+Okay, so if the class has more than one method as a abstract, then make that class as abstract class.
+
+03:57.120 --> 03:59.730
+There can be no object of an extra plus.
+
+03:59.730 --> 04:05.790
+That is an abstract as class cannot be directly instantiated with a new operator.
+
+04:06.870 --> 04:08.430
+You got this point right.
+
+04:08.430 --> 04:13.950
+We cannot create object when we are creating in our examples what we do, we then we want to create
+
+04:13.950 --> 04:17.160
+an object of a class we specified class name.
+
+04:19.410 --> 04:25.350
+Then give the object name equal to new class name and the basis.
+
+04:26.070 --> 04:28.890
+So we cannot create an object of this class.
+
+04:30.180 --> 04:36.780
+Then an abstract class can have parameterized constructors and the default constructor is always present
+
+04:36.780 --> 04:38.280
+in an abstract class.
+
+04:39.060 --> 04:47.350
+Okay, these are some rules or oh and things you should know before writing an abstract classen metaphor.
+
+04:49.210 --> 04:53.320
+Let us take an example of an abstract class here, which is sheep.
+
+04:53.680 --> 04:54.010
+Okay.
+
+04:54.250 --> 05:01.780
+This is a very classic example here, because the sheep can be extended by different classes like so-called
+
+05:01.780 --> 05:04.750
+triangle, rectangle, anything.
+
+05:05.230 --> 05:09.100
+And there are some constant things which each sheep has.
+
+05:09.520 --> 05:11.710
+It has an area it has coloured.
+
+05:11.710 --> 05:12.310
+It has.
+
+05:14.710 --> 05:15.550
+Things like that.
+
+05:15.550 --> 05:15.850
+Right.
+
+05:16.150 --> 05:18.490
+It has multiple things for.
+
+05:18.490 --> 05:20.970
+And how many sides it has.
+
+05:20.980 --> 05:22.690
+What are its dimensions?
+
+05:23.290 --> 05:29.590
+So all that things can be related to sheep and there are few methods which are common to all the shapes.
+
+05:30.040 --> 05:34.450
+So we can make sheep as an abstract class and define these methods.
+
+05:34.990 --> 05:36.430
+Sorry, declare this method.
+
+05:37.240 --> 05:37.570
+Okay.
+
+05:37.930 --> 05:40.450
+And then the definition can be added.
+
+05:40.480 --> 05:48.180
+Then any class extends the abstract class sheep because the area calculation, the area calculation
+
+05:48.190 --> 05:51.610
+formula will be different for circle for rectangle.
+
+05:52.180 --> 05:52.540
+Right.
+
+05:52.810 --> 05:59.230
+So the subclasses can add the declaration part of the method by overriding the method.
+
+06:00.350 --> 06:00.690
+Right.
+
+06:00.790 --> 06:04.830
+This is a best use case for up circles here.
+
+06:05.680 --> 06:08.890
+Then let us see what are the advantages of abstract classes?
+
+06:09.190 --> 06:12.640
+It reduces the complexity of viewing the things.
+
+06:12.880 --> 06:17.230
+Yes, that is the main reason why we use abstract classes.
+
+06:17.530 --> 06:19.200
+It avoids duplication.
+
+06:19.210 --> 06:19.570
+Yes.
+
+06:19.570 --> 06:25.990
+And increased usability because it has a new definition and we can implement the subclass and implement
+
+06:25.990 --> 06:32.680
+it has to increase the security of an application or a program as only important details that are provided
+
+06:32.680 --> 06:33.430
+to the user.
+
+06:34.750 --> 06:37.010
+Yes, all these things at that.
+
+06:37.690 --> 06:40.300
+Now, let us move on to the example here.
+
+06:42.490 --> 06:43.660
+Abstract class.
+
+06:43.960 --> 06:44.350
+Okay.
+
+06:45.730 --> 06:50.620
+So in the example, also, we are checking out the example of sheep.
+
+06:50.920 --> 06:51.310
+Okay.
+
+06:51.670 --> 06:59.740
+So shape is a parent class here, which is declared by the abstract keyword.
+
+06:59.860 --> 07:02.820
+This makes this particular class as abstract now.
+
+07:03.310 --> 07:06.600
+See, abstract, double idea.
+
+07:06.610 --> 07:09.700
+Abstract public x string to string.
+
+07:10.090 --> 07:13.720
+So this is an abstract method area.
+
+07:14.380 --> 07:16.390
+This is a public abstract method.
+
+07:16.660 --> 07:17.770
+Convert the string.
+
+07:18.490 --> 07:26.680
+Then there is a constructor here with the parameter colour and there is a method to get the colour.
+
+07:27.470 --> 07:30.700
+Okay, now see the class circle.
+
+07:31.060 --> 07:31.460
+Okay.
+
+07:31.490 --> 07:34.450
+In the circle, it has its own constructor.
+
+07:35.080 --> 07:38.920
+It calls constructor and passes the colour of the shape.
+
+07:40.870 --> 07:45.130
+Then it specifies its own variable to the radius.
+
+07:46.120 --> 07:52.420
+So with the help of radius, it overrode the method area to calculate the area.
+
+07:53.080 --> 07:53.580
+Okay.
+
+07:53.590 --> 07:55.300
+Returns the area as a double.
+
+07:56.110 --> 08:00.420
+Then it converts the string to string.
+
+08:00.670 --> 08:00.950
+Right.
+
+08:01.690 --> 08:05.830
+And then there is a rectangle that gains overrides this method.
+
+08:06.400 --> 08:08.140
+It has its own constructor.
+
+08:08.140 --> 08:14.890
+It also adds length and width and bars the colour to the super constructor that is abstract plus constructions
+
+08:15.400 --> 08:16.030
+of the shape.
+
+08:16.870 --> 08:22.600
+Okay, then you see here in the abstract class shape.
+
+08:24.040 --> 08:30.520
+So it creates object of the circle class, then rectangle class, and then it calls to string method
+
+08:30.520 --> 08:31.150
+directly.
+
+08:31.360 --> 08:34.690
+Now let us start on this example and check what happens.
+
+08:38.860 --> 08:42.700
+See now it shows all the things that are happening here.
+
+08:43.060 --> 08:45.160
+Shape constructed is called circle.
+
+08:45.160 --> 08:48.220
+Constructed is called shape constructed is called rectangle.
+
+08:48.220 --> 08:52.340
+Constructed is called the date because internally called the super constructor.
+
+08:52.900 --> 09:00.390
+Then circle color is red and media is this and rectangle color is yellow and it is this, right?
+
+09:00.910 --> 09:05.530
+So this is a symbol and most common use cases of abstract class.
+
+09:05.920 --> 09:11.440
+Try this example yourself and let me know if you have any queries related to checklists.
+
+09:12.130 --> 09:12.610
+Thank you.
+
+09:12.640 --> 09:14.320
+Let's move on to the next multi.

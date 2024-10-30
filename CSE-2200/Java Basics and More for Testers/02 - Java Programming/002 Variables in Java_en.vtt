@@ -1,0 +1,403 @@
+WEBVTT
+
+00:00.150 --> 00:02.220
+Read about variables in Java.
+
+00:03.600 --> 00:11.010
+So one of the variables in Java isn't they the container that saves the data values during Java program
+
+00:11.010 --> 00:11.790
+execution.
+
+00:12.750 --> 00:20.520
+Every variable is assigned a data type that designates the type and quantify or quantity of value it
+
+00:20.520 --> 00:21.150
+can hold.
+
+00:22.800 --> 00:25.620
+Did you learn about variables in Java?
+
+00:26.160 --> 00:27.930
+What is variables in Java?
+
+00:28.080 --> 00:35.130
+So variable in Java is a data container that saves the data values during Java program execution.
+
+00:35.640 --> 00:43.620
+Every variable is assigned a data that is in flawed God etc. and that designates the type.
+
+00:43.950 --> 00:46.620
+And also there is a quantity value.
+
+00:47.430 --> 00:55.920
+So if we say in PN, that is variable in type integer and can hold value of ten.
+
+00:56.760 --> 00:57.090
+Okay.
+
+00:57.360 --> 01:01.740
+So this is a variable variable is a memory location name for the data.
+
+01:01.770 --> 01:06.530
+Basically, you can say that a variable is a name given to the memory location.
+
+01:06.540 --> 01:08.760
+It is a basic unit of storage.
+
+01:08.760 --> 01:15.630
+In a program, the value stored in a variable can be changed during program execution of idea, but
+
+01:15.630 --> 01:22.260
+is only a name given to memory, location and all the operations done on the variable affect that particular
+
+01:22.620 --> 01:25.020
+memory location in Java.
+
+01:25.050 --> 01:30.510
+All the variables must be declared before you use it in your program or your code.
+
+01:31.470 --> 01:33.000
+How to declare a variable.
+
+01:33.090 --> 01:35.460
+So let us see how we can declare a variable.
+
+01:36.000 --> 01:41.070
+As I say in count, they ain't going down to the name of the variable.
+
+01:41.550 --> 01:44.540
+An integer is a data type of the variable.
+
+01:44.550 --> 01:48.180
+That's where it is in RN, followed by a semicolon.
+
+01:48.450 --> 01:54.060
+This is how you declared your variable data type.
+
+01:54.480 --> 01:57.310
+That is a type of the data that can be stored.
+
+01:58.080 --> 02:03.160
+So for this only integer values can be stored in this particular variable.
+
+02:03.180 --> 02:10.500
+If you try to store a string value with a date that I think it will give you error data, a new name
+
+02:10.500 --> 02:11.850
+was given to the variable.
+
+02:11.850 --> 02:14.700
+Whatever name is given that is called as a detainee.
+
+02:15.210 --> 02:18.870
+In this way, a name can only be given a memory location particular.
+
+02:19.110 --> 02:23.110
+This name is of point, the name given to the memory location.
+
+02:23.160 --> 02:31.400
+Consider there is a memory or location assigned for that by a variable is stored its values.
+
+02:31.410 --> 02:33.840
+And this is the account is the name for that.
+
+02:34.680 --> 02:35.070
+Okay.
+
+02:35.550 --> 02:37.690
+And this is a variable there.
+
+02:37.740 --> 02:38.760
+And all of you.
+
+02:38.820 --> 02:47.340
+What you can do, you can initialize a variable as by assigning all value or by taking the input, you
+
+02:47.340 --> 02:52.920
+can just mention your account is equal to ten and then will be assigned to this variable.
+
+02:52.920 --> 02:58.290
+Or you can ask user to give the input and then you will assign that particular input to this variable.
+
+02:59.400 --> 02:59.850
+Okay.
+
+03:00.150 --> 03:02.250
+So this is this are.
+
+03:02.610 --> 03:06.270
+This is a way how you can be glued to the variable here in Java.
+
+03:07.260 --> 03:10.320
+Now let us see how you can initialize a variable.
+
+03:11.070 --> 03:11.490
+Right.
+
+03:11.490 --> 03:12.330
+See here.
+
+03:12.360 --> 03:20.160
+INT age is equal to 20, so data type is mentioned, variable name is age and we have assigned a value
+
+03:20.160 --> 03:20.700
+20.
+
+03:21.000 --> 03:27.810
+That means that very variable is initialized with the value 20 that is a memory that is solved in error
+
+03:28.350 --> 03:36.150
+and that the memory unit has a value of 20 and the memory can be reference with the new age.
+
+03:37.110 --> 03:37.470
+Okay.
+
+03:38.310 --> 03:43.020
+So this is, this is how you initialize your variable.
+
+03:47.230 --> 03:52.210
+So now let us move on and check what are the types of variables in Java?
+
+03:53.020 --> 03:54.490
+There are local variables.
+
+03:55.150 --> 04:01.330
+Local variables are specific to the methods or any loops inside the methods.
+
+04:02.170 --> 04:04.720
+Local variables have a very limited scope.
+
+04:04.780 --> 04:11.770
+That is, if it is inside a matter, then scope of the variable will become only inside the matter.
+
+04:12.310 --> 04:19.390
+So now if you see the example mentioned here in this class, there is a metal one and in that method
+
+04:19.390 --> 04:22.630
+one we have added a variable here index.
+
+04:23.140 --> 04:30.460
+So if you try to add another method, you see that there are two and I'm trying to predict the value
+
+04:30.460 --> 04:31.210
+of X.
+
+04:31.240 --> 04:33.900
+It will not bring the value of X.
+
+04:33.910 --> 04:39.610
+It will give you an error because scope of this variable x is only method one.
+
+04:39.820 --> 04:42.630
+You cannot access it to using method.
+
+04:43.860 --> 04:44.200
+Okay.
+
+04:44.770 --> 04:46.540
+So this is about local variables.
+
+04:46.850 --> 04:49.480
+And then next comes instance variable.
+
+04:50.410 --> 04:55.120
+So instance variables are declared inside the class.
+
+04:56.440 --> 04:56.830
+Okay.
+
+04:57.190 --> 05:05.190
+You can see here instance variables are non static variables, but they are declared inside the class.
+
+05:05.200 --> 05:09.670
+But outside method, any method on any block.
+
+05:10.510 --> 05:12.860
+As instance, the variables are declared in a class.
+
+05:12.880 --> 05:18.700
+These variables are created within an object of the class is created and these are destroyed when the
+
+05:18.700 --> 05:21.070
+object of this class is destroyed.
+
+05:22.210 --> 05:27.430
+Unlike local variables, we may use X's specified, for instance variable.
+
+05:27.790 --> 05:31.510
+So for instance variable you can use public, private, protected.
+
+05:31.540 --> 05:33.880
+These are the access specifiers we can use.
+
+05:34.360 --> 05:41.470
+So if we want to make it public, if you make a class variable public, it can be referenced by other
+
+05:41.470 --> 05:42.080
+classes.
+
+05:43.060 --> 05:43.270
+Who?
+
+05:43.410 --> 05:45.820
+Who is creating the object of the class?
+
+05:46.120 --> 05:50.680
+If it is private, it can be used within the particular class.
+
+05:51.240 --> 05:51.510
+Right.
+
+05:51.520 --> 05:59.440
+So you can specify x as specifies in initialization of instance, variable is not mandatory, it is
+
+05:59.440 --> 05:59.940
+default.
+
+05:59.940 --> 06:06.520
+The value is zero and the instance variable can be accessed only by creating object onto class.
+
+06:06.940 --> 06:07.330
+Okay.
+
+06:07.660 --> 06:13.960
+So now if you see your int eight and it is accessible by every letter written inside the class, that
+
+06:13.960 --> 06:15.580
+means mental one two.
+
+06:16.420 --> 06:20.380
+And similarly, as it is also inside the class.
+
+06:20.680 --> 06:22.660
+Right, but outside the method.
+
+06:22.750 --> 06:24.460
+So this is an instance variable.
+
+06:24.460 --> 06:30.150
+You can create the object of the class and you can also access this outside of this class list.
+
+06:30.790 --> 06:37.150
+So if there is another class, you create a class, this tool which is creating object of the class
+
+06:37.150 --> 06:40.630
+test and accessing this particular variables, then it is allowed.
+
+06:41.580 --> 06:43.480
+There is no there are no errors.
+
+06:43.840 --> 06:51.650
+But if I am giving this as a private that is string B, then it is only accessible within this class
+
+06:51.650 --> 06:52.060
+test.
+
+06:52.750 --> 06:54.760
+It is not accessible by another class.
+
+06:54.760 --> 06:57.330
+That is test one, whatever you agree.
+
+06:58.510 --> 06:58.820
+Right.
+
+06:58.900 --> 07:04.120
+So this is about the instance variable static variables.
+
+07:05.050 --> 07:11.290
+Static variables are also known as a class variable because they are also declared similar to the instance
+
+07:11.290 --> 07:11.710
+variable.
+
+07:11.710 --> 07:14.230
+They are also declared in a class outside of method.
+
+07:14.860 --> 07:17.820
+Static variables are declared using a keyword static.
+
+07:18.700 --> 07:19.180
+Okay.
+
+07:19.420 --> 07:22.230
+So if you see a static in it.
+
+07:22.980 --> 07:23.230
+Okay.
+
+07:23.560 --> 07:27.130
+So the static keyword is important to specify.
+
+07:27.130 --> 07:29.080
+This variable is a static variable.
+
+07:31.030 --> 07:37.540
+Unlike instance variable, we can only have one copy of a static variable for class irrespective of
+
+07:37.540 --> 07:39.370
+how many objects we create.
+
+07:39.370 --> 07:45.130
+Whatever objects we are creating the instance, the reference will be only one.
+
+07:46.330 --> 07:52.450
+So static variables are created at the start of the program execution and it destroyed automatically
+
+07:52.450 --> 07:53.890
+when the execution ends.
+
+07:54.610 --> 07:58.270
+Initialization of static variable is not mandatory.
+
+07:59.050 --> 08:01.240
+Its default value is zero.
+
+08:01.420 --> 08:02.890
+Same like instance.
+
+08:04.060 --> 08:10.660
+If the x is the static variable like the instance variable, the compiler will show the warning message
+
+08:10.660 --> 08:12.430
+which won't hold the program.
+
+08:12.940 --> 08:17.260
+The compiler will replace the object name with the class name automatically.
+
+08:17.710 --> 08:18.040
+Okay.
+
+08:18.340 --> 08:19.140
+So now.
+
+08:19.270 --> 08:27.430
+So the thing in static variable you can access directly with the class name like best note eights or
+
+08:27.430 --> 08:30.430
+you can if you are accessing within this class itself.
+
+08:30.490 --> 08:37.840
+So you can use this dot E and even if you create object, let test equal to new test.
+
+08:37.840 --> 08:43.750
+If you create object of test that is D and you try to access with P dirty, it will give you a warning,
+
+08:44.020 --> 08:45.640
+but execution will.
+
+08:46.250 --> 08:51.350
+The done and it itself converted convert it into class new.
+
+08:51.980 --> 08:52.280
+Okay.
+
+08:52.280 --> 08:54.380
+It will not hold your execution.
+
+08:55.190 --> 09:00.080
+So this is about a local variable instance, variable and static variables.
+
+09:00.530 --> 09:03.680
+Now in next module we will learn about data types.

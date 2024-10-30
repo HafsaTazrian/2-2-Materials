@@ -1,0 +1,559 @@
+WEBVTT
+
+00:00.180 --> 00:01.770
+Inheritance in Java.
+
+00:02.220 --> 00:08.730
+This is very important oops concept in Java and very widely used for numerous use cases.
+
+00:09.300 --> 00:12.160
+So basically what is inheritance?
+
+00:12.180 --> 00:16.140
+Inheritance is as it is suggested by its name, right?
+
+00:16.530 --> 00:21.690
+We inherit properties from our parents, grandparents.
+
+00:22.290 --> 00:28.140
+Similarly, classes inherit some properties from their super classes.
+
+00:28.650 --> 00:30.030
+Okay, so.
+
+00:30.300 --> 00:36.330
+So like we have eyes like our mother, but there is something different in us as well.
+
+00:36.780 --> 00:45.420
+So subclass can have its different properties but it inherits some of the properties from the super
+
+00:45.420 --> 00:46.020
+classes.
+
+00:46.410 --> 00:53.190
+So this is a this is how the concept of inheritance is based on.
+
+00:53.580 --> 00:56.520
+So let us learn more about inheritance in Java.
+
+00:57.750 --> 01:05.460
+Basically, it is a mechanism in Java by which one class is allowed to inherit the features, methods,
+
+01:05.910 --> 01:07.980
+fields of another classes.
+
+01:08.730 --> 01:13.230
+So as I said, there are important terminologies like superclass.
+
+01:13.560 --> 01:15.010
+That is the parent class.
+
+01:15.030 --> 01:18.000
+We can say the class whose features are inherited.
+
+01:18.660 --> 01:20.640
+Okay, that is a base class.
+
+01:20.640 --> 01:22.620
+Also we can call or parent class.
+
+01:22.740 --> 01:27.600
+Subclasses are the classes which inherit from the other classes.
+
+01:28.050 --> 01:28.440
+Okay.
+
+01:29.400 --> 01:37.710
+We can also call this extended class child class derived class, reusability, inheritance support,
+
+01:37.710 --> 01:39.690
+the concept of reusability.
+
+01:40.260 --> 01:46.140
+Then we want to create a new class and there is already a class that includes some of the code that
+
+01:46.140 --> 01:46.770
+we want.
+
+01:47.250 --> 01:53.760
+We can derive our new class from the existing class by doing this, and we are using this fields and
+
+01:53.760 --> 01:55.990
+methods to existing classes.
+
+01:56.340 --> 02:00.480
+So any multiple Java projects use inheritance.
+
+02:00.720 --> 02:07.860
+That's why I say it's a very commonly used and very important oops concept and there are different types
+
+02:07.860 --> 02:09.060
+of inheritance.
+
+02:09.180 --> 02:09.570
+Okay.
+
+02:09.840 --> 02:17.400
+Let us learn about the different types of any items and then we will see examples in the code for each
+
+02:17.400 --> 02:18.750
+and every type here.
+
+02:19.500 --> 02:19.880
+Okay.
+
+02:20.940 --> 02:24.240
+So this is single inheritance, okay?
+
+02:24.540 --> 02:32.700
+Single inheritance means there is a superclass and there is one subclass, and the subclass derives
+
+02:32.700 --> 02:34.320
+from the superclass.
+
+02:34.410 --> 02:37.910
+Simply this week there is a single inheritance.
+
+02:37.920 --> 02:39.960
+Single class is a BEN class.
+
+02:40.800 --> 02:43.440
+Then this is a multi-level inheritance.
+
+02:43.440 --> 02:44.900
+There is a base class.
+
+02:45.330 --> 02:51.180
+So class B derives from class E, a, class C derives from class B.
+
+02:51.600 --> 02:53.340
+That's why it is a multilevel.
+
+02:53.340 --> 02:55.140
+There are multiple levels here.
+
+02:55.380 --> 02:55.700
+Okay.
+
+02:56.010 --> 02:58.710
+There might be some more classes also in between.
+
+02:59.130 --> 03:01.380
+So this this is called S multilevel.
+
+03:03.480 --> 03:04.980
+Then this is all
+
+03:08.340 --> 03:13.710
+hierarchical inheritance that is from one subclass.
+
+03:13.710 --> 03:22.350
+Multiple subclasses are deriving one class and multiple derived classes.
+
+03:22.620 --> 03:29.970
+So class B is deriving some of the features from a, class C is deriving some of the features from A
+
+03:30.270 --> 03:33.120
+and B is also deriving from it.
+
+03:33.510 --> 03:33.860
+Okay.
+
+03:34.530 --> 03:37.920
+Then the next one we have is a multiple inheritance.
+
+03:38.340 --> 03:45.210
+So basically multiple inheritance is not supported in Java but achieved that.
+
+03:45.210 --> 03:48.360
+How can we achieve multiple inheritance if we want?
+
+03:48.690 --> 03:49.550
+How to do that?
+
+03:49.560 --> 03:51.720
+We will see in a simple example.
+
+03:51.720 --> 03:55.530
+But one class cannot extend more classes here.
+
+03:55.830 --> 03:56.220
+Okay.
+
+03:56.640 --> 03:59.010
+So this is not possible in general.
+
+04:00.270 --> 04:05.670
+Now let us go to the example section and learn about our examples.
+
+04:06.810 --> 04:10.140
+Let us take the example of single inheritance here.
+
+04:10.650 --> 04:15.120
+So there are two classes, superclass, and this is a subclass.
+
+04:15.450 --> 04:21.420
+And we can call this as a driver class, which has a main method to execute this float.
+
+04:21.990 --> 04:22.380
+Right.
+
+04:22.710 --> 04:30.330
+So the superclass name is one, and there is a child that's named to child extents one.
+
+04:30.660 --> 04:34.290
+So extents is a keyword used for inheritance here.
+
+04:34.650 --> 04:41.130
+So if we want to inherit property of the class, to want to inherit property of class one, then it
+
+04:41.130 --> 04:45.120
+has to use the extended keyword and write the name of the class.
+
+04:45.570 --> 04:47.820
+Okay, this is the syntax to extend.
+
+04:48.870 --> 04:53.430
+So once class two extends class one, that means it is now.
+
+04:53.430 --> 04:57.030
+It can now access all methods.
+
+04:57.300 --> 04:57.620
+Three.
+
+04:57.640 --> 04:58.010
+Two.
+
+04:58.410 --> 05:01.410
+And it can also access the method one.
+
+05:01.910 --> 05:03.420
+What do you mean by access?
+
+05:03.430 --> 05:05.700
+Our inherited the method one.
+
+05:06.120 --> 05:15.930
+That means when you create object of class two, you will be able to access this both the methods.
+
+05:16.440 --> 05:20.580
+Now let us see with example in the driver class here where we have main.
+
+05:21.670 --> 05:24.880
+We have created object of class to which to name.
+
+05:26.130 --> 05:34.290
+So the object again called the matter one and the same object can go method to also right.
+
+05:36.210 --> 05:36.570
+Okay.
+
+05:37.230 --> 05:40.710
+So this is example of single inheritance.
+
+05:41.160 --> 05:43.410
+Then we saw single and inheritance.
+
+05:43.410 --> 05:50.640
+That means one superclass and one subclass one the one that is a single inheritance.
+
+05:51.270 --> 05:59.490
+Now let us then what this example two multilevel multi-level inheritance.
+
+06:00.960 --> 06:05.130
+So I will create another class here.
+
+06:06.090 --> 06:10.080
+Class three, which extends.
+
+06:14.170 --> 06:14.440
+Do.
+
+06:15.770 --> 06:16.050
+Okay.
+
+06:16.280 --> 06:21.740
+A to B to C, that was for multilevel inheritance.
+
+06:22.340 --> 06:35.690
+So to extend to one tree extends to okay now we will create a method inside trees that this tree.
+
+06:39.340 --> 06:46.540
+Right now, the object of class three will have access to the metal inside it.
+
+06:47.140 --> 06:51.430
+Then parent class and the basic class.
+
+06:53.520 --> 06:58.080
+So now let's make this as an object of class to rename.
+
+07:02.270 --> 07:10.270
+It will have access to the matter in the super immediate superclass and superclass of the superclass.
+
+07:11.870 --> 07:14.720
+So it can go to the.
+
+07:16.770 --> 07:21.180
+Now let's run this example and check.
+
+07:24.060 --> 07:25.020
+One, two, three.
+
+07:25.740 --> 07:30.720
+Look, you understand no single inheritance and how it is achieved.
+
+07:30.720 --> 07:32.040
+Single inheritance, class.
+
+07:32.040 --> 07:32.880
+One, two, two.
+
+07:33.360 --> 07:35.410
+Now this is multilevel inheritance.
+
+07:35.430 --> 07:37.740
+One, two, two, three.
+
+07:38.220 --> 07:43.350
+This is how multilevel inheritance is at its that.
+
+07:43.920 --> 07:44.250
+Okay.
+
+07:44.670 --> 07:46.740
+Now we will go on to the next.
+
+07:46.740 --> 07:48.780
+There is hierarchical inheritance.
+
+07:50.220 --> 07:56.880
+What we do in hierarchical, in inheritance, like we saw in our diagram class, there is a class E
+
+07:57.330 --> 08:06.540
+and there are two different classes B, C, D, and we'll all b, c, d inherit from class E.
+
+08:06.930 --> 08:07.320
+Okay.
+
+08:07.530 --> 08:16.500
+So one superclass that is E and three subclass, that is B, C and B and there is a mean class as a
+
+08:16.500 --> 08:19.710
+driver class that is hierarchical inheritance.
+
+08:20.340 --> 08:20.760
+Okay.
+
+08:21.060 --> 08:23.820
+And to inherit we lose extents people.
+
+08:24.510 --> 08:24.840
+Okay.
+
+08:25.410 --> 08:29.700
+So now Class A has its method in A, class B has its method.
+
+08:29.700 --> 08:30.630
+Class C has it.
+
+08:30.630 --> 08:32.400
+Middle class D has its method.
+
+08:32.940 --> 08:33.270
+Okay.
+
+08:33.570 --> 08:43.110
+Now, when you create object of class B last week and access, but B putting B, then you create object
+
+08:43.110 --> 08:55.360
+of class c, c it can access, but in C and E, if you create object of class D, it can access but
+
+08:55.380 --> 08:57.540
+in B but in a.
+
+08:58.200 --> 08:58.530
+Right.
+
+08:59.160 --> 09:07.350
+So this this can also any class can access method inside its IT itself and the superclass.
+
+09:07.980 --> 09:12.080
+So let's run this particular example and check.
+
+09:14.070 --> 09:19.420
+CAC meet ab ac 80 OC They cannot have.
+
+09:20.080 --> 09:26.430
+They cannot access a new metal in between B and C, C and D because there is no collection connection
+
+09:26.430 --> 09:28.410
+between the subclasses here.
+
+09:29.940 --> 09:30.330
+The date.
+
+09:31.520 --> 09:32.120
+Okay.
+
+09:32.480 --> 09:35.270
+Now let's move on to the multiple inheritance.
+
+09:37.820 --> 09:38.180
+Okay.
+
+09:38.600 --> 09:40.420
+The in multiple inheritance.
+
+09:40.670 --> 09:45.230
+All the I have told you it is not possible with Java.
+
+09:45.410 --> 09:46.760
+Yes, it is not possible.
+
+09:46.760 --> 09:53.900
+We cannot add extend square and add all the few more classes to that.
+
+09:53.900 --> 09:54.090
+Right.
+
+09:54.380 --> 09:56.720
+One class in Java.
+
+09:56.990 --> 10:04.730
+One class cannot inherit or extend from multiple classes.
+
+10:04.880 --> 10:05.330
+Okay.
+
+10:05.750 --> 10:08.190
+That's why we use interfaces here.
+
+10:09.000 --> 10:09.890
+Part of Jim.
+
+10:09.900 --> 10:13.000
+Multiple inheritance we achieve.
+
+10:14.130 --> 10:15.210
+We use indices.
+
+10:15.330 --> 10:17.280
+So what is multiple inheritance?
+
+10:17.580 --> 10:24.720
+There are multiple super classes and there is only one subclass that is multiple inheritance.
+
+10:25.380 --> 10:25.620
+Okay.
+
+10:26.070 --> 10:31.680
+So now we will not be covering the concepts interfaces in this video.
+
+10:31.950 --> 10:38.850
+We will be just covering how we can achieve the multiple inheritance interface concept will come in
+
+10:38.850 --> 10:40.290
+the coming years.
+
+10:40.350 --> 10:40.710
+Okay.
+
+10:41.370 --> 10:50.820
+So that is one indices here, interface type one where it has a method, but then there is another interface
+
+10:50.820 --> 10:59.430
+which has another method and there is another third interface which extends from these two interfaces.
+
+10:59.850 --> 11:05.040
+So one interface can extend from two different interfaces, but classes cannot do that.
+
+11:05.910 --> 11:13.410
+So now we have created the class or type child which implements the interface type three.
+
+11:13.800 --> 11:19.800
+And this interface internally extends properties of type one and type two.
+
+11:20.760 --> 11:21.090
+Okay.
+
+11:21.600 --> 11:29.850
+So we can override any method inside any of these interfaces now because type child implements this
+
+11:29.850 --> 11:31.890
+particular interface, the third one.
+
+11:32.310 --> 11:37.620
+So now what we are overriding here, we are overriding the public geek method and we are printing it
+
+11:37.620 --> 11:37.800
+here.
+
+11:37.800 --> 11:40.170
+So here there is only matter declaration.
+
+11:40.170 --> 11:41.830
+There is no definition of the method.
+
+11:41.850 --> 11:48.480
+Method definition means when you add a code to the method, then it is called as method definition.
+
+11:48.930 --> 11:56.820
+And then you just specify is a method that there is a method that belongs to this class that means method
+
+11:56.820 --> 11:57.750
+declarations.
+
+11:58.440 --> 11:58.770
+Okay.
+
+12:00.000 --> 12:05.520
+The added definition to this method we are operating statement here.
+
+12:06.000 --> 12:13.350
+Then we added this method which is printing this now this particular.
+
+12:16.100 --> 12:23.210
+Child of class can create an object and access all these three matters.
+
+12:23.540 --> 12:27.020
+And in this way, we can achieve multiple inheritance.
+
+12:27.320 --> 12:33.740
+So if we want to access methods and properties from the old classes, we can create interfaces instead
+
+12:33.740 --> 12:34.460
+of classes.
+
+12:34.790 --> 12:39.440
+And then in interfaces, you can define the method, declare the method.
+
+12:39.440 --> 12:46.430
+And then in no classes, actual class, you can override and add the definitions of the method.
+
+12:47.120 --> 12:50.480
+But this is the way to achieve multiple inheritance.
+
+12:51.020 --> 12:52.570
+So try this example.
+
+12:52.570 --> 12:52.670
+Examples.
+
+12:52.680 --> 13:00.470
+You can add some more methods and try to use the methods and variables in your subclasses and check
+
+13:00.470 --> 13:02.720
+what issues you are facing.
+
+13:02.720 --> 13:07.880
+And you will understand more scenarios also when you are trying this out.
+
+13:08.600 --> 13:11.960
+So try this out and let me know if you have any questions.
+
+13:12.320 --> 13:14.170
+So this is about interfaces.
+
+13:14.180 --> 13:15.710
+Let's get to the next module.

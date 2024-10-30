@@ -1,0 +1,475 @@
+WEBVTT
+
+00:00.120 --> 00:04.830
+We do what we are going to learn about loops, conditional statements in Java.
+
+00:05.340 --> 00:13.020
+So basically we are going to learn about this condition, how to use those statements, how to use different
+
+00:13.020 --> 00:14.340
+types of loops.
+
+00:14.490 --> 00:18.150
+Do loop for new file explorer.
+
+00:18.780 --> 00:25.920
+So let's get to the topic with the help of examples and about events for us.
+
+00:26.250 --> 00:26.640
+Okay.
+
+00:27.240 --> 00:30.420
+So here the hello world class itself.
+
+00:30.420 --> 00:33.600
+I'm writing this example in the main method.
+
+00:34.170 --> 00:34.620
+Okay.
+
+00:35.040 --> 00:36.150
+We will write.
+
+00:38.040 --> 00:38.610
+Simple.
+
+00:38.880 --> 00:42.270
+As if the condition is true, then.
+
+00:44.720 --> 00:45.980
+It will execute.
+
+00:47.740 --> 00:51.850
+The blow inside the if curly braces.
+
+00:52.720 --> 00:56.140
+Okay, so let's bring something here.
+
+01:03.650 --> 01:04.380
+It's Frank.
+
+01:04.730 --> 01:05.000
+So.
+
+01:06.950 --> 01:09.170
+And if it is false.
+
+01:12.160 --> 01:18.970
+If other if it is not true, that is, if it is the condition is not true, then it will execute the
+
+01:18.970 --> 01:22.180
+code in between the ethical basis.
+
+01:34.020 --> 01:35.680
+Let's stay on tape.
+
+01:37.140 --> 01:37.530
+Okay.
+
+01:37.890 --> 01:39.270
+Let's execute this.
+
+01:53.490 --> 01:59.720
+So yeah, this is how other normal is as well.
+
+02:00.270 --> 02:05.160
+Okay, now we have if else if ladder also.
+
+02:05.700 --> 02:12.660
+So we can write if as if and then as and we can write a number of conditions here.
+
+02:13.200 --> 02:13.620
+Okay.
+
+02:14.190 --> 02:23.280
+So if we take an example there or we have three numbers, maybe LC and we want to find the largest one.
+
+02:23.910 --> 02:24.330
+Okay.
+
+02:25.760 --> 02:30.090
+Do you see six, chief?
+
+02:30.720 --> 02:30.900
+Yeah.
+
+02:33.380 --> 02:36.630
+Then we can use it as ladder.
+
+02:36.650 --> 02:36.980
+Sure.
+
+02:37.700 --> 02:43.430
+So first will be if it is, but it doesn't appear to be.
+
+02:47.070 --> 02:53.600
+E and any is greater than or equal to see that means so.
+
+02:55.650 --> 03:01.340
+It is the largest number we are predicting, the largest number said.
+
+03:01.830 --> 03:05.380
+Now we need to add another condition so we will use as if.
+
+03:06.060 --> 03:06.560
+Okay.
+
+03:07.170 --> 03:11.370
+Else if B is greater than or equal to E.
+
+03:12.210 --> 03:14.730
+And B is greater than.
+
+03:14.730 --> 03:15.660
+Or equal to C.
+
+03:17.260 --> 03:19.810
+That means B is the largest number.
+
+03:19.980 --> 03:20.940
+So B.
+
+03:22.680 --> 03:23.790
+And as.
+
+03:25.960 --> 03:27.280
+Sees the largest.
+
+03:29.620 --> 03:30.190
+Right.
+
+03:32.000 --> 03:36.650
+So we are printing C here, which will basically this would bring the largest number.
+
+03:37.070 --> 03:38.300
+Now, let us run this one.
+
+03:43.720 --> 03:44.020
+Six.
+
+03:44.500 --> 03:47.330
+Sony is printing the largest number here.
+
+03:47.680 --> 03:53.530
+So this way we can write more conditions in the in the letter.
+
+03:54.590 --> 03:55.010
+Okay.
+
+03:55.730 --> 03:58.070
+Now let's move on to loops.
+
+04:00.800 --> 04:01.190
+Okay.
+
+04:02.420 --> 04:14.480
+First of all learn about for loop you're I'm taking an integer number or four and I want to bring numbers
+
+04:14.480 --> 04:15.790
+from 1 to 4.
+
+04:16.280 --> 04:16.700
+Okay.
+
+04:17.150 --> 04:25.670
+So what I will do is write the four law that in I is equal to one because I want to start my loop from
+
+04:25.670 --> 04:28.640
+one and I want to print from 1 to 4.
+
+04:29.150 --> 04:32.660
+So that is less than or equal to four.
+
+04:34.250 --> 04:34.960
+I'm blessed.
+
+04:35.000 --> 04:39.150
+Yes, but it's less than I do because I want to bring forward.
+
+04:39.150 --> 04:40.640
+So I just don't want to stop.
+
+04:41.660 --> 04:47.870
+So if I want to break one, two, three, that is n minus one, then I will write a list.
+
+04:48.520 --> 04:48.870
+Okay.
+
+04:49.550 --> 04:51.800
+So here I am writing an article.
+
+04:52.870 --> 05:01.810
+And inside that printing value I because will increment I plus will increment the value I with each
+
+05:01.810 --> 05:02.490
+iteration.
+
+05:03.960 --> 05:09.420
+So I likely knew this how this works, actually.
+
+05:11.240 --> 05:11.600
+Okay.
+
+05:12.020 --> 05:13.410
+So what will happen for us?
+
+05:13.430 --> 05:15.260
+I will be July one.
+
+05:15.680 --> 05:18.530
+It will bring the value of I.
+
+05:18.590 --> 05:19.250
+That is one.
+
+05:20.750 --> 05:25.580
+Then I will increment the value of I to two.
+
+05:25.910 --> 05:28.010
+It will check two is less than four.
+
+05:29.270 --> 05:30.590
+Let's listen in.
+
+05:30.590 --> 05:33.710
+And I mean, listen all internally, so.
+
+05:33.740 --> 05:34.210
+Yes.
+
+05:34.510 --> 05:36.650
+But then it will bring the value.
+
+05:36.650 --> 05:43.190
+If I do it, then I plus plus three of I will be initialized to trainer.
+
+05:43.790 --> 05:51.020
+Then it is checking three is less equal to through before then two it will print the value of three.
+
+05:51.560 --> 05:54.170
+Then again it will increment the AI to four.
+
+05:54.800 --> 05:57.770
+Four is less than two for two.
+
+05:58.250 --> 06:06.920
+Again it will bring forward here and then I plus plus it will be fine fine is listening to for false
+
+06:06.920 --> 06:12.850
+this condition if false and then it will not increment and we will come outside the forum.
+
+06:13.430 --> 06:13.760
+Okay.
+
+06:14.240 --> 06:18.080
+So this this is how the look will look.
+
+06:19.690 --> 06:21.610
+Let us sit on this example until.
+
+06:26.950 --> 06:28.990
+Look, this works, right?
+
+06:29.680 --> 06:30.370
+So now.
+
+06:32.360 --> 06:33.680
+I'm commenting the school.
+
+06:33.950 --> 06:35.370
+You can just go.
+
+06:36.440 --> 06:39.770
+Select board and control dash.
+
+06:40.820 --> 06:45.640
+I mean, this slash or so it will come out of the code in Java.
+
+06:46.540 --> 06:47.890
+Okay then.
+
+06:48.280 --> 06:51.400
+See now, same example we want to do.
+
+06:51.400 --> 06:53.440
+We want to bring the numbers in.
+
+06:53.440 --> 06:57.910
+But instead of following you will use different parties.
+
+06:57.910 --> 07:07.270
+We will use are doing okay do certain activities while this condition is doing okay.
+
+07:07.600 --> 07:10.120
+So it will keep on doing the activity.
+
+07:10.360 --> 07:15.550
+Whatever goal we mentioned inside this goal embraces violence.
+
+07:15.550 --> 07:16.600
+The condition is strong.
+
+07:16.960 --> 07:21.850
+Once the condition is false, it will not stop this execution and we will come up to.
+
+07:22.720 --> 07:29.170
+Okay, so for your what what condition we we have here in mind is.
+
+07:35.660 --> 07:39.140
+I just love what I do.
+
+07:39.320 --> 07:42.710
+And this is a great.
+
+07:48.650 --> 07:49.000
+All right.
+
+07:49.730 --> 07:50.890
+But we don't know why, Lou.
+
+07:50.930 --> 07:54.920
+I hear they so their destination the desire to.
+
+07:56.650 --> 07:57.580
+But here.
+
+07:58.950 --> 08:00.750
+I got to buy.
+
+08:06.940 --> 08:07.190
+Could.
+
+08:08.130 --> 08:14.520
+Then what we want to do inside everyone in the world to find and increment the value of AI here.
+
+08:19.890 --> 08:20.130
+Okay.
+
+08:20.640 --> 08:21.330
+So this is.
+
+08:21.330 --> 08:22.650
+How do I look?
+
+08:22.770 --> 08:26.770
+Looks like the code in to cure objective.
+
+08:26.790 --> 08:30.240
+The condition is true or false.
+
+08:30.600 --> 08:33.930
+If it's true, it will go on printing the number.
+
+08:35.990 --> 08:36.310
+She?
+
+08:38.360 --> 08:38.750
+Okay.
+
+08:40.070 --> 08:43.300
+So this is the we are to use.
+
+08:43.630 --> 08:44.450
+Do I look?
+
+08:44.810 --> 08:48.470
+Then there is another type of loop that is available.
+
+08:50.400 --> 08:50.940
+There.
+
+08:50.940 --> 08:53.130
+You right the condition first.
+
+08:54.800 --> 08:56.510
+And then is the.
+
+08:59.690 --> 09:02.250
+So I is listening to.
+
+09:03.870 --> 09:04.170
+And.
+
+09:06.280 --> 09:07.440
+But in this new.
+
+09:10.340 --> 09:10.590
+Okay.
+
+09:10.940 --> 09:12.290
+And increment Detroit.
+
+09:17.420 --> 09:17.670
+Okay.
+
+09:19.250 --> 09:20.810
+Now let's comment on this court.
+
+09:24.240 --> 09:25.020
+And on this.
+
+09:30.120 --> 09:30.430
+See.
+
+09:31.350 --> 09:38.550
+So these are most commonly used loops in Java and this is how it works when you want to specify the
+
+09:38.550 --> 09:40.800
+condition for the execution.
+
+09:41.850 --> 09:51.810
+You can use this and then you want to check the condition or and then you first you check the condition.
+
+09:51.810 --> 09:53.670
+I'm with the condition as well.
+
+09:53.950 --> 09:55.650
+You can also.
+
+09:56.620 --> 09:57.000
+Okay.
+
+09:57.360 --> 10:03.190
+So this is about conditional statements if as if a slider.
+
+10:04.020 --> 10:06.420
+Oh, you can also use this steady.
+
+10:06.750 --> 10:11.160
+So instead, if the condition you can add another condition.
+
+10:11.160 --> 10:14.700
+So you can you can make that as a good one also.
+
+10:15.090 --> 10:18.450
+So I can show you that if it is that.
+
+10:24.830 --> 10:27.230
+We need to add one more condition here.
+
+10:32.950 --> 10:35.230
+And here you can add a little else.
+
+10:36.280 --> 10:41.110
+That is the end of a three year or else, and it's okay.
+
+10:41.740 --> 10:45.430
+So this is also a valid scenario.
+
+10:45.490 --> 10:51.160
+Then you want to add another condition inside your if condition.
+
+10:51.370 --> 10:53.200
+So that is also possible.
+
+10:54.250 --> 11:02.080
+So practise this with different examples so you can find simple coding examples in Java as a problem
+
+11:02.080 --> 11:06.130
+statement and you can solve them by utilizing this.
+
+11:06.130 --> 11:08.260
+So conditionals and loops.
+
+11:09.250 --> 11:13.060
+Okay, so thank you for watching this live move on to the next more.
