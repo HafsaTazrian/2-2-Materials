@@ -1,0 +1,143 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.410 --> 00:00:15.580
+Range values of primitive datatypes in
+Java. in the table we can see the range
+
+00:00:15.580 --> 00:00:20.200
+of values of the primitives types, as
+well as the size in bytes that each
+
+00:00:20.200 --> 00:00:24.700
+primitive types occupies. These ranges
+are important to determine the maximum
+
+00:00:24.700 --> 00:00:41.260
+or minimum size that a certain type can
+store. Strings in Java. In Java String
+
+00:00:41.260 --> 00:00:45.789
+handling is an object type, but it has
+several characteristics in particular
+
+00:00:45.789 --> 00:00:50.769
+although we do not yet detail the
+handling of objects, but it should be
+
+00:00:50.769 --> 00:00:55.659
+mentioned that in Java is necessary to
+use the new operator to create a new
+
+00:00:55.659 --> 00:01:00.789
+object, however when we talk about the
+strings this is not necessary. We can
+
+00:01:00.789 --> 00:01:06.210
+simply declare a String type and assign
+a string value directly to this variable
+
+00:01:06.210 --> 00:01:12.070
+which is why it seems that the string
+type is a primitive type but is not
+
+00:01:12.070 --> 00:01:17.590
+however due to the frequent use of this
+type at the time of programming is that
+
+00:01:17.590 --> 00:01:22.149
+it was decided to simplify the process
+of creating and assigning values to this
+
+00:01:22.149 --> 00:01:28.840
+type String in particular, for example
+String greeting equals "Hello World" we
+
+00:01:28.840 --> 00:01:33.460
+can see that to declare a string in Java
+you only need to use the String type
+
+00:01:33.460 --> 00:01:39.490
+later define its name identifier and
+finally assign a value without the need
+
+00:01:39.490 --> 00:01:44.079
+to use the new operator
+thus we can directly assign the value of
+
+00:01:44.079 --> 00:01:49.899
+a string simply using double quotes to
+wrap the desire value. In Java unlike
+
+00:01:49.899 --> 00:01:55.390
+other languages overloading of operators
+is not allow which means that we cannot
+
+00:01:55.390 --> 00:02:00.609
+alter the function of operators to do
+what we want, however there is an
+
+00:02:00.609 --> 00:02:05.710
+exception to this rule when we handle a
+string types when we use the plus
+
+00:02:05.710 --> 00:02:11.470
+operator in a string type is detected in
+the operation, we say that we have the
+
+00:02:11.470 --> 00:02:16.180
+"string context" and therefore instead of
+adding values what Java does is
+
+00:02:16.180 --> 00:02:21.040
+concatenate the values that are in the
+operation. We'll see this later in an
+
+00:02:21.040 --> 00:02:23.830
+excercise
+but it's important to note this point
+
+00:02:23.830 --> 00:02:28.030
+since it's another important
+simplification when using strings in
+
+00:02:28.030 --> 00:02:31.090
+Java.
+One of the most important details that
+
+00:02:31.090 --> 00:02:37.000
+we will study later is the way in which
+objects are compared in Java however in
+
+00:02:37.000 --> 00:02:42.340
+this section we will only clarify that
+when using objects the ==
+
+00:02:42.340 --> 00:02:47.680
+symbol is not used as the primitive
+types, but the equals method. In the case
+
+00:02:47.680 --> 00:02:52.840
+of strings this will allow us to compare
+the content of the String. In the topic
+
+00:02:52.840 --> 00:02:56.950
+of objects we will study this in more
+detail, but for now it's important to
+
+00:02:56.950 --> 00:03:04.510
+know this detail, so you now have to
+compare strings. In the table shown we
+
+00:03:04.510 --> 00:03:08.800
+can observe the escape characters that
+are used when displaying messages in the
+
+00:03:08.800 --> 00:03:13.120
+standard output. These characters will be
+put into practice in the exercise that
+
+00:03:13.120 --> 00:03:16.780
+we are going to do next
+

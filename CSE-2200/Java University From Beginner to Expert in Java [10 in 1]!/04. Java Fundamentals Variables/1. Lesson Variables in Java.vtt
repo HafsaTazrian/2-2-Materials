@@ -1,0 +1,194 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.150 --> 00:00:15.620
+hello my name is Ubaldo Acosta
+welcome again I hope you're ready to
+
+00:00:15.620 --> 00:00:23.300
+start this with lesson, we will study the
+concept of variables in Java. This is the
+
+00:00:23.300 --> 00:00:28.310
+basis for the management of information
+when creating our programs in Java. Are
+
+00:00:28.310 --> 00:00:38.800
+you ready? let's begin. Variables in Java
+
+00:00:43.839 --> 00:00:49.309
+in Java, as in any programming language
+to store information is necessary to
+
+00:00:49.309 --> 00:00:54.440
+create variables, which will allow us to
+store data from our program temporarily
+
+00:00:54.440 --> 00:01:00.049
+the objective of declaring a variable is
+to reserve memory space depending on the
+
+00:01:00.049 --> 00:01:05.210
+type that we are going to use. This
+variables also allows to make dynamic
+
+00:01:05.210 --> 00:01:10.010
+programs so in most cases the values
+will change during the interaction with
+
+00:01:10.010 --> 00:01:15.440
+the user and the program for example as we
+can see in the figure we have data which
+
+00:01:15.440 --> 00:01:20.690
+can be changing throughout execution of
+our program. In Java there are different
+
+00:01:20.690 --> 00:01:26.330
+types of data, so we will study in more
+detail the types of data and therefore
+
+00:01:26.330 --> 00:01:30.950
+the types of variables that we need to
+create to store a specific type of data
+
+00:01:30.950 --> 00:01:43.820
+so let's continue. Types in Java. We have
+primitive types and referenced types
+
+00:01:43.820 --> 00:01:52.250
+object types, and in primitive types we
+have int types and float types and in
+
+00:01:52.250 --> 00:01:58.430
+reference we have Classes, Interfaces and
+Arrays. There is a wide classification
+
+00:01:58.430 --> 00:02:03.560
+regarding the types that are handled in
+Java, however we can summarize it in the
+
+00:02:03.560 --> 00:02:09.080
+figures shown. In one hand we have
+primitive types, and on the other hand we
+
+00:02:09.080 --> 00:02:14.450
+have the types that are considered as
+extensions of the object class, also
+
+00:02:14.450 --> 00:02:19.879
+known as reference to objects. Regarding
+the primitive types we can classify them
+
+00:02:19.879 --> 00:02:24.920
+in integer and floating types
+however we also have the boolean type
+
+00:02:24.920 --> 00:02:30.500
+each of these types we will see them in
+more details below. On the other side we
+
+00:02:30.500 --> 00:02:35.480
+have the types object which can be
+classes interfaces or arrays in Java
+
+00:02:35.480 --> 00:02:40.940
+we will study these types in the topic
+of classes and objects in Java so for
+
+00:02:40.940 --> 00:02:45.890
+now we will focus on primitive types and
+how to declare them and use this type of
+
+00:02:45.890 --> 00:02:53.090
+data in Java. We have primitive data
+types in Java and are classified as
+
+00:02:53.090 --> 00:03:00.770
+integer types and flow types and we have
+the next integer types by it which has
+
+00:03:00.770 --> 00:03:09.200
+eight bits
+short which occupies 16 bits, char which
+
+00:03:09.200 --> 00:03:16.640
+occupies 16 bits too, int which has 32
+bits long
+
+00:03:16.640 --> 00:03:27.260
+which has 64 bits and in float types we
+have the float type which has 32 bits
+
+00:03:27.260 --> 00:03:36.799
+and double which has 64 bits the boolean
+type in Java is also a primitive type
+
+00:03:36.799 --> 00:03:42.620
+and can store only the value of true or
+false its default value is false let's
+
+00:03:42.620 --> 00:03:50.239
+see the default values for every data
+type. The default value for byte is 0, for
+
+00:03:50.239 --> 00:04:02.840
+short is 0, for char is the 0, but in
+unicode, for int is 0, for long is 0, for
+
+00:04:02.840 --> 00:04:11.090
+float is 0.0 and for double is 0.0. As we
+discussed earlier, we have different
+
+00:04:11.090 --> 00:04:16.669
+types of data in Java, in total there are
+8, these types of Java are the most basic
+
+00:04:16.669 --> 00:04:21.680
+and are those that we will use if we
+need the fastest and most resource
+
+00:04:21.680 --> 00:04:26.530
+saving with the aim of making our
+algorithms as efficient as possible
+
+00:04:26.530 --> 00:04:32.720
+however in practice we will also use
+already creative functions that can make
+
+00:04:32.720 --> 00:04:36.529
+in directive use of these primitive
+types so in any
+
+00:04:36.529 --> 00:04:41.349
+case we will be managing them in our
+programs either directly or indirectly
+
+00:04:41.349 --> 00:04:46.729
+each of these primitive types has a
+default value which is important to know
+
+00:04:46.729 --> 00:04:52.249
+since when we use them together with our
+Java classes the compiler will take into
+
+00:04:52.249 --> 00:04:58.849
+account this value by default according
+to the type of data we use. In the figure
+
+00:04:58.849 --> 00:05:04.459
+we can see both the number of bits that
+each data occupies as well as the
+
+00:05:04.459 --> 00:05:09.469
+default values that are assigned to each
+type when they are used as attributes
+
+00:05:09.469 --> 00:05:15.199
+for classes in Java. Later we will create
+several exercises to put into practice
+
+00:05:15.199 --> 00:05:19.689
+the use of primitive types in Java
+
