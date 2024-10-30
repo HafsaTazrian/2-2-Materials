@@ -1,0 +1,562 @@
+1
+00:00:01,730 --> 00:00:02,180
+Hello.
+
+2
+00:00:02,180 --> 00:00:06,450
+This is John from caveofprogramming.com,
+and
+
+3
+00:00:07,550 --> 00:00:12,493
+this is a extra tutorial on setting the
+look and feel in Java swing.
+
+4
+00:00:12,493 --> 00:00:17,610
+So I'm adding this sometime after creating
+the original
+
+5
+00:00:17,610 --> 00:00:21,200
+swing course from cave of programming, and
+this is just
+
+6
+00:00:21,200 --> 00:00:26,640
+because this is actually something which
+can at least sometimes
+
+7
+00:00:26,640 --> 00:00:30,870
+arguably improve the look of your swing
+application a lot.
+
+8
+00:00:32,620 --> 00:00:36,760
+And various people have been asking me
+about it so I figured it was time
+
+9
+00:00:36,760 --> 00:00:40,240
+to include this maybe in in an appendix
+
+10
+00:00:40,240 --> 00:00:43,540
+or something to the original set of
+tutorials.
+
+11
+00:00:43,540 --> 00:00:47,180
+So I've got this swing application that
+we've been
+
+12
+00:00:47,180 --> 00:00:51,940
+working on in [UNKNOWN] tutorials, and it
+looks like this.
+
+13
+00:00:51,940 --> 00:00:55,630
+But Java actually let's you set the look
+and feel of the interface.
+
+14
+00:00:55,630 --> 00:01:00,530
+And by default you get this kind of swing
+default kind of swing interface.
+
+15
+00:01:02,070 --> 00:01:05,850
+And actually although I'm running on
+Windows here.
+
+16
+00:01:05,850 --> 00:01:12,650
+A, a swing application in my experience
+never looks like a native application.
+
+17
+00:01:12,650 --> 00:01:18,200
+So you'll never get something that looks
+completely like a Windows application.
+
+18
+00:01:18,200 --> 00:01:20,270
+And if you wanted one you would have to
+use
+
+19
+00:01:20,270 --> 00:01:25,159
+not Swing but the somewhat similar and yet
+different SWT.
+
+20
+00:01:26,535 --> 00:01:29,300
+Toolkit which you can download for free.
+
+21
+00:01:29,300 --> 00:01:32,180
+And that actually uses native components,
+
+22
+00:01:32,180 --> 00:01:36,150
+rather than drawing things itself, swing
+does.
+
+23
+00:01:36,150 --> 00:01:41,910
+However, you can change the look and feel
+of swing, maybe get one you're happy with.
+
+24
+00:01:41,910 --> 00:01:44,990
+So if you go to Google here, and
+
+25
+00:01:44,990 --> 00:01:49,550
+search for swing look and feel, you'll get
+information.
+
+26
+00:01:49,550 --> 00:01:53,780
+And go to the docs.oracle.com, site.
+
+27
+00:01:53,780 --> 00:01:57,580
+And you can, you'll find a whole page
+about how to set the look and feel.
+
+28
+00:01:57,580 --> 00:02:02,560
+And the built in look and feels in Java
+used to be all pretty
+
+29
+00:02:02,560 --> 00:02:08,380
+rank to tell you the truth, pretty bad,
+but some of them now are pretty good.
+
+30
+00:02:08,380 --> 00:02:09,970
+So to set the look and feel you
+
+31
+00:02:09,970 --> 00:02:13,550
+just call UE manager.setlookandfeel and
+then you pass
+
+32
+00:02:13,550 --> 00:02:17,519
+in the name of a class that you want to
+set a look and feel to.
+
+33
+00:02:18,620 --> 00:02:24,550
+And you can download some professionally
+designed looks and fields,
+
+34
+00:02:24,550 --> 00:02:29,510
+looks and feels in Java files and just put
+them in the build path
+
+35
+00:02:29,510 --> 00:02:32,342
+of your application in the normal way and
+the way that you
+
+36
+00:02:32,342 --> 00:02:38,270
+does any [UNKNOWN] by sort of
+right-clicking and going to build path.
+
+37
+00:02:38,270 --> 00:02:42,380
+Configure build path and add a jar,
+external jar.
+
+38
+00:02:43,570 --> 00:02:46,070
+And and then you can set the, the looks
+
+39
+00:02:46,070 --> 00:02:49,240
+and feels to those using an appropriate
+class name.
+
+40
+00:02:49,240 --> 00:02:54,110
+But let's look here at just the built in
+ones, so I'll try setting this.
+
+41
+00:02:54,110 --> 00:02:57,620
+And see that this is gonna be, well I
+would say pretty bad.
+
+42
+00:02:57,620 --> 00:03:01,180
+I'm gonna go to the constructor of my main
+frame here,
+
+43
+00:03:01,180 --> 00:03:05,030
+and just paste this in and it throws a
+bunch of exceptions.
+
+44
+00:03:05,030 --> 00:03:09,140
+So I'm gonna surround with try catch, in
+fact
+
+45
+00:03:09,140 --> 00:03:12,450
+I'm just gonna change the first one here
+to exception.
+
+46
+00:03:12,450 --> 00:03:17,170
+And get rid of all the others because I'll
+catch all these exceptions just
+
+47
+00:03:17,170 --> 00:03:21,930
+by trying to catch exception here which is
+the parent class of all exceptions.
+
+48
+00:03:21,930 --> 00:03:24,190
+And let's just put a sys out here and say
+
+49
+00:03:24,190 --> 00:03:30,360
+can't set look and feel, just in case that
+fails.
+
+50
+00:03:30,360 --> 00:03:32,400
+And I'll run this.
+
+51
+00:03:32,400 --> 00:03:35,140
+So I'm setting it a metal look and feel
+
+52
+00:03:35,140 --> 00:03:37,880
+just by specifying this class name that
+I've got.
+
+53
+00:03:37,880 --> 00:03:40,180
+Got from a documentation and if I run
+
+54
+00:03:40,180 --> 00:03:45,280
+that it doesn't actually look to me any
+different.
+
+55
+00:03:45,280 --> 00:03:48,410
+Maybe the metal look and feel is the
+default.
+
+56
+00:03:48,410 --> 00:03:50,010
+Let's try a different one.
+
+57
+00:03:50,010 --> 00:03:55,140
+So let's try this moti, motif look and
+feel or however you pronounce it.
+
+58
+00:03:55,140 --> 00:03:57,180
+And this is gonna look rubbish again but
+in a moment,
+
+59
+00:03:57,180 --> 00:03:59,860
+I am gonna show you one that's gonna look
+really good.
+
+60
+00:03:59,860 --> 00:04:03,380
+So, all set, I run now.
+
+61
+00:04:03,380 --> 00:04:08,270
+And so this looks like something that's
+running on motif
+
+62
+00:04:08,270 --> 00:04:11,910
+I guess but I don't want it to look like
+that.
+
+63
+00:04:11,910 --> 00:04:15,990
+So let's, if, if you look here in the
+sidebar,
+
+64
+00:04:15,990 --> 00:04:19,830
+I think here, there's something about the
+members look and feel.
+
+65
+00:04:19,830 --> 00:04:21,610
+Here we go, members look and feel.
+
+66
+00:04:21,610 --> 00:04:24,740
+Which is actually pretty nice, if you look
+at that, it's really not bad.
+
+67
+00:04:25,810 --> 00:04:28,920
+so, I'm gonna set that, I'm gonna use this
+example code.
+
+68
+00:04:28,920 --> 00:04:30,470
+Like you see here.
+
+69
+00:04:30,470 --> 00:04:34,729
+Which actually iterates through the
+different installed looks and
+
+70
+00:04:34,729 --> 00:04:37,920
+feels, so you can print them out if you
+want.
+
+71
+00:04:37,920 --> 00:04:40,302
+And if it finds the Nimbus one, it
+
+72
+00:04:40,302 --> 00:04:43,970
+sets set, then it just throws an exception
+there.
+
+73
+00:04:43,970 --> 00:04:44,830
+So let's try that.
+
+74
+00:04:46,780 --> 00:04:47,960
+I'll paste this in here.
+
+75
+00:04:49,220 --> 00:04:56,950
+And I will just say here again, sys out,
+cont, set look and feel.
+
+76
+00:04:58,000 --> 00:05:02,270
+So what we're doing here is, this is just
+using ui manager.
+
+77
+00:05:02,270 --> 00:05:06,810
+Don't get ensnared, looks and feels, looks
+and feels.
+
+78
+00:05:06,810 --> 00:05:10,590
+Iterating through them and for each look
+and feel here, it gets the
+
+79
+00:05:10,590 --> 00:05:14,540
+name and you could display that if you
+want to see what's installed.
+
+80
+00:05:14,540 --> 00:05:20,770
+And if one of them contains the letters
+Nimbus, it does seven can feel, why it
+
+81
+00:05:20,770 --> 00:05:22,510
+doesn't set the numbers directly just with
+the
+
+82
+00:05:22,510 --> 00:05:24,900
+class name, which you could do, I don't
+know.
+
+83
+00:05:24,900 --> 00:05:28,970
+Maybe the size class differs in different
+releases of Java.
+
+84
+00:05:28,970 --> 00:05:29,490
+I'm not sure.
+
+85
+00:05:30,880 --> 00:05:31,850
+Anyway, let's try this.
+
+86
+00:05:31,850 --> 00:05:36,710
+So I'll run that and here we got the
+nimbus looking field.
+
+87
+00:05:36,710 --> 00:05:41,910
+One thing to be aware of is that because
+things will now take up slightly different
+
+88
+00:05:41,910 --> 00:05:45,340
+amounts of space possibly, you may
+introduce little
+
+89
+00:05:45,340 --> 00:05:47,940
+bugs in to your application like this one.
+
+90
+00:05:47,940 --> 00:05:52,550
+And what's happened here is that this
+preferences dialog is
+
+91
+00:05:52,550 --> 00:05:57,490
+just not wide enough to support the extra
+sort of padding.
+
+92
+00:05:57,490 --> 00:06:01,642
+With the nimbus and nimbus look and feel.
+
+93
+00:06:01,642 --> 00:06:05,780
+So if I find where I set the size on my
+dialog
+
+94
+00:06:05,780 --> 00:06:09,610
+here, I maybe just need to set it a little
+bit wider.
+
+95
+00:06:09,610 --> 00:06:10,180
+That's 20, 20.
+
+96
+00:06:10,180 --> 00:06:13,950
+This is my preferences dialog code.
+
+97
+00:06:13,950 --> 00:06:16,690
+And Window Preferences.
+
+98
+00:06:16,690 --> 00:06:18,090
+And it's still not good.
+
+99
+00:06:18,090 --> 00:06:19,210
+Let's try 380.
+
+100
+00:06:19,210 --> 00:06:20,770
+And if this
+
+101
+00:06:22,830 --> 00:06:26,250
+doesn't work, actually, I just fix this on
+my own time.
+
+102
+00:06:26,250 --> 00:06:28,360
+But what I wanted to show you-
+
+103
+00:06:28,360 --> 00:06:32,660
+Yeah, so we're widening this but there's
+clearly
+
+104
+00:06:32,660 --> 00:06:36,080
+something else that I've got to fix here.
+
+105
+00:06:36,080 --> 00:06:38,100
+In fact I will fix it.
+
+106
+00:06:38,100 --> 00:06:40,600
+I'll go away, fix it, and come back in
+just a second.
+
+107
+00:06:42,600 --> 00:06:46,540
+Hi there, I'm back again, and in fact what
+I had to do was not animate the title of.
+
+108
+00:06:46,540 --> 00:06:52,880
+A bit wider, but also set the fill, the
+grid by constraints fill.
+
+109
+00:06:52,880 --> 00:06:56,700
+And to horizontal, for just for the text
+fields.
+
+110
+00:06:56,700 --> 00:07:01,520
+So you see that set in the looking field
+is not without hazard, but
+
+111
+00:07:01,520 --> 00:07:06,530
+it probably is really worth it, if you
+want your application to look nice.
+
+112
+00:07:07,570 --> 00:07:08,890
+And who doesn't?
+
+113
+00:07:08,890 --> 00:07:13,670
+Okay, so that's it for this tutorial, and
+If there's anything else
+
+114
+00:07:13,670 --> 00:07:17,480
+that you want to know feel free to drop me
+a line.
+
+115
+00:07:17,480 --> 00:07:21,930
+Although, I can't absolutely promise to
+answer but I'll try.
+
+116
+00:07:21,930 --> 00:07:23,990
+And check out my other courses on New
+Demi.
+
+117
+00:07:23,990 --> 00:07:28,590
+I've got my other course coming up on
+Android very soon and there's
+
+118
+00:07:28,590 --> 00:07:33,130
+also a course on web programming and Java
+and lots of great stuff.
+
+119
+00:07:33,130 --> 00:07:36,450
+So that's it for now and until next time,
+happy coding!
+
