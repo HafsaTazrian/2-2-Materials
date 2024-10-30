@@ -1,0 +1,616 @@
+WEBVTT
+
+00:00.150 --> 00:07.260
+In this video we will learn about GitHub, how to manage your code using GitHub, how to commit your
+
+00:07.500 --> 00:12.630
+code, how to build a repository and how to start working with GitHub.
+
+00:13.140 --> 00:17.730
+Okay, so before that you need to sign up to the GitHub.
+
+00:18.480 --> 00:23.550
+As I have already created my account, I'm signing in here with my account.
+
+00:39.960 --> 00:40.290
+Okay.
+
+00:40.290 --> 00:42.930
+So it's asking for the verification code.
+
+00:44.790 --> 00:45.180
+Okay.
+
+00:45.570 --> 00:48.720
+So these are the different records I am using.
+
+00:48.930 --> 00:49.350
+Okay.
+
+00:49.680 --> 00:53.130
+So let us go to my Jamie Dalrymple here.
+
+00:53.640 --> 00:54.050
+Okay.
+
+00:54.060 --> 00:58.260
+You can see it's inside of this project.
+
+00:58.330 --> 01:05.640
+A Jamie that is created here, you can see there are different things you can pull with as GDP.
+
+01:05.650 --> 01:12.090
+You can pull it, as I said, actually, if you have a such key configured or you can directly use those
+
+01:12.090 --> 01:13.640
+tips link also.
+
+01:14.160 --> 01:14.570
+Okay.
+
+01:14.610 --> 01:23.400
+If you don't want to use any good measure, you need a command prompt and you just use it on you.
+
+01:23.400 --> 01:29.910
+Just you, you want to use the you like, you know, comments then how to do that first letter, see,
+
+01:29.910 --> 01:30.760
+focus on that.
+
+01:30.840 --> 01:31.150
+Okay.
+
+01:31.170 --> 01:32.310
+So here is the code.
+
+01:33.240 --> 01:36.690
+You can download it in the zip format here.
+
+01:37.140 --> 01:37.530
+Okay.
+
+01:37.830 --> 01:39.720
+So let me download here.
+
+01:41.510 --> 01:42.530
+Jamie doesn't mean.
+
+01:42.830 --> 01:48.350
+So you will get all the files inside this particular zip.
+
+01:48.920 --> 01:52.400
+Now, suppose I want to add and commit something.
+
+01:52.670 --> 01:54.560
+Some files to this particular.
+
+01:56.300 --> 01:56.910
+Project.
+
+01:56.930 --> 02:02.600
+So what I will do, I'll click on to add five and then click on upload new files.
+
+02:03.140 --> 02:06.110
+Okay, and choose the file from your system.
+
+02:07.910 --> 02:18.980
+So I'll go to my performance tab and I will select one of those file HMX, which I can find currently.
+
+02:21.160 --> 02:21.480
+Jim.
+
+02:35.380 --> 02:38.020
+These are the words of the Lord the face.
+
+02:40.350 --> 02:41.940
+Adding injured here.
+
+02:43.290 --> 02:43.650
+Okay.
+
+02:44.310 --> 02:46.740
+And then I'll click on commit changes.
+
+02:46.980 --> 02:47.370
+Okay.
+
+02:47.730 --> 02:49.860
+If once I click on climate changes.
+
+02:52.420 --> 02:55.300
+See, the file is now committed here.
+
+02:55.480 --> 02:55.810
+Okay.
+
+02:56.410 --> 03:00.240
+So I have directly accessed my master branch, but.
+
+03:01.390 --> 03:01.720
+So.
+
+03:03.340 --> 03:05.590
+It gets uploaded to the massive Mac.
+
+03:05.860 --> 03:10.120
+If not, we can create the full request for a commit.
+
+03:10.120 --> 03:10.560
+And.
+
+03:11.260 --> 03:14.200
+And we can ask who has the access to master?
+
+03:14.200 --> 03:16.570
+The master branch to master file here.
+
+03:17.410 --> 03:17.710
+Okay.
+
+03:18.010 --> 03:20.560
+This is simply we can do it from the UI.
+
+03:21.070 --> 03:25.300
+Now we will go to get batch and how to do it from the command line.
+
+03:25.300 --> 03:26.140
+We will see that.
+
+03:27.400 --> 03:27.790
+Okay.
+
+03:28.820 --> 03:34.010
+So now let us download the get go mesh of good for windows.
+
+03:34.490 --> 03:41.150
+So I have time to download get to this website and now I'm down for windows.
+
+03:42.480 --> 03:44.580
+64 bit window setup.
+
+03:52.490 --> 03:59.450
+So you can just click double click on this and do next next next to install the complete set up here.
+
+04:02.550 --> 04:07.420
+When you double click on this good XY, you will get this screen.
+
+04:07.450 --> 04:14.050
+You can select options for now needs to be measured, but I'm keeping all the options.
+
+04:14.590 --> 04:20.110
+Click on next like villages that always keep the default settings.
+
+04:20.140 --> 04:21.790
+HULETT Keep in default.
+
+04:22.570 --> 04:28.780
+So I want to use get and get BASH Only not from other command line any toad by the command ends when
+
+04:28.780 --> 04:30.160
+selecting this option.
+
+04:32.130 --> 04:33.810
+Next to use as is.
+
+04:34.440 --> 04:34.830
+Yes.
+
+04:35.520 --> 04:36.570
+So we are.
+
+04:36.570 --> 04:38.600
+We can keep mostly law.
+
+04:38.890 --> 04:41.370
+Commit what style you want to commit.
+
+04:41.370 --> 04:43.440
+And all zookeeper does is.
+
+04:45.970 --> 04:48.380
+Which console you want to use.
+
+04:48.640 --> 04:53.400
+You can use this going to school or you can use Windows default console also.
+
+04:55.060 --> 04:55.900
+So yeah.
+
+04:56.680 --> 04:56.940
+Okay.
+
+05:01.610 --> 05:02.180
+In store.
+
+05:02.750 --> 05:05.660
+So now this will install the guitar for me.
+
+05:06.440 --> 05:08.750
+You also do the installation of the gift.
+
+05:09.530 --> 05:16.400
+Now, next week, how we can use the command to clone and become Itachi.
+
+05:37.450 --> 05:40.720
+And to get back and check how it looks.
+
+05:57.710 --> 05:58.190
+Okay.
+
+05:59.420 --> 06:05.840
+So first we want to clone our report here and we need to decide the part in which we want to clone it
+
+06:05.840 --> 06:06.290
+today.
+
+06:06.620 --> 06:08.020
+So I'm copying this.
+
+06:08.020 --> 06:08.540
+So.
+
+06:10.990 --> 06:17.560
+We want to clone this particular triple hate, so let it go as to type.
+
+06:18.670 --> 06:20.500
+You are for cloning.
+
+06:22.930 --> 06:25.300
+Now I need to go to a particular part.
+
+06:25.480 --> 06:29.440
+Well, I'm going to need to.
+
+06:33.460 --> 06:34.090
+See.
+
+06:37.140 --> 06:37.380
+It.
+
+06:41.470 --> 06:42.280
+Automated.
+
+06:44.110 --> 06:44.410
+Okay.
+
+06:44.710 --> 06:45.250
+So you're.
+
+06:45.250 --> 06:46.760
+I want to clone this robot.
+
+06:46.810 --> 06:51.160
+Cloning meant I want to completely put it in this particular folder.
+
+06:51.640 --> 06:53.800
+Okay, so, like, we downloaded it.
+
+06:53.800 --> 06:58.390
+Instead of that, you can clone base the you are adulthood.
+
+06:59.090 --> 07:04.930
+And so you can see here that this is cloning the gene return of all.
+
+07:08.300 --> 07:09.530
+The debate is closed.
+
+07:09.650 --> 07:11.420
+Now let's go to.
+
+07:12.880 --> 07:13.690
+See Drive.
+
+07:15.870 --> 07:18.030
+See drive way automated.
+
+07:19.520 --> 07:21.410
+And Jamie that if we should.
+
+07:22.970 --> 07:23.320
+Right.
+
+07:23.480 --> 07:24.270
+You can see this.
+
+07:25.010 --> 07:25.310
+Yes.
+
+07:26.060 --> 07:26.480
+Okay.
+
+07:26.960 --> 07:27.740
+So now.
+
+07:28.460 --> 07:35.510
+So if you check good status to check if there are any changes to this report.
+
+07:36.800 --> 07:41.240
+So no to say this is not a report that we need to go through.
+
+07:41.510 --> 07:41.990
+Jamie.
+
+07:45.030 --> 07:54.000
+So Jamie now this is at that level and we can use get go mindset get status since the brand is up to
+
+07:54.000 --> 07:54.840
+date, right.
+
+07:55.170 --> 07:59.160
+We don't have any changes in the branch to fit.
+
+07:59.400 --> 07:59.730
+Okay.
+
+08:00.520 --> 08:07.800
+So now if we have some changes, so directly down to the brand where we don't have a local report,
+
+08:08.040 --> 08:11.580
+how it looks like and how to search that, let us see that.
+
+08:12.300 --> 08:15.810
+So for that, I'll go here and add another five.
+
+08:30.150 --> 08:30.750
+Okay.
+
+08:31.930 --> 08:32.340
+It's.
+
+08:44.110 --> 08:46.000
+We're going to do it again.
+
+09:01.050 --> 09:01.770
+Idaho.
+
+09:04.480 --> 09:12.930
+Then it will show the changes that on the local level to how to will only the changes not that do that
+
+09:12.940 --> 09:14.290
+but we will check now.
+
+09:22.210 --> 09:22.640
+Okay.
+
+09:22.670 --> 09:25.360
+So I'm adding some order by your.
+
+09:33.210 --> 09:33.530
+Okay.
+
+09:36.220 --> 09:38.350
+And let's make this.
+
+09:38.740 --> 09:45.970
+We can commit to the new branch through the request of the domestic, but I'm directly committing to
+
+09:46.660 --> 09:48.100
+committing it to the master.
+
+09:48.580 --> 09:52.510
+So now if you do the this.
+
+10:01.030 --> 10:01.890
+It will show up.
+
+10:01.900 --> 10:04.060
+My current branch is up to date local.
+
+10:04.060 --> 10:10.420
+There are no changes on local, but there are changes in the variable that we know we just added today.
+
+10:10.720 --> 10:13.540
+So now we want will the changes to how to do that.
+
+10:13.960 --> 10:16.290
+You'll get that one.
+
+10:16.900 --> 10:23.320
+Now we don't need to give the link also because already cloned we cloned the report handling.
+
+10:23.950 --> 10:28.330
+So now if you do good, well only the changes will be added.
+
+10:30.190 --> 10:34.750
+See, these particular genomics is now added to our Global Report.
+
+10:35.290 --> 10:35.720
+Look.
+
+10:37.060 --> 10:43.240
+Now let's make changes to our report locally and commit to the.
+
+10:46.090 --> 10:47.020
+Cloud it up or not.
+
+10:47.290 --> 10:47.590
+Okay.
+
+10:47.920 --> 10:51.580
+So what we will do is we will create a new file inside this.
+
+11:02.340 --> 11:03.000
+New.
+
+11:05.380 --> 11:06.940
+X when it's clear that decks.
+
+11:06.950 --> 11:07.150
+Right.
+
+11:08.620 --> 11:08.950
+Okay.
+
+11:10.520 --> 11:12.020
+That's right.
+
+11:12.740 --> 11:16.370
+So this file is attached to a local report, and I want you to commit to the cloud.
+
+11:16.760 --> 11:18.980
+Now, do get deep.
+
+11:21.480 --> 11:21.870
+Okay.
+
+11:22.200 --> 11:24.270
+Now, we chose this file there.
+
+11:24.510 --> 11:28.200
+I'm just not committed to the main branch.
+
+11:28.380 --> 11:30.480
+Now, let us come with this group.
+
+11:31.620 --> 11:33.810
+First do it and not.
+
+11:35.530 --> 11:39.040
+To add this fight now to the status.
+
+11:42.610 --> 11:43.020
+30.
+
+11:45.500 --> 11:45.960
+Get.
+
+11:48.190 --> 11:49.060
+Status.
+
+11:54.510 --> 12:04.070
+So this file we added to the showing in green and defined it the mate Iceland m and is to specify the
+
+12:04.260 --> 12:06.210
+message committing.
+
+12:07.580 --> 12:10.210
+What we are committing so we can refer.
+
+12:11.650 --> 12:13.240
+Extra points.
+
+12:14.620 --> 12:15.040
+Okay.
+
+12:17.070 --> 12:18.450
+We are committing this way.
+
+12:19.740 --> 12:24.290
+And now we need to push this one to the mustard like we did from you.
+
+12:25.170 --> 12:25.550
+Okay.
+
+12:25.770 --> 12:27.300
+Now get push.
+
+12:27.990 --> 12:28.680
+What did you.
+
+12:29.710 --> 12:30.030
+Right.
+
+12:31.000 --> 12:33.200
+So you can push this file to the master.
+
+12:37.640 --> 12:37.930
+Okay.
+
+12:37.970 --> 12:39.230
+I think it's already.
+
+12:39.230 --> 12:41.270
+It's not the main.
+
+12:44.030 --> 12:46.360
+It shows me that it's coming.
+
+12:46.390 --> 12:46.710
+That.
+
+12:50.750 --> 12:52.820
+The branch name is already showing.
+
+12:53.060 --> 12:56.370
+If we want to move to any other branch, we can do good.
+
+12:56.420 --> 12:59.840
+Take out and share the name of this branch.
+
+13:00.350 --> 13:03.600
+So if you have multiple branches of your code, you can do that.
+
+13:03.620 --> 13:06.810
+You can just check out to the different branch with it.
+
+13:06.830 --> 13:08.960
+Check out the mine.
+
+13:09.690 --> 13:09.980
+Okay.
+
+13:10.430 --> 13:14.360
+Now this will push our fight to the main.
+
+13:27.180 --> 13:29.100
+So I think the formula designing.
+
+13:35.020 --> 13:37.450
+And then it is sort of push and check.
+
+13:47.370 --> 13:50.190
+So the default browser is all set today.
+
+13:50.200 --> 13:53.700
+So I need to sign up with my sign in with my GitHub here.
+
+14:03.410 --> 14:06.050
+Internet is too slow somehow to get.
+
+14:38.790 --> 14:40.950
+Key signing completed here.
+
+14:57.110 --> 15:03.920
+So now so far we have seen it how to do out of five from the UI, how to get the call from the UI,
+
+15:03.920 --> 15:05.240
+how to come back from the UI.
+
+15:05.240 --> 15:09.080
+Then similarly, we have seen from the get batch command from how to do it.
+
+15:09.560 --> 15:16.920
+But I would hope that the code, how to pull the changes how to add your files again see the got it.
+
+15:17.030 --> 15:19.430
+Now the changes are uploaded here.
+
+15:19.670 --> 15:22.670
+The same done addition to the main is done.
+
+15:23.210 --> 15:28.520
+Now let's go back to our repo here and refresher then check on file.
+
+15:28.520 --> 15:29.630
+Is there or not?
+
+15:29.630 --> 15:31.040
+The text file is added.
+
+15:32.080 --> 15:32.380
+Right.
+
+15:32.830 --> 15:41.500
+So the the message which we shared right when we were running the command so that you can see here.
+
+15:42.310 --> 15:42.670
+Okay.
+
+15:43.480 --> 15:46.870
+So this is about basic self practice of yourself.
+
+15:46.900 --> 15:49.540
+If you have any questions or doubt, you can write.
+
+15:50.260 --> 15:50.880
+And you.
