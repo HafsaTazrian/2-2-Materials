@@ -1,0 +1,302 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.380 --> 00:00:16.780
+Exercise. Precedence of operators in Java
+
+00:00:17.170 --> 00:00:22.369
+exercise objective. Create a program to
+practice the precedence of operators in
+
+00:00:22.369 --> 00:00:31.939
+Java, at the end we should observe the
+following. Create a new project, create
+
+00:00:31.939 --> 00:00:37.250
+the PrecedenceOfOperators project. We
+open NetBeans we click on file new
+
+00:00:37.250 --> 00:00:51.980
+project, we click on java, java
+application and click on next. The
+
+00:00:51.980 --> 00:00:56.990
+project name is PrecedenceOfOperators
+the project location is courses, Java
+
+00:00:56.990 --> 00:01:07.009
+Fundamentals, lesson03 and click on
+finish, so the project has the desired
+
+00:01:07.009 --> 00:01:15.200
+structure. As a next step we create the
+PrecedenceOfOperatorsTest.java
+
+00:01:15.200 --> 00:01:20.990
+class, so we right-click on the project
+precedence of operators we click on new
+
+00:01:20.990 --> 00:01:28.630
+and after that click Java Class. The
+class name is precedence of operators
+
+00:01:28.630 --> 00:01:34.520
+test remember to use the lowercase and
+uppercase letters as shown in the class
+
+00:01:34.520 --> 00:01:39.619
+as Java is sensible to uppercase and
+lowercase letters. The package name is
+
+00:01:39.619 --> 00:01:48.799
+operators we can see the full path of
+this class and we click on finish. This
+
+00:01:48.799 --> 00:01:53.000
+is the result of the create a Java class.
+We will substitute the code with the
+
+00:01:53.000 --> 00:02:00.439
+following. If you have any problem
+coding this class, you can click on the
+
+00:02:00.439 --> 00:02:05.840
+name of this class to download the code
+but remember first try to code every
+
+00:02:05.840 --> 00:02:12.950
+line that we give you. We write package
+operators public class the name of the
+
+00:02:12.950 --> 00:02:20.930
+class is PrecedenceOfOperatorsTest open
+curly braces we define the main method
+
+00:02:20.930 --> 00:02:28.519
+we write to the console first example
+precedence of operators. We define a
+
+00:02:28.519 --> 00:02:35.060
+first variable called x with value of 5
+of type int, we define another variable
+
+00:02:35.060 --> 00:02:41.810
+called y equals to 10 of type int.
+And define the variable z and this
+
+00:02:41.810 --> 00:02:49.280
+variable is equals to x but using the
+pre increment operator, multiply by the variable y
+
+00:02:49.280 --> 00:02:55.370
+but using the post decrement operator so
+the result of this expression is z is
+
+00:02:55.370 --> 00:03:05.180
+equal to 6 *10 so the value of z is
+equal to 60. We print to the console the
+
+00:03:05.180 --> 00:03:14.870
+value of variable x y and z. The variable
+x is equal to 6 the variable y is equal
+
+00:03:14.870 --> 00:03:21.739
+to 9 and the variable Z is equal to 60
+in this case the variable y was spending
+
+00:03:21.739 --> 00:03:26.030
+to decrease so when we are using again
+this variable when logging to the
+
+00:03:26.030 --> 00:03:35.239
+console the variable decrement so the
+value is 9. Now we will see an example of
+
+00:03:35.239 --> 00:03:42.470
+evaluation with this example we can see
+the precedence of operators in Java in
+
+00:03:42.470 --> 00:03:46.579
+this case the first operators that are
+going to be evaluated are the
+
+00:03:46.579 --> 00:03:52.669
+multiply and division operators these
+operators have more (higher) priority in the
+
+00:03:52.669 --> 00:03:57.919
+precedence of operators after these
+operators we have for example the +
+
+00:03:57.919 --> 00:04:04.790
+or - operator and we evaluate this
+expression from left to right so as we
+
+00:04:04.790 --> 00:04:13.069
+can see in the evaluation we have 4 +
+5 * 6 / 3 and we can group
+
+00:04:13.069 --> 00:04:17.959
+using the precedence of operators so
+evaluating from left to right we will
+
+00:04:17.959 --> 00:04:23.690
+use parentheses only to show you how the
+precedence of operators works but as we
+
+00:04:23.690 --> 00:04:27.710
+can see is not necessary to use
+parentheses to apply the precedence of
+
+00:04:27.710 --> 00:04:33.650
+operators it's only to show you how it
+works so we have the expression 4 + 5
+
+00:04:33.650 --> 00:04:38.240
+multiplied
+by 6 divided by 3 and evaluating from left to right
+
+00:04:38.240 --> 00:04:41.599
+again
+the first operator that is executed is
+
+00:04:41.599 --> 00:04:49.909
+5*6 so we have the result 4+(30/3) finally we have the result
+
+00:04:49.909 --> 00:04:57.860
+4 +10 and the final result is 14 but
+we can use parentheses to break
+
+00:04:57.860 --> 00:05:04.699
+precedents of operators, so in this case we
+can group (4+5) and this multiplied by the result
+
+00:05:04.699 --> 00:05:12.379
+of (6/3) and in this case the
+result is 9*2 and the
+
+00:05:12.379 --> 00:05:19.250
+final result is 18 this result is using
+int literals so the result is no float
+
+00:05:19.250 --> 00:05:27.440
+but int. Another evolution example we can
+use the same logic 1+2-3
+
+00:05:27.440 --> 00:05:34.150
+*4/5 we are
+grouping using the precedence operators
+
+00:05:34.150 --> 00:05:41.960
+so evaluating from left to right we
+first have 1+2-3*
+
+00:05:41.960 --> 00:05:51.500
+4/5 and the first result
+is 3 -12 / 5 and the final
+
+00:05:51.500 --> 00:05:57.770
+result is 3 - 2 and the final result
+is 1 so we are applying precedence
+
+00:05:57.770 --> 00:06:04.849
+of operators to evaluate this expression
+but if we use parentheses we can break
+
+00:06:04.849 --> 00:06:12.140
+the precedence of operators so in this case
+the evaluation is 3 - 3 *
+
+00:06:12.140 --> 00:06:18.979
+0 so the first result is 3 - 0
+and the final result is 3 the division
+
+00:06:18.979 --> 00:06:25.210
+remember that only takes the in part is
+not using any float type
+
+00:06:27.530 --> 00:06:32.990
+another example we will use a string
+type to check if it detects a string
+
+00:06:32.990 --> 00:06:39.350
+the result turns into a string too. So in
+this case the result is the
+
+00:06:39.350 --> 00:06:47.060
+concatenation and prints 1 2 is not
+12 because is not executing the addition
+
+00:06:47.060 --> 00:06:51.740
+but is applying a concatenation so in
+this case the result is 1 concatenated
+
+00:06:51.740 --> 00:06:59.750
+by 2 because we have an string and Java
+applies the string context but the
+
+00:06:59.750 --> 00:07:04.340
+parentheses break this rule as it has
+the highest priority when we are using
+
+00:07:04.340 --> 00:07:10.550
+precedence of operators so in this case
+we're using parentheses so the
+
+00:07:10.550 --> 00:07:16.640
+evaluation of 1 + 2 is executed and
+the final result prints 3 so then 3 is
+
+00:07:16.640 --> 00:07:25.010
+concatenated but first the addition of 1
++ 2 is executed another example the
+
+00:07:25.010 --> 00:07:32.090
++ operator is associative to the left
+in this case the operation is executed
+
+00:07:32.090 --> 00:07:34.940
+first
+and after that is concatenated so it
+
+00:07:34.940 --> 00:07:44.720
+prints 3 abc, but if we change the order
+we can see abc after that 1 + 2 but
+
+00:07:44.720 --> 00:07:49.850
+in this case detects a string so
+it prints abc and the addition is not
+
+00:07:49.850 --> 00:07:57.350
+executed but a concatenation abc 1
+concatenated by 2. So these are the
+
+00:07:57.350 --> 00:08:06.620
+precedence of operators that we are
+putting into practice. As a next step we
+
+00:08:06.620 --> 00:08:11.419
+can run this project on the class
+PrecedenceOfOperatorsTests.java
+
+00:08:11.419 --> 00:08:20.630
+right click and Run File and this is
+the result this is the same result as we
+
+00:08:20.630 --> 00:08:26.210
+have examined but the recommendation
+is that you check every result again so
+
+00:08:26.210 --> 00:08:32.169
+you are sure that you are understanding
+the precedence of operators in Java
+
+00:08:35.630 --> 00:08:40.460
+exercise we have put into practice the
+precedence of operators in Java for more
+
+00:08:40.460 --> 00:08:46.060
+information about the operators in Java
+you can use the following link
+

@@ -1,0 +1,352 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.990 --> 00:00:19.400
+Exercise: Operators in Java. Exercise
+objective. Create a program to practice the
+
+00:00:19.400 --> 00:00:27.800
+operators in Java. At the end we should
+observe the following. Create a new
+
+00:00:27.800 --> 00:00:35.090
+project. Create the operators example project.
+We open the NetBeans IDE click on File, and
+
+00:00:35.090 --> 00:00:46.120
+New Project. Select Java, Java Application
+and after that click on next
+
+00:00:46.710 --> 00:00:52.900
+as a project name we write OperatorsExample, we select the project location
+
+00:00:52.900 --> 00:00:58.480
+in this case Courses, Java Fundamentals,
+Lesson03 and after that we click on
+
+00:00:58.480 --> 00:01:07.030
+finish. With this we have created the
+project, so the project has a desire a
+
+00:01:07.030 --> 00:01:11.140
+structure. You can see the source
+packages and the libraries that we have
+
+00:01:11.140 --> 00:01:20.350
+in this project. We create a new class
+called Operators.java so we right
+
+00:01:20.350 --> 00:01:27.210
+click on OperatorsExample project, click
+on New and after that select Java Class
+
+00:01:28.649 --> 00:01:35.259
+the class name is OperatorsInJava
+the package is operators and we can see
+
+00:01:35.259 --> 00:01:44.050
+the full path of this class. Finally
+click on finish. This is the result of
+
+00:01:44.050 --> 00:01:49.470
+the created Java class. We will
+substitute the code with the following
+
+00:01:49.470 --> 00:01:55.090
+you can click on the name of the class
+to download the code but as we have told
+
+00:01:55.090 --> 00:01:59.950
+you before you need to write every line
+of code that we give you, so first we
+
+00:01:59.950 --> 00:02:03.599
+write package operators this is the name
+of the package
+
+00:02:03.599 --> 00:02:08.619
+after that we open the class public
+class OperatorsInJava, we open the
+
+00:02:08.619 --> 00:02:14.470
+curly brackets and we write the main
+method little by little we will study
+
+00:02:14.470 --> 00:02:20.290
+every part of this code we will study
+the access modifiers, the word static, the
+
+00:02:20.290 --> 00:02:25.330
+word void, etc, but in this case to
+execute this program we need to write
+
+00:02:25.330 --> 00:02:33.489
+this method as shown. After that we print
+to the console Arithmetic Operators, we
+
+00:02:33.489 --> 00:02:40.060
+do a first operation adding 1+2 and
+the result is 3 and assign the result to
+
+00:02:40.060 --> 00:02:46.510
+a variable called a of type int. After
+that we create a variable called b and
+
+00:02:46.510 --> 00:02:52.720
+it is the result of multiplying a * 4
+in this case the result of the variable
+
+00:02:52.720 --> 00:02:57.760
+b is 12
+after that we find a variable called c
+
+00:02:57.760 --> 00:03:04.569
+in this case this is the result of dividing
+b/2 and the result is 6 in
+
+00:03:04.569 --> 00:03:10.180
+this case the division gives an int
+result not float, we will see later how
+
+00:03:10.180 --> 00:03:15.580
+to get a float result in case is
+necessary but in this case the division
+
+00:03:15.580 --> 00:03:22.239
+gives an int result. We declare another
+variable in this case called d and this
+
+00:03:22.239 --> 00:03:28.540
+variable has the result of c-a and
+the result of the variable d is equal to
+
+00:03:28.540 --> 00:03:32.380
+3
+after that we define a variable called e
+
+00:03:32.380 --> 00:03:37.660
+and we define the value of the variable
+d but in negative so in this case the
+
+00:03:37.660 --> 00:03:43.450
+variable E has the value of -3 but in
+negative. After defining every variable
+
+00:03:43.450 --> 00:03:50.650
+we log every value into the console so
+we print the value of variable a and as
+
+00:03:50.650 --> 00:04:00.819
+we continue we print every variable the
+variable b c d and e. We will put into
+
+00:04:00.819 --> 00:04:07.540
+practice the module operator. This is the
+residue of the revision, so in this case
+
+00:04:07.540 --> 00:04:12.489
+we can see that we can use the model
+operator simply by using a variable
+
+00:04:12.489 --> 00:04:17.769
+after that the operator module and after
+that another operating, so in this case we
+
+00:04:17.769 --> 00:04:22.810
+are using the expression a after that
+the module operator and 2, and the result
+
+00:04:22.810 --> 00:04:29.220
+is the residue of the division in this
+case 1 so we print 1 in the console
+
+00:04:29.220 --> 00:04:35.800
+the composite operator we can see that
+we can add 2 to the variable a but it's
+
+00:04:35.800 --> 00:04:40.930
+a simplified syntax we will see a lot of
+using this operator in Java so we have
+
+00:04:40.930 --> 00:04:44.590
+to be sure that we understand this
+expression this is the same as the
+
+00:04:44.590 --> 00:04:52.210
+declaring the variable a equals a+2
+so the result is 5 also we can use the
+
+00:04:52.210 --> 00:04:57.910
+negative operator so in this case the
+value is B equals B minus 4 and the
+
+00:04:57.910 --> 00:05:03.910
+result is equals to 8 also we can use
+the multiply operator using this
+
+00:05:03.910 --> 00:05:11.140
+composite operator and in this case the
+value of c is equals to 30 we print a
+
+00:05:11.140 --> 00:05:16.680
+new value of a
+the new value of b and new value of c and
+
+00:05:16.680 --> 00:05:26.729
+we can see in the console every value of
+the corresponding operation. Also we have
+
+00:05:26.729 --> 00:05:31.169
+the increment operator so we have the
+variable a we can use the ++
+
+00:05:31.169 --> 00:05:38.399
+operator and in this case the meaning of
+this operator is a=a+1 as we
+
+00:05:38.399 --> 00:05:44.490
+print the value we get the value of 6
+also we have the pre increment and
+
+00:05:44.490 --> 00:05:50.279
+decrement operator this operator is
+increased before using the value that's
+
+00:05:50.279 --> 00:05:56.669
+why the name pre increment so in this
+case the expression first we preincrement
+
+00:05:56.669 --> 00:06:01.740
+the value of a and assign it to the
+variable c so the result is equals c
+
+00:06:01.740 --> 00:06:07.649
+equals a+1 as we are pre-incrementing the value of a and the result of c is
+
+00:06:07.649 --> 00:06:15.119
+equal to 7 also we have the operator of
+post increment or post decrement and
+
+00:06:15.119 --> 00:06:20.939
+this operator is increased after using
+the value so the next time the variable
+
+00:06:20.939 --> 00:06:27.419
+b is used is when it's increased so we
+can see the expression d equals b ++
+
+00:06:27.419 --> 00:06:34.649
+and the value of the variable d is
+equals to 8 because the variable b is
+
+00:06:34.649 --> 00:06:39.749
+not incremented because we are using
+post increment so the variable b is
+
+00:06:39.749 --> 00:06:45.749
+incremented the next time this variable
+is used so if we print the variable b it
+
+00:06:45.749 --> 00:06:51.779
+prints 9. b was waiting to increase the
+next time it was used if we print the
+
+00:06:51.779 --> 00:06:59.399
+variable c we get 7 if we print the
+variable b we get 8 also we have
+
+00:06:59.399 --> 00:07:05.909
+relational operators we can use this
+expression a is less than b and the
+
+00:07:05.909 --> 00:07:11.580
+result is that we are checking if 7&lt;9 and the result is equals to
+
+00:07:11.580 --> 00:07:16.469
+true so when we are using relational
+operators we are assigning a value of
+
+00:07:16.469 --> 00:07:24.479
+type boolean if we print the rest
+variable we print the value of true we
+
+00:07:24.479 --> 00:07:30.570
+also have the ternary operator this
+operator is like an if/else we will see
+
+00:07:30.570 --> 00:07:36.600
+later this structure but in this case we
+first have an expression a&lt;b
+
+00:07:36.600 --> 00:07:43.350
+and if this is true we'll return the
+value of a if not we return the value of
+
+00:07:43.350 --> 00:07:50.880
+b so if 7 is less than 9 this is true so
+we assign the first value so the
+
+00:07:50.880 --> 00:07:56.730
+variable min of type int we assign the
+value of a in this case the value of 7
+
+00:07:56.730 --> 00:08:01.530
+but if this expression were false we
+would assigned the value of b instead of
+
+00:08:01.530 --> 00:08:07.140
+a that's why this is a simplified
+expression of if-else structure so we
+
+00:08:07.140 --> 00:08:14.310
+can use a ternary operator to simplify
+and if else. If we print this value we
+
+00:08:14.310 --> 00:08:21.300
+will get the value of 7. Assignment
+operator. We can do many assignments at
+
+00:08:21.300 --> 00:08:28.710
+one time for example we can assign the
+value of 100 to the variable k j and i
+
+00:08:28.710 --> 00:08:36.090
+so that three variables are equal to 100
+and if we print every variable we will
+
+00:08:36.090 --> 00:08:41.970
+get the value of 100 so these are the
+operators that we are putting into
+
+00:08:41.970 --> 00:08:44.210
+practice
+
+00:08:46.520 --> 00:08:52.170
+we execute our project we right click
+over the class OperatorsInJava.java
+
+00:08:52.170 --> 00:09:00.210
+Run File and the result is as
+follows we already explained every
+
+00:09:00.210 --> 00:09:04.350
+result but we can check the result to
+compare it with every operation and
+
+00:09:04.350 --> 00:09:13.260
+every operator that we use in your
+program. Exercise conclusion with this
+
+00:09:13.260 --> 00:09:17.610
+exercise we have put into practice some
+of the most common operators in Java for
+
+00:09:17.610 --> 00:09:23.120
+more information about the operators in
+Java you can use the following link
+
+00:09:23.120 --> 00:09:29.320
+in the following exercise we will see
+the use of operators precedence.
+

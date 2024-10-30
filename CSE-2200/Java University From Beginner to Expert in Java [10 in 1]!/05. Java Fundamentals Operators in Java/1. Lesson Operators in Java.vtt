@@ -1,0 +1,72 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.230 --> 00:00:15.789
+hello welcome again I hope you're ready
+to start with this lesson we will study
+
+00:00:15.789 --> 00:00:21.180
+the issue of operators this is the basis
+for the management of information when
+
+00:00:21.180 --> 00:00:26.320
+creating our programs in Java and
+operating with the data are you ready ok
+
+00:00:26.320 --> 00:00:34.390
+let's go. In order to perform any type of
+calculation and/or create our algorithms
+
+00:00:34.390 --> 00:00:39.670
+is necessary to use operators in the
+table shown we can observe the operators
+
+00:00:39.670 --> 00:00:45.370
+in Java from arithmetic operators
+relationship operators logical unitary
+
+00:00:45.370 --> 00:00:51.249
+operators bit-level operators assignment
+operators conditional priority and
+
+00:00:51.249 --> 00:00:56.109
+evaluation order operators so this is
+the table that we're going to use as a
+
+00:00:56.109 --> 00:01:00.999
+reference so we are going to do some
+exercises to put these operators into
+
+00:01:00.999 --> 00:01:07.570
+practice. Reserve Words in Java. When
+working with Java the language has
+
+00:01:07.570 --> 00:01:12.040
+previously defined several words that
+already have a particular meaning for
+
+00:01:12.040 --> 00:01:17.380
+the compiler and therefore we cannot use
+them for purposes of assigning a name to
+
+00:01:17.380 --> 00:01:22.270
+a variable. In the figure we can see the
+reserved words in Java and little by
+
+00:01:22.270 --> 00:01:27.310
+little we will know many of these words
+and the meaning of each of them, however
+
+00:01:27.310 --> 00:01:31.869
+in this picture we can see all of them
+concentrated so we have a general
+
+00:01:31.869 --> 00:01:35.860
+knowledge of these words and these words
+have been reserved by the Java language
+
+00:01:35.860 --> 00:01:41.520
+so this picture can serve us for a
+future reference
+
