@@ -1,0 +1,109 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.110 --> 00:00:22.880
+Exercise: Installing NetBeans
+IDE on Windows. Exercise Objective. In
+
+00:00:22.880 --> 00:00:26.180
+this exercise we'll proceed to install
+the Integrated Development Environment
+
+00:00:26.180 --> 00:00:33.130
+(IDE) of NetBeans. Will cover the process
+of downloading and installing NetBeans
+
+00:00:34.329 --> 00:00:40.840
+Download the NetBeans IDE. Go to
+the following link and download NetBeans
+
+00:00:40.840 --> 00:00:48.940
+Select the platform you use. In this case
+we'll select NetBeans for Windows option
+
+00:00:51.490 --> 00:01:01.820
+Once the file is downloaded we'll double 
+click to open the Installer. Before we
+
+00:01:01.820 --> 00:01:11.780
+install the IDE, we can customize it.
+We click on Customize button. Deselect
+
+00:01:11.780 --> 00:01:16.520
+GlassFish server and click OK. This is
+because we will install a newer version
+
+00:01:16.520 --> 00:01:21.290
+of this Java Application Server. If you
+don't know what an Application Server is
+
+00:01:21.290 --> 00:01:31.130
+don't worry, we'll cover it later in the
+course. Installing NetBeans IDE. Once
+
+00:01:31.130 --> 00:01:36.850
+we have finished customizing the
+installation, click on Next to continue.
+
+00:01:39.010 --> 00:01:47.270
+Accept the license agreement and click on
+Next.
+
+00:01:47.270 --> 00:01:52.250
+If necessary rename the installation path
+of NetBeans as shown below. The JDK path
+
+00:01:52.250 --> 00:01:57.530
+is selected automatically and click on
+Next, but we leave the default values and
+
+00:01:57.530 --> 00:02:05.600
+click on Next
+Accept the default values and click on
+
+00:02:05.600 --> 00:02:18.709
+install. The installation process starts.
+It takes a few minutes to finish. The
+
+00:02:18.709 --> 00:02:27.260
+installation ends and click on Finish. Go
+to programs to open NetBeans, we search
+
+00:02:27.260 --> 00:02:38.440
+for NetBeans IDE 8.2. The NetBeans
+IDE starts.
+
+00:02:39.730 --> 00:02:45.170
+The start page shows up. You can deselect on Show on StartUp and close
+
+00:02:45.170 --> 00:02:53.930
+the start page. Finally the NetBeans
+IDE is ready to use. We finish the
+
+00:02:53.930 --> 00:02:57.579
+installation process of NetBeans,
+
+00:02:59.620 --> 00:03:04.370
+Exercise Conclusion: With this exercise
+we have installed the tools that we'll
+
+00:03:04.370 --> 00:03:08.689
+use throughout the course. It's worth
+mentioning that is possible to use even
+
+00:03:08.689 --> 00:03:13.819
+a Notepad, however the idea is to use
+real-world tools and with more
+
+00:03:13.819 --> 00:03:17.659
+experience you can select the
+development tool Integrated Development
+
+00:03:17.659 --> 00:03:21.980
+Environment that suits you best.
+For more details of NetBeans you can
+
+00:03:21.980 --> 00:03:24.819
+check the next link.
+

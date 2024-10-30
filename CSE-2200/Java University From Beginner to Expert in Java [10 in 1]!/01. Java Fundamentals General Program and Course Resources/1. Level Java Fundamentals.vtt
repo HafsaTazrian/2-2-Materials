@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.429 --> 00:00:20.650
+Hello, my name is Ubaldo Acosta. I hope
+you're ready to begin. Let's review the
+
+00:00:20.650 --> 00:00:26.939
+general agenda of the Java Fundamentals
+course. Are you ready? let's begin.
+
+00:00:28.050 --> 00:00:33.430
+Starting: The Java Technology. In this
+section we will study the main features
+
+00:00:33.430 --> 00:00:38.980
+of the Java language, the origin and
+evolution of this fabulous language. We
+
+00:00:38.980 --> 00:00:43.420
+will also review the different products
+and versions offered by Java technology.
+
+00:00:43.420 --> 00:00:48.030
+We will also install the tools that
+we'll use throughout the course,
+
+00:00:48.030 --> 00:00:53.739
+including the Java Development Kit (JDK)
+and we'll create the first HelloWorld
+
+00:00:53.739 --> 00:01:02.679
+Java project. Basic Components: Variables
+and Operators. In this section we'll
+
+00:01:02.679 --> 00:01:06.940
+review the concept of variables in Java
+as well as the data types that this
+
+00:01:06.940 --> 00:01:11.440
+programming language offers to us. We'll
+create some exercises to put this
+
+00:01:11.440 --> 00:01:16.930
+concept into practice, also examine the
+types of operators that Java offered to
+
+00:01:16.930 --> 00:01:21.520
+us, as well as the reserved words of the
+Java language. We'll create some
+
+00:01:21.520 --> 00:01:26.469
+exercises to implement the use of
+operators and we'll check the operator
+
+00:01:26.469 --> 00:01:34.329
+precedence in Java. Basic Structures:
+Control Sentences. We'll review the
+
+00:01:34.329 --> 00:01:40.119
+control statements like if else and
+switch, the syntax of each one, as well as
+
+00:01:40.119 --> 00:01:44.380
+some exercises to put this concept into
+practice. We also review more Java
+
+00:01:44.380 --> 00:01:52.420
+operators which are constantly used with
+the if or switch statements. Basic
+
+00:01:52.420 --> 00:01:57.460
+Structures: Control Flow Statements.
+In this section we'll analyze the while,
+
+00:01:57.460 --> 00:02:02.710
+do while and for statement in Java.
+We'll study the syntax of each one and
+
+00:02:02.710 --> 00:02:09.850
+create several exercises to learn each
+one of these concepts. Object-Oriented
+
+00:02:09.850 --> 00:02:15.160
+Programming: Java Classes and Objects. In
+this section we'll study the concept of
+
+00:02:15.160 --> 00:02:18.790
+classes and objects in Java.
+We'll see the general structure to
+
+00:02:18.790 --> 00:02:22.560
+create a class in Java and the syntax to
+create objects from
+
+00:02:22.560 --> 00:02:27.840
+a class. These concepts are pillars in Java
+technology. We'll create many exercises to
+
+00:02:27.840 --> 00:02:34.590
+put this concept into practice. Functions:
+Methods in Java. We'll define what a
+
+00:02:34.590 --> 00:02:40.440
+method is, as well as the syntax in Java
+to create methods. We'll see how to make
+
+00:02:40.440 --> 00:02:46.040
+method calls and create an exercise to
+implement this important concept in Java.
+
+00:02:46.040 --> 00:02:52.620
+Data Handling: Arrays in Java. We'll study
+the concept of Arrays of one and two
+
+00:02:52.620 --> 00:02:57.269
+dimensions in Java. Both concepts are
+the most basic data structures that
+
+00:02:57.269 --> 00:03:02.069
+we'll use in your Java projects. We'll
+also create several exercises to work
+
+00:03:02.069 --> 00:03:10.230
+with these concepts. Class Design:
+Inheritance and Encapsulation: We'll
+
+00:03:10.230 --> 00:03:15.120
+learn the concept of inheritance in Java
+and how to put this important concept
+
+00:03:15.120 --> 00:03:20.220
+into practice in our projects. We'll also
+review the concept of encapsulation and
+
+00:03:20.220 --> 00:03:25.590
+how to apply it to our Java classes. This
+is the general agenda of the Java
+
+00:03:25.590 --> 00:03:29.970
+Fundamentals course. These are just some
+of the many more topics that we'll learn
+
+00:03:29.970 --> 00:03:36.410
+throughout this course. So, if you're
+ready to begin let's start immediately :)
+

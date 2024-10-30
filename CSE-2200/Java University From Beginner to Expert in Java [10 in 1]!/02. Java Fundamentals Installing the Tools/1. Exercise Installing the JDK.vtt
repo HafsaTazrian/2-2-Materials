@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.250 --> 00:00:18.439
+Exercise. Installing the JDK on Windows
+
+00:00:24.010 --> 00:00:28.880
+Exercise Objective.
+In this exercise we'll proceed to
+
+00:00:28.880 --> 00:00:32.240
+install the Java Development Kit.
+We'll cover the process of downloading
+
+00:00:32.240 --> 00:00:40.670
+and installing the JDK. Download the
+JDK. Go to the next URL and download the
+
+00:00:40.670 --> 00:00:45.320
+JDK, select the platform that correspond
+to the operating system that you use. In
+
+00:00:45.320 --> 00:00:53.570
+this case We select the windows x64
+option. In step 2: Installing the JDK. Once
+
+00:00:53.570 --> 00:00:58.100
+the file is downloaded we double-click
+to open the Installer. The process is
+
+00:00:58.100 --> 00:01:05.960
+very similar to any other operating
+system. Installing the JDK: The Installer
+
+00:01:05.960 --> 00:01:09.550
+opens and click on Next
+
+00:01:10.780 --> 00:01:16.580
+Next we'll see the installation path of
+the JDK. Here, you can modify it, but we'll
+
+00:01:16.580 --> 00:01:24.799
+leave the default values and click on
+next. We wait for the installation to
+
+00:01:24.799 --> 00:01:32.630
+finish. As part of the JDK (Java
+Development Kit) installation the JRE
+
+00:01:32.630 --> 00:01:37.340
+Java Runtime Environment will be
+installed too. Here you can change the
+
+00:01:37.340 --> 00:01:45.979
+installation path, but we leave the
+default values and click on Next. We wait
+
+00:01:45.979 --> 00:01:53.630
+for the Java Runtime environment
+installation to finish. Click on Close
+
+00:01:53.630 --> 00:02:03.140
+and we conclude the installation of the
+JDK and Java Runtime Environment (JRE). In this
+
+00:02:03.140 --> 00:02:06.950
+exercise we have installed the Java
+Development Kit (JDK) and the Java Runtime
+
+00:02:06.950 --> 00:02:11.150
+Environment (JRE) in order to use the Java
+language in our computer. For more
+
+00:02:11.150 --> 00:02:15.800
+details of Java installation on other
+platforms or operating systems you can
+
+00:02:15.800 --> 00:02:18.640
+check the next link :)
+
