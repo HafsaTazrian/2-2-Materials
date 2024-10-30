@@ -1,0 +1,637 @@
+1
+00:00:02,110 --> 00:00:02,490
+Hello.
+
+2
+00:00:02,490 --> 00:00:03,160
+Welcome back.
+
+3
+00:00:03,160 --> 00:00:06,738
+This is John from caveofprogramming.com.
+
+4
+00:00:06,738 --> 00:00:12,168
+And in this tutorial, we're gonna look at
+Mnemonics and Accelerators.
+
+5
+00:00:12,168 --> 00:00:18,450
+So I've got this application here and I
+have a menu here.
+
+6
+00:00:18,450 --> 00:00:23,760
+And we're gonna add some Mnemonics and
+Accelerators to this menu for a start.
+
+7
+00:00:23,760 --> 00:00:29,538
+So Mnemonics is actually it's a key that
+you press together
+
+8
+00:00:29,538 --> 00:00:35,252
+with the Alt key that invokes a component
+that's already visible.
+
+9
+00:00:35,252 --> 00:00:42,480
+So if I want to get to the Exit menu here,
+the exit, Exit menu item.
+
+10
+00:00:42,480 --> 00:00:43,990
+Via Mnemonic.
+
+11
+00:00:43,990 --> 00:00:48,220
+I first got to invoke the File menu, cuz
+the File menu is visible.
+
+12
+00:00:48,220 --> 00:00:50,750
+So I can use the mnemonic on that.
+
+13
+00:00:50,750 --> 00:00:54,700
+Then I can use the mnemonic on the Exist
+menu, when that's visible.
+
+14
+00:00:56,180 --> 00:00:58,610
+And mnemonics is kind of an accessibility
+feature.
+
+15
+00:00:58,610 --> 00:01:03,720
+And they're also used by many of us just
+as a keyboard shortcut.
+
+16
+00:01:04,930 --> 00:01:08,500
+For expert users, there are also
+accelerators and accelerators
+
+17
+00:01:08,500 --> 00:01:13,020
+work certainly at least on menus even if
+they're not
+
+18
+00:01:13,020 --> 00:01:16,370
+visible and you can set mnemonics on other
+controls
+
+19
+00:01:16,370 --> 00:01:21,620
+besides menus but accelerators I think are
+just for menus.
+
+20
+00:01:21,620 --> 00:01:25,670
+So we're gonna take a look at examples of
+both here and
+
+21
+00:01:25,670 --> 00:01:29,714
+I'm gonna start by making this File > Exit
+menu actually do something.
+
+22
+00:01:30,840 --> 00:01:36,270
+So here I am in my main frame where I
+create the menu.
+
+23
+00:01:36,270 --> 00:01:40,700
+I've got this create menu bar method here
+in.
+
+24
+00:01:40,700 --> 00:01:41,730
+In the main frame.
+
+25
+00:01:43,680 --> 00:01:49,700
+And I'm gonna add an x, a mnemonics to the
+File menu.
+
+26
+00:01:49,700 --> 00:01:52,012
+So we'll say filemenu.
+
+27
+00:01:52,012 --> 00:01:54,865
+setmneumonic, setmneumonic.
+
+28
+00:01:54,865 --> 00:01:58,930
+And there is a version that takes a char
+but that's considered obsolete.
+
+29
+00:01:58,930 --> 00:02:01,048
+So you should use the int fashion.
+
+30
+00:02:01,048 --> 00:02:04,560
+And the int that you passed to it is
+static
+
+31
+00:02:04,560 --> 00:02:10,640
+constant from the key event class and, and
+there are static
+
+32
+00:02:10,640 --> 00:02:13,720
+const, constants representing all the keys
+on your keyboard, so
+
+33
+00:02:13,720 --> 00:02:19,580
+I'll do Ctrl+Shift+O and I will to add the
+import there.
+
+34
+00:02:19,580 --> 00:02:20,620
+Doesn't seem to have worked.
+
+35
+00:02:22,200 --> 00:02:28,710
+I want to add VK F, which is stands for
+virtual key F.
+
+36
+00:02:30,240 --> 00:02:32,680
+I'm not sure why I can't add my key event.
+
+37
+00:02:32,680 --> 00:02:33,300
+Oh, there we go.
+
+38
+00:02:33,300 --> 00:02:34,790
+Now it's working.
+
+39
+00:02:34,790 --> 00:02:41,910
+So if I now run my application, you can
+see that the
+
+40
+00:02:41,910 --> 00:02:48,420
+F of File menu is underlined, telling me
+that the mnemonic is Alt+F.
+
+41
+00:02:48,420 --> 00:02:51,530
+So if I hold down Alt now, and press F.
+
+42
+00:02:51,530 --> 00:02:55,570
+It opens the File menu and I can actually
+scroll through that with the arrow keys.
+
+43
+00:02:55,570 --> 00:03:00,000
+Let's also add a mnemonic on the Exit menu
+item.
+
+44
+00:03:00,000 --> 00:03:05,226
+So I can say exitItem.setMnemonic and for
+exit
+
+45
+00:03:05,226 --> 00:03:10,808
+the most traditional mnemonic is probably
+the
+
+46
+00:03:10,808 --> 00:03:16,180
+the X key, so let's add in
+KeyEvent.virtual key X.
+
+47
+00:03:18,370 --> 00:03:25,330
+And so if I run that now I can do, if I do
+Alt+X now I'm hitting Alt+X does nothing.
+
+48
+00:03:25,330 --> 00:03:31,280
+If I do Alt+F, and then we see the X of
+Exit is underlined.
+
+49
+00:03:31,280 --> 00:03:36,810
+And if I hit now Alt+X, then it invokes my
+Exit menu item.
+
+50
+00:03:36,810 --> 00:03:39,400
+And let's actually make that work, to make
+this more interesting.
+
+51
+00:03:39,400 --> 00:03:46,584
+So exitItem.addActionListener
+addActionListener new ActionListener.
+
+52
+00:03:46,584 --> 00:03:51,131
+Put the brackets in there, and then add
+the
+
+53
+00:03:51,131 --> 00:03:56,689
+actionPerformed method and let's get rid
+of some of
+
+54
+00:03:56,689 --> 00:04:02,375
+these extra lines that I don't need and
+put semicolon
+
+55
+00:04:02,375 --> 00:04:07,860
+in, and then here I would just do System
+system.
+
+56
+00:04:07,860 --> 00:04:08,410
+I accept.
+
+57
+00:04:09,620 --> 00:04:10,940
+So I always, I always feel that there
+should
+
+58
+00:04:10,940 --> 00:04:13,550
+be some more adequate way of exiting from
+Swing programs.
+
+59
+00:04:13,550 --> 00:04:15,760
+But as far as I know, this is the right
+way to do it.
+
+60
+00:04:15,760 --> 00:04:19,700
+And later on where we are probably gonna
+look at well
+
+61
+00:04:19,700 --> 00:04:22,980
+we are gonna look at adding a confirmation
+for the exit here.
+
+62
+00:04:22,980 --> 00:04:23,660
+So if I run that.
+
+63
+00:04:25,070 --> 00:04:28,870
+Now if I do Alt+F+X then the application
+exits.
+
+64
+00:04:31,006 --> 00:04:37,739
+You can also add mnemonics to to like form
+items so you can add for example
+
+65
+00:04:37,739 --> 00:04:43,800
+let's take the OK button as an example
+search for J button here.
+
+66
+00:04:43,800 --> 00:04:49,720
+So underneath where I create the OK button
+I could do in
+
+67
+00:04:49,720 --> 00:04:53,390
+fact, what I'll do here, cuz this is a bit
+mixed up,
+
+68
+00:04:53,390 --> 00:04:58,530
+I will delete the OK button, mind creation
+from here, and I'll
+
+69
+00:04:58,530 --> 00:05:03,340
+put it up here, where I'm creating the
+other controls just for consistency.
+
+70
+00:05:03,340 --> 00:05:08,490
+And I can have a comment here saying Set
+up op mnemonics, mnemonics.
+
+71
+00:05:08,490 --> 00:05:10,650
+I think that's spelled right.
+
+72
+00:05:10,650 --> 00:05:19,960
+And I'm gonna say OK button dot set set
+mnemonic, I think it is set mnemonic.
+
+73
+00:05:21,050 --> 00:05:27,280
+And, KeyEvent.VK
+
+74
+00:05:27,280 --> 00:05:32,100
+and let's make it, I don't know, vko for
+OK.
+
+75
+00:05:32,100 --> 00:05:36,610
+So that's inside the import there and if I
+run
+
+76
+00:05:36,610 --> 00:05:41,030
+that now, you see the o is underlined of
+OK.
+
+77
+00:05:41,030 --> 00:05:46,250
+And if I do Alt+O, then it clicks OK for
+me, which is rather nice.
+
+78
+00:05:48,550 --> 00:05:54,870
+I can now fall text fields and these other
+controls here,
+
+79
+00:05:54,870 --> 00:06:01,270
+like for example, if I look at let's look
+at and combo.
+
+80
+00:06:02,400 --> 00:06:09,540
+So, end combo, endCombo has no set
+mneumonic and the
+
+81
+00:06:09,540 --> 00:06:12,050
+reason for that is, for these other kinds
+of control.
+
+82
+00:06:12,050 --> 00:06:15,390
+You don't set a mnemonic on a Control
+itself.
+
+83
+00:06:15,390 --> 00:06:23,180
+You set it on an associated label, and you
+see here that otherwise you might want
+
+84
+00:06:23,180 --> 00:06:28,640
+to line the mnemonic if it's in a text
+field, there's no text in here.
+
+85
+00:06:28,640 --> 00:06:30,200
+The text is on this label.
+
+86
+00:06:31,500 --> 00:06:38,216
+And in fact you set the mnemonic on the
+label, so the way that works
+
+87
+00:06:38,216 --> 00:06:45,567
+is I can say, for example, name
+nameLabel.setmneumonic.
+
+88
+00:06:45,567 --> 00:06:49,657
+SetDisplayed mneumonic, actually.
+
+89
+00:06:49,657 --> 00:06:51,660
+Displayed Displayed mneumonic.
+
+90
+00:06:51,660 --> 00:06:52,367
+There we go.
+
+91
+00:06:52,367 --> 00:06:53,250
+And key events.
+
+92
+00:06:53,250 --> 00:06:57,310
+And this is a name [INAUDIBLE].
+
+93
+00:06:57,310 --> 00:07:00,620
+If I run that, you can see let's underline
+the.
+
+94
+00:07:00,620 --> 00:07:04,060
+And in the name as you might expect.
+
+95
+00:07:04,060 --> 00:07:08,060
+And now what I need to do is I need to say
+nameLabel, nameLabel.
+
+96
+00:07:09,260 --> 00:07:13,970
+And because we need to tell the label what
+what
+
+97
+00:07:13,970 --> 00:07:17,980
+to set the label for so you say
+setLabelFor and.
+
+98
+00:07:17,980 --> 00:07:25,895
+Pass in the nameField there and if I now
+run this and I do Alt+N then
+
+99
+00:07:25,895 --> 00:07:31,890
+it sets the focus in my name field and I
+can do Alt+O to submit that information.
+
+100
+00:07:33,050 --> 00:07:36,430
+So, one last thing for this tutorial,
+Which is
+
+101
+00:07:36,430 --> 00:07:42,830
+we're gonna look at, accelerators which
+just apply to menus.
+
+102
+00:07:42,830 --> 00:07:45,080
+So, as far as I know.
+
+103
+00:07:45,080 --> 00:07:50,600
+So let's go back to the main frame again
+and an accelerator
+
+104
+00:07:50,600 --> 00:07:54,860
+is a key like I don't have any examples
+here in eclipse.
+
+105
+00:07:55,860 --> 00:07:59,250
+yeah, so like Ctrl+W here is an
+accelerator.
+
+106
+00:07:59,250 --> 00:08:05,010
+And you can invoke accelerators without
+the menu actually displaying
+
+107
+00:08:05,010 --> 00:08:12,320
+so, let's add A accelerator Ctrl+X rather
+than Alt+X to the Exit menu item.
+
+108
+00:08:12,320 --> 00:08:19,600
+And the way to do that is, is say
+exitItem.setAccelerator
+
+109
+00:08:19,600 --> 00:08:24,490
+and then that accepts the Keystroke object
+
+110
+00:08:24,490 --> 00:08:27,608
+and I actually use the static method to
+the keystroke class called.
+
+111
+00:08:27,608 --> 00:08:33,270
+Get key 'kay, looks like the input there.
+
+112
+00:08:33,270 --> 00:08:34,380
+And getKeyStroke.
+
+113
+00:08:35,700 --> 00:08:39,310
+And the, the method I want takes two
+parameters, and the
+
+114
+00:08:39,310 --> 00:08:43,095
+first parameter is a key event, it's a
+Virtual key code.
+
+115
+00:08:43,095 --> 00:08:47,890
+VK_X, is what I'll use in this case for
+the X key.
+
+116
+00:08:49,030 --> 00:08:49,970
+And then you need.
+
+117
+00:08:49,970 --> 00:08:55,853
+A a method of, sorry a static constant of
+the ActionEventClass,
+
+118
+00:08:55,853 --> 00:09:00,664
+rather strangely, and I want to use in
+this case, a CTRL_MASK
+
+119
+00:09:00,664 --> 00:09:05,870
+constant, so you can see the accelerator,
+unlike the mnemonic, the mnemonic
+
+120
+00:09:05,870 --> 00:09:09,790
+is made for one key, the accelerator's
+made for two keys because.
+
+121
+00:09:09,790 --> 00:09:13,150
+The mnemonic is always Alt, but
+accelerated you can choose
+
+122
+00:09:13,150 --> 00:09:17,150
+your key so I'm choosing CTRL_MASK with
+the X key.
+
+123
+00:09:17,150 --> 00:09:23,990
+And if I now run that, if I look at the
+menu I'll use my, my, mnemonic actually.
+
+124
+00:09:23,990 --> 00:09:26,700
+You can see that it's not only is it
+outlining the x
+
+125
+00:09:26,700 --> 00:09:30,320
+of x out, which's the mnemonic, but it's
+put Ctrl+X in here.
+
+126
+00:09:30,320 --> 00:09:31,280
+Which is the accelerator.
+
+127
+00:09:31,280 --> 00:09:37,420
+Let's get rid of the menu and if I do
+Ctrl+X, it now quits my application.
+
+128
+00:09:37,420 --> 00:09:38,530
+Ctrl+X, there we go.
+
+129
+00:09:39,820 --> 00:09:44,630
+So accelerators are for expert uses and
+you can gradually learn tha, the
+
+130
+00:09:44,630 --> 00:09:50,270
+accelerators of an application, and invoke
+them without actually opening the menu.
+
+131
+00:09:51,650 --> 00:09:53,970
+So that's enough for this tutorial.
+
+132
+00:09:55,000 --> 00:10:00,740
+And in the next tutorial, we're gonna look
+at option panes and I'm gonna
+
+133
+00:10:00,740 --> 00:10:06,500
+show you how to add a confirmation here to
+this Exit menu item.
+
+134
+00:10:06,500 --> 00:10:11,660
+So, join me again then and until next
+time, happy programming.
+

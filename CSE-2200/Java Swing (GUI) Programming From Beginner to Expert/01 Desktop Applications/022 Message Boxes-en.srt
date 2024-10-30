@@ -1,0 +1,776 @@
+1
+00:00:00,000 --> 00:00:01,597
+[BLANK_AUDIO]
+
+2
+00:00:01,597 --> 00:00:07,116
+Hello, this is John from Cave of
+Programming dot com and this is a tutorial
+
+3
+00:00:07,116 --> 00:00:12,278
+on J Option panes which are, a quick way
+of producing those handy
+
+4
+00:00:12,278 --> 00:00:17,730
+little dialogues that pop up to ask you if
+you wanna do things or not.
+
+5
+00:00:17,730 --> 00:00:23,220
+Basically, and we're just gonna show you
+two simple types here, although that's
+
+6
+00:00:23,220 --> 00:00:28,560
+a plethora of possibilities, so in the
+last tutorial,
+
+7
+00:00:29,670 --> 00:00:36,440
+I cre, created this application, and I, in
+particular, we added some stuff to this.
+
+8
+00:00:36,440 --> 00:00:38,260
+Menu to make it work.
+
+9
+00:00:38,260 --> 00:00:44,230
+So if I go to exit here, it quits, or I
+can also do control x, for example.
+
+10
+00:00:44,230 --> 00:00:50,050
+Now I want, the application to ask me if
+I'm really sure that I want to quit.
+
+11
+00:00:50,050 --> 00:00:53,950
+Because although that's, quite annoying,
+at the same time, it.
+
+12
+00:00:53,950 --> 00:00:55,680
+It can be quite useful.
+
+13
+00:00:55,680 --> 00:01:00,760
+It can stop you losing data that you
+haven't saved and that sort of thing.
+
+14
+00:01:00,760 --> 00:01:04,210
+So let's assume that you think it's a good
+idea to do that.
+
+15
+00:01:04,210 --> 00:01:08,040
+And here I'm gonna put, I'm gonna create a
+little dialogue box that will
+
+16
+00:01:08,040 --> 00:01:12,730
+pop up and just ask the user if he or she
+really wants to quit.
+
+17
+00:01:13,750 --> 00:01:15,000
+Now to do that I'm gonna use the.
+
+18
+00:01:15,000 --> 00:01:17,150
+J Option Pane.
+
+19
+00:01:17,150 --> 00:01:20,250
+So if you go to Google and search for J
+Option Pane
+
+20
+00:01:20,250 --> 00:01:25,100
+job seven or something like that then
+you'll come up with this page.
+
+21
+00:01:25,100 --> 00:01:32,530
+And it looks pretty ferocious but there's
+only really four main possibilities.
+
+22
+00:01:32,530 --> 00:01:36,600
+You can create confirm dialogues, which is
+what I want to create.
+
+23
+00:01:36,600 --> 00:01:41,990
+Here, a dialogue that asks you if you want
+to really do something or not, and you
+
+24
+00:01:41,990 --> 00:01:44,560
+might have a no button on there, or a
+
+25
+00:01:44,560 --> 00:01:46,720
+cancel button, and a yes or an okay
+button.
+
+26
+00:01:47,750 --> 00:01:52,240
+An input dialogue, which I'll show you
+also in this tutorial, gets just a little
+
+27
+00:01:52,240 --> 00:01:57,630
+bit of input, just a little bit of text
+from the user, which is sometimes useful.
+
+28
+00:01:57,630 --> 00:02:01,570
+Message dialogues, just display a message.
+
+29
+00:02:01,570 --> 00:02:06,500
+And option dialogue is the most flexible
+kind of type that allows
+
+30
+00:02:06,500 --> 00:02:10,150
+you to kind of roll your own using a
+variety of constants.
+
+31
+00:02:10,150 --> 00:02:14,470
+And of course check out this page to get
+the, full details on this.
+
+32
+00:02:14,470 --> 00:02:21,668
+But here, so I want to use the static
+option of J Option Pane and I'm gonna use.
+
+33
+00:02:21,668 --> 00:02:25,560
+Show confirm dialogue.
+
+34
+00:02:25,560 --> 00:02:31,150
+So, let's just add the import and then the
+auto complete will the work.
+
+35
+00:02:31,150 --> 00:02:35,750
+So, I'll use show confirm dialogue and you
+can see that they are.
+
+36
+00:02:35,750 --> 00:02:39,730
+And various possibilities of constructor,
+sorry not constructor.
+
+37
+00:02:39,730 --> 00:02:44,150
+Of overloaded method just for this show
+confirm dialogue.
+
+38
+00:02:46,510 --> 00:02:51,740
+And the one I want to use, the simplest
+one, just takes a handle to.
+
+39
+00:02:51,740 --> 00:02:54,580
+component which I believe can be null, as
+far as I
+
+40
+00:02:54,580 --> 00:02:58,230
+remember, and a message that you wanna
+output in a dialog.
+
+41
+00:02:58,230 --> 00:03:02,950
+But I actually wanna customize this a bit
+more, so I'm gonna use this version here.
+
+42
+00:03:04,250 --> 00:03:07,160
+So the first document to the show confirm
+dialog,
+
+43
+00:03:07,160 --> 00:03:11,870
+is gonna be, I'm gonna use the mainframe
+window handle,
+
+44
+00:03:13,950 --> 00:03:14,830
+and because I'm in a.
+
+45
+00:03:15,980 --> 00:03:19,260
+Kind of anonymous, sort of inner class
+here.
+
+46
+00:03:19,260 --> 00:03:25,900
+If I type this I'm gonna get, a handle to
+the, anonymous class rather than the main
+
+47
+00:03:25,900 --> 00:03:31,200
+frame, so I need to cite the main frame,
+do this, to get this for the main frame.
+
+48
+00:03:32,480 --> 00:03:42,200
+The message I'm gonna make, Do you really
+want to exit the application?
+
+49
+00:03:42,200 --> 00:03:43,070
+That should do the trick.
+
+50
+00:03:44,950 --> 00:03:45,750
+Question mark there.
+
+51
+00:03:45,750 --> 00:03:52,650
+And, let's, maximize the editor here, to
+get some more space.
+
+52
+00:03:52,650 --> 00:03:55,670
+And the title, let's.
+
+53
+00:03:55,670 --> 00:04:00,840
+Put confirm, I don't know, confirm exit
+should do the trick.
+
+54
+00:04:01,870 --> 00:04:05,950
+And then the interesting bit here is the
+option type.
+
+55
+00:04:08,520 --> 00:04:15,680
+And I want say J Option Pane, and I want
+a, let's have a.
+
+56
+00:04:15,680 --> 00:04:19,790
+A, okay button, and a cancel button.
+
+57
+00:04:19,790 --> 00:04:24,540
+So I'm gonna say here J Option pane, okay,
+cancel option, like that.
+
+58
+00:04:25,710 --> 00:04:29,310
+And, put semicolon in, control shift F to
+format a bit.
+
+59
+00:04:30,580 --> 00:04:32,280
+Now if I run that, Okay.
+
+60
+00:04:32,280 --> 00:04:33,950
+It's not actually gonna work at the
+moment.
+
+61
+00:04:33,950 --> 00:04:36,790
+But if I do, control X, I get this here.
+
+62
+00:04:36,790 --> 00:04:38,748
+So it's got an okay and a cancel.
+
+63
+00:04:38,748 --> 00:04:41,790
+And it's, nice little question mark there.
+
+64
+00:04:41,790 --> 00:04:43,440
+And it doesn't matter what I do now.
+
+65
+00:04:43,440 --> 00:04:45,120
+It's gonna exit.
+
+66
+00:04:45,120 --> 00:04:49,830
+So to actually make it do something, I
+need to retrieve the value here.
+
+67
+00:04:49,830 --> 00:04:50,829
+So I'm gonna say, int.
+
+68
+00:04:53,360 --> 00:04:58,950
+Action lets call it equals the return
+value of show Confine Dialog.
+
+69
+00:04:58,950 --> 00:05:00,240
+And I can check the action.
+
+70
+00:05:00,240 --> 00:05:08,690
+And I can say if action equals, equals J
+Option Pane.
+
+71
+00:05:08,690 --> 00:05:10,250
+Okay, option.
+
+72
+00:05:11,450 --> 00:05:15,705
+So it will return okay option, if the user
+clicks okay.
+
+73
+00:05:17,550 --> 00:05:19,780
+If the user clicks okay.
+
+74
+00:05:19,780 --> 00:05:24,060
+I'm gonna just do the system dot accept.
+
+75
+00:05:24,060 --> 00:05:26,160
+And otherwise, just ignore it.
+
+76
+00:05:26,160 --> 00:05:29,440
+So, I'll use the.
+
+77
+00:05:29,440 --> 00:05:33,310
+The accelerator and control X to bring up
+the file.
+
+78
+00:05:33,310 --> 00:05:36,170
+X the option again, so control X.
+
+79
+00:05:36,170 --> 00:05:39,190
+And if I click cancel now, nothing
+happens.
+
+80
+00:05:39,190 --> 00:05:42,090
+And if I click okay, then it quits.
+
+81
+00:05:43,230 --> 00:05:43,770
+So that's that.
+
+82
+00:05:43,770 --> 00:05:45,950
+And that's all I got use for.
+
+83
+00:05:45,950 --> 00:05:47,330
+For this application right now.
+
+84
+00:05:47,330 --> 00:05:51,530
+But I just want to show you the message
+dialogue as well.
+
+85
+00:05:51,530 --> 00:05:52,660
+Which might be used shortly.
+
+86
+00:05:52,660 --> 00:05:56,890
+Let's just copy this bit because it looks
+pretty similar.
+
+87
+00:05:56,890 --> 00:05:58,410
+And I'll just make it come up here.
+
+88
+00:05:58,410 --> 00:06:00,750
+Just for a minute and I'll delete it
+later.
+
+89
+00:06:02,120 --> 00:06:04,159
+So, let's say show.
+
+90
+00:06:05,250 --> 00:06:07,510
+Sorry not message but input dialog.
+
+91
+00:06:09,290 --> 00:06:17,420
+And let's get rid of that so again, I'm
+passing the handle to my parent window.
+
+92
+00:06:17,420 --> 00:06:18,390
+That's the first argument.
+
+93
+00:06:18,390 --> 00:06:21,590
+And then some kind of, message.
+
+94
+00:06:21,590 --> 00:06:23,090
+Let's say enter your
+
+95
+00:06:25,150 --> 00:06:25,860
+username.
+
+96
+00:06:28,170 --> 00:06:30,536
+And a title there.
+
+97
+00:06:30,536 --> 00:06:35,780
+Enter username and let's
+
+98
+00:06:35,780 --> 00:06:42,150
+just have the okay option there and if I
+run that,
+
+99
+00:06:42,150 --> 00:06:47,150
+and I'll just invoke it by doing control X
+and you see that I've got
+
+100
+00:06:47,150 --> 00:06:52,760
+a little thingy where I can enter some
+text here, Now this icon looks a
+
+101
+00:06:52,760 --> 00:06:55,770
+bit funny and so there are two things i
+want to fix about it now.
+
+102
+00:06:55,770 --> 00:06:58,270
+I wanna retrieve this text and I wanna
+change
+
+103
+00:06:58,270 --> 00:07:01,620
+that icon and this is a an arrow icon.
+
+104
+00:07:03,430 --> 00:07:08,860
+So lets do that by here so called J Option
+Pane or Okay Option.
+
+105
+00:07:08,860 --> 00:07:13,390
+I kind of use a binary.
+
+106
+00:07:13,390 --> 00:07:14,830
+Bit wise kind of,
+
+107
+00:07:17,370 --> 00:07:20,560
+I can actually put another integer value
+in there and just do a
+
+108
+00:07:20,560 --> 00:07:24,880
+bit wise or in it like this with a like
+vertical pipe there.
+
+109
+00:07:26,138 --> 00:07:32,332
+And I can say J Option Pane dot, and I
+want.
+
+110
+00:07:33,600 --> 00:07:36,380
+I think it's information message.
+
+111
+00:07:37,770 --> 00:07:40,440
+And that's, that's just an icon
+
+112
+00:07:40,440 --> 00:07:44,500
+that's gonna look, appropriate for some
+information.
+
+113
+00:07:44,500 --> 00:07:47,660
+So if I do that, then it would look like
+this.
+
+114
+00:07:47,660 --> 00:07:49,280
+It's got an I there.
+
+115
+00:07:49,280 --> 00:07:53,070
+And other possibilities, because this
+probably isn't actually what I want.
+
+116
+00:07:53,070 --> 00:07:58,080
+You could have for example a warning
+message icon.
+
+117
+00:07:58,080 --> 00:08:03,020
+So, if I run that and it looks like that
+it's a question mark is a tri, sorry, an
+
+118
+00:08:03,020 --> 00:08:08,650
+exclamation mark in a triangle and, but
+the one I probably want here is.
+
+119
+00:08:08,650 --> 00:08:10,340
+Just the question, question message.
+
+120
+00:08:10,340 --> 00:08:14,040
+And i'm going get the return body from
+
+121
+00:08:14,040 --> 00:08:16,537
+that so I'm going to say string text
+equals.
+
+122
+00:08:16,537 --> 00:08:19,512
+And that's just equals and let's do this
+out here, and
+
+123
+00:08:19,512 --> 00:08:22,950
+I'm going to delete the suffix, we don't
+actually need this.
+
+124
+00:08:22,950 --> 00:08:25,160
+I just wanted to show you it working.
+
+125
+00:08:26,700 --> 00:08:31,900
+So if I run that then do control X to
+invoke it.
+
+126
+00:08:31,900 --> 00:08:32,620
+Enter username.
+
+127
+00:08:32,620 --> 00:08:34,450
+You've got a nice question there.
+
+128
+00:08:34,450 --> 00:08:38,810
+And if I enter like, cancel then it's
+gonna return null.
+
+129
+00:08:40,270 --> 00:08:41,670
+And if I run it.
+
+130
+00:08:41,670 --> 00:08:50,230
+And I enter okay, but don't actually type
+anything in.
+
+131
+00:08:50,230 --> 00:08:52,530
+It's just going to return empty space.
+
+132
+00:08:54,010 --> 00:08:57,360
+And if I actually bump into something.
+
+133
+00:08:57,360 --> 00:08:58,410
+I'm going to click okay here.
+
+134
+00:08:58,410 --> 00:09:05,482
+Then I'm going to get text retrieved so
+I'm retrieving my text now.
+
+135
+00:09:05,482 --> 00:09:11,680
+And, so I just want to show you that just
+to demo it, but as you can
+
+136
+00:09:11,680 --> 00:09:16,239
+see the thing is that show input dialogue
+is almost the same as show input dialogue.
+
+137
+00:09:17,620 --> 00:09:20,147
+And the only extra trick that I've really
+added
+
+138
+00:09:20,147 --> 00:09:22,990
+there is, well for one thing, instead of
+retrieving
+
+139
+00:09:22,990 --> 00:09:25,769
+the action which tells you which button is
+clicked,
+
+140
+00:09:25,769 --> 00:09:28,698
+you can retrieve text with a show input
+dialogue call.
+
+141
+00:09:28,698 --> 00:09:34,150
+And the other thing is just using this or
+[INAUDIBLE] and then doing
+
+142
+00:09:34,150 --> 00:09:40,040
+this J Option Pane dot question, message
+to change the icon there.
+
+143
+00:09:40,040 --> 00:09:45,620
+But apart from that it's the same as this
+confirm dialogue.
+
+144
+00:09:45,620 --> 00:09:47,140
+So let's remove that because I've done
+what I
+
+145
+00:09:47,140 --> 00:09:50,600
+wanted to do, and before I leave this
+tutorial,
+
+146
+00:09:51,810 --> 00:09:54,250
+I just want to show you one other thing
+
+147
+00:09:54,250 --> 00:09:56,910
+that I noticed was quite funny about this
+application.
+
+148
+00:09:56,910 --> 00:10:01,240
+Which is at the moment if I resize it like
+this, the form can go
+
+149
+00:10:01,240 --> 00:10:05,740
+a bit mental like that, so I want to stop
+it getting too small 'cause I
+
+150
+00:10:05,740 --> 00:10:10,740
+want there to be enough space for this
+form to fit on there without it getting
+
+151
+00:10:10,740 --> 00:10:15,190
+warped or distorted or anything and I'm
+gonna fix that just by going to my main.
+
+152
+00:10:15,190 --> 00:10:16,390
+Frame.
+
+153
+00:10:16,390 --> 00:10:20,170
+In my main frame I've already set, set
+size, but what
+
+154
+00:10:20,170 --> 00:10:25,160
+I'm gonna do is just set a minimum size as
+well.
+
+155
+00:10:25,160 --> 00:10:33,710
+So, set minimum size, and let's, let's try
+that at 500, 400 and see how that looks.
+
+156
+00:10:33,710 --> 00:10:36,950
+And I thought this has to be not two,
+integers.
+
+157
+00:10:36,950 --> 00:10:41,860
+But it has to be a new dimension and we've
+seen, the dimension,
+
+158
+00:10:43,760 --> 00:10:51,720
+before, I think we have anyway, because,
+yeah, I used it on the jpanel.
+
+159
+00:10:51,720 --> 00:10:53,450
+So, let's run that.
+
+160
+00:10:53,450 --> 00:10:58,110
+And if I resize that now, it will only go
+to a certain minimum
+
+161
+00:10:58,110 --> 00:11:02,510
+size, which is what I wanted, that
+protects my form from getting screwed up.
+
+162
+00:11:03,920 --> 00:11:05,760
+Okay, so that's it for this tutorial, and
+in
+
+163
+00:11:05,760 --> 00:11:08,460
+the next tutorial we're gonna look at the
+very exciting.
+
+164
+00:11:08,460 --> 00:11:12,920
+A file chooser dialog and we're going to
+get a lot of functionality for free.
+
+165
+00:11:12,920 --> 00:11:17,390
+So I'm make use of this file menu allows
+me to bring up
+
+166
+00:11:17,390 --> 00:11:22,180
+a file chooser dialog, where I can choose
+to import or export data.
+
+167
+00:11:22,180 --> 00:11:26,400
+So join me again then and until next time
+happy coding.
+

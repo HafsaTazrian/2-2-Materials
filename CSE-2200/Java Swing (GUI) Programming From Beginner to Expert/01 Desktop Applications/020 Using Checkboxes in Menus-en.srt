@@ -1,0 +1,430 @@
+1
+00:00:01,720 --> 00:00:05,420
+Hello, this is John from
+caveofprogramming.com and in
+
+2
+00:00:05,420 --> 00:00:10,870
+this tutorial we're gonna look at checkbox
+menu items.
+
+3
+00:00:10,870 --> 00:00:14,060
+So if I run this App here, at the moment
+
+4
+00:00:14,060 --> 00:00:17,715
+I've got this there's this rather nice
+menu up here.
+
+5
+00:00:17,715 --> 00:00:22,790
+[UNKNOWN] doesn't actually do anything yet
+and I've got this sub menu here and in
+
+6
+00:00:22,790 --> 00:00:28,220
+this tutorial, we're gonna change this
+person form submenu into a check box
+
+7
+00:00:29,270 --> 00:00:33,940
+menu item and that's gonna show and hide
+this person form here.
+
+8
+00:00:35,250 --> 00:00:41,350
+So I'll go to the main frame class here,
+where I create my menu
+
+9
+00:00:41,350 --> 00:00:47,570
+and in addition to being able to add menu
+items and menus
+
+10
+00:00:47,570 --> 00:00:53,010
+to to menus you can also add JCheckBox
+menu items.
+
+11
+00:00:53,010 --> 00:00:56,150
+And there's also a JRadio menu item.
+
+12
+00:00:56,150 --> 00:00:59,940
+And here we're just gonna look at the
+JCheckBox menu item.
+
+13
+00:00:59,940 --> 00:01:05,430
+The J Radio menu item works basically like
+radio buttons and
+
+14
+00:01:05,430 --> 00:01:08,090
+you happen to [INAUDIBLE] and it's pretty
+much all the same.
+
+15
+00:01:09,290 --> 00:01:12,702
+But I'll leave that as an exercise for you
+
+16
+00:01:12,702 --> 00:01:18,080
+in the interest of keeping these tutorials
+reasonably short.
+
+17
+00:01:18,080 --> 00:01:23,940
+So here I've got my, in fact, I've got my
+window menu here.
+
+18
+00:01:25,190 --> 00:01:29,420
+And I'm, here, adding the show menu to the
+window menu.
+
+19
+00:01:29,420 --> 00:01:33,230
+And the show menu I'm creating here.
+
+20
+00:01:33,230 --> 00:01:38,710
+And the show menu, I'm just adding a show
+form menu item to it.
+
+21
+00:01:38,710 --> 00:01:40,730
+Which is actually just a menu item.
+
+22
+00:01:40,730 --> 00:01:42,940
+So if I go up to where I've declared that.
+
+23
+00:01:42,940 --> 00:01:44,710
+That, which is, yeah it's actually here.
+
+24
+00:01:46,420 --> 00:01:52,980
+And I'm gonna change this jmenu item to a
+jcheck box menu item.
+
+25
+00:01:52,980 --> 00:01:55,320
+Let's add the import there.
+
+26
+00:01:55,320 --> 00:01:59,020
+And I'll change this variable declaration
+
+27
+00:01:59,020 --> 00:02:00,379
+although I'm not sure that actually
+matters.
+
+28
+00:02:01,990 --> 00:02:06,850
+And now if I, yeah if I run that, you'll
+
+29
+00:02:06,850 --> 00:02:08,540
+see what it looks like already, I'm just
+go to
+
+30
+00:02:08,540 --> 00:02:10,990
+window show and it's got that nice check
+box there
+
+31
+00:02:10,990 --> 00:02:14,000
+which I can check, and I can uncheck it,
+such magic.
+
+32
+00:02:16,000 --> 00:02:19,660
+And I can, I wanna set this initially to
+checked so.
+
+33
+00:02:20,790 --> 00:02:24,920
+If I wanna actually use the methods of it,
+so,
+
+34
+00:02:24,920 --> 00:02:28,620
+then I probably do need to change the
+variable as well.
+
+35
+00:02:28,620 --> 00:02:29,700
+Variable name.
+
+36
+00:02:29,700 --> 00:02:35,340
+So, I'm gonna you set, select it and I'm
+gonna set that equal to true, initially.
+
+37
+00:02:37,030 --> 00:02:39,840
+And now, in the last tutorial I mentioned
+that you can now action
+
+38
+00:02:39,840 --> 00:02:45,985
+listeners to your J menu items and I'm
+gonna add a action listener.
+
+39
+00:02:45,985 --> 00:02:47,520
+I'm about to add my listeners here.
+
+40
+00:02:48,990 --> 00:02:55,060
+And I'm start with this this show form
+item here.
+
+41
+00:02:56,110 --> 00:02:59,480
+So I'll say,
+showformitem.addactionlistener.
+
+42
+00:03:00,940 --> 00:03:07,630
+And let's make that new ActionListener,
+and, just the same as for button,
+
+43
+00:03:07,630 --> 00:03:12,824
+and implement the unimplemented
+ActionPerformer
+
+44
+00:03:12,824 --> 00:03:19,430
+[UNKNOWN] with CTRL+N and I'll get rid of
+some lines here.
+
+45
+00:03:20,970 --> 00:03:25,040
+And now I can actually just
+
+46
+00:03:27,060 --> 00:03:33,370
+if I want to reference the show form item
+here, in here, I could do,
+
+47
+00:03:33,370 --> 00:03:38,400
+I could just make that final, or I could
+also just get it from this event here.
+
+48
+00:03:38,400 --> 00:03:41,190
+So I could say event.get.
+
+49
+00:03:41,190 --> 00:03:43,520
+source, like this.
+
+50
+00:03:43,520 --> 00:03:46,090
+And I know the source in this case is
+gonna be
+
+51
+00:03:46,090 --> 00:03:51,690
+a JCheckBox menu item, because that's what
+I've added the listener to.
+
+52
+00:03:52,880 --> 00:03:58,490
+So I can pass that to that and, and I
+could create a variable here.
+
+53
+00:04:00,270 --> 00:04:03,510
+menu, let's just call it menu item.
+
+54
+00:04:03,510 --> 00:04:09,100
+Equals and then I can say I wanna
+
+55
+00:04:09,100 --> 00:04:14,600
+show or hide the the person form.
+
+56
+00:04:14,600 --> 00:04:21,270
+So this mainframe has a bunch of instants,
+variables, and one of them says form
+
+57
+00:04:21,270 --> 00:04:26,670
+panel that contains the form that I've
+been working on in the last tutorials.
+
+58
+00:04:26,670 --> 00:04:32,370
+So I'm gonna just say, form panel.set
+visible.
+
+59
+00:04:32,370 --> 00:04:34,500
+And this also works with dialogues.
+
+60
+00:04:34,500 --> 00:04:35,650
+By the way.
+
+61
+00:04:35,650 --> 00:04:36,850
+You can show an enlight dialogues.
+
+62
+00:04:36,850 --> 00:04:39,460
+Which we'll look at later using set
+visible.
+
+63
+00:04:39,460 --> 00:04:42,674
+And I'll just say that is eq, that is
+
+64
+00:04:42,674 --> 00:04:48,780
+visible or invisible depending on menu
+item dot dot.
+
+65
+00:04:48,780 --> 00:04:50,060
+Is selected.
+
+66
+00:04:51,350 --> 00:04:51,735
+There we go.
+
+67
+00:04:51,735 --> 00:04:56,081
+[SOUND] So just in case that was a bit
+confusing here,
+
+68
+00:04:56,081 --> 00:05:01,547
+I've chosen just to show you an alternate
+way of doing this.
+
+69
+00:05:01,547 --> 00:05:07,420
+I've got the menu item from the source of
+the event here.
+
+70
+00:05:07,420 --> 00:05:11,480
+But I could just have used, this is
+basically
+
+71
+00:05:11,480 --> 00:05:14,780
+pointing to the same place as this
+variable here.
+
+72
+00:05:14,780 --> 00:05:17,740
+And if I declare this variable final here,
+in other
+
+73
+00:05:17,740 --> 00:05:20,930
+words constant, I could have just
+referenced that directly here.
+
+74
+00:05:20,930 --> 00:05:22,830
+But oh sorry not there.
+
+75
+00:05:22,830 --> 00:05:24,230
+Of course, that's where I'm using it.
+
+76
+00:05:24,230 --> 00:05:28,310
+But where I declare it, so here, I could
+
+77
+00:05:28,310 --> 00:05:29,980
+declare that final, and that would enable
+me to.
+
+78
+00:05:29,980 --> 00:05:30,870
+Let's reference it in here.
+
+79
+00:05:32,090 --> 00:05:36,370
+Just mention it in case you're not too
+familiar with, a
+
+80
+00:05:36,370 --> 00:05:41,238
+kind of referencing stuff from methods of
+anonymous classes like this.
+
+81
+00:05:41,238 --> 00:05:44,855
+So, anyway let's run that, and now
+
+82
+00:05:44,855 --> 00:05:47,630
+[INAUDIBLE] window menu, and then go to
+show.
+
+83
+00:05:47,630 --> 00:05:50,950
+That's ticked because I set it to selected
+to start
+
+84
+00:05:50,950 --> 00:05:54,490
+with, but if I untick then my forum is
+gone there.
+
+85
+00:05:54,490 --> 00:05:58,240
+It's rather nice, and if I tick it again
+then it's back.
+
+86
+00:05:58,240 --> 00:05:58,740
+There you go.
+
+87
+00:06:01,320 --> 00:06:03,610
+So and that's the first tutorial.
+
+88
+00:06:03,610 --> 00:06:06,500
+You can also add icons to a menu.
+
+89
+00:06:07,820 --> 00:06:10,430
+But in the next tutorial we're gonna take
+a look
+
+90
+00:06:10,430 --> 00:06:16,730
+at mnemonics and accelerators, which is
+not completely menu specific.
+
+91
+00:06:16,730 --> 00:06:18,920
+But it's very useful stuff to know.
+
+92
+00:06:18,920 --> 00:06:19,920
+So join me again, then.
+
+93
+00:06:19,920 --> 00:06:21,910
+And until then happy coding.
+

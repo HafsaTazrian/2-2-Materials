@@ -1,0 +1,478 @@
+1
+00:00:01,420 --> 00:00:04,440
+Hello, this is John from
+Caveofprogramming.com.
+
+2
+00:00:04,440 --> 00:00:07,160
+And welcome to the Cave of Programming
+
+3
+00:00:07,160 --> 00:00:11,320
+premium Java GUI Swing programming
+tutorial series.
+
+4
+00:00:11,320 --> 00:00:15,140
+And in this series of at the moment 86
+tutorials.
+
+5
+00:00:15,140 --> 00:00:20,590
+We gonna be covering [UNKNOWN] programing
+in java swing, pretty much from scratch.
+
+6
+00:00:20,590 --> 00:00:25,310
+Well, absolutely from scratch all the way
+to some really advance topics.
+
+7
+00:00:25,310 --> 00:00:28,260
+So, as long as you know some some java
+
+8
+00:00:28,260 --> 00:00:30,360
+you should be able to follow the series of
+tutorials.
+
+9
+00:00:31,680 --> 00:00:34,360
+Now in the series we gonna look at
+everything.
+
+10
+00:00:34,360 --> 00:00:39,760
+From creating database driven applications
+like this one here, and
+
+11
+00:00:39,760 --> 00:00:42,640
+we're gonna take a look at JDBC connecting
+to databases.
+
+12
+00:00:44,420 --> 00:00:48,750
+All the way to creating simple games.
+
+13
+00:00:48,750 --> 00:00:52,420
+So, we're gonna look at creating applets
+as well that you can run
+
+14
+00:00:52,420 --> 00:00:55,770
+in a browser, and how you handle collision
+detection and animation, and that kind.
+
+15
+00:00:55,770 --> 00:00:57,540
+Kind of thing and we're gonna look at
+
+16
+00:00:57,540 --> 00:01:03,930
+basically pretty much all the swing user
+interface widgets
+
+17
+00:01:03,930 --> 00:01:07,030
+that you can use, convo boxes and trees
+
+18
+00:01:07,030 --> 00:01:11,160
+and top panes and dialog boxes, the whole
+lot.
+
+19
+00:01:11,160 --> 00:01:15,080
+And this series of tutorials is structured
+in such a way
+
+20
+00:01:15,080 --> 00:01:19,490
+that if you wanna know a particular topic
+you can just look.
+
+21
+00:01:19,490 --> 00:01:23,070
+At that particular tutorial, and hopefully
+will tell you what you want to know.
+
+22
+00:01:23,070 --> 00:01:26,910
+But if you also, on the other hand, want a
+structured kind
+
+23
+00:01:26,910 --> 00:01:29,350
+of introduction to Swing programming, then
+
+24
+00:01:29,350 --> 00:01:31,560
+you can work through the tutorials
+one-by-one.
+
+25
+00:01:31,560 --> 00:01:34,510
+Because they do follow one, one from the
+other,
+
+26
+00:01:34,510 --> 00:01:40,390
+and we'll systematically build complete
+programs, two complete programs.
+
+27
+00:01:40,390 --> 00:01:42,750
+In this series and we'll be talking about
+how
+
+28
+00:01:42,750 --> 00:01:45,190
+to structure your code and we'll be
+talking about
+
+29
+00:01:45,190 --> 00:01:47,700
+model view controller and all this all
+these kinds
+
+30
+00:01:47,700 --> 00:01:52,020
+of topics that you'll need to successfully
+build swing applications.
+
+31
+00:01:52,020 --> 00:01:56,010
+And I'll also touch on using visual
+designer
+
+32
+00:01:56,010 --> 00:01:58,840
+incase you wanna design your applications
+visually, but
+
+33
+00:01:58,840 --> 00:02:02,680
+with swing you really kind of need to know
+what you're doing in terms of code.
+
+34
+00:02:02,680 --> 00:02:06,498
+And for that reason, most of the tutorials
+are gonna be coding stuff by hand.
+
+35
+00:02:06,498 --> 00:02:07,590
+And we're gonna be really digging into
+
+36
+00:02:07,590 --> 00:02:10,110
+the underlying concepts and see how
+something works.
+
+37
+00:02:12,660 --> 00:02:15,750
+In this introductory tutorial I'm just
+gonna show you
+
+38
+00:02:15,750 --> 00:02:17,740
+a few useful resources that you might
+wanna know.
+
+39
+00:02:17,740 --> 00:02:22,330
+I'm just gonna tell you before that very
+quickly a bit about my background.
+
+40
+00:02:22,330 --> 00:02:27,298
+I've been a software developer and now a
+trainer for I don't know around fifteen,
+
+41
+00:02:27,298 --> 00:02:32,920
+fourteen fifteen, years now and I've
+worked for places like CSC.
+
+42
+00:02:32,920 --> 00:02:37,770
+Proquest, SBSS, AT and T, a whole bunch of
+acronyms
+
+43
+00:02:37,770 --> 00:02:41,830
+and in this series of tutorials I'm gonna
+share with you.
+
+44
+00:02:41,830 --> 00:02:44,500
+And pretty much everything I know about
+swing programming.
+
+45
+00:02:44,500 --> 00:02:48,040
+So, hopefully you'll be able to
+successfully create your own swing
+
+46
+00:02:48,040 --> 00:02:54,050
+programs, and even if you wanna go onto
+other kinds of interface design using
+
+47
+00:02:54,050 --> 00:03:00,180
+different technologies then Knowing how to
+swing will stand you in good stead.
+
+48
+00:03:00,180 --> 00:03:04,120
+Because a, a lot of the concepts that you
+find in swing are kinda
+
+49
+00:03:04,120 --> 00:03:07,240
+general software development concepts that
+are used
+
+50
+00:03:07,240 --> 00:03:09,840
+in other kind of visual [UNKNOWN] systems.
+
+51
+00:03:10,990 --> 00:03:15,100
+Everything that we're gonna be using in
+this series of tutorials is free.
+
+52
+00:03:15,100 --> 00:03:19,990
+And, and that includes Eclipse, Eclipse ID
+for Java developers.
+
+53
+00:03:19,990 --> 00:03:21,000
+Which is a free download.
+
+54
+00:03:21,000 --> 00:03:24,860
+It's completely free to use and it's
+pretty much the industry standard.
+
+55
+00:03:24,860 --> 00:03:29,010
+But if you wanna use a different IDE like
+NetBeans or IntelliJ IDEA,
+
+56
+00:03:29,010 --> 00:03:33,710
+then you will find the stuff that you
+learn here very, very trans, transferable.
+
+57
+00:03:33,710 --> 00:03:36,628
+You'll have no problem doing this stuff in
+a different IDE.
+
+58
+00:03:36,628 --> 00:03:41,400
+And we're gonna look at this window
+builder pro GUI designer which
+
+59
+00:03:41,400 --> 00:03:45,140
+is a plug-in to Eclipse, you can also use
+NetBeans for example.
+
+60
+00:03:46,310 --> 00:03:52,130
+Now, on to some useful resources for this
+series of tutorials if
+
+61
+00:03:52,130 --> 00:03:58,560
+you go to Google and you search for window
+window builder
+
+62
+00:03:58,560 --> 00:04:05,060
+pro, that's actually this is a product for
+visually designing stuff that was.
+
+63
+00:04:05,060 --> 00:04:07,340
+Purchased by Google I think and released
+as a
+
+64
+00:04:07,340 --> 00:04:10,380
+free designer, so you can find details on
+that here
+
+65
+00:04:10,380 --> 00:04:14,500
+as an eclipse plug-in and that's, that's
+very nice to
+
+66
+00:04:14,500 --> 00:04:17,946
+use, although you will, as I say, want to
+learn.
+
+67
+00:04:17,946 --> 00:04:22,802
+How to create swing swing components,
+swing applications by
+
+68
+00:04:22,802 --> 00:04:27,670
+hand as well to really successfully use
+the visual designer.
+
+69
+00:04:28,960 --> 00:04:33,850
+And if you search for your clips ID for
+Java developers, that will
+
+70
+00:04:33,850 --> 00:04:37,020
+give you a link to the IDE that we'll be
+using throughout this series.
+
+71
+00:04:37,020 --> 00:04:40,400
+Of tutorials, IDEs, integrated development
+environment, of course
+
+72
+00:04:42,810 --> 00:04:52,770
+and, some more useful resources are if you
+search for visual guide swing components.
+
+73
+00:04:53,780 --> 00:04:58,280
+Then here you will get a link to all the
+different visual swing components you
+
+74
+00:04:58,280 --> 00:05:03,480
+can use, and you get example code if you
+click on any one of them.
+
+75
+00:05:04,780 --> 00:05:06,890
+And in the suitor tutorials we'll be
+covering some
+
+76
+00:05:06,890 --> 00:05:09,720
+tips and tricks that you might not find
+here,
+
+77
+00:05:09,720 --> 00:05:17,090
+but and this also really a hell of a lot
+of stuff here in these in these examples.
+
+78
+00:05:17,090 --> 00:05:19,180
+That for reasons of time.
+
+79
+00:05:19,180 --> 00:05:20,550
+I haven't covered in the tutorials.
+
+80
+00:05:20,550 --> 00:05:26,440
+So, this is really good, resource to use
+and you'll probably also want the visual
+
+81
+00:05:26,440 --> 00:05:31,200
+guide for to swing layouts because, to
+
+82
+00:05:31,200 --> 00:05:34,840
+arrange components in swing you use layout
+managers.
+
+83
+00:05:34,840 --> 00:05:36,890
+And this shows you each one visually.
+
+84
+00:05:36,890 --> 00:05:40,020
+And again, you can click on the links to
+get example code.
+
+85
+00:05:40,020 --> 00:05:45,930
+And finally, you will want to use the API
+documents possibly
+
+86
+00:05:45,930 --> 00:05:52,090
+you may want to refer to particular API
+documents in Java.
+
+87
+00:05:52,090 --> 00:05:56,990
+And swing is actual the user interface
+toolkit that's built into Java.
+
+88
+00:05:56,990 --> 00:05:59,125
+So, if for example you type Jcombobox,
+combo
+
+89
+00:05:59,125 --> 00:06:07,040
+box Java 7 and click on this link here.
+
+90
+00:06:07,040 --> 00:06:09,980
+You can find all the different methods and
+all
+
+91
+00:06:09,980 --> 00:06:12,240
+the different things you can do with a
+combo box.
+
+92
+00:06:12,240 --> 00:06:15,728
+And a lot of people are intimidated by
+this documentation but.
+
+93
+00:06:15,728 --> 00:06:19,810
+It is released for once you have a basic
+idea of knowing what you're doing.
+
+94
+00:06:19,810 --> 00:06:21,510
+It gives you all of the different methods
+you can use.
+
+95
+00:06:23,410 --> 00:06:27,720
+Okay, so that's it for this introduction.
+
+96
+00:06:27,720 --> 00:06:29,920
+And in the next tutorial, we're going to
+
+97
+00:06:29,920 --> 00:06:34,390
+get on designing our first Hello World
+swing program.
+
+98
+00:06:34,390 --> 00:06:38,783
+So join me again then and until next time,
+happy coding.
+
+99
+00:06:38,783 --> 00:06:41,814
+[SOUND]
+

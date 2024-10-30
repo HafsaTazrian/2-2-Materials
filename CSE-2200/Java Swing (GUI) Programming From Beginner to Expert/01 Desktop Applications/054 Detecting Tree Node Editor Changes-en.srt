@@ -1,0 +1,374 @@
+1
+00:00:01,940 --> 00:00:05,260
+Hello this is John from
+caveofprogramming.com.
+
+2
+00:00:05,260 --> 00:00:08,570
+And in this tutorial we're gonna look at a
+simple way
+
+3
+00:00:08,570 --> 00:00:14,810
+to retrieve data from your, from the
+editors in your tree leaves.
+
+4
+00:00:14,810 --> 00:00:18,873
+So in the last tutorial we got this tree
+working.
+
+5
+00:00:18,873 --> 00:00:21,628
+And it's got these editors that you can,
+it's got these
+
+6
+00:00:21,628 --> 00:00:24,489
+check boxes in the leaves that you can
+tick on and off.
+
+7
+00:00:24,489 --> 00:00:26,816
+In this tutorial we're just gonna look at
+
+8
+00:00:26,816 --> 00:00:30,140
+how you can get the data from these
+editors.
+
+9
+00:00:30,140 --> 00:00:36,475
+And what I'm gonna do is, I've, I've
+actually, since the last tutorial.
+
+10
+00:00:36,475 --> 00:00:42,030
+I've taken server info object and I've put
+it into it's own class, because it's
+
+11
+00:00:42,030 --> 00:00:45,660
+used on the message panel to serve the
+tree cell editor, and the tree cell
+
+12
+00:00:45,660 --> 00:00:50,820
+renderor, so because it's used by three
+classes it makes no sense to dump it in
+
+13
+00:00:50,820 --> 00:00:56,260
+with this message panel class, so I've
+moved that and I'm now gonna go.
+
+14
+00:00:56,260 --> 00:01:01,090
+Get rid of this tree selection listener
+because the tree
+
+15
+00:01:01,090 --> 00:01:04,120
+selection listener will tell you if a node
+has been
+
+16
+00:01:04,120 --> 00:01:08,720
+selected on the tree, but that's selected
+in the sense
+
+17
+00:01:08,720 --> 00:01:12,750
+of basically being clicked on so that it
+has the focus.
+
+18
+00:01:12,750 --> 00:01:16,560
+So that's now selected, and I don, I don't
+care whether it's selected
+
+19
+00:01:16,560 --> 00:01:21,020
+or not, what I care about is whether it's
+checked on the roster now.
+
+20
+00:01:21,020 --> 00:01:25,890
+And I only care about the leaves here,
+because I don't have to have a check boxes
+
+21
+00:01:25,890 --> 00:01:30,970
+in, so I'm going to get rid of that and,
+and I'm
+
+22
+00:01:30,970 --> 00:01:36,240
+actually gonna listen to a to events
+
+23
+00:01:36,240 --> 00:01:41,190
+on the editor because in servertry editor,
+the
+
+24
+00:01:41,190 --> 00:01:46,210
+class I implemented in the last tutorial,
+we when a
+
+25
+00:01:46,210 --> 00:01:52,140
+check box is being ticked or unticked, we
+call fire editing stopped and that's
+
+26
+00:01:52,140 --> 00:01:57,133
+the event that we're gonna look for now in
+message panel, because I'm gonna say.
+
+27
+00:01:57,133 --> 00:02:03,690
+Treecelleditor.addcelleditorlistener,
+
+28
+00:02:03,690 --> 00:02:08,239
+this map, and I'll add a new cell editor
+listener there.
+
+29
+00:02:09,710 --> 00:02:12,520
+And put semicolon in here.
+
+30
+00:02:12,520 --> 00:02:17,280
+And add the unimplemented method there.
+
+31
+00:02:17,280 --> 00:02:22,060
+I'm not interested in the editing canceled
+here so I'll just delete that.
+
+32
+00:02:22,060 --> 00:02:25,830
+But I am interested in editing stopped
+here.
+
+33
+00:02:25,830 --> 00:02:30,860
+So that's, put a let's put, let's put this
+out
+
+34
+00:02:30,860 --> 00:02:34,630
+in there if I can find it again, here we
+go.
+
+35
+00:02:35,680 --> 00:02:40,600
+So, in here I'm gonna put this out just
+for the moment, hello.
+
+36
+00:02:42,120 --> 00:02:49,740
+Now if I run my tree and nothing happens
+when I click on the upper branches here.
+
+37
+00:02:49,740 --> 00:02:54,380
+And if I click on the check box then it
+fires that event.
+
+38
+00:02:54,380 --> 00:02:59,441
+So it's saying hello there, [SOUND] which
+is exactly what I want.
+
+39
+00:02:59,441 --> 00:03:05,309
+And what I'm gonna do is I'm gonna
+actually use the retrieve
+
+40
+00:03:05,309 --> 00:03:11,079
+cell editor method that I implemented in
+the last tutorial, so again
+
+41
+00:03:11,079 --> 00:03:17,070
+this get cell editor value method, and
+that's the one I'm gonna use.
+
+42
+00:03:17,070 --> 00:03:21,100
+I'm gonna see tree select editor.get cell
+editor value.
+
+43
+00:03:22,480 --> 00:03:25,980
+And, that is a server info object, so I'll
+say
+
+44
+00:03:25,980 --> 00:03:32,600
+server info, info equals cast that to the
+server info.
+
+45
+00:03:32,600 --> 00:03:35,140
+Cuz it returns the object.
+
+46
+00:03:35,140 --> 00:03:36,350
+And that's how this is word solved here.
+
+47
+00:03:36,350 --> 00:03:40,790
+And let's say info, which is it gonna call
+it two string method.
+
+48
+00:03:41,790 --> 00:03:47,330
+And let's say let's say, let's have the ID
+as well.
+
+49
+00:03:47,330 --> 00:03:48,864
+So info.getid.
+
+50
+00:03:48,864 --> 00:03:55,535
+And, let's then have,
+
+51
+00:03:55,535 --> 00:04:01,575
+an info.isChecked.
+
+52
+00:04:01,575 --> 00:04:04,019
+And [INAUDIBLE] plus there.
+
+53
+00:04:04,019 --> 00:04:13,230
+So now if I run this I can click on
+messages and click, I untick New York.
+
+54
+00:04:13,230 --> 00:04:16,230
+It's gonna say New York, zero, which is
+the idea of New York.
+
+55
+00:04:16,230 --> 00:04:18,480
+It's the first one, false.
+
+56
+00:04:18,480 --> 00:04:20,678
+If it's ticked it's true.
+
+57
+00:04:20,678 --> 00:04:23,325
+Try Edinburgh, which is four.
+
+58
+00:04:23,325 --> 00:04:29,212
+[SOUND] false true and see if it works
+pretty damn well.
+
+59
+00:04:29,212 --> 00:04:34,767
+So, in the next tutorial, I'm gonna build
+a data structure that's gonna
+
+60
+00:04:34,767 --> 00:04:40,144
+be, kind of a star simulated message
+server, and we're gonna have
+
+61
+00:04:40,144 --> 00:04:45,810
+something where you can retrieve,
+supposedly, messages from a server.
+
+62
+00:04:45,810 --> 00:04:51,730
+For using the ID's of just those servers
+
+63
+00:04:51,730 --> 00:04:56,040
+that we have checked in the tree and
+ultimately were gonna fix
+
+64
+00:04:56,040 --> 00:05:01,041
+this application up, so that when you
+check, check
+
+65
+00:05:01,041 --> 00:05:06,730
+,a check box or un-check a check box
+you'll see a progress bar you
+
+66
+00:05:06,730 --> 00:05:09,120
+know say like getting messages or
+something
+
+67
+00:05:09,120 --> 00:05:10,790
+and then we'll have a [INAUDIBLE] down
+here,
+
+68
+00:05:10,790 --> 00:05:13,960
+where you can see the titles of the
+messages, and then where you
+
+69
+00:05:13,960 --> 00:05:17,380
+can read the messages, and you wouldn't
+necessarily want to do that in a
+
+70
+00:05:17,380 --> 00:05:22,350
+real application but I just wanna show you
+something useful here with trees and
+
+71
+00:05:22,350 --> 00:05:26,150
+ultimately with things like threads and
+program
+
+72
+00:05:26,150 --> 00:05:30,280
+bars, so I'm just concocting something
+here.
+
+73
+00:05:30,280 --> 00:05:32,280
+I heard that, that's sort of plausible,
+and
+
+74
+00:05:32,280 --> 00:05:35,300
+we're gonna simulate the actual existence
+of the message
+
+75
+00:05:35,300 --> 00:05:38,510
+server, rather than actually doing any
+socket programming
+
+76
+00:05:38,510 --> 00:05:40,880
+or anything like that, which is a
+different topic.
+
+77
+00:05:40,880 --> 00:05:44,935
+Okay, so join me again next time, and
+until next time, happy coding.
+
+78
+00:05:44,935 --> 00:05:48,364
+[SOUND]
+

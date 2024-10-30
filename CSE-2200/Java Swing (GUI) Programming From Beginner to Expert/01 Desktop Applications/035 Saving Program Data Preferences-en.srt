@@ -1,0 +1,820 @@
+1
+00:00:01,370 --> 00:00:05,450
+Hello, this is John from
+caveofprogramming.com, and in this
+
+2
+00:00:05,450 --> 00:00:11,890
+tutorial, we gonna look at saving data
+with your application using preferences.
+
+3
+00:00:12,920 --> 00:00:17,010
+actually, at, at the end of the last
+tutorial, I said properties.
+
+4
+00:00:17,010 --> 00:00:21,300
+And properties were kind of the old way of
+doing this in Java.
+
+5
+00:00:21,300 --> 00:00:24,869
+And the new way, the preferred way is to
+use preferences.
+
+6
+00:00:25,980 --> 00:00:30,130
+Now preferences aren't suitable for
+storing large amounts of
+
+7
+00:00:30,130 --> 00:00:35,832
+data, like for example, the stuff in our
+database here.
+
+8
+00:00:35,832 --> 00:00:40,400
+But they are suitable for storing things
+like the
+
+9
+00:00:40,400 --> 00:00:42,810
+little bits of data that you'd have in
+this.
+
+10
+00:00:42,810 --> 00:00:46,660
+Dialogue or, for example the size and
+location
+
+11
+00:00:46,660 --> 00:00:50,356
+of a window and that kind of thing.
+
+12
+00:00:50,356 --> 00:00:57,476
+Now before I can save preferences in this
+dialogue, I'm gonna add a
+
+13
+00:00:57,476 --> 00:01:04,620
+event that will allow me to get the
+information from the dialogue.
+
+14
+00:01:04,620 --> 00:01:06,340
+Back to my main frame.
+
+15
+00:01:06,340 --> 00:01:10,530
+And in the main frame I'm actually gonna
+save the preferences.
+
+16
+00:01:10,530 --> 00:01:15,470
+So let's go to the let's go to the prefs
+dialogue here.
+
+17
+00:01:15,470 --> 00:01:20,140
+And I'm gonna have a, some kind of
+
+18
+00:01:20,140 --> 00:01:22,840
+thing that can listen to that, and get
+information.
+
+19
+00:01:22,840 --> 00:01:23,570
+From it.
+
+20
+00:01:23,570 --> 00:01:26,990
+Let's say let's create a new interface
+here.
+
+21
+00:01:26,990 --> 00:01:29,390
+And I'll call it prefs listener.
+
+22
+00:01:29,390 --> 00:01:38,880
+And, I'll give prefs listener one method,
+public void.
+
+23
+00:01:38,880 --> 00:01:44,190
+prefs, let's call it preferences set.
+
+24
+00:01:44,190 --> 00:01:46,300
+And that's gonna accept a
+
+25
+00:01:48,460 --> 00:01:53,210
+string user, string password.
+
+26
+00:01:53,210 --> 00:01:59,292
+And, a int, fault, number.
+
+27
+00:01:59,292 --> 00:02:04,340
+So now, in my main frame, I
+
+28
+00:02:04,340 --> 00:02:09,352
+can say well, what, with a bit more work,
+I'll be able to say
+
+29
+00:02:09,352 --> 00:02:15,012
+prefs dialog.set.
+
+30
+00:02:16,070 --> 00:02:21,060
+Prefs listener and in
+
+31
+00:02:21,060 --> 00:02:27,650
+here, I will be able to say new prefs
+listener and
+
+32
+00:02:27,650 --> 00:02:32,180
+just create an anonymous class using that
+interface that I just defined by this.
+
+33
+00:02:32,180 --> 00:02:38,090
+So I can add the I need to create this,
+method.
+
+34
+00:02:38,090 --> 00:02:42,120
+Set prefs listener my pref [UNKNOWN]
+dialogue [UNKNOWN] for me.
+
+35
+00:02:42,120 --> 00:02:43,152
+There we go.
+
+36
+00:02:43,152 --> 00:02:46,773
+and, I need to add the anonymous method
+here in,
+
+37
+00:02:46,773 --> 00:02:51,090
+it's very deep and that's the method here
+in the mainframe.
+
+38
+00:02:51,090 --> 00:02:53,480
+So this is just stuff that I've done.
+
+39
+00:02:53,480 --> 00:02:55,380
+Several times before already in this
+tutorial.
+
+40
+00:02:55,380 --> 00:02:59,840
+Just adding listeners and using them to
+pass information to the main frame here.
+
+41
+00:03:01,750 --> 00:03:09,130
+And in my prefs dialogue here, so I'm
+gonna save that, and I'm gonna have a
+
+42
+00:03:10,480 --> 00:03:16,100
+let's have a instant variable private
+prefs listener.
+
+43
+00:03:16,100 --> 00:03:22,250
+So at the type of the interface I've just
+defined prefs listener I'll call it.
+
+44
+00:03:22,250 --> 00:03:26,290
+And in the set method down here, I will
+say,
+
+45
+00:03:28,170 --> 00:03:33,580
+so this this dot prefs listener, equals
+prefs listener.
+
+46
+00:03:33,580 --> 00:03:38,760
+And now finally, the last step before I
+actually deal with the properties
+
+47
+00:03:38,760 --> 00:03:44,030
+is that, when the OK button is clicked
+here, I can
+
+48
+00:03:44,030 --> 00:03:49,380
+say, if prefs listener, is not equal
+
+49
+00:03:49,380 --> 00:03:54,370
+to null, in other words, has been set to
+something, so there is actually
+
+50
+00:03:54,370 --> 00:03:59,710
+something listening I can say
+prefslistener
+
+51
+00:04:00,720 --> 00:04:04,030
+dot, and call this preferences set.
+
+52
+00:04:05,130 --> 00:04:06,470
+And now I can parse in the user.
+
+53
+00:04:07,700 --> 00:04:10,910
+The password, which I'm gonna wrap in a
+string.
+
+54
+00:04:10,910 --> 00:04:13,090
+So I'll say new string, password.
+
+55
+00:04:13,090 --> 00:04:18,450
+Because remember, password is an array of
+chars, primitive chars.
+
+56
+00:04:18,450 --> 00:04:22,640
+And the port number let's call this port.
+
+57
+00:04:22,640 --> 00:04:25,690
+And, I can pass that in there.
+
+58
+00:04:27,170 --> 00:04:33,512
+Okay, so now, when I click OK in my dialog
+it's gonna receive.
+
+59
+00:04:33,512 --> 00:04:38,130
+This preferences set thing and I'm gonna
+get this user and password
+
+60
+00:04:38,130 --> 00:04:43,540
+import if, if any values have been typed
+for them of course.
+
+61
+00:04:43,540 --> 00:04:50,910
+So let's just output here the user, and
+the password and check that this works.
+
+62
+00:04:52,640 --> 00:04:59,370
+So if I run this now, and go to the
+preferences dialog, and type something
+
+63
+00:04:59,370 --> 00:05:03,570
+for user and something for password and
+click Okay, it comes out in my main frame.
+
+64
+00:05:04,770 --> 00:05:07,748
+It's coming out twice, because I've also
+get [UNKNOWN]
+
+65
+00:05:07,748 --> 00:05:10,100
+out here in my prefs dialog so I remove
+that.
+
+66
+00:05:10,100 --> 00:05:17,640
+And now the bit that you've been waiting
+for, which is I'm gonna store def, the
+
+67
+00:05:17,640 --> 00:05:21,290
+kind of values that are typed into this
+dialog between runs of this application.
+
+68
+00:05:22,310 --> 00:05:27,300
+So, first I'm gonna give this a public
+void set defaults method and the
+
+69
+00:05:27,300 --> 00:05:32,770
+set defaults is gonna have String, String
+user
+
+70
+00:05:32,770 --> 00:05:38,590
+and it's gonna have String password and
+
+71
+00:05:38,590 --> 00:05:44,250
+int port and what it's gonna do with
+those.
+
+72
+00:05:44,250 --> 00:05:49,160
+Is, it's gonna say user field, dot set
+text user,
+
+73
+00:05:50,790 --> 00:05:56,044
+and pass field dot set text, and
+
+74
+00:05:57,170 --> 00:06:01,540
+pass, so password actually.
+
+75
+00:06:01,540 --> 00:06:03,940
+So even though their password field
+returns.
+
+76
+00:06:03,940 --> 00:06:08,720
+It let's you set it, set the password with
+text.
+
+77
+00:06:08,720 --> 00:06:16,332
+And the port spinner here dot set five
+
+78
+00:06:17,640 --> 00:06:23,800
+and that's we're gonna pass in the portva
+and you'll notice port is a.
+
+79
+00:06:23,800 --> 00:06:25,230
+Primitive integer.
+
+80
+00:06:25,230 --> 00:06:31,640
+But and set that to an actual object but
+what would happen is, or I think it does.
+
+81
+00:06:31,640 --> 00:06:34,450
+What would happen is that Java will auto
+box out
+
+82
+00:06:34,450 --> 00:06:38,570
+with an integer type and it will pass the
+problem.
+
+83
+00:06:38,570 --> 00:06:41,400
+So, in my mainframe I can now set.
+
+84
+00:06:41,400 --> 00:06:44,010
+Defaults, if there are any defaults to be
+set.
+
+85
+00:06:45,040 --> 00:06:49,550
+And to do that in my mainframe here.
+
+86
+00:06:49,550 --> 00:06:52,230
+I'm gonna give it a, private
+
+87
+00:06:54,600 --> 00:06:56,340
+object to type preferences.
+
+88
+00:06:56,340 --> 00:06:57,760
+Preferences.
+
+89
+00:06:57,760 --> 00:06:58,699
+Which I call prefs.
+
+90
+00:07:01,160 --> 00:07:07,269
+And down here, I'm gonna set prefs,
+
+91
+00:07:07,269 --> 00:07:14,220
+equal to Preferences dot user Root.
+
+92
+00:07:14,220 --> 00:07:20,380
+And I need to create a Preferences node,
+which is,
+
+93
+00:07:20,380 --> 00:07:26,100
+is basically just a kind of key that you
+use to store your preferences objects.
+
+94
+00:07:26,100 --> 00:07:26,810
+I'll say node.
+
+95
+00:07:27,940 --> 00:07:30,025
+And often people use they say,
+
+96
+00:07:30,025 --> 00:07:33,700
+getClass.getName in there, so their, the
+name,
+
+97
+00:07:33,700 --> 00:07:36,808
+it would be the name of the class, the
+main frame in this case.
+
+98
+00:07:36,808 --> 00:07:42,520
+But here I think I'm just gonna do I'm
+just gonna call it DB.
+
+99
+00:07:42,520 --> 00:07:44,150
+So it does, it doesn't really matter too
+much what.
+
+100
+00:07:44,150 --> 00:07:46,602
+To what you're typing there.
+
+101
+00:07:46,602 --> 00:07:50,280
+Just It should probably be some kind of
+string with no spaces.
+
+102
+00:07:51,445 --> 00:07:58,230
+Okay, and now that I've got my preferences
+object, when the user
+
+103
+00:07:58,230 --> 00:08:05,340
+sets preferences here, I can say, prefs
+dot part, and I can put.
+
+104
+00:08:05,340 --> 00:08:06,640
+Things with keys and values.
+
+105
+00:08:06,640 --> 00:08:13,140
+I'll say user and we'll call it well, well
+add in there the user
+
+106
+00:08:13,140 --> 00:08:18,560
+name and prefs.put and let's add in,
+
+107
+00:08:19,680 --> 00:08:26,330
+password and source the password in there
+and.
+
+108
+00:08:26,330 --> 00:08:31,530
+The port, let's say perhaps stop put,
+port, and port.
+
+109
+00:08:31,530 --> 00:08:37,700
+So I'm just saving the values in a moment
+later on, I'm gonna
+
+110
+00:08:37,700 --> 00:08:43,900
+actually I'm gonna actually do stuff with
+them like set database can.
+
+111
+00:08:43,900 --> 00:08:47,860
+Details, actually, port this a prim, port
+in a primitive integer, I'm gonna have to
+
+112
+00:08:47,860 --> 00:08:55,720
+wrap it, with a, non primitive integer,
+port, and do to string on it.
+
+113
+00:08:55,720 --> 00:08:57,110
+So I'll actually be able to set it.
+
+114
+00:08:59,180 --> 00:09:00,580
+And now
+
+115
+00:09:02,710 --> 00:09:07,700
+I can, when, I run my main frame.
+
+116
+00:09:07,700 --> 00:09:12,800
+I can actually set set default values for
+this dialog.
+
+117
+00:09:12,800 --> 00:09:22,480
+So, I can say here in the constructor main
+frame still, press dialog.setdefaults.
+
+118
+00:09:22,480 --> 00:09:24,814
+Set defaults, there we go.
+
+119
+00:09:24,814 --> 00:09:27,231
+And that's the method that I added that
+lets
+
+120
+00:09:27,231 --> 00:09:30,050
+me just set the values, in my preferences
+dialog.
+
+121
+00:09:30,050 --> 00:09:32,500
+Which okay, it's invisible, but it's still
+there in
+
+122
+00:09:32,500 --> 00:09:35,250
+the background, so we can set defaults on
+it.
+
+123
+00:09:36,610 --> 00:09:37,820
+And I can say yes.
+
+124
+00:09:37,820 --> 00:09:41,970
+So string user equals, and prefs dot get,
+and
+
+125
+00:09:44,120 --> 00:09:47,670
+I just need to say user, just need to use
+the same keys.
+
+126
+00:09:47,670 --> 00:09:51,740
+And I'll supply default, which would've
+just been nothing here.
+
+127
+00:09:51,740 --> 00:09:56,818
+And since it's the default value, for if
+there is no values
+
+128
+00:09:56,818 --> 00:10:01,485
+stored in your preferences there and
+string password
+
+129
+00:10:01,485 --> 00:10:06,980
+equals prefs.get password and
+
+130
+00:10:06,980 --> 00:10:12,110
+I'll make the default again and then an
+empty string and integer
+
+131
+00:10:12,110 --> 00:10:17,150
+port equals prefs.get well
+
+132
+00:10:17,150 --> 00:10:19,800
+actually at this point I'm probably gonna
+have
+
+133
+00:10:19,800 --> 00:10:21,460
+to do a little bit more work so integers.
+
+134
+00:10:21,460 --> 00:10:25,140
+To sort of get suppressed will get caught.
+
+135
+00:10:26,302 --> 00:10:29,210
+And let's make the default three three,
+zero six.
+
+136
+00:10:29,210 --> 00:10:35,030
+Which is the default MySQL port.
+
+137
+00:10:35,030 --> 00:10:41,700
+Now, for the port, press dot get, is gonna
+return a string.
+
+138
+00:10:43,240 --> 00:10:46,390
+But actually what I could do here.
+
+139
+00:10:46,390 --> 00:10:48,400
+Which would be simp, simpler, actually,
+now [LAUGH] that I
+
+140
+00:10:48,400 --> 00:10:50,592
+think of it, is, I could use prefs put in
+there.
+
+141
+00:10:50,592 --> 00:10:54,103
+Instead of converting this to a string.
+
+142
+00:10:54,103 --> 00:10:56,410
+I can just, put [INAUDIBLE] directly.
+
+143
+00:10:56,410 --> 00:10:59,133
+And then I can use here, the get in method
+
+144
+00:10:59,133 --> 00:11:02,280
+and the default can be three three zero
+six there.
+
+145
+00:11:02,280 --> 00:11:05,530
+That's a much better idea.
+
+146
+00:11:05,530 --> 00:11:08,250
+Okay, so press has this put for strings.
+
+147
+00:11:08,250 --> 00:11:08,820
+And there's also.
+
+148
+00:11:08,820 --> 00:11:12,050
+Put in four integers and get into four
+
+149
+00:11:12,050 --> 00:11:14,600
+integers and I think that will do the
+trick.
+
+150
+00:11:14,600 --> 00:11:16,620
+So, let's, let's test this and see if it
+works.
+
+151
+00:11:16,620 --> 00:11:20,180
+If I run that and, and go to preferences
+here.
+
+152
+00:11:20,180 --> 00:11:22,800
+Let's type user.
+
+153
+00:11:22,800 --> 00:11:25,890
+John password hello.
+
+154
+00:11:25,890 --> 00:11:29,310
+And let's set the port here to three three
+zero seven, click OK.
+
+155
+00:11:30,810 --> 00:11:31,910
+And now of course it's still gonna
+
+156
+00:11:31,910 --> 00:11:35,010
+have those values while the application's
+running
+
+157
+00:11:35,010 --> 00:11:38,090
+because the dialog doesn't actually, it's
+not
+
+158
+00:11:38,090 --> 00:11:40,390
+actually destroyed just cuz if I click OK.
+
+159
+00:11:40,390 --> 00:11:43,470
+But if I clear the application, and run it
+again, with a
+
+160
+00:11:43,470 --> 00:11:47,020
+bit of luck, it will load, my default
+preferences and there we go.
+
+161
+00:11:49,110 --> 00:11:53,300
+So using preferences it's pretty simple.
+
+162
+00:11:53,300 --> 00:11:56,020
+And it's a lot like putting keys to a map.
+
+163
+00:11:56,020 --> 00:11:58,640
+If you've just got put and get and it
+
+164
+00:11:58,640 --> 00:12:02,310
+stores it somewhere in your operating
+system and the actual.
+
+165
+00:12:02,310 --> 00:12:07,280
+Plus a file and the location of the file,
+is gonna depend on your operating system.
+
+166
+00:12:07,280 --> 00:12:10,010
+It doesn't really matter, but the bottom
+line is
+
+167
+00:12:10,010 --> 00:12:12,520
+that you can create these nodes and store
+sets of
+
+168
+00:12:12,520 --> 00:12:16,760
+preferences, onto these nodes between runs
+of your application which
+
+169
+00:12:16,760 --> 00:12:20,440
+is suitable for little bits of data like
+this stuff.
+
+170
+00:12:20,440 --> 00:12:22,290
+Okay, so that's it for this tutorial.
+
+171
+00:12:23,520 --> 00:12:28,429
+And in the next tutorial we're just gonna
+look at.
+
+172
+00:12:29,476 --> 00:12:34,484
+Making your dialogues, a little bit
+prettier using panels because, this
+
+173
+00:12:34,484 --> 00:12:40,204
+dialogue looks like a whole [UNKNOWN] and
+what I want to do, is I wanna align the
+
+174
+00:12:40,204 --> 00:12:45,210
+bottom [UNKNOWN] to the right and have
+like a nice panel with a border
+
+175
+00:12:45,210 --> 00:12:49,610
+that sort of thing, so we gonna look at
+that in the next tutorial.
+
+176
+00:12:49,610 --> 00:12:53,110
+So join me again then, and until next
+time, happy coding.
+
+177
+00:12:53,110 --> 00:12:58,149
+[SOUND]
+

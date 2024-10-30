@@ -1,0 +1,509 @@
+1
+00:00:01,080 --> 00:00:05,270
+Hello this is John from
+caveofprograming.com.
+
+2
+00:00:05,270 --> 00:00:10,780
+And in this tutorial we're gonna look at
+model dialogues because
+
+3
+00:00:10,780 --> 00:00:15,380
+so the moment if I run this application
+and I tick and load in this tree
+
+4
+00:00:16,590 --> 00:00:21,840
+it retrieves messages and that something
+separate thread.
+
+5
+00:00:21,840 --> 00:00:25,180
+So my dialogue is response, is responsive
+while that happens.
+
+6
+00:00:25,180 --> 00:00:26,700
+And usually, actually, if you're doing
+something in
+
+7
+00:00:26,700 --> 00:00:30,140
+the background you want your application
+to be responsive.
+
+8
+00:00:30,140 --> 00:00:32,660
+But sometimes you want to remote a
+
+9
+00:00:32,660 --> 00:00:35,470
+dialogue like if you absolutely need to
+use
+
+10
+00:00:35,470 --> 00:00:39,130
+to answer input before anything else
+happens
+
+11
+00:00:39,130 --> 00:00:41,730
+or if you're doing some really heavy
+processing.
+
+12
+00:00:41,730 --> 00:00:45,570
+And the application would basically be
+unresponsive, anyway,
+
+13
+00:00:45,570 --> 00:00:49,730
+until the operation completes, or user
+clicks cancel.
+
+14
+00:00:49,730 --> 00:00:51,180
+Then you'd want modal dialog.
+
+15
+00:00:51,180 --> 00:00:54,220
+And here I'm just gonna pop one up just to
+demonstrate them to you.
+
+16
+00:00:54,220 --> 00:00:58,020
+And we're gonna ultimately put a progress
+bar in that modal dialog.
+
+17
+00:00:59,690 --> 00:01:04,840
+So I'm gonna create a new class here in my
+GUI package.
+
+18
+00:01:04,840 --> 00:01:08,220
+And I say New > Class.
+
+19
+00:01:08,220 --> 00:01:11,505
+And we'll call that ProgressDialog.
+
+20
+00:01:12,700 --> 00:01:21,120
+And let's, let's make that derive inherit
+from JDialog and click Finish.
+
+21
+00:01:21,120 --> 00:01:24,310
+And add the import Ctrl+Shift+O.
+
+22
+00:01:24,310 --> 00:01:27,877
+And here I'll give this a constructor,
+public ProgressDialog.
+
+23
+00:01:27,877 --> 00:01:32,380
+Now JDialog has various possible
+constructors you can use.
+
+24
+00:01:32,380 --> 00:01:39,840
+And I wanna use the one, that let's me
+specify the modality, of, dialog.
+
+25
+00:01:39,840 --> 00:01:41,740
+And I'm also, I'll have a title there as
+well.
+
+26
+00:01:42,800 --> 00:01:46,580
+So let's have the first argument, here, is
+gonna be
+
+27
+00:01:46,580 --> 00:01:51,320
+the parent, so I'm gonna parse in to the
+constructor actually.
+
+28
+00:01:51,320 --> 00:01:53,430
+But, I'll leave that for moment.
+
+29
+00:01:53,430 --> 00:01:58,500
+And then I'm gonna have a title here, that
+says, Message is Downloading.
+
+30
+00:01:58,500 --> 00:02:04,970
+And finally, let's have the modality,
+ModalityType dot.
+
+31
+00:02:04,970 --> 00:02:10,550
+And I'm gonna make a application modal,
+and you can also have document
+
+32
+00:02:10,550 --> 00:02:16,870
+modal, that would make a modal just for
+your particular window.
+
+33
+00:02:16,870 --> 00:02:21,070
+But I'm just gonna demonstrate application
+modal here, just simpler.
+
+34
+00:02:22,730 --> 00:02:25,140
+So the parent, is gonna be something that
+I'm gonna parse in.
+
+35
+00:02:25,140 --> 00:02:28,760
+So window parent, like that.
+
+36
+00:02:28,760 --> 00:02:34,830
+And for the moment, let's just set the
+size here.
+
+37
+00:02:34,830 --> 00:02:36,635
+SetSize.
+
+38
+00:02:36,635 --> 00:02:40,050
+SetSize just to something that's gonna be
+visible.
+
+39
+00:02:40,050 --> 00:02:46,440
+Well, let's make it, I don't know, 400
+wide, 200 high just for the moment.
+
+40
+00:02:48,310 --> 00:02:53,100
+And, now I'm just gonna hired to show that
+dialog from my message panel.
+
+41
+00:02:54,845 --> 00:02:56,490
+Let's click Refresh here.
+
+42
+00:02:57,530 --> 00:02:58,273
+Refresh.
+
+43
+00:02:58,273 --> 00:03:03,563
+And so in my message panel I start a at
+one
+
+44
+00:03:03,563 --> 00:03:08,857
+point I retrieve messages, so if you click
+something
+
+45
+00:03:08,857 --> 00:03:13,818
+in a tree and it opens to retrieve
+messages thing.
+
+46
+00:03:13,818 --> 00:03:17,240
+And here I want to popup a dialog.
+
+47
+00:03:18,510 --> 00:03:28,190
+Now let's add, the, the dialog here as
+page private instance variable.
+
+48
+00:03:28,190 --> 00:03:33,210
+Let's type private ProgressDialog.
+
+49
+00:03:33,210 --> 00:03:35,414
+And I'll call that progressDialog.
+
+50
+00:03:35,414 --> 00:03:41,522
+And in the constructor I'll create a new
+progress dialog,
+
+51
+00:03:41,522 --> 00:03:47,520
+so I'll say progressDialog equals new
+ProgressDialog.
+
+52
+00:03:48,840 --> 00:03:51,530
+This is all pretty straightforward.
+
+53
+00:03:51,530 --> 00:03:58,922
+And, and now is the, is a twist because I
+wanna say here progressDialog.show.
+
+54
+00:03:58,922 --> 00:04:01,711
+ProgressDialog.setVisible actually.
+
+55
+00:04:01,711 --> 00:04:08,568
+ProgressDialog.setVisible true.
+
+56
+00:04:08,568 --> 00:04:14,800
+And but now that, the problem with that,
+is that if you set a modal dialog visible,
+
+57
+00:04:14,800 --> 00:04:17,810
+then nothing will happen in your
+application, in
+
+58
+00:04:17,810 --> 00:04:22,380
+your thread until you've, until it's gone
+away again.
+
+59
+00:04:22,380 --> 00:04:28,650
+So, I wanna run it in one of these
+separate kinda swing threads.
+
+60
+00:04:28,650 --> 00:04:33,700
+I wanna, I wanna use SwingUtilities.info
+later to run it.
+
+61
+00:04:36,260 --> 00:04:38,020
+Which will just run it, it will just run
+it in
+
+62
+00:04:38,020 --> 00:04:40,740
+such a way that it's not gonna hold up my
+application.
+
+63
+00:04:40,740 --> 00:04:42,820
+And I say new runnable in there.
+
+64
+00:04:45,240 --> 00:04:49,600
+And, and let's whoops.
+
+65
+00:04:49,600 --> 00:04:55,226
+Let's add the semicolon there at the run
+method here public void run.
+
+66
+00:04:55,226 --> 00:04:58,977
+And, if I put it in there, it's not,
+
+67
+00:04:58,977 --> 00:05:04,620
+it's not gonna hold up my application when
+it runs.
+
+68
+00:05:04,620 --> 00:05:07,090
+It's just gonna be scheduled to run.
+
+69
+00:05:07,090 --> 00:05:10,510
+At some, at, at this possible moment.
+
+70
+00:05:10,510 --> 00:05:15,738
+So, now, in, in my done method
+
+71
+00:05:15,738 --> 00:05:21,162
+in the SwingWorker thread, I can
+
+72
+00:05:21,162 --> 00:05:26,804
+set the dialog to, to invisible.
+
+73
+00:05:26,804 --> 00:05:30,623
+So here's my done method.
+
+74
+00:05:30,623 --> 00:05:35,563
+And, in here, let's just, let's just say
+
+75
+00:05:35,563 --> 00:05:41,160
+here progressDialog.setVisible, false.
+
+76
+00:05:41,160 --> 00:05:47,496
+Now, just to show you what I mean about
+this a visible holding things up in the
+
+77
+00:05:47,496 --> 00:05:54,137
+modal dialog, let's put this out here and
+let's say, showing modal dialog.
+
+78
+00:05:54,137 --> 00:05:59,869
+And let's put the sys out after this,
+after the show,
+
+79
+00:05:59,869 --> 00:06:04,860
+sys out and say finished showing modal
+dialog.
+
+80
+00:06:06,890 --> 00:06:10,430
+And now let's run that and see how it
+looks.
+
+81
+00:06:10,430 --> 00:06:13,470
+It's got an error in there somewhere.
+
+82
+00:06:13,470 --> 00:06:14,000
+Where's my error?
+
+83
+00:06:15,640 --> 00:06:17,440
+Let's take a look.
+
+84
+00:06:17,440 --> 00:06:20,830
+So somewhere in here, oh, I just I think I
+just didn't save it.
+
+85
+00:06:20,830 --> 00:06:21,360
+No, I did save it.
+
+86
+00:06:21,360 --> 00:06:22,390
+Oh, yeah, I didn't parse it in.
+
+87
+00:06:23,680 --> 00:06:25,320
+The reference the parent.
+
+88
+00:06:25,320 --> 00:06:31,120
+Now if I parse in this, because I need
+here, I need the parent dialog.
+
+89
+00:06:31,120 --> 00:06:34,290
+This is a panel, so that's not gonna cut
+the mustard for a window.
+
+90
+00:06:34,290 --> 00:06:35,700
+But if I say this dot, well, if
+
+91
+00:06:35,700 --> 00:06:42,950
+I say getParent and then getParent returns
+container.
+
+92
+00:06:42,950 --> 00:06:45,350
+Well, I can actually cast that into a
+window.
+
+93
+00:06:45,350 --> 00:06:50,090
+Cuz the parent of this panel is a window,
+so I think that will work.
+
+94
+00:06:50,090 --> 00:06:51,830
+And now if I save that and I run it.
+
+95
+00:06:53,070 --> 00:06:55,290
+Let's see how this looks.
+
+96
+00:06:55,290 --> 00:07:04,060
+So if I tick this here my dialog appeared
+before Eclipse.
+
+97
+00:07:06,120 --> 00:07:07,800
+Let's see that again.
+
+98
+00:07:07,800 --> 00:07:14,610
+So I'll quit the application and let's
+show the console down here.
+
+99
+00:07:14,610 --> 00:07:20,220
+Let's run the application and tick
+something in the tree.
+
+100
+00:07:20,220 --> 00:07:22,890
+There's my dialog, and I can't do anything
+in
+
+101
+00:07:22,890 --> 00:07:26,170
+the rest of the application, until it's
+finished there.
+
+102
+00:07:26,170 --> 00:07:28,360
+Let's try it one more time.
+
+103
+00:07:28,360 --> 00:07:30,310
+So it's modal, it won't go away.
+
+104
+00:07:32,400 --> 00:07:36,910
+And you can see that it's processing
+messages there in the background.
+
+105
+00:07:36,910 --> 00:07:40,510
+And when it finishes then you press that
+until
+
+106
+00:07:40,510 --> 00:07:44,060
+it finishes, and I'm stuck which is what I
+want.
+
+107
+00:07:45,640 --> 00:07:50,232
+Okay, so now in the next tutorial we'll
+gonna
+
+108
+00:07:50,232 --> 00:07:55,428
+look at showing a progress bar in this
+modal dialog.
+
+109
+00:07:55,428 --> 00:07:59,356
+And, until next time, happy coding.
+
+110
+00:07:59,356 --> 00:08:06,269
+[NOISE]
+

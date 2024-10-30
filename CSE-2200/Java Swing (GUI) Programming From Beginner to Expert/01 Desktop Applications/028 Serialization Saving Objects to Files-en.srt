@@ -1,0 +1,1099 @@
+1
+00:00:02,010 --> 00:00:05,840
+Hello, this is John from Cave of
+Programming dot com.
+
+2
+00:00:05,840 --> 00:00:09,890
+And we're gonna take a kinda temporary
+detour from looking at
+
+3
+00:00:09,890 --> 00:00:15,390
+swing in this tutorial just to look at the
+serialization in Java.
+
+4
+00:00:15,390 --> 00:00:16,870
+And the reason I'm gonna do that is.
+
+5
+00:00:16,870 --> 00:00:23,060
+Just because, by building this,
+application, which does quite a lot
+
+6
+00:00:23,060 --> 00:00:29,500
+already, but I want to have a way of
+making these import and export data
+
+7
+00:00:29,500 --> 00:00:35,720
+items work so that I can store some test
+data here that we can work with.
+
+8
+00:00:35,720 --> 00:00:41,220
+So that's why in this tutorial, I'm gonna
+go over Saving objects to files
+
+9
+00:00:41,220 --> 00:00:46,510
+in Java and restoring them, even at that
+small, strictly speaking, part of swing.
+
+10
+00:00:46,510 --> 00:00:52,370
+So, I'm going to start with the database
+class
+
+11
+00:00:54,090 --> 00:00:58,810
+and which is part of my model here and I'm
+gonna give this database
+
+12
+00:00:58,810 --> 00:01:04,820
+class, a couple of methods for, saving and
+loading.
+
+13
+00:01:04,820 --> 00:01:06,270
+This array list of people.
+
+14
+00:01:07,640 --> 00:01:13,310
+So, I'll give it a method called save to,
+to file.
+
+15
+00:01:14,450 --> 00:01:19,630
+Save to file will accept if I object if
+it's in the argument.
+
+16
+00:01:19,630 --> 00:01:22,359
+That's the file that we actually want to
+save to.
+
+17
+00:01:23,460 --> 00:01:28,810
+Let's have the import there, Java IO file,
+and I'll make the import type void.
+
+18
+00:01:30,190 --> 00:01:35,630
+Now to actually do the saving, firstly
+I'll create a file output
+
+19
+00:01:35,630 --> 00:01:40,580
+the stream, which I'll call FOS, and I'll
+set that
+
+20
+00:01:40,580 --> 00:01:46,070
+equal to a new file, file output stream.
+
+21
+00:01:46,070 --> 00:01:48,150
+Which we're at the file.
+
+22
+00:01:48,150 --> 00:01:54,020
+And then, after I do the import, I'll have
+an object output
+
+23
+00:01:54,020 --> 00:02:01,590
+stream OOS equals new object output
+stream.
+
+24
+00:02:01,590 --> 00:02:05,000
+And this is going to route the final
+output stream off.
+
+25
+00:02:05,000 --> 00:02:08,470
+We got this kind of, rushed and dull thing
+going on.
+
+26
+00:02:08,470 --> 00:02:10,694
+That's the [UNKNOWN] you always seem to
+have
+
+27
+00:02:10,694 --> 00:02:12,800
+and Java when it comes time things file.
+
+28
+00:02:14,580 --> 00:02:16,160
+And I'm going to use to object out of the
+the
+
+29
+00:02:16,160 --> 00:02:20,660
+string to write my array list of people to
+a file.
+
+30
+00:02:20,660 --> 00:02:23,110
+And after I've done that, I'll just call
+OS dot close.
+
+31
+00:02:23,110 --> 00:02:29,890
+And I'm gonna throw from this method, IO
+exception
+
+32
+00:02:29,890 --> 00:02:32,250
+because i want to handle it further up the
+chain.
+
+33
+00:02:33,410 --> 00:02:37,580
+Now to actually write this array list of
+people to this file,
+
+34
+00:02:39,600 --> 00:02:41,789
+there are various ways that I can do that.
+
+35
+00:02:43,140 --> 00:02:47,320
+And the way that I prefer, because it
+avoids
+
+36
+00:02:47,320 --> 00:02:52,930
+warnings about, kind of, unchecked types,
+and this sort of
+
+37
+00:02:52,930 --> 00:02:55,180
+thing, is to convert this arrays to people
+to
+
+38
+00:02:55,180 --> 00:02:58,010
+an array list, and then write it to the
+file.
+
+39
+00:02:58,010 --> 00:03:07,810
+So, I'm gonna say, person array, and I'll
+just call that, I dunno, persons,
+
+40
+00:03:09,940 --> 00:03:13,190
+equals, and let's use people.
+
+41
+00:03:13,190 --> 00:03:16,150
+People dot two array.
+
+42
+00:03:16,150 --> 00:03:21,040
+And I'll use this version that returns a
+array of the correct type.
+
+43
+00:03:21,040 --> 00:03:26,920
+So here I have to pass in a new, let's
+copy that,
+
+44
+00:03:27,980 --> 00:03:33,146
+a new person array, of the correct length,
+which is gonna be people
+
+45
+00:03:33,146 --> 00:03:38,800
+dot size, like this.
+
+46
+00:03:38,800 --> 00:03:42,150
+yeah, and if I've got this right, which I
+have, that's gonna return a.
+
+47
+00:03:42,150 --> 00:03:46,190
+List of person, so you kinda create the
+actual array there and
+
+48
+00:03:46,190 --> 00:03:50,230
+basically it's to array filter and then
+returns a reference to it.
+
+49
+00:03:50,230 --> 00:03:52,470
+And then it's pretty simple to write that
+to a file.
+
+50
+00:03:52,470 --> 00:03:54,660
+So all we have to do is say OS
+
+51
+00:03:54,660 --> 00:03:59,850
+dot Write Object, Write Object, and pass
+in the arrayness.
+
+52
+00:03:59,850 --> 00:04:04,990
+Because an array sorry an array in Java
+strange
+
+53
+00:04:04,990 --> 00:04:08,670
+though it may seem, is actually just an
+object.
+
+54
+00:04:10,580 --> 00:04:12,450
+And if I, the advantage of, of doing it
+
+55
+00:04:12,450 --> 00:04:14,488
+like this is that if I've used the array
+list.
+
+56
+00:04:14,488 --> 00:04:19,610
+Here, people, and an array list, although
+it
+
+57
+00:04:19,610 --> 00:04:22,890
+has the template type person, suffers from
+erasia,
+
+58
+00:04:22,890 --> 00:04:26,730
+which is when you, not the eighties center
+
+59
+00:04:26,730 --> 00:04:31,710
+band, but actually if I had actually
+written this.
+
+60
+00:04:31,710 --> 00:04:37,200
+This array list to to the file then it's
+type, would've been erased.
+
+61
+00:04:37,200 --> 00:04:38,519
+And then when I restored it, I
+
+62
+00:04:38,519 --> 00:04:43,610
+would events property getting a unchecked
+conversion warning.
+
+63
+00:04:43,610 --> 00:04:46,020
+Which I, I don't mind, so I prefer to do
+it this way.
+
+64
+00:04:47,170 --> 00:04:48,730
+Anyway that's, that's not too important.
+
+65
+00:04:48,730 --> 00:04:50,650
+That's my, my [INAUDIBLE] here and let's
+run.
+
+66
+00:04:50,650 --> 00:04:53,230
+Rightly loads from file method.
+
+67
+00:04:53,230 --> 00:04:59,290
+So public void loads from File File, File,
+here.
+
+68
+00:05:01,080 --> 00:05:05,190
+And that's also gonna throw IO Exception.
+
+69
+00:05:06,880 --> 00:05:16,635
+And this time I'm gonna use a File Input
+Stream FIS equals new file input stream.
+
+70
+00:05:18,065 --> 00:05:21,283
+Now that's gonna route the file here, and
+then I'm gonna have a, Oh.
+
+71
+00:05:21,283 --> 00:05:27,225
+Get Input Stream dot OIS equals new Object
+Input Stream.
+
+72
+00:05:27,225 --> 00:05:33,345
+And that's gonna interrupt the File Input
+Stream.
+
+73
+00:05:33,345 --> 00:05:35,100
+And after I've noted objects.
+
+74
+00:05:35,100 --> 00:05:35,510
+From that.
+
+75
+00:05:35,510 --> 00:05:36,190
+I'm gonna do the OIS dot close.
+
+76
+00:05:36,190 --> 00:05:42,730
+That side, the imports are Control Shift
+O.
+
+77
+00:05:42,730 --> 00:05:48,530
+And now I wanna restore from this object,
+the stream by
+
+78
+00:05:48,530 --> 00:05:52,690
+array of that [UNKNOWN] cuz you see an
+actual array in Java.
+
+79
+00:05:52,690 --> 00:05:54,260
+Does not suffer from erasure.
+
+80
+00:05:54,260 --> 00:05:57,080
+It remembers what type it actually is.
+
+81
+00:05:57,080 --> 00:05:57,810
+So let's say
+
+82
+00:06:00,000 --> 00:06:06,640
+OIS dot read object and I'm just gonna
+read the one object.
+
+83
+00:06:06,640 --> 00:06:10,140
+And it's gonna be a personary of persons.
+
+84
+00:06:10,140 --> 00:06:15,740
+So let's just copy that, like this,
+inputs.
+
+85
+00:06:15,740 --> 00:06:19,670
+And then, I can cast that to type.
+
+86
+00:06:19,670 --> 00:06:20,350
+That's an array.
+
+87
+00:06:23,400 --> 00:06:26,360
+And if I save that.
+
+88
+00:06:28,220 --> 00:06:30,040
+It's got a little arrow here.
+
+89
+00:06:30,040 --> 00:06:31,360
+Oh yeah, I've gotta also handle this.
+
+90
+00:06:31,360 --> 00:06:37,340
+Class not found exception, so if I do
+surround a try catch there, and I'll
+
+91
+00:06:37,340 --> 00:06:44,220
+just do that in a moment, and once I've
+got my array, I, I wanna
+
+92
+00:06:44,220 --> 00:06:51,270
+then set this people array, I wanna fill
+it with the items from the array, and why
+
+93
+00:06:51,270 --> 00:06:55,290
+I'm importing thing, just for this little
+application, is that I don't wanna change.
+
+94
+00:06:55,290 --> 00:06:56,960
+The array list that this is pointing at.
+
+95
+00:06:56,960 --> 00:06:59,170
+So I don't want to create a new array
+list.
+
+96
+00:06:59,170 --> 00:07:03,955
+Because then I don't think about how to
+get that array list back.
+
+97
+00:07:03,955 --> 00:07:06,930
+Of the chain to my table model.
+
+98
+00:07:06,930 --> 00:07:09,660
+So I just want to rather create a new one.
+
+99
+00:07:09,660 --> 00:07:13,050
+I want to just add to this one, put items
+into it.
+
+100
+00:07:13,050 --> 00:07:16,540
+So i'm going to say here equal.
+
+101
+00:07:16,540 --> 00:07:21,360
+Dot clear like this and then let's say
+people dot
+
+102
+00:07:21,360 --> 00:07:26,570
+add all, and I want to add all the items
+from this array but add all
+
+103
+00:07:26,570 --> 00:07:31,640
+doesn't take an array directly but there
+is an arrays
+
+104
+00:07:32,780 --> 00:07:37,720
+dot, I think it's called, to list method.
+
+105
+00:07:37,720 --> 00:07:39,660
+Maybe it's called at, as, as list.
+
+106
+00:07:39,660 --> 00:07:40,330
+Let's see.
+
+107
+00:07:41,670 --> 00:07:46,870
+so, I'll have to pass in there the persons
+array.
+
+108
+00:07:48,120 --> 00:07:53,420
+Let's add the important and in fact I
+think it's called add list.
+
+109
+00:07:53,420 --> 00:07:57,540
+So what I've done is I've converted this,
+persons array to
+
+110
+00:07:57,540 --> 00:08:02,540
+a list here and I've, added that list to
+the array list.
+
+111
+00:08:02,540 --> 00:08:04,920
+List, of people, after clearing it.
+
+112
+00:08:06,180 --> 00:08:07,670
+So that's a little bit involved, but that
+
+113
+00:08:07,670 --> 00:08:11,970
+should basically take care of, saving, and
+loading, the,
+
+114
+00:08:14,050 --> 00:08:17,750
+array of person objects, using
+serialization in Java.
+
+115
+00:08:17,750 --> 00:08:19,910
+And if I wanted to save more data and load
+more
+
+116
+00:08:19,910 --> 00:08:23,520
+data, of course I can, I could, then,
+further go on.
+
+117
+00:08:23,520 --> 00:08:25,400
+To write more stuff after this.
+
+118
+00:08:25,400 --> 00:08:30,950
+And I could then load, more stuff after
+this as well.
+
+119
+00:08:30,950 --> 00:08:35,630
+So you're not limited to just reading and
+writing one object with serialization.
+
+120
+00:08:35,630 --> 00:08:38,200
+And, there's one important thing that I
+must remember to
+
+121
+00:08:38,200 --> 00:08:40,480
+do otherwise I'll get an exception which
+is that I must.
+
+122
+00:08:40,480 --> 00:08:43,520
+Make Person implement Serializable.
+
+123
+00:08:44,970 --> 00:08:53,060
+So if I go to public class person, I have
+to say implements serializable.
+
+124
+00:08:53,060 --> 00:08:56,990
+Otherwise I'll get a I'll get an exception
+being thrown.
+
+125
+00:08:58,770 --> 00:09:00,720
+When I try to serialize it, so.
+
+126
+00:09:00,720 --> 00:09:03,820
+So I'll add Java IO serializable and I
+don't actually have
+
+127
+00:09:03,820 --> 00:09:06,680
+to add any new methods there, although
+eclipse is gonna give
+
+128
+00:09:06,680 --> 00:09:11,770
+me a warning here about a generated serial
+about a serial
+
+129
+00:09:11,770 --> 00:09:14,500
+version ID, I just, I'll just get it to
+add that.
+
+130
+00:09:16,350 --> 00:09:18,140
+Just to shut it up.
+
+131
+00:09:18,140 --> 00:09:20,930
+Okay, I don't think we actually need that
+there.
+
+132
+00:09:20,930 --> 00:09:26,330
+So let's save that, okay, the warning's
+gone, so now I'm gonna just make the save.
+
+133
+00:09:26,330 --> 00:09:28,960
+To file a note from file methods work.
+
+134
+00:09:28,960 --> 00:09:34,820
+So firstly, I'll go to the controller,
+which is here,
+
+135
+00:09:35,830 --> 00:09:38,450
+and because I've decided that in this
+application, I want
+
+136
+00:09:38,450 --> 00:09:43,310
+more communication from the GUI package to
+go through the
+
+137
+00:09:43,310 --> 00:09:47,700
+controller, I'm gonna just add rougher
+methods in the controller here.
+
+138
+00:09:47,700 --> 00:09:55,270
+So public, Void save to file, and that
+accepts file file,
+
+139
+00:09:55,270 --> 00:10:01,500
+and all it does is it calls the db dot
+saved file method.
+
+140
+00:10:01,500 --> 00:10:06,500
+And of course I also have to add the
+throws IO exception
+
+141
+00:10:06,500 --> 00:10:12,590
+that it's at import file, and at throws
+declaration.
+
+142
+00:10:12,590 --> 00:10:18,713
+Okay, and Sent in again for load so public
+void load From
+
+143
+00:10:18,713 --> 00:10:25,440
+file, file, file, let's type here throws
+IO Exception.
+
+144
+00:10:25,440 --> 00:10:30,808
+And that's going to do db dot load.
+
+145
+00:10:30,808 --> 00:10:34,100
+From file, file.
+
+146
+00:10:34,100 --> 00:10:34,600
+There we go.
+
+147
+00:10:35,840 --> 00:10:40,280
+And now finally, the, the last bit in this
+chain here, chain
+
+148
+00:10:40,280 --> 00:10:44,610
+of method calls is if I go up to the,
+where are you?
+
+149
+00:10:44,610 --> 00:10:47,720
+If I go up to the GUI here, the view, part
+
+150
+00:10:47,720 --> 00:10:53,310
+of the MVC architecture, model view
+controller, and I go to
+
+151
+00:10:53,310 --> 00:10:58,030
+main frame here, then if I look down here,
+I've actually
+
+152
+00:10:58,030 --> 00:11:02,800
+got a I've got a input data item and
+export data item.
+
+153
+00:11:02,800 --> 00:11:06,020
+Item, menu item, which at the moment
+aren't doing anything.
+
+154
+00:11:06,020 --> 00:11:11,050
+So let's make those work, let's say
+controller, for import dot load,
+
+155
+00:11:13,160 --> 00:11:15,840
+controller, spell it right, that will
+help.
+
+156
+00:11:15,840 --> 00:11:19,720
+Controller dot load from file and that's
+going
+
+157
+00:11:19,720 --> 00:11:21,800
+to make set file chooser dot get select.
+
+158
+00:11:21,800 --> 00:11:27,350
+File which will return the kind of file
+object that that user has chosen to load.
+
+159
+00:11:27,350 --> 00:11:33,640
+Let's delete that and let's handle the
+exception there and surround with try
+
+160
+00:11:33,640 --> 00:11:40,854
+couch and what I'll do is if it can't load
+the file, I'll say J.
+
+161
+00:11:40,854 --> 00:11:50,290
+Option pain dot show message dialogue.
+
+162
+00:11:50,290 --> 00:11:53,830
+And then let's pass for the parents named
+mainframe dot dis.
+
+163
+00:11:55,500 --> 00:11:58,480
+And actually don't want this.
+
+164
+00:11:58,480 --> 00:12:00,100
+Form of the constructor.
+
+165
+00:12:00,100 --> 00:12:02,980
+I want a more advanced one.
+
+166
+00:12:02,980 --> 00:12:04,590
+I have some more Humph.
+
+167
+00:12:04,590 --> 00:12:07,370
+This one I think.
+
+168
+00:12:07,370 --> 00:12:11,020
+So that's the message in here.
+
+169
+00:12:11,020 --> 00:12:20,000
+So load data from file or maybe let's say
+failed.
+
+170
+00:12:20,000 --> 00:12:20,790
+Yeah, how about that.
+
+171
+00:12:20,790 --> 00:12:26,120
+Could, could not load the data from file.
+
+172
+00:12:26,120 --> 00:12:26,657
+How's that?
+
+173
+00:12:26,657 --> 00:12:29,940
+And that's the title error.
+
+174
+00:12:31,240 --> 00:12:33,160
+That'll do actually, error.
+
+175
+00:12:33,160 --> 00:12:36,786
+And finally, message type, J Option
+
+176
+00:12:36,786 --> 00:12:42,060
+Pane dot [INAUDIBLE] error, error message
+there.
+
+177
+00:12:42,060 --> 00:12:45,770
+And I just do Control Shift F to format
+that a bit.
+
+178
+00:12:45,770 --> 00:12:51,190
+Now the the save is gonna look pretty damn
+similar.
+
+179
+00:12:51,190 --> 00:12:51,290
+So.
+
+180
+00:12:51,290 --> 00:12:54,480
+So let's copy that and put it in here.
+
+181
+00:12:54,480 --> 00:13:00,800
+And except for, it's going to be load it's
+going be save
+
+182
+00:13:00,800 --> 00:13:08,180
+not save from but save to file and let's
+say could not save data to file.
+
+183
+00:13:08,180 --> 00:13:13,240
+And, apart from that it's all going to be
+pretty much the same.
+
+184
+00:13:13,240 --> 00:13:15,290
+I'll just show you what that error message
+[INAUDIBLE]
+
+185
+00:13:15,290 --> 00:13:18,870
+looks like here, so let's run this and go
+
+186
+00:13:18,870 --> 00:13:25,120
+to file, export data, and I'll export to
+test
+
+187
+00:13:25,120 --> 00:13:28,230
+doc there and so that's what the message
+looks like.
+
+188
+00:13:28,230 --> 00:13:30,090
+Could not save data to file, so it's
+rather nice.
+
+189
+00:13:31,380 --> 00:13:34,710
+But I'll get rid of that for the moment
+and let's see if this thing.
+
+190
+00:13:34,710 --> 00:13:36,900
+It works, I don't think I've gotten
+anything, although
+
+191
+00:13:36,900 --> 00:13:41,050
+it is easy to make mistakes with
+serialization, I find.
+
+192
+00:13:41,050 --> 00:13:44,000
+So let's run this here, now I've got
+something which
+
+193
+00:13:44,000 --> 00:13:49,119
+is, when I actually load the data so we I
+do.
+
+194
+00:13:50,560 --> 00:13:52,080
+For all we, so,
+
+195
+00:13:54,510 --> 00:13:59,310
+let's go up with it here and when I do
+load from file, I've got to remember
+
+196
+00:13:59,310 --> 00:14:04,070
+to call table panel dot refresh,
+otherwise, the
+
+197
+00:14:04,070 --> 00:14:06,376
+table panel won't know that there's more
+data there.
+
+198
+00:14:07,430 --> 00:14:11,130
+And refresh method if you recall, in table
+panel
+
+199
+00:14:11,130 --> 00:14:14,630
+just basically, let's take a quick look at
+it.
+
+200
+00:14:14,630 --> 00:14:21,810
+We've got this, thin gui I've got a person
+where are we table panel, there
+
+201
+00:14:21,810 --> 00:14:26,810
+we go, and that's just doing it's got the
+refresh method it's called table model.
+
+202
+00:14:26,810 --> 00:14:31,700
+fire table dates changed and that tells it
+table to
+
+203
+00:14:31,700 --> 00:14:34,710
+query the model again and get the latest
+data from it.
+
+204
+00:14:34,710 --> 00:14:38,120
+So let's run this and see how it, how it
+looks.
+
+205
+00:14:38,120 --> 00:14:40,060
+I'm gonna add, I'll add myself in there,
+John.
+
+206
+00:14:40,060 --> 00:14:42,010
+Let's just say software for occupation,
+
+207
+00:14:44,150 --> 00:14:48,150
+I am self employed and not a US citizen.
+
+208
+00:14:48,150 --> 00:14:48,900
+So let's click okay.
+
+209
+00:14:49,920 --> 00:14:51,080
+And let's add another.
+
+210
+00:14:51,080 --> 00:14:56,420
+Person in there, let's say Sue, and let's
+make Sue a
+
+211
+00:14:56,420 --> 00:15:01,890
+manager, and let's say that she's employed
+and she's a US citizen
+
+212
+00:15:01,890 --> 00:15:07,270
+with tax ID 1111, and she's female, let's
+add her.
+
+213
+00:15:07,270 --> 00:15:08,920
+And actually I should really make it that
+when
+
+214
+00:15:08,920 --> 00:15:11,860
+I click the okay button it clears the
+form.
+
+215
+00:15:11,860 --> 00:15:16,150
+Could do very easily by saying the text on
+these values next to
+
+216
+00:15:16,150 --> 00:15:20,100
+nothing, and resetting the selection, but
+I'll leave that an exercise for you.
+
+217
+00:15:20,100 --> 00:15:24,910
+Let's go to file, export data, and I can
+type the file name here.
+
+218
+00:15:24,910 --> 00:15:27,890
+I'll just use this test dot pair that I've
+been using.
+
+219
+00:15:27,890 --> 00:15:30,840
+Click save, and now, if I go to.
+
+220
+00:15:30,840 --> 00:15:36,200
+To import data from test dot per,
+hopefully there'll be no errors, and
+
+221
+00:15:36,200 --> 00:15:40,840
+just to prove that it works, let's quit
+the application, run it again, and go to
+
+222
+00:15:40,840 --> 00:15:47,560
+file import data, test dot per and there
+we are, we've got my data
+
+223
+00:15:47,560 --> 00:15:53,300
+back okay, so that's it for this tutorial,
+as I say, not swing specific but.
+
+224
+00:15:53,300 --> 00:15:54,890
+But pretty damn useful so I thought it was
+
+225
+00:15:54,890 --> 00:15:57,400
+worth going over because it fits very much
+into the
+
+226
+00:15:57,400 --> 00:16:00,070
+context of this application, and I wanted
+to leave
+
+227
+00:16:00,070 --> 00:16:03,140
+you with an application that sort of, sort
+of works.
+
+228
+00:16:04,800 --> 00:16:09,070
+And in the next tutorial, I'm gonna show
+you
+
+229
+00:16:09,070 --> 00:16:10,984
+how to use pop up menus and we're gonna.
+
+230
+00:16:10,984 --> 00:16:14,030
+Create a pop up menu that let's you just
+delete
+
+231
+00:16:14,030 --> 00:16:17,600
+a row from this table, cuz at the moment
+if I
+
+232
+00:16:17,600 --> 00:16:21,790
+do import data and right click on the
+table, nothing happens
+
+233
+00:16:21,790 --> 00:16:24,530
+and we're gonna fix that, with a little
+pop up menu.
+
+234
+00:16:24,530 --> 00:16:29,010
+So join me again next time, and until next
+time, happy coding.
+

@@ -1,0 +1,813 @@
+1
+00:00:02,650 --> 00:00:07,090
+Hello this is John from
+caveofprogramming.com and, in this
+
+2
+00:00:07,090 --> 00:00:12,200
+tutorial, were gonna look at inserting
+values into databases.
+
+3
+00:00:12,200 --> 00:00:17,900
+So, in the last tutorial we did some work
+on database.java
+
+4
+00:00:17,900 --> 00:00:21,760
+here, and I added this save method, and
+the save method at
+
+5
+00:00:21,760 --> 00:00:27,420
+the moment just executes a statement that
+counts, how many of each person
+
+6
+00:00:28,510 --> 00:00:33,130
+indeed array list the people, is in the
+database already.
+
+7
+00:00:33,130 --> 00:00:34,560
+And the purpose of that is so you can
+
+8
+00:00:34,560 --> 00:00:37,910
+decide, well let's do an insert or an
+update.
+
+9
+00:00:37,910 --> 00:00:43,119
+And so we get the count here and I'm gonna
+say here, if count [SOUND]
+
+10
+00:00:43,119 --> 00:00:48,140
+equals 0 so if that person is not found in
+the database, we're
+
+11
+00:00:48,140 --> 00:00:53,098
+gonna do a insert, otherwise we're gonna
+do an update.
+
+12
+00:00:53,098 --> 00:00:59,580
+So let's get rid of this sisal, and let's
+
+13
+00:00:59,580 --> 00:01:06,370
+say here, sisal updating, sorry this is
+inserting.
+
+14
+00:01:06,370 --> 00:01:10,330
+Inserting person with ID, and then let's,
+
+15
+00:01:10,330 --> 00:01:13,600
+let's add an ID, just some typical
+[UNKNOWN].
+
+16
+00:01:13,600 --> 00:01:21,000
+And, if the account is not 0, [UNKNOWN]
+we're gonna also have an update.
+
+17
+00:01:21,000 --> 00:01:23,444
+So, have updating personal ID, ID.
+
+18
+00:01:23,444 --> 00:01:30,510
+Now to insert a person into the data base
+here, and the first
+
+19
+00:01:30,510 --> 00:01:36,220
+thing I need to do, is get all the bits of
+information from the person object and of
+
+20
+00:01:36,220 --> 00:01:39,210
+course you could use some kind of
+persistent strain work, to do this for you
+
+21
+00:01:39,210 --> 00:01:44,970
+but here I'm gonna craft it all by hand
+and create all the SQL by hand.
+
+22
+00:01:44,970 --> 00:01:49,280
+So I'm gonna start by saying person.
+
+23
+00:01:49,280 --> 00:01:52,560
+I'm just gonna go through person basically
+and get all the different values here.
+
+24
+00:01:52,560 --> 00:01:56,290
+So let's start with the name of the
+person, and I'm gonna
+
+25
+00:01:56,290 --> 00:01:59,250
+fill in the variables in a minute, but
+first I'll fill in
+
+26
+00:02:01,350 --> 00:02:04,315
+I'll just use the auto-complete to work
+through the fields here.
+
+27
+00:02:04,315 --> 00:02:14,173
+Person.getAgeCategory, person.get
+category.
+
+28
+00:02:14,173 --> 00:02:19,511
+Lets have the semi colon there, person
+.uh, we got ID, got name,
+
+29
+00:02:19,511 --> 00:02:25,800
+occupation, tax ID, person .um, he's a US
+citizen, it's not all we need.
+
+30
+00:02:25,800 --> 00:02:31,206
+So I've got one, two, three, four, five,
+six, so you
+
+31
+00:02:31,206 --> 00:02:36,408
+can say to them, so person.um, get let's
+see you've
+
+32
+00:02:36,408 --> 00:02:41,726
+got tax ID get agenda, [SOUND] and, I
+think there's one more.
+
+33
+00:02:41,726 --> 00:02:42,592
+Let's have a look.
+
+34
+00:02:42,592 --> 00:02:50,516
+Person.get got and [UNKNOWN] gender ID,
+name,
+
+35
+00:02:50,516 --> 00:02:58,070
+occupation, he's a US citizen we've got.
+
+36
+00:02:58,070 --> 00:03:04,127
+We've got the tax ID I'm missing one I
+don't know, I am, including ID, we've
+
+37
+00:03:04,127 --> 00:03:10,140
+got one, two, three, four, five, six,
+seven, eight, so actually I've got more.
+
+38
+00:03:10,140 --> 00:03:15,438
+Okay, so now I'm gonna write the SQL, that
+will insert this stuff into,
+
+39
+00:03:15,438 --> 00:03:20,575
+the database actually let's first declass
+some variables here.
+
+40
+00:03:20,575 --> 00:03:27,653
+So string name equals occupation is a, a
+string again.
+
+41
+00:03:27,653 --> 00:03:31,067
+So occupation equals H category is an
+
+42
+00:03:31,067 --> 00:03:36,140
+enumerated type I've created in previous
+tutorial.
+
+43
+00:03:37,180 --> 00:03:43,780
+So that's called age and employment
+category is integrated type.
+
+44
+00:03:43,780 --> 00:03:52,239
+Tax ID, [SOUND] is actually a string and
+US citizen is Boolean.
+
+45
+00:03:52,239 --> 00:03:56,634
+[SOUND] Gender, is also, an
+
+46
+00:03:56,634 --> 00:04:02,793
+enumeration, so there we go.
+
+47
+00:04:02,793 --> 00:04:04,364
+That looks good.
+
+48
+00:04:04,364 --> 00:04:09,539
+Now, up here, let's create some SQL that
+can actually do the insert.
+
+49
+00:04:09,539 --> 00:04:17,310
+So now I'm gonna say string insert SQL
+equals insert into people.
+
+50
+00:04:17,310 --> 00:04:19,750
+My database is called people.
+
+51
+00:04:19,750 --> 00:04:25,091
+Sort of my table is called people and, and
+then I'd say columns in the people
+
+52
+00:04:25,091 --> 00:04:30,540
+table and this has to be right so I'm
+gonna try this quite carefully.
+
+53
+00:04:30,540 --> 00:04:32,640
+ID, name, age and employment status.
+
+54
+00:04:32,640 --> 00:04:39,820
+So, ID, name, age, employ, employment
+
+55
+00:04:39,820 --> 00:04:46,432
+status, let's maximize the editor for more
+space.
+
+56
+00:04:46,432 --> 00:04:52,060
+Tax ID US citizen, tax ID US Citizen.
+
+57
+00:04:54,140 --> 00:04:57,710
+I, I really recommend this,uh, MySQL
+workbench tool, by the way.
+
+58
+00:04:57,710 --> 00:04:59,022
+It's, it's really good.
+
+59
+00:04:59,022 --> 00:05:01,276
+I can't remember if I mentioned it in the
+
+60
+00:05:01,276 --> 00:05:04,457
+last tutorial, but you can you can design
+whole
+
+61
+00:05:04,457 --> 00:05:07,706
+entity relationship models with it, and
+then import them
+
+62
+00:05:07,706 --> 00:05:11,020
+into your data base with data base forward
+engineer.
+
+63
+00:05:11,020 --> 00:05:14,040
+But that's a distraction so let's keep on
+trying here.
+
+64
+00:05:15,300 --> 00:05:16,690
+And what have we got?
+
+65
+00:05:16,690 --> 00:05:19,880
+US citizen, and gender and occupation
+there.
+
+66
+00:05:19,880 --> 00:05:21,530
+So, gender and occupation.
+
+67
+00:05:23,710 --> 00:05:27,980
+And of course, you don't have to insert
+values into all the table.
+
+68
+00:05:27,980 --> 00:05:31,020
+Columns because some of them might be
+allowed to
+
+69
+00:05:31,020 --> 00:05:33,150
+be null and you'd then have to insert
+values.
+
+70
+00:05:33,150 --> 00:05:36,930
+And these don't have to be in the same
+order as your columns either.
+
+71
+00:05:36,930 --> 00:05:37,680
+But it's simpler if they are.
+
+72
+00:05:38,760 --> 00:05:40,010
+And then you say.
+
+73
+00:05:40,010 --> 00:05:45,695
+Values and then in round brackets here,
+the CSS is just normal SQL.
+
+74
+00:05:45,695 --> 00:05:48,361
+In values, I'm not gonna call it literal
+values.
+
+75
+00:05:48,361 --> 00:05:57,961
+I'm gonna put question marks, so, 1, 2, 3,
+4, 5, 6, 7, 8.
+
+76
+00:05:57,961 --> 00:06:01,430
+So we've got one, two, three.
+
+77
+00:06:01,430 --> 00:06:07,830
+I need a comma there, so, one, two, three,
+four, five, six, seven, eight.
+
+78
+00:06:07,830 --> 00:06:11,310
+1, 2, 3, 4, 5, 6, 7, 8.
+
+79
+00:06:11,310 --> 00:06:12,135
+I think that looks okay.
+
+80
+00:06:12,135 --> 00:06:17,987
+That's format it okay,Ctrl+Shift+F and the
+reason for that is, you
+
+81
+00:06:17,987 --> 00:06:24,894
+should never be tempted to concatenate
+values directly into your SQL strings.
+
+82
+00:06:24,894 --> 00:06:27,249
+Probably because if someone types any like
+weird.
+
+83
+00:06:28,760 --> 00:06:31,360
+Punctuation or whatever into the, it can
+just mess up the
+
+84
+00:06:31,360 --> 00:06:36,480
+query, but someone could also maliciously
+type SQL into your form.
+
+85
+00:06:36,480 --> 00:06:39,290
+It's designed to drop your database so,
+you
+
+86
+00:06:39,290 --> 00:06:42,199
+could end up with a SQL injection attack
+problem.
+
+87
+00:06:43,250 --> 00:06:44,810
+So the things too is the preferred
+
+88
+00:06:44,810 --> 00:06:47,520
+statements with these question mark
+placeholders here.
+
+89
+00:06:47,520 --> 00:06:53,180
+And now in here if I'm gonna do an insert,
+I
+
+90
+00:06:53,180 --> 00:06:57,340
+need to set the values for the parameters
+on the insert statement.
+
+91
+00:06:57,340 --> 00:06:59,307
+And let's [UNKNOWN] statement.
+
+92
+00:06:59,307 --> 00:07:04,018
+So I'll say, prepared [SOUND] statement.
+
+93
+00:07:04,018 --> 00:07:13,500
+InsertStatement equals
+com.prepareStatement, insertSql like this.
+
+94
+00:07:13,500 --> 00:07:20,280
+So, insert equals my strength here, and
+now, let's go down
+
+95
+00:07:20,280 --> 00:07:26,750
+here to where, I'm gonna try to insert and
+I'll say, insert statement.
+
+96
+00:07:27,850 --> 00:07:31,590
+If fact one thing I do, while I remember
+it, is.
+
+97
+00:07:31,590 --> 00:07:36,966
+Right here I will close the statement,
+[SOUND] because as soon as you prepare
+
+98
+00:07:36,966 --> 00:07:40,552
+a statement I recommend closing them,
+otherwise
+
+99
+00:07:40,552 --> 00:07:43,388
+you'll forget like I just almost did.
+
+100
+00:07:43,388 --> 00:07:48,978
+And, and okay, so we've got we're gonna,
+we've got the statement
+
+101
+00:07:48,978 --> 00:07:54,330
+now, I'll say that statement.set and first
+value's an int ID.
+
+102
+00:07:54,330 --> 00:08:00,687
+So settings, and that's placeholder number
+one, so it
+
+103
+00:08:00,687 --> 00:08:07,532
+starts numbering at 1, not 0, and that's
+gonna be ID, and then
+
+104
+00:08:07,532 --> 00:08:14,159
+insert statement.um, setString to it's
+gonna be name.
+
+105
+00:08:14,159 --> 00:08:19,857
+In fact, to make this a little bit easier,
+let's say int col equals 1.
+
+106
+00:08:19,857 --> 00:08:25,971
+And, here I can have, col.
+
+107
+00:08:25,971 --> 00:08:27,540
+And, just col actually.
+
+108
+00:08:27,540 --> 00:08:30,750
+In fact, yeah, no col plus plus that will
+do the trick.
+
+109
+00:08:30,750 --> 00:08:33,890
+And then here lets say col plus plus.
+
+110
+00:08:35,220 --> 00:08:37,360
+And then lets copy these.
+
+111
+00:08:37,360 --> 00:08:38,450
+So I want eight of them.
+
+112
+00:08:38,450 --> 00:08:45,510
+So that's two, three, four, five, six,
+seven, eight.
+
+113
+00:08:45,510 --> 00:08:49,641
+And let's have a look and see what I've
+gotta put in there.
+
+114
+00:08:49,641 --> 00:08:57,704
+So I need ID, ID name [SOUND] age, I'm
+gonna get a string.
+
+115
+00:08:57,704 --> 00:09:00,296
+Age actually a, non-type.
+
+116
+00:09:00,296 --> 00:09:02,410
+I'm gonna send it into string by doing
+name.
+
+117
+00:09:02,410 --> 00:09:07,330
+And if you do name on a non-type, you
+actually get the
+
+118
+00:09:09,350 --> 00:09:13,060
+like you get this color here as a string.
+
+119
+00:09:13,060 --> 00:09:16,880
+So I would get child or adult senior in
+this case, which is very handy.
+
+120
+00:09:17,984 --> 00:09:22,120
+So let's, let's do that [INAUDIBLE] again.
+
+121
+00:09:22,120 --> 00:09:26,973
+And, so I'll do age.name, and employment
+
+122
+00:09:26,973 --> 00:09:32,474
+status there is gonna be emp [SOUND]
+.name, again.
+
+123
+00:09:32,474 --> 00:09:36,773
+Whoops, done something horrible there,
+emp.name.
+
+124
+00:09:36,773 --> 00:09:40,270
+And the important thing of course is that,
+these, these there have got
+
+125
+00:09:40,270 --> 00:09:44,281
+to match what I put in the SQL statement
+up here, very important.
+
+126
+00:09:44,281 --> 00:09:46,389
+[SOUND] They've got to be in the same
+order.
+
+127
+00:09:46,389 --> 00:09:50,670
+So after employment status, we've got tax
+ID.
+
+128
+00:09:50,670 --> 00:09:53,670
+So tax, it's just a string.
+
+129
+00:09:53,670 --> 00:09:57,880
+And we've got ISUS, that ISUS, and that's
+
+130
+00:09:57,880 --> 00:10:01,220
+actually not a string but a Boolean, so
+Boolean.
+
+131
+00:10:01,220 --> 00:10:09,105
+Very nice, and let's get rid of this extra
+stuff here, so set Boolean, and then.
+
+132
+00:10:09,105 --> 00:10:16,190
+Got after, after isUS, I've got gender and
+occupation.
+
+133
+00:10:16,190 --> 00:10:20,400
+So gender.name again, because it's
+enumerated and
+
+134
+00:10:20,400 --> 00:10:22,910
+I want the string using the .name method.
+
+135
+00:10:22,910 --> 00:10:26,990
+And occupation is a string.
+
+136
+00:10:28,360 --> 00:10:34,410
+That was painful long-winded, but Here in
+the end, and often you'll find,
+
+137
+00:10:34,410 --> 00:10:37,700
+or at least I find anyway, that you'll
+often make mistakes doing this.
+
+138
+00:10:37,700 --> 00:10:40,430
+It can take a little while to debug.
+
+139
+00:10:40,430 --> 00:10:46,346
+And, so having done that, we can say
+insert statement .uh, execute [INAUDIBLE]
+
+140
+00:10:46,346 --> 00:10:53,670
+you're gonna need execute update, because
+you wanna actually update the database.
+
+141
+00:10:53,670 --> 00:10:56,310
+So, it's it's an insert, it's a type
+
+142
+00:10:56,310 --> 00:11:00,260
+of update statement rather than query of
+course.
+
+143
+00:11:00,260 --> 00:11:04,430
+And later on we're closing it, but we're
+not closing it until after we've done all
+
+144
+00:11:04,430 --> 00:11:07,360
+the people cuz we reuse the same
+statement,
+
+145
+00:11:07,360 --> 00:11:09,700
+over and over again once you've prepared
+it.
+
+146
+00:11:09,700 --> 00:11:11,850
+You've prepared it there, you set.
+
+147
+00:11:11,850 --> 00:11:14,020
+Values for the parameters.
+
+148
+00:11:14,020 --> 00:11:15,390
+And Bob's your uncle.
+
+149
+00:11:16,780 --> 00:11:18,490
+I think that should work.
+
+150
+00:11:18,490 --> 00:11:20,250
+Let's give it a go.
+
+151
+00:11:20,250 --> 00:11:27,530
+So I got my test database class here.
+
+152
+00:11:27,530 --> 00:11:32,840
+And I've got a couple of people there and
+at the moment the database is, empty.
+
+153
+00:11:34,910 --> 00:11:36,070
+Here we go.
+
+154
+00:11:36,070 --> 00:11:39,110
+So let's run this as if it works if I run
+it.
+
+155
+00:11:39,110 --> 00:11:41,450
+It finds that there are no people in
+there,
+
+156
+00:11:41,450 --> 00:11:45,430
+and it inserts people with ID 1 and 2.
+
+157
+00:11:45,430 --> 00:11:46,690
+So it's running that.
+
+158
+00:11:46,690 --> 00:11:49,580
+And, I'm not getting any SQL errors.
+
+159
+00:11:49,580 --> 00:11:54,865
+[UNKNOWN] Cort, this is a good sign, and
+that's, here's the revelatory
+
+160
+00:11:54,865 --> 00:12:01,210
+moment, let's do a select here and we've
+got two people in the database.
+
+161
+00:12:01,210 --> 00:12:02,400
+So, hey, Presto.
+
+162
+00:12:04,280 --> 00:12:10,690
+And this is, this is null because I didn't
+insert a tax ID for suit if you recall.
+
+163
+00:12:10,690 --> 00:12:16,773
+So suit and it's not US citizen and
+[SOUND] that's your tax ID.
+
+164
+00:12:16,773 --> 00:12:19,660
+Okay, so that's working perfectly as far
+as I can see.
+
+165
+00:12:20,660 --> 00:12:24,190
+And in the next tutorial, we're gonna look
+at update statements.
+
+166
+00:12:24,190 --> 00:12:28,859
+So, now if I execute this again, it's
+gonna find out that this
+
+167
+00:12:28,859 --> 00:12:32,990
+people are already in the data base, in
+fact let's check that now.
+
+168
+00:12:32,990 --> 00:12:38,250
+So I'll click Run, and it says updating
+person with ID one and two.
+
+169
+00:12:38,250 --> 00:12:43,030
+So the count has come non 0, you can't
+[UNKNOWN] in the last tutorial.
+
+170
+00:12:43,030 --> 00:12:48,950
+And its found that its time to update them
+not insert them, so in
+
+171
+00:12:48,950 --> 00:12:55,100
+the next tutorial, we're gonna look at
+creating object statements with JDBC.
+
+172
+00:12:55,100 --> 00:12:56,690
+So join me again then.
+
+173
+00:12:56,690 --> 00:12:58,614
+And until next time, happy coding.
+
+174
+00:12:58,614 --> 00:12:59,010
+[SOUND]
+

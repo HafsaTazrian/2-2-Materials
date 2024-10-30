@@ -1,0 +1,631 @@
+1
+00:00:01,320 --> 00:00:05,584
+Hello, this is John from
+caveofprogramming.com and in this
+
+2
+00:00:05,584 --> 00:00:09,770
+tutorial we're gonna look at radial
+buttons in Java Swing.
+
+3
+00:00:10,832 --> 00:00:16,390
+So, in a moment I've got this nice little
+form here and.
+
+4
+00:00:17,638 --> 00:00:20,625
+In the last tutorial we added this check
+box here.
+
+5
+00:00:20,625 --> 00:00:24,580
+And in this tutorial I'm gonna add some
+radio buttons down here.
+
+6
+00:00:24,580 --> 00:00:26,430
+Now, radio buttons are a little bit more
+
+7
+00:00:26,430 --> 00:00:31,580
+complex than check boxes, but, nothing you
+can't handle.
+
+8
+00:00:31,580 --> 00:00:35,118
+So, I'm going to have check boxes here.
+
+9
+00:00:35,118 --> 00:00:40,980
+That represent gender, so, to keep
+
+10
+00:00:40,980 --> 00:00:47,060
+things nice and simple, simple, I just
+have two alternatives, male and female.
+
+11
+00:00:47,060 --> 00:00:50,000
+And I'm gonna start by creating my radio
+
+12
+00:00:50,000 --> 00:00:53,590
+buttons here, so I'll say private jradial
+button.
+
+13
+00:00:53,590 --> 00:00:57,660
+And just to repeat what I said in the last
+
+14
+00:00:57,660 --> 00:01:04,090
+tutorial right here buttons allow you to
+choose mutually exclusive options.
+
+15
+00:01:04,090 --> 00:01:10,210
+So if you have options you can select
+together you want check boxes.
+
+16
+00:01:10,210 --> 00:01:12,040
+But if you got to pick one option from
+
+17
+00:01:12,040 --> 00:01:16,030
+a bunch of several you want radial buttons
+so let's.
+
+18
+00:01:16,030 --> 00:01:22,297
+And call this male radial and then I'll
+and then I'll create another
+
+19
+00:01:22,297 --> 00:01:28,280
+one called, start the import there, J
+radial button female radial.
+
+20
+00:01:28,280 --> 00:01:29,360
+So I'm just gonna have two of them.
+
+21
+00:01:30,980 --> 00:01:34,580
+And you also need a button group.
+
+22
+00:01:34,580 --> 00:01:36,770
+To use with radio buttons.
+
+23
+00:01:36,770 --> 00:01:41,610
+So I'll say private button group and
+gender group.
+
+24
+00:01:41,610 --> 00:01:46,230
+And button groups are what allow you to
+group
+
+25
+00:01:46,230 --> 00:01:49,030
+the buttons together, so that you can say
+that
+
+26
+00:01:49,030 --> 00:01:50,930
+if one of them is selected, then the other
+
+27
+00:01:50,930 --> 00:01:55,670
+should be deselected automatically, which
+is the usual behavior.
+
+28
+00:01:55,670 --> 00:01:57,260
+Off radial buttons.
+
+29
+00:01:57,260 --> 00:02:02,036
+So now, lets go down here and say
+maleRadial = new
+
+30
+00:02:02,036 --> 00:02:07,980
+JRadialButton and I'll give that some text
+by the side of it.
+
+31
+00:02:07,980 --> 00:02:08,390
+Put it there.
+
+32
+00:02:08,390 --> 00:02:14,700
+It says male, and female radial = new
+JRadialButton.
+
+33
+00:02:15,840 --> 00:02:18,015
+Female, of course, female.
+
+34
+00:02:18,015 --> 00:02:26,252
+[SOUND] And I'm gonna add those to the
+button group, so I'll say here.
+
+35
+00:02:26,252 --> 00:02:27,450
+Gender group.
+
+36
+00:02:29,290 --> 00:02:31,400
+Equals new button group.
+
+37
+00:02:31,400 --> 00:02:34,870
+And notice it's button group and not j
+
+38
+00:02:34,870 --> 00:02:37,000
+button group, which I think it's because
+this.
+
+39
+00:02:37,000 --> 00:02:40,030
+I think this comes from the AWT, the
+
+40
+00:02:40,030 --> 00:02:42,740
+previous Window toolkit that used to exist
+in Java.
+
+41
+00:02:42,740 --> 00:02:44,240
+I'm not sure.
+
+42
+00:02:44,240 --> 00:02:49,440
+So let's settle the gender radials here.
+
+43
+00:02:49,440 --> 00:02:51,917
+Set up gender radials.
+
+44
+00:02:51,917 --> 00:02:59,511
+[SOUND] And I'm gonna start by adding
+those two radial buttons.
+
+45
+00:02:59,511 --> 00:03:01,490
+To the button group.
+
+46
+00:03:01,490 --> 00:03:07,749
+So I'll say genderGroup.add maleRadial.
+
+47
+00:03:07,749 --> 00:03:14,500
+And genderGroup.add, femaleRadial.
+
+48
+00:03:14,500 --> 00:03:19,270
+And now let's go ahead now and add those
+to the form.
+
+49
+00:03:19,270 --> 00:03:22,630
+And we'll see a couple of little problems
+come up, which we can then fix.
+
+50
+00:03:24,160 --> 00:03:29,250
+So, I'm gonna add the radial buttons on to
+rows here.
+
+51
+00:03:29,250 --> 00:03:31,320
+So let's copy one of these rows.
+
+52
+00:03:32,390 --> 00:03:35,790
+And here are the male radial.
+
+53
+00:03:35,790 --> 00:03:39,770
+And I'm gonna put a label by the side of
+that.
+
+54
+00:03:39,770 --> 00:03:42,430
+On the left there that says gender.
+
+55
+00:03:44,980 --> 00:03:51,280
+And then, on the next row, that should be
+new JLabel, new JLabel.
+
+56
+00:03:52,530 --> 00:03:55,595
+On the next row, I'm gonna add the next
+
+57
+00:03:55,595 --> 00:04:00,190
+radial button, so let's go down here,
+paste this.
+
+58
+00:04:00,190 --> 00:04:02,780
+And don't need a label for that, so I'll
+get
+
+59
+00:04:02,780 --> 00:04:10,170
+rid of that and I'll say, female add the
+female radial.
+
+60
+00:04:10,170 --> 00:04:11,310
+There we go.
+
+61
+00:04:11,310 --> 00:04:13,630
+So, if I look at that now one
+
+62
+00:04:13,630 --> 00:04:15,960
+obvious problem is that these are really
+widely spaced.
+
+63
+00:04:15,960 --> 00:04:22,040
+And that's just the, spacing on my, my
+grid layout,
+
+64
+00:04:22,040 --> 00:04:23,640
+so let's go to where that, where I have
+that
+
+65
+00:04:23,640 --> 00:04:28,410
+mail radial and reduce the weight y for
+this particular
+
+66
+00:04:28,410 --> 00:04:33,048
+row, so let's set it to something really
+small like 0.5.
+
+67
+00:04:33,048 --> 00:04:34,597
+0.05.
+
+68
+00:04:34,597 --> 00:04:38,300
+So that looks quite a lot better.
+
+69
+00:04:38,300 --> 00:04:40,250
+And this label looks a bit misalighned.
+
+70
+00:04:40,250 --> 00:04:44,060
+I'm not paying too much attention to these
+labels as I go through.
+
+71
+00:04:44,060 --> 00:04:46,950
+Cuz fiddling with the labels takes a huge
+amount of time.
+
+72
+00:04:48,220 --> 00:04:49,260
+And it's a matter of taste.
+
+73
+00:04:49,260 --> 00:04:53,870
+But I will just fix this gender control
+because it looks really ugly.
+
+74
+00:04:53,870 --> 00:05:00,060
+Let's go to, Here, I just change it from
+first line end to line
+
+75
+00:05:00,060 --> 00:05:05,780
+end so it aligns in the middle of the row,
+so that looks a little bit better I think.
+
+76
+00:05:05,780 --> 00:05:10,070
+Now neither of them are selected at the
+moment, so let's go up here
+
+77
+00:05:11,850 --> 00:05:15,970
+and, I'm gonna go to the male radial here.
+
+78
+00:05:15,970 --> 00:05:20,350
+And I'm gonna set it to selected by
+default.
+
+79
+00:05:20,350 --> 00:05:24,110
+So maleRadial.set, selected true.
+
+80
+00:05:26,380 --> 00:05:31,890
+And if I run that, then I got male
+selected and if I select female, because
+
+81
+00:05:31,890 --> 00:05:37,069
+they belong to a button group, selecting
+one de-selects the other as I want.
+
+82
+00:05:38,210 --> 00:05:43,320
+Now the next interesting challenge here is
+how to find out which one is selected.
+
+83
+00:05:43,320 --> 00:05:45,300
+And by the way, it's worth mentioning, you
+absolutely
+
+84
+00:05:45,300 --> 00:05:48,420
+can not add action list on to radial
+buttons.
+
+85
+00:05:48,420 --> 00:05:50,640
+But I won't do that here, I want
+
+86
+00:05:50,640 --> 00:05:53,180
+to actually get information about which is
+selected.
+
+87
+00:05:54,760 --> 00:06:01,020
+At the, at the end so to do that the first
+thing I'm going to do
+
+88
+00:06:01,020 --> 00:06:07,225
+is, I'm going to do, male.
+
+89
+00:06:07,225 --> 00:06:11,530
+Radial dot add action, actually not add
+
+90
+00:06:11,530 --> 00:06:17,200
+but set action command and set action
+command.
+
+91
+00:06:17,200 --> 00:06:19,410
+Let's do set a string that you can
+
+92
+00:06:19,410 --> 00:06:23,420
+then retrieve from the button with get
+action command.
+
+93
+00:06:23,420 --> 00:06:26,244
+So I'm going to set this equal to male
+
+94
+00:06:26,244 --> 00:06:29,570
+and this is, this is separate to the label
+here.
+
+95
+00:06:29,570 --> 00:06:33,340
+This is some text for kind of internal
+purposes.
+
+96
+00:06:33,340 --> 00:06:38,856
+And let's do the same thing with the
+female radial here so female
+
+97
+00:06:38,856 --> 00:06:44,080
+radial.set action command female and now
+what I can do is.
+
+98
+00:06:44,080 --> 00:06:48,450
+If I go to that, the action listener on
+the button.
+
+99
+00:06:48,450 --> 00:06:51,730
+So down here, this is where I'm collecting
+all my data.
+
+100
+00:06:51,730 --> 00:06:52,620
+I can say
+
+101
+00:06:55,120 --> 00:07:01,280
+I can say string gender command equals.
+
+102
+00:07:01,280 --> 00:07:06,200
+And, I can use the button group, so gender
+group dot.
+
+103
+00:07:07,310 --> 00:07:10,780
+Get selection.
+
+104
+00:07:10,780 --> 00:07:16,350
+And that's gonna return the button, the
+radio button that's well
+
+105
+00:07:16,350 --> 00:07:19,960
+it's gonna return actually the button
+model of the radio button.
+
+106
+00:07:19,960 --> 00:07:22,680
+And on that I can do get action command.
+
+107
+00:07:22,680 --> 00:07:26,060
+Like this, so that's gonna return male
+female.
+
+108
+00:07:26,060 --> 00:07:29,040
+And of course I could do a dot equals on
+that string here
+
+109
+00:07:29,040 --> 00:07:33,040
+and change it to a boolean, if I wanted,
+or something like that.
+
+110
+00:07:33,040 --> 00:07:39,500
+Let's just put gender in here, and let's
+
+111
+00:07:39,500 --> 00:07:45,750
+go to, if I click on form event and go to,
+and hit F3, in eclipse, so I
+
+112
+00:07:45,750 --> 00:07:48,860
+can go to the declaration of it and here I
+can say String
+
+113
+00:07:48,860 --> 00:07:55,360
+gender and just do the usual stuff like
+here, so private, private string.
+
+114
+00:07:55,360 --> 00:08:01,159
+Gender and this.gender equals
+
+115
+00:08:01,159 --> 00:08:08,410
+gender, and I could supply it with a get
+gender of course so if I go to source
+
+116
+00:08:08,410 --> 00:08:15,200
+and generate get this inserters, and I can
+have a just a getter for.
+
+117
+00:08:15,200 --> 00:08:16,610
+Gender.
+
+118
+00:08:16,610 --> 00:08:18,660
+Okay, so there we go.
+
+119
+00:08:20,800 --> 00:08:25,462
+And just to show you that working, let's
+maybe
+
+120
+00:08:25,462 --> 00:08:29,110
+oh yerah, I've got, let's change
+genderCommand to gender actually.
+
+121
+00:08:29,110 --> 00:08:30,090
+That makes more sense.
+
+122
+00:08:31,520 --> 00:08:34,499
+And in the main frame, of course, I could.
+
+123
+00:08:35,670 --> 00:08:42,080
+Where I receive the event I could make use
+of gender some how, if I wanted.
+
+124
+00:08:42,080 --> 00:08:44,600
+So, I don't know, let's just do a sys out
+for the moment.
+
+125
+00:08:44,600 --> 00:08:47,270
+So, if I.
+
+126
+00:08:47,270 --> 00:08:51,560
+I've got this form event being seeped
+here.
+
+127
+00:08:51,560 --> 00:08:59,231
+So I could say e.getgender now' cause I've
+just added that method get, e.getgender.
+
+128
+00:08:59,231 --> 00:09:06,700
+And if I run that you're gonna see the,
+when I select one of these buttons
+
+129
+00:09:06,700 --> 00:09:13,589
+and click okay then it's gonna say, female
+or male just according to what I select.
+
+130
+00:09:14,630 --> 00:09:17,970
+So, if I don't touch it, then it's gonna
+be male and there's
+
+131
+00:09:17,970 --> 00:09:22,020
+my string, of that app, to previously
+which I'm just gonna remove, actually.
+
+132
+00:09:23,490 --> 00:09:26,850
+Okay, so, Yeah, that's that.
+
+133
+00:09:26,850 --> 00:09:31,510
+So like in the next tutorial, I'm gonna
+take a break from looking at all these
+
+134
+00:09:31,510 --> 00:09:36,930
+different form controls, you'll be pleased
+to know, and I'm gonna look at menus.
+
+135
+00:09:36,930 --> 00:09:39,920
+So we can look at the j menu control.
+
+136
+00:09:39,920 --> 00:09:43,640
+So join me again then, until next time,
+happy coding.
+
+137
+00:09:43,640 --> 00:09:47,069
+[BLANK_AUDIO].
+

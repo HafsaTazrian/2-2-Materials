@@ -1,0 +1,216 @@
+1
+00:00:01,720 --> 00:00:05,749
+Hello there, this is John from
+Caveofprogramming.com.
+
+2
+00:00:05,749 --> 00:00:09,720
+And in the last tutorial I created this,
+so there's a panel here, which I'm gonna
+
+3
+00:00:09,720 --> 00:00:12,510
+write the controls into, but in this
+tutorial
+
+4
+00:00:12,510 --> 00:00:15,090
+I wanna give this panel a suitable border.
+
+5
+00:00:16,270 --> 00:00:18,330
+Now to give a component the border.
+
+6
+00:00:18,330 --> 00:00:21,320
+You can say set border, so I'm in a
+constructor
+
+7
+00:00:21,320 --> 00:00:23,840
+of the form panel class here, which extend
+straight panel.
+
+8
+00:00:24,850 --> 00:00:26,950
+And I could pass in there, I'm going to
+
+9
+00:00:26,950 --> 00:00:32,490
+use a static method of border factory
+called create and
+
+10
+00:00:32,490 --> 00:00:34,510
+let's pick one of these methods and the
+one
+
+11
+00:00:34,510 --> 00:00:37,970
+that I use is, all of these create
+different borders.
+
+12
+00:00:37,970 --> 00:00:43,662
+But I use Create Titled Border and I'll
+pass in a title at Person.
+
+13
+00:00:43,662 --> 00:00:49,330
+This is gonna be a form for adding people
+into some kind of database.
+
+14
+00:00:49,330 --> 00:00:51,180
+And if I run that it looks like this.
+
+15
+00:00:51,180 --> 00:00:55,030
+It's quite nice, except that because the
+borders are so close to
+
+16
+00:00:55,030 --> 00:00:57,980
+the edges of the panel you can almost not
+see the border.
+
+17
+00:00:59,660 --> 00:01:04,670
+So what I could do about that, is I could
+add a second border around this border.
+
+18
+00:01:04,670 --> 00:01:08,730
+Which is just an invisible border that
+just creates some space.
+
+19
+00:01:10,090 --> 00:01:15,830
+So I'm gonna start by taking this out of
+the set
+
+20
+00:01:15,830 --> 00:01:21,333
+border called, and I'll say border inner
+border,
+
+21
+00:01:21,333 --> 00:01:27,180
+equals, borderfactory.create, title
+border, and
+
+22
+00:01:28,340 --> 00:01:33,882
+then I'll say border, outer border, equals
+border factory,
+
+23
+00:01:33,882 --> 00:01:39,480
+border factory.create.
+
+24
+00:01:39,480 --> 00:01:40,950
+And I want empty border here.
+
+25
+00:01:40,950 --> 00:01:45,620
+And I want to be able to specify the
+margin all the way around.
+
+26
+00:01:45,620 --> 00:01:49,770
+Set our margin of five pixels for left,
+right, top, and bottom.
+
+27
+00:01:49,770 --> 00:01:54,910
+And now to combine these two borders
+together, and set
+
+28
+00:01:54,910 --> 00:02:00,210
+border, I can pass border factory, top
+create compound border
+
+29
+00:02:01,460 --> 00:02:07,570
+and I can pass that an outer border and a
+inner border.
+
+30
+00:02:07,570 --> 00:02:11,210
+Inner border, which are the ones operating
+already.
+
+31
+00:02:11,210 --> 00:02:16,120
+So if I run that you can see that now it's
+indented a little bit.
+
+32
+00:02:18,200 --> 00:02:20,640
+It might be interesting to add a border to
+my tool bar.
+
+33
+00:02:20,640 --> 00:02:23,610
+As well, let's just try that and see what
+it looks like.
+
+34
+00:02:23,610 --> 00:02:25,630
+I might remove this again, though.
+
+35
+00:02:25,630 --> 00:02:30,210
+So, if I go to my tool bar, here in the
+constructor of my tool bar.
+
+36
+00:02:30,210 --> 00:02:33,860
+I can say let's maybe put it here.
+
+37
+00:02:33,860 --> 00:02:43,368
+Set border, border factory.create, maybe
+just edged border.
+
+38
+00:02:43,368 --> 00:02:46,320
+Let's try that, let's see what it looks
+like.
+
+39
+00:02:46,320 --> 00:02:50,100
+And there's also bevel, bevel borders and
+things like that.
+
+40
+00:02:50,100 --> 00:02:53,990
+So now I got a border around my tool bar
+which I may or may not get rid of later.
+
+41
+00:02:55,230 --> 00:02:56,590
+So that's borders for you and you
+
+42
+00:02:56,590 --> 00:02:58,810
+can experiment with different kinds of
+borders.
+
+43
+00:02:58,810 --> 00:03:03,480
+Raised borders, lowered board, lowered
+borders and so on.
+
+44
+00:03:03,480 --> 00:03:09,610
+And, and in the next tutorial we're gonna
+have a look at text fields and labels.
+
+45
+00:03:09,610 --> 00:03:14,570
+So join me again, and join me again then,
+and until then, happy coding.
+

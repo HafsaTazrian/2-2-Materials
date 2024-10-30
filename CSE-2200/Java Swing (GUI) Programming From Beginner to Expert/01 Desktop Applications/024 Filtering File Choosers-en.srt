@@ -1,0 +1,520 @@
+1
+00:00:02,060 --> 00:00:05,300
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,300 --> 00:00:08,420
+Welcome back and this is a tutorial
+
+3
+00:00:08,420 --> 00:00:13,030
+on adding filters to your file chooser
+dialogs.
+
+4
+00:00:13,030 --> 00:00:18,960
+So in a moment if I run my application and
+I go to File, Export Data.
+
+5
+00:00:18,960 --> 00:00:20,958
+It allows me to select any file.
+
+6
+00:00:20,958 --> 00:00:25,410
+But I wanna narrow this down so that I can
+only export
+
+7
+00:00:25,410 --> 00:00:29,860
+or save, save or import, certain kinds of
+files with certain, particular extensions.
+
+8
+00:00:31,780 --> 00:00:38,600
+So to do that let's go to where I create
+my file chooser in Main Frame here.
+
+9
+00:00:38,600 --> 00:00:40,960
+And that's where I'm creating the file
+chooser.
+
+10
+00:00:40,960 --> 00:00:47,290
+And I'm gonna say, fileChooser.add.
+
+11
+00:00:47,290 --> 00:00:55,240
+And it's add I think it's add actually, I
+always forget this.
+
+12
+00:00:55,240 --> 00:01:02,440
+But let's take a look here, at choosable
+file filter.
+
+13
+00:01:02,440 --> 00:01:02,940
+There we go.
+
+14
+00:01:04,080 --> 00:01:10,330
+And add choosable file filter accepts a,
+it accepts
+
+15
+00:01:10,330 --> 00:01:14,660
+objects of type file filter, which is an
+abstract class.
+
+16
+00:01:14,660 --> 00:01:18,010
+So I have to implement my own, file filter
+there.
+
+17
+00:01:18,010 --> 00:01:20,620
+And I'm gonna do that now.
+
+18
+00:01:20,620 --> 00:01:28,700
+So let's go to new class and I'll say,
+I'll call this, person file filter
+
+19
+00:01:29,750 --> 00:01:36,160
+because this application kinda allows you
+to enter personal details.
+
+20
+00:01:36,160 --> 00:01:39,330
+So, I'll call this person file filter and
+I'm gonna make
+
+21
+00:01:39,330 --> 00:01:43,750
+that, a superclass of that file filter,
+the abstract file filter class.
+
+22
+00:01:44,770 --> 00:01:45,950
+And it's at the import.
+
+23
+00:01:45,950 --> 00:01:48,690
+And now if I click on this Error message
+
+24
+00:01:48,690 --> 00:01:52,820
+here in Eclipse, I can add and implement
+methods.
+
+25
+00:01:52,820 --> 00:01:54,910
+And there are only two methods that you
+need to implement.
+
+26
+00:01:54,910 --> 00:01:59,870
+There's the accept, which determines, it
+returns true if you wanna accept the
+
+27
+00:01:59,870 --> 00:02:03,890
+file and allow the user to select it, or
+false if you don't.
+
+28
+00:02:03,890 --> 00:02:06,670
+And the description, returns a description
+of the
+
+29
+00:02:06,670 --> 00:02:11,030
+kind of file that this file filter filters
+on.
+
+30
+00:02:12,160 --> 00:02:17,990
+So in my description here, I'm gonna say
+return and I'll return this string
+
+31
+00:02:17,990 --> 00:02:24,320
+that says person file, person files.
+
+32
+00:02:24,320 --> 00:02:28,310
+Person database files, how's that?
+
+33
+00:02:28,310 --> 00:02:32,680
+And in brackets I'm just gonna put the
+filter and let's say that this application
+
+34
+00:02:32,680 --> 00:02:38,360
+uses files with an extension of PER,
+completely arbitrary.
+
+35
+00:02:38,360 --> 00:02:39,840
+PER standing for person, of course.
+
+36
+00:02:41,500 --> 00:02:45,490
+And now here so I've got my file as the
+argument
+
+37
+00:02:45,490 --> 00:02:49,550
+here to accept and I need to do something
+with that.
+
+38
+00:02:49,550 --> 00:02:52,360
+And what I'll do is I'll get their file
+name.
+
+39
+00:02:52,360 --> 00:02:57,670
+So I'll say string, name equals
+file.getName.
+
+40
+00:02:57,670 --> 00:03:03,420
+And I wanna check the extension of this
+file name here.
+
+41
+00:03:05,080 --> 00:03:09,020
+And you could write some just string
+handling stuff here.
+
+42
+00:03:09,020 --> 00:03:14,460
+But I've actually already written a little
+utils class here as a static method.
+
+43
+00:03:14,460 --> 00:03:17,640
+And well it still says you can find it.
+
+44
+00:03:17,640 --> 00:03:18,900
+And by the way, you can find a very
+similar
+
+45
+00:03:18,900 --> 00:03:24,540
+thing in the, if you search for official
+guides, Java, components.
+
+46
+00:03:25,706 --> 00:03:27,580
+Official guides, swing components in
+Google.
+
+47
+00:03:27,580 --> 00:03:31,445
+Then go to the go to the file chooser.
+
+48
+00:03:31,445 --> 00:03:34,500
+Page that, you can see that they have
+actually
+
+49
+00:03:34,500 --> 00:03:37,582
+created a tools class that's actually
+similar to this.
+
+50
+00:03:37,582 --> 00:03:40,600
+But what I've done is, I've got the last
+
+51
+00:03:40,600 --> 00:03:44,530
+index of the dot for start and the file
+name.
+
+52
+00:03:44,530 --> 00:03:52,170
+And I've said if that's equal to minus 1
+return null, because if last in text
+
+53
+00:03:52,170 --> 00:03:56,560
+solved returns minus 1 it means it doesn't
+find the dot anywhere in the given string.
+
+54
+00:03:57,750 --> 00:04:02,622
+And then I say if the point index is equal
+to name.length
+
+55
+00:04:02,622 --> 00:04:05,170
+minus 1, it means the dots right at the
+end of the string.
+
+56
+00:04:05,170 --> 00:04:07,980
+It means the file has no extension
+basically,
+
+57
+00:04:07,980 --> 00:04:12,040
+so I return null, otherwise I return
+name.substring and
+
+58
+00:04:12,040 --> 00:04:14,730
+I return the first character of the
+substring is,
+
+59
+00:04:14,730 --> 00:04:19,330
+just after where the full stop period is
+found.
+
+60
+00:04:19,330 --> 00:04:24,710
+And the last character is gonna be right
+at the end of the string.
+
+61
+00:04:24,710 --> 00:04:27,390
+So you pass in name.length, because
+substring
+
+62
+00:04:27,390 --> 00:04:31,070
+doesn't actually include the character at
+this index.
+
+63
+00:04:31,070 --> 00:04:34,230
+This includes characters up to this index
+here.
+
+64
+00:04:34,230 --> 00:04:40,454
+So in my personal file filter, now I can
+say string
+
+65
+00:04:40,454 --> 00:04:46,140
+extension equals, and I can just use my
+utils
+
+66
+00:04:46,140 --> 00:04:52,250
+class method there, get file extension
+from the string.
+
+67
+00:04:52,250 --> 00:04:58,610
+So return me all the stuff after the last
+dot in the file name,
+
+68
+00:04:58,610 --> 00:05:03,560
+and if the extension is equal to null, of
+course then that's no use to
+
+69
+00:05:03,560 --> 00:05:08,500
+me, so return false, it means it doesn't
+have an extension.
+
+70
+00:05:09,572 --> 00:05:14,870
+else, I can say, if extension dot equals.
+
+71
+00:05:14,870 --> 00:05:18,090
+And let's just say I only want it if I
+only
+
+72
+00:05:18,090 --> 00:05:20,590
+want to accept the file if the, if the
+extension's PER.
+
+73
+00:05:20,590 --> 00:05:24,100
+Then I can say return true.
+
+74
+00:05:25,890 --> 00:05:31,440
+And now, where I create the file chooser
+here, I can say, new person file filter.
+
+75
+00:05:31,440 --> 00:05:33,760
+Just passing an object of that class
+there.
+
+76
+00:05:35,500 --> 00:05:41,880
+And if I run this now, I do either export
+or import, can say such percentage
+
+77
+00:05:41,880 --> 00:05:47,700
+page files start appear so this is the
+string that I added to my file filter.
+
+78
+00:05:48,740 --> 00:05:53,930
+And its gonna filter and it gonna let me
+select files with the PER extension.
+
+79
+00:05:53,930 --> 00:05:56,010
+If you want more than one filter codes,
+then
+
+80
+00:05:56,010 --> 00:05:58,430
+you need to add choose file filter
+multiple time.
+
+81
+00:05:58,430 --> 00:06:00,440
+Kinds of different filters that you've
+designed.
+
+82
+00:06:00,440 --> 00:06:04,990
+But here I just want to filter purely on
+PER.
+
+83
+00:06:04,990 --> 00:06:11,060
+So I've actually created a file with a PER
+extension at the moment.
+
+84
+00:06:11,060 --> 00:06:14,400
+And one problem you can see here is that I
+
+85
+00:06:14,400 --> 00:06:17,860
+can't actually select direct to it, which
+is completely useless.
+
+86
+00:06:17,860 --> 00:06:23,050
+Because how can I browse the files that I
+want, and to get around that, you need say
+
+87
+00:06:23,050 --> 00:06:29,487
+here in your file filter, if
+file.isdirectory, then
+
+88
+00:06:29,487 --> 00:06:35,680
+you always wanna return true like this.
+
+89
+00:06:35,680 --> 00:06:42,570
+So, now if I run this and I do file and
+export data, let's say and
+
+90
+00:06:42,570 --> 00:06:49,330
+I can browse to see and in my docs folder
+here, so it's not showing the directories.
+
+91
+00:06:49,330 --> 00:06:53,200
+I created a test up PER and I can select
+that and
+
+92
+00:06:53,200 --> 00:06:56,730
+at the moment it's just outputting the
+thing I've selected down here.
+
+93
+00:06:56,730 --> 00:06:59,660
+So that's it for this tutorial one thing
+that,
+
+94
+00:06:59,660 --> 00:07:01,750
+I, I'm not gonna go through in this series
+of
+
+95
+00:07:01,750 --> 00:07:06,010
+tutorials that you can find on the
+Jfilechooser page
+
+96
+00:07:06,010 --> 00:07:10,870
+of the swing, of the visual guide swing
+components page.
+
+97
+00:07:12,160 --> 00:07:15,740
+Is you can actually out custom panels to
+your
+
+98
+00:07:15,740 --> 00:07:19,410
+file choosers to show like a display of
+your file.
+
+99
+00:07:19,410 --> 00:07:21,414
+But I'm not gonna make use of that here.
+
+100
+00:07:21,414 --> 00:07:24,452
+I'll leave you to look into that for
+yourself.
+
+101
+00:07:24,452 --> 00:07:27,273
+And in the next tutorial we're gonna
+
+102
+00:07:27,273 --> 00:07:31,720
+look at something that's not really swing
+specific.
+
+103
+00:07:31,720 --> 00:07:35,660
+But it's extremely useful if you're
+designing swing applications.
+
+104
+00:07:35,660 --> 00:07:37,050
+And that's we're gonna talk a bit
+
+105
+00:07:37,050 --> 00:07:39,250
+more about the model view controller
+architecture.
+
+106
+00:07:40,450 --> 00:07:43,870
+And in particular we're gonna implement a
+data model here, so
+
+107
+00:07:43,870 --> 00:07:50,700
+that I've got somewhere to actually store
+my database of people, details.
+
+108
+00:07:50,700 --> 00:07:54,520
+So join me again next time, and until next
+time, happy coding.
+

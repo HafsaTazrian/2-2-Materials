@@ -1,0 +1,555 @@
+1
+00:00:01,830 --> 00:00:02,210
+Hi there.
+
+2
+00:00:02,210 --> 00:00:04,810
+This is John from caveofprogramming.com.
+
+3
+00:00:04,810 --> 00:00:08,340
+Welcome back and in this tutorial we're
+gonna
+
+4
+00:00:08,340 --> 00:00:13,270
+look at associating data with with tree
+notes.
+
+5
+00:00:13,270 --> 00:00:18,340
+So so far in this series of tutorials
+we've got this application.
+
+6
+00:00:18,340 --> 00:00:22,420
+That at the moment it has a tree in it, in
+one of the tabs.
+
+7
+00:00:22,420 --> 00:00:27,680
+And in a moment, if I, if I go to this
+tree and click some of the nodes, we can
+
+8
+00:00:27,680 --> 00:00:32,790
+get the text back that was set for that
+particular node.
+
+9
+00:00:33,860 --> 00:00:40,340
+Now that's not really hugely useful
+because you might wanna change the text on
+
+10
+00:00:40,340 --> 00:00:48,500
+a node but without actually changing the
+kind of intrinsic meaning of the node.
+
+11
+00:00:48,500 --> 00:00:52,640
+So usually, if you have some text on the
+node that says, well, in
+
+12
+00:00:52,640 --> 00:00:56,270
+this case New York, you probably want that
+to have an ID that doesn't change.
+
+13
+00:00:56,270 --> 00:00:59,740
+And then if you feel like changing it
+sometime to say, you
+
+14
+00:00:59,740 --> 00:01:05,400
+know, New York hyphen New York state or
+something, I don't know.
+
+15
+00:01:06,500 --> 00:01:10,070
+Then you, you wouldn't want that to screw
+
+16
+00:01:10,070 --> 00:01:11,890
+up your application just cuz you'd changed
+the text.
+
+17
+00:01:11,890 --> 00:01:17,360
+So what you usually wanna do is you wanna
+have an ID, you
+
+18
+00:01:17,360 --> 00:01:21,750
+wanna have some user data that's
+associated with each leaf in you tree.
+
+19
+00:01:21,750 --> 00:01:24,035
+And that's what we're gonna look at here.
+
+20
+00:01:25,090 --> 00:01:30,590
+So, I'm gonna go to my, my tree, panel,
+my,
+
+21
+00:01:30,590 --> 00:01:36,340
+it's actually called message panel here,
+and I'm gonna create a
+
+22
+00:01:36,340 --> 00:01:39,310
+little object here, class that I can use
+to store
+
+23
+00:01:39,310 --> 00:01:44,670
+data that's associated Dated with each,
+leaf, or, or each node.
+
+24
+00:01:44,670 --> 00:01:50,115
+And, so I'll call that class, let's call
+it class node info.
+
+25
+00:01:50,115 --> 00:01:54,260
+In fact let's call it, because these are
+supposed to be server's, in my nodes.
+
+26
+00:01:54,260 --> 00:01:56,580
+So let's call it server, info.
+
+27
+00:01:57,760 --> 00:01:59,690
+This is gonna be pretty simple.
+
+28
+00:01:59,690 --> 00:02:04,406
+And i'm gonna give it a private string
+
+29
+00:02:04,406 --> 00:02:10,160
+name and a private int ID just for the
+moment.
+
+30
+00:02:10,160 --> 00:02:16,800
+And let's give it a constructor that
+allows you to set the set the name and the
+
+31
+00:02:16,800 --> 00:02:23,870
+ID, so server info string name and int id.
+
+32
+00:02:23,870 --> 00:02:33,511
+And I'll say this start name equals name
+and this dot id equals id.
+
+33
+00:02:33,511 --> 00:02:37,224
+And I'm gonna also go and give it a two
+string method.
+
+34
+00:02:37,224 --> 00:02:38,580
+That's [UNKNOWN] and get method.
+
+35
+00:02:38,580 --> 00:02:42,930
+Which is I see is public int gets ID, and
+
+36
+00:02:42,930 --> 00:02:46,760
+that's the scanner, return the ID, and
+that's scanner, this is
+
+37
+00:02:46,760 --> 00:02:52,360
+important, the two stream methods, so I
+want to say public streaming to
+
+38
+00:02:52,360 --> 00:02:57,620
+string, just kinda make that return the
+main here.
+
+39
+00:02:59,720 --> 00:03:02,750
+And this is what's gonna actually display
+in my tree.
+
+40
+00:03:04,400 --> 00:03:07,910
+so, now, when I create the tree, I'm
+
+41
+00:03:07,910 --> 00:03:10,640
+cre, I'm building our default mutable tree
+nodes.
+
+42
+00:03:10,640 --> 00:03:12,980
+I'm actually building it down here, and
+
+43
+00:03:12,980 --> 00:03:15,550
+I'm passing to each default mutable tree
+node.
+
+44
+00:03:15,550 --> 00:03:18,920
+A user object, which so far, is just in a
+stream.
+
+45
+00:03:18,920 --> 00:03:23,030
+But what I can do is financial service, I
+can pass a
+
+46
+00:03:24,320 --> 00:03:29,990
+new server info object using the class
+that I've just created.
+
+47
+00:03:29,990 --> 00:03:32,580
+Let's give New York an ID of zero.
+
+48
+00:03:34,340 --> 00:03:36,460
+And I'll copy this.
+
+49
+00:03:36,460 --> 00:03:39,110
+Paste in wherever I need it.
+
+50
+00:03:39,110 --> 00:03:40,280
+So here, here
+
+51
+00:03:42,580 --> 00:03:44,310
+here, and here.
+
+52
+00:03:44,310 --> 00:03:47,000
+So notice I'm only setting these object to
+
+53
+00:03:47,000 --> 00:03:50,050
+be serving for object on the actual
+leaves.
+
+54
+00:03:50,050 --> 00:03:58,330
+Because I I might decide I want some kind
+of object associated with the countries.
+
+55
+00:03:58,330 --> 00:04:00,730
+The branches in this case.
+
+56
+00:04:00,730 --> 00:04:03,110
+But then again I might not.
+
+57
+00:04:03,110 --> 00:04:04,125
+In this case I don't.
+
+58
+00:04:04,125 --> 00:04:10,470
+So I'm just gonna set surfing for objects,
+user objects on the actual leaves.
+
+59
+00:04:10,470 --> 00:04:15,160
+So I've got New York, Boston, I've got Los
+Angeles
+
+60
+00:04:17,590 --> 00:04:21,170
+London, Edinborough, and I need, I need
+IDs as well.
+
+61
+00:04:21,170 --> 00:04:25,440
+So let's make Boston one, Los Angeles two.
+
+62
+00:04:25,440 --> 00:04:30,640
+And these will probably in the real world,
+come from database, of course.
+
+63
+00:04:30,640 --> 00:04:33,650
+And let's set that equal to.
+
+64
+00:04:33,650 --> 00:04:35,940
+Four, that looks good.
+
+65
+00:04:35,940 --> 00:04:39,060
+And now, I think this is going to pretty
+much work
+
+66
+00:04:39,060 --> 00:04:44,150
+as before, because when someone selects a
+leaf, it gets the
+
+67
+00:04:44,150 --> 00:04:47,920
+user object, and then go to [UNKNOWN] out
+on it, which
+
+68
+00:04:47,920 --> 00:04:51,170
+is going to invoke my two string method
+and user object.
+
+69
+00:04:51,170 --> 00:04:54,660
+So if I look at the tree it renders the
+same as before.
+
+70
+00:04:55,920 --> 00:04:59,820
+And if I select something, I get the same
+text as before.
+
+71
+00:04:59,820 --> 00:05:06,920
+But as a matter of fact the, the leaves
+are actually user object.
+
+72
+00:05:06,920 --> 00:05:13,140
+They're actually these server info objects
+now and not strings.
+
+73
+00:05:13,140 --> 00:05:16,690
+So, every note has a user object
+associated with it.
+
+74
+00:05:16,690 --> 00:05:20,690
+You pass that user object in when you call
+the constructor.
+
+75
+00:05:20,690 --> 00:05:24,870
+When you constructor default mutable tree
+note by this.
+
+76
+00:05:24,870 --> 00:05:26,600
+So this is the user object.
+
+77
+00:05:26,600 --> 00:05:29,350
+Before I used strings, now I'm using these
+server info objects.
+
+78
+00:05:29,350 --> 00:05:35,010
+Objects, just for the leaps, now what I
+can do is, when I respond to an,
+
+79
+00:05:35,010 --> 00:05:41,096
+like, a tree selection event, I could say
+if user object
+
+80
+00:05:41,096 --> 00:05:47,250
+instance of sever info.
+
+81
+00:05:47,250 --> 00:05:49,840
+Which is the class I just made.
+
+82
+00:05:49,840 --> 00:05:53,580
+Then I could say server info.
+
+83
+00:05:53,580 --> 00:05:58,730
+I could cast the user object to a server
+info user object.
+
+84
+00:05:58,730 --> 00:06:00,530
+Like this.
+
+85
+00:06:00,530 --> 00:06:02,000
+Let's cast it.
+
+86
+00:06:02,000 --> 00:06:03,960
+And then I can call the method getID.
+
+87
+00:06:03,960 --> 00:06:04,820
+Like that.
+
+88
+00:06:04,820 --> 00:06:11,860
+And say int ID equals call the ID method
+and I could return
+
+89
+00:06:11,860 --> 00:06:19,571
+instead of doing sysout on the user object
+I could like say sysout.
+
+90
+00:06:19,571 --> 00:06:26,230
+And got, let's say, got user object with
+ID
+
+91
+00:06:28,580 --> 00:06:29,610
+plus ID.
+
+92
+00:06:29,610 --> 00:06:33,669
+So, just, just to show you that I'm really
+gonna use object for leaves.
+
+93
+00:06:33,669 --> 00:06:37,770
+So, for the, makes no difference for the
+nodes, cuz they're still strings.
+
+94
+00:06:37,770 --> 00:06:38,380
+They're strings.
+
+95
+00:06:38,380 --> 00:06:41,090
+But if I look at the leaves, that's
+actually
+
+96
+00:06:41,090 --> 00:06:43,570
+a user object, and I'm getting my IDs back
+now.
+
+97
+00:06:44,950 --> 00:06:47,570
+And this, this, the text up here is under
+user.
+
+98
+00:06:47,570 --> 00:06:50,520
+Is this stuff here.
+
+99
+00:06:50,520 --> 00:06:57,340
+So I could say, ID plus name like that.
+
+100
+00:06:57,340 --> 00:06:58,830
+If I return the ID in the two
+
+101
+00:06:58,830 --> 00:07:02,740
+string method, instead of doing this, for
+example.
+
+102
+00:07:02,740 --> 00:07:09,440
+Let's have a look at this actually and
+that will, if I now run this.
+
+103
+00:07:09,440 --> 00:07:14,030
+So, again, when I select the branches,
+then it sends before.
+
+104
+00:07:14,030 --> 00:07:16,510
+But if I go, and I select the nodes.
+
+105
+00:07:16,510 --> 00:07:22,570
+Well, selecting them will print them out
+using the two string method.
+
+106
+00:07:22,570 --> 00:07:25,150
+And also, the two string method is also
+used
+
+107
+00:07:25,150 --> 00:07:28,490
+to display the actual leaf, as you can
+see.
+
+108
+00:07:28,490 --> 00:07:30,690
+So I've the ID and the leaf.
+
+109
+00:07:30,690 --> 00:07:33,490
+But now, for the moment, I'm gonna change
+that back to
+
+110
+00:07:33,490 --> 00:07:35,760
+how it was, cuz I just wanna return the
+name there.
+
+111
+00:07:37,270 --> 00:07:42,390
+And in the next tutorial well, if, in, in
+a future tutorial, we're
+
+112
+00:07:42,390 --> 00:07:46,730
+actually gonna look soon at how using
+these eavesdrop checks, so you can store
+
+113
+00:07:46,730 --> 00:07:50,950
+the state of a leaf and you can have, you
+can turn the
+
+114
+00:07:50,950 --> 00:07:54,700
+leaf into a chat box that you can click on
+and off for example.
+
+115
+00:07:54,700 --> 00:08:00,180
+But in the next tutorial we're gonna look
+at using custom renderers for your leaves,
+
+116
+00:08:00,180 --> 00:08:04,530
+and we're gonna render these leave's in a
+different way other than using this
+
+117
+00:08:05,910 --> 00:08:10,550
+this kind of default icon with a string.
+
+118
+00:08:10,550 --> 00:08:14,300
+So we're gonna change that and have our
+own renderer for the leaf.
+
+119
+00:08:14,300 --> 00:08:18,100
+So join me again for next time, and until
+then, happy coding.
+

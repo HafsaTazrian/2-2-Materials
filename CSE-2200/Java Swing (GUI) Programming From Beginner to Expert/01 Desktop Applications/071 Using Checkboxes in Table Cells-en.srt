@@ -1,0 +1,482 @@
+1
+00:00:01,820 --> 00:00:02,510
+Hello.
+
+2
+00:00:02,510 --> 00:00:08,850
+In this tutorial we're gonna have a look
+at using check boxes in tables.
+
+3
+00:00:08,850 --> 00:00:12,930
+And to use a check box in a table is
+actually pretty simple
+
+4
+00:00:12,930 --> 00:00:14,990
+but it's gonna introduce another little
+
+5
+00:00:14,990 --> 00:00:18,600
+concept that's useful to know about
+tables.
+
+6
+00:00:18,600 --> 00:00:24,320
+At the same time, so at the moment in this
+
+7
+00:00:24,320 --> 00:00:30,540
+table we've got a U.S. citizen, which is a
+column, which is either true or false and
+
+8
+00:00:30,540 --> 00:00:33,700
+I'm gonna change that to use a check box,
+so obviously you can
+
+9
+00:00:33,700 --> 00:00:37,780
+tick it, if it's true and it's gonna be
+not ticked, if it's false.
+
+10
+00:00:38,960 --> 00:00:46,930
+Now to do that let's go to the table model
+and actually it's in GUI.
+
+11
+00:00:46,930 --> 00:00:53,780
+So we've got this person, table model.
+
+12
+00:00:53,780 --> 00:00:56,880
+Which is in the GUI package cuz it's a
+kind of a
+
+13
+00:00:56,880 --> 00:01:00,890
+model for GUI component, rather than the
+data, proper data model and such.
+
+14
+00:01:02,040 --> 00:01:06,510
+And we've got, let's maximize the editor
+here.
+
+15
+00:01:06,510 --> 00:01:08,513
+We've got this column at the end,
+
+16
+00:01:08,513 --> 00:01:12,490
+U.S. citizen and that's, that's column
+let's see.
+
+17
+00:01:12,490 --> 00:01:17,440
+So, looking at previous code we've written
+here, that's column number 5.
+
+18
+00:01:17,440 --> 00:01:23,200
+Now what I need to do is, there's going to
+be a couple of things here.
+
+19
+00:01:23,200 --> 00:01:29,450
+But firstly I need to right click here and
+go to Source > Override Implement Methods
+
+20
+00:01:29,450 --> 00:01:35,270
+and there is this getCommonClass method
+here, so I'm gonna override that.
+
+21
+00:01:36,370 --> 00:01:40,070
+And so we're overriding a method of the
+abstract table
+
+22
+00:01:40,070 --> 00:01:45,032
+model here, and all table models have to
+have this method.
+
+23
+00:01:45,032 --> 00:01:51,030
+And getCommonClass has this funny return
+type class brackets question mark.
+
+24
+00:01:51,030 --> 00:01:53,690
+And that's saying basically we need to
+return
+
+25
+00:01:53,690 --> 00:01:59,580
+a class an object of type class and class
+
+26
+00:01:59,580 --> 00:02:02,430
+is a template class, it gets awfully
+confusing
+
+27
+00:02:02,430 --> 00:02:04,440
+but this is simpler than it looks once you
+
+28
+00:02:04,440 --> 00:02:07,440
+see how it actually works and I'm going
+
+29
+00:02:07,440 --> 00:02:09,510
+to put in here, this is actually, this
+argument's
+
+30
+00:02:09,510 --> 00:02:16,280
+actually column and I'm going to do switch
+on column and we're going to have a bunch
+
+31
+00:02:16,280 --> 00:02:18,430
+of cases here and actually.
+
+32
+00:02:18,430 --> 00:02:21,910
+This is gonna be pretty similar to this
+switch, you can get the value of that.
+
+33
+00:02:21,910 --> 00:02:24,870
+So I'm just gonna use that, let's copy
+that.
+
+34
+00:02:25,910 --> 00:02:29,090
+And paste it in up here and I can use this
+as a guide.
+
+35
+00:02:30,970 --> 00:02:33,949
+Now, okay so the first column, column
+zero.
+
+36
+00:02:35,180 --> 00:02:38,100
+Well, yes, I'm gonna return to class for
+each of these columns and that
+
+37
+00:02:38,100 --> 00:02:45,440
+is gonna actually cause the is U.S.
+citizen to render as a check box.
+
+38
+00:02:45,440 --> 00:02:48,658
+And if we return boolean for this class,
+it's
+
+39
+00:02:48,658 --> 00:02:52,930
+gonna, it's gonna render this check box in
+a table.
+
+40
+00:02:52,930 --> 00:02:56,140
+And a table renders a bunch of default
+types in different ways and
+
+41
+00:02:56,140 --> 00:02:57,335
+the main ones have string in it,
+
+42
+00:02:57,335 --> 00:03:01,640
+string numerical values which is aligned
+differently.
+
+43
+00:03:01,640 --> 00:03:04,760
+And then these boolean values have a check
+box.
+
+44
+00:03:04,760 --> 00:03:06,536
+So let's just have a look at how that
+works.
+
+45
+00:03:06,536 --> 00:03:09,952
+So for get idea, I'm gonna return integer.
+
+46
+00:03:09,952 --> 00:03:11,312
+[SOUND].
+
+47
+00:03:11,312 --> 00:03:13,039
+And, well that's my window closing.
+
+48
+00:03:13,039 --> 00:03:16,072
+I thought it was a gun going off for a
+minute, but luckily it wasn't.
+
+49
+00:03:16,072 --> 00:03:20,671
+Okay, and for name I need to return
+String.class
+
+50
+00:03:20,671 --> 00:03:26,130
+and this .class just returns an object of
+type class.
+
+51
+00:03:26,130 --> 00:03:33,670
+Class is confusingly a class in Java and
+yeah, get occupation.
+
+52
+00:03:33,670 --> 00:03:37,470
+I, again, I'm just gonna return string for
+moment for most of these.
+
+53
+00:03:37,470 --> 00:03:40,370
+So a little later I'm going to look at how
+you can
+
+54
+00:03:40,370 --> 00:03:45,502
+put combo boxes in tables and then we'll
+return something other than string.
+
+55
+00:03:45,502 --> 00:03:46,873
+So string there.
+
+56
+00:03:46,873 --> 00:03:48,670
+And string and taxID.
+
+57
+00:03:48,670 --> 00:03:50,590
+Let's see taxID.
+
+58
+00:03:50,590 --> 00:03:55,160
+GetTaxID is returning what?
+
+59
+00:03:55,160 --> 00:03:58,610
+It's returning, hover my mouse so it
+returning strings.
+
+60
+00:03:58,610 --> 00:03:59,918
+So let's make that a string as well.
+
+61
+00:03:59,918 --> 00:04:03,560
+So return String.class and here's the
+
+62
+00:04:03,560 --> 00:04:06,150
+bit that's particularly relevant to this
+tutorial.
+
+63
+00:04:06,150 --> 00:04:11,999
+For each U.S citizen I'm gonna say return
+Boolean, capital B .class,
+
+64
+00:04:11,999 --> 00:04:18,700
+like that and if you return a, yeah I need
+target default value there.
+
+65
+00:04:18,700 --> 00:04:20,499
+Although it shouldn't be anymore cons.
+
+66
+00:04:21,650 --> 00:04:25,690
+This, this collection never be more than
+six but Java's
+
+67
+00:04:25,690 --> 00:04:28,030
+gonna say you know, what if it is more
+than six?
+
+68
+00:04:28,030 --> 00:04:29,840
+You gotta return to something.
+
+69
+00:04:29,840 --> 00:04:32,650
+So then I'll just return null.
+
+70
+00:04:32,650 --> 00:04:33,740
+I think that will work.
+
+71
+00:04:33,740 --> 00:04:34,470
+Yeah return null.
+
+72
+00:04:35,650 --> 00:04:41,720
+Now okay, let's run that and now we can
+see already that we've got the this
+
+73
+00:04:41,720 --> 00:04:48,790
+boolean column which we return
+Boolean.class is rendering as a checkbox.
+
+74
+00:04:48,790 --> 00:04:51,710
+But we can't actually tick it or untick
+it.
+
+75
+00:04:51,710 --> 00:04:58,655
+To make it editable, we've got to go to is
+setEditable
+
+76
+00:04:58,655 --> 00:05:06,020
+and say case 5 return true, that's for
+column 5 you want it to be editable.
+
+77
+00:05:06,020 --> 00:05:12,097
+We also need to store the values, so I am
+going to say here in setValue at
+
+78
+00:05:12,097 --> 00:05:19,060
+case 5 person.setUSCitizens
+
+79
+00:05:19,060 --> 00:05:22,540
+and that's gonna be now boolean value.
+
+80
+00:05:23,550 --> 00:05:26,080
+So we're gonna cast the value that were
+passed in here
+
+81
+00:05:26,080 --> 00:05:30,980
+to a boolean cuz that's what it's gonna
+be, basically boolean.
+
+82
+00:05:30,980 --> 00:05:31,550
+There we go.
+
+83
+00:05:31,550 --> 00:05:32,570
+That'll do that trick.
+
+84
+00:05:32,570 --> 00:05:38,820
+If I run that now, we've got, let's take
+Sue and say Sue's your citizen.
+
+85
+00:05:38,820 --> 00:05:42,490
+And just to prove it works, I just reload
+the data.
+
+86
+00:05:43,550 --> 00:05:45,640
+It didn't seem to work actually.
+
+87
+00:05:45,640 --> 00:05:46,250
+Let's take that.
+
+88
+00:05:46,250 --> 00:05:48,220
+Oh yeah, I forgot to save it.
+
+89
+00:05:48,220 --> 00:05:50,560
+Save the data, then refresh.
+
+90
+00:05:50,560 --> 00:05:54,540
+And we can see that the check has remained
+checked.
+
+91
+00:05:54,540 --> 00:05:56,550
+And I'll run it again and just-
+
+92
+00:05:56,550 --> 00:05:57,050
+There you go.
+
+93
+00:05:57,050 --> 00:05:59,330
+You can see it still ticked there.
+
+94
+00:05:59,330 --> 00:06:02,450
+So, pretty minimal work to get a check box
+in your table.
+
+95
+00:06:02,450 --> 00:06:05,950
+You just need to return the boolean value
+for that column.
+
+96
+00:06:05,950 --> 00:06:09,540
+Boolean.class must be returned and get
+column class.
+
+97
+00:06:10,740 --> 00:06:12,980
+And you've gotta insert editable.
+
+98
+00:06:12,980 --> 00:06:16,564
+You need to, is that, sorry,
+isCellEditable
+
+99
+00:06:16,564 --> 00:06:20,400
+you gotta return true for that column.
+
+100
+00:06:20,400 --> 00:06:24,560
+And finally you probably want to provide a
+set value at method.
+
+101
+00:06:24,560 --> 00:06:30,470
+A set value at code, some code for set
+value at for that
+
+102
+00:06:30,470 --> 00:06:34,500
+column so that you can literally set the
+value in your date model [UNKNOWN].
+
+103
+00:06:34,500 --> 00:06:39,610
+That's all for this tutorial and join me
+again next time.
+
+104
+00:06:39,610 --> 00:06:41,500
+And until then happy coding.
+

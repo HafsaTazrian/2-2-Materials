@@ -1,0 +1,490 @@
+1
+00:00:01,410 --> 00:00:04,332
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:04,332 --> 00:00:08,660
+And in this tutorial, we're gonna look at
+tree icons and changing them.
+
+3
+00:00:08,660 --> 00:00:10,730
+So I've got this tree here, and there are
+
+4
+00:00:10,730 --> 00:00:14,380
+actually three kinds of icon, icons on
+this tree.
+
+5
+00:00:14,380 --> 00:00:18,638
+There are the icons that represent open
+nodes, like this one.
+
+6
+00:00:18,638 --> 00:00:21,011
+And the icons that represent closed nodes
+like this
+
+7
+00:00:21,011 --> 00:00:23,990
+one, which are actually the same in this
+tree.
+
+8
+00:00:23,990 --> 00:00:28,120
+And there are the icons that represent
+leaves, like these paper icons here.
+
+9
+00:00:28,120 --> 00:00:29,890
+And I'm gonna change all of those.
+
+10
+00:00:30,970 --> 00:00:35,150
+So I'm gonna look at, I'm gonna use the
+graphics from the Java
+
+11
+00:00:35,150 --> 00:00:40,770
+look and feel Sun graphics repository jar
+that we've used previously for tool bar.
+
+12
+00:00:40,770 --> 00:00:44,640
+And I've unset that here and I'm gonna use
+these three components.
+
+13
+00:00:44,640 --> 00:00:48,440
+I'm gonna use Server 16 for the leaf,
+because my
+
+14
+00:00:48,440 --> 00:00:51,090
+notes are supposed to set kind of a
+message service here.
+
+15
+00:00:51,090 --> 00:00:55,680
+And I'll use the web component, add 16.gif
+with a plus sign on
+
+16
+00:00:55,680 --> 00:01:01,290
+it for the closed modes and the web
+components 16 for the open modes.
+
+17
+00:01:01,290 --> 00:01:03,860
+So let's select those, and let's drag
+them.
+
+18
+00:01:05,252 --> 00:01:07,460
+Crtl + Select.
+
+19
+00:01:07,460 --> 00:01:10,330
+Let's drag them into my images package
+now.
+
+20
+00:01:11,340 --> 00:01:14,559
+And now to load these images, I'm gonna
+use a
+
+21
+00:01:14,559 --> 00:01:20,400
+little convenience message, method, that I
+created for my toolbar here.
+
+22
+00:01:20,400 --> 00:01:23,890
+Because the toolbar has got a great image
+icon.
+
+23
+00:01:23,890 --> 00:01:31,910
+And that just, gets results and loads the
+image, and return to URL.
+
+24
+00:01:31,910 --> 00:01:35,770
+And then up at this error message that the
+URL is null.
+
+25
+00:01:35,770 --> 00:01:38,130
+Which is really the main purpose of this,
+rather
+
+26
+00:01:38,130 --> 00:01:40,830
+than doing it all in one line, as I could.
+
+27
+00:01:40,830 --> 00:01:44,960
+And then it creates an image icon with
+that URL which just returns the icon.
+
+28
+00:01:44,960 --> 00:01:48,970
+And I'm just gonna cut that from there,
+from the toolbar class,
+
+29
+00:01:48,970 --> 00:01:52,360
+and I'm gonna go to my utils class where I
+implemented this.
+
+30
+00:01:52,360 --> 00:01:53,630
+Get file extension.
+
+31
+00:01:53,630 --> 00:01:54,860
+That's a paste in there.
+
+32
+00:01:54,860 --> 00:01:59,020
+I'm gonna make it public static, and then
+since we can't
+
+33
+00:01:59,020 --> 00:02:03,960
+do get class, and static method, I'm just
+going to do systems.getClass.
+
+34
+00:02:03,960 --> 00:02:07,290
+That'll do the trick, or it should do
+anyway.
+
+35
+00:02:07,290 --> 00:02:09,200
+System.getClass.
+
+36
+00:02:09,200 --> 00:02:09,910
+Let's have a look,
+
+37
+00:02:13,450 --> 00:02:21,230
+that should be fine, let's try
+system.getResults.
+
+38
+00:02:21,230 --> 00:02:23,661
+Actually I don't, I don't know why
+system.getClass wouldn't work.
+
+39
+00:02:23,661 --> 00:02:32,340
+Let's try system.getClass, system.class,
+let's try system.class.
+
+40
+00:02:32,340 --> 00:02:33,330
+Work this out in the end.
+
+41
+00:02:33,330 --> 00:02:35,130
+All we need is a reference to a class.
+
+42
+00:02:37,680 --> 00:02:38,890
+that, yeah, there we go.
+
+43
+00:02:38,890 --> 00:02:43,698
+So, this does the trick,
+system.class.getResults.
+
+44
+00:02:43,698 --> 00:02:50,560
+GetResults is a method of the class,
+class, so I just needed a class there.
+
+45
+00:02:50,560 --> 00:02:53,530
+I suppose I could use image icon.class,
+but it
+
+46
+00:02:53,530 --> 00:02:56,500
+doesn't matter, okay, let's leave that,
+that does the trick.
+
+47
+00:02:56,500 --> 00:02:57,429
+And if I run this.
+
+48
+00:02:59,010 --> 00:03:01,790
+after, yeah, this change the toolbar now,
+to use that method.
+
+49
+00:03:02,890 --> 00:03:06,300
+So I need to go to, instead of saying just
+
+50
+00:03:06,300 --> 00:03:12,890
+create icons now utils and create icon,
+and utils.create icon.
+
+51
+00:03:12,890 --> 00:03:14,042
+Lets just run that.
+
+52
+00:03:14,042 --> 00:03:16,770
+To check that I've haven't got anything
+screwed up.
+
+53
+00:03:16,770 --> 00:03:19,970
+And so I've still got icons on the
+toolbar, so that's good.
+
+54
+00:03:19,970 --> 00:03:25,888
+And now in my message panel, where I
+create that tree.
+
+55
+00:03:25,888 --> 00:03:34,241
+I'm gonna, on the tree, I, I'm gonna
+first, create a private,
+
+56
+00:03:34,241 --> 00:03:41,460
+default tree cell renderer,
+DefaultTreeCellRenderer.
+
+57
+00:03:41,460 --> 00:03:47,390
+And I'll call that treeRenderer, let's
+call that.
+
+58
+00:03:47,390 --> 00:03:49,810
+It's actually treeCellRenderer I suppose
+strictly speaking.
+
+59
+00:03:50,880 --> 00:03:52,880
+And here before I create the
+
+60
+00:03:52,880 --> 00:03:58,520
+tree, I say treeRenderer equals new
+DefaultTreeCellRenderer.
+
+61
+00:03:58,520 --> 00:04:04,180
+And the advantage of doing that is later
+on I can say
+
+62
+00:04:04,180 --> 00:04:10,761
+serverTree, after I've created the
+j-tree.set CellRenderor.
+
+63
+00:04:10,761 --> 00:04:14,213
+Here we go, and I can set that to my
+treeRenderor, and a
+
+64
+00:04:14,213 --> 00:04:19,560
+tree, the tree cell rederor, actually I
+think I will call this treeCellRenderor.
+
+65
+00:04:19,560 --> 00:04:21,453
+Because it's confusing calling it a tree
+
+66
+00:04:21,453 --> 00:04:24,160
+renderor when it's really a tree cell
+renderor.
+
+67
+00:04:24,160 --> 00:04:27,688
+The treeCellRenderer, the
+DefaultTreeCellRenderer is what
+
+68
+00:04:27,688 --> 00:04:30,380
+normally renders your tree nodes and
+leaves.
+
+69
+00:04:30,380 --> 00:04:35,320
+So if I run that, it's not gonna be any
+different from before, hopefully.
+
+70
+00:04:35,320 --> 00:04:36,420
+There we go.
+
+71
+00:04:36,420 --> 00:04:39,510
+But now what I can do is I can say
+
+72
+00:04:39,510 --> 00:04:44,957
+I can say I can set the icons using my
+treeCellRenderer.
+
+73
+00:04:44,957 --> 00:04:51,725
+So I say treeCellRenderer, and let's do,
+for starts, set,
+
+74
+00:04:51,725 --> 00:04:58,550
+and, whoops, setLeafIcon, and then I can
+use my utils.
+
+75
+00:04:58,550 --> 00:05:03,671
+Get.CreateIcon and pass in the path there.
+
+76
+00:05:03,671 --> 00:05:08,436
+Which is gonna be /images/ and as long as
+these images are somewhere
+
+77
+00:05:08,436 --> 00:05:12,638
+on the class path and in images sub
+folder, is gonna be good.
+
+78
+00:05:12,638 --> 00:05:21,230
+And I set that to server16.gif, then we'll
+run that, we'll take a look at it.
+
+79
+00:05:22,480 --> 00:05:28,180
+So, now in my tree, I've got this server
+icon, which is rather nice.
+
+80
+00:05:28,180 --> 00:05:37,046
+And I can also say treeCellRenderer.set,
+OpenIcon.
+
+81
+00:05:37,046 --> 00:05:40,550
+And for that I'm gonna use it's gonna look
+almost
+
+82
+00:05:40,550 --> 00:05:44,900
+the same as this actually, let's just copy
+that line there.
+
+83
+00:05:44,900 --> 00:05:53,072
+And I'm going to set that to,
+webComponent16.gif,
+
+84
+00:05:53,072 --> 00:05:59,822
+so, let's make that webComponent16.gif.
+
+85
+00:05:59,822 --> 00:06:02,760
+And if I run that, let's check that that
+works.
+
+86
+00:06:02,760 --> 00:06:05,160
+So, there we go, that's rather nice.
+
+87
+00:06:06,666 --> 00:06:12,156
+and, I'm also going to, so this
+represents, opened
+
+88
+00:06:12,156 --> 00:06:16,790
+kinda node and closed nodes is still like
+that.
+
+89
+00:06:16,790 --> 00:06:21,250
+And I'm also gonna set the close nodes, as
+well, so now I command those.
+
+90
+00:06:21,250 --> 00:06:26,630
+Let's say setCloseIcon, setCloseIcon.
+
+91
+00:06:28,070 --> 00:06:29,460
+There we go, get into that bracket.
+
+92
+00:06:29,460 --> 00:06:36,450
+And, on this set up to
+webComponentadd16.gif,
+
+93
+00:06:36,450 --> 00:06:42,202
+and if I run that now with a bit of luck,
+and go to my tree and there we are.
+
+94
+00:06:42,202 --> 00:06:44,860
+Can expand these nodes and here are my
+servers.
+
+95
+00:06:46,430 --> 00:06:52,002
+And now in the next tutorial we're gonna
+be customizing these leaves completely.
+
+96
+00:06:52,002 --> 00:06:56,290
+So instead of having like the server icons
+there, though they do look rather nice.
+
+97
+00:06:56,290 --> 00:07:02,130
+We're gonna look at how you can make those
+look how you can use your own component.
+
+98
+00:07:02,130 --> 00:07:08,135
+And and finally this is gonna be step
+towards having our own editors in there.
+
+99
+00:07:08,135 --> 00:07:12,240
+So that we can tick and untick these
+components.
+
+100
+00:07:12,240 --> 00:07:17,360
+So next tutorial we'll change these leaves
+
+101
+00:07:17,360 --> 00:07:20,810
+to be rendered by a completely custom
+component.
+
+102
+00:07:20,810 --> 00:07:24,055
+So join me again then and until next time,
+happy coding.
+
+103
+00:07:24,055 --> 00:07:24,327
+[SOUND]
+

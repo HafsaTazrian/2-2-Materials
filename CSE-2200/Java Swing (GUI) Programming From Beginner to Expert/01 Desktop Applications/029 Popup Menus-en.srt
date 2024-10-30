@@ -1,0 +1,469 @@
+1
+00:00:01,720 --> 00:00:05,490
+Hello, this is John from
+caveofprogramming.com and in
+
+2
+00:00:05,490 --> 00:00:09,360
+this tutorial we're gonna look at pop-up
+menus.
+
+3
+00:00:09,360 --> 00:00:13,910
+So, if I run my application here, what I'm
+gonna do
+
+4
+00:00:13,910 --> 00:00:17,810
+is, I've got I've got some data that I
+saved earlier.
+
+5
+00:00:19,230 --> 00:00:23,440
+And I'm gonna add a pop-up menu to this
+table
+
+6
+00:00:23,440 --> 00:00:29,250
+so I can right-click and delete rows from
+this table.
+
+7
+00:00:29,250 --> 00:00:35,350
+Now actually, the first thing I'll do is,
+let's just add a accelerator to
+
+8
+00:00:36,410 --> 00:00:42,740
+to the input, of action in the menu,
+because it's gonna
+
+9
+00:00:42,740 --> 00:00:48,840
+otherwise, drive me a bit crazy
+continually selecting that menu item.
+
+10
+00:00:48,840 --> 00:00:55,280
+So, I'm gonna go to import item, keystroke
+get keystroke.
+
+11
+00:00:55,280 --> 00:01:00,590
+And I'm gonna set accelerator to I, with
+the control mast.
+
+12
+00:01:00,590 --> 00:01:05,840
+So, Ctrl+I cuz it's now gonna import data.
+
+13
+00:01:05,840 --> 00:01:10,090
+So if I run this and do Ctrl+I, I can
+select my file here.
+
+14
+00:01:10,090 --> 00:01:10,576
+And there we go.
+
+15
+00:01:10,576 --> 00:01:17,520
+So pop-up menus are pretty similar to
+ordinary menus,
+
+16
+00:01:17,520 --> 00:01:19,860
+and let's have a look at the table panel
+here.
+
+17
+00:01:19,860 --> 00:01:24,010
+I'm gonna give the table panel an instance
+of private
+
+18
+00:01:24,010 --> 00:01:28,560
+and instead of JMenu, or MenuBar, it's
+gonna be JPopupMenu.
+
+19
+00:01:31,320 --> 00:01:35,090
+And this is something called a Pop up.
+
+20
+00:01:35,090 --> 00:01:40,230
+And this is gonna be pretty similar to the
+stuff we looked at in a tutorial on menus.
+
+21
+00:01:40,230 --> 00:01:46,146
+So in the constructorate table panel here,
+I am gonna say
+
+22
+00:01:46,146 --> 00:01:51,512
+pop-up equals newjpopupmenu,
+
+23
+00:01:51,512 --> 00:01:55,616
+and I'm gonna give that just one menu
+item.
+
+24
+00:01:55,616 --> 00:02:04,020
+I'll say JMenuItem and then I'll call this
+removeItem equals new JMenuItem.
+
+25
+00:02:04,020 --> 00:02:08,810
+And let's say that I will say delete row,
+cuz it's gonna a delete
+
+26
+00:02:08,810 --> 00:02:13,410
+a row from my table, and I'll add that to
+the pop up menu.
+
+27
+00:02:13,410 --> 00:02:16,875
+So I'll say popup.add removeItem.
+
+28
+00:02:16,875 --> 00:02:20,875
+[BLANK_AUDIO]
+
+29
+00:02:20,875 --> 00:02:28,870
+Now to to show this menu item, all I've
+got to do is call popup.show basically.
+
+30
+00:02:28,870 --> 00:02:32,830
+But there are a few complications here
+because I want this
+
+31
+00:02:32,830 --> 00:02:37,660
+pop up to pop up when I right click the
+table.
+
+32
+00:02:37,660 --> 00:02:41,100
+So I'll go to the table, and
+
+33
+00:02:41,100 --> 00:02:47,130
+I'll say table top, at MouseListener, at
+MouseListener.
+
+34
+00:02:48,320 --> 00:02:54,760
+And MouseListener, you can actually, use
+like the, MouseListener interface, and
+
+35
+00:02:54,760 --> 00:03:00,181
+do for example, new MouseListener, or make
+a panel here, implement MouseListener.
+
+36
+00:03:00,181 --> 00:03:05,210
+But MouseListener has a lot of different
+methods in
+
+37
+00:03:05,210 --> 00:03:08,290
+temperament and we only really want the
+mass clipped.
+
+38
+00:03:08,290 --> 00:03:10,780
+So instead, I'll use a class called
+MouseAdapter.
+
+39
+00:03:10,780 --> 00:03:13,850
+And here I'll say, New Mouse Adapter.
+
+40
+00:03:13,850 --> 00:03:19,301
+And MouseAdapter is like a default
+implementation of MouseListener,
+
+41
+00:03:19,301 --> 00:03:23,985
+except that you can just override the
+methods that you just need,
+
+42
+00:03:23,985 --> 00:03:29,430
+rather than having to implement all of the
+MouseListener methods.
+
+43
+00:03:29,430 --> 00:03:35,820
+So, if I right click here and go to
+Source, Overwrite implement methods.
+
+44
+00:03:35,820 --> 00:03:41,920
+I can overwrite the mouse clicked pressed
+events.
+
+45
+00:03:41,920 --> 00:03:42,890
+That should do the trick.
+
+46
+00:03:44,536 --> 00:03:50,700
+Mouse press and then here, let's delete
+some of this slightly superfluous stuff.
+
+47
+00:03:52,750 --> 00:03:56,525
+I only want to bring up the menu, the
+
+48
+00:03:56,525 --> 00:03:59,930
+pop-up menu if someone clicks the right
+mouse button.
+
+49
+00:04:00,960 --> 00:04:03,297
+So I'm gonna say if e.
+
+50
+00:04:03,297 --> 00:04:10,621
+getbutton equals mouseevent.button3.
+
+51
+00:04:10,621 --> 00:04:15,330
+Because the right button is button three,
+even if you've only got
+
+52
+00:04:15,330 --> 00:04:18,720
+two buttons on your mouse, cuz there could
+be a middle button.
+
+53
+00:04:18,720 --> 00:04:23,770
+And I'll say, popup.show, and now I want
+
+54
+00:04:23,770 --> 00:04:27,220
+to show my, you'll notice here there's
+actually two
+
+55
+00:04:27,220 --> 00:04:29,440
+deprecated methods that we don't use
+anymore, and
+
+56
+00:04:29,440 --> 00:04:31,420
+this is show, one that we do use here.
+
+57
+00:04:32,708 --> 00:04:35,994
+And the first argument to that, is a
+reference to the
+
+58
+00:04:35,994 --> 00:04:40,120
+component that the pop up belongs to,
+which is gonna be myTable.
+
+59
+00:04:42,090 --> 00:04:47,369
+And then, after that, we wanna pass on the
+x and y half, we're
+
+60
+00:04:47,369 --> 00:04:52,188
+to actually show the menu, and that's
+gonna be e.getx and so
+
+61
+00:04:52,188 --> 00:04:57,490
+that's, e is the Mouse event, and x is
+gonna be the location.
+
+62
+00:04:58,540 --> 00:05:04,101
+Where I right click, and that's the e.get,
+Y, getY, like this,
+
+63
+00:05:04,101 --> 00:05:09,573
+and now if I run this, and let's do
+control I, that's the accelerator I
+
+64
+00:05:09,573 --> 00:05:15,136
+added, and import some data, and right
+click, then I get this Delete Row
+
+65
+00:05:15,136 --> 00:05:21,010
+pop up menu, and of course you can add
+sub-menus or whatever you like.
+
+66
+00:05:21,010 --> 00:05:25,780
+More, more data writing style menu, just
+as you can with a normal menu.
+
+67
+00:05:25,780 --> 00:05:28,300
+Now, in the next tutorial, we're gonna
+look at
+
+68
+00:05:28,300 --> 00:05:33,610
+selecting rows in this table, and we're
+gonna make
+
+69
+00:05:33,610 --> 00:05:38,590
+it so that if you right-click on a row, it
+gets selected and you can then delete it.
+
+70
+00:05:40,380 --> 00:05:41,530
+And join me again then.
+
+71
+00:05:41,530 --> 00:05:45,360
+And there's just one thing that I, I
+wanna, very quickly
+
+72
+00:05:45,360 --> 00:05:49,269
+mention here, that I sort of omitted from
+the last tutorial
+
+73
+00:05:49,269 --> 00:05:53,646
+on Serialization, which is that in case
+you wonder, what Eclipse
+
+74
+00:05:53,646 --> 00:05:57,263
+often asks you if you wanna add this
+serial version ID.
+
+75
+00:05:57,263 --> 00:06:02,138
+And you only really need that, on well you
+don't really need it anywhere,
+
+76
+00:06:02,138 --> 00:06:07,530
+but it's good if you have it to, for
+example, my password here is serializable.
+
+77
+00:06:07,530 --> 00:06:12,981
+And, so in the last tutorial we looked at
+saving that to a file, and then restoring
+
+78
+00:06:12,981 --> 00:06:18,827
+it using Serialization, and this serial
+version UID, what happen is, if you save
+
+79
+00:06:18,827 --> 00:06:21,039
+a class, an object to a file, and
+
+80
+00:06:21,039 --> 00:06:24,673
+then restore it using serialization, Java
+will check
+
+81
+00:06:24,673 --> 00:06:27,754
+that the serial version UID matches, and
+will
+
+82
+00:06:27,754 --> 00:06:31,310
+throw an exception if if it doesn't match.
+
+83
+00:06:32,510 --> 00:06:37,450
+And if you don't implement it here, and
+you serialized an object, it
+
+84
+00:06:37,450 --> 00:06:40,560
+could be apparently theoretically on
+different Java
+
+85
+00:06:40,560 --> 00:06:42,910
+platforms, on different platforms I should
+say.
+
+86
+00:06:44,000 --> 00:06:49,210
+The generated serial version UID behind
+the scenes, will match so
+
+87
+00:06:49,210 --> 00:06:52,860
+you could have an exception when you
+restore your serialized object.
+
+88
+00:06:54,320 --> 00:06:58,998
+Because Java will think it's a different,
+kind of, object, even if it isn't.
+
+89
+00:06:58,998 --> 00:07:03,390
+So basically, the long and short of it is
+that,
+
+90
+00:07:03,390 --> 00:07:07,382
+if you've, if you're implementing
+serializable, probably best get this a
+
+91
+00:07:07,382 --> 00:07:10,550
+serial version UID and it doesn't have to
+be a huge
+
+92
+00:07:10,550 --> 00:07:13,410
+number, it could be like ten or a tab you
+like.
+
+93
+00:07:13,410 --> 00:07:15,220
+But, that's not crucial.
+
+94
+00:07:15,220 --> 00:07:16,930
+I just thought I'd mention it.
+
+95
+00:07:16,930 --> 00:07:18,600
+Okay, so as I said in the last, in the
+
+96
+00:07:18,600 --> 00:07:21,960
+next tutorial we're gonna look at
+selecting rows in tables.
+
+97
+00:07:21,960 --> 00:07:24,875
+So join me again then, and until next
+time, happy coding.
+
+98
+00:07:24,875 --> 00:07:25,637
+[BLANK_AUDIO]
+

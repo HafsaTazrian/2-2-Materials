@@ -1,0 +1,193 @@
+1
+00:00:01,660 --> 00:00:03,105
+Hello, this is John from
+
+2
+00:00:03,105 --> 00:00:05,700
+caveofprogramming.com and in this
+tutorial,
+
+3
+00:00:05,700 --> 00:00:09,000
+we're just gonna look at setting the
+cursor in Java.
+
+4
+00:00:09,000 --> 00:00:13,170
+So, at the moment, I've got this progress
+dialog that comes up.
+
+5
+00:00:13,170 --> 00:00:15,330
+And just as an example of setting the
+cursor,
+
+6
+00:00:15,330 --> 00:00:18,560
+I'm gonna set the cursor to a wait cursor
+when
+
+7
+00:00:18,560 --> 00:00:20,940
+the dialog is showing, and I'm going to
+set it
+
+8
+00:00:20,940 --> 00:00:24,740
+back to the default system cursor when the
+dialog's gone.
+
+9
+00:00:24,740 --> 00:00:28,890
+And it's very important, of course, to
+restore the cursor after changing it.
+
+10
+00:00:28,890 --> 00:00:33,720
+So, in my progress dialog, I've got this
+overridden set visible method.
+
+11
+00:00:33,720 --> 00:00:36,800
+And this is a good place, in this case, to
+set the cursor.
+
+12
+00:00:36,800 --> 00:00:42,310
+So I'll say, if visible, we'll set the
+cursor to a, wait cursor.
+
+13
+00:00:43,360 --> 00:00:48,360
+And if we're setting it to invisible,
+we're hiding the dialogue, then I'm going
+
+14
+00:00:48,360 --> 00:00:54,040
+to set it back to the ordinary, to
+ordinary cursor.
+
+15
+00:00:54,040 --> 00:01:00,560
+So, here all you have to do is say, every
+string component has a set cursor method.
+
+16
+00:01:00,560 --> 00:01:01,670
+And that's the one that we wanna use.
+
+17
+00:01:01,670 --> 00:01:02,420
+It's pretty simple.
+
+18
+00:01:03,900 --> 00:01:09,410
+And to set cursor you need to pass a
+cursor, so I'm
+
+19
+00:01:09,410 --> 00:01:15,800
+going to say, cursor.getPredefinedCursor
+and
+
+20
+00:01:15,800 --> 00:01:21,550
+then here I need to pass in a static int,
+
+21
+00:01:21,550 --> 00:01:25,860
+constant of the cursor class, and there's
+a bunch you can use.
+
+22
+00:01:25,860 --> 00:01:30,310
+I'm going to use, wait cursor down here.
+
+23
+00:01:30,310 --> 00:01:31,800
+You can see from the auto complete there.
+
+24
+00:01:31,800 --> 00:01:34,150
+There's, there's quite a variety of
+different cursors.
+
+25
+00:01:35,500 --> 00:01:38,330
+And when the dialog goes away again.
+
+26
+00:01:38,330 --> 00:01:39,780
+When visible is set to false.
+
+27
+00:01:39,780 --> 00:01:50,050
+I'm gonna call, set cursor cursor.get,
+default cursor there.
+
+28
+00:01:50,050 --> 00:01:53,640
+And let's just take a look at that.
+
+29
+00:01:55,020 --> 00:01:57,100
+So now, when my dialog comes up.
+
+30
+00:01:58,540 --> 00:02:01,400
+I've got a wait cursor over the dialog.
+
+31
+00:02:03,380 --> 00:02:06,890
+Now, you might wanna set the wait cursor
+over the
+
+32
+00:02:09,020 --> 00:02:12,730
+over your application as a whole.
+
+33
+00:02:12,730 --> 00:02:14,310
+In which case you need to call set cursor
+
+34
+00:02:14,310 --> 00:02:19,430
+for this jFrame or for, let's say, this
+panel here.
+
+35
+00:02:19,430 --> 00:02:25,049
+But, for the moment, I content myself with
+just having this wait cursor over
+
+36
+00:02:25,049 --> 00:02:30,280
+the dialogue and, if you wanna set the
+cursor elsewhere, it's very easy to do.
+
+37
+00:02:30,280 --> 00:02:35,400
+Just call set cursor on the appropriate
+component or the whole frame if you want.
+
+38
+00:02:36,440 --> 00:02:38,770
+okay, so that's it for this tutorial.
+
+39
+00:02:38,770 --> 00:02:43,460
+Next time we're gonna look at nesting
+nesting split panes.
+
+40
+00:02:43,460 --> 00:02:44,550
+So join me again then.
+
+41
+00:02:44,550 --> 00:02:46,175
+And until then, happy coding.
+
+42
+00:02:46,175 --> 00:02:48,504
+[SOUND]
+

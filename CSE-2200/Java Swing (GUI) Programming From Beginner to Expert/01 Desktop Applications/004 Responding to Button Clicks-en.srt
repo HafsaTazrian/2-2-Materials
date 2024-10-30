@@ -1,0 +1,270 @@
+1
+00:00:01,480 --> 00:00:02,620
+Hi, welcome back.
+
+2
+00:00:02,620 --> 00:00:05,790
+And in the last tutorial, I showed you how
+
+3
+00:00:05,790 --> 00:00:09,680
+to create this little application which
+doesn't actually do anything.
+
+4
+00:00:09,680 --> 00:00:13,360
+And in this tutorial, I'm gonna fix it so
+when you
+
+5
+00:00:13,360 --> 00:00:16,900
+click the button, it adds stuff to the
+text area here.
+
+6
+00:00:18,150 --> 00:00:25,590
+So, I'm gonna navigate here to my main
+frame and what I
+
+7
+00:00:25,590 --> 00:00:31,430
+wanna do, what I'm gonna do is, a kind of
+common pattern for Swing Apps in general.
+
+8
+00:00:31,430 --> 00:00:35,650
+I'm gonna listen to one component and when
+something happens
+
+9
+00:00:35,650 --> 00:00:39,310
+in that component, I'm gonna do something
+to another component.
+
+10
+00:00:39,310 --> 00:00:41,930
+So I'm gonna listen to the button and when
+the button
+
+11
+00:00:41,930 --> 00:00:45,470
+is clicked I'm going to add some text into
+the text area.
+
+12
+00:00:47,690 --> 00:00:51,270
+Now the way to do that is firstly, I want
+
+13
+00:00:51,270 --> 00:00:56,360
+to add a thing called an action listener
+to the button.
+
+14
+00:00:56,360 --> 00:01:01,200
+So, to do that my button is called btn,
+and it's this private variable here.
+
+15
+00:01:01,200 --> 00:01:07,064
+And I'm gonna say btn.addActionListener.
+
+16
+00:01:08,590 --> 00:01:17,430
+Now action, the add action listener method
+takes as its augment a an action listener,
+
+17
+00:01:17,430 --> 00:01:23,240
+a figure type action listener and action
+listener is actually an interface.
+
+18
+00:01:23,240 --> 00:01:28,460
+So what I could do and perhaps will do in
+future tutorials at
+
+19
+00:01:28,460 --> 00:01:33,840
+some point is I could make Main Frame
+implement the Action Listener
+
+20
+00:01:33,840 --> 00:01:38,970
+interface, and then pass this into this
+method.
+
+21
+00:01:40,970 --> 00:01:45,360
+But, what I'm gonna do instead here is use
+an anonymous class.
+
+22
+00:01:45,360 --> 00:01:49,820
+I'm gonna say new here, inside the
+argument brackets.
+
+23
+00:01:49,820 --> 00:01:54,740
+A new action listener and then, brown
+buckets.
+
+24
+00:01:54,740 --> 00:01:57,580
+So this a bit looks exactly as though
+
+25
+00:01:57,580 --> 00:02:00,000
+I was creating an object of type action
+listener,
+
+26
+00:02:00,000 --> 00:02:02,710
+which of course isn't legal by itself
+because
+
+27
+00:02:02,710 --> 00:02:05,960
+actually this is not a class, it's an
+interface.
+
+28
+00:02:05,960 --> 00:02:09,530
+But what I can do is, I can open a bracket
+here.
+
+29
+00:02:09,530 --> 00:02:13,990
+And eclipse puts in a closing bracket
+automatically, and if I click on this
+
+30
+00:02:13,990 --> 00:02:20,580
+arrow here, I can go to what I need to
+import action listener first.
+
+31
+00:02:20,580 --> 00:02:26,940
+And then, click on it click on it again, I
+can go to Add unimplemented methods.
+
+32
+00:02:29,130 --> 00:02:32,550
+And the ActionListerner interface just has
+this one method action
+
+33
+00:02:32,550 --> 00:02:37,060
+performed and this method is run whenever
+the button is clicked.
+
+34
+00:02:37,060 --> 00:02:40,260
+So, let's get rid of some of these extra
+lines here.
+
+35
+00:02:40,260 --> 00:02:44,520
+I'm just doing Ctrl+D to delete them and,
+in
+
+36
+00:02:44,520 --> 00:02:47,710
+here, what I want to do is append some
+text.
+
+37
+00:02:47,710 --> 00:02:49,960
+Text to the text area.
+
+38
+00:02:49,960 --> 00:02:55,560
+And to do that, I'm gonna say
+textarea.append
+
+39
+00:02:55,560 --> 00:03:00,800
+and that accepts a string and I'll pass
+the string hello and I'll put, also
+
+40
+00:03:00,800 --> 00:03:05,640
+backslash end there to add a new line at
+the end of each string and of each hello.
+
+41
+00:03:08,430 --> 00:03:11,830
+So, I'm listening to the button by setting
+an
+
+42
+00:03:11,830 --> 00:03:15,460
+action listener on it, which is this
+anonymous class.
+
+43
+00:03:15,460 --> 00:03:19,591
+And within the method, the action
+performed method of the
+
+44
+00:03:19,591 --> 00:03:25,410
+anonymous class, I'm directly invoking a
+method of the text area.
+
+45
+00:03:25,410 --> 00:03:26,740
+And I was gonna say, this is quite a
+common
+
+46
+00:03:26,740 --> 00:03:31,520
+pattern, in swing, or in GUI applications
+in general, I suppose.
+
+47
+00:03:31,520 --> 00:03:37,110
+So if I run that now, I need to select
+the, main program here, and run that.
+
+48
+00:03:38,500 --> 00:03:43,990
+Now, if I click the bottom, you can see it
+adds, a load, to the text area.
+
+49
+00:03:46,300 --> 00:03:47,690
+Okay, so that's it for this tutorial.
+
+50
+00:03:47,690 --> 00:03:53,860
+And in, in the next part of this tutorial
+series, I'm gonna show you how to begin to
+
+51
+00:03:53,860 --> 00:03:59,890
+break up a Swing application into separate
+classes, separate custom components.
+
+52
+00:03:59,890 --> 00:04:02,860
+And we're gonna add a toolbar to this.
+
+53
+00:04:02,860 --> 00:04:05,100
+And we're gonna add some scroll bars to
+the text pane.
+
+54
+00:04:05,100 --> 00:04:06,470
+And we're gonna have the toolbar in the
+
+55
+00:04:06,470 --> 00:04:11,880
+text area as two separate kind of custom
+components.
+
+56
+00:04:11,880 --> 00:04:14,140
+So until next time, happy coding.
+

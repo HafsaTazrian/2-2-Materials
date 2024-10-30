@@ -1,0 +1,367 @@
+1
+00:00:01,450 --> 00:00:05,930
+Hello, this is John from
+caveofprogramming.com, welcome back.
+
+2
+00:00:05,930 --> 00:00:08,350
+And in this tutorial we're gonna look at
+
+3
+00:00:08,350 --> 00:00:13,930
+updating database rows and now we're gonna
+be basically.
+
+4
+00:00:13,930 --> 00:00:17,580
+We're just drawing on the stuff that we
+done already and
+
+5
+00:00:17,580 --> 00:00:23,370
+except I'm gonna use SQL update statements
+instead of insert statements.
+
+6
+00:00:23,370 --> 00:00:25,380
+So, if you're pretty comfortable with the
+stuff we've
+
+7
+00:00:25,380 --> 00:00:27,180
+done so far and you know SQL pretty well.
+
+8
+00:00:27,180 --> 00:00:31,450
+Well then you could certainly consider
+skipping this tutorial, but for
+
+9
+00:00:31,450 --> 00:00:34,940
+the sake of completeness we're going to go
+over it here.
+
+10
+00:00:36,800 --> 00:00:39,790
+So at the moment, just to remind you, now
+I've got
+
+11
+00:00:39,790 --> 00:00:44,910
+this test program in here which just
+inserts a couple of people.
+
+12
+00:00:46,450 --> 00:00:49,250
+Because those people are in there now, so
+If I go
+
+13
+00:00:49,250 --> 00:00:52,260
+select them in my database, we've got
+those two people there.
+
+14
+00:00:53,530 --> 00:01:00,380
+If I now run this program, it's going to
+attempt to
+
+15
+00:01:00,380 --> 00:01:05,880
+update these people rather than insert
+them.
+
+16
+00:01:05,880 --> 00:01:07,510
+And now I need to write that will
+
+17
+00:01:07,510 --> 00:01:12,400
+take code, so It's gonna be hopefully
+pretty straightforward.
+
+18
+00:01:12,400 --> 00:01:18,410
+At the moment, I've got up here, some SQL
+for inserting people and
+
+19
+00:01:18,410 --> 00:01:25,070
+I'm I'm going to change this into some SQL
+for updating people.
+
+20
+00:01:25,070 --> 00:01:28,180
+So I'll just copy that as a starting
+point.
+
+21
+00:01:28,180 --> 00:01:32,980
+And I'm gonna call this, updateSQL, so
+updateSQL.
+
+22
+00:01:34,210 --> 00:01:41,419
+And, it's gonna look like update people
+set and
+
+23
+00:01:41,419 --> 00:01:49,000
+then I'm gonna have set, main equals
+question mark.
+
+24
+00:01:49,000 --> 00:01:53,280
+So, I'm using question marks again, which
+is very important.
+
+25
+00:01:53,280 --> 00:01:58,009
+Age equals question mark, employment
+equals question
+
+26
+00:01:58,009 --> 00:02:02,442
+mark, tax ID, US citizen, gender,
+occupation.
+
+27
+00:02:02,442 --> 00:02:04,574
+So I'll just update all of the values for
+the
+
+28
+00:02:04,574 --> 00:02:08,213
+sake of simplicity, even though they
+haven't necessarily all changed.
+
+29
+00:02:08,213 --> 00:02:15,143
+And, and need a, a where clause on the end
+of that,
+
+30
+00:02:15,143 --> 00:02:21,206
+so I'm gonna say where ID equals question
+mark.
+
+31
+00:02:21,206 --> 00:02:25,590
+So I think that should do the trick, it
+will take people set, name
+
+32
+00:02:25,590 --> 00:02:30,866
+equals which is a search code of this
+bracket here, where ID equals that.
+
+33
+00:02:30,866 --> 00:02:35,717
+Okay, lets try this, and I need a prepared
+statements, so
+
+34
+00:02:35,717 --> 00:02:41,256
+prepared statements and I'm going to call
+this update statement.
+
+35
+00:02:41,256 --> 00:02:48,570
+Actually I just noticed that I called the
+statement stmt, I'll call it statement
+
+36
+00:02:48,570 --> 00:02:55,470
+and equals com.prepareStatement, and I
+need to pass in updates SQL there.
+
+37
+00:02:57,690 --> 00:03:03,510
+So I prepared the statement, and now I can
+set the relevant values here.
+
+38
+00:03:03,510 --> 00:03:05,750
+So It's going to be a little bit different
+
+39
+00:03:05,750 --> 00:03:10,160
+to this, but most of it's going to be
+similar.
+
+40
+00:03:10,160 --> 00:03:13,590
+So, let's just copy that and paste it in
+here.
+
+41
+00:03:13,590 --> 00:03:17,470
+And, I have to remember to close the
+
+42
+00:03:17,470 --> 00:03:22,884
+statement, so I have to say here update
+statement.close.
+
+43
+00:03:25,860 --> 00:03:32,910
+And let's see, so here, and the ID is not
+in the first column anymore,
+
+44
+00:03:32,910 --> 00:03:38,510
+in fact name is, so I'm gonna just remove
+that from there and paste it down there.
+
+45
+00:03:38,510 --> 00:03:43,910
+Because ID is the last place holder column
+now, if you look at this, and
+
+46
+00:03:43,910 --> 00:03:48,584
+we've got ID last instead of first, as it
+was previously.
+
+47
+00:03:48,584 --> 00:03:55,470
+So, I need to change this of course, to
+update statement.
+
+48
+00:03:55,470 --> 00:03:57,970
+So update statement.
+
+49
+00:03:59,310 --> 00:04:00,040
+Here we go.
+
+50
+00:04:00,040 --> 00:04:06,030
+I'll copy that, and it'll lead to change,
+
+51
+00:04:06,030 --> 00:04:12,500
+and hopefully this should be all that I
+need to do.
+
+52
+00:04:12,500 --> 00:04:14,380
+So let's try, let's try running this now.
+
+53
+00:04:14,380 --> 00:04:21,190
+If I run this, it's gonna say I'll select
+test database here, and run that.
+
+54
+00:04:21,190 --> 00:04:24,730
+And if I run this it says, it says it's
+updating.
+
+55
+00:04:24,730 --> 00:04:26,590
+Let's just see if it really is, so if
+
+56
+00:04:26,590 --> 00:04:31,590
+I change Joe, from a builder to a lion
+tamer.
+
+57
+00:04:31,590 --> 00:04:41,405
+And I change Sue from a from a senior to
+an adult, let's say.
+
+58
+00:04:41,405 --> 00:04:46,463
+And so at the moment we've got we've got
+those values in there.
+
+59
+00:04:46,463 --> 00:04:54,867
+Joe is Joe is a builder, and Sue is a
+senior.
+
+60
+00:04:54,867 --> 00:05:00,388
+Then, if I run this with a bit of luck it
+will update.
+
+61
+00:05:00,388 --> 00:05:03,124
+So let's go to here.
+
+62
+00:05:03,124 --> 00:05:07,120
+And we've got Sue is now a adult and Joe
+
+63
+00:05:07,120 --> 00:05:11,231
+is a lion tamer, so it seems to have
+worked.
+
+64
+00:05:11,231 --> 00:05:14,059
+Now if, if I was actually, this is a
+really
+
+65
+00:05:14,059 --> 00:05:19,190
+serious data base application, I'd
+probably write some JUnit tests here.
+
+66
+00:05:19,190 --> 00:05:23,320
+And that systematically tests and updating
+every single value in there.
+
+67
+00:05:23,320 --> 00:05:26,320
+And I could even also think of selectively
+
+68
+00:05:26,320 --> 00:05:31,090
+updating cells depending on which cells
+I've actually changed.
+
+69
+00:05:31,090 --> 00:05:35,880
+But this isn't really a JTCP tutorial,
+it's, I'm just
+
+70
+00:05:35,880 --> 00:05:38,610
+kind of putting this in for the sake of
+completing this.
+
+71
+00:05:38,610 --> 00:05:42,540
+So, and hopefully this will give you
+enough to implement your own
+
+72
+00:05:42,540 --> 00:05:47,370
+simple database code or get you started
+with JTCP if you want to.
+
+73
+00:05:47,370 --> 00:05:52,540
+So I just leave that with that, and in the
+next tutorial we're going to put the,
+
+74
+00:05:52,540 --> 00:05:57,270
+what should be the final part of this JTCP
+code into place and we're going to look at
+
+75
+00:05:57,270 --> 00:06:02,910
+retrieving multiple pull constants from
+the database.
+
+76
+00:06:02,910 --> 00:06:07,110
+So, join me again next time and until
+then, happy coding.
+

@@ -1,0 +1,558 @@
+1
+00:00:01,880 --> 00:00:05,180
+Hello, this is John from
+caveofprogramming.com and
+
+2
+00:00:05,180 --> 00:00:07,600
+in this tutorial, we're going to look
+
+3
+00:00:07,600 --> 00:00:14,360
+at loading particular font files so you
+can set the exact font that you want.
+
+4
+00:00:14,360 --> 00:00:19,130
+Now, let's just run the application and
+I'm gonna set
+
+5
+00:00:19,130 --> 00:00:24,000
+the font this time on the headers of these
+messages.
+
+6
+00:00:24,000 --> 00:00:27,010
+So I'm gonna change the font on, this is
+actually a jLabel.
+
+7
+00:00:27,010 --> 00:00:31,100
+And I'm gonna change the font on that.
+
+8
+00:00:31,100 --> 00:00:37,540
+So I've downloaded a font file and I have
+it in this folder somewhere.
+
+9
+00:00:37,540 --> 00:00:45,260
+Let's see, somewhere I've got, I found on
+the Internet this CrimewaveBB.ttf.
+
+10
+00:00:45,260 --> 00:00:49,040
+So I'm gonna copy that and that's a font
+file of course.
+
+11
+00:00:49,040 --> 00:00:53,230
+And, in my project I'm gonna make a new
+package.
+
+12
+00:00:53,230 --> 00:00:55,790
+I'm gonna say, new package.
+
+13
+00:00:55,790 --> 00:00:58,250
+And I'm gonna call that fonts.
+
+14
+00:00:58,250 --> 00:01:02,770
+And I'm gonna paste my font file into
+there.
+
+15
+00:01:02,770 --> 00:01:03,410
+So now it's there.
+
+16
+00:01:03,410 --> 00:01:12,920
+And now in my GUIutils.java, in here I've
+actually got a message for loading icons.
+
+17
+00:01:12,920 --> 00:01:15,150
+I'm gonna just copy that message.
+
+18
+00:01:15,150 --> 00:01:16,570
+So, copy that method.
+
+19
+00:01:16,570 --> 00:01:19,320
+Sorry, although some people call them
+messages.
+
+20
+00:01:19,320 --> 00:01:23,240
+And I'm gonna change this so it can load
+the font file.
+
+21
+00:01:24,270 --> 00:01:28,570
+So I'll say create font instead of create
+icon, and
+
+22
+00:01:28,570 --> 00:01:32,440
+that's gonna return a font and it's gonna
+take a path.
+
+23
+00:01:32,440 --> 00:01:37,490
+And it's gonna return, it's gonna be a
+system.class get resource.
+
+24
+00:01:37,490 --> 00:01:39,030
+And that returns the URL.
+
+25
+00:01:39,030 --> 00:01:44,430
+And then if the URL is null, we'll say
+unable to load font, and say what the path
+
+26
+00:01:44,430 --> 00:01:50,370
+was, and then if that goes well, I'm gonna
+say font.
+
+27
+00:01:51,800 --> 00:01:55,300
+Font equals, instead of doing new image
+icon here.
+
+28
+00:01:55,300 --> 00:01:58,460
+I'm gonna say, let's let the font class.
+
+29
+00:01:58,460 --> 00:01:59,360
+You know?
+
+30
+00:01:59,360 --> 00:02:00,760
+Let's say font.createfont.
+
+31
+00:02:00,760 --> 00:02:09,130
+And the first argument here is a static,
+integer, variable from the font class.
+
+32
+00:02:09,130 --> 00:02:13,790
+And it can be either true type font, or
+type 1 font.
+
+33
+00:02:13,790 --> 00:02:17,370
+And since I've got Chrome, [UNKNOWN] .ttf,
+in other words,
+
+34
+00:02:17,370 --> 00:02:20,985
+true type font, I'm gonna set that to true
+type font.
+
+35
+00:02:20,985 --> 00:02:26,380
+And the second argument here is it's gonna
+be the actual
+
+36
+00:02:26,380 --> 00:02:31,560
+font that you wanna that you wanna sorry,
+the second argument here, lost my
+
+37
+00:02:31,560 --> 00:02:36,669
+train of thoughts there for a second, is
+gonna be a stream.
+
+38
+00:02:38,170 --> 00:02:43,630
+On this font file, an input stream that
+can stream this font file.
+
+39
+00:02:43,630 --> 00:02:46,810
+And to get that input stream we just have
+to say URL.
+
+40
+00:02:46,810 --> 00:02:49,705
+Dot let's get focused there.
+
+41
+00:02:49,705 --> 00:02:57,880
+URL.openstream, so the URL points not to
+the internet but to this font file.
+
+42
+00:02:57,880 --> 00:03:01,280
+Because that's the path that we're gonna
+put in, we just need to open
+
+43
+00:03:01,280 --> 00:03:06,620
+stream to get an input stream from this
+URL and that will load the font.
+
+44
+00:03:09,770 --> 00:03:11,598
+okay, so.
+
+45
+00:03:11,598 --> 00:03:18,970
+And after that actually, I could say
+URL.closestream.
+
+46
+00:03:18,970 --> 00:03:21,240
+URL dot where are we.
+
+47
+00:03:21,240 --> 00:03:24,450
+I'm pretty sure there's a closeStream
+method.
+
+48
+00:03:26,400 --> 00:03:27,600
+Okay, maybe I imagined that.
+
+49
+00:03:29,700 --> 00:03:30,870
+So I won't worry about that.
+
+50
+00:03:32,000 --> 00:03:36,320
+And let's just return to font then in that
+case.
+
+51
+00:03:36,320 --> 00:03:39,080
+I don't know why I thought there was a
+closeStream method.
+
+52
+00:03:39,080 --> 00:03:41,120
+Okay, so here.
+
+53
+00:03:41,120 --> 00:03:46,298
+I need to say return font, so I'm gonna
+say return font.
+
+54
+00:03:46,298 --> 00:03:50,830
+Format thing there, somehow I've messed up
+
+55
+00:03:50,830 --> 00:03:54,470
+these brackets, so let's let's take a
+look.
+
+56
+00:03:54,470 --> 00:03:57,220
+So we load the font with create font and
+then I
+
+57
+00:03:57,220 --> 00:04:02,410
+wanna say return font, and oh yeah, put
+semi colon in.
+
+58
+00:04:02,410 --> 00:04:05,050
+And I think we're now in business.
+
+59
+00:04:05,050 --> 00:04:09,206
+We've also got to handle the exceptions
+that can arise when you call create font.
+
+60
+00:04:09,206 --> 00:04:18,490
+So we're gonna do surround with tri catch
+there, and I'm gonna say here.
+
+61
+00:04:18,490 --> 00:04:24,870
+So, it will throw a font format exception
+if you if you can't
+
+62
+00:04:26,720 --> 00:04:31,560
+if, if their font file has the wrong
+format altogether.
+
+63
+00:04:31,560 --> 00:04:37,160
+So in that case, let's just say sys, sys
+err, font, well, if
+
+64
+00:04:37,160 --> 00:04:42,692
+that adds the formats in font file,
+that'll do, plus path.
+
+65
+00:04:42,692 --> 00:04:45,570
+And here.
+
+66
+00:04:45,570 --> 00:04:47,800
+If there's an IO exception, probably it
+just can't read
+
+67
+00:04:47,800 --> 00:04:50,330
+the file because of, I don't know
+permissions or something.
+
+68
+00:04:50,330 --> 00:04:58,880
+And let's say, Unable to read font file,
+and plus path.
+
+69
+00:04:58,880 --> 00:05:04,650
+Okay we're almost there and now, I'm gonna
+have to set this to no, because
+
+70
+00:05:05,850 --> 00:05:13,530
+there's the error here is that it's, this
+variable could be uninitialized because,
+
+71
+00:05:13,530 --> 00:05:17,240
+if you can't, you know, if, if this throws
+an exception, the font's not
+
+72
+00:05:17,240 --> 00:05:21,250
+gonna get set to anything, and you've got
+to initialize your variables in Java.
+
+73
+00:05:21,250 --> 00:05:24,140
+So, so that equal to null.
+
+74
+00:05:24,140 --> 00:05:26,480
+So, this returns null if it can't load the
+font.
+
+75
+00:05:28,160 --> 00:05:30,450
+And now I'm gonna go to my message panel
+
+76
+00:05:30,450 --> 00:05:35,010
+now and there is a little complication
+still to come.
+
+77
+00:05:35,010 --> 00:05:38,465
+So let's look for, actually, yeah, it's
+the
+
+78
+00:05:38,465 --> 00:05:44,310
+message, this renderer actually renders
+those message titles.
+
+79
+00:05:44,310 --> 00:05:45,820
+And we've got this label here.
+
+80
+00:05:45,820 --> 00:05:48,010
+And I need to set the font on that label.
+
+81
+00:05:48,010 --> 00:05:52,870
+So, I'm gonna say here in the constructor
+message this renderer, Label.setFont,
+
+82
+00:05:52,870 --> 00:05:56,980
+So it has a setFont method just like jText
+area, for example.
+
+83
+00:05:58,050 --> 00:06:03,794
+And then I'm gonna say, util.createFont,
+
+84
+00:06:03,794 --> 00:06:08,800
+and I'm gonna pass in a path, /fonts/
+
+85
+00:06:08,800 --> 00:06:14,140
+and my font's called crimewavebb.ttf.
+
+86
+00:06:14,140 --> 00:06:16,040
+And now that's, that won't work in itself.
+
+87
+00:06:16,040 --> 00:06:20,368
+Because if I run that it's just gonna look
+invisible and
+
+88
+00:06:20,368 --> 00:06:25,890
+the reason is that the reason is that
+where are we, utils.
+
+89
+00:06:25,890 --> 00:06:29,420
+So when you do create font, this returns a
+font
+
+90
+00:06:29,420 --> 00:06:33,160
+with a size of one point, which is
+basically invisible.
+
+91
+00:06:33,160 --> 00:06:39,570
+And to get, to get this to work, once you
+return to font so this returns a
+
+92
+00:06:39,570 --> 00:06:46,380
+font, I need to then call the dot derive
+method of the font class.
+
+93
+00:06:46,380 --> 00:06:51,660
+And I'm gonna use the method that takes
+style and a size.
+
+94
+00:06:51,660 --> 00:06:54,280
+You'll notice some different methods for
+style and size here.
+
+95
+00:06:54,280 --> 00:06:56,694
+But I've found that if you don't set the
+style then it
+
+96
+00:06:56,694 --> 00:07:00,350
+still seems to be invisible for reasons
+that I don't fully understand.
+
+97
+00:07:00,350 --> 00:07:03,670
+So I'm gonna use this method here that
+sets the style and the size.
+
+98
+00:07:03,670 --> 00:07:07,416
+Now the style is just font dot plain bold
+or italic.
+
+99
+00:07:07,416 --> 00:07:10,660
+Let's try making it bold.
+
+100
+00:07:10,660 --> 00:07:12,010
+See what that looks like.
+
+101
+00:07:12,010 --> 00:07:14,050
+Font dot bold.
+
+102
+00:07:14,050 --> 00:07:19,750
+And I'll do control to go to add the font
+class.
+
+103
+00:07:19,750 --> 00:07:23,220
+And then, I want to, I'm gonna use the
+rest of this
+
+104
+00:07:23,220 --> 00:07:26,540
+method that then just takes the font size
+for the next document.
+
+105
+00:07:26,540 --> 00:07:30,000
+So let's try setting that to, I don't
+know, 22.
+
+106
+00:07:30,000 --> 00:07:32,220
+See how that looks.
+
+107
+00:07:32,220 --> 00:07:39,120
+And so that should do the trick and I'll
+do control > shift > F there to format it.
+
+108
+00:07:39,120 --> 00:07:40,080
+And let's run that.
+
+109
+00:07:40,080 --> 00:07:44,710
+So basically you return the font using
+your url, input screen.
+
+110
+00:07:44,710 --> 00:07:48,310
+And you call derive font to create the
+derive font, font
+
+111
+00:07:48,310 --> 00:07:51,230
+from the initial font, which will be the
+font you actually use.
+
+112
+00:07:52,290 --> 00:07:54,370
+So I'll run that.
+
+113
+00:07:54,370 --> 00:07:56,900
+Now if I look at my message headers,
+
+114
+00:07:56,900 --> 00:07:58,620
+they're in bold and they're in this
+crimewavebb.ttf.
+
+115
+00:07:58,620 --> 00:08:03,840
+Actually, I'm going to try to plain that,
+because I
+
+116
+00:08:03,840 --> 00:08:07,180
+think it would look better and probably 20
+is enough really.
+
+117
+00:08:08,975 --> 00:08:12,020
+Okay, so that's it for this tutorial.
+
+118
+00:08:12,020 --> 00:08:16,011
+Join me again next time and until then,
+happy coding.
+
+119
+00:08:16,011 --> 00:08:19,509
+[BLANK_AUDIO]
+

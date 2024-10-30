@@ -1,0 +1,698 @@
+1
+00:00:01,780 --> 00:00:06,120
+Hi, this is John from Cave on Programming
+dot com and in the
+
+2
+00:00:06,120 --> 00:00:10,380
+last tutorial I showed you how to create
+this little application here, and
+
+3
+00:00:10,380 --> 00:00:14,700
+at the moment, this button adds stuff to
+this text area and these
+
+4
+00:00:14,700 --> 00:00:19,540
+button in this little toolbar don't do
+anything but I want them to add.
+
+5
+00:00:19,540 --> 00:00:22,590
+Text to the text area instead of this
+button.
+
+6
+00:00:24,100 --> 00:00:31,600
+Now the challenge here is, if I look at
+the code and I go to the mainframe, so the
+
+7
+00:00:31,600 --> 00:00:35,300
+mainframe is adding a toolbar that I've
+created, with
+
+8
+00:00:35,300 --> 00:00:39,310
+custom components that I showed you how to
+create earlier.
+
+9
+00:00:39,310 --> 00:00:40,060
+it's adding this.
+
+10
+00:00:40,060 --> 00:00:42,920
+Custom text panel component.
+
+11
+00:00:42,920 --> 00:00:46,790
+But how do you get communication going
+between the two?
+
+12
+00:00:48,120 --> 00:00:54,840
+And I'll show you what you could do and
+then we'll look at the problems with that.
+
+13
+00:00:54,840 --> 00:00:57,210
+And we'll look at how to improve it.
+
+14
+00:00:57,210 --> 00:01:00,150
+So what you really want ideally, is
+something like this.
+
+15
+00:01:00,150 --> 00:01:05,560
+Where you've got a listener kind of model
+where you're listening to one component.
+
+16
+00:01:05,560 --> 00:01:09,520
+And when something happens in that
+component, it invokes a
+
+17
+00:01:09,520 --> 00:01:13,530
+method and then you tell another component
+what to do directly.
+
+18
+00:01:15,270 --> 00:01:19,650
+So the main frame class here is, it's
+acting as what
+
+19
+00:01:19,650 --> 00:01:24,230
+we call a controller and if you are total
+familiar controller architecture,
+
+20
+00:01:24,230 --> 00:01:29,600
+then you'll recognize it in the main
+frame, is the
+
+21
+00:01:29,600 --> 00:01:34,420
+controller here is, hocking together the
+components and telling them what to do.
+
+22
+00:01:34,420 --> 00:01:36,140
+And if you're not familiar with it, don't
+worry,
+
+23
+00:01:36,140 --> 00:01:38,960
+because you will be by the end of this
+course.
+
+24
+00:01:40,110 --> 00:01:45,290
+So, now what I want to do is the simplest
+
+25
+00:01:45,290 --> 00:01:47,350
+thing to do and, this is not the best
+thing.
+
+26
+00:01:47,350 --> 00:01:52,800
+Will be to pass a reference to the text
+panel to the tool bar
+
+27
+00:01:52,800 --> 00:01:56,510
+and then get the tool bar to cause a
+method in the text panel.
+
+28
+00:01:56,510 --> 00:01:57,650
+So, let's look at how that would work.
+
+29
+00:01:57,650 --> 00:02:01,260
+And what I want to do really, is firstly I
+
+30
+00:02:01,260 --> 00:02:06,580
+gotta pass the text panel to the tool bar
+somehow.
+
+31
+00:02:06,580 --> 00:02:08,310
+So I'll have to give the tool bar a method
+
+32
+00:02:08,310 --> 00:02:15,580
+called, let's say set text panel and then
+I'll pass in.
+
+33
+00:02:15,580 --> 00:02:17,260
+And reference to the text panel.
+
+34
+00:02:18,400 --> 00:02:21,470
+The text panel of course is created here.
+
+35
+00:02:21,470 --> 00:02:25,410
+And here I am just passing this reference
+to it.
+
+36
+00:02:25,410 --> 00:02:27,530
+So it's a walk in cabinet, you can get at
+it.
+
+37
+00:02:27,530 --> 00:02:31,610
+And I'm going to implement this message,
+set text panel, so let's do that.
+
+38
+00:02:32,630 --> 00:02:37,505
+And I'll go to tool bar, and I'll give it
+a.
+
+39
+00:02:37,505 --> 00:02:41,645
+Public void set text panel.
+
+40
+00:02:41,645 --> 00:02:48,665
+Text panel accepts a text panel, like this
+and
+
+41
+00:02:48,665 --> 00:02:54,055
+now when these buttons are clicked, I want
+them to do something with this text
+
+42
+00:02:54,055 --> 00:02:59,835
+panel, so that I can pass this nest to
+these buttons, and.
+
+43
+00:03:01,000 --> 00:03:03,430
+Cuz it were two very similar buttons here.
+
+44
+00:03:05,190 --> 00:03:10,220
+What I do is I need to add actions
+listeners to these buttons so that I can.
+
+45
+00:03:10,220 --> 00:03:13,640
+So that basically the toolbar is listening
+to the buttons on it
+
+46
+00:03:13,640 --> 00:03:16,440
+and it can respawn when they are click,
+when they are clicked.
+
+47
+00:03:17,480 --> 00:03:25,430
+So I'm gonna make this toolbar implement
+action listener like this.
+
+48
+00:03:25,430 --> 00:03:29,010
+And implement action listener.
+
+49
+00:03:29,010 --> 00:03:36,210
+I'll add the import there and Implements
+Action Listener, there we go.
+
+50
+00:03:37,330 --> 00:03:42,837
+And then, if I click this arrow I can add
+unimplemented
+
+51
+00:03:42,837 --> 00:03:47,869
+methods and I've added the Action Perform
+Method
+
+52
+00:03:47,869 --> 00:03:52,657
+to, to the toolbar itself, and that means
+I can
+
+53
+00:03:52,657 --> 00:03:57,689
+then do helloButton.addActionListener
+this,
+
+54
+00:03:57,689 --> 00:04:02,623
+and goodByeButton.addActionListener this.
+
+55
+00:04:02,623 --> 00:04:04,937
+[BLANK_AUDIO]
+
+56
+00:04:04,937 --> 00:04:07,871
+And just to see, if this works.
+
+57
+00:04:07,871 --> 00:04:12,834
+Here in the actionPerformMethod I could
+just do a
+
+58
+00:04:12,834 --> 00:04:17,562
+sys out and, I'll put some text in here.
+
+59
+00:04:17,562 --> 00:04:22,553
+I'll put a button has been clicked, and if
+I run this application now.
+
+60
+00:04:22,553 --> 00:04:26,667
+And it's always a good idea to run your
+application frequently, and put
+
+61
+00:04:26,667 --> 00:04:31,330
+debugging messages here to check that it's
+working as you expect at every stage.
+
+62
+00:04:31,330 --> 00:04:34,210
+If I just save that, and then.
+
+63
+00:04:34,210 --> 00:04:35,640
+Run it.
+
+64
+00:04:35,640 --> 00:04:38,070
+If I click these buttons, you can see that
+down
+
+65
+00:04:38,070 --> 00:04:42,690
+in the, in the console I'm getting some
+text output.
+
+66
+00:04:44,640 --> 00:04:47,880
+Now the first kinda defect here before I
+mess about with this text
+
+67
+00:04:47,880 --> 00:04:51,200
+panel any further is that I want to know
+which button has been clicked.
+
+68
+00:04:51,200 --> 00:04:52,530
+Clicked.
+
+69
+00:04:52,530 --> 00:04:53,540
+And I can do that.
+
+70
+00:04:53,540 --> 00:04:55,040
+Let's rename this Arg Naught.
+
+71
+00:04:55,040 --> 00:04:59,140
+So the actual perform method receives an
+action event.
+
+72
+00:05:00,170 --> 00:05:03,090
+And let's call that E, for event.
+
+73
+00:05:04,510 --> 00:05:06,390
+And let's say
+
+74
+00:05:09,520 --> 00:05:10,503
+I can say.
+
+75
+00:05:10,503 --> 00:05:18,217
+J button clicked equals e dot get source.
+
+76
+00:05:18,217 --> 00:05:22,660
+And e, e dot get source.
+
+77
+00:05:22,660 --> 00:05:25,940
+Retrieves the actual source of the event.
+
+78
+00:05:25,940 --> 00:05:30,240
+Which in this case will be one of these
+two buttons.
+
+79
+00:05:30,240 --> 00:05:33,360
+And it returns an object, but because I
+know
+
+80
+00:05:33,360 --> 00:05:37,530
+that I've only added the action list here
+to buttons.
+
+81
+00:05:37,530 --> 00:05:40,090
+I can just cast this to a J button.
+
+82
+00:05:41,970 --> 00:05:44,520
+So, now clicked will be the actual button
+that
+
+83
+00:05:44,520 --> 00:05:49,180
+was clicked and the info this action
+performed event.
+
+84
+00:05:49,180 --> 00:05:50,900
+File is action listener thing here.
+
+85
+00:05:52,880 --> 00:05:58,230
+I can then say if clicked, equals equals
+hello
+
+86
+00:05:58,230 --> 00:06:03,320
+button, in other words, if the source is
+just a reference here,
+
+87
+00:06:03,320 --> 00:06:07,490
+if this is a reference to this button, and
+points,
+
+88
+00:06:07,490 --> 00:06:10,350
+and point to the same place as this, so if
+clicked.
+
+89
+00:06:10,350 --> 00:06:17,552
+Click is equal to hello button, then sys
+out hello.
+
+90
+00:06:17,552 --> 00:06:24,940
+Else, sys out goodbye.
+
+91
+00:06:24,940 --> 00:06:25,930
+Good bye.
+
+92
+00:06:25,930 --> 00:06:28,610
+And so if I run that, let's check that it
+
+93
+00:06:28,610 --> 00:06:32,030
+works, and I click hello, and it says
+hello down here.
+
+94
+00:06:32,030 --> 00:06:34,420
+I click goodbye, and it says, goodbye,
+which is perfect.
+
+95
+00:06:36,040 --> 00:06:42,840
+And now, I just wanna hook this up with
+the, with the text panel.
+
+96
+00:06:42,840 --> 00:06:47,320
+So I can, I need to get this text panel
+reference
+
+97
+00:06:47,320 --> 00:06:51,090
+somehow, into this method, and to do that,
+of course, I just.
+
+98
+00:06:51,090 --> 00:06:56,590
+Let's use a private instance variable, so
+private text panel,
+
+99
+00:06:56,590 --> 00:07:03,446
+text panel, and then in the set method, I
+can just say
+
+100
+00:07:03,446 --> 00:07:08,570
+this dot text panel equals
+
+101
+00:07:08,570 --> 00:07:13,450
+text panel, so the private instance text
+panel equals the one that's passed in.
+
+102
+00:07:15,430 --> 00:07:15,840
+And now finally.
+
+103
+00:07:15,840 --> 00:07:25,618
+Finally, in down here I can say
+textPanel.append
+
+104
+00:07:25,618 --> 00:07:30,340
+text hello / and for a new line.
+
+105
+00:07:31,870 --> 00:07:34,410
+And if the goodbye button is clicked
+
+106
+00:07:36,760 --> 00:07:37,010
+then.
+
+107
+00:07:37,010 --> 00:07:41,150
+In fact no we'll say goodbye.
+
+108
+00:07:41,150 --> 00:07:44,413
+I thought maybe we'd be a bit clearer here
+if I would say.
+
+109
+00:07:44,413 --> 00:07:53,711
+Else if clicked equals goodbye button.
+
+110
+00:07:53,711 --> 00:07:59,430
+Now if I run this, and I click,
+
+111
+00:07:59,430 --> 00:08:04,770
+and it says Hello in the text panel and
+Goodbye, it says goodbye.
+
+112
+00:08:04,770 --> 00:08:08,060
+Get rid of this, this button here.
+
+113
+00:08:08,060 --> 00:08:11,770
+The button that I originally added in the
+first place because
+
+114
+00:08:11,770 --> 00:08:14,170
+I don't want it anymore, so let's get rid
+of all this.
+
+115
+00:08:17,250 --> 00:08:23,170
+Now, this basically gets your application
+up and running.
+
+116
+00:08:23,170 --> 00:08:24,990
+And it works.
+
+117
+00:08:24,990 --> 00:08:26,610
+As you can see.
+
+118
+00:08:26,610 --> 00:08:29,260
+But, there's some major disadvantages
+here.
+
+119
+00:08:30,700 --> 00:08:32,239
+To doing it like this because.
+
+120
+00:08:33,430 --> 00:08:38,940
+What you really want is you want your
+swing application to be made up
+
+121
+00:08:38,940 --> 00:08:45,070
+of separate components that know as little
+about each other as possible.
+
+122
+00:08:45,070 --> 00:08:46,826
+And the way I've written this in a moment.
+
+123
+00:08:46,826 --> 00:08:52,780
+The toolbar is inextricably linked to the
+text panel.
+
+124
+00:08:52,780 --> 00:08:55,510
+The toolbar is tightly coupled with the
+text panel.
+
+125
+00:08:55,510 --> 00:09:00,460
+And we say in lingo it can call any method
+of text panel
+
+126
+00:09:00,460 --> 00:09:03,830
+and you can't have a toolbar here without
+there being a text panel.
+
+127
+00:09:03,830 --> 00:09:06,740
+It's not terribly reusable.
+
+128
+00:09:06,740 --> 00:09:10,740
+And if you look at your application and,
+bear in mind, that
+
+129
+00:09:10,740 --> 00:09:14,390
+it could soon be much more complex than,
+than it is now.
+
+130
+00:09:16,210 --> 00:09:19,260
+If you wanna debug the communication here
+that's going
+
+131
+00:09:19,260 --> 00:09:23,020
+on that's causing these buttons to result
+in this happening.
+
+132
+00:09:24,460 --> 00:09:26,990
+It's gonna be ultimately a bit of a
+mystery.
+
+133
+00:09:26,990 --> 00:09:28,090
+Where to look for it.
+
+134
+00:09:28,090 --> 00:09:29,810
+What you really want is, you want to be
+
+135
+00:09:29,810 --> 00:09:33,410
+able to say okay, there's communication
+happening to components.
+
+136
+00:09:33,410 --> 00:09:36,170
+That's happening in my controller.
+
+137
+00:09:36,170 --> 00:09:39,830
+My controller is the main frame, and the
+communication should be hooked up here.
+
+138
+00:09:41,390 --> 00:09:46,620
+But instead what's happening is there's
+communication going on.
+
+139
+00:09:46,620 --> 00:09:53,470
+Basically directly between the text panel,
+between the toolbar and the text panel.
+
+140
+00:09:53,470 --> 00:09:57,060
+And if you carry on writing a whole
+application
+
+141
+00:09:57,060 --> 00:10:01,040
+like this, it's gonna start resembling a
+rat's nest.
+
+142
+00:10:01,040 --> 00:10:03,640
+And that's why in the next tutorial, we're
+gonna look at.
+
+143
+00:10:03,640 --> 00:10:06,200
+A bit of a better way to do this.
+
+144
+00:10:06,200 --> 00:10:11,764
+And we're gonna look at how to separate
+more cleanly your toolbar from your
+
+145
+00:10:11,764 --> 00:10:17,432
+toolbar custom component from your this J
+Text Area custom component.
+
+146
+00:10:17,432 --> 00:10:22,606
+And the object is that will provide you
+with a model for building up really
+
+147
+00:10:22,606 --> 00:10:28,037
+complex Swing applications, and keeping
+them from getting into a rat's nest.
+
+148
+00:10:28,037 --> 00:10:29,220
+Okay, so.
+
+149
+00:10:29,220 --> 00:10:33,057
+And, join me again next time, and until
+next time, happy coding.
+
+150
+00:10:33,057 --> 00:10:36,099
+[BLANK_AUDIO]
+

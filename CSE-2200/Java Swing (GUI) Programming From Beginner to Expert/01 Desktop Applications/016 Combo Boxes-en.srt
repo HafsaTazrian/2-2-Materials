@@ -1,0 +1,792 @@
+1
+00:00:01,630 --> 00:00:05,450
+Hi, this is John from
+caveofprogramming.com and in
+
+2
+00:00:05,450 --> 00:00:09,096
+this tutorial we're gonna look at combo
+boxes.
+
+3
+00:00:09,096 --> 00:00:16,450
+Combo boxes are sort of like combination
+of a text field and a list box.
+
+4
+00:00:16,450 --> 00:00:20,080
+Where you have like a kind of drop down
+thing at the side of the box.
+
+5
+00:00:21,120 --> 00:00:26,520
+And they work pretty much like, list
+boxes, Excel, that you can
+
+6
+00:00:26,520 --> 00:00:29,990
+make them editable which allows users to
+enter their own values in them.
+
+7
+00:00:31,220 --> 00:00:34,540
+So if you want to go in and try that for
+yourself then be my guest.
+
+8
+00:00:34,540 --> 00:00:38,300
+And if you want to see a worked example of
+this then stick around.
+
+9
+00:00:38,300 --> 00:00:45,990
+So, if I run this, this is the application
+I created in the last tutorial unto now.
+
+10
+00:00:47,240 --> 00:00:52,620
+And I'm gonna add a combo box in here
+under the list box.
+
+11
+00:00:53,780 --> 00:00:56,910
+So I'm gonna go to my form panel class
+here,
+
+12
+00:00:56,910 --> 00:01:03,270
+and I'm gonna start by creating a private
+variable JComboBox.
+
+13
+00:01:04,980 --> 00:01:09,760
+And I'm gonna make this a list of
+Employment
+
+14
+00:01:09,760 --> 00:01:14,594
+types, so I'll call that emp, emp combo
+
+15
+00:01:14,594 --> 00:01:20,010
+maybe empCombo, employment combo that
+should do the trick.
+
+16
+00:01:22,010 --> 00:01:28,840
+And I'll just add the input there and
+where I'm creating my components here.
+
+17
+00:01:28,840 --> 00:01:37,770
+I'll say empCombo equals JCombobox.
+
+18
+00:01:37,770 --> 00:01:41,722
+And then in the same way that here I
+created a default list model
+
+19
+00:01:41,722 --> 00:01:46,450
+for my combo box, so let's just put a
+comment, Set up list box.
+
+20
+00:01:46,450 --> 00:01:47,920
+Now I want to.
+
+21
+00:01:47,920 --> 00:01:53,880
+Set up my combo box in SMOA so, Set up
+combo
+
+22
+00:01:53,880 --> 00:01:59,026
+box, so I'm going to create a default
+combo box model,
+
+23
+00:01:59,026 --> 00:02:04,670
+call that emp model equals
+
+24
+00:02:04,670 --> 00:02:10,646
+new default combo box model and I'm gonna
+add some items to that.
+
+25
+00:02:10,646 --> 00:02:17,218
+And model.addElement and
+@model.addElement, this is just
+
+26
+00:02:17,218 --> 00:02:20,630
+the same as the list case really.
+
+27
+00:02:20,630 --> 00:02:24,020
+I'm gonna have some strings in here, lets
+say employed
+
+28
+00:02:26,530 --> 00:02:28,989
+and I'm just gonna Copy that.
+
+29
+00:02:30,990 --> 00:02:34,030
+And Paste in a couple more.
+
+30
+00:02:34,030 --> 00:02:38,980
+And let's have self-employed and
+unemployed.
+
+31
+00:02:40,550 --> 00:02:44,143
+And then, I'm gonna set that model on
+
+32
+00:02:44,143 --> 00:02:50,330
+the combo box, so empCombo.setModel, set
+model, empModel.
+
+33
+00:02:52,210 --> 00:02:55,240
+Now I can already add that combo box to my
+
+34
+00:02:55,240 --> 00:02:59,330
+layout but this layout is actually getting
+a bit complex, if
+
+35
+00:02:59,330 --> 00:03:03,120
+we look at the class here, it's getting
+quite big and
+
+36
+00:03:03,120 --> 00:03:05,270
+there's a hell of a lot of stuff in one
+method.
+
+37
+00:03:05,270 --> 00:03:08,710
+So, just to make it a little bit more
+readable.
+
+38
+00:03:08,710 --> 00:03:15,615
+What I'm gonna do is, I am gonna add to
+the method here, public void
+
+39
+00:03:15,615 --> 00:03:22,070
+layoutComponents.
+
+40
+00:03:22,070 --> 00:03:25,130
+And I'm gonna take this layout code here,
+that
+
+41
+00:03:25,130 --> 00:03:28,838
+uses a grid like layout, right up to here.
+
+42
+00:03:28,838 --> 00:03:33,120
+Here do Ctrl+X and I'm gonna paste it in
+there, so at
+
+43
+00:03:33,120 --> 00:03:35,750
+least we got the grid bug layout stuff in
+a different method.
+
+44
+00:03:36,890 --> 00:03:40,300
+And here, I can call layoutComponents.
+
+45
+00:03:40,300 --> 00:03:43,420
+So, it's always good to hit the green run
+button after you've made any kind
+
+46
+00:03:43,420 --> 00:03:47,990
+of major change, so in a moment, still, it
+looks the same it appears to work.
+
+47
+00:03:47,990 --> 00:03:48,610
+So that's good.
+
+48
+00:03:49,815 --> 00:03:56,360
+And what I'm gonna do now is I want to
+make just a little
+
+49
+00:03:56,360 --> 00:04:02,530
+adjustment to this, this layout to make it
+a bit easier to add new components.
+
+50
+00:04:02,530 --> 00:04:04,280
+I've broken it down into rows.
+
+51
+00:04:04,280 --> 00:04:07,367
+And if I want to add a new component now,
+I've got
+
+52
+00:04:07,367 --> 00:04:10,620
+to move this button down a row and then
+set one here.
+
+53
+00:04:11,950 --> 00:04:18,079
+So just to make it a little bit easier,
+I'm gonna go to the top here and I'll set
+
+54
+00:04:18,079 --> 00:04:25,260
+grid y right at the beginning here and
+then when I get to the next row
+
+55
+00:04:26,350 --> 00:04:31,460
+I'm going to take grid y out and put it
+here.
+
+56
+00:04:31,460 --> 00:04:36,560
+And just do ++ and this means that I've
+got to always do this row by row.
+
+57
+00:04:36,560 --> 00:04:38,810
+Otherwise it would get horribly tangled.
+
+58
+00:04:38,810 --> 00:04:42,160
+But and you have to kinda do this thing
+very judiciously
+
+59
+00:04:42,160 --> 00:04:46,890
+because you could really mess up your
+layout if you're not careful.
+
+60
+00:04:46,890 --> 00:04:52,110
+But I think at this point it's gonna
+simplify things a bit if I use-
+
+61
+00:04:52,110 --> 00:04:57,160
+if I increment the row each time instead
+of setting the row to an actual number.
+
+62
+00:04:58,450 --> 00:04:59,340
+So.
+
+63
+00:04:59,340 --> 00:05:04,860
+That's still the finer want here and let's
+check that it still looks okay.
+
+64
+00:05:04,860 --> 00:05:08,140
+I haven't messed anything up and another
+thing I
+
+65
+00:05:08,140 --> 00:05:10,420
+want to do actually is add a label on the
+
+66
+00:05:10,420 --> 00:05:12,850
+left hand side here but I'm gonna do that
+in
+
+67
+00:05:12,850 --> 00:05:15,950
+just a second after I add in my combo box.
+
+68
+00:05:15,950 --> 00:05:19,480
+So let's change this from the comment from
+fourth row to
+
+69
+00:05:19,480 --> 00:05:23,420
+just next row because these are just gonna
+be more rows
+
+70
+00:05:23,420 --> 00:05:26,360
+and then, to add in a new row now, I can
+
+71
+00:05:26,360 --> 00:05:30,760
+copy this, which is my list box and just
+paste it in.
+
+72
+00:05:31,820 --> 00:05:34,765
+And if I've got this right, if I add in
+now
+
+73
+00:05:34,765 --> 00:05:40,160
+empCombo and I run that I'm gonna get my
+combo box here.
+
+74
+00:05:40,160 --> 00:05:41,590
+It's very nice.
+
+75
+00:05:41,590 --> 00:05:42,970
+That said in a label as well.
+
+76
+00:05:42,970 --> 00:05:50,140
+So, my, some of my controls have labels
+like, like here.
+
+77
+00:05:50,140 --> 00:05:56,790
+And, and I think, if I copy that.
+
+78
+00:05:56,790 --> 00:05:58,670
+And I go down here.
+
+79
+00:05:58,670 --> 00:06:00,720
+So here's my ageList.
+
+80
+00:06:00,720 --> 00:06:04,040
+And let's go after I've set the weights.
+
+81
+00:06:04,040 --> 00:06:06,040
+I should be able to just create a new
+label here
+
+82
+00:06:06,040 --> 00:06:10,680
+because I don't really have to have the
+labels as instanced variables.
+
+83
+00:06:10,680 --> 00:06:14,520
+I can just use them here because the
+labels are probably not gonna change.
+
+84
+00:06:14,520 --> 00:06:19,750
+So I can just create a label on the fly
+here and say new JLabel and this should
+
+85
+00:06:19,750 --> 00:06:26,410
+say age, semi, sorry, colon.
+
+86
+00:06:26,410 --> 00:06:28,700
+I forgot what this was called for a
+minute.
+
+87
+00:06:28,700 --> 00:06:31,280
+Okay, and if I run that let's take a look
+at it and see if it works.
+
+88
+00:06:31,280 --> 00:06:35,380
+So, we've got age there but I want to
+align the age.
+
+89
+00:06:35,380 --> 00:06:39,050
+I want to put it the FIRST_LINE_END so,
+rather than line end
+
+90
+00:06:39,050 --> 00:06:43,980
+so the first line int is kinda top, is
+kinda top right.
+
+91
+00:06:43,980 --> 00:06:45,400
+So there we go, that looks pretty good.
+
+92
+00:06:46,970 --> 00:06:50,820
+And I'm gonna use that again for my combo
+box so let's
+
+93
+00:06:50,820 --> 00:06:56,240
+paste this in here and this time it's
+gonna be new JLabel
+
+94
+00:06:59,490 --> 00:07:00,838
+Employment.
+
+95
+00:07:00,838 --> 00:07:08,800
+And run that and that looks terrible cuz
+it's aligned to the bottom there.
+
+96
+00:07:08,800 --> 00:07:11,140
+So let's try putting that as well, first.
+
+97
+00:07:11,140 --> 00:07:13,140
+First line in, see how that looks.
+
+98
+00:07:14,140 --> 00:07:16,760
+And that's not so bad, I would say.
+
+99
+00:07:19,170 --> 00:07:22,020
+And now, to get the values from this combo
+box,
+
+100
+00:07:22,020 --> 00:07:23,630
+it's pretty much the same as with the list
+box.
+
+101
+00:07:23,630 --> 00:07:31,290
+This is very similar, I can do here, let's
+say string empCut equals new,
+
+102
+00:07:31,290 --> 00:07:37,435
+actually equals, sorry, String, so a
+typecast here and empCombo.
+
+103
+00:07:38,600 --> 00:07:42,882
+And instead of being get selected value,
+it's getSelected,
+
+104
+00:07:42,882 --> 00:07:48,420
+getSelectedItem and also like, if you want
+to have multiple
+
+105
+00:07:48,420 --> 00:07:53,700
+selection in there, you can and you can
+return the rate of selected objects.
+
+106
+00:07:55,510 --> 00:07:56,050
+So.
+
+107
+00:07:58,790 --> 00:08:04,779
+And actually come to think of it, with
+JList you can allow multiple selection, by
+
+108
+00:08:04,779 --> 00:08:10,249
+doing, age in this case, for example,
+ageList.set.
+
+109
+00:08:11,552 --> 00:08:16,200
+Selection mode and you can, if you look
+
+110
+00:08:16,200 --> 00:08:19,430
+up the documentation for that you can
+allow it
+
+111
+00:08:19,430 --> 00:08:21,550
+multiple items to be selected but I think
+in
+
+112
+00:08:21,550 --> 00:08:25,050
+a combo box you can't actually select
+multiple items.
+
+113
+00:08:25,050 --> 00:08:26,710
+I think I'm wrong to say that.
+
+114
+00:08:26,710 --> 00:08:32,870
+But anyway, so we'll get now the, item.
+
+115
+00:08:32,870 --> 00:08:35,430
+So we're, we're getting the item from the
+combo box here.
+
+116
+00:08:36,880 --> 00:08:38,550
+And I'm just gonna output that here.
+
+117
+00:08:38,550 --> 00:08:40,650
+So I'm just gonna output empCat.
+
+118
+00:08:40,650 --> 00:08:45,700
+And if I run that, and now click OK
+
+119
+00:08:46,870 --> 00:08:52,580
+on my console here, I'm gonna see the
+combo box, kind of selection.
+
+120
+00:08:54,000 --> 00:08:57,560
+And of course if I wanted, I could then,
+when I set it by combo.
+
+121
+00:08:57,560 --> 00:09:05,380
+I could say and empCombo.setSelectedIndex,
+let's set that to zero.
+
+122
+00:09:05,380 --> 00:09:07,380
+So, it has a default selection.
+
+123
+00:09:09,110 --> 00:09:09,650
+There we go.
+
+124
+00:09:12,250 --> 00:09:15,320
+Now you can make your combo box editable.
+
+125
+00:09:15,320 --> 00:09:24,210
+So, I can say empCombo.setEditable, True.
+
+126
+00:09:24,210 --> 00:09:29,470
+And if you do that, it means that so if I
+run it now, you can see now it's
+
+127
+00:09:29,470 --> 00:09:34,750
+appearing in white and I can select all
+the values that
+
+128
+00:09:34,750 --> 00:09:40,640
+are in it as before, set this to
+unemployed, as befits the times.
+
+129
+00:09:40,640 --> 00:09:46,580
+And if I type something in here like I can
+say other for example.
+
+130
+00:09:46,580 --> 00:09:49,750
+Then, it will retrieve that value when I
+do
+
+131
+00:09:49,750 --> 00:09:52,530
+get selected item, the thing to watch with
+this though,
+
+132
+00:09:52,530 --> 00:09:57,710
+is that with ageList I used an ageCategory
+object
+
+133
+00:09:57,710 --> 00:10:00,590
+that I created, and I put that into the
+list.
+
+134
+00:10:02,080 --> 00:10:06,110
+And so that I could pair up ID's with,
+with the
+
+135
+00:10:06,110 --> 00:10:10,690
+actual items rather than just cut the
+string that represents the item.
+
+136
+00:10:10,690 --> 00:10:13,280
+And you can use the same trick with combo
+boxes
+
+137
+00:10:14,550 --> 00:10:16,720
+but the problem is that if the user edits
+the
+
+138
+00:10:16,720 --> 00:10:21,510
+box you won't retrieve your, a object of
+the type
+
+139
+00:10:21,510 --> 00:10:24,610
+that you put into it, you're retrieve a
+string instead.
+
+140
+00:10:24,610 --> 00:10:26,480
+So you have to think about how to deal
+with that,.
+
+141
+00:10:26,480 --> 00:10:28,410
+You could use instance of to check what
+
+142
+00:10:28,410 --> 00:10:30,670
+you're returning from the combo box, for
+example.
+
+143
+00:10:32,970 --> 00:10:35,610
+And, or you could just do getSelectedIndex
+and just
+
+144
+00:10:35,610 --> 00:10:37,860
+get the index of the things, thing that's
+selected.
+
+145
+00:10:37,860 --> 00:10:39,310
+It doesn't matter too much.
+
+146
+00:10:40,510 --> 00:10:42,140
+Lots of ways to do it.
+
+147
+00:10:42,140 --> 00:10:47,050
+And but for the moment, for this tutorial,
+just to keep things a little bit simpler.
+
+148
+00:10:47,050 --> 00:10:52,050
+I'm just gonna use this string straight
+from the combo box and I'm gonna go to my
+
+149
+00:10:52,050 --> 00:10:58,000
+event of course and, and let's add in here
+a string empCat
+
+150
+00:10:58,000 --> 00:11:04,240
+and I'll give this also a private string,
+empCat and I
+
+151
+00:11:04,240 --> 00:11:09,000
+just set that, implement category here, so
+empCat equals empCat.
+
+152
+00:11:09,000 --> 00:11:11,930
+This is my event object that kinda relays
+
+153
+00:11:11,930 --> 00:11:17,330
+the information to the main, the main
+frame.
+
+154
+00:11:17,330 --> 00:11:23,594
+Let's have a public String
+getEmploymentCategory
+
+155
+00:11:23,594 --> 00:11:27,730
+and just return empCat like that.
+
+156
+00:11:28,882 --> 00:11:31,960
+And then so all I have to do now is in
+here I
+
+157
+00:11:31,960 --> 00:11:35,495
+can pass in, when I create the event I can
+pass in my empCat.
+
+158
+00:11:36,700 --> 00:11:38,300
+And if I save that, the arrow should go
+away.
+
+159
+00:11:40,020 --> 00:11:45,690
+And in mainframe now, so when I
+
+160
+00:11:45,690 --> 00:11:51,304
+receive the form event occurred, I could
+say string empCat equals
+
+161
+00:11:51,304 --> 00:11:56,590
+event.getEmploymentCategory.
+
+162
+00:11:56,590 --> 00:11:59,362
+And I can add it in here, so empCat
+
+163
+00:11:59,362 --> 00:12:03,620
+and plus and let's have some punctuation
+as well.
+
+164
+00:12:06,150 --> 00:12:11,430
+And let's run that and let's fill
+something in here John
+
+165
+00:12:13,640 --> 00:12:14,710
+Software.
+
+166
+00:12:14,710 --> 00:12:19,440
+1865 self-employed okay and here we got
+all the information.
+
+167
+00:12:19,440 --> 00:12:22,710
+So that's it for this tutorial.
+
+168
+00:12:22,710 --> 00:12:29,400
+And in the next tutorial, we're gonna look
+at checkboxes so join me again then.
+
+169
+00:12:29,400 --> 00:12:31,790
+And until next time, happy coding.
+

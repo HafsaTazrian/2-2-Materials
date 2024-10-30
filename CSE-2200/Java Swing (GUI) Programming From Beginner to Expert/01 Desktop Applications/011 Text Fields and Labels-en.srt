@@ -1,0 +1,254 @@
+1
+00:00:02,150 --> 00:00:03,230
+Hello there.
+
+2
+00:00:03,230 --> 00:00:09,500
+In this tutorial we're gonna look at text
+fields and labels, in Swing.
+
+3
+00:00:09,500 --> 00:00:14,318
+So in the last tutorial I created this
+little application and I
+
+4
+00:00:14,318 --> 00:00:19,730
+wanna add here a couple of little text
+fields for entering information.
+
+5
+00:00:19,730 --> 00:00:22,560
+And also a couple of, labels to say what
+the
+
+6
+00:00:22,560 --> 00:00:27,360
+text fields are and underneath I want to
+have a button.
+
+7
+00:00:27,360 --> 00:00:29,890
+So, that you can click the button to
+submit the information.
+
+8
+00:00:31,920 --> 00:00:36,680
+and, to do that I'm gonna start by going
+to Font panel, and I'm gonna
+
+9
+00:00:36,680 --> 00:00:38,650
+give it some number variables which will
+be
+
+10
+00:00:38,650 --> 00:00:41,270
+the controls, I'm gonna use in the panel.
+
+11
+00:00:42,530 --> 00:00:48,515
+So I'll have two labels, JLabel, [SOUND]
+and
+
+12
+00:00:48,515 --> 00:00:54,081
+I'm gonna call one of them, Name Label.
+
+13
+00:00:54,081 --> 00:00:57,596
+New send new, actually I'll do the new in
+
+14
+00:00:57,596 --> 00:01:02,526
+the constructor so I'll call it, [SOUND]
+NameLabel here.
+
+15
+00:01:02,526 --> 00:01:07,214
+And private JLabel, occupation level,
+because this is gonna
+
+16
+00:01:07,214 --> 00:01:11,820
+be a form for adding some information
+about people.
+
+17
+00:01:13,040 --> 00:01:15,650
+And it's sort of private JTextField.
+
+18
+00:01:15,650 --> 00:01:22,670
+Now, a JTextField is, a single line field
+of text like this kinda thing here.
+
+19
+00:01:24,180 --> 00:01:29,200
+As opposed to a text area which is a
+whole, area like the editor I'm in here.
+
+20
+00:01:29,200 --> 00:01:35,291
+So I want a JTextField named field,
+[SOUND] and a
+
+21
+00:01:35,291 --> 00:01:41,548
+private JTextField, occupationField.
+
+22
+00:01:41,548 --> 00:01:47,115
+And I'm also gonna have a button to submit
+the information, so I'll say
+
+23
+00:01:47,115 --> 00:01:53,094
+private JButton, [SOUND] and I'll just
+call that okBtn, OK button.
+
+24
+00:01:53,094 --> 00:01:58,324
+So now in the constructor I'm gonna,
+actually create, create those objects.
+
+25
+00:01:58,324 --> 00:02:04,677
+So I'll say, nameLabel equals new JLabel.
+
+26
+00:02:04,677 --> 00:02:07,990
+And I'll give this some text here in the,
+in
+
+27
+00:02:07,990 --> 00:02:12,927
+the constructor parameter which is gonna
+be, [SOUND] name colon.
+
+28
+00:02:12,927 --> 00:02:14,271
+And the.
+
+29
+00:02:14,271 --> 00:02:19,379
+Occupation label is gonna be, [SOUND]
+occupation
+
+30
+00:02:19,379 --> 00:02:24,364
+label is gonna be new JLabel [SOUND]
+occupation.
+
+31
+00:02:24,364 --> 00:02:27,988
+Occupation.
+
+32
+00:02:27,988 --> 00:02:35,521
+And, the the name field, name field.
+
+33
+00:02:35,521 --> 00:02:44,668
+Is going to be a new JLabel, it's going to
+be sorry, a new JTextField.
+
+34
+00:02:44,668 --> 00:02:48,033
+And now the important thing here is when
+you create, create your
+
+35
+00:02:48,033 --> 00:02:52,630
+text field, you have to specify how many
+characters wide it should be.
+
+36
+00:02:52,630 --> 00:02:55,580
+And the strange thing is that the text
+fields
+
+37
+00:02:55,580 --> 00:02:59,100
+always appear wider than the number of
+characters would suggest.
+
+38
+00:02:59,100 --> 00:03:01,364
+As far as I know, this is supposed to
+
+39
+00:03:01,364 --> 00:03:05,673
+represent, [SOUND] characters it's just
+that it's a bit off.
+
+40
+00:03:05,673 --> 00:03:11,339
+Okay so, and I'm also gonna have
+occupationField equals new JTextField,
+
+41
+00:03:11,339 --> 00:03:16,220
+I'll make that ten as well, we can always
+change the size later.
+
+42
+00:03:17,940 --> 00:03:20,300
+And finally the button, so.
+
+43
+00:03:20,300 --> 00:03:23,701
+OkayBtn, and notice I'm spacing out my
+code here,
+
+44
+00:03:23,701 --> 00:03:28,976
+[SOUND] into distinct sections using blank
+lines, which helps legibility.
+
+45
+00:03:28,976 --> 00:03:34,153
+So equals new, [SOUND] JButton, and I'll
+just give that the label here.
+
+46
+00:03:34,153 --> 00:03:36,911
+Okay.
+
+47
+00:03:36,911 --> 00:03:40,880
+And now I'm gonna leave it there, for this
+tutorial.
+
+48
+00:03:40,880 --> 00:03:43,380
+Because in the next tutorial, we're gonna
+get to something that's,
+
+49
+00:03:45,050 --> 00:03:49,850
+probably the second most complex thing
+after the whole event listener business.
+
+50
+00:03:49,850 --> 00:03:51,750
+And that's the grid back layout.
+
+51
+00:03:51,750 --> 00:03:54,456
+Which is an extremely flexible way but a
+
+52
+00:03:54,456 --> 00:03:57,761
+bit tricky, of laying out your components
+in Swing.
+
+53
+00:03:57,761 --> 00:04:02,209
+So, join me again for that tutorial and
+until then, happy coding.
+
+54
+00:04:02,209 --> 00:04:04,320
+[BLANK_AUDIO]
+

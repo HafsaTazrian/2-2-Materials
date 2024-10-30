@@ -1,0 +1,652 @@
+1
+00:00:00,025 --> 00:00:02,336
+[NOISE] Hi, welcome back.
+
+2
+00:00:02,336 --> 00:00:06,185
+This is John from Cave of Programming dot
+com
+
+3
+00:00:06,185 --> 00:00:11,180
+and this is a tutorial on check boxes in
+swing.
+
+4
+00:00:11,180 --> 00:00:18,432
+So, I'm going to start here by declaring a
+check box so.
+
+5
+00:00:18,432 --> 00:00:24,400
+J Check Box, and actually
+
+6
+00:00:24,400 --> 00:00:30,680
+I'm gonna make this a check box that, you
+tick to say that you
+
+7
+00:00:30,680 --> 00:00:36,760
+are a US Citizen, so I'll call it Citizen
+Check and I could.
+
+8
+00:00:36,760 --> 00:00:41,840
+To just get the get whether this check box
+is selected
+
+9
+00:00:41,840 --> 00:00:47,290
+by calling the E selecting method and I
+could just pass that back
+
+10
+00:00:47,290 --> 00:00:52,640
+to my main frame but to make this a little
+bit more interesting I'm gonna
+
+11
+00:00:52,640 --> 00:00:58,290
+actually have this check box enable or
+disable a text field
+
+12
+00:00:58,290 --> 00:01:03,200
+which is gonna be J text field and
+
+13
+00:01:03,200 --> 00:01:05,600
+its gonna be called tax field.
+
+14
+00:01:05,600 --> 00:01:10,100
+So if you tick the check box to say your a
+US citizen.
+
+15
+00:01:10,100 --> 00:01:12,790
+You have to enter a tax ID.
+
+16
+00:01:12,790 --> 00:01:18,477
+So let's go down here and I'll, I'll set
+Citizen
+
+17
+00:01:18,477 --> 00:01:23,930
+Check equal to a new J Check box here, new
+J Check box.
+
+18
+00:01:25,090 --> 00:01:30,448
+And I will set tax field equal to a new J
+
+19
+00:01:30,448 --> 00:01:36,640
+Text field with a width of ten characters.
+
+20
+00:01:38,990 --> 00:01:42,470
+And now in in the constructive to your
+check box
+
+21
+00:01:43,500 --> 00:01:48,090
+you can actually supply some text so
+several different constructors.
+
+22
+00:01:48,090 --> 00:01:51,250
+You can supply text and you can say
+whether
+
+23
+00:01:51,250 --> 00:01:53,880
+it's initially selected or deselected, but
+I'm not going
+
+24
+00:01:53,880 --> 00:01:57,850
+to use those parameters here because I'm
+just going
+
+25
+00:01:57,850 --> 00:02:00,080
+to put a label by the side of it.
+
+26
+00:02:00,080 --> 00:02:04,590
+And, and I'm also going to put a label by
+the side of my tax field, and I want
+
+27
+00:02:04,590 --> 00:02:08,270
+my label to also appear grayed out if the
+
+28
+00:02:08,270 --> 00:02:13,390
+citizen chat box is not ticked along with
+tax field.
+
+29
+00:02:13,390 --> 00:02:18,924
+So I'm going to add my label for tax field
+up here, so J label
+
+30
+00:02:18,924 --> 00:02:24,459
+and tax label, so let's call that, and
+here I'll set
+
+31
+00:02:24,459 --> 00:02:30,105
+tax label equals new J label, and now I'm
+going to do a little
+
+32
+00:02:30,105 --> 00:02:35,899
+bit of init setup, well actually apply the
+tax as well so say.
+
+33
+00:02:37,600 --> 00:02:39,920
+here, tax ID.
+
+34
+00:02:39,920 --> 00:02:40,420
+And
+
+35
+00:02:42,210 --> 00:02:47,400
+let's set up, set up, tax ID.
+
+36
+00:02:48,600 --> 00:02:54,870
+So, I'm gonna start by making the tax
+label disabled.
+
+37
+00:02:54,870 --> 00:02:56,480
+So I'll say set enabled.
+
+38
+00:02:56,480 --> 00:02:57,220
+False.
+
+39
+00:02:58,590 --> 00:03:03,410
+And I'm also gonna make the tax field, not
+enabled either.
+
+40
+00:03:03,410 --> 00:03:06,680
+So it's gonna appear grayed out and you're
+not gonna be able to enter stuff in it.
+
+41
+00:03:07,700 --> 00:03:10,480
+And then, to the citizen check here, which
+is
+
+42
+00:03:10,480 --> 00:03:15,850
+gonna be initially deselected, I'm gonna
+add an action listener.
+
+43
+00:03:15,850 --> 00:03:18,380
+So add action listener just like a button.
+
+44
+00:03:18,380 --> 00:03:20,500
+So, I'll say new Action Listener.
+
+45
+00:03:21,650 --> 00:03:22,150
+Listener.
+
+46
+00:03:23,730 --> 00:03:24,430
+And.
+
+47
+00:03:26,250 --> 00:03:30,460
+Add a semicolon there and add an
+implemented method here,
+
+48
+00:03:32,230 --> 00:03:36,840
+and just get rid of some, some of this
+extra stuff here that I don't need.
+
+49
+00:03:38,080 --> 00:03:44,150
+And what I do is, so this will be invoked
+whenever the citizen check box is.
+
+50
+00:03:44,150 --> 00:03:45,010
+Ticked or unticked.
+
+51
+00:03:45,010 --> 00:03:49,710
+And I wanna firstly get whether
+
+52
+00:03:49,710 --> 00:03:54,832
+that text field is selected or not, so I
+can say
+
+53
+00:03:54,832 --> 00:04:01,760
+boolean is ticked, let's say,
+
+54
+00:04:01,760 --> 00:04:08,460
+equals and it's gonna be citizen check.is
+selected.
+
+55
+00:04:08,460 --> 00:04:08,730
+There we go.
+
+56
+00:04:08,730 --> 00:04:11,040
+So that will get me true or false,
+
+57
+00:04:11,040 --> 00:04:12,580
+depending on whether this is ticked or
+not.
+
+58
+00:04:13,790 --> 00:04:19,690
+And if it has just been ticked I will
+enable the tax label in the tax field.
+
+59
+00:04:19,690 --> 00:04:20,920
+And otherwise I'll disable them.
+
+60
+00:04:20,920 --> 00:04:28,030
+So I'm gonna say tax label dot set enabled
+is ticked like this.
+
+61
+00:04:28,030 --> 00:04:29,510
+And tax field.
+
+62
+00:04:29,510 --> 00:04:30,798
+Dot set enabled.
+
+63
+00:04:30,798 --> 00:04:38,432
+[SOUND]
+Is tacked.
+
+64
+00:04:38,432 --> 00:04:38,950
+Okay.
+
+65
+00:04:38,950 --> 00:04:41,770
+Now let's add those controls to the form.
+
+66
+00:04:41,770 --> 00:04:45,549
+So I'm gonna go down, I'm gonna go down
+here to where I do the layout.
+
+67
+00:04:47,290 --> 00:04:50,150
+And so the last row's the button.
+
+68
+00:04:50,150 --> 00:04:52,280
+I'm just gonna copy the row before the
+button here.
+
+69
+00:04:54,240 --> 00:05:00,290
+And here I'm gonna add in my my check box.
+
+70
+00:05:00,290 --> 00:05:02,550
+So let's add in here citizen check.
+
+71
+00:05:03,830 --> 00:05:04,880
+And let's add.
+
+72
+00:05:06,130 --> 00:05:11,603
+A label here which I'm gonna just make it
+say, US,
+
+73
+00:05:11,603 --> 00:05:18,000
+US citizen.
+
+74
+00:05:18,000 --> 00:05:20,410
+So if I run that let's see what it looks
+like.
+
+75
+00:05:20,410 --> 00:05:24,070
+You see it says US citizen, I can take
+this.
+
+76
+00:05:24,070 --> 00:05:24,950
+Looks rather nice.
+
+77
+00:05:26,080 --> 00:05:28,310
+Let's copy this again.
+
+78
+00:05:28,310 --> 00:05:30,550
+And, it's the row underneath it.
+
+79
+00:05:30,550 --> 00:05:32,420
+So now, I'll add in the text field.
+
+80
+00:05:32,420 --> 00:05:32,920
+And,
+
+81
+00:05:34,730 --> 00:05:39,000
+so I'm gonna use here, for the label.
+
+82
+00:05:39,000 --> 00:05:43,730
+I'm gonna use the tax label control that
+I've just set up.
+
+83
+00:05:43,730 --> 00:05:44,600
+And.
+
+84
+00:05:44,600 --> 00:05:46,380
+Here I'm gonna add the text field.
+
+85
+00:05:48,050 --> 00:05:51,640
+So, if I run that, you can see it's
+disabled.
+
+86
+00:05:51,640 --> 00:05:54,610
+But if I tick this, I can't enter stuff in
+it.
+
+87
+00:05:54,610 --> 00:05:58,490
+If I tick this, then it is enabled, like
+that.
+
+88
+00:05:58,490 --> 00:05:59,990
+I can disable it again.
+
+89
+00:05:59,990 --> 00:06:00,760
+It's rather nice.
+
+90
+00:06:02,760 --> 00:06:06,260
+And of course I can, so that's basically.
+
+91
+00:06:06,260 --> 00:06:12,410
+If move check boxes, I'm just gonna add,
+gonna modify my form
+
+92
+00:06:12,410 --> 00:06:17,970
+event to store some further information,
+and you're probably pretty familiar
+
+93
+00:06:17,970 --> 00:06:24,020
+with this by now, so if you get a picture
+with
+
+94
+00:06:24,020 --> 00:06:27,610
+the form events, then feel free to skip to
+the next tutorial.
+
+95
+00:06:27,610 --> 00:06:35,060
+I'm gonna add here a Boolean US citizen,
+US citizen,
+
+96
+00:06:35,060 --> 00:06:41,470
+and I'm gonna work this rather long
+constructor.
+
+97
+00:06:41,470 --> 00:06:44,200
+Let's just do control shift F to format
+that
+
+98
+00:06:44,200 --> 00:06:49,636
+bit and then I'm gonna say here string tax
+ID.
+
+99
+00:06:49,636 --> 00:06:54,090
+And Boolean US citizen.
+
+100
+00:06:54,090 --> 00:06:57,930
+US citizen.
+
+101
+00:06:57,930 --> 00:06:59,240
+Like that.
+
+102
+00:06:59,240 --> 00:07:04,330
+And let's just do this dot tax ID equals
+tax D.
+
+103
+00:07:05,500 --> 00:07:08,900
+And this dot US citizen.
+
+104
+00:07:08,900 --> 00:07:10,480
+Equals US Citizen.
+
+105
+00:07:12,980 --> 00:07:17,450
+And I can add a get methods for those.
+
+106
+00:07:17,450 --> 00:07:22,090
+So let's just add to use the eclipse short
+cut.
+
+107
+00:07:22,090 --> 00:07:26,670
+Right click here, go to source and...
+
+108
+00:07:26,670 --> 00:07:28,080
+Generate getters and setters.
+
+109
+00:07:28,080 --> 00:07:32,020
+And I wanna generate getters and setters
+for
+
+110
+00:07:32,020 --> 00:07:34,790
+these in fact, probably don't really need
+the setters.
+
+111
+00:07:34,790 --> 00:07:39,050
+That's just expand that, and get rid of
+that.
+
+112
+00:07:39,050 --> 00:07:43,200
+And if you have a Boolean variable, then
+you can see Eclipse is
+
+113
+00:07:43,200 --> 00:07:48,740
+generating a is US citizen, rather than
+get US citizen, which is quite common.
+
+114
+00:07:48,740 --> 00:07:51,040
+A reasonable thing to do.
+
+115
+00:07:51,040 --> 00:07:52,510
+So that's that.
+
+116
+00:07:52,510 --> 00:07:57,040
+If I wanted, of course I have, to modify
+the events here.
+
+117
+00:07:57,040 --> 00:08:00,050
+Let's do a format on that as well.
+
+118
+00:08:00,050 --> 00:08:03,060
+And then I can add, here.
+
+119
+00:08:03,060 --> 00:08:11,450
+So, to actually get the value from the
+check box I need to use selected method.
+
+120
+00:08:11,450 --> 00:08:18,704
+So I'll add in here, the this should be
+string tax ID.
+
+121
+00:08:18,704 --> 00:08:24,348
+D equals tax field dot get, that's
+
+122
+00:08:24,348 --> 00:08:29,826
+pretty simple and Boolean US citizen,
+
+123
+00:08:29,826 --> 00:08:35,809
+citizen equals and that's just gonna be.
+
+124
+00:08:37,320 --> 00:08:40,380
+The name of the check box.
+
+125
+00:08:40,380 --> 00:08:41,890
+Which I've forgotten.
+
+126
+00:08:41,890 --> 00:08:45,827
+I think it's, citizen check right?
+
+127
+00:08:45,827 --> 00:08:50,380
+citizen check dot is selected.
+
+128
+00:08:50,380 --> 00:08:51,040
+There we go.
+
+129
+00:08:51,040 --> 00:08:52,990
+And so I'm just gonna write these in here.
+
+130
+00:08:52,990 --> 00:08:55,440
+So tax Id and US Citizen.
+
+131
+00:08:55,440 --> 00:08:59,500
+And I can do something with that
+information later.
+
+132
+00:08:59,500 --> 00:09:03,960
+But for now, I'm not gonna worry too much
+about it.
+
+133
+00:09:03,960 --> 00:09:05,520
+So I could add it in her, for example.
+
+134
+00:09:07,950 --> 00:09:11,030
+and, ok so that's it for this tutorial.
+
+135
+00:09:11,030 --> 00:09:14,930
+And in the next tutorial, we're gonna look
+at radio buttons.
+
+136
+00:09:14,930 --> 00:09:20,420
+So check boxes are great if you have a
+bunch of options and you can
+
+137
+00:09:20,420 --> 00:09:24,620
+tick any combination of the options or you
+just have one, as in this case
+
+138
+00:09:24,620 --> 00:09:28,540
+but sometimes you have a bunch of options
+and you can only select one of
+
+139
+00:09:28,540 --> 00:09:31,010
+them, they're mutually exclusive and for
+that
+
+140
+00:09:31,010 --> 00:09:35,500
+situation you use radio buttons not check
+boxes.
+
+141
+00:09:35,500 --> 00:09:37,390
+So we're going to look at that in the.
+
+142
+00:09:37,390 --> 00:09:38,190
+Next tutorial.
+
+143
+00:09:38,190 --> 00:09:40,789
+And until then, happy coding.
+
+144
+00:09:40,789 --> 00:09:42,252
+[BLANK_AUDIO]
+
+145
+00:09:42,252 --> 00:09:44,416
+[NOISE]
+

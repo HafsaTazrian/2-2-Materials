@@ -1,0 +1,1156 @@
+1
+00:00:02,320 --> 00:00:06,165
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:06,165 --> 00:00:11,080
+And this is a tutorial on just, wiring the
+database code that
+
+3
+00:00:11,080 --> 00:00:16,010
+we've been creating in this series of
+tutorials into the swing application.
+
+4
+00:00:16,010 --> 00:00:19,647
+So there, there isn't gonna be any new
+really new stuff here.
+
+5
+00:00:19,647 --> 00:00:22,197
+It's just I'm gonna take stuff that I've
+
+6
+00:00:22,197 --> 00:00:25,230
+been showing you and bring it all
+together.
+
+7
+00:00:25,230 --> 00:00:30,330
+So I'm gonna change this application so
+that this is gonna be a save button.
+
+8
+00:00:30,330 --> 00:00:34,030
+So you can save the stuff the people
+you've got
+
+9
+00:00:34,030 --> 00:00:38,120
+here in this pane and, and the table into
+the database.
+
+10
+00:00:38,120 --> 00:00:40,350
+And this is gonna be a refresh button.
+
+11
+00:00:40,350 --> 00:00:44,910
+So that if you click refresh it's
+basically gonna reload the
+
+12
+00:00:44,910 --> 00:00:49,850
+contents of the data base into the, into
+the table pane here.
+
+13
+00:00:51,450 --> 00:00:56,490
+So, to start with, I'm gonna go to my
+Mainframe.
+
+14
+00:00:56,490 --> 00:01:01,530
+And let's search for hello because I want
+to change the names of these buttons.
+
+15
+00:01:01,530 --> 00:01:04,020
+And let's have a look.
+
+16
+00:01:04,020 --> 00:01:08,520
+So, in fact the buttons are named in this
+Toolbar.java.
+
+17
+00:01:08,520 --> 00:01:11,660
+And later on we're gonna look how to use a
+JToolbarController.
+
+18
+00:01:11,660 --> 00:01:13,900
+But for moment I'll stick with this.
+
+19
+00:01:13,900 --> 00:01:17,740
+So, this is gonna be called save.
+
+20
+00:01:17,740 --> 00:01:20,780
+And this is gonna be called Refresh.
+
+21
+00:01:23,980 --> 00:01:32,290
+Now I wanna make it so that when you click
+save it takes everything in the
+
+22
+00:01:34,360 --> 00:01:35,310
+in that table.
+
+23
+00:01:35,310 --> 00:01:37,960
+As I save, it saves it to the database.
+
+24
+00:01:37,960 --> 00:01:43,350
+So I wanna make a make this raise in
+event,
+
+25
+00:01:43,350 --> 00:01:49,230
+that tells the mainframe that save has
+been clipped.
+
+26
+00:01:49,230 --> 00:01:51,635
+And at the moment all it's doing is
+
+27
+00:01:51,635 --> 00:01:56,745
+what it's doing is, this is text listener,
+thing.
+
+28
+00:01:56,745 --> 00:02:01,770
+To the toolbar, you can set textListener
+on the toolbar, and that
+
+29
+00:02:03,760 --> 00:02:10,420
+has a textEmitted method, which the
+toolbar calls for when you click a button.
+
+30
+00:02:10,420 --> 00:02:12,122
+And this, this is kind of wildly an
+
+31
+00:02:12,122 --> 00:02:14,430
+appropriate name for I really want to do
+here.
+
+32
+00:02:15,460 --> 00:02:18,080
+So the first thing I'm gonna do is go to
+
+33
+00:02:18,080 --> 00:02:22,590
+this textListener and change it to some
+other kind of listener.
+
+34
+00:02:22,590 --> 00:02:26,540
+So I'm actually you know, wondering why,
+why the hell I
+
+35
+00:02:26,540 --> 00:02:29,870
+called it textListener if I want you do in
+the first place.
+
+36
+00:02:29,870 --> 00:02:32,215
+Let's go to the declaration of this.
+
+37
+00:02:32,215 --> 00:02:33,890
+Oh yes it's a stringListener.
+
+38
+00:02:35,620 --> 00:02:39,090
+And it's declared in this interface here.
+
+39
+00:02:39,090 --> 00:02:43,600
+So now let's, I'm gonna right click on
+that and get to Source.
+
+40
+00:02:43,600 --> 00:02:47,850
+Actually it is Refractor my new entry and
+clips,
+
+41
+00:02:47,850 --> 00:02:50,820
+I'm gonna rename this stringListener to
+something more appropriate.
+
+42
+00:02:50,820 --> 00:02:52,886
+Let's just call that, let's call it
+
+43
+00:02:52,886 --> 00:02:55,740
+ToolbarListener which would make a lot
+more sense.
+
+44
+00:02:57,320 --> 00:02:59,760
+So, and I click Finish there.
+
+45
+00:02:59,760 --> 00:03:05,270
+And instead of textEmitted, let's refactor
+that, rename it to
+
+46
+00:03:07,510 --> 00:03:07,860
+let's see.
+
+47
+00:03:07,860 --> 00:03:09,160
+Well this is gonna be an event
+
+48
+00:03:09,160 --> 00:03:13,740
+that's raised if something happens in the
+toolbar.
+
+49
+00:03:13,740 --> 00:03:20,922
+So, let's call this well this can be call,
+called
+
+50
+00:03:20,922 --> 00:03:26,430
+saveEventOccurred really,
+
+51
+00:03:26,430 --> 00:03:31,059
+and this method could be called if you
+click the Save button in the toolbar.
+
+52
+00:03:32,160 --> 00:03:34,710
+I'm seeing if that's really a good name
+for it.
+
+53
+00:03:34,710 --> 00:03:36,340
+Yeah, let's, let's go with that.
+
+54
+00:03:36,340 --> 00:03:37,290
+Doesn't matter too much.
+
+55
+00:03:37,290 --> 00:03:46,365
+And let's also give it a public void
+refreshEventOccurred.
+
+56
+00:03:46,365 --> 00:03:50,850
+And we don't need really to have any
+string text in there either.
+
+57
+00:03:51,850 --> 00:03:54,357
+So these are just gonna be two methods
+that call
+
+58
+00:03:54,357 --> 00:03:57,584
+in response to the Save and Refresh
+buttons being clicked.
+
+59
+00:03:57,584 --> 00:03:59,163
+So I think that'll do the trick.
+
+60
+00:03:59,163 --> 00:04:01,145
+And now let's have a look in the toolbar
+
+61
+00:04:01,145 --> 00:04:04,530
+here and see if we've gotten any problems
+in there.
+
+62
+00:04:04,530 --> 00:04:09,982
+So, later on, we call saveEventOccurred,
+if this Hello button is clicked,
+
+63
+00:04:09,982 --> 00:04:15,367
+so, I'm, I'm gonna change that, let's give
+it a text hello and goodbye.
+
+64
+00:04:15,367 --> 00:04:19,750
+And if you click the Goodbye button, okay
+now, have a refresh again.
+
+65
+00:04:19,750 --> 00:04:22,700
+I'm gonna rename these these buttons.
+
+66
+00:04:22,700 --> 00:04:27,210
+So instead of helloButton, I'm gonna go
+with Refactor > Rename.
+
+67
+00:04:28,340 --> 00:04:32,256
+I'm gonna call it, saveButton.
+
+68
+00:04:32,256 --> 00:04:36,179
+And Continue.
+
+69
+00:04:36,179 --> 00:04:39,700
+And let's rename the Goodbye Button.
+
+70
+00:04:41,240 --> 00:04:44,870
+Let's call that Refresh Button.
+
+71
+00:04:44,870 --> 00:04:52,530
+So it really saves a lot of time using
+these refactor kinda shortcuts in Eclipse.
+
+72
+00:04:52,530 --> 00:04:54,225
+Because they will find all the places
+where
+
+73
+00:04:54,225 --> 00:04:55,935
+you will, you can get's changed for you.
+
+74
+00:04:55,935 --> 00:05:02,240
+So that's the toolbar, toolbar delegate,
+if I run, if i run this application now.
+
+75
+00:05:02,240 --> 00:05:05,000
+Actually I can't because I've got an error
+in my mainframe.
+
+76
+00:05:05,000 --> 00:05:07,755
+Because this now leads to declare.
+
+77
+00:05:07,755 --> 00:05:10,518
+And what we got is message method, message
+
+78
+00:05:10,518 --> 00:05:13,990
+about serial version ID which we don't
+really need.
+
+79
+00:05:13,990 --> 00:05:17,266
+But I'll get it one of those to shut It
+up.
+
+80
+00:05:17,266 --> 00:05:22,136
+And then we should have another error in
+there,
+
+81
+00:05:22,136 --> 00:05:27,117
+because down here, and the toolbar is now
+has the same
+
+82
+00:05:27,117 --> 00:05:33,410
+event, that doesn't that doesn't accept
+any text.
+
+83
+00:05:33,410 --> 00:05:35,970
+And let's go ahead and get rid of this,
+reference to the text panel.
+
+84
+00:05:37,450 --> 00:05:43,265
+And the the Toolbar Listener has to have a
+method called
+
+85
+00:05:43,265 --> 00:05:50,070
+public void and Refresh Occurred, so let's
+add that there.
+
+86
+00:05:50,070 --> 00:05:51,340
+So we're getting there.
+
+87
+00:05:51,340 --> 00:05:58,010
+And also I've got this toolbar that the
+message is set in the listening toolbar.
+
+88
+00:05:58,010 --> 00:06:02,325
+A moment it's called setStringListener,
+which can as well be appropriately sets
+
+89
+00:06:02,325 --> 00:06:07,280
+right-click on that, go to Refactor >
+Rename, I'll call it setTool.
+
+90
+00:06:07,280 --> 00:06:09,160
+ToolbarListener.
+
+91
+00:06:11,150 --> 00:06:16,410
+Okay, so that's just is a lot of stuff,
+but just dealing with the tool bar.
+
+92
+00:06:16,410 --> 00:06:21,780
+And now, if someone clicks that's actually
+
+93
+00:06:21,780 --> 00:06:23,950
+how this works, so we've always got
+practice.
+
+94
+00:06:23,950 --> 00:06:28,420
+So if they click Save button, I wanna emit
+saved in console down there.
+
+95
+00:06:28,420 --> 00:06:32,860
+And if I click Refresh, let's have it say
+Refresh.
+
+96
+00:06:32,860 --> 00:06:35,830
+So, Save and Refresh.
+
+97
+00:06:35,830 --> 00:06:37,023
+That looks good.
+
+98
+00:06:37,023 --> 00:06:41,432
+Okay, and so if someone clicked Save.
+
+99
+00:06:41,432 --> 00:06:46,333
+And by the way sometimes when this
+application's quit, especially if you
+
+100
+00:06:46,333 --> 00:06:51,780
+click cross bar, sometimes there's that
+InterruptedException down here,
+
+101
+00:06:51,780 --> 00:06:55,123
+and that's actually a little book in swing
+as far as
+
+102
+00:06:55,123 --> 00:06:59,320
+I know, and there is some stuff on google
+about it.
+
+103
+00:06:59,320 --> 00:07:01,570
+And I found what seems to be a fix for it
+
+104
+00:07:01,570 --> 00:07:04,400
+and I'm gonna show you later, but it
+doesn't really affect anything.
+
+105
+00:07:04,400 --> 00:07:12,150
+And strangely, if you quit by using the
+menu item here, you don't seem to get it.
+
+106
+00:07:12,150 --> 00:07:16,040
+So it's quite odd but we will be fixing
+that later on, not that it matters.
+
+107
+00:07:16,040 --> 00:07:20,910
+And so here if say, it was clicked.
+
+108
+00:07:20,910 --> 00:07:27,660
+I wanna basically invoke the save method
+in the database here, but before that
+
+109
+00:07:27,660 --> 00:07:33,150
+we gotta connect to the database, and the
+way I wrote the database code
+
+110
+00:07:33,150 --> 00:07:36,060
+you'll recall is that you can click
+
+111
+00:07:36,060 --> 00:07:37,930
+connect multiple times, and if it's
+already
+
+112
+00:07:37,930 --> 00:07:41,309
+connected, and in fact if it is not null,
+it just won't do anything.
+
+113
+00:07:43,360 --> 00:07:45,810
+And now the first thing I wanna do is cuz
+I've
+
+114
+00:07:45,810 --> 00:07:51,720
+decided not to have my GUI call my model
+code directly.
+
+115
+00:07:51,720 --> 00:07:53,020
+It's gonna go through Controller.
+
+116
+00:07:53,020 --> 00:07:55,850
+I need some wrapper methods in my
+Controller.
+
+117
+00:07:57,530 --> 00:08:05,250
+And, in my Controller, I need to have a
+save method from my database.
+
+118
+00:08:05,250 --> 00:08:06,630
+So public void save.
+
+119
+00:08:08,368 --> 00:08:11,627
+And let's just say db.save.
+
+120
+00:08:11,627 --> 00:08:15,420
+And that's gonna have to throw an
+exception.
+
+121
+00:08:17,210 --> 00:08:22,360
+And then we'll have public void close,
+which close the database.
+
+122
+00:08:22,360 --> 00:08:27,070
+Closes the database connection, db.close.
+
+123
+00:08:27,070 --> 00:08:31,170
+I'm gonna look at where to put that in the
+next tutorial so
+
+124
+00:08:34,200 --> 00:08:35,660
+actually I maybe call it disconnect.
+
+125
+00:08:35,660 --> 00:08:37,100
+Let's see, disconnect, yeah.
+
+126
+00:08:38,170 --> 00:08:43,550
+And yeah, disconnect actually doesn't
+throw an exception, so that's fine.
+
+127
+00:08:43,550 --> 00:08:49,190
+now, I yeah, I've got, I've already got my
+save method there.
+
+128
+00:08:49,190 --> 00:08:50,590
+So that's good.
+
+129
+00:08:50,590 --> 00:08:54,400
+So now in the toolbar here in the yeah, in
+
+130
+00:08:54,400 --> 00:08:57,930
+the mainframe we're actually works when it
+listens to the toolbar.
+
+131
+00:08:57,930 --> 00:09:02,160
+When the event is occurs, which
+corresponds to
+
+132
+00:09:02,160 --> 00:09:05,640
+the save button being clicked in the
+toolbar.
+
+133
+00:09:05,640 --> 00:09:10,062
+Then I wanna say controller.connect.
+
+134
+00:09:10,062 --> 00:09:15,630
+So, controller.connect.
+
+135
+00:09:15,630 --> 00:09:16,130
+Where are we?
+
+136
+00:09:17,730 --> 00:09:22,485
+Controler, oh not connect, but yeah, I
+
+137
+00:09:22,485 --> 00:09:27,260
+didn't like the connect method yeah,
+actually.
+
+138
+00:09:27,260 --> 00:09:31,020
+I want the public void connect in fact
+
+139
+00:09:31,020 --> 00:09:32,910
+let's call this closed, let's call it
+disconnect.
+
+140
+00:09:32,910 --> 00:09:34,830
+That's maybe, makes more sense.
+
+141
+00:09:34,830 --> 00:09:38,435
+And that's gonna fire, that's gonna call
+db.connect.
+
+142
+00:09:39,490 --> 00:09:41,500
+And that throws an exception.
+
+143
+00:09:41,500 --> 00:09:45,190
+So I've got connect and the disconnect
+method, I've got my save
+
+144
+00:09:45,190 --> 00:09:48,810
+method, and actually I also need to put
+public void load method.
+
+145
+00:09:48,810 --> 00:09:51,660
+All of these are purely rapid methods in
+the controller.
+
+146
+00:09:51,660 --> 00:09:54,880
+And, and you might decide that, to just
+kind of,
+
+147
+00:09:54,880 --> 00:10:01,060
+call the database code directly from the
+review if you code.
+
+148
+00:10:02,570 --> 00:10:03,650
+But it's really up to you.
+
+149
+00:10:04,810 --> 00:10:05,550
+okay, so
+
+150
+00:10:07,920 --> 00:10:09,200
+that looks good.
+
+151
+00:10:09,200 --> 00:10:11,800
+And now in the main frame, let's
+
+152
+00:10:11,800 --> 00:10:14,890
+say controller.connect if you click that
+button.
+
+153
+00:10:14,890 --> 00:10:18,250
+And then I'm gonna say, controller.save.
+
+154
+00:10:18,250 --> 00:10:25,400
+So controller, controller.save.
+
+155
+00:10:25,400 --> 00:10:30,043
+Now the connect button shows an exception,
+so
+
+156
+00:10:30,043 --> 00:10:35,052
+I'm gonna handle that surrounded try and
+catch.
+
+157
+00:10:35,052 --> 00:10:40,752
+And if, we can't connect to the database,
+I'm gonna say J
+
+158
+00:10:40,752 --> 00:10:47,520
+options paid dot and it's just
+JoptionPaid.yes dot.
+
+159
+00:10:47,520 --> 00:10:50,290
+And, and let's how I show
+
+160
+00:10:52,430 --> 00:10:54,160
+show com, show confirm dialog.
+
+161
+00:10:54,160 --> 00:10:58,800
+Actually just show info dialog would do
+the trick.
+
+162
+00:10:59,870 --> 00:11:04,600
+And showMessageDialog, there we go, that's
+what mean, showMessageDialog.
+
+163
+00:11:04,600 --> 00:11:13,750
+And I wanna use the constructor here, that
+this constructor and let's select that.
+
+164
+00:11:15,090 --> 00:11:17,090
+And maximize the editor.
+
+165
+00:11:17,090 --> 00:11:20,840
+And in here, so for this I need to pass
+the MainFrame.this.
+
+166
+00:11:20,840 --> 00:11:24,570
+I can't just use this by itself because,
+
+167
+00:11:24,570 --> 00:11:26,779
+this enormous class here has it's own
+bliz.
+
+168
+00:11:28,000 --> 00:11:36,850
+And the message there is gonna be cannot
+connect to database.
+
+169
+00:11:39,120 --> 00:11:46,870
+And the title is gonna be Database, I
+don't know, Database Connection Problem.
+
+170
+00:11:48,510 --> 00:11:57,390
+And let's have JOptionPane.warning
+error_message.
+
+171
+00:11:57,390 --> 00:11:57,890
+That's the one.
+
+172
+00:11:59,240 --> 00:12:02,210
+So that should look good, I think.
+
+173
+00:12:03,940 --> 00:12:10,280
+And then, if everything goes well, we'll
+do control adopt saver.
+
+174
+00:12:12,086 --> 00:12:15,480
+And that also throws the sequel exception.
+
+175
+00:12:17,060 --> 00:12:24,060
+So I'm not really sure why it's not giving
+me the option to to handle it here.
+
+176
+00:12:24,060 --> 00:12:27,183
+Although yet, the mainframe is showing an
+error.
+
+177
+00:12:27,183 --> 00:12:29,330
+Well let's, let's deal with that.
+
+178
+00:12:30,930 --> 00:12:34,360
+So and it's such in its throne from
+
+179
+00:12:34,360 --> 00:12:39,652
+the controller there, is it's actually SQL
+exception.
+
+180
+00:12:41,250 --> 00:12:46,160
+So I feel like Eclipse is being a little
+bit, temperamental here.
+
+181
+00:12:47,470 --> 00:12:52,120
+But, it's probably something that, wrong
+or something, I'm not sure.
+
+182
+00:12:52,120 --> 00:12:55,847
+So that throws a sequence conception.
+
+183
+00:12:55,847 --> 00:13:02,140
+And controller.connect can actually throws
+an exception.
+
+184
+00:13:02,140 --> 00:13:03,300
+Okay.
+
+185
+00:13:03,300 --> 00:13:06,590
+I can't remember why, but that's good.
+
+186
+00:13:06,590 --> 00:13:12,000
+Okay, and now, here now It's letting me
+add controller.save.
+
+187
+00:13:12,000 --> 00:13:14,910
+So let's add a try-catch around that.
+
+188
+00:13:14,910 --> 00:13:17,200
+That throws the SQL exception.
+
+189
+00:13:17,200 --> 00:13:19,705
+And we'll have a message box that pops up
+
+190
+00:13:19,705 --> 00:13:23,870
+there saying something very similar to the
+first message box.
+
+191
+00:13:23,870 --> 00:13:29,410
+And, let's say, Unable to save to
+database.
+
+192
+00:13:30,430 --> 00:13:31,860
+We don't know why.
+
+193
+00:13:31,860 --> 00:13:35,230
+But we'll pop up a suitable message if
+that happens.
+
+194
+00:13:36,690 --> 00:13:42,400
+So now we want the, in, in this refresh
+method
+
+195
+00:13:42,400 --> 00:13:44,770
+that's triggered, if you click a Refresh
+button on the toolbar.
+
+196
+00:13:46,168 --> 00:13:51,370
+I want to say controller dot dot load.
+
+197
+00:13:53,640 --> 00:13:57,390
+And that throws an exception, so let's
+handle that.
+
+198
+00:13:57,390 --> 00:14:02,044
+I'm gonna use this kind of message box.
+
+199
+00:14:02,044 --> 00:14:10,599
+And it's gonna say Unable to load from
+database.
+
+200
+00:14:10,599 --> 00:14:15,155
+And we're also gonna have a similar thing
+here.
+
+201
+00:14:15,155 --> 00:14:18,013
+I'm gonna have this, like if you can't
+connect
+
+202
+00:14:18,013 --> 00:14:20,811
+to the database, I need to pop up this
+message.
+
+203
+00:14:20,811 --> 00:14:26,662
+But rather than repeat the code, let's
+maybe just have a message called
+
+204
+00:14:26,662 --> 00:14:32,778
+connect the, sorry method called connect,
+you can call it a message.
+
+205
+00:14:32,778 --> 00:14:36,507
+Method call, connects the call to connect
+method.
+
+206
+00:14:36,507 --> 00:14:38,543
+And let's just implement that method here.
+
+207
+00:14:38,543 --> 00:14:42,871
+Private void connect, and in connect I'm
+just gonna put the code for
+
+208
+00:14:42,871 --> 00:14:49,100
+connecting to the database and popping up
+the error message if that doesn't work.
+
+209
+00:14:49,100 --> 00:14:50,695
+Now, I think that should do the trick.
+
+210
+00:14:50,695 --> 00:14:52,740
+So, I'm gonna run this.
+
+211
+00:14:52,740 --> 00:14:57,720
+And in my database I've got a couple of
+files in there John, Sue.
+
+212
+00:14:58,960 --> 00:15:01,580
+So let's click Refresh and see what
+happens.
+
+213
+00:15:01,580 --> 00:15:06,880
+Oh yeah, there's something that I actually
+forgot, which is that when the refresh
+
+214
+00:15:06,880 --> 00:15:12,460
+event occurs, I've got to call
+tablePanel.refresh
+
+215
+00:15:12,460 --> 00:15:15,090
+otherwise it's not going to display
+anything.
+
+216
+00:15:15,090 --> 00:15:18,920
+So let's run that and click Refresh, and
+there we go.
+
+217
+00:15:18,920 --> 00:15:20,490
+Look our values.
+
+218
+00:15:20,490 --> 00:15:26,635
+And if I put another one in here, I'll
+call myself John, cuz that's
+
+219
+00:15:26,635 --> 00:15:32,708
+my name software 1865 and self employed,
+thank you very much.
+
+220
+00:15:32,708 --> 00:15:35,250
+[INAUDIBLE] Click OK.
+
+221
+00:15:35,250 --> 00:15:36,279
+And then just click Save.
+
+222
+00:15:37,590 --> 00:15:38,090
+And,
+
+223
+00:15:40,090 --> 00:15:49,096
+now, we can see in the database hopefully,
+if I do a refresh, there I am, John.
+
+224
+00:15:49,096 --> 00:15:51,466
+Of course there's, there's lots of ways
+you
+
+225
+00:15:51,466 --> 00:15:53,956
+could refine this, but I'm not gonna worry
+
+226
+00:15:53,956 --> 00:15:56,204
+too much about it in this tutorial,
+because
+
+227
+00:15:56,204 --> 00:16:00,500
+the tutorial is just gonna get
+ridiculously long unnecessarily.
+
+228
+00:16:00,500 --> 00:16:01,780
+But you could, you know you could have a
+
+229
+00:16:01,780 --> 00:16:05,590
+message saying no data saved or something
+popping up
+
+230
+00:16:05,590 --> 00:16:11,840
+at the bottom or who knows or even a pop
+up box, well that could be quite annoying.
+
+231
+00:16:13,370 --> 00:16:19,210
+Or you could, I don't know you could make
+the button go grey to click save and then
+
+232
+00:16:19,210 --> 00:16:25,330
+you could make it unable to get someone
+added to the table or something like that.
+
+233
+00:16:25,330 --> 00:16:27,860
+But I'll leave that for the moment.
+
+234
+00:16:27,860 --> 00:16:28,720
+So, that's that.
+
+235
+00:16:28,720 --> 00:16:31,040
+I hope that was useful, just wiring
+
+236
+00:16:31,040 --> 00:16:33,370
+in existing stuff, just wiring is all
+together.
+
+237
+00:16:33,370 --> 00:16:36,550
+And, in the next tutorial, we're gonna
+look
+
+238
+00:16:36,550 --> 00:16:38,970
+at something that I've left out of this
+tutorial.
+
+239
+00:16:38,970 --> 00:16:41,320
+Which is like, okay, we've connected to
+the
+
+240
+00:16:41,320 --> 00:16:45,450
+database, but where do you disconnect from
+the database.
+
+241
+00:16:45,450 --> 00:16:50,412
+And to disconnect from the database, we're
+gonna intercept the window closing event,
+
+242
+00:16:50,412 --> 00:16:52,662
+and even though we're gonna disconnect
+
+243
+00:16:52,662 --> 00:16:55,190
+from the database before the window
+closes.
+
+244
+00:16:55,190 --> 00:16:59,190
+And I'm also gonna fix, fix this bug that
+I mentioned earlier.
+
+245
+00:16:59,190 --> 00:17:04,540
+Which is, is sometimes you see like a
+thread interrupted exception.
+
+246
+00:17:04,540 --> 00:17:08,141
+When you, when you quit the the, the swing
+
+247
+00:17:08,141 --> 00:17:13,292
+program by clicking on this thing here,
+without [INAUDIBLE] swing.
+
+248
+00:17:13,292 --> 00:17:16,046
+And I don't think there's actually wrong
+with this code.
+
+249
+00:17:16,046 --> 00:17:21,526
+Okay, so join me again next time and until
+then, happy coding
+
+250
+00:17:21,526 --> 00:17:24,899
+[BLANK_AUDIO]
+

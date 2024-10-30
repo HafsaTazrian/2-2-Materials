@@ -1,0 +1,424 @@
+1
+00:00:01,510 --> 00:00:02,995
+Hello, this is John from
+
+2
+00:00:02,995 --> 00:00:05,480
+caveofprogramming.com and in this tutorial
+we're
+
+3
+00:00:05,480 --> 00:00:10,490
+gonna look at how you respond to list and
+to tab selections.
+
+4
+00:00:10,490 --> 00:00:13,290
+So, in a moment, if I click this message
+tab
+
+5
+00:00:13,290 --> 00:00:16,760
+here, I have to actually do something in
+the tree.
+
+6
+00:00:16,760 --> 00:00:20,320
+I have to click check box before my
+messages are retrieved and I want
+
+7
+00:00:20,320 --> 00:00:25,670
+to change that so that just selecting the
+type in itself will retrieve messages.
+
+8
+00:00:25,670 --> 00:00:27,465
+And by the way, I've added a bunch of
+
+9
+00:00:27,465 --> 00:00:33,480
+fake messages to my message controller, my
+fake message retriever.
+
+10
+00:00:33,480 --> 00:00:35,880
+And I decreased the time that it takes
+
+11
+00:00:35,880 --> 00:00:38,240
+to retrieve each message, a bit more
+realistic now.
+
+12
+00:00:40,510 --> 00:00:42,930
+Okay so this is pretty simple.
+
+13
+00:00:42,930 --> 00:00:48,590
+I'm going to go to place, main frame,
+where I actually create the top
+
+14
+00:00:48,590 --> 00:00:52,110
+pane and I'm going to add to
+
+15
+00:00:52,110 --> 00:00:57,800
+the top pane, topPane.aChangeListener, so
+add ChangeListener.
+
+16
+00:00:57,800 --> 00:01:01,750
+Now I could make, make frame implement
+changes in
+
+17
+00:01:01,750 --> 00:01:04,000
+it but I say, I use an anonymous class
+here.
+
+18
+00:01:04,000 --> 00:01:05,910
+I say new ChangeListener.
+
+19
+00:01:08,300 --> 00:01:10,430
+Like this, open and curly bracket.
+
+20
+00:01:11,790 --> 00:01:13,680
+And put a semicolon in.
+
+21
+00:01:13,680 --> 00:01:16,850
+And let's add the unimplemented methods
+in.
+
+22
+00:01:16,850 --> 00:01:20,050
+So, it's just got one method called state
+changed
+
+23
+00:01:20,050 --> 00:01:22,350
+and this will be called whenever a tab is
+selected.
+
+24
+00:01:22,350 --> 00:01:26,575
+And when a tab is selected, I'm gonna say
+
+25
+00:01:26,575 --> 00:01:32,870
+tabPane.getSelected tab, getSelectedIndex,
+sorry.
+
+26
+00:01:32,870 --> 00:01:39,070
+And I'm gonna say int, tabIndex equals
+topPane.getSelectedIndex and
+
+27
+00:01:39,070 --> 00:01:45,130
+that's just do assist out now to see what
+type that is tabIndex.
+
+28
+00:01:45,130 --> 00:01:46,730
+There we go.
+
+29
+00:01:46,730 --> 00:01:49,640
+And minimize the editor and let's go.
+
+30
+00:01:49,640 --> 00:01:53,650
+So now if I click messages, so that's, you
+can see down here that's.
+
+31
+00:01:53,650 --> 00:01:58,440
+That's their tab number one and their
+person database is tab zero.
+
+32
+00:01:58,440 --> 00:02:01,090
+So it's quiet nicely and that's all their,
+all you really
+
+33
+00:02:01,090 --> 00:02:05,770
+need to know to so that thing tabs but I'm
+gonna
+
+34
+00:02:05,770 --> 00:02:10,870
+now make this application actually,
+actually retrieve messages in
+
+35
+00:02:10,870 --> 00:02:16,060
+response to that tab selection and, and
+display them in a kind of JList.
+
+36
+00:02:16,060 --> 00:02:21,770
+That we got as our middle panel in this
+message database.
+
+37
+00:02:21,770 --> 00:02:25,050
+So to do that I'm going to go to the
+message panel
+
+38
+00:02:25,050 --> 00:02:30,280
+and I'm gonna get that message called
+refresh, so put public void refresh.
+
+39
+00:02:30,280 --> 00:02:32,730
+And refresh is gonna go retrieve messages.
+
+40
+00:02:32,730 --> 00:02:36,160
+And I'm also gonna.
+
+41
+00:02:36,160 --> 00:02:41,290
+I've actually set the selected service in
+response to a tree cell
+
+42
+00:02:41,290 --> 00:02:46,220
+being edited but I also need to set
+selected service value
+
+43
+00:02:46,220 --> 00:02:51,140
+as well and if, because we want there to
+be a
+
+44
+00:02:51,140 --> 00:02:57,350
+selected selection service even if no
+one's clicked anything in the tree yet.
+
+45
+00:02:57,350 --> 00:03:00,030
+And so, here's my selected service and I'm
+just setting that.
+
+46
+00:03:00,030 --> 00:03:01,860
+Selection on my message server.
+
+47
+00:03:01,860 --> 00:03:05,310
+This is all stuff I implemented in
+previous tutorials.
+
+48
+00:03:05,310 --> 00:03:11,218
+And now we can just say here, if tabIndex
+equals 1
+
+49
+00:03:11,218 --> 00:03:17,408
+then messagePanel dot, whoops, message,
+let's
+
+50
+00:03:17,408 --> 00:03:23,036
+have a look message pane, messagePanel,
+yeah
+
+51
+00:03:23,036 --> 00:03:30,480
+messagePanel.refresh and that should do
+the trick.
+
+52
+00:03:30,480 --> 00:03:35,353
+And when the message panel is refreshed,
+I'm
+
+53
+00:03:35,353 --> 00:03:38,626
+gonna add the titles of the messages to
+the.
+
+54
+00:03:38,626 --> 00:03:41,077
+JList I got in there and we've covered
+JList
+
+55
+00:03:41,077 --> 00:03:44,000
+before so I'm not gonna show you anything
+new here.
+
+56
+00:03:44,000 --> 00:03:46,455
+And but I'm gonna say, private
+
+57
+00:03:46,455 --> 00:03:49,690
+DefaultListModel here in the message
+panel.
+
+58
+00:03:51,070 --> 00:03:56,675
+Let's call it messageListModel and down
+here let's say
+
+59
+00:03:56,675 --> 00:04:05,260
+messageListModel equals new default
+message, new DefaultListModel.
+
+60
+00:04:05,260 --> 00:04:07,720
+There we go.
+
+61
+00:04:07,720 --> 00:04:13,820
+And in the other code where I shall go
+over to this, it doesn't matter,
+
+62
+00:04:13,820 --> 00:04:19,440
+I don't need that, in the bit of code
+where I actually retrieved some messages.
+
+63
+00:04:19,440 --> 00:04:23,908
+So long method or theSwingWorker thread
+down here.
+
+64
+00:04:23,908 --> 00:04:29,472
+I'm gonna say after I get the messages
+I'll say,
+
+65
+00:04:29,472 --> 00:04:36,499
+messageListModel,
+messageListModel.removeAllElements
+
+66
+00:04:36,499 --> 00:04:42,859
+to clear the list and then I'll say for
+message, message
+
+67
+00:04:42,859 --> 00:04:49,450
+in retrieve messages, retrieve messages is
+a list.
+
+68
+00:04:49,450 --> 00:04:57,530
+I can say messageListModel,
+messageListModel.addElement.
+
+69
+00:04:57,530 --> 00:05:02,950
+I can pass in there message.getTitle for
+the moment.
+
+70
+00:05:04,680 --> 00:05:07,070
+And one thing I mustn't forget to do and I
+always
+
+71
+00:05:07,070 --> 00:05:13,620
+do forget to do this, is we've gotta set
+the list.
+
+72
+00:05:13,620 --> 00:05:18,090
+Use this message list model, so just copy
+that and go down to where I.
+
+73
+00:05:18,090 --> 00:05:22,090
+I, I think I copied, Ctrl+C.
+
+74
+00:05:22,090 --> 00:05:25,800
+And I go down to where I create the JList,
+I can just pass in the model right there.
+
+75
+00:05:25,800 --> 00:05:34,550
+And now if I run this and I think on the
+messages tab it outputs the messages here.
+
+76
+00:05:34,550 --> 00:05:36,660
+And actually one, one refinement that I
+just,
+
+77
+00:05:36,660 --> 00:05:39,140
+like, so need and it should make here is.
+
+78
+00:05:39,140 --> 00:05:41,090
+So I've got my messages there.
+
+79
+00:05:41,090 --> 00:05:44,759
+That's write that in a new JScrollPane
+
+80
+00:05:44,759 --> 00:05:50,840
+because that list of potentially infinite
+size.
+
+81
+00:05:50,840 --> 00:05:54,430
+Let's not write in the scroll pane, it's
+not use at all really.
+
+82
+00:05:55,600 --> 00:05:56,030
+So-
+
+83
+00:05:56,030 --> 00:05:57,140
+whoops-
+
+84
+00:05:57,140 --> 00:05:58,540
+let's take a look at this.
+
+85
+00:05:58,540 --> 00:05:59,400
+Now come up.
+
+86
+00:05:59,400 --> 00:06:00,430
+There we go.
+
+87
+00:06:00,430 --> 00:06:01,060
+That's much better.
+
+88
+00:06:02,860 --> 00:06:05,140
+And in a future tutorial we're gonna take
+a look at
+
+89
+00:06:05,140 --> 00:06:08,460
+making this look a bit nicer by
+implementing a list renderer.
+
+90
+00:06:08,460 --> 00:06:13,050
+But that's off the list tutorial and until
+next time, happy coding.
+

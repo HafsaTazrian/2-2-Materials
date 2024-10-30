@@ -1,0 +1,498 @@
+1
+00:00:01,870 --> 00:00:05,990
+Hello, this is John from
+caveofprogramming.com, and
+
+2
+00:00:05,990 --> 00:00:09,800
+in this tutorial we're gonna look at
+JSplitPane.
+
+3
+00:00:09,800 --> 00:00:14,200
+And so if I, if I run the program as it is
+at the moment now, and at the
+
+4
+00:00:14,200 --> 00:00:18,000
+moment there's a kind of firm fixed size
+between
+
+5
+00:00:18,000 --> 00:00:21,490
+this table and this form, when you can't
+resize it.
+
+6
+00:00:21,490 --> 00:00:23,970
+Which actually really is probably fine for
+this application.
+
+7
+00:00:23,970 --> 00:00:27,710
+But, in order to demonstrate SplitPanes,
+which are often very useful.
+
+8
+00:00:29,220 --> 00:00:32,360
+I'm gonna change this so that you can
+resize
+
+9
+00:00:32,360 --> 00:00:36,180
+the border between these two these two
+forms here.
+
+10
+00:00:37,940 --> 00:00:41,790
+So I'm gonna go to my main frame here, and
+
+11
+00:00:41,790 --> 00:00:47,660
+I'm gonna create a private JSplitPane,
+which I'll call Split Pane.
+
+12
+00:00:49,400 --> 00:00:51,560
+And after I've constructed my other
+
+13
+00:00:51,560 --> 00:00:54,951
+components down here, I'm gonna say,
+SplitPane.
+
+14
+00:00:56,510 --> 00:01:00,290
+That's actually at the import, so the
+auto-complete works.
+
+15
+00:01:00,290 --> 00:01:05,580
+SplitPane, equals new JSplitPane.
+
+16
+00:01:06,750 --> 00:01:09,600
+And, I'm gonna supply some arguments to
+the constructor here.
+
+17
+00:01:09,600 --> 00:01:13,720
+And the first one is gonna be jsplit,
+whoops.
+
+18
+00:01:13,720 --> 00:01:15,980
+Ctrl+Z.
+
+19
+00:01:15,980 --> 00:01:20,340
+The first one is gonna be jsplitpane, and
+here I wanna set where I,
+
+20
+00:01:20,340 --> 00:01:24,900
+I need to set whether I want a horizontal
+split or a vertical split.
+
+21
+00:01:24,900 --> 00:01:29,330
+And in this case, I want my components to
+be arranged left and right.
+
+22
+00:01:29,330 --> 00:01:34,080
+So I want the horizontal split and then,
+I'm going to pass in the two components.
+
+23
+00:01:34,080 --> 00:01:37,700
+So I want to split between and you can
+change these
+
+24
+00:01:37,700 --> 00:01:41,670
+components dynamically, if you want to,
+but here I won't do that.
+
+25
+00:01:41,670 --> 00:01:45,240
+I'll just say, on the left, and on the
+Form Panel,
+
+26
+00:01:45,240 --> 00:01:50,060
+and on the right, I want the Table Panel,
+like that.
+
+27
+00:01:51,160 --> 00:01:56,800
+So and now instead of adding the Form
+Panel under Table Panel down
+
+28
+00:01:56,800 --> 00:02:02,370
+here, I'm gonna add the split pane, at
+borderly at the center, and
+
+29
+00:02:02,370 --> 00:02:05,490
+I'm gonna get rid of this separate from
+panel ad, and if I
+
+30
+00:02:05,490 --> 00:02:10,969
+run that now, and I've got the split pane
+here, which is, re-sizeable.
+
+31
+00:02:10,969 --> 00:02:12,930
+[UNKNOWN] There we go.
+
+32
+00:02:12,930 --> 00:02:16,930
+And now there's a few things you can do
+with this.
+
+33
+00:02:16,930 --> 00:02:18,830
+One thing is I need to fix a little bug
+
+34
+00:02:18,830 --> 00:02:22,660
+here because the way my application works
+at the moment, I
+
+35
+00:02:22,660 --> 00:02:26,820
+can go to window show an unticked person
+form, and the
+
+36
+00:02:26,820 --> 00:02:32,470
+person form vanishes, and split pane
+handles it rather nicely, actually.
+
+37
+00:02:32,470 --> 00:02:35,420
+If I go show it doesn't reappear.
+
+38
+00:02:35,420 --> 00:02:38,260
+So I'm gonna finally show Menu Item.
+
+39
+00:02:38,260 --> 00:02:39,550
+I think it's called Show Item.
+
+40
+00:02:40,680 --> 00:02:41,700
+Or maybe not.
+
+41
+00:02:41,700 --> 00:02:45,270
+Show Menu let's have a look.
+
+42
+00:02:45,270 --> 00:02:46,040
+Show Menu.
+
+43
+00:02:46,040 --> 00:02:46,900
+So we've got Show Menu.
+
+44
+00:02:46,900 --> 00:02:50,890
+And we've got Show Format in here.
+
+45
+00:02:50,890 --> 00:02:55,100
+And I've got an action listener, here we
+go.
+
+46
+00:02:55,100 --> 00:02:58,096
+So, I'm gonna change this, I'm going to
+set
+
+47
+00:02:58,096 --> 00:03:03,830
+the the size of the divider on the
+splitter.
+
+48
+00:03:03,830 --> 00:03:11,670
+I'm gonna set the position of the divider,
+sorry, when you show the Form Panel again.
+
+49
+00:03:11,670 --> 00:03:19,450
+So let's say here, if menu item.is
+selected.
+
+50
+00:03:19,450 --> 00:03:24,030
+So, in other words, if the menu items
+ticked which means that the users ticked
+
+51
+00:03:24,030 --> 00:03:28,680
+it, when it was unticked before, so
+they're ticking it to show the Form Panel.
+
+52
+00:03:29,680 --> 00:03:36,460
+I'm gonna say SplitPane.set, divider
+location.
+
+53
+00:03:36,460 --> 00:03:40,480
+And you'll notice there's two, there's two
+varieties of this.
+
+54
+00:03:40,480 --> 00:03:42,540
+There's one that takes a double and that's
+a
+
+55
+00:03:42,540 --> 00:03:48,250
+proportional location from zero, 0.0 to
+one point naught.
+
+56
+00:03:48,250 --> 00:03:52,640
+And there's one that takes an int, which
+is a pixel, location.
+
+57
+00:03:52,640 --> 00:03:54,730
+From the left, in this case.
+
+58
+00:03:54,730 --> 00:03:57,530
+I, I want to set, actually, the
+
+59
+00:03:57,530 --> 00:04:02,931
+location to do something approximately
+like the formpanel.,
+
+60
+00:04:02,931 --> 00:04:08,070
+and let's get the minimum size of the Form
+Panel here.
+
+61
+00:04:08,070 --> 00:04:09,860
+And one thing I really need to mention,
+
+62
+00:04:09,860 --> 00:04:14,390
+actually, is that you should set minimum
+sizes on
+
+63
+00:04:14,390 --> 00:04:20,458
+your components, so if I go to, let's just
+take a quick look in the Form Panel here.
+
+64
+00:04:20,458 --> 00:04:27,649
+Form Panel, here, I got a preferred size,
+I've actually got a minimum size.
+
+65
+00:04:28,750 --> 00:04:32,220
+And so the minimum size is probably gonna
+be set
+
+66
+00:04:32,220 --> 00:04:37,350
+at the default, when I set the, set the
+preferred size.
+
+67
+00:04:37,350 --> 00:04:38,140
+That's that.
+
+68
+00:04:38,140 --> 00:04:41,530
+A minimum size here, and so that's, when I
+
+69
+00:04:41,530 --> 00:04:45,666
+call set preferred size, I'm also gonna
+set minimum size.
+
+70
+00:04:45,666 --> 00:04:48,158
+Mimimum size.
+
+71
+00:04:48,158 --> 00:04:51,620
+To prevent that form
+
+72
+00:04:53,800 --> 00:04:54,850
+getting too small.
+
+73
+00:04:54,850 --> 00:05:00,030
+So, if I run this now it's gonna stop me
+
+74
+00:05:00,030 --> 00:05:04,680
+scrolling too much to the left and
+squashing the form.
+
+75
+00:05:04,680 --> 00:05:11,543
+So you probably want to set a minimum size
+for the components in your splitter.
+
+76
+00:05:11,543 --> 00:05:16,920
+Okay, that's a bit of a diversion, but
+now, we'll still find that if I
+
+77
+00:05:16,920 --> 00:05:21,950
+hide the form panel, show it again, I
+still, I still got problem.
+
+78
+00:05:21,950 --> 00:05:23,470
+I need to move the splitter over.
+
+79
+00:05:23,470 --> 00:05:28,724
+So in the showMenuItem, I'm going to say
+
+80
+00:05:28,724 --> 00:05:34,176
+SplitPanes set
+DividerLocationFrontPanel.getMinimum
+
+81
+00:05:34,176 --> 00:05:38,820
+size .getWidth and now getWidth returns
+
+82
+00:05:38,820 --> 00:05:43,780
+a double value and that would call the
+
+83
+00:05:43,780 --> 00:05:48,960
+variety of setDivider, sorry a form of
+setDivider location.
+
+84
+00:05:50,210 --> 00:05:54,830
+That and it take a double from 0.0 to 1.0
+and I don't want that.
+
+85
+00:05:54,830 --> 00:05:58,430
+I want the pixel width variety.
+
+86
+00:05:58,430 --> 00:06:01,930
+So I'm just going to cast this width to an
+int.
+
+87
+00:06:01,930 --> 00:06:05,540
+So now, if I click Run and I go
+
+88
+00:06:05,540 --> 00:06:10,380
+to window show person form, Unshow it, and
+Show again.
+
+89
+00:06:10,380 --> 00:06:15,160
+It's gonna set the divider to an
+appropriate location.
+
+90
+00:06:16,410 --> 00:06:19,539
+And notice to make that work, I also set a
+
+91
+00:06:19,539 --> 00:06:23,600
+minimum width on my form, a minimum size
+on my form.
+
+92
+00:06:25,320 --> 00:06:26,270
+okay, so that's that.
+
+93
+00:06:26,270 --> 00:06:31,780
+And there's one other thing that is, is a
+little bit interesting, which is that
+
+94
+00:06:34,480 --> 00:06:39,088
+on my SplitPane I can say I can set it to
+
+95
+00:06:39,088 --> 00:06:45,690
+SplitPane.setOneTouch [UNKNOWN] tree.
+
+96
+00:06:45,690 --> 00:06:52,620
+If I do that it, puts in these little
+
+97
+00:06:52,620 --> 00:06:59,850
+icons here and I can just click those to
+expand and contract like that and.
+
+98
+00:06:59,850 --> 00:07:02,730
+Or I could [UNKNOWN] using the splitter,
+if I want.
+
+99
+00:07:02,730 --> 00:07:05,240
+I can have my form as big as I like.
+
+100
+00:07:05,240 --> 00:07:08,840
+It doesn't look very good big, so, in this
+case, I don't know if that was
+
+101
+00:07:08,840 --> 00:07:15,810
+a really a useful thing to do, but it's
+just a demo really of the JSplitPane.
+
+102
+00:07:15,810 --> 00:07:19,658
+So, in the next tutorial, we're gonna look
+at
+
+103
+00:07:19,658 --> 00:07:24,510
+JTabbedPane, and I'm gonna change this
+table here into
+
+104
+00:07:24,510 --> 00:07:27,450
+a TabbedPane where one tab has a table on
+
+105
+00:07:27,450 --> 00:07:30,030
+and the other tab has something else on
+it.
+
+106
+00:07:30,030 --> 00:07:33,185
+So join me again then, and until next
+time, happy coding.
+
+107
+00:07:33,185 --> 00:07:36,244
+[SOUND]
+

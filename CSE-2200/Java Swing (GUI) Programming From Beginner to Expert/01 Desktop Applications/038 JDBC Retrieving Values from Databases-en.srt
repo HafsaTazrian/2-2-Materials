@@ -1,0 +1,800 @@
+1
+00:00:01,790 --> 00:00:02,960
+Hello, welcome back.
+
+2
+00:00:02,960 --> 00:00:05,530
+This is John from caveofprogramming.
+
+3
+00:00:05,530 --> 00:00:12,150
+And, in this tutorial, we're gonna look at
+getting values from databases.
+
+4
+00:00:12,150 --> 00:00:16,160
+And the reason for that is I actually
+wanna show you how
+
+5
+00:00:16,160 --> 00:00:21,980
+to save the database that we've got here,
+into a MySQL database.
+
+6
+00:00:21,980 --> 00:00:24,400
+But in order to, to do that, we need to
+
+7
+00:00:24,400 --> 00:00:31,130
+check if the people in question are
+already in that database.
+
+8
+00:00:31,130 --> 00:00:34,131
+And to do that, we need to get accounts
+
+9
+00:00:34,131 --> 00:00:36,520
+of for a particular person or a particular
+ID.
+
+10
+00:00:36,520 --> 00:00:40,020
+We need to find whether that person's in
+the database or not.
+
+11
+00:00:42,140 --> 00:00:47,590
+And if they are, we can do a update to
+update the data.
+
+12
+00:00:47,590 --> 00:00:49,760
+Pertaining to that person and if they
+aren't
+
+13
+00:00:49,760 --> 00:00:52,630
+in there, we can do an insert later on.
+
+14
+00:00:52,630 --> 00:00:56,870
+So, I'm gonna split this into a few, a few
+tutorials and in this tutorial, we're
+
+15
+00:00:56,870 --> 00:01:04,090
+purely just gonna look at doing a count on
+our people in database.
+
+16
+00:01:05,740 --> 00:01:08,810
+So, we've got no people in database at the
+moment.
+
+17
+00:01:08,810 --> 00:01:13,360
+That's okay, I've setup a MySQL database,
+with one
+
+18
+00:01:13,360 --> 00:01:17,560
+table it's got a, this database is called
+swingest.
+
+19
+00:01:17,560 --> 00:01:19,150
+And we've already seen how to connect to
+that.
+
+20
+00:01:19,150 --> 00:01:21,900
+And I've got a, people table here.
+
+21
+00:01:21,900 --> 00:01:26,560
+You can actually look at the model in this
+very nice MySQL workbench tool.
+
+22
+00:01:26,560 --> 00:01:28,700
+And, so we've got all the relevant fields.
+
+23
+00:01:28,700 --> 00:01:32,790
+And your num fields, I put in as MySQL in
+nums.
+
+24
+00:01:33,850 --> 00:01:35,066
+We'll see how to handle those.
+
+25
+00:01:35,066 --> 00:01:38,765
+[INAUDIBLE] The strings [INAUDIBLE] and an
+integer there.
+
+26
+00:01:38,765 --> 00:01:43,600
+And we've got [INAUDIBLE] for the strings
+there.
+
+27
+00:01:43,600 --> 00:01:50,010
+So in a moment if I do a select star from
+people, there are no people in there.
+
+28
+00:01:50,010 --> 00:01:55,360
+And, I'm gonna go to Eclipse here, and I'm
+gonna
+
+29
+00:01:55,360 --> 00:02:00,970
+give the database package a save method,
+sorry, a database class.
+
+30
+00:02:00,970 --> 00:02:04,860
+So let's go to model here, and go to
+database and I'll
+
+31
+00:02:04,860 --> 00:02:10,430
+give it a method, maybe down here a little
+bit after disconnect.
+
+32
+00:02:10,430 --> 00:02:11,340
+Let's maximize the editor.
+
+33
+00:02:11,340 --> 00:02:14,170
+And, I'm gonna call this public void.
+
+34
+00:02:14,170 --> 00:02:20,110
+Save and this is gonna save the whole
+database ultimately, into MySQL
+
+35
+00:02:20,110 --> 00:02:25,500
+database, so it's gonna save all these
+people up here into my database.
+
+36
+00:02:27,790 --> 00:02:32,700
+So I'm gonna iterate through that list of
+people.
+
+37
+00:02:32,700 --> 00:02:35,450
+And save so here we are.
+
+38
+00:02:35,450 --> 00:02:43,110
+So I'm gonna go for person, person then
+people and I've reached one.
+
+39
+00:02:43,110 --> 00:02:47,274
+We're gonna check if that person is in the
+database,
+
+40
+00:02:47,274 --> 00:02:52,010
+and let's say that he/she is, we'll
+execute a update.
+
+41
+00:02:52,010 --> 00:02:53,130
+To obtain details.
+
+42
+00:02:53,130 --> 00:02:54,830
+Otherwise, we'll do a insert.
+
+43
+00:02:56,580 --> 00:03:00,190
+So, to check if a person's in the
+database, I need a SQL statement.
+
+44
+00:03:00,190 --> 00:03:03,480
+And I'm gonna use a prepared statement,
+that I will
+
+45
+00:03:03,480 --> 00:03:08,360
+then execute for every person in the
+database with different parameters.
+
+46
+00:03:08,360 --> 00:03:09,120
+So, the way that works.
+
+47
+00:03:09,120 --> 00:03:13,100
+This is our creator-prepared statement
+here.
+
+48
+00:03:13,100 --> 00:03:20,614
+And I'll call this Check ST MT statements,
+
+49
+00:03:20,614 --> 00:03:27,600
+equals con.prepare, preparestatement.
+
+50
+00:03:27,600 --> 00:03:28,320
+LIke this.
+
+51
+00:03:28,320 --> 00:03:29,670
+And that's gonna, I'm gonna pass that some
+
+52
+00:03:29,670 --> 00:03:34,370
+SQL to run, like this, inside the imports
+there.
+
+53
+00:03:34,370 --> 00:03:38,210
+And don't add con.mysql.jdpc.
+
+54
+00:03:38,210 --> 00:03:42,990
+By mistake cause I'm only used to some,
+errors that
+
+55
+00:03:42,990 --> 00:03:46,090
+you're sitting there scratching your head
+there as I have done.
+
+56
+00:03:46,090 --> 00:03:53,840
+Add always the Java.SQL stuff here so
+let's add that, let's add that import.
+
+57
+00:03:53,840 --> 00:03:57,330
+And oh, it's a prepare statement, not a
+prepared statement, of course.
+
+58
+00:03:57,330 --> 00:04:02,892
+And I'm gonna throw the any SQL errors,
+SQL sections, [SOUND] out
+
+59
+00:04:02,892 --> 00:04:08,472
+of the save method there, so that we can
+check them in whatever calls save.
+
+60
+00:04:08,472 --> 00:04:13,669
+Now the statement I'm gonna prepare here
+is gonna be let's
+
+61
+00:04:13,669 --> 00:04:18,962
+write some SQL here, I'll say spring
+check, the SQL, equals,
+
+62
+00:04:18,962 --> 00:04:23,676
+and I'm gonna put in there, select count,
+star, so I'm
+
+63
+00:04:23,676 --> 00:04:28,680
+kind of, I'm kind of assuming that you
+know SQL already, and
+
+64
+00:04:28,680 --> 00:04:33,491
+if you don't, this will be kind of being
+dropped in the deep
+
+65
+00:04:33,491 --> 00:04:35,000
+end for you.
+
+66
+00:04:35,000 --> 00:04:44,070
+But, select count star, ask count from
+people where ID equals question mark.
+
+67
+00:04:44,070 --> 00:04:47,295
+So, that's selecting the count and, of
+
+68
+00:04:47,295 --> 00:04:50,771
+people who have this particular ID
+represented by
+
+69
+00:04:50,771 --> 00:04:56,066
+the question mark and I'm gonna call the
+at value in the results, I'm gonna
+
+70
+00:04:56,066 --> 00:05:01,524
+give it the name count, [SOUND] and the
+reason I put a question mark there and
+
+71
+00:05:01,524 --> 00:05:07,105
+not a value, is because you should never
+use, literal values in your SQL.
+
+72
+00:05:07,105 --> 00:05:11,310
+Partly because if you have strange
+characters in there it could
+
+73
+00:05:11,310 --> 00:05:14,627
+screw up the SQL, and partly because of
+the risk of SQL
+
+74
+00:05:14,627 --> 00:05:19,348
+injection attacks, where people type bad
+SQL into your form, that's
+
+75
+00:05:19,348 --> 00:05:23,730
+designed to like, drop your database or
+something, and the way to.
+
+76
+00:05:23,730 --> 00:05:28,340
+Protect against that, is to use prepared
+statements and wildcards like this.
+
+77
+00:05:29,440 --> 00:05:34,520
+So every time I get a person here I'm
+gonna say string.
+
+78
+00:05:34,520 --> 00:05:36,970
+Actually it's, I think the idea is an int.
+
+79
+00:05:36,970 --> 00:05:42,970
+So int ID, equals person.getID, and
+
+80
+00:05:42,970 --> 00:05:49,060
+then I'm gonna tell this prepared
+statement to replace this wildcard.
+
+81
+00:05:49,060 --> 00:05:51,890
+With with the ID.
+
+82
+00:05:51,890 --> 00:05:58,110
+Let's just put the statement in here,
+sorry the SQL in here, cuz the statement
+
+83
+00:05:58,110 --> 00:06:05,949
+needs to prepare the SQL and then we say
+check statement, to check statement.
+
+84
+00:06:07,660 --> 00:06:14,050
+Dot set int and we pass in the position of
+
+85
+00:06:14,050 --> 00:06:18,440
+the wild, of this wildcard the moments all
+of the, all other wildcards in the string.
+
+86
+00:06:19,460 --> 00:06:21,935
+And in this string, there's only one
+wildcard, so it's
+
+87
+00:06:21,935 --> 00:06:25,030
+gonna be wildcard number one, because it's
+start numbering at one.
+
+88
+00:06:25,030 --> 00:06:28,590
+Not zero, you have to watch that as well,
+and then, we'll
+
+89
+00:06:28,590 --> 00:06:31,010
+put ID in here for the value, so this will
+say, look for,
+
+90
+00:06:31,010 --> 00:06:36,170
+look for the first wildcard and replace it
+by D in this statement, which is this
+
+91
+00:06:36,170 --> 00:06:42,120
+thing here then I can, I can execute that
+statement.
+
+92
+00:06:42,120 --> 00:06:44,250
+I can say check statement.
+
+93
+00:06:44,250 --> 00:06:50,560
+Having prepared it, dot execute right
+here.
+
+94
+00:06:50,560 --> 00:06:54,140
+And in fact, it's gonna be actually not
+just execute,
+
+95
+00:06:54,140 --> 00:06:59,250
+but executequery, because this is a query,
+which brings back results.
+
+96
+00:06:59,250 --> 00:07:04,663
+And it's gonna bring back results in the
+form of result set, object
+
+97
+00:07:04,663 --> 00:07:09,836
+which I'll call [SOUND] check result and
+I'll set that equal to that.
+
+98
+00:07:09,836 --> 00:07:13,430
+Just like there Java dot yeah, looks like
+input there, okay.
+
+99
+00:07:14,780 --> 00:07:18,120
+And after I've prepared the statement and
+finished using it.
+
+100
+00:07:18,120 --> 00:07:22,880
+Most important don't forget to close it,
+with close.
+
+101
+00:07:25,060 --> 00:07:28,390
+Now, with this check result here I wanna
+first,
+
+102
+00:07:28,390 --> 00:07:31,000
+move to the next row in this check result.
+
+103
+00:07:31,000 --> 00:07:35,420
+This check result has the rows of results
+in.
+
+104
+00:07:35,420 --> 00:07:36,310
+There's only gonna be one.
+
+105
+00:07:36,310 --> 00:07:38,250
+Row, such as select can't start.
+
+106
+00:07:38,250 --> 00:07:44,990
+So I'll return me one row and I need to
+move to the
+
+107
+00:07:44,990 --> 00:07:49,780
+first row because this will be positioned
+internally to before the first row.
+
+108
+00:07:49,780 --> 00:07:53,418
+So I need to say check result.next.
+
+109
+00:07:53,418 --> 00:07:59,422
+Like that and once I've done that because
+I'm not gonna check to
+
+110
+00:07:59,422 --> 00:08:05,529
+see that there actually, the next row
+because I expect that there will
+
+111
+00:08:05,529 --> 00:08:12,190
+be from this statement and I'm gonna say
+check result top get.
+
+112
+00:08:12,190 --> 00:08:13,560
+Ints, get ints.
+
+113
+00:08:14,790 --> 00:08:18,140
+And the command inde, common indexer is
+gonna be one.
+
+114
+00:08:18,140 --> 00:08:25,462
+And now if I say intcount equals, and
+that's gonna sit out there.
+
+115
+00:08:25,462 --> 00:08:30,519
+[SOUND] Count for person with ID.
+
+116
+00:08:30,519 --> 00:08:34,342
+I'm just gonna print out some debug
+
+117
+00:08:34,342 --> 00:08:39,705
+information here, first ID plus his lost
+count.
+
+118
+00:08:39,705 --> 00:08:43,080
+And since I've not inserted any people
+into my database,
+
+119
+00:08:43,080 --> 00:08:46,730
+I expect the results of this query always
+to be zero.
+
+120
+00:08:46,730 --> 00:08:49,040
+So, let's just run that and see what
+happens.
+
+121
+00:08:49,040 --> 00:08:52,190
+Actually, before I run it, I'm gonna have
+to call it.
+
+122
+00:08:52,190 --> 00:08:58,230
+So in my test database code here, I can
+say db.save.
+
+123
+00:08:58,230 --> 00:09:02,375
+I can wrap that with a tri catch.
+
+124
+00:09:02,375 --> 00:09:07,755
+[SOUND] So now if I run this, it's a Java
+application.
+
+125
+00:09:07,755 --> 00:09:13,966
+It's it's not gonna do anything at the
+moment
+
+126
+00:09:13,966 --> 00:09:20,200
+because, I also have to [INAUDIBLE]
+dp.save.
+
+127
+00:09:20,200 --> 00:09:23,275
+I also have to add some people into the
+database, and I almost forgot.
+
+128
+00:09:23,275 --> 00:09:26,546
+[SOUND] So because we're gonna query and
+see if each of
+
+129
+00:09:26,546 --> 00:09:30,243
+those people is already in the database,
+which they won't be.
+
+130
+00:09:30,243 --> 00:09:30,851
+Well, that's okay.
+
+131
+00:09:30,851 --> 00:09:33,590
+That said db.addperson.
+
+132
+00:09:33,590 --> 00:09:38,390
+And this is adding people to this array of
+course here.
+
+133
+00:09:39,390 --> 00:09:41,734
+So I'm gonna say new person in here.
+
+134
+00:09:41,734 --> 00:09:47,264
+And, let's let's add in, the import and
+
+135
+00:09:47,264 --> 00:09:52,656
+then I can go, name, let's say like Joe
+[SOUND]
+
+136
+00:09:52,656 --> 00:09:57,773
+that explains the editor occupation,
+
+137
+00:09:57,773 --> 00:10:02,752
+builder, age category: adult, age
+
+138
+00:10:02,752 --> 00:10:07,317
+category adult, I don't know what's
+
+139
+00:10:07,317 --> 00:10:08,871
+gone wrong.
+
+140
+00:10:08,871 --> 00:10:16,004
+Let's see, age category, oh yeah, the age
+category's actually an age
+
+141
+00:10:16,004 --> 00:10:23,150
+category enum, so I need to say enum
+value, age category dot adult.
+
+142
+00:10:23,150 --> 00:10:27,642
+And employmentcategory.employed.
+
+143
+00:10:27,642 --> 00:10:33,345
+[SOUND] Tax ID, let's set, [SOUND] 777.
+
+144
+00:10:33,345 --> 00:10:35,887
+US citizen I'll say true and gender, I'll
+
+145
+00:10:35,887 --> 00:10:40,120
+say gender.male, that's my enum, another
+enum as well.
+
+146
+00:10:40,120 --> 00:10:46,250
+So gender dot male, Ip import that should
+do the trick.
+
+147
+00:10:46,250 --> 00:10:49,380
+And, let's have one more person in there.
+
+148
+00:10:49,380 --> 00:10:54,920
+Just for kicks let's call this person Sue.
+
+149
+00:10:54,920 --> 00:11:00,610
+Let's make Sue an artist, because I wanna
+make her self employed, self employed.
+
+150
+00:11:02,026 --> 00:11:08,994
+Self employed, and I'll make her not a
+U.S. citizen, so the tax ID is gonna be
+
+151
+00:11:08,994 --> 00:11:16,675
+nought, it's a U.S. tax ID [SOUND] make
+her female and [SOUND] let's hover.
+
+152
+00:11:16,675 --> 00:11:17,886
+senior.
+
+153
+00:11:17,886 --> 00:11:21,045
+Okay now there's, there is also another
+
+154
+00:11:21,045 --> 00:11:24,447
+small change that I'm gonna make, because
+I've
+
+155
+00:11:24,447 --> 00:11:30,200
+said in my database here, I've actually
+set the pan ID column to auto increment.
+
+156
+00:11:30,200 --> 00:11:32,724
+So yeah I, I ought to increment.
+
+157
+00:11:32,724 --> 00:11:38,292
+Which I'm not sure if that's really a good
+idea or not but you can't actually
+
+158
+00:11:38,292 --> 00:11:43,890
+add, as far, as far I know, you can't have
+zero for an auto increment value in MySQL.
+
+159
+00:11:43,890 --> 00:11:47,520
+So let's go to person here and let's make
+account one
+
+160
+00:11:47,520 --> 00:11:53,540
+start with, because that's how the ID, is
+set person down here.
+
+161
+00:11:53,540 --> 00:11:54,540
+So that all prevents.
+
+162
+00:11:54,540 --> 00:11:58,710
+Getting any funny errors, on count of, not
+being able to have zero [UNKNOWN] values.
+
+163
+00:11:59,830 --> 00:12:04,840
+Finally let's run this and it says, count
+for person with ID one is not,
+
+164
+00:12:04,840 --> 00:12:09,460
+count for person with ID two is not, so it
+seems to be working just fine.
+
+165
+00:12:09,460 --> 00:12:10,980
+If I run it again, same.
+
+166
+00:12:10,980 --> 00:12:12,400
+Again.
+
+167
+00:12:12,400 --> 00:12:17,430
+Okay, and that's it for this tutorial, And
+the next tutorial, we're gonna be
+
+168
+00:12:17,430 --> 00:12:22,680
+looking at inserting values into the
+database.
+
+169
+00:12:22,680 --> 00:12:27,410
+So we're gonna be doing some insert
+statements, well one anyway.
+
+170
+00:12:27,410 --> 00:12:28,990
+So join me again then.
+
+171
+00:12:28,990 --> 00:12:31,260
+And until next time, happy coding.
+

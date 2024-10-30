@@ -1,0 +1,260 @@
+1
+00:00:01,610 --> 00:00:01,960
+Hi there.
+
+2
+00:00:01,960 --> 00:00:04,920
+This is John from CaveOfProgramming.com.
+
+3
+00:00:04,920 --> 00:00:10,530
+And, before I go on to show you how to
+cancel threads I just wanna, put
+
+4
+00:00:10,530 --> 00:00:15,280
+in a quick tutorial here about adding text
+to progress bars because at the moment and
+
+5
+00:00:15,280 --> 00:00:20,960
+we've got this progress bar here, and
+there's no text on it.
+
+6
+00:00:20,960 --> 00:00:23,860
+And you can actually out text to the bar
+area it's self which is quite nice.
+
+7
+00:00:25,220 --> 00:00:26,680
+So to do that, it's really simple.
+
+8
+00:00:26,680 --> 00:00:29,850
+Let's go to the progress dialogue here.
+
+9
+00:00:29,850 --> 00:00:37,860
+And I'm going to say here,
+progressBar.setString,
+
+10
+00:00:37,860 --> 00:00:42,420
+painted; it's kind of a strange name, but
+you have to set string
+
+11
+00:00:42,420 --> 00:00:47,050
+painted true, and that will, put whatever
+text you add to
+
+12
+00:00:47,050 --> 00:00:52,410
+the bar, it will, it will show, or paint,
+if you like, that text.
+
+13
+00:00:52,410 --> 00:00:53,790
+And to actually show some text you
+
+14
+00:00:53,790 --> 00:01:01,790
+say progressBar.setString and we can set
+for example
+
+15
+00:01:03,870 --> 00:01:13,790
+retrieving mess, retrieve, retrieving
+messages, like this.
+
+16
+00:01:13,790 --> 00:01:19,650
+And if we look at that gonna get,
+hopefully from text from up here on
+
+17
+00:01:19,650 --> 00:01:25,060
+my bar retrieving messages and now often
+what you wanna do is, make this
+
+18
+00:01:25,060 --> 00:01:30,620
+text update when, as the progress bar
+progresses, so.
+
+19
+00:01:30,620 --> 00:01:32,580
+To do that I can say here.
+
+20
+00:01:32,580 --> 00:01:39,050
+Let's add say int progress equals
+
+21
+00:01:40,730 --> 00:01:46,962
+value divided by
+progressBar.getMaximumValue.
+
+22
+00:01:46,962 --> 00:01:50,052
+[INAUDIBLE]
+maximum.
+
+23
+00:01:50,052 --> 00:01:52,660
+And also, I'll multiply that by 100.
+
+24
+00:01:52,660 --> 00:01:58,800
+And let's also say,
+
+25
+00:01:58,800 --> 00:02:04,550
+just in case, maximum happens to be zero.
+
+26
+00:02:04,550 --> 00:02:08,140
+Well, actually, just to make sure that
+this really can't be zero.
+
+27
+00:02:09,300 --> 00:02:12,500
+Let's go to start here and set
+
+28
+00:02:14,930 --> 00:02:24,430
+up here let's set progressBar.setMaximum
+to 10 or something.
+
+29
+00:02:24,430 --> 00:02:27,320
+Although that's sort of theoretical
+possibility
+
+30
+00:02:27,320 --> 00:02:31,140
+because actually you should never use the.
+
+31
+00:02:31,140 --> 00:02:36,260
+Progress bar as it stands without first
+setting the maximum here otherwise the
+
+32
+00:02:36,260 --> 00:02:42,650
+progress value will be wrong anyways so,
+okay, and now I can say
+
+33
+00:02:42,650 --> 00:02:46,860
+progress bar every time I set the father
+view, I can say progressBar.setString.
+
+34
+00:02:46,860 --> 00:02:50,420
+And what string should we set?
+
+35
+00:02:52,410 --> 00:02:56,885
+Well I'm going to use, a static method in
+the string class.
+
+36
+00:02:56,885 --> 00:03:01,600
+String.format and this format string
+slight print f,
+
+37
+00:03:01,600 --> 00:03:03,650
+if you know that and the way it
+
+38
+00:03:03,650 --> 00:03:05,520
+works is you pass them a format string
+
+39
+00:03:05,520 --> 00:03:08,759
+and specify how the string should look
+followed by.
+
+40
+00:03:10,310 --> 00:03:12,540
+a, a series of parameters that will be
+
+41
+00:03:12,540 --> 00:03:15,700
+substituted into the format string, and in
+this
+
+42
+00:03:15,700 --> 00:03:17,560
+case I just wanna use one parameter, the
+
+43
+00:03:17,560 --> 00:03:21,280
+progress value, the percentage progress,
+and I want to
+
+44
+00:03:21,280 --> 00:03:27,324
+put an integer in here and Format code
+[INAUDIBLE] % d and then a % sign and
+
+45
+00:03:27,324 --> 00:03:30,617
+because % signs have a special meeting in
+
+46
+00:03:30,617 --> 00:03:35,509
+these format strings, I need 2% signs,
+which effectively
+
+47
+00:03:35,509 --> 00:03:37,220
+escapes the % sign.
+
+48
+00:03:37,220 --> 00:03:41,440
+And if you, if you wanna, want more
+information on string.format, just type it
+
+49
+00:03:41,440 --> 00:03:47,270
+into Google and look for it's API document
+or you could look at system.out or
+
+50
+00:03:47,270 --> 00:03:52,676
+printf because that formats strings using
+the same codes here, so let's say
+
+51
+00:03:52,676 --> 00:03:58,290
+% complete, and let's just
+
+52
+00:03:58,290 --> 00:04:03,630
+run that and see if that works, so open
+progress bar, and
+
+53
+00:04:03,630 --> 00:04:10,410
+there we go retrieving messages 33
+complete, 60%, 100%, wonderful, okay
+
+54
+00:04:10,410 --> 00:04:13,270
+so that's it for this tutorial just a
+brief one and.
+
+55
+00:04:13,270 --> 00:04:16,030
+In the next tutorial we're going to look
+at cancelling
+
+56
+00:04:16,030 --> 00:04:19,450
+threads, and we're going to make that
+cancel button actually work.
+

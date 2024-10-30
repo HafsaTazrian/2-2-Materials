@@ -1,0 +1,783 @@
+1
+00:00:01,890 --> 00:00:06,660
+Hello, this is John from
+caveofprogramming.com and in this tutorial
+
+2
+00:00:06,660 --> 00:00:11,780
+we're gonna look at implementing a custom
+renderer in a JList.
+
+3
+00:00:11,780 --> 00:00:18,890
+And I'm gonna show you, a JList that has a
+JLabel.
+
+4
+00:00:18,890 --> 00:00:23,960
+I'm sorry, a JPanel in it and that's
+really just to
+
+5
+00:00:23,960 --> 00:00:27,900
+demonstrate that you can put basically
+anything you like in a JList.
+
+6
+00:00:27,900 --> 00:00:29,250
+You can render it any way you like.
+
+7
+00:00:30,510 --> 00:00:38,050
+And you might wind up, if you can use
+editors in lists.
+
+8
+00:00:38,050 --> 00:00:40,310
+And the answer is well you could with a
+bit of work.
+
+9
+00:00:40,310 --> 00:00:44,970
+But if you want an editable list where you
+can edit the actual entries.
+
+10
+00:00:44,970 --> 00:00:48,900
+You probably want a j table with one
+column.
+
+11
+00:00:50,510 --> 00:00:55,167
+So let's go on now and look at this
+renderers.
+
+12
+00:00:55,167 --> 00:01:02,360
+So, I'm gonna create a new class here in
+this gooey package, file new
+
+13
+00:01:02,360 --> 00:01:08,644
+class, and I'll call it message title
+
+14
+00:01:08,644 --> 00:01:14,750
+renderer, or maybe, actually let's call it
+message list renderer.
+
+15
+00:01:14,750 --> 00:01:15,470
+That's a good name.
+
+16
+00:01:17,090 --> 00:01:19,620
+And I'm gonna make message list renderer.
+
+17
+00:01:20,710 --> 00:01:24,410
+Implement list cell renderer
+
+18
+00:01:27,090 --> 00:01:33,510
+and let's implement let's
+
+19
+00:01:33,510 --> 00:01:40,920
+add import and implement the one method
+that has.
+
+20
+00:01:40,920 --> 00:01:42,540
+And this is pretty simple.
+
+21
+00:01:43,930 --> 00:01:50,670
+I'm gonna give this a public, constructor
+so message list renderer.
+
+22
+00:01:52,620 --> 00:01:59,350
+And in the constructor, I'm gonna create
+some components, Now what I'm gonna
+
+23
+00:01:59,350 --> 00:02:03,760
+show you is gonna be pretty simple, and
+probably using a panel really is overkill.
+
+24
+00:02:03,760 --> 00:02:07,840
+But I just wanna demonstrate here that we
+can bump anything we like into that.
+
+25
+00:02:07,840 --> 00:02:10,940
+So let's have a private jPanel.
+
+26
+00:02:10,940 --> 00:02:13,010
+jPanel panel.
+
+27
+00:02:13,010 --> 00:02:19,404
+And let's put a jLabel on that panel.
+
+28
+00:02:19,404 --> 00:02:21,858
+Label.
+
+29
+00:02:21,858 --> 00:02:29,480
+And I guess I won't put anything else on
+that panel here, which is why
+
+30
+00:02:29,480 --> 00:02:33,300
+the panel would be overkill, but you could
+put other stuff on that panel, of course.
+
+31
+00:02:34,330 --> 00:02:43,760
+So, in the constructor, I'm going to say
+panel = new JPanel.
+
+32
+00:02:43,760 --> 00:02:50,440
+And let's say label equals new j-label.
+
+33
+00:02:50,440 --> 00:02:59,300
+So, we've got a panel and a label and so
+in this gat list our render component.
+
+34
+00:02:59,300 --> 00:03:01,566
+A little problem here is that eclipses
+ought
+
+35
+00:03:01,566 --> 00:03:03,580
+to completed this and it's not done a
+
+36
+00:03:03,580 --> 00:03:06,270
+very good job because it hasn't get the
+
+37
+00:03:06,270 --> 00:03:09,260
+arg, hasn't given the arguments here very
+good names.
+
+38
+00:03:09,260 --> 00:03:11,430
+And yet the documentation that come up
+when I hover my
+
+39
+00:03:11,430 --> 00:03:15,602
+mouse over it, in eclipse, has actual good
+names for the arguments.
+
+40
+00:03:15,602 --> 00:03:18,770
+So when I hover my mouse over that, press
+F2 and
+
+41
+00:03:18,770 --> 00:03:22,930
+eclipse to bring focus to this window,
+this help window, I'm gonna
+
+42
+00:03:22,930 --> 00:03:29,500
+copy the argument list from the
+documentation here, so let's
+
+43
+00:03:29,500 --> 00:03:35,590
+copy that, control C, and then let's paste
+that in there, there we go.
+
+44
+00:03:37,160 --> 00:03:40,520
+Control shift F to format there.
+
+45
+00:03:40,520 --> 00:03:44,420
+Now, I'm gonna say, in here.
+
+46
+00:03:44,420 --> 00:03:51,860
+Well let's, let's set an icon on the label
+for start so I'm gonna go to my
+
+47
+00:03:54,540 --> 00:04:00,010
+my chart looking for your graphics
+repository graphics here.
+
+48
+00:04:01,680 --> 00:04:07,520
+And what kind of labels might we want to
+use, I could use this and, I don't
+
+49
+00:04:07,520 --> 00:04:15,140
+know information 24 dot GIF, I suppose,
+and yeah, that's, let's go with that.
+
+50
+00:04:15,140 --> 00:04:20,514
+So, and, I'll copy that and, and
+
+51
+00:04:21,640 --> 00:04:26,650
+go to Eclipse and go to the images package
+that I
+
+52
+00:04:26,650 --> 00:04:31,690
+created, which is down here and I'll
+paste.
+
+53
+00:04:31,690 --> 00:04:35,680
+So, right-click, paste and if I expand
+that now.
+
+54
+00:04:35,680 --> 00:04:40,683
+Hopefully, we have images in there
+information24.gif
+
+55
+00:04:40,683 --> 00:04:43,790
+and let's set and icon on the label.
+
+56
+00:04:43,790 --> 00:04:48,110
+So I'll say label.seticon and I'll use my
+
+57
+00:04:48,110 --> 00:04:51,530
+utils class I've created in an earlier
+tutorial.
+
+58
+00:04:51,530 --> 00:04:52,185
+Utils.,
+
+59
+00:04:52,185 --> 00:04:55,250
+and feel free to use this class in your
+own code, if you want.
+
+60
+00:04:56,510 --> 00:05:03,090
+And, let's set this to the path is gonna
+be images/information24.
+
+61
+00:05:03,090 --> 00:05:07,895
+Information, I had to think for a minute
+there.
+
+62
+00:05:07,895 --> 00:05:12,990
+Information24.gif.
+
+63
+00:05:12,990 --> 00:05:15,740
+Okay, so we've got an icon on the label.
+
+64
+00:05:15,740 --> 00:05:18,763
+And let's say panel.set.
+
+65
+00:05:18,763 --> 00:05:26,463
+Layout new flowlayout.
+
+66
+00:05:26,463 --> 00:05:34,170
+And panel.uh, label.
+
+67
+00:05:34,170 --> 00:05:35,510
+Panel to add label.
+
+68
+00:05:39,390 --> 00:05:44,785
+And as I said, I feel a bit guilty,
+because really
+
+69
+00:05:44,785 --> 00:05:49,794
+you only need to use the label if you just
+want to
+
+70
+00:05:49,794 --> 00:05:54,676
+have a label rendering your missed item,
+but
+
+71
+00:05:54,676 --> 00:06:00,329
+I'm, so I'm going to put a comment here
+note,
+
+72
+00:06:00,329 --> 00:06:04,828
+this demonstrates, demonstrates using
+
+73
+00:06:05,856 --> 00:06:13,395
+a arbitrary, arbitrary component as a,
+listbox renderer.
+
+74
+00:06:13,395 --> 00:06:19,357
+But, it's, probably,
+
+75
+00:06:19,357 --> 00:06:24,235
+probably overkill to
+
+76
+00:06:24,235 --> 00:06:29,384
+use J panel when JLabel
+
+77
+00:06:29,384 --> 00:06:35,550
+could be used directly.
+
+78
+00:06:35,550 --> 00:06:37,420
+So it's just
+
+79
+00:06:40,640 --> 00:06:43,240
+probably overkill in this case.
+
+80
+00:06:43,240 --> 00:06:44,130
+Okay, bear with me.
+
+81
+00:06:44,130 --> 00:06:45,480
+In this case.
+
+82
+00:06:45,480 --> 00:06:48,140
+Okay, I just wanted to put that comment on
+there,
+
+83
+00:06:48,140 --> 00:06:50,960
+because we haven't really got a need for
+that panel here.
+
+84
+00:06:50,960 --> 00:06:53,060
+But anyway, I'll carry on.
+
+85
+00:06:53,060 --> 00:06:58,010
+So we set an icon on the label and you
+wanna do as much setup as possible in the
+
+86
+00:06:58,010 --> 00:07:02,870
+constructor of your renderer because you
+don't wanna keep building
+
+87
+00:07:02,870 --> 00:07:06,260
+panels and things in this, get this
+renderer and component.
+
+88
+00:07:06,260 --> 00:07:08,800
+Now, this get this cell render a
+component, just returns
+
+89
+00:07:08,800 --> 00:07:12,730
+whatever component you want to render the
+items in your list.
+
+90
+00:07:14,120 --> 00:07:18,860
+And it's basically the same as get three
+cell renderor component
+
+91
+00:07:18,860 --> 00:07:24,300
+and it's said that it's a lot simpler for
+lists than it is for trees,
+
+92
+00:07:24,300 --> 00:07:29,540
+so let's go to let's go to the
+
+93
+00:07:29,540 --> 00:07:34,150
+message panel here, and I'm gonna look for
+
+94
+00:07:34,150 --> 00:07:39,228
+the A bit where I actually add stuff to
+the list,
+
+95
+00:07:39,228 --> 00:07:43,148
+instead of, instead of adding message dot
+get
+
+96
+00:07:43,148 --> 00:07:48,098
+title, I'm gonna add, a message directly
+itself.
+
+97
+00:07:48,098 --> 00:07:55,280
+And, now, message is gonna show up.
+
+98
+00:07:55,280 --> 00:08:01,650
+As this value here some would say message,
+message equals
+
+99
+00:08:01,650 --> 00:08:06,920
+cast and value to a message and then
+presto.
+
+100
+00:08:06,920 --> 00:08:13,350
+I can import bubble.message, and now I can
+say let's set a text
+
+101
+00:08:13,350 --> 00:08:19,109
+on the label.text,
+
+102
+00:08:20,140 --> 00:08:24,610
+and than say message.get title.
+
+103
+00:08:24,610 --> 00:08:25,790
+Message.get title.
+
+104
+00:08:28,730 --> 00:08:31,120
+And, finally I night want to.
+
+105
+00:08:32,820 --> 00:08:36,150
+I might want to when, when you click on
+the item in
+
+106
+00:08:36,150 --> 00:08:41,020
+the list, you probably wanna show that i,
+it's actually been selected.
+
+107
+00:08:41,020 --> 00:08:45,450
+So this, this is true if the item is
+currently selected.
+
+108
+00:08:45,450 --> 00:08:52,670
+So, I'm gonna say here,
+label.setbackground and
+
+109
+00:08:52,670 --> 00:08:59,760
+for the background here, let's have a
+couple of colors here.
+
+110
+00:08:59,760 --> 00:09:08,430
+I'll say 'private selected color', and
+that's going to be a type color.
+
+111
+00:09:09,976 --> 00:09:17,250
+And private color let's call it
+normalColor.
+
+112
+00:09:19,370 --> 00:09:23,360
+Might be import for color.
+
+113
+00:09:23,360 --> 00:09:29,480
+Now I can say, selectedColor = new color.
+
+114
+00:09:29,480 --> 00:09:32,580
+New color.
+
+115
+00:09:32,580 --> 00:09:37,370
+And let's use the RGB form of the
+constructor,
+
+116
+00:09:37,370 --> 00:09:41,540
+so I've got integers here from nought to
+255.
+
+117
+00:09:41,540 --> 00:09:46,850
+And I'll say maybe, I don't know, to 10?
+
+118
+00:09:50,220 --> 00:09:56,140
+To 10, and I'll make it blue, so to 55 for
+blue there.
+
+119
+00:09:56,140 --> 00:10:00,715
+And normal color, let's make that
+color.white.
+
+120
+00:10:02,430 --> 00:10:09,330
+Okay, and now I can say here, in get, get
+cell render a component,
+
+121
+00:10:10,590 --> 00:10:15,740
+I can say label the set background and
+cell has focus, question mark.
+
+122
+00:10:15,740 --> 00:10:18,910
+So I'm using the turnery, conditional
+operator here,
+
+123
+00:10:19,930 --> 00:10:22,460
+or you could use the initial statement, of
+course.
+
+124
+00:10:22,460 --> 00:10:24,990
+And let's say if it does have focus.
+
+125
+00:10:24,990 --> 00:10:27,740
+I'm gonna set it equal to selected color.
+
+126
+00:10:27,740 --> 00:10:30,990
+And if it doesn't have focus I'm gonna set
+it equal to normal
+
+127
+00:10:33,840 --> 00:10:35,080
+color.
+
+128
+00:10:35,080 --> 00:10:39,980
+And I need to return that component, so
+return label.
+
+129
+00:10:39,980 --> 00:10:41,258
+No, return panel.
+
+130
+00:10:41,258 --> 00:10:46,620
+Although returning label would do the
+trick.
+
+131
+00:10:46,620 --> 00:10:47,439
+Let's see how that looks.
+
+132
+00:10:49,110 --> 00:10:49,740
+And
+
+133
+00:10:52,110 --> 00:10:57,640
+I'm gonna, in my Message panel I need to
+set this message list,
+
+134
+00:10:57,640 --> 00:11:04,850
+this Jlist to use that, renderer, sorry,
+yeah, the renderer.
+
+135
+00:11:04,850 --> 00:11:05,950
+Okay.
+
+136
+00:11:05,950 --> 00:11:11,010
+So, here's my message list and let's say
+Message
+
+137
+00:11:11,010 --> 00:11:16,315
+list.setCellRenderer new
+messageListRenderer.
+
+138
+00:11:16,315 --> 00:11:20,240
+There we go, messageListRenderer.
+
+139
+00:11:20,240 --> 00:11:25,470
+And let's run that and see how it looks.
+
+140
+00:11:25,470 --> 00:11:28,460
+I'm not sure how this is going to look.
+
+141
+00:11:28,460 --> 00:11:28,960
+Messages.
+
+142
+00:11:28,960 --> 00:11:30,950
+So I've got messages there.
+
+143
+00:11:30,950 --> 00:11:32,810
+Eclipse has hidden it for me.
+
+144
+00:11:32,810 --> 00:11:39,060
+And at the moment it looks a bit rubbish,
+and two reasons.
+
+145
+00:11:39,060 --> 00:11:42,360
+The alignment is all wrong which I can fix
+with the
+
+146
+00:11:42,360 --> 00:11:48,220
+flow layout, and the other thing is that
+on a label.
+
+147
+00:11:48,220 --> 00:11:50,620
+Labels are transparent, by default.
+
+148
+00:11:50,620 --> 00:11:55,100
+So they show, the color of whatever's
+behind them.
+
+149
+00:11:55,100 --> 00:11:59,750
+So, to fix that, I could even make the
+label not transparent.
+
+150
+00:11:59,750 --> 00:12:00,250
+Or,
+
+151
+00:12:02,130 --> 00:12:04,110
+why don't we just set the color on the
+panel instead?
+
+152
+00:12:04,110 --> 00:12:06,200
+That'll also do the trick.
+
+153
+00:12:06,200 --> 00:12:08,700
+So, in fact just to show you here,
+
+154
+00:12:08,700 --> 00:12:13,700
+I'll say label.setopaque and set that
+equals true.
+
+155
+00:12:16,610 --> 00:12:20,710
+And in my flow layout when I create a flow
+layout, I'm gonna say give it an
+
+156
+00:12:20,710 --> 00:12:27,000
+ar, an arguments constructor
+flowlayout.left float to left align
+
+157
+00:12:27,000 --> 00:12:30,260
+there, and let's see how that looks,
+hopefully better.
+
+158
+00:12:30,260 --> 00:12:30,760
+And
+
+159
+00:12:33,350 --> 00:12:37,070
+now, actually it still doesn't look good
+because
+
+160
+00:12:37,070 --> 00:12:39,090
+the label's not taking up all the space.
+
+161
+00:12:39,090 --> 00:12:42,900
+So, I think what I'll do is instead of
+doing that, let's just get rid
+
+162
+00:12:42,900 --> 00:12:47,327
+of the label.setopaque and let's say
+panel.setbackground instead
+
+163
+00:12:47,327 --> 00:12:50,960
+of label.setbackground, and let's see how
+that looks.
+
+164
+00:12:53,310 --> 00:12:54,750
+So here we go.
+
+165
+00:12:54,750 --> 00:12:55,670
+That looks a lot better.
+
+166
+00:12:55,670 --> 00:12:58,520
+That's what I want it to look like,
+basically.
+
+167
+00:12:58,520 --> 00:13:02,530
+And if you click on an item then hit
+guess.
+
+168
+00:13:02,530 --> 00:13:03,715
+Selected.
+
+169
+00:13:03,715 --> 00:13:05,960
+Okay, that's it for this tutorial.
+
+170
+00:13:05,960 --> 00:13:07,740
+And until next time.
+
+171
+00:13:07,740 --> 00:13:08,470
+Happy coding.
+

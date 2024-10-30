@@ -1,0 +1,711 @@
+1
+00:00:01,610 --> 00:00:05,110
+Hello, this is John from
+caveofprogramming.com, and in
+
+2
+00:00:05,110 --> 00:00:09,130
+this tutorial we're gonna look at table
+cell renderers.
+
+3
+00:00:09,130 --> 00:00:13,760
+So there are basically two work, two ways
+to set your own completely custom
+
+4
+00:00:13,760 --> 00:00:19,035
+renderer on a table cell, and one way is
+to say
+
+5
+00:00:19,035 --> 00:00:24,190
+table.get column and then you can get a
+column from
+
+6
+00:00:24,190 --> 00:00:29,180
+the table by supplying a a integer.
+
+7
+00:00:30,320 --> 00:00:36,060
+So like get column zero, will get me the
+first column in the table.
+
+8
+00:00:36,060 --> 00:00:38,340
+And then you can say set cell renderer.
+
+9
+00:00:40,090 --> 00:00:43,060
+And that would set a renderer just for
+that table column.
+
+10
+00:00:43,060 --> 00:00:44,900
+But I'm not gonna do that here.
+
+11
+00:00:44,900 --> 00:00:49,790
+What I'm gonna do here is, I'm going to
+set a renderer
+
+12
+00:00:49,790 --> 00:00:55,480
+for a particular class of object that I've
+added to the table.
+
+13
+00:00:55,480 --> 00:00:59,000
+So I'm going to say table.set
+defaultRenderer.
+
+14
+00:01:00,190 --> 00:01:03,690
+And here I'm going to supply a class.
+
+15
+00:01:03,690 --> 00:01:09,470
+And I'm going to supply the class of the
+employment category.
+
+16
+00:01:09,470 --> 00:01:12,390
+So I'll say employmentCategory.class.
+
+17
+00:01:12,390 --> 00:01:18,310
+And employmentCategory is an enumeration,
+you may remember from a previous tutorial
+
+18
+00:01:18,310 --> 00:01:24,470
+that is, it's one of the, data kind of
+objects in my table.
+
+19
+00:01:24,470 --> 00:01:26,990
+And at the moment I'm just displaying it
+as a string.
+
+20
+00:01:26,990 --> 00:01:31,744
+But, here I'm gonna set a new renderer for
+it using a combo box.
+
+21
+00:01:31,744 --> 00:01:34,614
+And now here I can supply a renderer,
+
+22
+00:01:34,614 --> 00:01:40,164
+which has to implement the table cell
+renderer interface.
+
+23
+00:01:40,164 --> 00:01:46,069
+so, I'm going to say here
+
+24
+00:01:46,069 --> 00:01:52,812
+EmploymentCategoryRenderer.
+
+25
+00:01:52,812 --> 00:01:57,770
+In fact, I'm going to say new
+EmploymentCategoryRenderer.
+
+26
+00:01:57,770 --> 00:02:00,500
+And this renderer, I'm going to create
+now, so let's just put a
+
+27
+00:02:00,500 --> 00:02:07,470
+semi colon at the end of that line, and
+let's go to new class.
+
+28
+00:02:07,470 --> 00:02:10,810
+Actually, I'll put this in the GUI
+package,
+
+29
+00:02:10,810 --> 00:02:13,010
+and I'll right click and go to new class.
+
+30
+00:02:14,535 --> 00:02:17,690
+Employment word category renderer, click
+Finish.
+
+31
+00:02:17,690 --> 00:02:24,340
+And let's just say that, that implements
+TableCellRenderer, render, renderer.
+
+32
+00:02:24,340 --> 00:02:31,620
+At the import there and next let's add
+the, the missing fields.
+
+33
+00:02:31,620 --> 00:02:36,428
+So it just gone one method command here.
+
+34
+00:02:36,428 --> 00:02:39,230
+And now to actually make the table use
+this.
+
+35
+00:02:39,230 --> 00:02:42,720
+I need to go to my table model which is
+here.
+
+36
+00:02:42,720 --> 00:02:46,970
+And in this get common class method that
+we've overwritten.
+
+37
+00:02:46,970 --> 00:02:52,290
+And previously I returned Boolean which
+causes the chat box to display at one
+
+38
+00:02:52,290 --> 00:02:58,100
+point in the table for the is US citizen
+column.
+
+39
+00:02:58,100 --> 00:03:00,640
+And rest of them are all strings apart
+from the first one.
+
+40
+00:03:00,640 --> 00:03:05,250
+The ID which is an integer it just causes
+a different alignment in the table.
+
+41
+00:03:05,250 --> 00:03:08,020
+But I'm gonna go to I think it's column
+four here.
+
+42
+00:03:08,020 --> 00:03:11,490
+Cuz in column four we are, we actually
+
+43
+00:03:11,490 --> 00:03:16,740
+got less employment category enumeration
+objects in there.
+
+44
+00:03:18,340 --> 00:03:22,380
+And I want to set a renderer for that
+particular class.
+
+45
+00:03:22,380 --> 00:03:25,060
+So I need to go to get column class.
+
+46
+00:03:25,060 --> 00:03:28,811
+And instead of returning a string, I want
+to say that
+
+47
+00:03:28,811 --> 00:03:33,415
+what's in that particular column of the
+table what's in column
+
+48
+00:03:33,415 --> 00:03:38,019
+four, actually the fifth column because it
+numbers from zero is
+
+49
+00:03:38,019 --> 00:03:43,410
+going to be employment, is going to be an
+EmploymentCategory type.
+
+50
+00:03:43,410 --> 00:03:44,780
+Thing type object.
+
+51
+00:03:46,480 --> 00:03:48,960
+And when we're actually returning the
+values from
+
+52
+00:03:48,960 --> 00:03:52,280
+the table, you might remember in, where
+are we?
+
+53
+00:03:52,280 --> 00:03:58,330
+So we've got this, we've got this
+somewhere, a method
+
+54
+00:03:58,330 --> 00:04:03,950
+that returns the value for the for the
+column.
+
+55
+00:04:05,070 --> 00:04:10,720
+And see, so, we've got value out, get row
+count, get column count, get column class.
+
+56
+00:04:11,810 --> 00:04:13,290
+And we've got,
+
+57
+00:04:16,680 --> 00:04:17,990
+Where, actually, is it?
+
+58
+00:04:17,990 --> 00:04:19,280
+I think I lost it.
+
+59
+00:04:19,280 --> 00:04:20,940
+Oh yeah, get value at.
+
+60
+00:04:20,940 --> 00:04:24,240
+Yes, so get value at, is, you might
+recall,
+
+61
+00:04:24,240 --> 00:04:28,510
+is, is actually returning the values from
+my personal objects
+
+62
+00:04:28,510 --> 00:04:32,410
+from my database and getValueat is
+returning an employment category
+
+63
+00:04:32,410 --> 00:04:36,816
+type object, and that's the senior
+[UNKNOWN] I've created here.
+
+64
+00:04:36,816 --> 00:04:41,140
+And we're gonna set a renderer for this in
+employment category type.
+
+65
+00:04:41,140 --> 00:04:44,640
+Now the first thing to fix, is so I've got
+my renderer there.
+
+66
+00:04:44,640 --> 00:04:47,690
+I'm gonna have to fix this up.
+
+67
+00:04:47,690 --> 00:04:52,570
+But, actually I probably wanna give these
+prettier names
+
+68
+00:04:52,570 --> 00:04:56,520
+because these are just kind of constant
+type values.
+
+69
+00:04:56,520 --> 00:05:00,130
+Like, I'd like self employed to have a
+space in it, and a lowercase e.
+
+70
+00:05:00,130 --> 00:05:02,470
+But I'm gonna, actually I'll fix that up
+
+71
+00:05:02,470 --> 00:05:04,890
+in a minute, because let's just do this
+first.
+
+72
+00:05:04,890 --> 00:05:08,130
+And, and we can actually run the
+application.
+
+73
+00:05:08,130 --> 00:05:14,220
+So I've got my table cell renderer, and
+I've set, in, of, I've done set, I've done
+
+74
+00:05:14,220 --> 00:05:20,360
+set before renderer for this particular
+class, and in my rendeerr, I'm going to
+
+75
+00:05:20,360 --> 00:05:26,630
+actually have a public, private, J combo
+box, combo.
+
+76
+00:05:27,820 --> 00:05:32,340
+And, at the import there, and in a
+construct
+
+77
+00:05:32,340 --> 00:05:35,110
+here, I'm going to give it constructor,
+employment category, renderer.
+
+78
+00:05:35,110 --> 00:05:40,580
+And there, I'm just going to add the
+values
+
+79
+00:05:40,580 --> 00:05:44,780
+of, from the employment categories
+enumerations to my combo box,
+
+80
+00:05:44,780 --> 00:05:47,720
+and of course, if you weren't working with
+enumeration,
+
+81
+00:05:47,720 --> 00:05:49,850
+you can add whatever you like to that
+combo box.
+
+82
+00:05:49,850 --> 00:05:56,260
+But, I'm going to say combo equals new J
+combo box.
+
+83
+00:05:56,260 --> 00:05:59,000
+And the simplest way to get values into a
+combo box
+
+84
+00:05:59,000 --> 00:06:02,230
+is just to supply them to the constructor
+as an array.
+
+85
+00:06:02,230 --> 00:06:09,350
+And to get the possible values here of my,
+employment category as an array,
+
+86
+00:06:09,350 --> 00:06:18,370
+I can say, employmentcategory,Values
+there.
+
+87
+00:06:18,370 --> 00:06:20,850
+And that will return the different
+possible
+
+88
+00:06:20,850 --> 00:06:23,020
+values for employment category as an
+array.
+
+89
+00:06:24,590 --> 00:06:27,760
+And now all those, all I really have to do
+is.
+
+90
+00:06:27,760 --> 00:06:33,533
+I need to return the combo in my sort, get
+[UNKNOWN] component.
+
+91
+00:06:33,533 --> 00:06:35,350
+And let's just hover the mouse over that
+
+92
+00:06:35,350 --> 00:06:37,920
+press F2 to get focused on this help
+window.
+
+93
+00:06:37,920 --> 00:06:45,880
+And I'm just gonna copy this this list of
+parameters from the help Ctrl + C.
+
+94
+00:06:45,880 --> 00:06:49,100
+Because it looks nicer than this aug zero
+aug one.
+
+95
+00:06:49,100 --> 00:06:50,500
+And so on the eclipse is filled in.
+
+96
+00:06:50,500 --> 00:06:54,230
+I'm just gonna paste that node Ctrl+V and
+do Ctrl+Shift+F to format.
+
+97
+00:06:55,460 --> 00:06:59,940
+And now, value will be the actually
+numeration
+
+98
+00:06:59,940 --> 00:07:04,380
+value that's in this particular cell of
+the table.
+
+99
+00:07:04,380 --> 00:07:08,687
+So I wanna say combo.set selected item and
+supply the
+
+100
+00:07:08,687 --> 00:07:13,290
+value there to actually set the right
+thing in the combo.
+
+101
+00:07:13,290 --> 00:07:17,230
+And now if I run that hopefully this will
+work.
+
+102
+00:07:17,230 --> 00:07:20,020
+Okay so it does work, but you can see that
+the the
+
+103
+00:07:20,020 --> 00:07:24,400
+combo is very, the height of it is is not
+really enough.
+
+104
+00:07:24,400 --> 00:07:28,090
+So I'm going to go to my table panel where
+I create a table.
+
+105
+00:07:28,090 --> 00:07:32,110
+And I'm going to say table.set row height.
+
+106
+00:07:32,110 --> 00:07:32,750
+Let's set that.
+
+107
+00:07:32,750 --> 00:07:36,440
+Let's try 20 for the row height and see
+how that looks.
+
+108
+00:07:36,440 --> 00:07:41,750
+So if I run that and, I think that looks
+quite a lot better, may be even 25.
+
+109
+00:07:41,750 --> 00:07:46,020
+Let's try 25 and run that.
+
+110
+00:07:47,280 --> 00:07:50,970
+And, so now the final touch I can do here
+is to get my
+
+111
+00:07:50,970 --> 00:07:53,860
+numeration to return, to have a two
+
+112
+00:07:53,860 --> 00:07:56,860
+string method that supplies nice looking
+values here.
+
+113
+00:07:56,860 --> 00:07:58,380
+And by the way you'll notice that this
+
+114
+00:07:58,380 --> 00:08:00,840
+combo box doesn't do anything at the
+moment.
+
+115
+00:08:00,840 --> 00:08:03,790
+And that's just cause I'm, I'm sending a
+render at the moment.
+
+116
+00:08:03,790 --> 00:08:05,800
+And then in the next tutorial we'll set
+the
+
+117
+00:08:05,800 --> 00:08:09,120
+editor to make this combo up, combo box
+actually function.
+
+118
+00:08:09,120 --> 00:08:11,160
+But in this tutorial it's just all about
+displaying it.
+
+119
+00:08:13,370 --> 00:08:15,470
+And you can display it any how you
+
+120
+00:08:15,470 --> 00:08:18,800
+like, of course, by returning some
+component that,
+
+121
+00:08:18,800 --> 00:08:20,620
+you know, you could have your own
+component,
+
+122
+00:08:20,620 --> 00:08:22,950
+draws its own stuff, and looks really
+funky.
+
+123
+00:08:22,950 --> 00:08:24,050
+It wouldn't like it.
+
+124
+00:08:24,050 --> 00:08:26,110
+But I'm just going to use a combo box for
+simplicity.
+
+125
+00:08:27,260 --> 00:08:31,850
+So in Employment category here, this is an
+enumeration and
+
+126
+00:08:31,850 --> 00:08:36,010
+objects of this enumeration type are
+actually in my table.
+
+127
+00:08:36,010 --> 00:08:39,560
+I'm going to give this to constructor, so
+I'll put a semicolon after the
+
+128
+00:08:39,560 --> 00:08:43,100
+last enumeration value and say private,
+because
+
+129
+00:08:43,100 --> 00:08:46,440
+the constructors of enumerations have to
+be private.
+
+130
+00:08:48,030 --> 00:08:57,840
+And I'll say, I'll get that stringText and
+I'll also have a private string text here.
+
+131
+00:08:57,840 --> 00:08:59,080
+Private instance variable.
+
+132
+00:08:59,080 --> 00:09:04,100
+And in the constructor I'll say this .text
+equals text.
+
+133
+00:09:04,100 --> 00:09:06,040
+And for the two string method, if I right
+
+134
+00:09:06,040 --> 00:09:10,820
+click and go to, source over items in that
+methods.
+
+135
+00:09:10,820 --> 00:09:12,790
+Just got a two string here.
+
+136
+00:09:12,790 --> 00:09:17,020
+And there I'm just gonna return text,
+return text.
+
+137
+00:09:17,020 --> 00:09:19,350
+And the place to supply the text here is,
+
+138
+00:09:19,350 --> 00:09:21,930
+right here where you create your actual
+enumeration constants.
+
+139
+00:09:21,930 --> 00:09:26,610
+So I'm gonna say here employed and let's
+just copy that.
+
+140
+00:09:27,630 --> 00:09:33,422
+And Ctrl+C and paste it in here, here, and
+here.
+
+141
+00:09:33,422 --> 00:09:40,550
+And so I'm going to have self-employed
+with space, unemployed, and other.
+
+142
+00:09:40,550 --> 00:09:46,809
+And now if I run that, you see the thing
+is that in my renderer here, I'm supplying
+
+143
+00:09:46,809 --> 00:09:52,730
+employment category enumeration constants
+to my [UNKNOWN], to my combo box.
+
+144
+00:09:52,730 --> 00:09:56,320
+And the combo box will call just call
+
+145
+00:09:56,320 --> 00:10:00,420
+two string on the objects to actually
+display them.
+
+146
+00:10:00,420 --> 00:10:01,960
+And that's why this works.
+
+147
+00:10:01,960 --> 00:10:07,480
+So if I run this now, I'm going to get
+nicely formated values in my combo boxes.
+
+148
+00:10:07,480 --> 00:10:12,580
+That's it for this tutorial, and in the
+next tutorial we're gonna make this, these
+
+149
+00:10:12,580 --> 00:10:17,790
+cells actually editable, so join me again
+then, and until then, happy coding.
+

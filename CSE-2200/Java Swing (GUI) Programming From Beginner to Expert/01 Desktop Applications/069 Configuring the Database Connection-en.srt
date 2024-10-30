@@ -1,0 +1,114 @@
+1
+00:00:02,730 --> 00:00:05,340
+Now this this isn't really a tutorial.
+
+2
+00:00:05,340 --> 00:00:07,840
+It's really more just mentioning something
+that I
+
+3
+00:00:07,840 --> 00:00:10,400
+forgot to do earlier, to tell the truth.
+
+4
+00:00:10,400 --> 00:00:14,551
+Which is that this connection preferences
+dialogue
+
+5
+00:00:14,551 --> 00:00:17,610
+from [UNKNOWN] point view is all fine, but
+
+6
+00:00:17,610 --> 00:00:19,670
+I forgot to actually make you configure
+the
+
+7
+00:00:19,670 --> 00:00:23,080
+database connection, so it wasn't actually
+doing anything.
+
+8
+00:00:23,080 --> 00:00:26,800
+and, and, so I just implemented that and I
+am not going to get through
+
+9
+00:00:26,800 --> 00:00:31,250
+it in detail, because there is no new
+swing concepts and and it would be boring.
+
+10
+00:00:31,250 --> 00:00:37,040
+But basically I given an database switch
+over some private instance variables,
+
+11
+00:00:37,040 --> 00:00:41,920
+and I've given it a connect method which
+also disconnects if it's
+
+12
+00:00:41,920 --> 00:00:46,070
+already connected and then reconnects and
+I've wrapped that in a inject
+
+13
+00:00:46,070 --> 00:00:51,550
+messaging controller, and then in the main
+frame in the GUI package here.
+
+14
+00:00:52,860 --> 00:00:59,050
+I've basically made it so that the prefs
+dialogue let's go down here.
+
+15
+00:00:59,050 --> 00:01:03,080
+When that's closed, it reconfigures the
+connection.
+
+16
+00:01:03,080 --> 00:01:04,630
+So, that's it for now.
+
+17
+00:01:04,630 --> 00:01:06,490
+Just something that I've got to do
+basically.
+
+18
+00:01:07,500 --> 00:01:12,770
+Oh yeah, and also when the application
+starts up somewhere up here I've
+
+19
+00:01:12,770 --> 00:01:17,270
+made it so that it loads the, oh yeah,
+here, it loads the defaults.
+
+20
+00:01:18,270 --> 00:01:22,040
+And configures the configures the actual
+database
+
+21
+00:01:22,040 --> 00:01:24,330
+connection was previously just loading the
+default
+
+22
+00:01:24,330 --> 00:01:27,260
+so much, from doing anything with them
+apart from pulling them in the dialog.
+
+23
+00:01:27,260 --> 00:01:29,220
+So that's it for now.
+
+24
+00:01:29,220 --> 00:01:32,570
+And until next time, happy coding.
+

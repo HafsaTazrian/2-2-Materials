@@ -1,0 +1,620 @@
+1
+00:00:01,890 --> 00:00:05,800
+Hello, this is John from
+CaveArtProgramming.com and this is
+
+2
+00:00:05,800 --> 00:00:09,950
+a tutorial on adding menus to your swing
+application.
+
+3
+00:00:09,950 --> 00:00:14,570
+So in a moment I've got this swing
+application, and there's no menu here.
+
+4
+00:00:14,570 --> 00:00:18,520
+And in this tutorial I'm going to show you
+how to add a really basic menu
+
+5
+00:00:18,520 --> 00:00:22,310
+and I'm going to tell you the kind of
+minimum you need to work with menus.
+
+6
+00:00:22,310 --> 00:00:26,000
+And then we'll look at some more advanced
+stuff in the next tutorial.
+
+7
+00:00:27,020 --> 00:00:32,400
+So I'm going to start by going to my main
+frame .Java here where I
+
+8
+00:00:32,400 --> 00:00:38,340
+just create the main frame and I'm going
+to give that a new method called, it's
+
+9
+00:00:38,340 --> 00:00:44,230
+going to be private create menu bar create
+menu
+
+10
+00:00:46,570 --> 00:00:47,120
+bar.
+
+11
+00:00:47,120 --> 00:00:51,320
+Now if you look at an application like
+Eclipse, for example, this.
+
+12
+00:00:51,320 --> 00:00:53,920
+The thing across the top is called a menu
+bar.
+
+13
+00:00:53,920 --> 00:00:57,100
+We have file, edit, source, refactor, and
+so on.
+
+14
+00:00:57,100 --> 00:01:02,420
+And the, each of the separate things here
+are called menus.
+
+15
+00:01:02,420 --> 00:01:05,970
+And the items in a menu are menu items.
+
+16
+00:01:07,010 --> 00:01:14,960
+So, I'm going to start by creating a new
+JMenu bar, which I'll call menu bar.
+
+17
+00:01:14,960 --> 00:01:19,130
+And I'll set that equal to a new JMenu
+bar.
+
+18
+00:01:19,130 --> 00:01:21,010
+And I'll just return that from this
+function.
+
+19
+00:01:21,010 --> 00:01:22,740
+So return menu bar.
+
+20
+00:01:22,740 --> 00:01:24,430
+And let's set return type of this
+function.
+
+21
+00:01:24,430 --> 00:01:30,390
+To jmenubar like so at the import there.
+
+22
+00:01:31,510 --> 00:01:40,370
+And now, in my mainframe constructor here,
+I can just do set jmenubar.
+
+23
+00:01:40,370 --> 00:01:44,660
+Now don't call set menubar by mistake,
+because,
+
+24
+00:01:44,660 --> 00:01:49,020
+there's a kinda historic method here
+called set menubar.
+
+25
+00:01:49,020 --> 00:01:52,120
+And set menu bar is not compatible with
+JMenu bars, so
+
+26
+00:01:52,120 --> 00:01:57,340
+you need to set J menu bar, not set menu
+bar.
+
+27
+00:01:57,340 --> 00:01:59,770
+So if I run that, it's not gonna look any
+different at the moment,
+
+28
+00:01:59,770 --> 00:02:03,350
+although this may be a faint, so the line
+there, where there, many will appear.
+
+29
+00:02:03,350 --> 00:02:09,802
+And now let's get this a couple of menus,
+so I'll have a JMenu.
+
+30
+00:02:09,802 --> 00:02:19,100
+File menu equals new JMenu and that's
+called a file as is traditional and
+
+31
+00:02:21,140 --> 00:02:27,625
+oh, at the file menu, to the menu bar, so
+I'll say menu
+
+32
+00:02:27,625 --> 00:02:34,670
+bar.@ and I will push in the file menu
+like so,.
+
+33
+00:02:35,790 --> 00:02:42,510
+And let's also have a JMenu window menu
+
+34
+00:02:42,510 --> 00:02:48,520
+equals new JMenu, so I just add two for
+the moment, just to kind of demonstrate
+
+35
+00:02:48,520 --> 00:02:54,408
+the principles involved and I'll say
+menubar.add
+
+36
+00:02:54,408 --> 00:03:00,270
+window menu, and if I run this.
+
+37
+00:03:00,270 --> 00:03:02,740
+So now we've got two menus but they've got
+no items.
+
+38
+00:03:03,890 --> 00:03:07,180
+So let's add some menu items to them.
+
+39
+00:03:07,180 --> 00:03:12,140
+So in the file menu let's have.
+
+40
+00:03:12,140 --> 00:03:16,440
+A I'll create a JMenu item here.
+
+41
+00:03:17,670 --> 00:03:26,520
+And I'll call this let's call it export
+data.
+
+42
+00:03:26,520 --> 00:03:31,250
+And I'll set that equal to I'll call it
+export data item.
+
+43
+00:03:31,250 --> 00:03:33,630
+And I'll set it equal to a new JMenu.
+
+44
+00:03:33,630 --> 00:03:37,900
+An item and I put a text in there.
+
+45
+00:03:37,900 --> 00:03:39,870
+So, if you look at a file menu usually the
+
+46
+00:03:39,870 --> 00:03:43,050
+text begins with capital letters and if
+you have two words
+
+47
+00:03:43,050 --> 00:03:47,260
+usually they're capitalized and if you
+bring up some other dialogue
+
+48
+00:03:47,260 --> 00:03:51,030
+you put an ellipses on them, so and that's
+worth noting.
+
+49
+00:03:51,030 --> 00:03:52,860
+For consistency with other applications.
+
+50
+00:03:52,860 --> 00:03:59,280
+So, the same UJ menu item and export
+data...
+
+51
+00:03:59,280 --> 00:04:03,010
+And that's gonna bring up a dialogue that
+allows me to export my data.
+
+52
+00:04:03,010 --> 00:04:06,000
+So, I'll add the JMenu item import there.
+
+53
+00:04:06,000 --> 00:04:10,460
+And let's have a importDataItem as well.
+
+54
+00:04:10,460 --> 00:04:16,610
+So, let's say JMenuItem
+
+55
+00:04:16,610 --> 00:04:20,880
+ImportDataItem and that's going to say
+import data.
+
+56
+00:04:22,110 --> 00:04:23,820
+And these are going to allow me to
+
+57
+00:04:23,820 --> 00:04:27,080
+import and export data from my
+application, ultimately.
+
+58
+00:04:29,240 --> 00:04:33,620
+And let's add both of these menu items to.
+
+59
+00:04:33,620 --> 00:04:35,130
+To the file menu.
+
+60
+00:04:35,130 --> 00:04:38,110
+So in fact, I'll just, I'll put this
+
+61
+00:04:38,110 --> 00:04:40,420
+down here so that we're grouping
+everything together.
+
+62
+00:04:40,420 --> 00:04:42,946
+And I'll also jMenuItem.
+
+63
+00:04:42,946 --> 00:04:48,530
+And as is traditional, let's have a
+exitItem.
+
+64
+00:04:49,550 --> 00:04:51,910
+So an exit item on the menu.
+
+65
+00:04:51,910 --> 00:04:54,990
+So if you look at this file it's got Exit
+down there.
+
+66
+00:04:54,990 --> 00:04:56,530
+Let's add one here as well.
+
+67
+00:04:56,530 --> 00:04:58,410
+So exit.
+
+68
+00:04:58,410 --> 00:04:59,120
+There we go.
+
+69
+00:04:59,120 --> 00:05:00,930
+That quits the application.
+
+70
+00:05:00,930 --> 00:05:05,930
+Oh, I could put the equals new JMenu,
+
+71
+00:05:06,950 --> 00:05:11,410
+menuItem accept.
+
+72
+00:05:11,410 --> 00:05:15,430
+Okay so let's add those to the File menu.
+
+73
+00:05:15,430 --> 00:05:20,621
+I'll say, fileMenu.add exportDataItem.
+
+74
+00:05:20,621 --> 00:05:24,180
+So exportDataItem.
+
+75
+00:05:24,180 --> 00:05:32,550
+And fileMenu.addi mport, data item.
+
+76
+00:05:32,550 --> 00:05:36,840
+And, then its other fileMenu,add
+separator, like that
+
+77
+00:05:36,840 --> 00:05:38,940
+to make a nice, so if you look
+
+78
+00:05:38,940 --> 00:05:42,210
+at menus often they've got like these
+Nearly
+
+79
+00:05:42,210 --> 00:05:45,820
+invisible horizontal lines in them to
+separate logical groups.
+
+80
+00:05:45,820 --> 00:05:48,500
+So we're gonna add one of those separator.
+
+81
+00:05:48,500 --> 00:05:57,210
+And file menu.add exit item, like this.
+
+82
+00:05:57,210 --> 00:06:03,565
+Now for the, For the window menu I'm gonna
+have a
+
+83
+00:06:03,565 --> 00:06:10,280
+JMenu I'm gonna actually have a sub menu
+here.
+
+84
+00:06:10,280 --> 00:06:12,130
+And I'm gonna call the sub menu.
+
+85
+00:06:12,130 --> 00:06:14,030
+So I go to window here.
+
+86
+00:06:14,030 --> 00:06:19,020
+Here's I've got a show view kind of item.
+
+87
+00:06:19,020 --> 00:06:21,030
+So, I'm gonna say here.
+
+88
+00:06:22,180 --> 00:06:25,060
+I'm gonna have a sub menu called show.
+
+89
+00:06:25,060 --> 00:06:33,130
+So I'll call this, show menu equals new
+JMenu, show.
+
+90
+00:06:35,190 --> 00:06:39,110
+And, show menu is gonna show sub menu,
+
+91
+00:06:39,110 --> 00:06:44,070
+it's gonna have, At the moment just one
+item.
+
+92
+00:06:44,070 --> 00:06:48,520
+And that item is gonna be, Is gonna be
+JMenuItem.
+
+93
+00:06:49,710 --> 00:06:55,905
+And it's gonna be called showFormItem
+
+94
+00:06:55,905 --> 00:07:01,430
+= new JMenuItem.
+
+95
+00:07:01,430 --> 00:07:02,590
+And it's gonna say.
+
+96
+00:07:04,640 --> 00:07:10,730
+Lets call it, person form maybe, I don't
+really know what to call it at the
+
+97
+00:07:10,730 --> 00:07:17,530
+moment, but that will do, and so I'm gonna
+add the show menu.
+
+98
+00:07:17,530 --> 00:07:22,381
+To the window menu, so I'll say window
+menu.add
+
+99
+00:07:22,381 --> 00:07:28,440
+show menu and I mustn't forget to add the
+show form item
+
+100
+00:07:28,440 --> 00:07:33,430
+to the show submenu, cuz this is slanting
+more complex than it really is.
+
+101
+00:07:34,540 --> 00:07:37,708
+But, you'll see in a minute how this looks
+[INAUDIBLE] show menu don't have to show.
+
+102
+00:07:37,708 --> 00:07:42,881
+PerformItem.
+
+103
+00:07:42,881 --> 00:07:46,960
+And now, I think I'm good.
+
+104
+00:07:46,960 --> 00:07:53,289
+So, I've got the, I've got fileMenu and
+I'm adding items to the fileMenu here.
+
+105
+00:07:54,360 --> 00:07:59,270
+While I'm creating items there and putting
+them here, without setting up the file
+
+106
+00:07:59,270 --> 00:08:04,340
+and then I add the file menu to the menu
+bar, and the window menu.
+
+107
+00:08:04,340 --> 00:08:07,240
+So I create the window menu here, and that
+[UNKNOWN]
+
+108
+00:08:07,240 --> 00:08:10,520
+you move that down to organize this a bit
+more logically.
+
+109
+00:08:12,150 --> 00:08:14,220
+So I create a [UNKNOWN] menu.
+
+110
+00:08:14,220 --> 00:08:21,000
+And I add a show form item to the show
+menu, and
+
+111
+00:08:21,000 --> 00:08:25,530
+I add the show menu to the window menu,
+and the window menu I add to the menu box.
+
+112
+00:08:25,530 --> 00:08:27,960
+Let's have a look and see how that looks.
+
+113
+00:08:27,960 --> 00:08:29,890
+So I've got a file menu here.
+
+114
+00:08:29,890 --> 00:08:32,650
+It's got export data, import data and
+exit, and the windows.
+
+115
+00:08:32,650 --> 00:08:33,430
+It's got show.
+
+116
+00:08:33,430 --> 00:08:35,550
+If I go to that, this submenu opens up,
+
+117
+00:08:35,550 --> 00:08:37,590
+which just has one item in it at the
+moment.
+
+118
+00:08:40,380 --> 00:08:47,630
+Now I, there's lots of things you can do
+with menus, and one useful thing
+
+119
+00:08:47,630 --> 00:08:55,750
+to do here is that this, you can actually
+have check boxes in menus.
+
+120
+00:08:55,750 --> 00:08:58,410
+And I'm gonna, in the next tutorial, I'm
+actually going to show
+
+121
+00:08:58,410 --> 00:09:03,840
+you how to change this menu item here, so
+it uses a chatbox.
+
+122
+00:09:03,840 --> 00:09:08,330
+And we're going to use that to show and
+hide this form here.
+
+123
+00:09:09,670 --> 00:09:12,980
+And there, there are very similar things
+you do in menus.
+
+124
+00:09:12,980 --> 00:09:16,580
+And we're going to look later on at
+mnemonics
+
+125
+00:09:16,580 --> 00:09:21,490
+and accelerators and pop up menus and
+things like that.
+
+126
+00:09:21,490 --> 00:09:22,390
+So join me agin next time.
+
+127
+00:09:22,390 --> 00:09:25,320
+Time when we'll be making this menu
+actually work.
+
+128
+00:09:25,320 --> 00:09:30,200
+And it's worth just mentioning here, if
+you haven't got the patience to look
+
+129
+00:09:30,200 --> 00:09:36,890
+through more tutorials on menus, then you
+can just add action listeners to your
+
+130
+00:09:36,890 --> 00:09:40,310
+menu items, and you can respond to them
+just like you would with a
+
+131
+00:09:40,310 --> 00:09:47,470
+normal button, and that will be enough to
+get you working with menus already.
+
+132
+00:09:47,470 --> 00:09:50,660
+But, as I say, in the next tutorial we're
+looking at check boxes and menu.
+
+133
+00:09:50,660 --> 00:09:51,560
+So join me again then.
+
+134
+00:09:51,560 --> 00:09:56,739
+And until then, happy coding.
+
+135
+00:09:56,739 --> 00:09:57,209
+[BLANK_AUDIO]
+

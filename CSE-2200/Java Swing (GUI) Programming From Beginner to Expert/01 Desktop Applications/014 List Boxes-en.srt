@@ -1,0 +1,697 @@
+1
+00:00:01,840 --> 00:00:02,070
+Hi.
+
+2
+00:00:02,070 --> 00:00:02,780
+Welcome back.
+
+3
+00:00:02,780 --> 00:00:07,180
+This is John from caveofprogramming.com.
+
+4
+00:00:07,180 --> 00:00:11,704
+I hope you survived the last tutorial on
+events, which was pretty complex.
+
+5
+00:00:11,704 --> 00:00:14,380
+In this tutorial we're gonna look at
+something a lot simpler.
+
+6
+00:00:14,380 --> 00:00:17,839
+We're gonna look at, list boxes.
+
+7
+00:00:17,839 --> 00:00:21,100
+So, I've created so far.
+
+8
+00:00:21,100 --> 00:00:23,360
+This application with this form here.
+
+9
+00:00:23,360 --> 00:00:25,724
+[SOUND] That just fills stuff in, here.
+
+10
+00:00:25,724 --> 00:00:28,662
+And what I'm gonna do now is add a new
+
+11
+00:00:28,662 --> 00:00:32,410
+control to this form, which is gonna be a
+ListBox.
+
+12
+00:00:32,410 --> 00:00:36,840
+So, I'm gonna start by going to the class,
+that represents the form here.
+
+13
+00:00:38,114 --> 00:00:41,762
+and, I'm gonna add a new private instance
+
+14
+00:00:41,762 --> 00:00:46,840
+variable type, [SOUND] JList, which is the
+Swing ListBox.
+
+15
+00:00:46,840 --> 00:00:53,174
+And, [SOUND] I'm gonna make this ListBox
+hold.
+
+16
+00:00:53,174 --> 00:00:59,450
+Different age categories like under 18, 18
+to 65, and over 65.
+
+17
+00:00:59,450 --> 00:01:01,082
+And so I'll call this ageList.
+
+18
+00:01:01,082 --> 00:01:02,511
+[SOUND] And, let's go down to where I'll
+add the input there.
+
+19
+00:01:02,511 --> 00:01:06,970
+[SOUND] And let's go down to where if.
+
+20
+00:01:06,970 --> 00:01:13,540
+Created the other components and say
+AgeList equals New DayList.
+
+21
+00:01:16,460 --> 00:01:21,918
+[SOUND] Now the Swing components in Java
+they pretty
+
+22
+00:01:21,918 --> 00:01:27,173
+much follow the, Model View Controller
+architecture.
+
+23
+00:01:27,173 --> 00:01:34,100
+So in the MVC architecture the view is The
+
+24
+00:01:34,100 --> 00:01:37,390
+literal, the actual GUI stuff like buttons
+and everything.
+
+25
+00:01:37,390 --> 00:01:39,570
+Everything you see draw, drawn on the
+screen.
+
+26
+00:01:40,880 --> 00:01:42,680
+The controller, in the case of our
+
+27
+00:01:42,680 --> 00:01:46,120
+application here, is, well a controller
+is,
+
+28
+00:01:46,120 --> 00:01:47,810
+the part of the application that contains
+
+29
+00:01:47,810 --> 00:01:50,340
+all the logic, and that hooks everything
+together.
+
+30
+00:01:50,340 --> 00:01:53,058
+And at the moment, this is really, [SOUND]
+our main frame.
+
+31
+00:01:53,058 --> 00:01:54,780
+Because that's.
+
+32
+00:01:54,780 --> 00:01:57,520
+Getting information from the different
+components
+
+33
+00:01:57,520 --> 00:01:59,340
+and telling other components what to do.
+
+34
+00:02:00,590 --> 00:02:03,020
+And in this application here we haven't
+got a model at all.
+
+35
+00:02:03,020 --> 00:02:06,870
+The model is the bit that stores data and
+
+36
+00:02:06,870 --> 00:02:09,979
+deals with data, deals with databases, and
+so on.
+
+37
+00:02:11,390 --> 00:02:13,820
+But the upshot of this is, that if you
+wanna add,
+
+38
+00:02:13,820 --> 00:02:18,850
+items to a JList, you gotta add stuff to
+the JList's model.
+
+39
+00:02:18,850 --> 00:02:22,233
+And, [SOUND] what I will do here is I
+will,
+
+40
+00:02:22,233 --> 00:02:27,622
+create a default list model, [SOUND] which
+I'll call AgeModel.
+
+41
+00:02:27,622 --> 00:02:32,653
+And I'll set that equal to New
+DefaultListModel like that and
+
+42
+00:02:32,653 --> 00:02:37,680
+at the import, and I can add items to this
+AgeModel and to start
+
+43
+00:02:37,680 --> 00:02:42,611
+with I'm gonna just add simple string
+items, and in the
+
+44
+00:02:42,611 --> 00:02:47,543
+next tutorial we're gonna look at how
+that, how you can make
+
+45
+00:02:47,543 --> 00:02:52,760
+that, kinda hook that up with a database
+and use ids.
+
+46
+00:02:52,760 --> 00:02:56,460
+These to represent your items instead of,
+strings.
+
+47
+00:02:56,460 --> 00:02:58,430
+But, we'll keep it simple here.
+
+48
+00:02:58,430 --> 00:03:03,260
+I'll say AgeModel.addElement.
+
+49
+00:03:03,260 --> 00:03:11,798
+And the first elements gonna be a string
+it says, let's say 18 or under.
+
+50
+00:03:11,798 --> 00:03:17,614
+[SOUND] And actually, maybe that's not
+exactly, typical.
+
+51
+00:03:17,614 --> 00:03:20,430
+Let's just say, actually under 18.
+
+52
+00:03:20,430 --> 00:03:23,160
+And I'll copy that.
+
+53
+00:03:23,160 --> 00:03:28,728
+And, I'll make a, [SOUND] two more items
+here, and I'll
+
+54
+00:03:28,728 --> 00:03:33,845
+have the middle category to be, 18 to
+[SOUND] 65.
+
+55
+00:03:33,845 --> 00:03:39,223
+And the last category here, I'll have 65
+or over,
+
+56
+00:03:39,223 --> 00:03:45,090
+[SOUND] and now I need to tell this
+ListBox to use this model.
+
+57
+00:03:45,090 --> 00:03:50,560
+So I say ageList.setModel.
+
+58
+00:03:50,560 --> 00:03:55,065
+[SOUND] AgeModel.
+
+59
+00:03:55,065 --> 00:03:58,344
+[SOUND] So now let's add that ListBox to
+the form and then
+
+60
+00:03:58,344 --> 00:04:01,063
+we can have a look and make it look a bit
+nicer.
+
+61
+00:04:01,063 --> 00:04:03,446
+So at the moment I've got, if I run this
+
+62
+00:04:03,446 --> 00:04:08,290
+application I've got, three rows here
+starting numbering at 0.
+
+63
+00:04:08,290 --> 00:04:11,930
+That's first row, second row, and last row
+has a button in.
+
+64
+00:04:11,930 --> 00:04:16,240
+So I want the, ListBox to be before the
+button on the third
+
+65
+00:04:16,240 --> 00:04:19,530
+row, and I want the button to be moved to
+the fourth row.
+
+66
+00:04:19,530 --> 00:04:24,958
+So I changed this here grid y for the
+button to be three, using
+
+67
+00:04:24,958 --> 00:04:30,511
+my, [SOUND] create [UNKNOWN] let's make
+this comment, fourth row.
+
+68
+00:04:30,511 --> 00:04:36,059
+[SOUND] Then let's just copy this, and
+paste that in there.
+
+69
+00:04:36,059 --> 00:04:42,738
+[SOUND] Say third row, [SOUND] and this is
+gonna be, so grid wise gonna be two, and
+
+70
+00:04:42,738 --> 00:04:50,327
+here instead of adding a button, I'm gonna
+add the, AgeList and everything else.
+
+71
+00:04:50,327 --> 00:04:55,380
+May be same ,now lets run this and see how
+it looks.
+
+72
+00:04:55,380 --> 00:04:59,970
+And so this my ListBox oh yeah, actually
+made the last
+
+73
+00:04:59,970 --> 00:05:03,290
+row take up all the space and don't want
+this third row
+
+74
+00:05:03,290 --> 00:05:06,170
+take up lots of space and am gonna change
+that width
+
+75
+00:05:06,170 --> 00:05:10,650
+by here to something that's more than the
+final point 2 and.
+
+76
+00:05:10,650 --> 00:05:12,100
+Run that.
+
+77
+00:05:12,100 --> 00:05:14,510
+And that looks a, a lot better I think.
+
+78
+00:05:15,600 --> 00:05:18,450
+Now the this box here it doesn't look too
+pretty.
+
+79
+00:05:18,450 --> 00:05:20,480
+So, I'm gonna, make it look prettier.
+
+80
+00:05:20,480 --> 00:05:22,550
+And the first thing I'm gonna do is set,
+
+81
+00:05:22,550 --> 00:05:24,730
+the preferred size to make it a bit
+bigger.
+
+82
+00:05:26,500 --> 00:05:30,621
+[SOUND] So let's go up to where I can
+create the, AgeList.
+
+83
+00:05:30,621 --> 00:05:35,590
+And so it's actually I'll go after here,
+after I've set the data.
+
+84
+00:05:35,590 --> 00:05:37,180
+I don't think it really matters.
+
+85
+00:05:37,180 --> 00:05:41,840
+And I'll say
+AgeList.setPreferredSizeNewDimension.
+
+86
+00:05:43,292 --> 00:05:51,061
+[SOUND] And let's have it at, I don't
+know, 110 and 66.
+
+87
+00:05:51,061 --> 00:05:53,926
+[SOUND] You're probably gonna have to play
+around with
+
+88
+00:05:53,926 --> 00:05:56,620
+those figures, to get it to look, [SOUND]
+really good.
+
+89
+00:05:56,620 --> 00:06:00,499
+But I think that looks acceptable and.
+
+90
+00:06:01,680 --> 00:06:02,780
+Let's give it a border.
+
+91
+00:06:02,780 --> 00:06:04,510
+Because it looks a bit strange without a
+border.
+
+92
+00:06:04,510 --> 00:06:13,899
+So I'll say,
+AgeList.setBorder(BorderFactor.create).
+
+93
+00:06:13,899 --> 00:06:17,842
+[SOUND] Maybe etched border will.
+
+94
+00:06:17,842 --> 00:06:20,867
+But good, I've missed a lot there though.
+
+95
+00:06:20,867 --> 00:06:24,320
+For the factory.create edged order.
+
+96
+00:06:26,530 --> 00:06:28,461
+[SOUND] So, see how that looks.
+
+97
+00:06:28,461 --> 00:06:31,790
+There we go, that's, quite a lot better I
+would say.
+
+98
+00:06:33,030 --> 00:06:39,085
+And, Maybe just slightly, wider and now
+
+99
+00:06:39,085 --> 00:06:45,210
+I wanna get information from this ListBox
+when the OK
+
+100
+00:06:45,210 --> 00:06:51,180
+button is clicked and the way to do that.
+
+101
+00:06:51,180 --> 00:06:55,930
+Is, so in my action list on my button
+
+102
+00:06:55,930 --> 00:07:01,180
+here I'm already getting information, name
+and
+
+103
+00:07:01,180 --> 00:07:06,180
+occupation from the text fields and what I
+can do
+
+104
+00:07:06,180 --> 00:07:11,430
+is I can say string, [SOUND] hcut let's
+call it
+
+105
+00:07:11,430 --> 00:07:17,065
+equals, hlist.getSelectValue, like that.
+
+106
+00:07:17,065 --> 00:07:19,530
+And that returns a, object.
+
+107
+00:07:19,530 --> 00:07:23,910
+So I need to put in a type cast here, from
+object to string.
+
+108
+00:07:23,910 --> 00:07:27,600
+Because I know that the items in my
+ListBox are actually strings.
+
+109
+00:07:27,600 --> 00:07:29,885
+Therefore, I can, definitely custom to
+strings.
+
+110
+00:07:29,885 --> 00:07:34,192
+And, if I do [UNKNOWN] out here to check.
+
+111
+00:07:34,192 --> 00:07:35,490
+And it's always got to check as you're
+
+112
+00:07:35,490 --> 00:07:39,020
+going along, that things are behaving as
+you expect.
+
+113
+00:07:39,020 --> 00:07:41,900
+Then, if I select one of those and click
+
+114
+00:07:41,900 --> 00:07:44,700
+OK that's gonna come out down here, in the
+console.
+
+115
+00:07:47,070 --> 00:07:52,180
+I'm gonna, also select a default item when
+the, this
+
+116
+00:07:52,180 --> 00:07:55,510
+box is created, cuz I think that would
+look nicer too.
+
+117
+00:07:55,510 --> 00:08:02,043
+So let's say here, [SOUND]
+ageless.setSelectedIndex, and set it to 1.
+
+118
+00:08:02,043 --> 00:08:03,980
+So, the first item is 0.
+
+119
+00:08:03,980 --> 00:08:08,305
+So, by setting it to 1, I set it to the
+middle item like that.
+
+120
+00:08:08,305 --> 00:08:11,780
+Yeah, I think it looks, better.
+
+121
+00:08:11,780 --> 00:08:14,760
+And now the next logical step here, will
+be
+
+122
+00:08:14,760 --> 00:08:20,080
+to change the where is it, in my form
+panel.
+
+123
+00:08:20,080 --> 00:08:24,570
+I've got this form event, class that
+carries information to the main frame.
+
+124
+00:08:24,570 --> 00:08:28,220
+And the next logical information will be
+to add in, the age category here.
+
+125
+00:08:28,220 --> 00:08:31,259
+But I'm actually gonna do that in the next
+tutorial because.
+
+126
+00:08:33,890 --> 00:08:38,870
+Usually when you create a, ListBox, you
+probably
+
+127
+00:08:38,870 --> 00:08:41,860
+don't want to get a string from it.
+
+128
+00:08:41,860 --> 00:08:45,300
+You probably want to get an ID that
+represents that string,
+
+129
+00:08:45,300 --> 00:08:50,720
+because it's that ID that you will store
+in your, database.
+
+130
+00:08:50,720 --> 00:08:51,890
+usually.
+
+131
+00:08:51,890 --> 00:08:54,050
+That's not necessarily the case, and I
+could of course
+
+132
+00:08:54,050 --> 00:08:59,568
+here, I could, just use this AgeCategory
+directly, and I could
+
+133
+00:08:59,568 --> 00:09:02,990
+maybe have an if statement that looks at
+the AgeCategory
+
+134
+00:09:02,990 --> 00:09:06,490
+and does different things, but as a
+general principle, it's not.
+
+135
+00:09:06,490 --> 00:09:06,990
+Good
+
+136
+00:09:09,240 --> 00:09:12,400
+to have your the kind of, control that
+aspect,
+
+137
+00:09:12,400 --> 00:09:16,570
+of your, application, the actual business
+logic of it.
+
+138
+00:09:16,570 --> 00:09:19,200
+It's not good to have the logic, depending
+
+139
+00:09:19,200 --> 00:09:22,250
+on, things that are directly connected to
+the view.
+
+140
+00:09:22,250 --> 00:09:25,090
+So if I change the wording.
+
+141
+00:09:25,090 --> 00:09:28,117
+Of my, age category, [SOUND] and if I were
+
+142
+00:09:28,117 --> 00:09:31,863
+to change this, you know, to say something
+like,
+
+143
+00:09:31,863 --> 00:09:35,051
+I don't know, over 65 instead of 65 or
+
+144
+00:09:35,051 --> 00:09:38,513
+over, I don't want that to break my
+application.
+
+145
+00:09:38,513 --> 00:09:42,349
+And really, I wanna work with IDs here,
+not direct with the
+
+146
+00:09:42,349 --> 00:09:46,260
+strings, [SOUND] and so we're gonna look
+at how to do that, in
+
+147
+00:09:46,260 --> 00:09:50,557
+the next tutorial and we're gonna look at
+how to get information,
+
+148
+00:09:50,557 --> 00:09:55,725
+[SOUND] from this ListBox back, to
+somewhere where it can actually be used.
+
+149
+00:09:55,725 --> 00:09:59,955
+So join me again next time, and until
+then, Happy Coding.
+
+150
+00:09:59,955 --> 00:10:00,227
+[SOUND]
+

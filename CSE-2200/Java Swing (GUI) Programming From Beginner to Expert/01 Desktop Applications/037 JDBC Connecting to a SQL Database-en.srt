@@ -1,0 +1,756 @@
+1
+00:00:01,520 --> 00:00:05,930
+Hello, this is John from Cave of
+Programming dot com and
+
+2
+00:00:05,930 --> 00:00:09,780
+in, this tutorial, we're gonna start a
+little detour where we're gonna
+
+3
+00:00:09,780 --> 00:00:14,820
+look at connecting to a JDBC, we're going
+to look at
+
+4
+00:00:14,820 --> 00:00:19,610
+connecting to a SQL database, I should
+say, using a JDBC, so.
+
+5
+00:00:19,610 --> 00:00:20,930
+This is a part of swing.
+
+6
+00:00:20,930 --> 00:00:22,750
+And this applies to any kinda job
+
+7
+00:00:22,750 --> 00:00:28,240
+of programming, including including like
+servlet programming.
+
+8
+00:00:28,240 --> 00:00:32,480
+But the reason I'm including this in this
+series of tutorials is because I've found
+
+9
+00:00:32,480 --> 00:00:34,510
+that a lot of people, who write Swing
+
+10
+00:00:34,510 --> 00:00:37,800
+applications want to connect to a SQL
+database.
+
+11
+00:00:37,800 --> 00:00:39,700
+So I'm just going to, I'm not going
+
+12
+00:00:39,700 --> 00:00:42,860
+to dwell on creating databases or anything
+like that.
+
+13
+00:00:42,860 --> 00:00:45,940
+I'm just going to show you the minimum you
+need to connect to an
+
+14
+00:00:45,940 --> 00:00:51,220
+existing database and to save stuff in it
+and retrieve stuff from it using JDBC.
+
+15
+00:00:52,430 --> 00:00:57,230
+So I'm going to start by I've actually
+already.
+
+16
+00:00:57,230 --> 00:01:01,692
+To actually connect in this case, I'm
+gonna connect to
+
+17
+00:01:01,692 --> 00:01:06,370
+MySQL database it's running on my, on this
+chain that I'm
+
+18
+00:01:06,370 --> 00:01:10,390
+working on here to do, to connect to MySQL
+database you
+
+19
+00:01:10,390 --> 00:01:15,810
+need the MySQL Java Connector, Java is
+I've got here and.
+
+20
+00:01:15,810 --> 00:01:20,790
+If you search in Google flat you'll find
+it, very quickly and you can download it.
+
+21
+00:01:20,790 --> 00:01:23,410
+I think from the MySQL website.
+
+22
+00:01:23,410 --> 00:01:27,480
+Just search, like, MySQL Java Connector
+and you'll find this job.
+
+23
+00:01:27,480 --> 00:01:28,390
+And you need that.
+
+24
+00:01:28,390 --> 00:01:31,570
+To connect to databases using JDBC.
+
+25
+00:01:32,590 --> 00:01:37,540
+So, to start with here, I'm going to go to
+Eclipse and I'm actually not going to
+
+26
+00:01:37,540 --> 00:01:40,290
+use my user interface here because, one of
+
+27
+00:01:40,290 --> 00:01:46,168
+the advantages of keeping your back end
+separate and.
+
+28
+00:01:46,168 --> 00:01:48,987
+Or keeping separated in code terms from
+your front
+
+29
+00:01:48,987 --> 00:01:52,410
+end is that you can test the back end
+separately.
+
+30
+00:01:52,410 --> 00:01:53,310
+I'm gonna do that here.
+
+31
+00:01:53,310 --> 00:02:00,450
+I'm gonna actually create a new class, and
+I'm gonna call that Test.
+
+32
+00:02:00,450 --> 00:02:07,900
+Let's put Test Database, and let's give it
+a main method, and I will type.
+
+33
+00:02:07,900 --> 00:02:15,370
+In here, just, this out, running database
+test.
+
+34
+00:02:15,370 --> 00:02:19,070
+And I could actually use a j unit test
+here as well,
+
+35
+00:02:19,070 --> 00:02:25,070
+but, I'll just stick with a simple, main
+method for this, this tutorial.
+
+36
+00:02:25,070 --> 00:02:28,810
+Let's right click back and go to [UNKNOWN]
+Applications runs down
+
+37
+00:02:28,810 --> 00:02:32,900
+here and now I'm going to my database
+class and am gonna
+
+38
+00:02:32,900 --> 00:02:38,450
+give that a method called public void
+connect, which is gonna connect
+
+39
+00:02:38,450 --> 00:02:44,200
+to the database and am also gonna give it
+a a string.
+
+40
+00:02:44,200 --> 00:02:49,800
+The closing bracket there, I'm going to
+get a public void disconnect and I'm
+
+41
+00:02:49,800 --> 00:02:54,910
+gonna test those from my test application
+here, So I'm gonna say
+
+42
+00:02:54,910 --> 00:03:00,370
+database DB equals new database and then
+I'm
+
+43
+00:03:00,370 --> 00:03:05,870
+gonna say DB dot connect and DB dot
+disconnect, so we're just gonna connect.
+
+44
+00:03:05,870 --> 00:03:09,900
+And disconnect for the moment, and
+
+45
+00:03:11,970 --> 00:03:14,830
+yeah, let's see, so that's public void,
+connect,
+
+46
+00:03:14,830 --> 00:03:19,710
+disconnect, and yeah, I've got a, added
+the import
+
+47
+00:03:19,710 --> 00:03:24,320
+there already, added automatically, and
+it's saying that the
+
+48
+00:03:24,320 --> 00:03:25,880
+method, oh yeah, I've just got to save it.
+
+49
+00:03:25,880 --> 00:03:30,040
+Sometimes Eclipse can be annoying, and if
+you don't save stuff, you get an error.
+
+50
+00:03:30,040 --> 00:03:31,750
+When there isn't any there.
+
+51
+00:03:31,750 --> 00:03:35,190
+Now in the connect method, I've just gotta
+do two pretty simple things.
+
+52
+00:03:36,220 --> 00:03:39,410
+The first thing is, I need to say class
+dot full name.
+
+53
+00:03:39,410 --> 00:03:43,830
+And here I'm gonna dynamically load the
+class that
+
+54
+00:03:43,830 --> 00:03:48,010
+is actually there, My SQL Java, connect to
+driver.
+
+55
+00:03:48,010 --> 00:03:49,218
+So in here I'm gonna put.
+
+56
+00:03:49,218 --> 00:03:57,078
+Com dot MySQL dot JDBC dot driver.
+
+57
+00:03:57,078 --> 00:04:01,330
+And if I, I need to handle the exception
+around
+
+58
+00:04:01,330 --> 00:04:05,600
+that, because it has a, throws a class not
+found exception.
+
+59
+00:04:06,750 --> 00:04:11,560
+And I'm gonna throw that out to my connect
+method saying.
+
+60
+00:04:11,560 --> 00:04:17,090
+Just throw new just make it a new
+exception.
+
+61
+00:04:18,330 --> 00:04:20,060
+Driver not found.
+
+62
+00:04:20,060 --> 00:04:22,120
+Like that.
+
+63
+00:04:22,120 --> 00:04:26,290
+And then it says throws, throw you
+exception.
+
+64
+00:04:28,320 --> 00:04:33,510
+And if I save that now I can add a froze
+declaration.
+
+65
+00:04:33,510 --> 00:04:37,530
+Actually after I add the semicolon I can
+add a throws declaration to connect.
+
+66
+00:04:39,080 --> 00:04:45,440
+And now I'm forced to handle that where I
+used it to so here, I
+
+67
+00:04:45,440 --> 00:04:51,520
+can say add [INAUDIBLE] and down here I
+can say, yeah let's just
+
+68
+00:04:51,520 --> 00:04:54,630
+leave it with e dot prints dot trace for
+the moment, so I'll see
+
+69
+00:04:54,630 --> 00:04:57,610
+an error if it can't load that driver and
+if I run it now.
+
+70
+00:04:57,610 --> 00:05:01,600
+Now I'm gonna see that our, cuz the
+driver's not found,
+
+71
+00:05:01,600 --> 00:05:04,990
+and what I need to do is right click my
+project here.
+
+72
+00:05:04,990 --> 00:05:11,690
+Go to build path, and, then in, in like
+Net Beans for example, you have
+
+73
+00:05:11,690 --> 00:05:15,110
+to right click and go to properties, I
+think, and you find a similar thing there.
+
+74
+00:05:15,110 --> 00:05:19,900
+And I need to go to libraries.
+
+75
+00:05:19,900 --> 00:05:22,820
+I'm gonna go to add external jar, because
+the jar is not
+
+76
+00:05:22,820 --> 00:05:26,410
+actually in my project folder, and if it
+was I'd say add.
+
+77
+00:05:26,410 --> 00:05:32,020
+Jar, and let's go to the location where I
+put the jar file that
+
+78
+00:05:32,020 --> 00:05:37,480
+is, that contains the driver, so go to
+tutorial swing scroll down
+
+79
+00:05:37,480 --> 00:05:43,900
+here, here's the MySQL connector, and now
+if I run this,
+
+80
+00:05:43,900 --> 00:05:48,720
+I don't get the error cuz it's actually
+managed to load the class which is good.
+
+81
+00:05:48,720 --> 00:05:49,600
+Now the.
+
+82
+00:05:49,600 --> 00:05:53,800
+The second thing I need to do here is
+
+83
+00:05:56,680 --> 00:06:00,100
+I need to actually get the database
+connection.
+
+84
+00:06:00,100 --> 00:06:07,320
+So, for the moment, I'll just say
+Connection com equals Driver Manager.
+
+85
+00:06:08,850 --> 00:06:09,620
+get.
+
+86
+00:06:09,620 --> 00:06:16,785
+Let's add the imports there, so I need
+java SQL connection and
+
+87
+00:06:16,785 --> 00:06:22,960
+I need to say driver manager dot get, and
+get connection.
+
+88
+00:06:22,960 --> 00:06:28,100
+And we're going to use the form that has
+the username and the password.
+
+89
+00:06:28,100 --> 00:06:29,800
+Now the first argument here.
+
+90
+00:06:29,800 --> 00:06:35,700
+Is a kind of connection URL string and it
+looks something like this.
+
+91
+00:06:35,700 --> 00:06:37,700
+So let's say string
+
+92
+00:06:40,090 --> 00:06:46,620
+connection URL I'll make sure a few rows
+quite the right time I think it is
+
+93
+00:06:46,620 --> 00:06:51,590
+actually but, that's gonna look like this,
+JDBC
+
+94
+00:06:51,590 --> 00:06:54,580
+the name of technology I'm using to
+connect.
+
+95
+00:06:55,612 --> 00:06:59,834
+I'm going to connect to MySQL database and
+then
+
+96
+00:06:59,834 --> 00:07:05,550
+we have, it looks a bit like a, drive
+specification.
+
+97
+00:07:05,550 --> 00:07:10,730
+So, if I remember right, it's colon,
+slash, slash and we need local host.
+
+98
+00:07:10,730 --> 00:07:13,350
+Because I'm connecting on this machine on
+this case, and
+
+99
+00:07:13,350 --> 00:07:16,690
+you might wanna make that configurable on
+your application of course.
+
+100
+00:07:16,690 --> 00:07:18,120
+And it's gonna run on port 3306, and
+
+101
+00:07:18,120 --> 00:07:22,040
+later on we're gonna get these connection
+details
+
+102
+00:07:22,040 --> 00:07:27,730
+from, from the actual, dialogue, where you
+can
+
+103
+00:07:27,730 --> 00:07:30,990
+specify by Preferences BI log, we specify
+these details.
+
+104
+00:07:30,990 --> 00:07:33,880
+And then finally, I've got a database set
+
+105
+00:07:33,880 --> 00:07:36,990
+up already called, I think it's called,
+SwingTest.
+
+106
+00:07:38,020 --> 00:07:42,170
+So, this specifies where and how to
+connect to a database.
+
+107
+00:07:42,170 --> 00:07:45,370
+And if you have Oracle, of course, it's
+gonna be slightly different.
+
+108
+00:07:45,370 --> 00:07:47,930
+And that's the first argument here,
+connection URL.
+
+109
+00:07:49,160 --> 00:07:52,691
+In fact, let's just call it URL, so the
+
+110
+00:07:52,691 --> 00:07:55,710
+name URL, and now I need the username,
+which is
+
+111
+00:07:55,710 --> 00:07:58,670
+going to be root, and in the real world,
+
+112
+00:07:58,670 --> 00:08:01,300
+you probably don't want to connect using
+your root user.
+
+113
+00:08:01,300 --> 00:08:04,880
+You probably want to set up a user,
+especially for your database,
+
+114
+00:08:04,880 --> 00:08:09,689
+and connect using that with restricted
+privileges, and I'm going to use my.
+
+115
+00:08:11,100 --> 00:08:14,350
+Root password here, which is this
+extremely cryptic string.
+
+116
+00:08:14,350 --> 00:08:17,060
+Oh, I don't know why cuz the port is not
+even
+
+117
+00:08:17,060 --> 00:08:20,640
+open to the outside world, so probably
+doesn't matter too much.
+
+118
+00:08:20,640 --> 00:08:24,930
+And then we gonna, we're gonna paste the
+password in
+
+119
+00:08:24,930 --> 00:08:29,880
+there, and, and then we'll see if we can
+connect.
+
+120
+00:08:29,880 --> 00:08:30,520
+Or not.
+
+121
+00:08:30,520 --> 00:08:35,130
+So if I think like so,
+
+122
+00:08:35,130 --> 00:08:40,920
+if this can't connect it's going to throw
+a sequel connection
+
+123
+00:08:40,920 --> 00:08:45,880
+which is its going to throw sorry, SQL
+exceptions.
+
+124
+00:08:45,880 --> 00:08:48,370
+sequence section which will be thrown out
+
+125
+00:08:48,370 --> 00:08:52,390
+with my connect method here as an
+exception.
+
+126
+00:08:52,390 --> 00:08:54,969
+So because I'm using the base of exception
+
+127
+00:08:54,969 --> 00:08:57,700
+class here, of course this can, any
+exception
+
+128
+00:08:57,700 --> 00:09:03,520
+can be thrown from there, which is perhaps
+not best practice but It'll do for now.
+
+129
+00:09:03,520 --> 00:09:06,850
+And if I run this now you can see there is
+no exceptions.
+
+130
+00:09:06,850 --> 00:09:08,690
+So we see that we've connected
+successfully.
+
+131
+00:09:10,020 --> 00:09:11,760
+And now I'm gonna take this actual, this
+
+132
+00:09:11,760 --> 00:09:17,560
+connection object here, and let's say I'm
+gonna
+
+133
+00:09:17,560 --> 00:09:19,530
+just put a few refinements here, and then
+
+134
+00:09:19,530 --> 00:09:21,580
+we'll leave the rest for the next
+tutorial.
+
+135
+00:09:21,580 --> 00:09:24,410
+I'll say private connection, con there.
+
+136
+00:09:25,730 --> 00:09:27,550
+So we'll connect there.
+
+137
+00:09:27,550 --> 00:09:35,420
+And then in disconnect, I'll say, if com
+is not equal to null,
+
+138
+00:09:36,430 --> 00:09:42,482
+then we're gonna call com.close.
+
+139
+00:09:42,482 --> 00:09:45,969
+And that throws an exception too, and I'm
+just gonna throw that with a tri catch.
+
+140
+00:09:47,430 --> 00:09:54,980
+And I'm just gonna, I'm just gonna put
+sysout I think, can't close connection.
+
+141
+00:09:54,980 --> 00:09:57,790
+I don't care so much about, about that
+exception.
+
+142
+00:09:58,880 --> 00:10:03,840
+And, in my connect method, I'm gonna say
+if,
+
+143
+00:10:05,958 --> 00:10:15,270
+If con is not equal to null and I'm just
+going to return and not do anything.
+
+144
+00:10:15,270 --> 00:10:19,890
+So I want to make it save to call connect
+model times
+
+145
+00:10:19,890 --> 00:10:22,802
+error and for a moment I'm just going to
+put this out here.
+
+146
+00:10:22,802 --> 00:10:23,339
+This is.
+
+147
+00:10:23,339 --> 00:10:29,530
+connected, connected, and just so you can
+see,
+
+148
+00:10:29,530 --> 00:10:34,110
+I'm just gonna put let's output the
+connection object as well.
+
+149
+00:10:34,110 --> 00:10:36,290
+So, if I run that now you can see it says
+
+150
+00:10:36,290 --> 00:10:40,738
+connected, and it's just a two string
+method on the connection object.
+
+151
+00:10:40,738 --> 00:10:43,415
+Let's do it, do it that now.
+
+152
+00:10:43,415 --> 00:10:48,920
+so, that's it for this tutorial.
+
+153
+00:10:48,920 --> 00:10:52,776
+I'm just gonna leave it with connecting to
+the database [SOUND] and
+
+154
+00:10:52,776 --> 00:10:57,626
+then the next tutorial, we're gonna look
+at retrieving data from the database.
+
+155
+00:10:57,626 --> 00:11:02,930
+In fact, maybe it makes sense to look
+first at saving data.
+
+156
+00:11:02,930 --> 00:11:04,930
+So we can look at saving data and then.
+
+157
+00:11:04,930 --> 00:11:07,630
+After that we can look at retrieving data.
+
+158
+00:11:07,630 --> 00:11:08,940
+So join me again next time.
+
+159
+00:11:08,940 --> 00:11:12,135
+And until next time, happy coding!
+
+160
+00:11:12,135 --> 00:11:15,624
+[NOISE]
+

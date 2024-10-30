@@ -1,0 +1,216 @@
+1
+00:00:01,710 --> 00:00:04,900
+Hello, this is John from caveofprogramming
+.com, and
+
+2
+00:00:04,900 --> 00:00:08,060
+in this tutorial, we're gonna look at
+tabbed panes.
+
+3
+00:00:08,060 --> 00:00:12,190
+So I'm actually gonna, change this
+application so that instead
+
+4
+00:00:12,190 --> 00:00:15,330
+of just having a table here, we've got a
+tabbed pane.
+
+5
+00:00:15,330 --> 00:00:19,330
+One tab's gonna have a table in it, and
+the other tab's gonna have a very fancy
+
+6
+00:00:19,330 --> 00:00:25,410
+looking message reader that will well, it
+won't actually do anything, but,
+
+7
+00:00:25,410 --> 00:00:30,550
+will can make it display messages from
+retrieve from an imaginary server.
+
+8
+00:00:30,550 --> 00:00:36,730
+That gives us an opportunity to look at
+some more interesting swing components.
+
+9
+00:00:36,730 --> 00:00:38,720
+So this tutorial we're just gonna do the
+top pane bit,
+
+10
+00:00:38,720 --> 00:00:44,370
+and I'm gonna start by declaring a private
+J [UNKNOWN] pane here.
+
+11
+00:00:44,370 --> 00:00:49,555
+We [UNKNOWN] pane, and right here, before
+I create
+
+12
+00:00:49,555 --> 00:00:54,492
+the split pane, I'm gonna set the type
+pane to a
+
+13
+00:00:54,492 --> 00:00:59,552
+new [UNKNOWN] pane, and I'm gonna add the
+tab pane
+
+14
+00:00:59,552 --> 00:01:04,890
+to the split pane instead of a table
+panel.
+
+15
+00:01:04,890 --> 00:01:07,680
+So here I'll put tab pane instead of the
+table panel.
+
+16
+00:01:09,580 --> 00:01:11,210
+And if I, if I run that in a moment we're
+
+17
+00:01:11,210 --> 00:01:15,672
+not gonna see anything interesting cuz
+there's no tabs in it.
+
+18
+00:01:15,672 --> 00:01:18,860
+But now I can add tabs to that tab pane.
+
+19
+00:01:18,860 --> 00:01:21,246
+So, let's go ahead and do that.
+
+20
+00:01:21,246 --> 00:01:29,560
+The first type I'm gonna add, I'm gonna
+say type, tab pane dot add tab.
+
+21
+00:01:29,560 --> 00:01:34,880
+And, you can give each tab a title, and a
+component to display actually in the tab.
+
+22
+00:01:34,880 --> 00:01:37,840
+You can also, if you want specify an icon
+for
+
+23
+00:01:37,840 --> 00:01:39,570
+the tab as well, but we won't do that
+here.
+
+24
+00:01:39,570 --> 00:01:42,270
+I'll just use this form in the
+constructor.
+
+25
+00:01:42,270 --> 00:01:49,837
+So I'll say here person database a dot
+being my first
+
+26
+00:01:49,837 --> 00:01:55,530
+my first tab, and in there I'll put table
+panel.
+
+27
+00:01:57,030 --> 00:02:02,997
+And then I'll have another tab pane here,
+another tab, add tab and,
+
+28
+00:02:02,997 --> 00:02:08,680
+and I'll call this messages, [SOUND] and
+in there I'll just use the
+
+29
+00:02:08,680 --> 00:02:13,794
+text panel for the moment, I I had an
+earlier version of this
+
+30
+00:02:13,794 --> 00:02:20,083
+application, and [INAUDIBLE] put it in the
+right place so we get messages.
+
+31
+00:02:20,083 --> 00:02:26,144
+And something else that's worth mentioning
+here is you can also
+
+32
+00:02:26,144 --> 00:02:32,560
+set a custom component by saying, see top
+pane set tab component.
+
+33
+00:02:32,560 --> 00:02:33,800
+And you supply an index.
+
+34
+00:02:33,800 --> 00:02:37,110
+The index is a zero based then you can
+
+35
+00:02:37,110 --> 00:02:39,350
+set a component that actually appears on
+the tab.
+
+36
+00:02:39,350 --> 00:02:42,390
+Like, for example, you can implement your,
+own close button.
+
+37
+00:02:42,390 --> 00:02:43,540
+But, I'm not gonna do that here.
+
+38
+00:02:43,540 --> 00:02:45,500
+I'm just gonna have very simple, plain
+tabs.
+
+39
+00:02:45,500 --> 00:02:48,690
+So if I run that now, I've got two tabs.
+
+40
+00:02:48,690 --> 00:02:51,420
+The one tab has my personal database in
+it, and.
+
+41
+00:02:51,420 --> 00:02:56,100
+And, the other tab I'm gonna turn this
+into a sort of message panel.
+
+42
+00:02:57,660 --> 00:02:59,770
+And so that's it for this tutorial.
+
+43
+00:02:59,770 --> 00:03:03,430
+And in the next tutorial we are gonna look
+at tree
+
+44
+00:03:03,430 --> 00:03:08,135
+controls, so join me again then and until
+next time, happy coding.
+
+45
+00:03:08,135 --> 00:03:11,444
+[SOUND]
+

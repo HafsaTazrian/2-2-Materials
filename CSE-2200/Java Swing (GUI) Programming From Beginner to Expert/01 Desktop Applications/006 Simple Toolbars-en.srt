@@ -1,0 +1,447 @@
+1
+00:00:03,130 --> 00:00:06,720
+Hello, this is John from Cave of
+Programming and,
+
+2
+00:00:06,720 --> 00:00:12,180
+this is, a tutorial of creating two balls
+and slim.
+
+3
+00:00:12,180 --> 00:00:13,724
+So, we're just gonna look at a
+
+4
+00:00:13,724 --> 00:00:17,040
+really, really very basic toolbar, in this
+tutorial.
+
+5
+00:00:17,040 --> 00:00:20,307
+So, in the last tutorial we, we created
+this little
+
+6
+00:00:20,307 --> 00:00:23,205
+app here, [SOUND] and if you click a
+button [SOUND]
+
+7
+00:00:23,205 --> 00:00:25,731
+it just outputs a low there and what I
+want
+
+8
+00:00:25,731 --> 00:00:28,428
+to is to have this button in a tool bar.
+
+9
+00:00:28,428 --> 00:00:32,774
+[SOUND] So, at the moment the structure of
+this application now is,
+
+10
+00:00:32,774 --> 00:00:37,905
+I've got a very, very simple main
+application that just does new MainFrame.
+
+11
+00:00:37,905 --> 00:00:43,621
+I've got a MainFrame class and the
+MainFrame cr, creates two components,
+
+12
+00:00:43,621 --> 00:00:48,380
+a button and a text panel, and it adds
+them to itself.
+
+13
+00:00:48,380 --> 00:00:52,139
+And it listens to the button, and, when
+you click the button, it.
+
+14
+00:00:53,288 --> 00:00:57,931
+[SOUND] sends a command to the, text area,
+the text panel.
+
+15
+00:00:57,931 --> 00:01:00,004
+And I've also got this text panel
+component.
+
+16
+00:01:00,004 --> 00:01:04,354
+Basically it's a JPanel with a scroll pane
+embedded in
+
+17
+00:01:04,354 --> 00:01:08,700
+it and a text area embedded in the scroll
+pane.
+
+18
+00:01:08,700 --> 00:01:11,252
+[SOUND] Okay then, so let's take a look.
+
+19
+00:01:11,252 --> 00:01:16,130
+What I wanna do is, create a new class for
+start, that's gonna be the tool bar.
+
+20
+00:01:16,130 --> 00:01:19,540
+So this is a, this is a new, custom
+component.
+
+21
+00:01:19,540 --> 00:01:23,703
+So, I'll go to, I'll right click and go to
+new, class
+
+22
+00:01:23,703 --> 00:01:27,709
+[SOUND] and, or I could go to file menu
+and do new class.
+
+23
+00:01:27,709 --> 00:01:33,475
+And I'm gonna call this, [SOUND] toolbar,
+and once again, as last time,
+
+24
+00:01:33,475 --> 00:01:38,869
+as in the last tutorial, [SOUND] I'm gonna
+make this extend the JPanel
+
+25
+00:01:38,869 --> 00:01:44,186
+class, so click Finish, so public class
+toolbar extends JPanel.
+
+26
+00:01:44,186 --> 00:01:47,235
+Let's add in the import.
+
+27
+00:01:47,235 --> 00:01:56,198
+And to get this a constructor, set public
+[SOUND] toolbar like this.
+
+28
+00:01:56,198 --> 00:01:59,094
+Now if I go back to my MainFrame class,
+
+29
+00:01:59,094 --> 00:02:03,350
+I can already add a panel instead of the,
+button.
+
+30
+00:02:03,350 --> 00:02:06,569
+And I wanna add it at the top, of course,
+instead of the bottom.
+
+31
+00:02:07,630 --> 00:02:14,192
+So let's, here, create private [SOUND]
+private variable of type toolbar.
+
+32
+00:02:14,192 --> 00:02:17,675
+[SOUND] And I'll call it toolbar.
+
+33
+00:02:17,675 --> 00:02:25,073
+And, here [SOUND] I can say toolbar in the
+constructor, tool bar equals new tool bar.
+
+34
+00:02:25,073 --> 00:02:28,371
+[SOUND] And then down here,.
+
+35
+00:02:28,371 --> 00:02:33,474
+I can, just where I'm adding the
+components, I could just, have a new add.
+
+36
+00:02:33,474 --> 00:02:34,856
+I can say add.
+
+37
+00:02:34,856 --> 00:02:40,470
+[SOUND] Now if I copy that first, Ctrl+C,
+Ctrl+V.
+
+38
+00:02:40,470 --> 00:02:44,986
+[SOUND] I can say, add toolbar
+atBorderLayout.north.
+
+39
+00:02:44,986 --> 00:02:47,484
+[SOUND] To add it at the top.
+
+40
+00:02:47,484 --> 00:02:50,910
+Now if I run this now I'm not gonna see a
+whole, a whole lot.
+
+41
+00:02:50,910 --> 00:02:53,951
+Because, this panel's automatically sizing
+to almost
+
+42
+00:02:53,951 --> 00:02:56,368
+nothing because there's nothing in it yet.
+
+43
+00:02:56,368 --> 00:03:01,385
+[SOUND] So, let's fix that I'll go into
+the toolbar and let's
+
+44
+00:03:01,385 --> 00:03:05,156
+add two buttons to the tool bar to be
+going on with.
+
+45
+00:03:05,156 --> 00:03:12,947
+[SOUND] So, let's have a private a private
+J button and I'll call this.
+
+46
+00:03:12,947 --> 00:03:17,709
+Because I'm not quite sure what this
+application's gonna do at the moment.
+
+47
+00:03:17,709 --> 00:03:21,120
+It's just demoing, the kind of theory of
+it really.
+
+48
+00:03:21,120 --> 00:03:22,810
+I'll call this button one.
+
+49
+00:03:22,810 --> 00:03:24,910
+Well, let's call it anobutton.
+
+50
+00:03:24,910 --> 00:03:25,410
+How's that?
+
+51
+00:03:26,804 --> 00:03:32,422
+And then, [SOUND] I'll have a private
+JButton, [SOUND] Goodbye button.
+
+52
+00:03:32,422 --> 00:03:33,471
+Goodbye button.
+
+53
+00:03:33,471 --> 00:03:37,252
+[SOUND] And of course, I wanna say in
+
+54
+00:03:37,252 --> 00:03:42,766
+the constructor, that the HelloButton =
+new JButton.
+
+55
+00:03:42,766 --> 00:03:46,723
+[SOUND] Let's give it some text, or label,
+Hello.
+
+56
+00:03:46,723 --> 00:03:53,636
+And the goodbyeButton = new
+JButton(*GoodBye*).
+
+57
+00:03:53,636 --> 00:03:58,744
+[SOUND] Sounding a bit like a Paul
+McCartney song, but nevermind.
+
+58
+00:03:58,744 --> 00:04:01,990
+Okay, and, and now I wanna add those
+buttons.
+
+59
+00:04:01,990 --> 00:04:03,571
+To the, toolbar.
+
+60
+00:04:03,571 --> 00:04:06,973
+And, I'm gonna use something called flow
+layout
+
+61
+00:04:06,973 --> 00:04:10,942
+because I don't wanna use boarder layout
+here on
+
+62
+00:04:10,942 --> 00:04:13,858
+this panel, because I don't wanna add the
+
+63
+00:04:13,858 --> 00:04:17,680
+button at their North South center East to
+West.
+
+64
+00:04:17,680 --> 00:04:20,560
+And you can only add one com, component.
+
+65
+00:04:20,560 --> 00:04:21,400
+Each position there.
+
+66
+00:04:21,400 --> 00:04:26,010
+What I wanna do is I wanna add them, kind
+of from left to right.
+
+67
+00:04:26,010 --> 00:04:28,460
+And this say, layout manager does that.
+
+68
+00:04:28,460 --> 00:04:30,406
+And it's called, flow layout.
+
+69
+00:04:30,406 --> 00:04:35,796
+So we're gonna do set layout, [SOUND] new
+flow layout.
+
+70
+00:04:35,796 --> 00:04:39,670
+And as I mentioned in their introductory,
+tutorial.
+
+71
+00:04:39,670 --> 00:04:44,336
+If you, set your visual guide swing
+layouts, you'll find
+
+72
+00:04:44,336 --> 00:04:48,610
+a guide to different layouts and you'll
+find this, among it.
+
+73
+00:04:50,330 --> 00:04:52,330
+So if you set flow layout, all you have to
+
+74
+00:04:52,330 --> 00:04:57,630
+do is do add just add your components
+without, like this.
+
+75
+00:04:59,090 --> 00:05:06,078
+And add, [SOUND] Goodbye button, like so.
+
+76
+00:05:06,078 --> 00:05:09,772
+And now if I run this now, I got two
+buttons that are right in the middle.
+
+77
+00:05:09,772 --> 00:05:13,341
+[SOUND] And to get them over to the left,
+I can pass
+
+78
+00:05:13,341 --> 00:05:18,529
+an argument to the constructor, the flow
+lay out, lay out manager.
+
+79
+00:05:18,529 --> 00:05:22,159
+I can use flow lay out.left, like this
+
+80
+00:05:22,159 --> 00:05:27,680
+and that's gonna align my, components to
+the left.
+
+81
+00:05:27,680 --> 00:05:29,670
+And by the way, you might wonder if you
+can get
+
+82
+00:05:29,670 --> 00:05:33,900
+flow, flow layout to add components,
+vertically and the answer is no.
+
+83
+00:05:33,900 --> 00:05:36,660
+I don't know why not, but there you go.
+
+84
+00:05:36,660 --> 00:05:38,676
+So if I run that, now I've got two
+
+85
+00:05:38,676 --> 00:05:42,637
+buttons on the toolbar that's beginning to
+look, rather nice.
+
+86
+00:05:42,637 --> 00:05:45,370
+It doesn't do anything, yet my old button,
+still works.
+
+87
+00:05:46,700 --> 00:05:50,646
+Now I wanna change these so that I wanna
+get rid of this button down here and
+
+88
+00:05:50,646 --> 00:05:54,741
+I wanna make it so that if I, if I click
+this button here, it outputs hello here.
+
+89
+00:05:54,741 --> 00:05:59,157
+And if I click this, it outputs, Goodbye,
+in this text area.
+
+90
+00:05:59,157 --> 00:06:06,147
+And to do that we're gonna have to tackle,
+one of the key, key things in, swing
+
+91
+00:06:06,147 --> 00:06:13,270
+development, which is creating a listener
+and listening to a, a custom component.
+
+92
+00:06:13,270 --> 00:06:14,420
+I'm gonna show you a very simple
+
+93
+00:06:14,420 --> 00:06:18,470
+technique, to do that in the, next
+tutorial.
+
+94
+00:06:18,470 --> 00:06:23,330
+So, join me again then, and until then,
+happy coding.
+
+95
+00:06:23,330 --> 00:06:23,380
+[SOUND]
+

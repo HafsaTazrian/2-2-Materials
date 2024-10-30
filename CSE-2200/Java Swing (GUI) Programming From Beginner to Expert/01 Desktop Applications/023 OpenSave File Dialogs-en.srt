@@ -1,0 +1,472 @@
+1
+00:00:01,650 --> 00:00:05,540
+Hello, this is John from
+Caveofprogramming.com, and this is
+
+2
+00:00:05,540 --> 00:00:09,890
+a tutorial on file chooser dialogs in Java
+swing.
+
+3
+00:00:09,890 --> 00:00:14,770
+So at the moment, I've got this
+application, and I've got this File menu.
+
+4
+00:00:14,770 --> 00:00:17,650
+And I can go to Export Data and Import
+Data.
+
+5
+00:00:17,650 --> 00:00:18,650
+And I wanna make that.
+
+6
+00:00:19,830 --> 00:00:21,580
+Bring up File, choose a dialogue.
+
+7
+00:00:21,580 --> 00:00:25,520
+So I can choose to Open a file, or to Save
+it.
+
+8
+00:00:25,520 --> 00:00:27,240
+And we're gonna look at that in this
+tutorial.
+
+9
+00:00:28,240 --> 00:00:33,250
+So the first step is I wanna reuse the
+same file chooser dialogue
+
+10
+00:00:34,730 --> 00:00:39,290
+every time because I wanna customize that
+dialogue, and I wanna use it for both.
+
+11
+00:00:39,290 --> 00:00:44,360
+To my open and save files operations, file
+operations.
+
+12
+00:00:44,360 --> 00:00:47,220
+And I also, wanted to remember where I
+browsed
+
+13
+00:00:47,220 --> 00:00:49,030
+to the last time I opened it and for that
+
+14
+00:00:49,030 --> 00:00:51,710
+reason I'm gonna just use one file to use
+
+15
+00:00:51,710 --> 00:00:54,620
+the dialogue rather than create a new one
+every time.
+
+16
+00:00:54,620 --> 00:00:57,005
+So here in my main frame I'm gonna
+
+17
+00:00:57,005 --> 00:01:01,185
+create a private JFileChooser and I'm
+gonna call that.
+
+18
+00:01:01,185 --> 00:01:03,950
+FileChooser and add the import there.
+
+19
+00:01:05,446 --> 00:01:09,590
+And let's maximize [UNKNOWN] control them.
+
+20
+00:01:09,590 --> 00:01:12,672
+And now here in the constructor mainframe
+I'll
+
+21
+00:01:12,672 --> 00:01:16,530
+create a new FileChooser object equals new
+JFileChooser.
+
+22
+00:01:18,560 --> 00:01:21,700
+And I'll go down here.
+
+23
+00:01:21,700 --> 00:01:27,590
+Scroll down to our create the menu, and I
+want to add a couple of action listeners
+
+24
+00:01:27,590 --> 00:01:34,177
+on my menu items so I'll say
+ImportDataItem.addActionListener.
+
+25
+00:01:35,956 --> 00:01:39,240
+And this ImportDataItem is just the j menu
+item,
+
+26
+00:01:39,240 --> 00:01:44,040
+you might remember from previous episodes
+in this tutorial series.
+
+27
+00:01:44,040 --> 00:01:46,850
+So, I'm gonna add the ActionListener here.
+
+28
+00:01:46,850 --> 00:01:49,325
+And let's add the action perform method at
+the
+
+29
+00:01:49,325 --> 00:01:53,370
+ActionListener as we have done so many
+times before now.
+
+30
+00:01:54,400 --> 00:01:59,557
+And in here, to start with I'm just gonna
+
+31
+00:01:59,557 --> 00:02:04,610
+say FileChooser.showOpen,Open Dialog.
+
+32
+00:02:04,610 --> 00:02:11,360
+And for the parent window I'll parse in
+mainframe.this, so that it knows
+
+33
+00:02:11,360 --> 00:02:15,540
+where its parent window is and it knows
+where to appear and that sort of thing.
+
+34
+00:02:15,540 --> 00:02:17,580
+So now if I run that, that's already gonna
+work.
+
+35
+00:02:17,580 --> 00:02:20,430
+File Import Data like this.
+
+36
+00:02:20,430 --> 00:02:21,020
+I can select.
+
+37
+00:02:21,020 --> 00:02:21,870
+I can Cancel it.
+
+38
+00:02:21,870 --> 00:02:23,070
+Or I can select files.
+
+39
+00:02:24,282 --> 00:02:27,580
+But to actually get the file that's
+chosen.
+
+40
+00:02:28,890 --> 00:02:33,455
+One thing you wanna check whether this
+Open Dialog returns an a value that
+
+41
+00:02:33,455 --> 00:02:35,985
+means that the user's clicked the confirm
+
+42
+00:02:35,985 --> 00:02:40,260
+button, the Open button rather than
+clicking Cancel.
+
+43
+00:02:40,260 --> 00:02:47,055
+So let's say if, let's wrap this in an if
+and say if the return value of that is
+
+44
+00:02:47,055 --> 00:02:55,090
+JFileChooser.APPROVE_OPTION, then, we're
+gonna really open the file.
+
+45
+00:02:55,090 --> 00:02:56,840
+Otherwise we'll just ignore it.
+
+46
+00:02:56,840 --> 00:02:58,800
+And for the moment, I'll just do a sys out
+cuz
+
+47
+00:02:58,800 --> 00:03:01,670
+I just wanna print the name of the file
+for the moment.
+
+48
+00:03:01,670 --> 00:03:07,620
+And I'll say FileChooser.getSelectedFile.
+
+49
+00:03:07,620 --> 00:03:11,840
+And so I'm relying on the two string
+method of, this
+
+50
+00:03:11,840 --> 00:03:15,080
+actually returns a file object, but if I
+do sys out on
+
+51
+00:03:15,080 --> 00:03:17,410
+there, it's just gonna do a, I'm just
+gonna see the
+
+52
+00:03:17,410 --> 00:03:20,079
+path, cuz it will just invoke the two
+string method of file.
+
+53
+00:03:21,140 --> 00:03:23,360
+So now let's run that and see how it
+looks.
+
+54
+00:03:23,360 --> 00:03:26,510
+So I do File Import Data.
+
+55
+00:03:26,510 --> 00:03:28,460
+And let's pick a file here.
+
+56
+00:03:30,920 --> 00:03:34,570
+well, you can see that I can browse
+between different directories.
+
+57
+00:03:34,570 --> 00:03:38,620
+Now let's pick this file and go to Open
+and here I've got the name of the
+
+58
+00:03:38,620 --> 00:03:40,960
+file and it's returning the file object
+that actually
+
+59
+00:03:40,960 --> 00:03:42,780
+represents the file so I could open this
+now.
+
+60
+00:03:42,780 --> 00:03:47,930
+And in future tutorials so, we haven't
+actually got a data model
+
+61
+00:03:47,930 --> 00:03:52,839
+for this application at the moment, what
+I'm doing really is all kind of view.
+
+62
+00:03:54,860 --> 00:04:00,640
+So in a future tutorial soon we're gonna
+look at creating a simple data model.
+
+63
+00:04:00,640 --> 00:04:04,090
+And when we've got the data model, we can
+then look at saving that data.
+
+64
+00:04:05,160 --> 00:04:08,290
+But for the moment we're just gonna
+concentrate on getting the app.
+
+65
+00:04:08,290 --> 00:04:13,790
+The actual files to save to or open And
+for my
+
+66
+00:04:13,790 --> 00:04:18,900
+Export Data item I'll add a very similar
+listener, so let's just change this
+
+67
+00:04:18,900 --> 00:04:23,680
+to Export, since this is the export data
+item, instead of show open
+
+68
+00:04:23,680 --> 00:04:29,610
+dialog, quite simply I'm gonna change this
+to show Save Dialog, like that.
+
+69
+00:04:29,610 --> 00:04:35,400
+And if I run this now and do Export Data.
+
+70
+00:04:35,400 --> 00:04:37,420
+This brings up the Save Dialog that says
+Save.
+
+71
+00:04:37,420 --> 00:04:42,520
+And, if I choose file, and then it's gonna
+output the
+
+72
+00:04:42,520 --> 00:04:46,580
+name of the file that I chose here because
+it's doing this.
+
+73
+00:04:47,700 --> 00:04:49,830
+So that's, that's enough for this
+tutorial, I think.
+
+74
+00:04:50,900 --> 00:04:53,830
+And in the next tutorial, we're gonna
+refine this.
+
+75
+00:04:53,830 --> 00:04:58,830
+File dialog a little bit because we're
+gonna actually, if you, you see
+
+76
+00:04:58,830 --> 00:05:02,460
+in the moment you can choose any file, but
+in the next tutorial
+
+77
+00:05:02,460 --> 00:05:05,120
+we're gonna look at how you add filters to
+the file so that
+
+78
+00:05:05,120 --> 00:05:10,620
+you can, narrow this down to particular
+kinds of files with particular extensions.
+
+79
+00:05:12,390 --> 00:05:17,450
+And in closing I just wanna point out a
+really useful resource here, if you
+
+80
+00:05:17,450 --> 00:05:22,720
+go to Google, and I've mentioned this Also
+in the first tutorial.
+
+81
+00:05:22,720 --> 00:05:27,510
+And you search for swing visual guides
+components.
+
+82
+00:05:27,510 --> 00:05:30,340
+This is re, a really really useful page.
+
+83
+00:05:30,340 --> 00:05:33,950
+So click on the first entry there, and if
+you search in there
+
+84
+00:05:33,950 --> 00:05:39,950
+for FileChooser, you can see extensive
+examples on how to use a FileChooser.
+
+85
+00:05:39,950 --> 00:05:41,600
+And one thing that it talks about here
+that
+
+86
+00:05:41,600 --> 00:05:45,040
+I'm not gonna show you in these tutorials
+is you
+
+87
+00:05:45,040 --> 00:05:48,070
+can actually create little custom panels,
+which show like
+
+88
+00:05:48,070 --> 00:05:50,350
+a custom view of the files that you're
+looking at.
+
+89
+00:05:52,440 --> 00:05:54,190
+And there's also some really useful code I
+
+90
+00:05:54,190 --> 00:05:58,840
+think if you search for Utils.Java in
+there.
+
+91
+00:05:58,840 --> 00:06:02,750
+Then there's actually a they actually give
+you a little
+
+92
+00:06:02,750 --> 00:06:07,240
+utils class here that gets the extension
+from a file name.
+
+93
+00:06:07,240 --> 00:06:10,128
+But we're gonna, I'm gonna implement my
+own for these tutorials.
+
+94
+00:06:10,128 --> 00:06:13,980
+But that's, and you can easily figure that
+out.
+
+95
+00:06:13,980 --> 00:06:16,030
+It's just kind of string handling stuff.
+
+96
+00:06:16,030 --> 00:06:17,400
+But this is, this is quite handy.
+
+97
+00:06:18,410 --> 00:06:21,600
+So that's it for this tutorial.
+
+98
+00:06:21,600 --> 00:06:25,070
+In the next tutorial, as I say we'll look
+at filtering this file.
+
+99
+00:06:25,070 --> 00:06:26,730
+So join me again then.
+
+100
+00:06:26,730 --> 00:06:29,060
+And until next time, happy coding.
+

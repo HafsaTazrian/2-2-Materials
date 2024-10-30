@@ -1,0 +1,793 @@
+1
+00:00:02,690 --> 00:00:06,090
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:06,090 --> 00:00:10,090
+And in this tutorial we're gonna look at
+multithreading in Swing.
+
+3
+00:00:11,220 --> 00:00:15,290
+So in Swing you can use standard Java
+multithreading techniques.
+
+4
+00:00:15,290 --> 00:00:19,270
+And if you go to caveofprogramming.com,
+which is all one word.
+
+5
+00:00:19,270 --> 00:00:23,720
+There you can find basically a complete
+course on Java multithreading.
+
+6
+00:00:23,720 --> 00:00:29,340
+But if you create a separate thread, you
+can't update the GUI from that thread.
+
+7
+00:00:29,340 --> 00:00:30,580
+If you want to update the GUI from
+
+8
+00:00:30,580 --> 00:00:34,150
+a separate thread, you have to pass a
+implementation
+
+9
+00:00:34,150 --> 00:00:40,270
+of runnable to swingutilities.invoke
+later, but unfortunately there's
+
+10
+00:00:40,270 --> 00:00:44,480
+a class that that side steps all the
+complication.
+
+11
+00:00:44,480 --> 00:00:48,190
+Specialize for swing and we're gonna use
+that class here
+
+12
+00:00:49,190 --> 00:00:52,640
+which is the recommended way to handle
+multithreading in Swing.
+
+13
+00:00:52,640 --> 00:00:57,490
+So at the moment if I run my application
+I've got this tree, and if
+
+14
+00:00:57,490 --> 00:00:59,710
+I took something in the tree, it
+
+15
+00:00:59,710 --> 00:01:05,540
+locks up my application until message
+retrieval finishes.
+
+16
+00:01:05,540 --> 00:01:08,600
+And of course, retrieving messages is not
+necessarily the ideal thing
+
+17
+00:01:08,600 --> 00:01:11,710
+to do when you click a node in the tree
+but here
+
+18
+00:01:11,710 --> 00:01:14,430
+I'm just trying to put together an
+application to demonstrate the
+
+19
+00:01:14,430 --> 00:01:19,300
+basic principles, and I'll leave you to
+decide on aesthetics and usability.
+
+20
+00:01:20,320 --> 00:01:25,570
+So what I want to do is in, in my message
+panel
+
+21
+00:01:25,570 --> 00:01:31,070
+class here I've got this the problem is
+that this stuff
+
+22
+00:01:31,070 --> 00:01:36,080
+here takes a while to return and that's
+what's holding up my application.
+
+23
+00:01:36,080 --> 00:01:38,450
+So I want to run that in it's own thread.
+
+24
+00:01:38,450 --> 00:01:43,820
+And later on we'll pop up a progress bar
+while the messages are being downloaded.
+
+25
+00:01:45,020 --> 00:01:51,300
+So what I'm gonna do is I'm gonna call the
+methods here, call retrieve messages.
+
+26
+00:01:51,300 --> 00:01:54,563
+And I'm gonna implement that method here.
+
+27
+00:01:54,563 --> 00:01:59,802
+So, let's cut this and I'll go
+
+28
+00:01:59,802 --> 00:02:05,379
+down a bit, and right here I'm going to
+
+29
+00:02:05,379 --> 00:02:10,980
+have private void retrieve messages.
+
+30
+00:02:10,980 --> 00:02:14,280
+I'm gonna put that code in here, but then
+I'm run it in the same thread and the
+
+31
+00:02:14,280 --> 00:02:21,000
+way to do that is I'm going to create a
+swing worker and this is a template class.
+
+32
+00:02:21,000 --> 00:02:24,223
+And the first type, argument that I'll
+supply
+
+33
+00:02:24,223 --> 00:02:28,430
+is the list of messages, and the second of
+
+34
+00:02:28,430 --> 00:02:30,525
+argument is going to be an incher and
+we'll
+
+35
+00:02:30,525 --> 00:02:34,010
+see what the meaning of that is, very
+shortly.
+
+36
+00:02:34,010 --> 00:02:38,440
+So lets just call this worker equals new.
+
+37
+00:02:38,440 --> 00:02:42,270
+And now I need this stuff all again
+basically.
+
+38
+00:02:42,270 --> 00:02:47,593
+New swing worker, and the the constructor
+brackets there.
+
+39
+00:02:47,593 --> 00:02:50,585
+That's add the import job mutual list.
+
+40
+00:02:50,585 --> 00:02:52,900
+And string worker is an abstract class.
+
+41
+00:02:52,900 --> 00:02:56,190
+So if I open a bracket here, and go to
+
+42
+00:02:57,630 --> 00:03:03,048
+add unimplemented methods, I can override
+the doing background method.
+
+43
+00:03:03,048 --> 00:03:04,230
+And actually there's a couple of other
+
+44
+00:03:04,230 --> 00:03:07,020
+methods that I'm interested in here as
+well.
+
+45
+00:03:07,020 --> 00:03:10,400
+So I'm gonna go to Source > Override
+Implement Methods.
+
+46
+00:03:12,140 --> 00:03:14,130
+Let's try clicking here.
+
+47
+00:03:14,130 --> 00:03:16,000
+Hopefully eclipse is not going to be
+difficult.
+
+48
+00:03:16,000 --> 00:03:19,860
+Well let's add the semicolon cuz that,
+that might help.
+
+49
+00:03:19,860 --> 00:03:21,840
+And then right click, go to Source >
+Override
+
+50
+00:03:21,840 --> 00:03:25,550
+Implement Methods and I'm going to
+override done and process.
+
+51
+00:03:27,060 --> 00:03:32,360
+And what these are is firstly during
+background is a method where
+
+52
+00:03:32,360 --> 00:03:35,680
+you put the code that you want to run in a
+separate thread.
+
+53
+00:03:35,680 --> 00:03:39,748
+And swing worker will actually will use
+
+54
+00:03:39,748 --> 00:03:43,990
+one of a number of available swing
+threads.
+
+55
+00:03:43,990 --> 00:03:47,500
+And it will, if no threads are available,
+they're all being
+
+56
+00:03:47,500 --> 00:03:52,680
+used then it will just queue your code
+until one is available.
+
+57
+00:03:52,680 --> 00:03:55,420
+But here, we're only using one of these
+threads.
+
+58
+00:03:55,420 --> 00:03:57,610
+So there's no problem.
+
+59
+00:03:57,610 --> 00:03:59,580
+And I'm gonna.
+
+60
+00:03:59,580 --> 00:04:04,900
+Let's put this messages waiting output at
+the top here for the moment.
+
+61
+00:04:06,210 --> 00:04:15,160
+And so, so doing background runs your code
+process and we're going to see shortly,
+
+62
+00:04:15,160 --> 00:04:20,190
+that's actually for getting feedback from
+your, from your swing worker.
+
+63
+00:04:21,210 --> 00:04:25,840
+And done is called when the thread
+finishes.
+
+64
+00:04:27,100 --> 00:04:32,240
+So here, so here I've got my message
+retrieval code.
+
+65
+00:04:32,240 --> 00:04:39,010
+I guess the first thing I want to do is I
+wanna build up a list of messages here.
+
+66
+00:04:39,010 --> 00:04:48,940
+So, I'll say list message and call it
+message maybe I'll call it retrieved.
+
+67
+00:04:48,940 --> 00:04:52,450
+Retrieve messages.
+
+68
+00:04:52,450 --> 00:04:58,760
+And let's set that equal to a new array
+list, which'll do the trick.
+
+69
+00:04:58,760 --> 00:05:00,550
+An array list of message objects.
+
+70
+00:05:03,050 --> 00:05:06,610
+And every time I get a message I'll output
+the title for the moment.
+
+71
+00:05:06,610 --> 00:05:13,090
+And I'm gonna just say
+retrieveMessages.addMessage.
+
+72
+00:05:13,090 --> 00:05:15,150
+And then, after everything's finished I'm
+
+73
+00:05:15,150 --> 00:05:20,390
+gonna say return retrieveMessages, return
+retrieveMessages.
+
+74
+00:05:21,860 --> 00:05:26,180
+Now you might guess here that the first
+argument in this template, these two
+
+75
+00:05:26,180 --> 00:05:31,950
+template, of these two template parameters
+is the return type of doing background.
+
+76
+00:05:31,950 --> 00:05:37,310
+And the way that works is when your worker
+
+77
+00:05:37,310 --> 00:05:42,310
+thread is done you can then say get.
+
+78
+00:05:44,030 --> 00:05:47,560
+And get will return what, whatever type
+
+79
+00:05:47,560 --> 00:05:51,140
+you specified in the first template
+parameter there.
+
+80
+00:05:51,140 --> 00:05:53,230
+So we say, list message.
+
+81
+00:05:53,230 --> 00:05:56,300
+Let's call it retrieve messages again.
+
+82
+00:05:56,300 --> 00:06:01,680
+You can call it anything of course,
+because retrieve equals get.
+
+83
+00:06:01,680 --> 00:06:07,789
+And I need to handle an interrupted
+selection there, so let's say surround
+
+84
+00:06:07,789 --> 00:06:13,238
+the try catch, and I just leave these for
+the, for the moment.
+
+85
+00:06:13,238 --> 00:06:15,862
+And execution exception you can actually
+throw
+
+86
+00:06:15,862 --> 00:06:18,305
+an exception from doing background and
+that will
+
+87
+00:06:18,305 --> 00:06:23,330
+show up as an execution exception, but
+we're not gonna go into that too deeply.
+
+88
+00:06:23,330 --> 00:06:27,520
+So basically after, after your thread is
+done, you can
+
+89
+00:06:27,520 --> 00:06:32,040
+call get and you get whatever return type
+you specified here.
+
+90
+00:06:32,040 --> 00:06:34,960
+If you call get outside somewhere else
+other than
+
+91
+00:06:34,960 --> 00:06:38,430
+done it will just block until this is
+finished.
+
+92
+00:06:38,430 --> 00:06:40,440
+So it's probably best to call it done.
+
+93
+00:06:40,440 --> 00:06:42,730
+And we're gonna use these retrieve
+messages
+
+94
+00:06:42,730 --> 00:06:45,280
+to update a GUI in a future tutorial.
+
+95
+00:06:45,280 --> 00:06:47,590
+But, for the moment, I'm just gonna leave
+it at that.
+
+96
+00:06:47,590 --> 00:06:51,710
+Now, the second argument here is an
+integer.
+
+97
+00:06:51,710 --> 00:06:54,401
+And in this case I made it an integer
+
+98
+00:06:54,401 --> 00:06:57,840
+and I'm gonna say here in to count equals
+naught.
+
+99
+00:06:57,840 --> 00:07:01,260
+And I'm gonna count how many messages are
+retrieved.
+
+100
+00:07:01,260 --> 00:07:04,380
+So here I'm gonna say count plus, plus.
+
+101
+00:07:04,380 --> 00:07:07,500
+And then I'll say process count.
+
+102
+00:07:10,640 --> 00:07:13,930
+I'm sorry not process, publish, publish.
+
+103
+00:07:13,930 --> 00:07:21,900
+And what that does is process will receive
+whatever objects you publish but
+
+104
+00:07:21,900 --> 00:07:25,960
+because you could potentially do you might
+put this lots of things very quickly.
+
+105
+00:07:26,960 --> 00:07:30,520
+Process isn't called every time you call
+publish.
+
+106
+00:07:30,520 --> 00:07:33,829
+Process is actually called, I think on a
+main screen dispatch thread.
+
+107
+00:07:34,860 --> 00:07:38,190
+So a little irregularly, but when it is
+called it
+
+108
+00:07:38,190 --> 00:07:43,440
+will receive a list of whatever type of
+thing your publishing.
+
+109
+00:07:43,440 --> 00:07:46,220
+And that's the type that you specified in
+the
+
+110
+00:07:46,220 --> 00:07:50,710
+second argument here, of your swing worker
+template parameter.
+
+111
+00:07:50,710 --> 00:07:56,460
+So here let's, let's rename this to
+something else.
+
+112
+00:07:56,460 --> 00:07:59,752
+Let's call it, I don't know, counts.
+
+113
+00:07:59,752 --> 00:08:01,911
+And let's just get the last count there.
+
+114
+00:08:01,911 --> 00:08:07,540
+So let's say int lastCount.
+
+115
+00:08:07,540 --> 00:08:09,766
+Or maybe I could call it retrieved.
+
+116
+00:08:09,766 --> 00:08:17,628
+Retrieved equals count.get counts.size,
+
+117
+00:08:17,628 --> 00:08:24,510
+cuz I just want the last argument here.
+
+118
+00:08:24,510 --> 00:08:27,000
+And in counts negative one.
+
+119
+00:08:27,000 --> 00:08:29,060
+So we just want the very last one because
+
+120
+00:08:29,060 --> 00:08:33,830
+that was the most recent value that was
+published.
+
+121
+00:08:33,830 --> 00:08:35,000
+And let's, let's output here.
+
+122
+00:08:35,000 --> 00:08:40,742
+Let's say sysout got, got,
+
+123
+00:08:40,742 --> 00:08:46,090
+plus retrieved plus messages.
+
+124
+00:08:48,040 --> 00:08:48,810
+That should do the trick.
+
+125
+00:08:51,440 --> 00:08:55,760
+So now so I've created my swing worker
+
+126
+00:08:58,150 --> 00:09:03,110
+class object and it's running my message
+retrieval code.
+
+127
+00:09:03,110 --> 00:09:08,469
+Every time a message is retrieved equals
+publish, which then
+
+128
+00:09:08,469 --> 00:09:14,458
+invokes process and you can use process to
+update your your GUI.
+
+129
+00:09:14,458 --> 00:09:17,725
+So done and process, the idea is you can
+update the GUI there.
+
+130
+00:09:17,725 --> 00:09:23,750
+But you probably shouldn't up the GUI in
+doing background.
+
+131
+00:09:23,750 --> 00:09:25,450
+Now I'm going to run that thread.
+
+132
+00:09:25,450 --> 00:09:28,443
+So I'll say worker.execute.
+
+133
+00:09:28,443 --> 00:09:30,190
+At least I think it's execute.
+
+134
+00:09:30,190 --> 00:09:32,860
+Oh yeah, I'm running this in the wrong
+place.
+
+135
+00:09:32,860 --> 00:09:35,294
+Let's go down a bit here.
+
+136
+00:09:35,294 --> 00:09:39,126
+So worker.execute.
+
+137
+00:09:39,126 --> 00:09:41,400
+There we go.
+
+138
+00:09:41,400 --> 00:09:44,480
+And now, that's just going to run and
+hopefully
+
+139
+00:09:44,480 --> 00:09:46,590
+it will tell me how many messages it's
+got.
+
+140
+00:09:46,590 --> 00:09:50,770
+And let's have a message when it's done,
+as well.
+
+141
+00:09:50,770 --> 00:09:58,880
+So let's say sysout retrieved and plus.
+
+142
+00:09:58,880 --> 00:10:05,320
+And let's say retrieve messages.size, plus
+messages.
+
+143
+00:10:06,650 --> 00:10:08,428
+And I'll run this.
+
+144
+00:10:08,428 --> 00:10:10,440
+So let's just run it here.
+
+145
+00:10:11,490 --> 00:10:12,590
+Click Run.
+
+146
+00:10:12,590 --> 00:10:15,670
+And now let's move this out of the way a
+bit.
+
+147
+00:10:15,670 --> 00:10:19,070
+And I'll go to the tree and I'll take
+something.
+
+148
+00:10:19,070 --> 00:10:21,330
+And now, we are retrieving.
+
+149
+00:10:21,330 --> 00:10:22,080
+Got one messages.
+
+150
+00:10:22,080 --> 00:10:22,760
+Got two messages.
+
+151
+00:10:22,760 --> 00:10:24,970
+So it's got three messages retrieved,
+three messages.
+
+152
+00:10:26,450 --> 00:10:32,670
+And the thing is that it doesn't lock up
+my my program so you can still run it.
+
+153
+00:10:32,670 --> 00:10:38,320
+And if, if you're happy with that there's,
+there's probably really no need for a
+
+154
+00:10:38,320 --> 00:10:45,870
+progress bar here but I'm gonna put one in
+just cuz I want to show you progress bars.
+
+155
+00:10:47,510 --> 00:10:53,860
+And in the next tutorial, in fact, we're
+gonna look at popping up a modal dialogue
+
+156
+00:10:53,860 --> 00:10:58,022
+in response to ticking one of these
+checkboxes,
+
+157
+00:10:58,022 --> 00:11:00,580
+which is to say probably not the best
+practice.
+
+158
+00:11:00,580 --> 00:11:03,570
+But it'll give me a chance to show you
+modal dialogues
+
+159
+00:11:03,570 --> 00:11:08,050
+and then we're gonna put a progress bar in
+that module dialogue.
+
+160
+00:11:08,050 --> 00:11:09,800
+So join me again next time.
+
+161
+00:11:09,800 --> 00:11:12,840
+Oh yeah, I probably should mention that in
+
+162
+00:11:12,840 --> 00:11:15,490
+general you should try to avoid
+multithreading in your
+
+163
+00:11:15,490 --> 00:11:17,880
+swing programs because if you got too much
+processing
+
+164
+00:11:17,880 --> 00:11:21,470
+going on, it can slow down your user
+interface.
+
+165
+00:11:21,470 --> 00:11:26,940
+So if you, if you do need it like try to
+swing timers instead if you can.
+
+166
+00:11:26,940 --> 00:11:29,960
+And we'll cover those in a future
+tutorial.
+
+167
+00:11:29,960 --> 00:11:31,350
+But if you really do need it use
+
+168
+00:11:31,350 --> 00:11:34,880
+swing worker, cuz that's specialized for
+swing programs.
+
+169
+00:11:36,740 --> 00:11:38,370
+And, so that's all for this tutorial.
+
+170
+00:11:38,370 --> 00:11:40,680
+And in the next tutorial we'll look at
+
+171
+00:11:40,680 --> 00:11:44,750
+modal dialogues, and until next time,
+happy coding.
+

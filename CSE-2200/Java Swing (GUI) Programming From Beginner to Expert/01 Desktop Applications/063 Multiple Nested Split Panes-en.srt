@@ -1,0 +1,662 @@
+1
+00:00:01,480 --> 00:00:05,200
+Hello, this is John from
+kevolveprogramming.com.
+
+2
+00:00:05,200 --> 00:00:09,690
+And in this tutorial we're gonna look at
+nesting, split panes.
+
+3
+00:00:09,690 --> 00:00:12,690
+So, if I run this application now and what
+I
+
+4
+00:00:12,690 --> 00:00:16,700
+want to do is I wanna have this message
+area divided
+
+5
+00:00:16,700 --> 00:00:20,340
+into 3 sections with a tree on the top and
+
+6
+00:00:20,340 --> 00:00:24,790
+message headers in the middle and message
+text on the bottom.
+
+7
+00:00:24,790 --> 00:00:30,350
+And to achieve that, I'm going to have one
+split pane with the tree on the top
+
+8
+00:00:30,350 --> 00:00:35,350
+and another split pane in it's lower half
+and another split pane will contain
+
+9
+00:00:35,350 --> 00:00:40,306
+the message headers and the message text
+in the bottom layer.
+
+10
+00:00:40,306 --> 00:00:44,770
+So, I'm just gonna make a couple of little
+changes first.
+
+11
+00:00:44,770 --> 00:00:51,260
+One thing is I'm gonna if I maximize this.
+
+12
+00:00:51,260 --> 00:00:52,290
+So my gooey, I've got this app.
+
+13
+00:00:52,290 --> 00:00:54,750
+I'm gonna move that into the default
+package by dragging
+
+14
+00:00:54,750 --> 00:00:57,070
+and dropping because it makes more sense
+to have it there.
+
+15
+00:00:59,130 --> 00:01:05,670
+And now if I run that as an application,
+should still work.
+
+16
+00:01:05,670 --> 00:01:06,620
+This is good.
+
+17
+00:01:06,620 --> 00:01:10,940
+And I'm also gonna go to main frame here
+and.
+
+18
+00:01:10,940 --> 00:01:13,720
+In main frame I've got a text panel, I'm
+
+19
+00:01:13,720 --> 00:01:18,880
+gonna delete it from there, and I'm gonna
+delete
+
+20
+00:01:18,880 --> 00:01:21,910
+the line where it's actually created as
+well because
+
+21
+00:01:21,910 --> 00:01:24,830
+I'm not using this anymore on the main
+frame.
+
+22
+00:01:24,830 --> 00:01:26,970
+This is from a previous tutorial, well I'm
+gonna
+
+23
+00:01:26,970 --> 00:01:29,210
+use it in this pane, I'm gonna, in this
+tutorial.
+
+24
+00:01:29,210 --> 00:01:32,610
+I'm gonna start using it in this message
+panel.
+
+25
+00:01:32,610 --> 00:01:35,430
+So, I'm going to give the message panel a
+couple of new components.
+
+26
+00:01:35,430 --> 00:01:37,340
+One's going to be this text panel.
+
+27
+00:01:37,340 --> 00:01:40,400
+And this is basically just a wrapper for a
+JTextArea.
+
+28
+00:01:40,400 --> 00:01:44,640
+So, if you wanna create a JTextArea
+yourself, of course, use a JTextArea.
+
+29
+00:01:45,790 --> 00:01:50,830
+And we'll look at the added tutorial where
+we, we dealt with this.
+
+30
+00:01:50,830 --> 00:01:52,390
+So, and now we're also gonna create a
+
+31
+00:01:52,390 --> 00:01:56,220
+private j list, which would, initially
+will be empty.
+
+32
+00:01:56,220 --> 00:01:59,150
+And I'll just call that message, message
+list.
+
+33
+00:02:00,190 --> 00:02:04,740
+So at the input, control shift over, and
+I'll scroll, scroll down.
+
+34
+00:02:04,740 --> 00:02:05,400
+Actually, I won't.
+
+35
+00:02:06,740 --> 00:02:09,690
+First, allow two j split panes here.
+
+36
+00:02:09,690 --> 00:02:13,490
+I'll call one upper pane and another one
+I'll call.
+
+37
+00:02:13,490 --> 00:02:17,950
+Call JSplitPane.lowerPane.
+
+38
+00:02:17,950 --> 00:02:25,950
+Okay set the import and I'll go down here
+and before I add components.
+
+39
+00:02:25,950 --> 00:02:31,739
+Let's say textPanel equals new
+
+40
+00:02:31,739 --> 00:02:37,714
+J text panel and what's the other
+
+41
+00:02:37,714 --> 00:02:43,710
+one, message list equals new J list.
+
+42
+00:02:43,710 --> 00:02:48,440
+And, oh it's not a J text file there is no
+such component, it's a text file.
+
+43
+00:02:48,440 --> 00:02:53,770
+JTextArea is the swing component that this
+text one uses.
+
+44
+00:02:53,770 --> 00:03:03,603
+And now, I'll create my lower pane first,
+I'll say LowerPane = new JSplitPane.
+
+45
+00:03:03,603 --> 00:03:09,200
+JSplitPane, I want the vertical one which
+
+46
+00:03:09,200 --> 00:03:14,270
+is called, what, vertical, vertical split
+because, I want
+
+47
+00:03:14,270 --> 00:03:16,760
+my components to stack vertically on top
+of
+
+48
+00:03:16,760 --> 00:03:20,010
+each other, that should be j split, pain,
+actually.
+
+49
+00:03:20,010 --> 00:03:21,060
+There we go.
+
+50
+00:03:21,060 --> 00:03:25,960
+And the components I'm gonna add to that
+will be the the
+
+51
+00:03:25,960 --> 00:03:30,380
+message this that's gonna show the message
+headers ultimately on the text panel.
+
+52
+00:03:32,060 --> 00:03:38,090
+And then I'll copy that and, and, the
+upper pane here, upper pane.
+
+53
+00:03:38,090 --> 00:03:40,120
+Also, gonna be a vertical split because I
+
+54
+00:03:40,120 --> 00:03:42,600
+have a horizontal frontal within a
+vertical pane.
+
+55
+00:03:42,600 --> 00:03:43,100
+It doesn't matter.
+
+56
+00:03:44,220 --> 00:03:49,970
+And to the upper pane there typed l again
+unnecessarily.
+
+57
+00:03:49,970 --> 00:03:53,110
+And to the upper pane I'm gonna add, the
+top pane
+
+58
+00:03:53,110 --> 00:03:58,050
+is going to be this tree wrapped in a
+scroll pane.
+
+59
+00:03:58,050 --> 00:03:59,580
+And, so I'm gonna add that in there.
+
+60
+00:03:59,580 --> 00:04:07,410
+And the lower pane is gonna be the lower
+split pane, so and now let's add the
+
+61
+00:04:07,410 --> 00:04:15,250
+upper pane which contains the lower split
+pane to the panel that I'm working in.
+
+62
+00:04:15,250 --> 00:04:16,380
+Now for ring, that's not going to
+
+63
+00:04:16,380 --> 00:04:20,850
+look very pretty Let's select the main
+application.
+
+64
+00:04:20,850 --> 00:04:21,500
+Click Run.
+
+65
+00:04:23,430 --> 00:04:26,770
+And you see the panels are basically
+contracted at the bottom here.
+
+66
+00:04:26,770 --> 00:04:29,230
+And there are several ways that you could
+deal with that.
+
+67
+00:04:30,600 --> 00:04:33,000
+whoops, just maximized the wrong window.
+
+68
+00:04:33,000 --> 00:04:36,139
+One, one way you could do it would be, you
+could say.
+
+69
+00:04:37,990 --> 00:04:44,650
+J, so the JSplitPane has this method,
+SetDividerLocation, SetDividerLocation.
+
+70
+00:04:44,650 --> 00:04:48,890
+It comes in two varieties, and the one
+that you'd like to use here has this
+
+71
+00:04:48,890 --> 00:04:55,864
+double proportional location, which allows
+you to set, like 0.5 would
+
+72
+00:04:55,864 --> 00:05:00,930
+be, to set the, lo, the divider halfway
+down the panel, or across
+
+73
+00:05:00,930 --> 00:05:04,780
+the panel and 0.33 would be a third of the
+way and so on.
+
+74
+00:05:04,780 --> 00:05:07,780
+But, you can't use that because that only
+works when the
+
+75
+00:05:07,780 --> 00:05:13,970
+panel's already, pane's already in another
+panel and it's already sized.
+
+76
+00:05:13,970 --> 00:05:19,940
+So here because we haven't added it yet
+and even if we'd added it we'd have to
+
+77
+00:05:19,940 --> 00:05:23,360
+let the, the hole GUI be created before
+
+78
+00:05:23,360 --> 00:05:26,540
+we could use that version at set divisor
+location.
+
+79
+00:05:26,540 --> 00:05:28,980
+We could use set divisor location, it
+takes an int,
+
+80
+00:05:28,980 --> 00:05:33,780
+it specifies the number of pixel for
+second divisor location.
+
+81
+00:05:33,780 --> 00:05:37,330
+That would work, but I'm not gonna use
+that here instead
+
+82
+00:05:37,330 --> 00:05:39,860
+I'm just gonna set a minimum side on the
+text panel.
+
+83
+00:05:39,860 --> 00:05:41,910
+So, I say set minimum size.
+
+84
+00:05:43,600 --> 00:05:46,560
+And let's set that for new dimension.
+
+85
+00:05:47,960 --> 00:05:53,640
+And now the horizontal dimension, the
+horizontal value that
+
+86
+00:05:53,640 --> 00:05:57,800
+I passed in, this is in pixels, to
+dimension here.
+
+87
+00:05:57,800 --> 00:06:02,120
+Doesn't matter because the control will
+expand to take up
+
+88
+00:06:02,120 --> 00:06:04,450
+all horizontal space anyway so I'll set
+that to ten.
+
+89
+00:06:04,450 --> 00:06:04,960
+It doesn't matter.
+
+90
+00:06:04,960 --> 00:06:11,936
+And what matters is the, the vertical
+dimension.
+
+91
+00:06:11,936 --> 00:06:18,900
+I'm gonna set that two, let's try a
+hundred and 15, see how that looks.
+
+92
+00:06:18,900 --> 00:06:25,160
+I'm gonna also set a minimum size on the
+message
+
+93
+00:06:25,160 --> 00:06:29,120
+list, so that, that doesn't get too small
+as well.
+
+94
+00:06:29,120 --> 00:06:31,110
+In fact, maybe let's, let's make it a
+hundred or make it.
+
+95
+00:06:31,110 --> 00:06:32,170
+Quite small I think.
+
+96
+00:06:34,050 --> 00:06:40,240
+And now if I run that, the the text panels
+look better, but if I resize,
+
+97
+00:06:40,240 --> 00:06:42,270
+this lower panel here which is gonna
+contain
+
+98
+00:06:42,270 --> 00:06:45,190
+a message text, takes up all the extra
+space.
+
+99
+00:06:46,480 --> 00:06:51,600
+Now that might, might be what you want,
+and in this application perhaps it is.
+
+100
+00:06:51,600 --> 00:06:57,080
+But just to show you how to control this
+resizing behavior, I'm going to make it so
+
+101
+00:06:57,080 --> 00:07:04,230
+all these panels expand proportionally and
+the way to do that is, let's
+
+102
+00:07:05,250 --> 00:07:11,120
+take the upperPane as an example.
+
+103
+00:07:11,120 --> 00:07:14,325
+If I say upperPane.setResizeWeight and if
+I set that to
+
+104
+00:07:14,325 --> 00:07:18,720
+1.0 and this is going to be between naught
+and 1.
+
+105
+00:07:18,720 --> 00:07:21,650
+Then when I resize it, the upper panel
+
+106
+00:07:21,650 --> 00:07:25,740
+take up all the available space for the
+cam.
+
+107
+00:07:25,740 --> 00:07:31,730
+If I set that equal to naught on the upper
+panel here, then the lower part of the
+
+108
+00:07:31,730 --> 00:07:35,660
+upper panel would take up all the
+available space
+
+109
+00:07:35,660 --> 00:07:40,300
+when you maximize the window when you
+resized it.
+
+110
+00:07:40,300 --> 00:07:42,950
+And, and to get the two parts of the upper
+pane to
+
+111
+00:07:42,950 --> 00:07:50,030
+resize equally, I would set not 0.5, and
+now they are sized equally.
+
+112
+00:07:50,030 --> 00:07:52,380
+But notice that we still don't have equal
+resizing
+
+113
+00:07:52,380 --> 00:07:57,930
+behavior, because this lower pane is still
+resizing too much.
+
+114
+00:07:57,930 --> 00:07:58,440
+What-
+
+115
+00:07:58,440 --> 00:08:00,470
+I think I just quit Eclipse by mistake.
+
+116
+00:08:00,470 --> 00:08:02,980
+I must have hit the "X."
+
+117
+00:08:02,980 --> 00:08:04,170
+Start this again.
+
+118
+00:08:04,170 --> 00:08:07,740
+And what I'm going to do when eclipse
+restarts is I'm going
+
+119
+00:08:07,740 --> 00:08:12,440
+to set on the lower pane here, I'm going
+to set a-
+
+120
+00:08:12,440 --> 00:08:13,140
+Where were we?
+
+121
+00:08:13,140 --> 00:08:18,580
+I'm gonna set a value, I'm going to set a
+
+122
+00:08:18,580 --> 00:08:22,061
+resize weight on the lower pane,
+basically, is my guess.
+
+123
+00:08:22,061 --> 00:08:29,890
+So, let's just go in here and say lower
+pane, set resize weight, 0.5.
+
+124
+00:08:29,890 --> 00:08:34,540
+And I need to, let's go to my project
+here.
+
+125
+00:08:35,620 --> 00:08:41,020
+And expand it and select the app because
+that's what I want to run.
+
+126
+00:08:41,020 --> 00:08:41,590
+Click run.
+
+127
+00:08:42,720 --> 00:08:43,750
+And take a look at it now.
+
+128
+00:08:43,750 --> 00:08:45,720
+So now it looks pretty good, I think.
+
+129
+00:08:45,720 --> 00:08:47,310
+And it resizes quite nicely.
+
+130
+00:08:47,310 --> 00:08:47,810
+And,
+
+131
+00:08:49,470 --> 00:08:52,176
+okay, so, that's pretty much it for that
+tutorial.
+
+132
+00:08:52,176 --> 00:08:57,930
+One thing that it's mentioned not in the
+main stream documentation for J split pane
+
+133
+00:08:57,930 --> 00:09:02,050
+in the sort of list server problem
+solutions
+
+134
+00:09:02,050 --> 00:09:04,220
+that you can find on the sun, Oracle
+
+135
+00:09:04,220 --> 00:09:09,300
+Site, is that if you nest a lot of split
+panes the borders can accumulate in
+
+136
+00:09:09,300 --> 00:09:14,560
+the inner panes and you might wanna set
+the borders of the inner panes to null.
+
+137
+00:09:14,560 --> 00:09:19,460
+We're doing like the split pane.set border
+brackets null, but here this doesn't look
+
+138
+00:09:19,460 --> 00:09:23,800
+like a problem to me because this, the
+appearance of this seems quite acceptable.
+
+139
+00:09:23,800 --> 00:09:28,010
+So, I am going to leave this as it is.
+
+140
+00:09:28,010 --> 00:09:30,400
+And that's all for me this time.
+
+141
+00:09:30,400 --> 00:09:32,870
+Until next time, happy coding.
+

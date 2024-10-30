@@ -1,0 +1,1323 @@
+1
+00:00:01,940 --> 00:00:05,030
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,030 --> 00:00:06,781
+And in this tutorial we're gonna use at,
+
+3
+00:00:06,781 --> 00:00:10,480
+we're gonna look at using custom
+components as tree
+
+4
+00:00:10,480 --> 00:00:17,000
+cell leaf renders and in fact we're gonna
+use boxes as the leaf renderer in a tree.
+
+5
+00:00:17,000 --> 00:00:20,230
+So at the moment we've got this tree, and
+the
+
+6
+00:00:20,230 --> 00:00:24,820
+leaves render just using this little icon
+and some text.
+
+7
+00:00:24,820 --> 00:00:28,990
+And I'm gonna change that into a check,
+check box with some text.
+
+8
+00:00:28,990 --> 00:00:34,250
+And now the way trees work and the way
+many swing components work, is
+
+9
+00:00:34,250 --> 00:00:40,070
+that displaying the component is different
+to editing it.
+
+10
+00:00:40,070 --> 00:00:42,600
+So to display the component you use a
+
+11
+00:00:42,600 --> 00:00:46,350
+renderer and to edit the volume of the
+component
+
+12
+00:00:46,350 --> 00:00:49,570
+you use an editor and in this component,
+in
+
+13
+00:00:49,570 --> 00:00:51,948
+this tutorial we're just gonna look at the
+renderer.
+
+14
+00:00:51,948 --> 00:00:56,800
+So we're gonna look at displaying these
+nodes using check boxes but
+
+15
+00:00:56,800 --> 00:01:01,000
+you won't actually be able to all to the
+value of them here.
+
+16
+00:01:01,000 --> 00:01:03,350
+And in the next tutorial we're going to
+look at editors that
+
+17
+00:01:03,350 --> 00:01:09,350
+actually allow you to edit the values of
+these of these leaves.
+
+18
+00:01:09,350 --> 00:01:14,870
+But for the moment let's imagine that each
+of these nodes, each of these servers.
+
+19
+00:01:14,870 --> 00:01:21,410
+That these icons represent, has a, kind of
+on or off status.
+
+20
+00:01:21,410 --> 00:01:23,700
+So it can be, well, selected or
+de-selected.
+
+21
+00:01:23,700 --> 00:01:28,030
+And we're gonna just work on representing
+that using check boxes.
+
+22
+00:01:29,290 --> 00:01:33,200
+And you'll be able to apply this to you,
+you'll see how flexible this is
+
+23
+00:01:33,200 --> 00:01:35,230
+and although I'm gonna use check boxes
+
+24
+00:01:35,230 --> 00:01:37,300
+in this tutorial, you really could use
+anything.
+
+25
+00:01:37,300 --> 00:01:43,240
+You could make up your own crazy component
+to use as the leaf renderer in a tree.
+
+26
+00:01:43,240 --> 00:01:46,230
+So let's go to, oh let's see.
+
+27
+00:01:46,230 --> 00:01:47,070
+Where did I put it?
+
+28
+00:01:47,070 --> 00:01:47,880
+Message Panel.
+
+29
+00:01:49,420 --> 00:01:54,530
+And the first thing I'm gonna do is I've
+got this server info user object which
+
+30
+00:01:54,530 --> 00:02:00,880
+stores, it stores the values for the leaf
+nodes.
+
+31
+00:02:00,880 --> 00:02:03,530
+And at the moment it's just storing an ID
+and a name.
+
+32
+00:02:03,530 --> 00:02:09,990
+But I'm gonna make that store a value
+which I'm gonna call let's call it,
+
+33
+00:02:11,950 --> 00:02:17,150
+I don't know whether to call it Selected
+or not because, you see,
+
+34
+00:02:17,150 --> 00:02:21,940
+when you've got tree you can select leaf
+nodes here.
+
+35
+00:02:22,940 --> 00:02:28,091
+And we're gonna have a notional selection
+that's slightly different it's gonna
+
+36
+00:02:28,091 --> 00:02:32,880
+be whether your gonna be able to
+[INAUDIBLE] these on or off ultimately.
+
+37
+00:02:32,880 --> 00:02:36,050
+So maybe let's, let's call this value
+checked.
+
+38
+00:02:36,050 --> 00:02:42,180
+So let's say that a server can be checked
+or not checked
+
+39
+00:02:42,180 --> 00:02:47,928
+and let's here a private Boolean checked,
+okay?
+
+40
+00:02:47,928 --> 00:02:52,260
+And I'm gonna allow, I'm gonna make it
+that in
+
+41
+00:02:52,260 --> 00:02:57,430
+the constructor, it sets up a default
+value for chat.
+
+42
+00:02:57,430 --> 00:03:02,611
+So we're going to have here, Boolean,
+Boolean hecked.
+
+43
+00:03:02,611 --> 00:03:09,330
+And here let's say this.checked equals
+checked like this.
+
+44
+00:03:09,330 --> 00:03:11,880
+And we'll have a get checked method, so
+public
+
+45
+00:03:11,880 --> 00:03:18,880
+Boolean gets checked or could maybe call
+it is checked.
+
+46
+00:03:20,720 --> 00:03:25,150
+And that's just gonna return checked value
+there, and
+
+47
+00:03:25,150 --> 00:03:27,460
+that's supposed to have a set method to
+public.
+
+48
+00:03:27,460 --> 00:03:34,670
+I could use the ID, ID to implement these
+methods, but sometimes I feel it's
+
+49
+00:03:34,670 --> 00:03:41,869
+almost quicker to do it by hand and then
+this dot checked equals checked.
+
+50
+00:03:41,869 --> 00:03:45,420
+Okay, and so that's, that.
+
+51
+00:03:45,420 --> 00:03:49,500
+And so now this server can store checked
+or not checked.
+
+52
+00:03:49,500 --> 00:03:54,670
+And let's look at where we're, where we
+are creating the tree nodes, down here.
+
+53
+00:03:55,760 --> 00:03:58,980
+So, right here, we're, we're, we're using,
+we're
+
+54
+00:03:58,980 --> 00:04:02,160
+creating these default beautiful tree
+nodes and we're passing
+
+55
+00:04:02,160 --> 00:04:05,410
+server info objects and now that subs some
+of
+
+56
+00:04:05,410 --> 00:04:08,120
+these checked, by default, and some of
+them not.
+
+57
+00:04:09,420 --> 00:04:11,460
+Just clicks, just to see how it looks.
+
+58
+00:04:11,460 --> 00:04:14,370
+So let's format the codes.
+
+59
+00:04:14,370 --> 00:04:18,500
+So let's have this, maybe, checked.
+
+60
+00:04:18,500 --> 00:04:23,680
+And, in the UK, let's have, let's have
+London false.
+
+61
+00:04:23,680 --> 00:04:25,450
+Let's have Edinburgh true.
+
+62
+00:04:25,450 --> 00:04:25,950
+Okay.
+
+63
+00:04:28,170 --> 00:04:34,050
+Now at the moment, I'm using a default
+tree style renderer there.
+
+64
+00:04:35,100 --> 00:04:37,700
+And I'm, I'm calling set cell render on my
+tree.
+
+65
+00:04:37,700 --> 00:04:40,300
+And I'm using this default tree cell
+renderer.
+
+66
+00:04:40,300 --> 00:04:47,550
+And what I'm gonna do is I'm gonna create
+a new class for rendering tree nodes.
+
+67
+00:04:47,550 --> 00:04:48,890
+And I coud create a class here.
+
+68
+00:04:48,890 --> 00:04:52,580
+But I think what I'll do, I think I'll
+create a new class here.
+
+69
+00:04:52,580 --> 00:04:55,862
+So I'll say, new class.
+
+70
+00:04:55,862 --> 00:05:01,850
+And let's call this
+serverTreeCellRenderer.
+
+71
+00:05:03,290 --> 00:05:06,200
+And let's make that implement
+treeCellRenderer.
+
+72
+00:05:07,920 --> 00:05:13,968
+This is gonna implement the
+treeCellRenderer
+
+73
+00:05:13,968 --> 00:05:19,740
+interface and not treeCellEditor.
+
+74
+00:05:19,740 --> 00:05:20,160
+Okay.
+
+75
+00:05:20,160 --> 00:05:21,060
+So just this one.
+
+76
+00:05:21,060 --> 00:05:24,770
+Not quite sure what's going on here.
+
+77
+00:05:24,770 --> 00:05:25,690
+There we go.
+
+78
+00:05:25,690 --> 00:05:25,830
+Okay.
+
+79
+00:05:25,830 --> 00:05:27,330
+Click Finish.
+
+80
+00:05:27,330 --> 00:05:32,730
+And now, so the tree surrenderer
+component, all
+
+81
+00:05:32,730 --> 00:05:36,110
+it as to do is basically return, a
+component
+
+82
+00:05:36,110 --> 00:05:39,000
+when when get tree surrender component is
+caught by
+
+83
+00:05:39,000 --> 00:05:43,055
+the tree, this has to return an
+appropriate, component.
+
+84
+00:05:43,055 --> 00:05:51,980
+And whoops, these arguments unfortunately
+are not well named.
+
+85
+00:05:51,980 --> 00:05:59,549
+So let's just go here to let's go to
+Google.
+
+86
+00:06:01,250 --> 00:06:04,390
+And let's look up tree cell renderer.
+
+87
+00:06:04,390 --> 00:06:06,890
+In fact, I probably could do this in
+Eclipse.
+
+88
+00:06:06,890 --> 00:06:15,360
+And so, if I go here and here and go press
+F2 to get the focus on this health thing.
+
+89
+00:06:16,810 --> 00:06:19,130
+And it's not being very helpful, okay.
+
+90
+00:06:19,130 --> 00:06:23,590
+I'll try Google, so, treeCellRenderer.
+
+91
+00:06:23,590 --> 00:06:24,090
+And,
+
+92
+00:06:26,190 --> 00:06:28,840
+I go to the Java platform six it's close
+enough.
+
+93
+00:06:30,120 --> 00:06:33,710
+And now here we've got the names of the,
+the things that are
+
+94
+00:06:33,710 --> 00:06:39,215
+actually the the actual names of the
+arguments, so lets just copy those.
+
+95
+00:06:39,215 --> 00:06:41,000
+Cuz that will be more informative than
+
+96
+00:06:41,000 --> 00:06:43,280
+these default values here, let's paste
+those in.
+
+97
+00:06:44,600 --> 00:06:48,490
+There we go, do Ctrl+Shift+F to form that,
+and all of
+
+98
+00:06:48,490 --> 00:06:52,890
+these have pretty intuitive meaning, so
+tree is the tree itself.
+
+99
+00:06:52,890 --> 00:06:55,750
+Object value this is actually the user
+object.
+
+100
+00:06:55,750 --> 00:06:59,020
+So it's gonna be our it's gonna be our
+node.
+
+101
+00:06:59,020 --> 00:07:04,620
+So objects in this case because we've put
+note
+
+102
+00:07:04,620 --> 00:07:10,020
+info's into the default multiple tree
+nodes, sorry server info objects
+
+103
+00:07:11,410 --> 00:07:14,450
+selected tells you whether that the, the
+tree node is
+
+104
+00:07:14,450 --> 00:07:18,040
+selected by the user, expanded where it's
+expanded or not.
+
+105
+00:07:18,040 --> 00:07:19,440
+Leaf, whether it's a leaf or not.
+
+106
+00:07:19,440 --> 00:07:24,140
+Row, or the different nodes and the leaves
+in the table are
+
+107
+00:07:24,140 --> 00:07:29,060
+actually numbered, with a row number,
+we're not going to use that.
+
+108
+00:07:29,060 --> 00:07:31,080
+And has focus, whether it has focus or
+not.
+
+109
+00:07:32,370 --> 00:07:34,080
+Now the first thing I'm going to do here
+is,
+
+110
+00:07:34,080 --> 00:07:40,330
+I'm gonna give this a private J check box,
+check box.
+
+111
+00:07:40,330 --> 00:07:42,070
+And let's give it constructor as well.
+
+112
+00:07:42,070 --> 00:07:43,700
+Add the input for the check box there.
+
+113
+00:07:44,750 --> 00:07:51,530
+And I'll give this a public server tree
+cell renderer constructor.
+
+114
+00:07:51,530 --> 00:07:58,110
+And in the constructor I can say check box
+
+115
+00:07:58,110 --> 00:08:03,692
+equals new Jcheck box, like that.
+
+116
+00:08:03,692 --> 00:08:10,130
+And, what I can also do, this check box is
+gonna be used for rendering the leaves.
+
+117
+00:08:10,130 --> 00:08:14,750
+I also need to do something for rendering
+the non leaf nodes
+
+118
+00:08:14,750 --> 00:08:19,340
+I wannna use basically what I'm currently
+using to render those nodes.
+
+119
+00:08:19,340 --> 00:08:22,430
+So the way I am gonna handle that is I'll
+click Private.
+
+120
+00:08:24,506 --> 00:08:29,820
+Default treeCellRenderer here and this is
+the class we've already used.
+
+121
+00:08:29,820 --> 00:08:32,620
+And I'll call this, actually let's call
+
+122
+00:08:32,620 --> 00:08:37,720
+this LeafRenderer and let's call this
+nonLeafRenderer.
+
+123
+00:08:41,010 --> 00:08:48,500
+And then sillyLeafRenderer I set to a,
+I'll set to a chat box here.
+
+124
+00:08:48,500 --> 00:08:49,810
+We'll use that for rendering leaves.
+
+125
+00:08:49,810 --> 00:08:52,436
+And for non leaves, I'll say
+
+126
+00:08:52,436 --> 00:08:58,018
+non relief rendered, equals new default
+treeCellRenderer.
+
+127
+00:08:58,018 --> 00:09:01,310
+And what I can do is I can already set the
+icons.
+
+128
+00:09:01,310 --> 00:09:10,045
+So at the moment I've got code that's
+setting the icons for my treeCellRenderer.
+
+129
+00:09:11,140 --> 00:09:14,820
+And so I can cut those from here now.
+
+130
+00:09:14,820 --> 00:09:24,090
+And go into my constructor, and just set
+these icons here on my non leaf renderer.
+
+131
+00:09:24,090 --> 00:09:29,950
+So let's paste non leaf renderer there, in
+there, like that.
+
+132
+00:09:29,950 --> 00:09:39,620
+And now I can say right here so if leaf,
+so I've got this Boolean leaf parameter.
+
+133
+00:09:39,620 --> 00:09:43,650
+It's asking whether the tree is calling
+this method to render a leaf or not.
+
+134
+00:09:44,850 --> 00:09:50,370
+And if, if we have got a leaf I can say
+return leafRenderer.
+
+135
+00:09:50,370 --> 00:09:54,360
+And so I'm just returning my chat box as
+the component that
+
+136
+00:09:54,360 --> 00:09:59,960
+I want to use, else if it's not a leaf,
+return nonLeafRenderer.
+
+137
+00:10:01,480 --> 00:10:05,580
+Get and retrieve cell, get tree cell,
+render a
+
+138
+00:10:05,580 --> 00:10:12,200
+component, and that's gonna just take all
+the arguments
+
+139
+00:10:12,200 --> 00:10:15,170
+and that, we've got here, so this is the
+
+140
+00:10:15,170 --> 00:10:21,150
+default implementation in default trees
+for render this method.
+
+141
+00:10:21,150 --> 00:10:25,000
+And I say if I got a leaf, I'm going to
+return my own special component.
+
+142
+00:10:25,000 --> 00:10:28,000
+And if I don't, I'm going to return
+
+143
+00:10:28,000 --> 00:10:31,270
+whatever default we saw render here would
+return.
+
+144
+00:10:31,270 --> 00:10:33,080
+Let's save that and see how it looks.
+
+145
+00:10:33,080 --> 00:10:38,210
+I've got an error there for some reason
+cell cannot be resolved.
+
+146
+00:10:38,210 --> 00:10:43,620
+So yeah, it's these arguments of course
+have to match these and that's selected.
+
+147
+00:10:43,620 --> 00:10:47,300
+And I think the rest are okay.
+
+148
+00:10:47,300 --> 00:10:52,440
+So now let's use this server
+treeCellRenderer that I've written.
+
+149
+00:10:52,440 --> 00:11:01,230
+So, I'm gonna say treeCellRenderer equals
+new server treeCellRender, like this.
+
+150
+00:11:01,230 --> 00:11:04,070
+I'm using the thing I just created.
+
+151
+00:11:05,330 --> 00:11:10,400
+And, I need to also change the type the
+
+152
+00:11:11,530 --> 00:11:16,240
+of the variable from default
+treeCellRender.
+
+153
+00:11:16,240 --> 00:11:22,170
+Okay, and now I can use that as a
+CellRender in my in my tree.
+
+154
+00:11:22,170 --> 00:11:24,580
+And let's, let's just have a look see what
+that looks like.
+
+155
+00:11:24,580 --> 00:11:27,870
+It's not finished yet, but if I go to
+Messages
+
+156
+00:11:27,870 --> 00:11:31,230
+here, and I expand it, I've got check
+boxes there and
+
+157
+00:11:31,230 --> 00:11:33,245
+they've got no text in them and they're
+not selected or
+
+158
+00:11:33,245 --> 00:11:37,300
+de-selected, and the color is all wrong,
+but we're getting there.
+
+159
+00:11:37,300 --> 00:11:43,390
+So, that the next step now is, if I've got
+a leaf I can
+
+160
+00:11:43,390 --> 00:11:49,270
+get my user object and from the default
+mutable tree node.
+
+161
+00:11:50,990 --> 00:11:53,540
+And, actually, I made a little mistake
+earlier on.
+
+162
+00:11:53,540 --> 00:11:56,770
+Cuz I said that this was the user object
+value, and it's not.
+
+163
+00:11:56,770 --> 00:11:59,760
+It's actually the default mutable tree
+node, which,
+
+164
+00:12:00,930 --> 00:12:04,140
+which, has a reference to your user object
+values.
+
+165
+00:12:04,140 --> 00:12:10,780
+So what we actually have to do is, I can
+say, if leaf DefaultMutableTreeNode
+
+166
+00:12:10,780 --> 00:12:16,390
+node equals and I can cast this value to a
+
+167
+00:12:16,390 --> 00:12:19,630
+defaultMutableTreeNode because I know that
+my
+
+168
+00:12:19,630 --> 00:12:21,720
+tree is made up of defaultMutableTreeNodes
+
+169
+00:12:21,720 --> 00:12:25,840
+so that is what that is going to be in
+every case.
+
+170
+00:12:25,840 --> 00:12:29,510
+And having done that, I can then say,
+
+171
+00:12:29,510 --> 00:12:34,574
+well my user objects are these server info
+objects.
+
+172
+00:12:34,574 --> 00:12:41,358
+So I created this server info class back
+here
+
+173
+00:12:41,358 --> 00:12:46,983
+and I can say server info, mode info
+
+174
+00:12:46,983 --> 00:12:53,271
+let's call that, equals server info and I,
+
+175
+00:12:53,271 --> 00:12:59,566
+I can say value, so I note.get user
+object.
+
+176
+00:12:59,566 --> 00:13:04,257
+So this is the default multiple tree node,
+because that's what my
+
+177
+00:13:04,257 --> 00:13:07,687
+trees made a path, and I once I cast it to
+a default
+
+178
+00:13:07,687 --> 00:13:11,455
+multiple tree node I can use that to get
+the user object
+
+179
+00:13:11,455 --> 00:13:13,884
+which I passed to the constructors
+
+180
+00:13:13,884 --> 00:13:17,770
+of the DefaultMutableTreeNodes when I
+created them.
+
+181
+00:13:19,010 --> 00:13:24,990
+So now I can get off like, the text for
+example.
+
+182
+00:13:24,990 --> 00:13:25,740
+So I can say
+
+183
+00:13:28,530 --> 00:13:29,590
+string.
+
+184
+00:13:29,590 --> 00:13:32,460
+Let's say string text.
+
+185
+00:13:32,460 --> 00:13:34,620
+no, let's not do that, it's not necessary.
+
+186
+00:13:34,620 --> 00:13:36,700
+I can say, check box.
+
+187
+00:13:37,700 --> 00:13:38,940
+What do I call it?
+
+188
+00:13:38,940 --> 00:13:39,910
+Call it leaf renderer.
+
+189
+00:13:41,570 --> 00:13:45,980
+So now I wanna basically set the text and
+the selected status of this leaf
+
+190
+00:13:45,980 --> 00:13:47,780
+renderer, which is actually a chat box,
+
+191
+00:13:47,780 --> 00:13:50,975
+using the information in my node info
+object.
+
+192
+00:13:50,975 --> 00:13:57,200
+So I can say leafrenderer.settext.
+
+193
+00:13:58,550 --> 00:14:04,027
+And, I can pass in there nodeinfo.2string,
+like that because
+
+194
+00:14:04,027 --> 00:14:08,920
+that's 40 times the text that I want to
+display.
+
+195
+00:14:08,920 --> 00:14:12,200
+And to display whether it's selected
+
+196
+00:14:12,200 --> 00:14:18,490
+or not, I can say,
+leafrenderer.setslectednodeinfo.
+
+197
+00:14:18,490 --> 00:14:22,500
+And use my is selected method, is checked
+
+198
+00:14:22,500 --> 00:14:26,470
+already, mine is checked method that I
+implemented earlier.
+
+199
+00:14:26,470 --> 00:14:29,996
+And we're gonna be getting there now.
+
+200
+00:14:29,996 --> 00:14:34,980
+So now if I go to my tree, you've got
+check boxes in there and they're checked.
+
+201
+00:14:35,980 --> 00:14:39,480
+According to whether I set the check
+status to,
+
+202
+00:14:39,480 --> 00:14:42,367
+to a fault and load so, and the severing
+
+203
+00:14:42,367 --> 00:14:46,305
+[INAUDIBLE] object that I've created, and
+in the next
+
+204
+00:14:46,305 --> 00:14:51,608
+tutorial we're gonna [INAUDIBLE] but right
+now they're not editable.
+
+205
+00:14:51,608 --> 00:14:57,530
+Right now they, they do not allow you to
+edit them, as you can see.
+
+206
+00:14:57,530 --> 00:14:59,240
+Now, one thing of note is that they look a
+little
+
+207
+00:14:59,240 --> 00:15:02,670
+bit ugly because the color's all wrong,
+and we're gonna fix that.
+
+208
+00:15:02,670 --> 00:15:06,460
+Now, that's probably gonna be the last
+thing that we do in this tutorial.
+
+209
+00:15:08,380 --> 00:15:11,660
+And I'm gonna get the colors in the
+constructor
+
+210
+00:15:11,660 --> 00:15:15,700
+that I need to color the chatboxes
+appropriately, and
+
+211
+00:15:15,700 --> 00:15:18,500
+I could just send them to white or gray
+
+212
+00:15:18,500 --> 00:15:20,442
+or whatever I feel like, but I'm going to
+say.
+
+213
+00:15:20,442 --> 00:15:25,537
+UImanager.get
+
+214
+00:15:25,537 --> 00:15:31,000
+and set the import
+
+215
+00:15:31,000 --> 00:15:34,643
+for that and
+
+216
+00:15:34,643 --> 00:15:41,560
+UIManager.getColor.
+
+217
+00:15:41,560 --> 00:15:43,520
+This is being a little bit temperamental.
+
+218
+00:15:44,920 --> 00:15:46,545
+UIManager cannot be resolved.
+
+219
+00:15:46,545 --> 00:15:50,210
+Let's, try, getting little dots.
+
+220
+00:15:50,210 --> 00:15:54,900
+Let's try, let's try something like that.
+
+221
+00:15:54,900 --> 00:16:00,192
+And then I have to import, Ctrl+Shift+O.
+
+222
+00:16:00,192 --> 00:16:02,920
+And did it work?
+
+223
+00:16:02,920 --> 00:16:04,790
+Okay upper class.
+
+224
+00:16:04,790 --> 00:16:09,620
+I'm just trying to get it to add that
+import and for some reason.
+
+225
+00:16:09,620 --> 00:16:13,610
+It doesn't want to u, I think it's
+possibly done it.
+
+226
+00:16:13,610 --> 00:16:19,937
+Okay, get's call, yeah, okay, good, gets
+color, and
+
+227
+00:16:19,937 --> 00:16:27,680
+I wanna get the color that the tree
+normally uses
+
+228
+00:16:27,680 --> 00:16:33,260
+for the foreground of a text in its leaf.
+
+229
+00:16:35,030 --> 00:16:43,460
+And to do that, I can parse in string
+here, tree.set.text.foreground.
+
+230
+00:16:43,460 --> 00:16:45,280
+Think that's right.
+
+231
+00:16:45,280 --> 00:16:51,050
+That's gonna return a it's gonna return a
+colored
+
+232
+00:16:51,050 --> 00:16:56,830
+object so, up here I can have let's say
+let's have some colors.
+
+233
+00:16:56,830 --> 00:17:03,220
+Yes, I'll say private color send text.
+
+234
+00:17:03,220 --> 00:17:10,280
+As our text foreground, foreground and I'm
+gonna copy that.
+
+235
+00:17:10,280 --> 00:17:11,458
+I'm gonna have four of these.
+
+236
+00:17:11,458 --> 00:17:16,418
+And text background, and we're
+
+237
+00:17:16,418 --> 00:17:21,740
+gonna have selectionForeground.
+
+238
+00:17:21,740 --> 00:17:28,340
+And we're gonna have selectionBackground
+as well.
+
+239
+00:17:28,340 --> 00:17:32,490
+So, selectionBackground and let's have.
+
+240
+00:17:32,490 --> 00:17:36,041
+At the import for the color there.
+
+241
+00:17:36,041 --> 00:17:40,361
+And I'm gonna say text foreground equals
+
+242
+00:17:40,361 --> 00:17:46,780
+Hueymanagergetcolortree.text foreground,
+so Hueymanagers.
+
+243
+00:17:46,780 --> 00:17:50,010
+Stores all the colors of the different
+parts of the user interface.
+
+244
+00:17:50,010 --> 00:17:51,990
+And you've got to pass in these strings,
+
+245
+00:17:51,990 --> 00:17:56,190
+they're like keys to the colors that you
+need.
+
+246
+00:17:57,240 --> 00:18:01,466
+And let's say textBackground and we'll
+also have
+
+247
+00:18:01,466 --> 00:18:07,567
+selectionForeground and
+
+248
+00:18:07,567 --> 00:18:13,670
+selectionBackground and
+
+249
+00:18:13,670 --> 00:18:18,940
+if I've got this right now, I can just
+copy those and paste them in there, and
+
+250
+00:18:21,100 --> 00:18:22,290
+paste this in here.
+
+251
+00:18:22,290 --> 00:18:22,790
+And
+
+252
+00:18:25,060 --> 00:18:29,030
+now, I just need to say end here.
+
+253
+00:18:29,030 --> 00:18:31,830
+So before we turn in this, this check box,
+
+254
+00:18:31,830 --> 00:18:34,360
+I need to set the color up there
+appropriately.
+
+255
+00:18:34,360 --> 00:18:41,180
+I need to say, if selected then we wanna
+say
+
+256
+00:18:42,696 --> 00:18:48,213
+leaf renderer.set foreground.
+
+257
+00:18:48,213 --> 00:18:54,496
+And selection foreground and
+
+258
+00:18:54,496 --> 00:19:00,349
+leaf render.set background.
+
+259
+00:19:02,270 --> 00:19:08,460
+Selection background and it's pretty
+similar, if it's not selected I'll say
+
+260
+00:19:10,670 --> 00:19:14,570
+leaf renderer.setfullgroundsetbackground
+and I'll have
+
+261
+00:19:15,600 --> 00:19:18,550
+text foreground and text background.
+
+262
+00:19:20,130 --> 00:19:25,550
+And now, if if I run my, tree,
+
+263
+00:19:25,550 --> 00:19:30,710
+from this [UNKNOWN] tree you can see that
+when I
+
+264
+00:19:30,710 --> 00:19:36,200
+select it, it it looks selected.
+
+265
+00:19:36,200 --> 00:19:38,030
+And when I deselect it, it doesn't.
+
+266
+00:19:39,170 --> 00:19:40,560
+But we can't edit these yet.
+
+267
+00:19:40,560 --> 00:19:41,860
+And that's the next tutorial.
+
+268
+00:19:41,860 --> 00:19:47,430
+And the next tutorial will gonna look at
+word mainly these check boxes, editable.
+
+269
+00:19:48,550 --> 00:19:52,630
+And one, one thing that I probably should
+explain at little bit
+
+270
+00:19:52,630 --> 00:19:55,959
+here in case you get confused, cuz it's
+quite confusing, this stuff.
+
+271
+00:19:57,700 --> 00:20:00,490
+There's there's only ever gonna be one
+check box here,
+
+272
+00:20:00,490 --> 00:20:04,490
+there isn't one check box for every leaf
+in a tree.
+
+273
+00:20:04,490 --> 00:20:06,910
+There's just one check box for all of
+them,
+
+274
+00:20:06,910 --> 00:20:10,330
+and before we return a check box using
+this
+
+275
+00:20:10,330 --> 00:20:15,220
+rederer you have to set it up
+appropriately, set
+
+276
+00:20:15,220 --> 00:20:18,040
+the check box to be selected or not
+selected.
+
+277
+00:20:18,040 --> 00:20:21,430
+Set the text on it and so on.
+
+278
+00:20:21,430 --> 00:20:23,250
+And that's what makes it work.
+
+279
+00:20:23,250 --> 00:20:25,160
+So there's only ever one check box and
+you're just
+
+280
+00:20:25,160 --> 00:20:31,940
+customizing it to display different
+values, one after the other.
+
+281
+00:20:31,940 --> 00:20:33,865
+Different leaves.
+
+282
+00:20:33,865 --> 00:20:35,200
+Okay, so, in the next tutorial, we're
+
+283
+00:20:35,200 --> 00:20:39,330
+gonna look at making these values
+editable.
+
+284
+00:20:39,330 --> 00:20:45,930
+So join me, join me then, and until next
+time, happy coding.
+
+285
+00:20:45,930 --> 00:20:48,390
+[SOUND]
+

@@ -1,0 +1,694 @@
+1
+00:00:01,260 --> 00:00:05,770
+Hello, this is John from
+caveofprogramming.com, and in the last
+
+2
+00:00:05,770 --> 00:00:12,030
+tutorial we created I set up this kind of
+pop-up menu here.
+
+3
+00:00:12,030 --> 00:00:15,870
+So I can, so that one to delete rows or
+tables and then this
+
+4
+00:00:15,870 --> 00:00:18,200
+tutorial which is gonna implement our
+functionality
+
+5
+00:00:19,340 --> 00:00:21,330
+and delete the row from the table.
+
+6
+00:00:21,330 --> 00:00:27,620
+Now the strategy that I'm gonna use here
+is I'm gonna actually delete the row
+
+7
+00:00:27,620 --> 00:00:33,689
+from the from the data model and then I'm
+gonna tell the table,
+
+8
+00:00:34,730 --> 00:00:39,600
+that the row has been deleted to make it
+refresh itself.
+
+9
+00:00:39,600 --> 00:00:45,500
+And I'm also gonna instead of the table
+panel
+
+10
+00:00:45,500 --> 00:00:52,130
+deleting stuff from the model itself, I'm
+gonna make the table panel raise an event.
+
+11
+00:00:52,130 --> 00:00:55,250
+And the mainframe is actually gonna insert
+that then,
+
+12
+00:00:55,250 --> 00:00:59,820
+and it's gonna tell the model to delete
+the row.
+
+13
+00:01:00,910 --> 00:01:02,010
+So let's have a look at that.
+
+14
+00:01:04,450 --> 00:01:08,530
+One thing that I wanna change here
+actually is in the
+
+15
+00:01:08,530 --> 00:01:14,120
+data model if we look at the database it
+[UNKNOWN] the data.
+
+16
+00:01:14,120 --> 00:01:20,470
+When it does get people it actually
+returns just the actual array list
+
+17
+00:01:20,470 --> 00:01:24,730
+of people and other objects that get
+
+18
+00:01:24,730 --> 00:01:27,048
+that reference could potentially modify
+this list.
+
+19
+00:01:27,048 --> 00:01:31,075
+And I wanna actually prevent it from doing
+that by saying collections,
+
+20
+00:01:31,075 --> 00:01:37,800
+collections.unmodifiablelist like this,
+
+21
+00:01:37,800 --> 00:01:44,450
+and and put that around there, and at the
+import, and that will prevent
+
+22
+00:01:44,450 --> 00:01:48,820
+other classes from modifying the list file
+the reference that they retrieve.
+
+23
+00:01:48,820 --> 00:01:55,800
+So I'm going to enforce that and as a
+save, I'm gonna actually I'll allow
+
+24
+00:01:55,800 --> 00:01:59,820
+the table to remove roads, by telling the
+main frame to remove them, she'll tell the
+
+25
+00:01:59,820 --> 00:02:02,530
+controller, which will tell the data, so
+I'm
+
+26
+00:02:02,530 --> 00:02:07,180
+just enforcing a really clear flow of data
+
+27
+00:02:07,180 --> 00:02:09,340
+in my application, rather than having all
+different
+
+28
+00:02:09,340 --> 00:02:12,440
+components do what they want with the
+data.
+
+29
+00:02:12,440 --> 00:02:14,265
+And another thing I'm gonna change here
+
+30
+00:02:14,265 --> 00:02:16,520
+is I'm actually gonna be deleting person
+objects
+
+31
+00:02:16,520 --> 00:02:18,667
+from this array objects, and I'm gonna
+delete
+
+32
+00:02:18,667 --> 00:02:20,904
+person objects from anywhere in the array
+list.
+
+33
+00:02:20,904 --> 00:02:26,770
+And although this could be a bit pedantic
+really, cuz it's such a small application,
+
+34
+00:02:26,770 --> 00:02:33,000
+a small amount of data, I'm gonna change
+this to a linked list because linked
+
+35
+00:02:33,000 --> 00:02:38,300
+lists, unlike array lists, are optimized
+for
+
+36
+00:02:39,460 --> 00:02:41,500
+adding or removing items in the middle of
+
+37
+00:02:41,500 --> 00:02:43,680
+the list whereas an array list is only
+
+38
+00:02:43,680 --> 00:02:46,000
+optimized for adding and removing at the
+end
+
+39
+00:02:46,000 --> 00:02:46,650
+of the list.
+
+40
+00:02:46,650 --> 00:02:49,900
+In fact, let's just change this to use the
+list interface.
+
+41
+00:02:49,900 --> 00:02:50,560
+That's maybe more elegant.
+
+42
+00:02:50,560 --> 00:02:54,340
+Cuz we only need to actually have
+LinkThatIsMentioned, where we
+
+43
+00:02:54,340 --> 00:02:58,180
+actually create the object that actually
+implements the list interface.
+
+44
+00:03:00,050 --> 00:03:08,450
+Okay now, so the first thing is that I'm
+gonna, in my table panel here.
+
+45
+00:03:08,450 --> 00:03:12,994
+We'll let's actually take a look let's
+look at from kinda the top
+
+46
+00:03:12,994 --> 00:03:18,170
+end, as it were, because the main frame
+here creates the table panel.
+
+47
+00:03:18,170 --> 00:03:24,992
+And I wanna be able to say in the main
+frame something
+
+48
+00:03:24,992 --> 00:03:30,864
+like this, tablePaneladd let's call
+
+49
+00:03:30,864 --> 00:03:37,053
+it, I don't know, addPersonTableListener
+
+50
+00:03:37,053 --> 00:03:41,534
+add a new personTableListener.
+
+51
+00:03:41,534 --> 00:03:47,816
+[SOUND] And I want that to have some
+
+52
+00:03:47,816 --> 00:03:54,032
+method, such as a public void.
+
+53
+00:03:54,032 --> 00:03:57,879
+Row deleted, maybe.
+
+54
+00:03:57,879 --> 00:04:00,520
+Which will accept a row, like that.
+
+55
+00:04:01,970 --> 00:04:05,460
+And that will then tell the controller to
+do something but
+
+56
+00:04:05,460 --> 00:04:10,420
+for the moment it can just do, just have
+sysout row.
+
+57
+00:04:10,420 --> 00:04:13,690
+So I've not implemented any of this stuff
+here.
+
+58
+00:04:13,690 --> 00:04:17,160
+None of that actually exists or works.
+
+59
+00:04:17,160 --> 00:04:21,270
+And I'm gonna implement that now.
+
+60
+00:04:21,270 --> 00:04:23,530
+And the first thing I'm gonna
+
+61
+00:04:23,530 --> 00:04:29,280
+do is I'm gonna create this
+personTableListenerIInterface.
+
+62
+00:04:29,280 --> 00:04:31,080
+So, and you see this this, is exactly
+
+63
+00:04:31,080 --> 00:04:36,070
+like adding, a, action listener to a
+button really.
+
+64
+00:04:36,070 --> 00:04:39,850
+In fact I'm gonna make this, set person
+Table Listener because
+
+65
+00:04:41,190 --> 00:04:45,530
+that button actually maintains like a, a
+list of listeners on
+
+66
+00:04:45,530 --> 00:04:48,330
+it, but here I'm gonna only allow the
+Table Panel to
+
+67
+00:04:48,330 --> 00:04:52,430
+have one listener at a time, just cuz it's
+easier to implement.
+
+68
+00:04:52,430 --> 00:04:55,510
+So this set person table listener method
+doesn't of
+
+69
+00:04:55,510 --> 00:04:59,970
+course exist in tablePanel, I put that
+implements it.
+
+70
+00:04:59,970 --> 00:05:03,690
+And we'll start with this interface, so
+I'm gonna right click on the Gooey here
+
+71
+00:05:03,690 --> 00:05:13,909
+and go to New Interface, and call it
+person Table Listener and Finish.
+
+72
+00:05:13,909 --> 00:05:19,025
+And, I want to ad, I want the interface,
+to specify this method here.
+
+73
+00:05:19,025 --> 00:05:24,840
+Public void road deleted, so let's add
+that to the interface like that.
+
+74
+00:05:25,950 --> 00:05:28,890
+And, now, I need to implement this, set,
+
+75
+00:05:28,890 --> 00:05:33,140
+person Table Listener method, in the Table
+Panel.
+
+76
+00:05:33,140 --> 00:05:37,870
+So let's go to Table Panel, and let's
+maximize that
+
+77
+00:05:37,870 --> 00:05:43,560
+and let's go down here and say I'll paste
+that in.
+
+78
+00:05:43,560 --> 00:05:49,130
+And that's gonna be public void set person
+Table Listener, and that accepts
+
+79
+00:05:49,130 --> 00:05:55,190
+a person table listener, which I'll call
+Listener.
+
+80
+00:05:56,570 --> 00:06:01,010
+And what it's gonna do with it, is, it's
+gonna have to say something like, this.,
+
+81
+00:06:03,110 --> 00:06:04,860
+set, actually, sorry, no.
+
+82
+00:06:04,860 --> 00:06:11,670
+thi.personTableListener equals Listener.
+
+83
+00:06:13,290 --> 00:06:19,320
+And now, I need to create this reference,
+this private reference to the listener.
+
+84
+00:06:19,320 --> 00:06:23,060
+So this just stores a reference to the
+listener.
+
+85
+00:06:23,060 --> 00:06:29,490
+Basically up here where I have, I'm gonna
+have private, private,
+
+86
+00:06:32,640 --> 00:06:34,530
+PersonTableListener.
+
+87
+00:06:34,530 --> 00:06:38,080
+This is the interface that I've just
+created here.
+
+88
+00:06:38,080 --> 00:06:41,210
+And it's gonna be a variable of that type.
+
+89
+00:06:42,640 --> 00:06:46,330
+And now what's gonna happen is that if
+
+90
+00:06:48,390 --> 00:06:52,260
+someone selects, someone right clicks on
+the table and selects
+
+91
+00:06:52,260 --> 00:06:58,060
+Remove Item it's now gonna tell any
+listening class about it.
+
+92
+00:06:58,060 --> 00:07:04,450
+So say if personTableListener is not equal
+to null.
+
+93
+00:07:04,450 --> 00:07:08,310
+In other words if it's been set to
+something, which I just did in my
+
+94
+00:07:08,310 --> 00:07:12,120
+main frame, then I am going to
+
+95
+00:07:12,120 --> 00:07:17,140
+say, PersonTableListener, and that's only
+got one method.
+
+96
+00:07:17,140 --> 00:07:18,350
+It could PersonTableListener.
+
+97
+00:07:18,350 --> 00:07:19,640
+Just got this row deleted.
+
+98
+00:07:21,130 --> 00:07:27,420
+Row deleted and passed in a row there that
+got, indeed, last tutorial.
+
+99
+00:07:29,270 --> 00:07:31,570
+So, and this is the third time we've been
+to this kind
+
+100
+00:07:31,570 --> 00:07:35,240
+of list now, idea, I think now, or at
+least the second time.
+
+101
+00:07:35,240 --> 00:07:39,420
+And, if I save my main frame now the error
+will go away.
+
+102
+00:07:39,420 --> 00:07:42,240
+And it's just gonna print out the row for,
+for the, for the moment.
+
+103
+00:07:42,240 --> 00:07:46,550
+So if I run that and let's import some
+data.
+
+104
+00:07:47,740 --> 00:07:50,750
+And if I select Remove on one of these
+rows,
+
+105
+00:07:50,750 --> 00:07:53,160
+you can see it's gonna get printed out
+down here.
+
+106
+00:07:53,160 --> 00:07:57,130
+And the thing that's doing the printing is
+this in the mainframe.
+
+107
+00:07:57,130 --> 00:08:00,610
+So the mainframe is now being informed,
+when we select remove
+
+108
+00:08:00,610 --> 00:08:04,380
+row and the mainframe knows what row we
+want to remove.
+
+109
+00:08:05,420 --> 00:08:12,260
+Now to actually remove the row, I wanna
+say something like controller.removeperson
+
+110
+00:08:12,260 --> 00:08:18,410
+and parse in the index of the row to see
+the index of the person in the array list.
+
+111
+00:08:18,410 --> 00:08:21,340
+So let's go to Controller and implement
+that.
+
+112
+00:08:21,340 --> 00:08:28,010
+So in Controller, I've already got an
+[UNKNOWN] person and I'm gonna add a
+
+113
+00:08:28,010 --> 00:08:34,490
+public void remove person int index let's
+call it.
+
+114
+00:08:35,830 --> 00:08:37,640
+And that's gonna say to the db,
+
+115
+00:08:37,640 --> 00:08:45,130
+the database, something like
+db.removeperson, at index.
+
+116
+00:08:46,920 --> 00:08:52,995
+And, if I go to the database class now,
+so, in the model
+
+117
+00:08:52,995 --> 00:08:59,398
+database.java in here, I can say public,
+public void,
+
+118
+00:08:59,398 --> 00:09:05,560
+removePerson int index, and all that has
+
+119
+00:09:05,560 --> 00:09:11,850
+to do is say people, that's the array list
+up here, dot remove,
+
+120
+00:09:11,850 --> 00:09:13,720
+and pass any index there.
+
+121
+00:09:13,720 --> 00:09:15,770
+So, I just remove it from the array list.
+
+122
+00:09:15,770 --> 00:09:18,890
+Now, if I actually run this now, in put
+some
+
+123
+00:09:18,890 --> 00:09:23,580
+data, and try to remove stuff, it doesn't
+actually work.
+
+124
+00:09:23,580 --> 00:09:26,342
+And, the reason for that is I need to tell
+
+125
+00:09:26,342 --> 00:09:30,500
+the table, the table view that the table
+model has changed.
+
+126
+00:09:31,940 --> 00:09:40,530
+And the way I'm gonna do that is, I could
+actually call tablePanel.refresh here.
+
+127
+00:09:40,530 --> 00:09:44,820
+And that might not be an altogether bad
+idea.
+
+128
+00:09:44,820 --> 00:09:47,790
+But I can possibly do it more efficiently
+because the
+
+129
+00:09:47,790 --> 00:09:53,540
+tablePanel itself knows when someone's
+selected to remove a row.
+
+130
+00:09:53,540 --> 00:09:58,720
+So right here, where I have the action is
+still
+
+131
+00:09:58,720 --> 00:10:03,980
+on the menu, I could say table.fire, and
+rather than
+
+132
+00:10:03,980 --> 00:10:09,410
+fire, actually not table but table
+model.fire.
+
+133
+00:10:09,410 --> 00:10:13,980
+And rather than fire a method that just
+says the data has changed as a whole, to
+
+134
+00:10:13,980 --> 00:10:20,910
+be more efficient I could fire table rows,
+delete it, and pass in the actual rows
+
+135
+00:10:20,910 --> 00:10:27,030
+that hopefully will be deleted after doing
+the deletion here.
+
+136
+00:10:27,030 --> 00:10:32,310
+So if I run that and fingers crossed, that
+might actually work.
+
+137
+00:10:32,310 --> 00:10:33,520
+Delete row.
+
+138
+00:10:33,520 --> 00:10:37,410
+And I'm deleting rows from my table, like
+that.
+
+139
+00:10:37,410 --> 00:10:40,890
+But of course, I'm not saving anything at
+the moment.
+
+140
+00:10:40,890 --> 00:10:43,107
+So, let me get my rows back [UNKNOWN].
+
+141
+00:10:43,107 --> 00:10:44,140
+I do an import.
+
+142
+00:10:44,140 --> 00:10:50,190
+Okay, so, that's it for this tutorial and,
+
+143
+00:10:50,190 --> 00:10:56,280
+so we we see now how to import data into
+tables and implement table models
+
+144
+00:10:56,280 --> 00:11:02,060
+and add and remove rows from tables, and
+in the next tutorial we're gonna
+
+145
+00:11:02,060 --> 00:11:07,850
+look at the Jdialog class, so join me
+again then.
+
+146
+00:11:07,850 --> 00:11:12,288
+Until next time, happy coding.
+
+147
+00:11:12,288 --> 00:11:15,270
+[SOUND]
+

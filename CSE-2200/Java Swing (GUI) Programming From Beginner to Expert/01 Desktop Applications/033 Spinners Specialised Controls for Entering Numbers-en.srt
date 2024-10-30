@@ -1,0 +1,720 @@
+1
+00:00:02,440 --> 00:00:05,770
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,770 --> 00:00:12,190
+Welcome back again, and in this tutorial,
+we're gonna look at Spinner Controls.
+
+3
+00:00:12,190 --> 00:00:14,640
+And Spinner Controls are little
+specialized
+
+4
+00:00:14,640 --> 00:00:19,431
+controls for entering numbers in Java.
+
+5
+00:00:19,431 --> 00:00:23,790
+So I've got my application set up at the
+moment to produce
+
+6
+00:00:23,790 --> 00:00:29,000
+this blank dialogue, and I'm gonna add
+some controls to this dialogue.
+
+7
+00:00:29,000 --> 00:00:32,540
+And in this particular tutorial, I'm just
+gonna write
+
+8
+00:00:32,540 --> 00:00:36,580
+the minimum controls that we need to
+demonstrate with JSpinner.
+
+9
+00:00:38,670 --> 00:00:45,313
+So, here in my dialog class, I'm gonna
+start by creating a, I'm gonna add a
+
+10
+00:00:45,313 --> 00:00:52,860
+JButton okbutton = new JButton.
+
+11
+00:00:52,860 --> 00:00:58,060
+actually, let's I've, I'll actually create
+a new the new
+
+12
+00:00:58,060 --> 00:01:01,580
+objects and shape of an object down here
+in constructor.
+
+13
+00:01:01,580 --> 00:01:04,410
+Although I could equally create it here
+when
+
+14
+00:01:04,410 --> 00:01:07,610
+I declare a variable that would still be
+okay.
+
+15
+00:01:07,610 --> 00:01:16,650
+And, and let's have a private J button,
+cancel button.
+
+16
+00:01:16,650 --> 00:01:23,210
+And I'm going to add a J spinner here.
+
+17
+00:01:23,210 --> 00:01:25,150
+So, J spinner, and I'm going to call it
+port
+
+18
+00:01:25,150 --> 00:01:31,600
+spinner, because this dialog is actually
+gonna store database connection details.
+
+19
+00:01:31,600 --> 00:01:36,960
+And in a future tutorial we will look, we
+will have kind of a whistle-stop
+
+20
+00:01:36,960 --> 00:01:42,580
+tour of JDBC and we'll look at connecting
+this application to a database.
+
+21
+00:01:44,520 --> 00:01:48,190
+And there's another thing that I need
+here.
+
+22
+00:01:48,190 --> 00:01:55,325
+I also need a private spinnerNumberModel
+
+23
+00:01:55,325 --> 00:02:01,740
+and this is the data model behind the
+spinner.
+
+24
+00:02:01,740 --> 00:02:05,250
+And that will allow me to set minimum
+
+25
+00:02:05,250 --> 00:02:08,400
+maximum values to my spinner and also the
+increment.
+
+26
+00:02:08,400 --> 00:02:11,190
+When you click the little up down button
+at the side of the spinner.
+
+27
+00:02:12,290 --> 00:02:16,230
+So let's go ahead and create these
+controls but actually
+
+28
+00:02:16,230 --> 00:02:18,120
+there's one thing that I want to quickly
+fix before I
+
+29
+00:02:18,120 --> 00:02:22,240
+do that because at the moment, even though
+I specify the
+
+30
+00:02:22,240 --> 00:02:25,150
+parent from my dialog, for reasons that I
+don't fully understand.
+
+31
+00:02:25,150 --> 00:02:28,300
+It still, still appears in the corner of
+the window there.
+
+32
+00:02:28,300 --> 00:02:33,920
+So I'm just gonna quickly here, say, set
+location relative to.
+
+33
+00:02:33,920 --> 00:02:38,490
+And I'm just gonna pass in, the parent the
+J frame parent.
+
+34
+00:02:38,490 --> 00:02:41,050
+Because, otherwise that's gonna drive me
+crazy.
+
+35
+00:02:41,050 --> 00:02:46,190
+So now if I do window preferences it comes
+up in a nice location.
+
+36
+00:02:46,190 --> 00:02:47,430
+Okay, that's much better.
+
+37
+00:02:50,210 --> 00:02:53,395
+now, yeah, I don't know what that was
+about.
+
+38
+00:02:53,395 --> 00:02:59,450
+Okay, so, let's now create these controls.
+
+39
+00:02:59,450 --> 00:03:05,520
+So I'll say okButton = new JButton("OK").
+
+40
+00:03:05,520 --> 00:03:15,110
+And we'll have cancelButton = new
+JButton("Cancel").
+
+41
+00:03:15,110 --> 00:03:18,560
+So you should always have okay and cancel
+buttons on your dialogue or
+
+42
+00:03:18,560 --> 00:03:20,280
+at least you stores allow the user
+
+43
+00:03:20,280 --> 00:03:24,140
+to cancel the dialogue without changing
+anything.
+
+44
+00:03:24,140 --> 00:03:26,600
+And I'll say spinnerModel,
+
+45
+00:03:29,700 --> 00:03:35,280
+equals new J, equals new Spinning of the
+model.
+
+46
+00:03:35,280 --> 00:03:38,550
+Actually that doesn't really have to be a,
+private instanced
+
+47
+00:03:38,550 --> 00:03:42,830
+variable, because that isn't gonna need it
+again, but that's okay.
+
+48
+00:03:42,830 --> 00:03:48,300
+And now, to the constructor's spinning
+number model, firstly, just to control
+
+49
+00:03:48,300 --> 00:03:52,900
+space there, I'm going to use this
+constructor, he's gonna store integers.
+
+50
+00:03:52,900 --> 00:03:55,050
+And firstly I'll pass it the value that I
+
+51
+00:03:55,050 --> 00:03:58,300
+want to set when it, when the spinner
+appears.
+
+52
+00:03:58,300 --> 00:04:01,280
+And as far as I can remember, the MySQL
+server runs
+
+53
+00:04:01,280 --> 00:04:06,070
+by default on port 3306, or set up for the
+default.
+
+54
+00:04:06,070 --> 00:04:10,068
+And let's set the minimum at 0, and the
+maximum at
+
+55
+00:04:10,068 --> 00:04:15,420
+12349, so 9999 and the step size is gonna
+be one.
+
+56
+00:04:15,420 --> 00:04:21,240
+And then when I create my j spinner I can
+say quote spinner
+
+57
+00:04:21,240 --> 00:04:27,710
+equals new j spinner and I can pass in the
+spinner model in constructor
+
+58
+00:04:30,160 --> 00:04:35,540
+and now I can set the layout and add these
+
+59
+00:04:35,540 --> 00:04:41,220
+controls so I can say set layout set
+layouts.
+
+60
+00:04:41,220 --> 00:04:48,010
+If I can get the right keys set layout,
+new grid bag.
+
+61
+00:04:48,010 --> 00:04:53,271
+It's our old friend here grid bag layout.
+
+62
+00:04:53,271 --> 00:05:00,325
+And I'm gonna also create a
+GridBagConstraints.
+
+63
+00:05:00,325 --> 00:05:01,265
+So GridBagConstraints
+
+64
+00:05:03,675 --> 00:05:07,215
+gc equals new GridBagConstraints.
+
+65
+00:05:07,215 --> 00:05:12,705
+And I'm gonna add controls here in rows.
+
+66
+00:05:12,705 --> 00:05:19,250
+So, the first row will be GC.gridy
+
+67
+00:05:19,250 --> 00:05:24,560
+equals zero and then set GC.gridx equals
+
+68
+00:05:24,560 --> 00:05:29,590
+zero and then I'll also set up some
+defaults here.
+
+69
+00:05:29,590 --> 00:05:38,000
+I'll say GC.weightx for the moment, I'll
+set equal to one, GC.weighty equals one.
+
+70
+00:05:38,000 --> 00:05:39,900
+And if you don't set this stuff at the
+
+71
+00:05:39,900 --> 00:05:42,940
+start then you can run into some problems
+later on.
+
+72
+00:05:42,940 --> 00:05:47,750
+And gc.fill, I can set it equal to
+horizontal, vertical, both,
+
+73
+00:05:47,750 --> 00:05:50,680
+or none, and I'm going to set it equal to
+grid
+
+74
+00:05:50,680 --> 00:05:56,790
+back constraints.none, because I want my
+controls
+
+75
+00:05:56,790 --> 00:06:02,160
+to be their preferred size, rather than to
+be, rather than to fill the whole cell.
+
+76
+00:06:03,790 --> 00:06:09,150
+so, now, let's go ahead and say let's add.
+
+77
+00:06:10,300 --> 00:06:14,610
+I'll add a new j label for start and I'll
+set, I'll set that equal to, I'll set the
+
+78
+00:06:14,610 --> 00:06:20,800
+text on it to port colon, space, comma
+
+79
+00:06:20,800 --> 00:06:26,455
+GC and then, next to that on the right, I
+will say
+
+80
+00:06:26,455 --> 00:06:34,231
+pc.gridx equals let's just do plus plus
+actually.
+
+81
+00:06:34,231 --> 00:06:41,600
+And then I'll say add, and I'll add my
+spinner here, support spinner comma gc.
+
+82
+00:06:42,720 --> 00:06:45,220
+So that's one rows, sort it out.
+
+83
+00:06:45,220 --> 00:06:47,330
+And then let's go to the next row.
+
+84
+00:06:47,330 --> 00:06:50,380
+So let's have a, comment here.
+
+85
+00:06:50,380 --> 00:06:56,633
+Next row, and I'll do gc.grid y plus
+
+86
+00:06:56,633 --> 00:07:03,250
+plus and go back to gc.grid x, equals
+zero.
+
+87
+00:07:05,040 --> 00:07:08,990
+Here I'm gonna up my, cancel button.
+
+88
+00:07:08,990 --> 00:07:13,550
+If you bring up the dialogue for example,
+let's see, custom inspected, you
+
+89
+00:07:13,550 --> 00:07:17,970
+can see the cancel button's usually on
+the, right so it stays here.
+
+90
+00:07:17,970 --> 00:07:19,700
+So let's add the okay button here.
+
+91
+00:07:19,700 --> 00:07:25,930
+So I'll say add okay button comma gc and
+
+92
+00:07:25,930 --> 00:07:30,566
+then gc.gridx plus plus and add
+
+93
+00:07:30,566 --> 00:07:35,650
+cancel button comma gc.
+
+94
+00:07:35,650 --> 00:07:41,540
+Now with a bit of luck, or lots of luck
+this will appear reasonably presentable.
+
+95
+00:07:41,540 --> 00:07:43,460
+So there we are.
+
+96
+00:07:43,460 --> 00:07:46,100
+We need to address the spacing issues
+here.
+
+97
+00:07:46,100 --> 00:07:47,910
+But we've got a spinner.
+
+98
+00:07:47,910 --> 00:07:52,680
+And you can see, it's even got a comma in
+it, so it's nicely formatted there.
+
+99
+00:07:52,680 --> 00:07:56,960
+And I can increase or decrease the spinner
+like this.
+
+100
+00:07:56,960 --> 00:07:58,850
+And it's got a minimum and maximum value.
+
+101
+00:07:58,850 --> 00:08:02,170
+I can type in one there, but it won't go
+below
+
+102
+00:08:02,170 --> 00:08:06,750
+zero no matter what I do and the maximum
+is 9999.
+
+103
+00:08:06,750 --> 00:08:09,940
+So let's try, let's try that.
+
+104
+00:08:09,940 --> 00:08:14,040
+I can't increase beyond that and so there
+we go.
+
+105
+00:08:16,110 --> 00:08:22,300
+and, if I try typing in, I can type in
+greater values, but
+
+106
+00:08:22,300 --> 00:08:28,010
+and if I do that, I just, it won't let me
+change it anymore.
+
+107
+00:08:28,010 --> 00:08:28,630
+It's gone funny.
+
+108
+00:08:30,360 --> 00:08:36,250
+So, anyway, let's now get the value from
+that
+
+109
+00:08:36,250 --> 00:08:42,645
+spinner [UNKNOWN] so, I wanna add an
+action list now, to the OK button.
+
+110
+00:08:42,645 --> 00:08:47,420
+OK button to add action list, I mean
+there's a, you know
+
+111
+00:08:47,420 --> 00:08:52,320
+the routine now, by now with this so add
+action, action
+
+112
+00:08:52,320 --> 00:08:57,978
+listener, and so I'll say, you know, say
+new action listener
+
+113
+00:08:57,978 --> 00:09:03,610
+and then open the [UNKNOWN] brackets here
+at the unimplemented methods.
+
+114
+00:09:03,610 --> 00:09:10,300
+You can port action this in the first, add
+an implementing method, and let's maximize
+
+115
+00:09:10,300 --> 00:09:16,550
+the editor, get rid of some space that I
+don't want, add the
+
+116
+00:09:16,550 --> 00:09:20,750
+semicolon in here, and now at this point,
+I can get the value from
+
+117
+00:09:20,750 --> 00:09:22,000
+the spinner control, and it's just a
+
+118
+00:09:22,000 --> 00:09:26,450
+little complication here because the
+spinner actually returns.
+
+119
+00:09:26,450 --> 00:09:34,911
+If I say, if I say at this point, spinner
+
+120
+00:09:34,911 --> 00:09:39,780
+what do I call that actually, I called it
+port spinner.
+
+121
+00:09:39,780 --> 00:09:46,260
+So port spinner.get, there's a get value
+if you look
+
+122
+00:09:46,260 --> 00:09:49,510
+at it actually returns a object, but now I
+know
+
+123
+00:09:49,510 --> 00:09:53,180
+that I'm storing integers in this spinner,
+so I can
+
+124
+00:09:53,180 --> 00:09:57,830
+cuss this to a integer, cuz it's gotta be
+a integer.
+
+125
+00:09:57,830 --> 00:10:02,396
+And I can say integer value
+
+126
+00:10:02,396 --> 00:10:09,010
+equals, and then cuss the return type of
+ports.getValue to that value.
+
+127
+00:10:09,010 --> 00:10:10,810
+And finish off this tutorial, I'm just
+
+128
+00:10:10,810 --> 00:10:15,360
+gonna output the value here in the
+console.
+
+129
+00:10:15,360 --> 00:10:20,860
+So if I run this and get to preferences
+dialogue, and
+
+130
+00:10:23,420 --> 00:10:28,490
+maybe change that a little bit, and click
+okay, I'm gonna get the value 3301.
+
+131
+00:10:28,490 --> 00:10:29,810
+Yeah.
+
+132
+00:10:29,810 --> 00:10:34,250
+And actually, one, thing that I could also
+do is,
+
+133
+00:10:36,020 --> 00:10:40,860
+I can also make the dialogue go away when
+you click "OK" or "Cancel" so I can
+
+134
+00:10:40,860 --> 00:10:47,130
+say set, setVisible here, false.
+
+135
+00:10:47,130 --> 00:10:50,910
+And I can also add a, if I just copy
+
+136
+00:10:50,910 --> 00:10:55,680
+that and add a listener to the cancel
+button, the only
+
+137
+00:10:55,680 --> 00:10:58,330
+difference between the cancel button and
+the OK button is
+
+138
+00:10:58,330 --> 00:11:02,930
+that the OK button, gets values and does
+stuff with them.
+
+139
+00:11:02,930 --> 00:11:07,770
+Before setting visible defaults, and,
+apart from that, the seminar.
+
+140
+00:11:07,770 --> 00:11:11,190
+So now hopefully, if I go into preferences
+here
+
+141
+00:11:11,190 --> 00:11:14,617
+[NOISE] console will just get rid of my
+dialogue.
+
+142
+00:11:14,617 --> 00:11:17,730
+And okay will get rid of my dialogue.
+
+143
+00:11:17,730 --> 00:11:22,067
+But first it will retrieve the value from
+that spinner.
+
+144
+00:11:22,067 --> 00:11:26,630
+So, let's just see that one more time.
+
+145
+00:11:26,630 --> 00:11:31,550
+So set 3311, click okay, and we get 3311
+down there in the console.
+
+146
+00:11:31,550 --> 00:11:33,020
+Okay, so that's it for this tutorial.
+
+147
+00:11:33,020 --> 00:11:37,120
+In the next tutorial we're gonna look at
+password controls because
+
+148
+00:11:37,120 --> 00:11:42,030
+we're gonna store a user name and password
+in this dialogue.
+
+149
+00:11:42,030 --> 00:11:43,780
+And we're gonna create one of those
+password
+
+150
+00:11:43,780 --> 00:11:48,610
+controls that, where you just see, like
+asterisks
+
+151
+00:11:48,610 --> 00:11:52,240
+in stead of she's seeing what you're
+typing,
+
+152
+00:11:52,240 --> 00:11:54,685
+to hide what you're typing from other
+people.
+
+153
+00:11:54,685 --> 00:11:59,470
+Okay, so join me again then, and until
+then, happy coding.
+

@@ -1,0 +1,991 @@
+1
+00:00:02,300 --> 00:00:04,576
+Hello, this is John from caveof
+
+2
+00:00:04,576 --> 00:00:07,660
+programming.com, and, in this tutorial
+we're going
+
+3
+00:00:07,660 --> 00:00:13,740
+to look at implementing the controller bit
+of the model view controller architecture.
+
+4
+00:00:15,190 --> 00:00:17,670
+Now I don't intend this to be a
+
+5
+00:00:17,670 --> 00:00:20,540
+a two, a series of tutorials on software
+architecture.
+
+6
+00:00:22,000 --> 00:00:26,360
+But I wanna implement the kind of minimal
+architecture that
+
+7
+00:00:26,360 --> 00:00:29,430
+I need here to give to make my Swing app
+
+8
+00:00:29,430 --> 00:00:31,800
+work, even if it's not the most efficient
+app in
+
+9
+00:00:31,800 --> 00:00:35,870
+the world or anything, and it doesn't do
+anything very interesting.
+
+10
+00:00:35,870 --> 00:00:38,220
+I wanna at least make it make sense, so
+that
+
+11
+00:00:38,220 --> 00:00:41,560
+you can see what the difference between
+components doing something.
+
+12
+00:00:41,560 --> 00:00:42,340
+A vaguely useful.
+
+13
+00:00:43,660 --> 00:00:47,750
+So, if you don't wanna go into software
+architecture at all, then feel free to
+
+14
+00:00:47,750 --> 00:00:54,690
+skip ahead and we'll get back to swing
+components in the next lesson.
+
+15
+00:00:54,690 --> 00:01:00,580
+So, I'm gonna create, I've got my GUI
+package here that's got GUI code in it.
+
+16
+00:01:00,580 --> 00:01:01,810
+I've got my data model here.
+
+17
+00:01:02,880 --> 00:01:06,990
+and, and the way a lot of software
+developers think of this is
+
+18
+00:01:06,990 --> 00:01:11,140
+that the model's gotta be water tight, and
+it's gotta really preserve your data.
+
+19
+00:01:11,140 --> 00:01:14,440
+Whereas the GUI could be this thing that
+it may even crash all the time.
+
+20
+00:01:14,440 --> 00:01:16,710
+You know, as GUIs tend to do, who knows?
+
+21
+00:01:16,710 --> 00:01:18,790
+But hopefully it won't do that.
+
+22
+00:01:18,790 --> 00:01:23,950
+But the point is that the model must be
+very reliable and highly tested.
+
+23
+00:01:23,950 --> 00:01:25,470
+And whereas the GUI, you just want it to
+
+24
+00:01:25,470 --> 00:01:28,440
+look nice and hopefully work most of the
+time.
+
+25
+00:01:29,650 --> 00:01:34,220
+So if you've got logic, so called business
+
+26
+00:01:34,220 --> 00:01:37,310
+logic that doesn't isn't obviously to do
+with,
+
+27
+00:01:37,310 --> 00:01:41,000
+you know, text boxes and text areas and,
+
+28
+00:01:41,000 --> 00:01:42,760
+you know, check boxes and things like
+that.
+
+29
+00:01:43,780 --> 00:01:46,550
+So it's not part of the view, the GUI.
+
+30
+00:01:46,550 --> 00:01:51,884
+And it's not part of the data handling, we
+call it \Data Handling Code.
+
+31
+00:01:51,884 --> 00:01:54,540
+Then that logic is considered part of the
+
+32
+00:01:54,540 --> 00:01:57,310
+controller, and we may as well create a
+special
+
+33
+00:01:57,310 --> 00:02:00,560
+package for it here, so I'll say new, I'll
+
+34
+00:02:00,560 --> 00:02:02,650
+right click on source actually, and I'll
+say new
+
+35
+00:02:05,230 --> 00:02:07,705
+new package, and I'll just call that
+controller.
+
+36
+00:02:07,705 --> 00:02:12,242
+[SOUND] There's nothing cast iron about
+this.
+
+37
+00:02:12,242 --> 00:02:14,292
+You wouldn't necessarily do this in a
+
+38
+00:02:14,292 --> 00:02:17,110
+real application, although you would, at
+the very
+
+39
+00:02:17,110 --> 00:02:19,736
+least have a rigid demarcation between
+back
+
+40
+00:02:19,736 --> 00:02:22,590
+end model code and front end GUI code.
+
+41
+00:02:22,590 --> 00:02:25,779
+So in the controller, I'm actually gonna
+create
+
+42
+00:02:25,779 --> 00:02:28,288
+a class here, which I'll just call
+Controller.
+
+43
+00:02:28,288 --> 00:02:34,410
+Controller and I'm gonna
+
+44
+00:02:34,410 --> 00:02:39,760
+give so the main frame, is gonna call
+controller, when
+
+45
+00:02:39,760 --> 00:02:43,910
+it wants to add stuff to the database, and
+I'm gonna go to the mainframe here.
+
+46
+00:02:43,910 --> 00:02:50,080
+And we're gonna give it a private
+controller, control box and the main frame
+
+47
+00:02:52,600 --> 00:02:55,390
+calls the controller and the main frame
+actually is
+
+48
+00:02:55,390 --> 00:02:57,466
+a sort of controller in itself really,
+because it hooks.
+
+49
+00:02:57,466 --> 00:03:03,124
+Some of the components and tells them what
+to do [NOISE] but I'm going to have like
+
+50
+00:03:03,124 --> 00:03:07,636
+an actual controller that interfaces
+between the database, and
+
+51
+00:03:07,636 --> 00:03:10,782
+sort of more, more sort of gooey specific
+code.
+
+52
+00:03:10,782 --> 00:03:15,353
+So that's yeah, added the input there and
+that's create.
+
+53
+00:03:15,353 --> 00:03:21,578
+A controller here equals new controller.
+
+54
+00:03:21,578 --> 00:03:28,303
+Like this and now the, the test that I
+want to handle in this
+
+55
+00:03:28,303 --> 00:03:35,178
+tutorial is that the the the kind of,where
+is it?
+
+56
+00:03:35,178 --> 00:03:36,414
+When.
+
+57
+00:03:37,470 --> 00:03:39,230
+When stuff is added to the form.
+
+58
+00:03:39,230 --> 00:03:40,610
+Someone clicks the Okay button.
+
+59
+00:03:40,610 --> 00:03:43,140
+Basically raises its form event.
+
+60
+00:03:43,140 --> 00:03:45,460
+Which carries information about people.
+
+61
+00:03:46,490 --> 00:03:51,070
+And at the moment it's just sort of
+outputting some of it in the text area.
+
+62
+00:03:51,070 --> 00:03:54,310
+Which we're gonna change to a J table
+shortly.
+
+63
+00:03:54,310 --> 00:03:57,510
+And, what I want to do here is I want.
+
+64
+00:03:57,510 --> 00:04:03,280
+This to actually add the data to a
+database, even if for the moment it's only
+
+65
+00:04:03,280 --> 00:04:08,930
+gonna be basically an array list, and to
+do that, I
+
+66
+00:04:08,930 --> 00:04:15,510
+need to transform this data to stuff that
+could go in this.
+
+67
+00:04:15,510 --> 00:04:17,230
+Person object here.
+
+68
+00:04:18,470 --> 00:04:20,800
+So to do that.
+
+69
+00:04:20,800 --> 00:04:23,830
+If I go to yeah.
+
+70
+00:04:23,830 --> 00:04:26,140
+If I go back to my main frame.
+
+71
+00:04:27,480 --> 00:04:27,900
+I could.
+
+72
+00:04:27,900 --> 00:04:29,600
+One thing I could do is I could have
+control, a
+
+73
+00:04:29,600 --> 00:04:33,670
+method on controller that accepts all
+these different pieces of data.
+
+74
+00:04:33,670 --> 00:04:38,230
+And then turn and then creates a person
+object, and adds it to the database.
+
+75
+00:04:38,230 --> 00:04:43,000
+Or I could just pass this event to the
+controller really.
+
+76
+00:04:44,230 --> 00:04:45,750
+And I think I'll do that.
+
+77
+00:04:45,750 --> 00:04:49,610
+Because although I feel that possibly
+having a method
+
+78
+00:04:49,610 --> 00:04:52,410
+here that accepts all the different pieces
+of information.
+
+79
+00:04:52,410 --> 00:04:54,550
+It might be more elegant because it avoids
+
+80
+00:04:54,550 --> 00:04:59,790
+referring to the form event in the
+controller class.
+
+81
+00:04:59,790 --> 00:05:02,540
+Just to save time actually I'm just gonna
+
+82
+00:05:02,540 --> 00:05:06,610
+give it a method here that, called public
+void.
+
+83
+00:05:07,670 --> 00:05:08,600
+addPerson.
+
+84
+00:05:08,600 --> 00:05:12,480
+And it's just gonna accept the form event
+and call it
+
+85
+00:05:14,850 --> 00:05:15,020
+ev.
+
+86
+00:05:15,020 --> 00:05:17,432
+And so now in my main frame.
+
+87
+00:05:17,432 --> 00:05:19,200
+Start the import for that.
+
+88
+00:05:19,200 --> 00:05:23,250
+And, and here as I'm importing GUI stuff
+into my controller.
+
+89
+00:05:23,250 --> 00:05:25,530
+And that's not so bad.
+
+90
+00:05:25,530 --> 00:05:26,660
+But what most.
+
+91
+00:05:26,660 --> 00:05:31,870
+Never happen, is you must never import GUI
+stuff into your data model,
+
+92
+00:05:32,870 --> 00:05:38,049
+so let's go to the mainframe here, and I'm
+gonna say here,
+
+93
+00:05:38,049 --> 00:05:42,800
+controller.addPerson and just pass at
+this.
+
+94
+00:05:42,800 --> 00:05:46,390
+Event here, and let's get rid of all that
+stuff.
+
+95
+00:05:49,675 --> 00:05:53,480
+I search the E, not the EV okay?
+
+96
+00:05:53,480 --> 00:05:57,670
+Now, in this method the first thing to do
+
+97
+00:05:57,670 --> 00:05:59,490
+is get all the information I need from the
+events.
+
+98
+00:05:59,490 --> 00:06:04,790
+Let's say string name equals
+event.getName.
+
+99
+00:06:06,540 --> 00:06:15,140
+And string occupation, occupation, equals
+event.getOccupation.
+
+100
+00:06:15,140 --> 00:06:21,076
+And, let's run the application and see
+what else it's got in, it's got age.
+
+101
+00:06:21,076 --> 00:06:22,540
+[UNKNOWN] Age, category.
+
+102
+00:06:22,540 --> 00:06:23,070
+So
+
+103
+00:06:25,920 --> 00:06:31,520
+we've got an event.getAgeCategory which
+return an int, so int
+
+104
+00:06:31,520 --> 00:06:37,100
+age cat and calls and we've got an
+employment category then.
+
+105
+00:06:37,100 --> 00:06:46,310
+GetEmploymentCategory, which returns the
+string, so string empCat equals.
+
+106
+00:06:46,310 --> 00:06:52,310
+And we've also got a US citizen Boolean.
+
+107
+00:06:52,310 --> 00:06:58,180
+So, Boolean is US equals ev.get.
+
+108
+00:06:58,180 --> 00:07:05,690
+Actually it is US citizen and you may have
+a tax ID, or that may be set to nothing.
+
+109
+00:07:05,690 --> 00:07:08,210
+It may be null or empty.
+
+110
+00:07:08,210 --> 00:07:12,733
+So string tax ID equals event.getTaxId.
+
+111
+00:07:13,828 --> 00:07:15,470
+and.
+
+112
+00:07:15,470 --> 00:07:17,540
+And this looks for gender.
+
+113
+00:07:17,540 --> 00:07:19,510
+So event.getGender.
+
+114
+00:07:20,832 --> 00:07:23,036
+And that returns a string.
+
+115
+00:07:23,036 --> 00:07:27,970
+So string gender equals.
+
+116
+00:07:27,970 --> 00:07:30,316
+Now my person takes, it has kind
+
+117
+00:07:30,316 --> 00:07:33,835
+of different requirement for how it's
+constructed.
+
+118
+00:07:33,835 --> 00:07:40,680
+And so let's say Person person equals new
+Person.
+
+119
+00:07:42,250 --> 00:07:45,910
+I'm gonna, after I supply a bunch of
+things to the constructor here, and
+
+120
+00:07:45,910 --> 00:07:51,510
+when I've constructed the person, then I
+can add it to the database with this.
+
+121
+00:07:52,600 --> 00:07:54,700
+So, let's have the, let's make the
+
+122
+00:07:54,700 --> 00:07:56,520
+controller have a reference to the
+database.
+
+123
+00:07:56,520 --> 00:07:57,680
+So let's say database.
+
+124
+00:07:57,680 --> 00:08:01,380
+Db equals new Database.
+
+125
+00:08:03,740 --> 00:08:04,240
+There we go.
+
+126
+00:08:05,340 --> 00:08:10,300
+And then, I can port, and then I can say
+db.add
+
+127
+00:08:10,300 --> 00:08:13,170
+person and then I can add the person that
+I created there.
+
+128
+00:08:14,830 --> 00:08:15,810
+So now I just need to.
+
+129
+00:08:15,810 --> 00:08:17,840
+To take these, and transform them to the
+
+130
+00:08:17,840 --> 00:08:21,790
+appropriate type to supply to the person
+constructor.
+
+131
+00:08:21,790 --> 00:08:25,016
+So if I put my cursor between these two
+round brackets in the person
+
+132
+00:08:25,016 --> 00:08:28,150
+constructor, and hit Ctrl+Space in
+eclipse, it
+
+133
+00:08:28,150 --> 00:08:30,410
+shows me all the arguments I need.
+
+134
+00:08:30,410 --> 00:08:34,980
+So, I need a name, occupation,
+
+135
+00:08:36,720 --> 00:08:42,165
+now I need age category, so, yup, so that
+should be.
+
+136
+00:08:42,165 --> 00:08:42,865
+I should've known.
+
+137
+00:08:42,865 --> 00:08:43,955
+Just paste it.
+
+138
+00:08:43,955 --> 00:08:44,635
+Hcutler.
+
+139
+00:08:47,865 --> 00:08:53,085
+And I've lost my auto complete.
+
+140
+00:08:53,085 --> 00:08:54,665
+So let's take a look at this.
+
+141
+00:08:54,665 --> 00:08:56,125
+So age category.
+
+142
+00:08:56,125 --> 00:08:58,215
+Oh, it's actually I just got it wrong.
+
+143
+00:08:58,215 --> 00:08:59,835
+It's actually an age category.
+
+144
+00:09:01,985 --> 00:09:02,935
+enumeration.
+
+145
+00:09:02,935 --> 00:09:07,779
+So let's say AgeCategory, ageCategory.
+
+146
+00:09:10,090 --> 00:09:15,360
+And let's say switch page cut
+
+147
+00:09:17,680 --> 00:09:19,199
+and in fact let's call this.
+
+148
+00:09:20,202 --> 00:09:23,620
+Age catId to make it more explicit, what
+it is.
+
+149
+00:09:23,620 --> 00:09:30,353
+And I can say switch age cat, age catId,
+and case 0
+
+150
+00:09:30,353 --> 00:09:35,940
+I can set ageCategory to ageCategory
+
+151
+00:09:35,940 --> 00:09:42,020
+.child, and if you remember, age category
+is.
+
+152
+00:09:42,020 --> 00:09:44,630
+Is this enumeration that I've got here.
+
+153
+00:09:45,970 --> 00:09:50,720
+So I'm transforming from the integer which
+the form returns to the enumeration.
+
+154
+00:09:52,910 --> 00:09:55,173
+And that may or may not be a necessary, or
+a good
+
+155
+00:09:55,173 --> 00:09:59,380
+thing to do, depending on your database
+and, you know, kinda preferences.
+
+156
+00:09:59,380 --> 00:10:03,820
+But I'll do it here just to do something.
+
+157
+00:10:03,820 --> 00:10:07,250
+So and case 1.
+
+158
+00:10:07,250 --> 00:10:13,040
+Set it to adult, and case 2, we'll set it
+to
+
+159
+00:10:14,480 --> 00:10:19,990
+senior, and ten I can supply a age
+category there,
+
+160
+00:10:19,990 --> 00:10:26,350
+and my autocomplete's helped me come back,
+so that's.
+
+161
+00:10:26,350 --> 00:10:29,400
+Invoke auto complete, press F2 to get this
+focus.
+
+162
+00:10:29,400 --> 00:10:30,030
+I can scroll.
+
+163
+00:10:31,050 --> 00:10:33,460
+Now I need employment category.
+
+164
+00:10:33,460 --> 00:10:36,920
+So I need the same thing again basically.
+
+165
+00:10:36,920 --> 00:10:39,680
+Employment category, you're call on the
+phone.
+
+166
+00:10:39,680 --> 00:10:41,440
+People can select from one of three
+
+167
+00:10:41,440 --> 00:10:44,450
+categories, or they can type stuff
+themselves.
+
+168
+00:10:44,450 --> 00:10:50,065
+So let's have a variable of type
+employment
+
+169
+00:10:50,065 --> 00:10:56,590
+category, and category, and let's do, I
+can't
+
+170
+00:10:56,590 --> 00:11:02,810
+do switch on a string, I don't think, so
+let's
+
+171
+00:11:02,810 --> 00:11:09,182
+say, if if empcatdoc equals employed then,
+
+172
+00:11:09,182 --> 00:11:14,219
+I'm gonna say, empCategory equals.
+
+173
+00:11:15,324 --> 00:11:18,070
+Employment category.employed.
+
+174
+00:11:20,470 --> 00:11:23,610
+else, and then let's copy and paste this.
+
+175
+00:11:23,610 --> 00:11:30,935
+So we're gonna say else if it equals
+selfEmployed then we have selfEmployed.
+
+176
+00:11:33,140 --> 00:11:40,060
+If it equals unemployed then this equals
+unemployed.
+
+177
+00:11:41,910 --> 00:11:43,900
+And finally, we've got another which is
+where
+
+178
+00:11:43,900 --> 00:11:47,220
+the, the user types something his or
+herself.
+
+179
+00:11:47,220 --> 00:11:53,110
+So let's say else there it equals other.
+
+180
+00:11:54,370 --> 00:11:57,180
+And in the case of it equalling other, I'm
+just gonna,
+
+181
+00:11:57,180 --> 00:12:00,310
+in lieu of doing actual testing, which of
+course you should do.
+
+182
+00:12:01,320 --> 00:12:03,300
+Let's get this working.
+
+183
+00:12:03,300 --> 00:12:06,625
+I'm just gonna say system.add.printLn.
+
+184
+00:12:08,440 --> 00:12:15,080
+I'm gonna print out the empCat just to
+remind me and just so I can see that if
+
+185
+00:12:15,080 --> 00:12:21,770
+it is equal to other that it's not
+self-employed, unemployed, or employed.
+
+186
+00:12:21,770 --> 00:12:23,110
+Just as a debugging aid there.
+
+187
+00:12:23,110 --> 00:12:26,510
+So, system.airPrints kind of red text down
+here in the console.
+
+188
+00:12:27,850 --> 00:12:34,890
+And now I can add empCategory to to this
+constructor.
+
+189
+00:12:34,890 --> 00:12:37,690
+And, let's take a look at what else.
+
+190
+00:12:37,690 --> 00:12:45,070
+I need in here, so I've got employment
+category tax ID, US citizen, gender.
+
+191
+00:12:45,070 --> 00:12:52,500
+So let's have here tax ID US see what I
+called it up here, let's
+
+192
+00:12:53,560 --> 00:12:59,250
+maximize the editor with Ctrl+N, and.
+
+193
+00:12:59,250 --> 00:13:05,860
+And I called it is US, so that's put in
+here and it's US, true or false
+
+194
+00:13:07,990 --> 00:13:12,000
+and then I need a gender, which again, is
+a category thing.
+
+195
+00:13:12,000 --> 00:13:20,420
+So, that's our gender gender except that I
+think I've already used gender up here.
+
+196
+00:13:20,420 --> 00:13:22,890
+So, let's call that gender count.
+
+197
+00:13:24,110 --> 00:13:30,863
+And I can say if gender.equals
+
+198
+00:13:30,863 --> 00:13:34,690
+male then genderCut
+
+199
+00:13:34,690 --> 00:13:39,204
+equals gender.male.
+
+200
+00:13:39,204 --> 00:13:43,020
+Let's add the import there.
+
+201
+00:13:43,020 --> 00:13:43,558
+Yeah, okay.
+
+202
+00:13:43,558 --> 00:13:46,264
+And else.
+
+203
+00:13:46,264 --> 00:13:54,220
+And I shall presume that gender Cat equals
+gender.female, if not male.
+
+204
+00:13:55,410 --> 00:13:58,520
+And then let's add this here.
+
+205
+00:13:58,520 --> 00:14:00,500
+So genderCat.
+
+206
+00:14:00,500 --> 00:14:01,000
+Okay.
+
+207
+00:14:02,170 --> 00:14:06,150
+If I save that I still got an error
+
+208
+00:14:06,150 --> 00:14:11,410
+age category may not have been initialized
+and that's because
+
+209
+00:14:13,440 --> 00:14:15,710
+I haven't gotten a default case here.
+
+210
+00:14:15,710 --> 00:14:21,492
+So let's say well let's just
+
+211
+00:14:21,492 --> 00:14:27,638
+say [INAUDIBLE] equals to mean
+[INAUDIBLE].
+
+212
+00:14:27,638 --> 00:14:33,668
+So now when I fill in the person details
+then
+
+213
+00:14:33,668 --> 00:14:39,449
+hopefully it's just gotten in to my data
+base or if
+
+214
+00:14:39,449 --> 00:14:45,970
+you haven't seen it happen and what we're
+going to do.
+
+215
+00:14:45,970 --> 00:14:50,627
+Tutorial is, I'm gonna change this text
+area to a J table, and
+
+216
+00:14:50,627 --> 00:14:55,780
+we're gonna look at viewing the data in
+the database, in that J table.
+
+217
+00:14:55,780 --> 00:14:58,150
+So join me again next time, where we'll
+
+218
+00:14:58,150 --> 00:15:00,770
+get back to looking at actual swing
+components.
+
+219
+00:15:00,770 --> 00:15:03,870
+And until then, happy coding
+

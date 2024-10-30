@@ -1,0 +1,588 @@
+1
+00:00:01,480 --> 00:00:02,940
+Hello, this is John, from
+caveofprogramming.com
+
+2
+00:00:02,940 --> 00:00:07,010
+and in this tutorial, we're gonna look
+
+3
+00:00:07,010 --> 00:00:12,440
+at the border layout, layout manager and
+at text areas a little bit.
+
+4
+00:00:13,670 --> 00:00:18,220
+So, in the last tutorial I showed you how
+to create, a
+
+5
+00:00:18,220 --> 00:00:23,390
+basic application, which looks like this,
+such as the window and it's blank.
+
+6
+00:00:24,830 --> 00:00:28,320
+And in this tutorial, we're gonna start
+adding some controls to this window.
+
+7
+00:00:29,520 --> 00:00:33,570
+Now, this is the point at which swing gets
+
+8
+00:00:33,570 --> 00:00:35,490
+a little bit complex,, but once you can
+get
+
+9
+00:00:35,490 --> 00:00:38,360
+over this hump you can tackle all kinds of
+
+10
+00:00:38,360 --> 00:00:43,690
+projects because to actually add
+components to a window.
+
+11
+00:00:43,690 --> 00:00:48,750
+You, need to know something about, layouts
+managers and
+
+12
+00:00:48,750 --> 00:00:52,370
+there are several different layout
+managers in, in Java swing.
+
+13
+00:00:52,370 --> 00:00:55,270
+And the task of layout managers, is to
+
+14
+00:00:55,270 --> 00:00:58,760
+decide where to put the components in the
+window.
+
+15
+00:00:58,760 --> 00:01:01,030
+And also to kind of move those
+
+16
+00:01:01,030 --> 00:01:05,050
+components to appropriate locations and
+resize them appropriately.
+
+17
+00:01:05,050 --> 00:01:08,490
+When you expand or contract the window and
+
+18
+00:01:08,490 --> 00:01:10,940
+that's where a lot of the complexity comes
+from.
+
+19
+00:01:10,940 --> 00:01:14,010
+And we're gonna start with a very simple
+layout manager here.
+
+20
+00:01:16,350 --> 00:01:23,090
+So at the moment if, if I look at this the
+code that we've got so far we've just got
+
+21
+00:01:23,090 --> 00:01:26,880
+a really simple we're creating a frame,
+setting the size
+
+22
+00:01:26,880 --> 00:01:30,360
+of it, setting what happens when you click
+across any corner.
+
+23
+00:01:30,360 --> 00:01:34,470
+And setting it to visible and so that's
+the operation when a frame's been set up.
+
+24
+00:01:35,920 --> 00:01:38,290
+And what I'm gonna do for a start in this
+tutorial is something
+
+25
+00:01:38,290 --> 00:01:41,380
+that you'll probably want to do most of
+the time, which is I'm gonna
+
+26
+00:01:41,380 --> 00:01:46,500
+create my own custom child class version
+of JFrame so that I
+
+27
+00:01:46,500 --> 00:01:51,479
+can put codes in a constructor, that will
+add components and we'll do this stuff.
+
+28
+00:01:52,900 --> 00:01:57,790
+So, let's just right click the Default
+Package > New class.
+
+29
+00:01:57,790 --> 00:02:01,670
+And, I'm gonna create a new class called
+Mainframe.
+
+30
+00:02:03,310 --> 00:02:07,300
+And, and that's gonna extend JFrame.
+
+31
+00:02:07,300 --> 00:02:11,150
+So a handy tip is to give your child
+classes
+
+32
+00:02:11,150 --> 00:02:13,340
+names that reflect, reflect what kind of
+thing they are.
+
+33
+00:02:13,340 --> 00:02:15,640
+So, if you're creating a customized
+button,
+
+34
+00:02:15,640 --> 00:02:17,350
+call it something gorilla button and the
+
+35
+00:02:17,350 --> 00:02:22,230
+customize frame, something go to frame, so
+on, to kind of help you keep track.
+
+36
+00:02:22,230 --> 00:02:31,352
+And I'm gonna give this a constructor, so
+public name frame like this.
+
+37
+00:02:31,352 --> 00:02:35,080
+And the first thing I'm gonna do here,
+let's take a look at this app again.
+
+38
+00:02:35,080 --> 00:02:40,280
+So, here, we're setting the title by
+calling this constructor
+
+39
+00:02:40,280 --> 00:02:44,640
+of JFrame and I'm gonna move that code
+into here.
+
+40
+00:02:44,640 --> 00:02:49,370
+I'm gonna say, super to call the super
+class constructor and I'm gonna say in
+
+41
+00:02:49,370 --> 00:02:53,090
+there, hello world, so that's kind of
+
+42
+00:02:53,090 --> 00:02:57,980
+equivalent to whoops, didn't meant to do
+that.
+
+43
+00:02:57,980 --> 00:03:01,910
+That's kind of equivalent to, this code
+here and
+
+44
+00:03:03,410 --> 00:03:08,060
+now I'm gonna change this JFrame frame
+equals new JFrame.
+
+45
+00:03:08,060 --> 00:03:10,100
+To just a simple command.
+
+46
+00:03:10,100 --> 00:03:14,290
+New name frame, to create a new class
+
+47
+00:03:14,290 --> 00:03:18,860
+of the mainframe type, which I'm defining
+now.
+
+48
+00:03:18,860 --> 00:03:21,460
+And let's get rid of that, and let's take
+this
+
+49
+00:03:21,460 --> 00:03:26,150
+code and move it into the constructor of
+my new class.
+
+50
+00:03:26,150 --> 00:03:29,600
+So, my main method is just going to be
+very simple.
+
+51
+00:03:29,600 --> 00:03:32,610
+It's just gonna run this main frame
+object.
+
+52
+00:03:33,890 --> 00:03:35,720
+Save that and I'll go to main frame.
+
+53
+00:03:35,720 --> 00:03:39,940
+And then in construct I'll paste this in
+and now we don't need
+
+54
+00:03:39,940 --> 00:03:45,580
+this, frame reference because we can call
+the methods, of the parent class.
+
+55
+00:03:45,580 --> 00:03:46,550
+Directly, like this.
+
+56
+00:03:48,310 --> 00:03:49,865
+so, at the moment.
+
+57
+00:03:49,865 --> 00:03:53,790
+All I've done now, really, is divide the
+existing code into two separate files.
+
+58
+00:03:53,790 --> 00:03:55,560
+And that will just run as before.
+
+59
+00:03:55,560 --> 00:04:00,510
+But now, it's kind of, neater to add, more
+components to main frame.
+
+60
+00:04:01,830 --> 00:04:02,950
+Now, the first thing to do when you're
+
+61
+00:04:02,950 --> 00:04:07,480
+adding components is to set an appropriate
+layout manager.
+
+62
+00:04:07,480 --> 00:04:13,250
+And as I mentioned in the inch dot tree
+tutorial, if you go to Google.
+
+63
+00:04:13,250 --> 00:04:18,590
+Whoops, go to Google and search for visual
+guides
+
+64
+00:04:18,590 --> 00:04:23,840
+layout swing, something like that, you get
+this rather handy page.
+
+65
+00:04:23,840 --> 00:04:26,820
+And this shows you the different kind of
+layout managers that you can use.
+
+66
+00:04:27,910 --> 00:04:31,350
+In a most flexible and complex form which
+we will cover later on, this grid
+
+67
+00:04:31,350 --> 00:04:36,430
+backed layout that lets you put things in
+a sort of very, very flexible grid format.
+
+68
+00:04:36,430 --> 00:04:38,190
+And, but there's several others you can
+see,
+
+69
+00:04:38,190 --> 00:04:40,210
+most of which we'll be covering to some
+extent.
+
+70
+00:04:40,210 --> 00:04:45,120
+And the one that I'm gonna show you here,
+is this border layout.
+
+71
+00:04:46,150 --> 00:04:49,380
+And border layout is often used, to kind
+of
+
+72
+00:04:49,380 --> 00:04:53,310
+sculpt the, the very basic outlines of an
+application.
+
+73
+00:04:54,540 --> 00:04:56,440
+So you could use this type of tool bar at
+the top,
+
+74
+00:04:56,440 --> 00:05:00,590
+let's say, and panels in, you know, in the
+middle, left and right.
+
+75
+00:05:00,590 --> 00:05:03,718
+And maybe something in the bottom, like a
+status bar or something.
+
+76
+00:05:03,718 --> 00:05:05,930
+What border layout does, is it just allows
+you to add
+
+77
+00:05:05,930 --> 00:05:10,030
+components, in the center position or the,
+the compass points, basically.
+
+78
+00:05:11,470 --> 00:05:14,328
+So, let's use that to add a couple of
+components.
+
+79
+00:05:14,328 --> 00:05:18,820
+I'm gonna go here, to my main window and
+say, set layout.
+
+80
+00:05:18,820 --> 00:05:22,580
+And I want to pass that, an object of the
+type border layout.
+
+81
+00:05:22,580 --> 00:05:26,230
+So, I'll say new border layout here.
+
+82
+00:05:26,230 --> 00:05:32,260
+New border layout, and add the import with
+CTRL+SHIFT+O in Eclipse.
+
+83
+00:05:32,260 --> 00:05:34,890
+And then, let's create a couple of
+components that I want to add.
+
+84
+00:05:34,890 --> 00:05:37,180
+And you'll often want to, create
+
+85
+00:05:37,180 --> 00:05:40,350
+your components as private instance
+variables so
+
+86
+00:05:40,350 --> 00:05:41,450
+that you can access them from
+
+87
+00:05:41,450 --> 00:05:44,980
+multiple methods, although, that's not
+always necessary.
+
+88
+00:05:44,980 --> 00:05:48,230
+I'm gonna have here a, a JTextArea.
+
+89
+00:05:48,230 --> 00:05:53,850
+A text area is a region like this editor,
+that I'm
+
+90
+00:05:53,850 --> 00:05:57,520
+working in here, which just contains a
+whole bunch of text.
+
+91
+00:05:57,520 --> 00:06:02,610
+And if you just want one line of text
+you'd use, JTextField and I'll call
+
+92
+00:06:02,610 --> 00:06:07,900
+that TextArea, and, and I'm also, I'm
+gonna add the import.
+
+93
+00:06:07,900 --> 00:06:11,760
+And then I also have a private JButton.
+
+94
+00:06:11,760 --> 00:06:13,050
+Let's just call that btn.
+
+95
+00:06:14,760 --> 00:06:16,490
+And, at the import for JButton.
+
+96
+00:06:16,490 --> 00:06:18,200
+And you can either create your new
+
+97
+00:06:18,200 --> 00:06:20,240
+components directly here, in which case
+they'll be
+
+98
+00:06:20,240 --> 00:06:22,130
+created, of course, when a class is
+loaded,
+
+99
+00:06:22,130 --> 00:06:23,850
+or you can create them in your
+constructor.
+
+100
+00:06:25,090 --> 00:06:27,340
+In which case it'll be created when the
+object is created.
+
+101
+00:06:27,340 --> 00:06:29,740
+I, I don't see that it really makes a huge
+amount of difference.
+
+102
+00:06:29,740 --> 00:06:36,530
+Well, I'm gonna say text area here equals
+new JTextArea, like that.
+
+103
+00:06:36,530 --> 00:06:40,190
+And, I'm gonna say button equals new
+JButton.
+
+104
+00:06:40,190 --> 00:06:44,950
+And let's just put some text on that
+button, says, click, click me.
+
+105
+00:06:46,920 --> 00:06:49,000
+And now, I can add those components.
+
+106
+00:06:50,230 --> 00:06:53,720
+To my main frame, using this layout
+manager.
+
+107
+00:06:53,720 --> 00:06:58,450
+Strictly speaking, I'm adding it to the
+content pane of the JFrame.
+
+108
+00:06:58,450 --> 00:07:03,590
+The content pane is like a panel, that the
+JFrame contains, which will contain the
+
+109
+00:07:03,590 --> 00:07:07,010
+components, but we don't need to worry
+about that here, I can simply say add.
+
+110
+00:07:08,020 --> 00:07:12,270
+Passing the controller I want to add, so
+let's say, text barrier and then pass
+
+111
+00:07:12,270 --> 00:07:18,010
+in a static constant of border layout, to
+say where I want to add this control.
+
+112
+00:07:18,010 --> 00:07:23,857
+So, I'm gonna say border layout dot
+center.
+
+113
+00:07:23,857 --> 00:07:27,970
+Like that, so I can add the text area
+right in the middle.
+
+114
+00:07:27,970 --> 00:07:35,728
+And I'll add the button, in the south
+position I'll say, add
+
+115
+00:07:35,728 --> 00:07:43,000
+button B-T-N, border layout dot south,
+like this.
+
+116
+00:07:43,000 --> 00:07:46,975
+And, so these controls aren't gonna do
+anything in a moment,
+
+117
+00:07:46,975 --> 00:07:50,800
+but now if I run that, I've got this
+application here.
+
+118
+00:07:50,800 --> 00:07:52,500
+And I can click the button, it does
+nothing.
+
+119
+00:07:52,500 --> 00:07:55,810
+And I can type, text in here and so on.
+
+120
+00:07:55,810 --> 00:07:57,160
+And in the next tutorial, we're gonna look
+at
+
+121
+00:07:57,160 --> 00:08:01,560
+extending this application and starting to
+make it do stuff.
+
+122
+00:08:01,560 --> 00:08:03,250
+So, that's all for this tutorial, join me
+
+123
+00:08:03,250 --> 00:08:06,780
+again next time, and until next time,
+happy coding.
+

@@ -1,0 +1,390 @@
+1
+00:00:01,470 --> 00:00:03,650
+Hi, welcome back, in this tutorial we're
+
+2
+00:00:03,650 --> 00:00:07,286
+gonna look at responding to selections in
+JList.
+
+3
+00:00:07,286 --> 00:00:12,560
+So in the moment if I run this
+application, here in this
+
+4
+00:00:12,560 --> 00:00:16,969
+panel here, I've got a JList list which
+I've added objects to.
+
+5
+00:00:18,110 --> 00:00:21,550
+I have to type message and messages since
+it's an object I created myself.
+
+6
+00:00:22,950 --> 00:00:27,952
+And because you could just add strings to
+a JList but either way sometimes you want
+
+7
+00:00:27,952 --> 00:00:33,960
+actually respond when the user selects a
+different item.
+
+8
+00:00:33,960 --> 00:00:37,270
+So often what you want to do is you want
+to have a button like here
+
+9
+00:00:37,270 --> 00:00:39,790
+and you just get the selection when the
+
+10
+00:00:39,790 --> 00:00:42,450
+user clicks the button and we've covered
+that before.
+
+11
+00:00:42,450 --> 00:00:45,310
+But what I'm gonna show you in this
+tutorial is, how
+
+12
+00:00:45,310 --> 00:00:48,725
+to actually detect when an item is
+selected in a JList.
+
+13
+00:00:50,340 --> 00:00:54,055
+So, let's go to the message panel and
+
+14
+00:00:54,055 --> 00:00:59,060
+I'll search for the message list, JList in
+here.
+
+15
+00:01:00,340 --> 00:01:02,440
+And here it is.
+
+16
+00:01:02,440 --> 00:01:10,769
+And I'm gonna say,
+messageList.addListSelectionListener.
+
+17
+00:01:11,780 --> 00:01:20,691
+And, I'll add a new ListSelectionListener
+
+18
+00:01:20,691 --> 00:01:24,180
+and I'm going to add do Ctrl+Shift+O to
+add the import there.
+
+19
+00:01:26,080 --> 00:01:31,210
+Doesn't seem to have worked, I've got a
+extra bracket there.
+
+20
+00:01:31,210 --> 00:01:32,950
+Okay, Ctrl+Shift+O, etcetera.
+
+21
+00:01:32,950 --> 00:01:36,630
+Put the bracket in the right place and I'm
+going
+
+22
+00:01:36,630 --> 00:01:39,690
+to add the unimplemented method it just
+the value change method.
+
+23
+00:01:39,690 --> 00:01:44,380
+And this is called whenever someone clicks
+an item on the list.
+
+24
+00:01:44,380 --> 00:01:48,430
+And all I'm going to do here is I'm going
+to get the selection from the list but
+
+25
+00:01:48,430 --> 00:01:51,040
+I'm going to get the selected object in
+the
+
+26
+00:01:51,040 --> 00:01:53,890
+list, which if you know these strings will
+be strings.
+
+27
+00:01:53,890 --> 00:01:59,432
+Well I've added message objects to
+
+28
+00:01:59,432 --> 00:02:05,339
+the, o the list, so if I say message,
+
+29
+00:02:05,339 --> 00:02:10,142
+message equals messageList,
+
+30
+00:02:10,142 --> 00:02:16,425
+messageList.get, getSelectedValue
+
+31
+00:02:16,425 --> 00:02:21,210
+rather than getSelected.
+
+32
+00:02:21,210 --> 00:02:23,730
+So we've seen it get to that index before
+and that
+
+33
+00:02:23,730 --> 00:02:26,980
+get's you the index starting at zero with
+the selected item.
+
+34
+00:02:26,980 --> 00:02:31,280
+If you say getSelectedValue it returns an
+object of
+
+35
+00:02:31,280 --> 00:02:33,090
+whatever kind of thing you added to the
+list.
+
+36
+00:02:33,090 --> 00:02:35,340
+If you added strings, you get strings.
+
+37
+00:02:35,340 --> 00:02:40,540
+I added these message objects that I
+created so I'm gonna get message objects.
+
+38
+00:02:41,550 --> 00:02:44,200
+So, I'm gonna [UNKNOWN] a message.
+
+39
+00:02:44,200 --> 00:02:46,480
+Saying string, so I'm typing string.
+
+40
+00:02:46,480 --> 00:02:51,100
+And now I can say, I can get the text to
+that message.
+
+41
+00:02:51,100 --> 00:02:51,820
+And what I wanna do is
+
+42
+00:02:51,820 --> 00:02:59,162
+I wanna say, textPane, textPanel.setText
+and message.getContents.
+
+43
+00:02:59,162 --> 00:03:03,680
+Actually the problem with this is I
+haven't actually
+
+44
+00:03:03,680 --> 00:03:07,030
+to define the set text in my message
+panel.
+
+45
+00:03:07,030 --> 00:03:09,650
+So let's go to a text panel, sorry.
+
+46
+00:03:09,650 --> 00:03:13,534
+So let's go to the text panel here
+
+47
+00:03:13,534 --> 00:03:19,510
+and give it a public void setText(String
+Text).
+
+48
+00:03:19,510 --> 00:03:21,490
+And this is just gonna wrap the
+
+49
+00:03:21,490 --> 00:03:24,760
+corresponding method in the underline text
+area.
+
+50
+00:03:24,760 --> 00:03:29,940
+So I could really have just use a text
+area directly in this lower panel.
+
+51
+00:03:31,460 --> 00:03:35,170
+So let's say set text, text.
+
+52
+00:03:36,220 --> 00:03:37,120
+Here we go, text.
+
+53
+00:03:38,800 --> 00:03:44,110
+And now when I run this program, I'm going
+to get, if I select
+
+54
+00:03:44,110 --> 00:03:47,500
+an item on the list, the text will appear
+in the panel down here.
+
+55
+00:03:47,500 --> 00:03:51,360
+And I'm going to make one little tweak
+here which is I'm
+
+56
+00:03:51,360 --> 00:03:55,748
+gong to go to the message panel and let's
+find the retrieveMessages method.
+
+57
+00:03:55,748 --> 00:03:58,126
+RetrieveMessages.
+
+58
+00:03:58,126 --> 00:04:03,550
+So, it sets, retrieve messages sets the
+items in the list right here.
+
+59
+00:04:03,550 --> 00:04:07,555
+And I just want to say, after we
+
+60
+00:04:07,555 --> 00:04:11,871
+finish adding items, let's say
+
+61
+00:04:11,871 --> 00:04:19,130
+messageList.setSelectedIndex and let's say
+zero.
+
+62
+00:04:19,130 --> 00:04:21,382
+So hopefully.
+
+63
+00:04:22,450 --> 00:04:26,060
+Now if we get like a default, we get like
+the
+
+64
+00:04:26,060 --> 00:04:31,700
+first item selected and we like the full
+text appearing down here.
+
+65
+00:04:31,700 --> 00:04:37,160
+Although the selection isn't showing which
+may be a little bug in my application.
+
+66
+00:04:37,160 --> 00:04:40,650
+But that's okay because actually I don't
+think it's
+
+67
+00:04:40,650 --> 00:04:42,922
+the same with Outlook but it wouldn't
+surprise me.
+
+68
+00:04:42,922 --> 00:04:48,520
+So let's, let's also I'm just gonna do one
+little thing that's not actually connected
+
+69
+00:04:48,520 --> 00:04:53,950
+to this at all but I just think might be
+text in this text panel down here.
+
+70
+00:04:53,950 --> 00:04:56,520
+It looks a little bit like it's too close
+to the border.
+
+71
+00:04:56,520 --> 00:04:59,950
+For that, I'm just going to go to my text
+panel.
+
+72
+00:04:59,950 --> 00:05:05,530
+I'm going to say, here, text, text,
+
+73
+00:05:05,530 --> 00:05:09,997
+area, text area, area.setBorder
+
+74
+00:05:09,997 --> 00:05:13,935
+and I'm going to set the border to a
+
+75
+00:05:13,935 --> 00:05:20,960
+BorderFactory.createEmptyBorder.
+
+76
+00:05:20,960 --> 00:05:24,420
+Let's set the import and create empty
+border and
+
+77
+00:05:24,420 --> 00:05:27,300
+I'll use the right, that type of anti
+border
+
+78
+00:05:27,300 --> 00:05:29,230
+that takes arguments and I'm just gonna
+put like
+
+79
+00:05:29,230 --> 00:05:33,880
+a 5 pixel, anti border around the text
+area.
+
+80
+00:05:33,880 --> 00:05:41,120
+So if we look at that now the text is a
+little bit indented, well
+
+81
+00:05:41,120 --> 00:05:45,620
+it's a little bit not quiet as flush to
+the edge as it was before which is good.
+
+82
+00:05:46,910 --> 00:05:49,250
+So I'll leave it there for this tutorial
+and join me again next.
+
+83
+00:05:49,250 --> 00:05:52,103
+Next time and until then, happy coding.
+
+84
+00:05:52,103 --> 00:05:55,129
+[BLANK_AUDIO]
+

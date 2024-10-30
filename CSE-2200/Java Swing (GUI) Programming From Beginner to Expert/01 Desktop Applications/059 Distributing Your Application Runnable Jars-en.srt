@@ -1,0 +1,544 @@
+1
+00:00:01,850 --> 00:00:05,590
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,590 --> 00:00:07,350
+And in this tutorial, we're look at how
+
+3
+00:00:07,350 --> 00:00:11,520
+you can distribute your application to
+your end user.
+
+4
+00:00:12,540 --> 00:00:16,240
+So this might seem kind of a strange point
+to insert
+
+5
+00:00:16,240 --> 00:00:19,240
+this tutorial in the series but the fact
+is, to tell you
+
+6
+00:00:19,240 --> 00:00:25,000
+the truth, that I skipped accidentally
+from tutorial 57 to tutorial
+
+7
+00:00:25,000 --> 00:00:28,450
+59 and that's why I've kinda gone back and
+inserted 58 here.
+
+8
+00:00:28,450 --> 00:00:31,870
+And this is of course, something that
+everyone needs to know.
+
+9
+00:00:31,870 --> 00:00:34,860
+So, here is as good a place to put it as
+any.
+
+10
+00:00:36,490 --> 00:00:42,480
+So, to distribute your application, the
+first step at least, and possibly
+
+11
+00:00:42,480 --> 00:00:46,775
+the only step you'll need, is to create a
+runable jav file.
+
+12
+00:00:46,775 --> 00:00:54,210
+That's a jav file, a .jav file, that you
+can run just by clicking on.
+
+13
+00:00:54,210 --> 00:01:00,020
+And your file will run in Windows 7 and, I
+presume, although I don't know if
+
+14
+00:01:00,020 --> 00:01:02,420
+it will also run on the Mac because,
+
+15
+00:01:02,420 --> 00:01:06,820
+historically MacIntoshes have supported
+Java better than Windows.
+
+16
+00:01:06,820 --> 00:01:09,540
+And presumably, Linux, as well.
+
+17
+00:01:09,540 --> 00:01:11,130
+So let's see how that works.
+
+18
+00:01:11,130 --> 00:01:15,660
+And you wanna make sure that you've got, a
+fairly recent version of Eclipse.
+
+19
+00:01:15,660 --> 00:01:18,020
+So, here, I've got, I don't know what it
+is.
+
+20
+00:01:18,020 --> 00:01:20,100
+I think it's 3.7.
+
+21
+00:01:20,100 --> 00:01:28,060
+But the functionality that we need was
+actually added in Eclipse 3.5 so,
+
+22
+00:01:28,060 --> 00:01:32,589
+update your Eclipse to a recent version if
+you have, if you've got an old version.
+
+23
+00:01:34,350 --> 00:01:36,770
+Now, assuming you've got a recent version
+of Eclipse,
+
+24
+00:01:36,770 --> 00:01:42,290
+right click your project folder and go to
+export.
+
+25
+00:01:42,290 --> 00:01:45,850
+And if your Eclipse is 3.5 or greater, you
+
+26
+00:01:45,850 --> 00:01:48,660
+will have this option runable JAV file in
+here.
+
+27
+00:01:48,660 --> 00:01:50,460
+And that's what you need.
+
+28
+00:01:50,460 --> 00:01:51,370
+Let's click next.
+
+29
+00:01:52,400 --> 00:01:56,830
+And on this screen here, you have to
+select.
+
+30
+00:01:56,830 --> 00:02:00,010
+The run configuration for your
+application.
+
+31
+00:02:00,010 --> 00:02:05,130
+And the run configuration basically just
+says which
+
+32
+00:02:05,130 --> 00:02:10,590
+name to run when the jar's double-clicked.
+
+33
+00:02:10,590 --> 00:02:15,520
+So, in this case I've got hold massive
+bunch of run configurations here,
+
+34
+00:02:16,560 --> 00:02:19,750
+because you get a run configuration is
+
+35
+00:02:19,750 --> 00:02:23,730
+created whenever you run an application,
+basically.
+
+36
+00:02:23,730 --> 00:02:29,120
+And you can rename these configurations if
+you want, up here in.
+
+37
+00:02:29,120 --> 00:02:33,820
+This little arrow by the run, green run
+menu, if you click on that, run
+
+38
+00:02:33,820 --> 00:02:39,080
+configurations, you'll be able to edit the
+name of
+
+39
+00:02:39,080 --> 00:02:44,340
+your, the names of your configurations
+here, but I wont do that here.
+
+40
+00:02:45,492 --> 00:02:51,072
+I'll just go to this export, runnable JAR
+[NOISE] option, and I can
+
+41
+00:02:51,072 --> 00:02:56,561
+recognize the rights configuration here
+cause it's got the name of my
+
+42
+00:02:56,561 --> 00:03:02,919
+project in it, swing 58 so we see here the
+launch configuration.
+
+43
+00:03:02,919 --> 00:03:08,220
+This one, here, is doing 58, distributing
+your application.
+
+44
+00:03:08,220 --> 00:03:09,920
+So I know that's the right one.
+
+45
+00:03:09,920 --> 00:03:12,650
+And if I had renamed it, if I had a green
+
+46
+00:03:12,650 --> 00:03:17,630
+run button, then that name would appear
+here which might be simpler.
+
+47
+00:03:17,630 --> 00:03:19,090
+Anyway, so you have to select the right.
+
+48
+00:03:19,090 --> 00:03:25,860
+Launch configuration, and you need to set
+your export configuration here.
+
+49
+00:03:25,860 --> 00:03:31,208
+So, I'm gonna set this to, C, let's see,
+C,
+
+50
+00:03:31,208 --> 00:03:37,020
+tutorial, swing, and I'm gonna export this
+as,
+
+51
+00:03:39,450 --> 00:03:40,480
+I dunno I'll call it
+
+52
+00:03:42,900 --> 00:03:48,010
+DB, DB, DB at top jaw.
+
+53
+00:03:48,010 --> 00:03:51,430
+So this is basically your, your runable
+program and I'm gonna click save there.
+
+54
+00:03:53,020 --> 00:03:56,020
+And these options are quite important.
+
+55
+00:03:56,020 --> 00:04:02,000
+What this means is to, to, to run our app,
+we've used
+
+56
+00:04:02,000 --> 00:04:06,540
+a JDBC, add on library, that's in there.
+
+57
+00:04:06,540 --> 00:04:12,070
+And the jar file, that added, fire, the
+build path of the project, you're wrong.
+
+58
+00:04:12,070 --> 00:04:17,570
+And if you're using any any extra job
+files.
+
+59
+00:04:17,570 --> 00:04:19,720
+Then they need to think about in here.
+
+60
+00:04:19,720 --> 00:04:23,180
+And your choices are basically, you could
+
+61
+00:04:23,180 --> 00:04:26,960
+export your files will contain class
+files.
+
+62
+00:04:26,960 --> 00:04:29,980
+And you can either extract the job files,
+get the class files
+
+63
+00:04:29,980 --> 00:04:33,299
+out and repackage them in to a remote job
+which is this option.
+
+64
+00:04:34,300 --> 00:04:37,960
+And that will usually work, but sometimes
+you can have problems with it.
+
+65
+00:04:37,960 --> 00:04:42,530
+The safest option is package required
+libraries into generated jar which will
+
+66
+00:04:42,530 --> 00:04:48,280
+take any jar files that you've used and
+put them in your runnable jar.
+
+67
+00:04:48,280 --> 00:04:52,250
+A jar file just being basically a bit like
+a zip file, really.
+
+68
+00:04:52,250 --> 00:04:54,470
+And the other option is copy required
+liable
+
+69
+00:04:54,470 --> 00:04:57,290
+into the sub folder next to the generated
+job.
+
+70
+00:04:57,290 --> 00:05:00,670
+And if you choose that option, you're
+gonna have to distribute
+
+71
+00:05:00,670 --> 00:05:05,530
+your job files that you may have used with
+your application.
+
+72
+00:05:05,530 --> 00:05:07,460
+So probably what you want is this middle
+option here.
+
+73
+00:05:07,460 --> 00:05:10,070
+Once you've done that, the last phase is
+pretty simple.
+
+74
+00:05:10,070 --> 00:05:13,020
+Just click finish, and usually you'll get.
+
+75
+00:05:13,020 --> 00:05:15,860
+Some warnings, but you shouldn't get any
+errors.
+
+76
+00:05:17,370 --> 00:05:22,690
+And these just compile warnings and I've
+been ignoring a
+
+77
+00:05:22,690 --> 00:05:28,610
+lot of compiler warnings because eclipse
+will warn you.
+
+78
+00:05:28,610 --> 00:05:33,200
+It will say that, you, you have not, it
+always brings up this.
+
+79
+00:05:33,200 --> 00:05:36,480
+Warning you have not jar added a, I think
+it's
+
+80
+00:05:36,480 --> 00:05:41,940
+called serial UID or something to your to
+your class.
+
+81
+00:05:41,940 --> 00:05:46,220
+But since we haven't needed to we haven't
+needed to
+
+82
+00:05:46,220 --> 00:05:50,690
+serialize these classes, then we haven't
+needed to add that ID.
+
+83
+00:05:50,690 --> 00:05:53,610
+And if you want these warnings to go away,
+you just have
+
+84
+00:05:53,610 --> 00:05:57,190
+to click on the warning icons, those
+little yellow warning icons in
+
+85
+00:05:57,190 --> 00:06:02,810
+your Java files in Eclipse and get it to
+add a Serialization
+
+86
+00:06:02,810 --> 00:06:06,630
+UID, but the bottom line is you can
+usually ignore these warnings.
+
+87
+00:06:06,630 --> 00:06:09,560
+So click OK, as long as you've not got any
+errors.
+
+88
+00:06:09,560 --> 00:06:12,980
+And now, hopefully I've generated my
+runnable job.
+
+89
+00:06:12,980 --> 00:06:16,160
+And I can got the folder that I put it in.
+
+90
+00:06:16,160 --> 00:06:17,640
+And here it is dbapp.jar.
+
+91
+00:06:17,640 --> 00:06:22,340
+And if I double click that it will run my
+application.
+
+92
+00:06:24,920 --> 00:06:29,430
+And if I click connect if everything's
+gone right
+
+93
+00:06:29,430 --> 00:06:32,970
+then it will connect just fine to my
+database.
+
+94
+00:06:34,900 --> 00:06:38,010
+So that's how you can generate a runnable
+jar.
+
+95
+00:06:38,010 --> 00:06:41,882
+And if you use Windows a lot, and you-
+
+96
+00:06:41,882 --> 00:06:45,970
+You all, so all you have to do is
+basically e-mail send somehow
+
+97
+00:06:45,970 --> 00:06:49,670
+this runable chart to your end user and of
+course if you've written
+
+98
+00:06:49,670 --> 00:06:55,530
+a database application you'll have to make
+sure that the URL that connects
+
+99
+00:06:55,530 --> 00:06:59,850
+to your database, that that's the URL that
+can be reached from their computer.
+
+100
+00:07:01,510 --> 00:07:09,250
+but, if you want, like a dot xr file for
+Windows, as you can see, a runnable jar is
+
+101
+00:07:09,250 --> 00:07:11,480
+fine in Windows 7, but if you particularly
+want
+
+102
+00:07:11,480 --> 00:07:16,450
+a dot xr, then I recommend a tool called
+j-smooth.
+
+103
+00:07:16,450 --> 00:07:18,850
+So just search for Jsmooth.
+
+104
+00:07:18,850 --> 00:07:24,650
+That's J and then the word smooth, all one
+word, in Google and
+
+105
+00:07:24,650 --> 00:07:27,920
+that's a free tool that you can use to
+take your runnable jars
+
+106
+00:07:27,920 --> 00:07:31,630
+and turn them into .exe files which will
+even prompt the user to
+
+107
+00:07:31,630 --> 00:07:35,840
+download the necessary Java runtime files
+
+108
+00:07:35,840 --> 00:07:38,270
+if they're missing from the user's
+computer.
+
+109
+00:07:38,270 --> 00:07:40,160
+So it's a nice extra touch, but most of
+
+110
+00:07:40,160 --> 00:07:43,600
+the time all you really need is this
+runnable jar.
+
+111
+00:07:43,600 --> 00:07:44,960
+Okay, so that's it for this tutorial.
+
+112
+00:07:46,190 --> 00:07:47,560
+Join me again next time.
+
+113
+00:07:47,560 --> 00:07:49,090
+And until next time.
+
+114
+00:07:49,090 --> 00:07:49,885
+Happy coding.
+
+115
+00:07:49,885 --> 00:07:52,874
+[NOISE]
+

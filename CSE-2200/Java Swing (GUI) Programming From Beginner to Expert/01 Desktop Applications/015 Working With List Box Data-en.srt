@@ -1,0 +1,638 @@
+1
+00:00:01,950 --> 00:00:06,140
+Hello, this is John from
+caveofprogramming.com and in this
+
+2
+00:00:06,140 --> 00:00:09,980
+tutorial, we're gonna look at how you can
+use
+
+3
+00:00:09,980 --> 00:00:14,730
+IDs in your list boxes, rather than
+relying on,
+
+4
+00:00:14,730 --> 00:00:16,619
+the strings that you output in the user
+interface.
+
+5
+00:00:17,690 --> 00:00:20,150
+And that we're also gonna hook up a little
+bit more of the
+
+6
+00:00:20,150 --> 00:00:26,280
+code in this little application that we've
+been working on here, and here.
+
+7
+00:00:26,280 --> 00:00:34,750
+And I'm gonna make it output some stuff
+here in this panel.
+
+8
+00:00:34,750 --> 00:00:36,820
+When I click, Ok on this form.
+
+9
+00:00:36,820 --> 00:00:44,496
+So At the moment, what's happening is if I
+click, Ok on the form after I've selected
+
+10
+00:00:44,496 --> 00:00:47,734
+something in this list my code is in this,
+
+11
+00:00:47,734 --> 00:00:51,880
+in the, in the class that represents the
+panel.
+
+12
+00:00:51,880 --> 00:00:55,570
+It's just retrieving the string.
+
+13
+00:00:55,570 --> 00:00:57,070
+From the list box.
+
+14
+00:00:57,070 --> 00:01:00,810
+And a problem with that is usually the
+kind of string
+
+15
+00:01:00,810 --> 00:01:03,460
+is a thing that might change if you decide
+to reword it.
+
+16
+00:01:03,460 --> 00:01:04,630
+Or something.
+
+17
+00:01:04,630 --> 00:01:06,560
+What you, you really want usually is you
+
+18
+00:01:06,560 --> 00:01:09,600
+want some ID that corresponds to that
+string.
+
+19
+00:01:09,600 --> 00:01:11,990
+So, if this was a table in a database, and
+we're
+
+20
+00:01:11,990 --> 00:01:15,700
+gonna get into databases later on in this
+series of tutorials.
+
+21
+00:01:17,190 --> 00:01:21,240
+Then each age category would probably have
+an ID,
+
+22
+00:01:21,240 --> 00:01:24,080
+and it's that ID that you usually really
+want.
+
+23
+00:01:25,750 --> 00:01:27,910
+So to make this work.
+
+24
+00:01:27,910 --> 00:01:30,100
+What I will do is I'm gonna write a new
+little
+
+25
+00:01:30,100 --> 00:01:35,612
+clasp, and because it just quite small on
+the utility class.
+
+26
+00:01:35,612 --> 00:01:40,190
+I'm gonna just write it here in the file
+along with form panel.
+
+27
+00:01:41,830 --> 00:01:45,860
+And things that I'm writing to my list box
+are age categories.
+
+28
+00:01:45,860 --> 00:01:47,110
+And I'm gonna call this.
+
+29
+00:01:47,110 --> 00:01:54,080
+Class age category and let's
+
+30
+00:01:54,080 --> 00:01:59,960
+give this a constructor, and each age
+category I'm gonna say category
+
+31
+00:02:01,150 --> 00:02:07,250
+has a id int id, and it has a string.
+
+32
+00:02:07,250 --> 00:02:11,190
+Text that is a descriptive string that
+appears in the user interface.
+
+33
+00:02:12,480 --> 00:02:19,096
+So let's give this a private string text
+and
+
+34
+00:02:19,096 --> 00:02:25,590
+also a, I'll put it up here actually, a
+private int ID.
+
+35
+00:02:27,300 --> 00:02:29,300
+And in the constructor.
+
+36
+00:02:29,300 --> 00:02:31,910
+I'm just gonna set that text and ID.
+
+37
+00:02:31,910 --> 00:02:38,020
+So, this dot ID equals ID and this dot
+text equals text.
+
+38
+00:02:38,020 --> 00:02:41,900
+So, it's just a little utility class for
+matching up ID's.
+
+39
+00:02:41,900 --> 00:02:49,240
+And string for the should be this, for the
+age categories, and
+
+40
+00:02:49,240 --> 00:02:55,060
+what I can do, is I can add that class to
+my list box instead of strings.
+
+41
+00:02:55,060 --> 00:02:59,790
+So let's look at where I'm adding the
+elements to my list box, and it's here,
+
+42
+00:02:59,790 --> 00:03:05,080
+it's I'm adding it to the model, remember,
+of the of the J list.
+
+43
+00:03:06,200 --> 00:03:11,220
+So instead of having under 65 I'm saying
+new age category.
+
+44
+00:03:11,220 --> 00:03:17,430
+It's a little class I just created and
+have I can have an id here
+
+45
+00:03:17,430 --> 00:03:21,980
+and then a string and I wanna do the same
+thing
+
+46
+00:03:23,380 --> 00:03:28,920
+down here and here and I'm gonna change
+the ids.
+
+47
+00:03:28,920 --> 00:03:33,740
+So, each one has a unique id, and let's
+make that one and make that two.
+
+48
+00:03:33,740 --> 00:03:38,640
+And now if I run this what's gonna happen
+is I'm gonna see this.
+
+49
+00:03:38,640 --> 00:03:41,555
+This is the result of doing toString on my
+
+50
+00:03:41,555 --> 00:03:45,945
+AgeCategory objects and to actually make
+it look like nice.
+
+51
+00:03:45,945 --> 00:03:51,286
+All I've gotta do is give this AgeCategory
+class,
+
+52
+00:03:51,286 --> 00:03:56,750
+a two string method, so public String
+toString, and.
+
+53
+00:03:56,750 --> 00:04:00,310
+Return text, cuz I, this is the text that
+
+54
+00:04:00,310 --> 00:04:02,790
+I actually want to display, which is the
+text that
+
+55
+00:04:02,790 --> 00:04:09,500
+I'm passing in here and now if I run that
+it looks just the same as it did before.
+
+56
+00:04:09,500 --> 00:04:12,270
+But the advantage is that when I click the
+button
+
+57
+00:04:13,580 --> 00:04:17,830
+instead of saying
+ageList.getSelectedValue, Well
+
+58
+00:04:17,830 --> 00:04:19,860
+actually, I still wanna do that.
+
+59
+00:04:19,860 --> 00:04:22,760
+But it's or do I?
+
+60
+00:04:22,760 --> 00:04:28,340
+Actually, I think what I want is get
+selected
+
+61
+00:04:30,450 --> 00:04:30,870
+yeah.
+
+62
+00:04:30,870 --> 00:04:34,250
+Get selected value should do the trick.
+
+63
+00:04:34,250 --> 00:04:36,520
+But instead of casting it to a string, I'm
+gonna.
+
+64
+00:04:36,520 --> 00:04:43,790
+Cast it to a AgeCategory like that, and
+then call this AgeCategory.
+
+65
+00:04:45,970 --> 00:04:51,890
+So, if I run that when I oh yeah, need a
+semicolon there.
+
+66
+00:04:53,190 --> 00:04:59,480
+When I click, Ok, it's gonna get my age
+category object from the list.
+
+67
+00:05:01,500 --> 00:05:05,110
+So I'm just doing, I'm still doing
+ageList.getSelectedValue.
+
+68
+00:05:05,110 --> 00:05:08,860
+I can't actually remember if that was the
+right method, but it is getSelectedValue.
+
+69
+00:05:08,860 --> 00:05:13,310
+But it's just that the values in my list
+now are not strings.
+
+70
+00:05:13,310 --> 00:05:15,940
+They are age category objects.
+
+71
+00:05:15,940 --> 00:05:19,130
+And the advantage of doing this is that
+here,
+
+72
+00:05:19,130 --> 00:05:22,880
+I've now got access to the string, and the
+ID.
+
+73
+00:05:22,880 --> 00:05:24,840
+Which is probably what I really want.
+
+74
+00:05:24,840 --> 00:05:26,350
+So, let's go down here.
+
+75
+00:05:26,350 --> 00:05:28,150
+And let's give it a public
+
+76
+00:05:30,540 --> 00:05:33,540
+public int getID.
+
+77
+00:05:33,540 --> 00:05:35,485
+And I'll just return the ID there.
+
+78
+00:05:37,340 --> 00:05:44,810
+And here when the button is clicked, I can
+now say hcup dot let's just.
+
+79
+00:05:44,810 --> 00:05:46,870
+I'll put the ID for the moment.
+
+80
+00:05:46,870 --> 00:05:50,940
+And it I run that, so when I click, Ok
+down here in the console,
+
+81
+00:05:50,940 --> 00:05:56,310
+I get the ID [UNKNOWN] string, which is
+what you want most of the time.
+
+82
+00:05:56,310 --> 00:05:58,650
+Because usually this information is gonna
+be stored in a
+
+83
+00:05:58,650 --> 00:06:04,990
+database, and having the string text is
+not usually any use.
+
+84
+00:06:06,660 --> 00:06:12,380
+Okay, and now I'm gonna at this point so
+like
+
+85
+00:06:12,380 --> 00:06:19,390
+what I'm gonna do now is just make that
+text appear on the right hand side here.
+
+86
+00:06:19,390 --> 00:06:22,170
+And if you're a fairly advanced java
+programmer you might wanna skip that bit.
+
+87
+00:06:22,170 --> 00:06:24,450
+Because all I'm gonna do, is I'm gonna
+modify the
+
+88
+00:06:24,450 --> 00:06:28,150
+event model that carries the information,
+sorry, the event object.
+
+89
+00:06:28,150 --> 00:06:31,000
+It carries information from this panel, up
+to the
+
+90
+00:06:31,000 --> 00:06:34,290
+main frame, and then down again to this
+text panel.
+
+91
+00:06:34,290 --> 00:06:38,470
+I'm gonna modify that to accept my id,
+
+92
+00:06:38,470 --> 00:06:43,030
+which is one of the advantages of using
+events.
+
+93
+00:06:44,060 --> 00:06:48,570
+So when I get, when I collect all this
+information.
+
+94
+00:06:48,570 --> 00:06:49,860
+I'm saying, form listener.
+
+95
+00:06:49,860 --> 00:06:52,050
+Form event occurred, and passing it this
+event.
+
+96
+00:06:53,460 --> 00:06:54,170
+And a form listener.
+
+97
+00:06:54,170 --> 00:06:58,510
+The thing that's listening, actually, in
+this case, is the main frame.
+
+98
+00:06:58,510 --> 00:07:00,050
+So, let's go to form event here.
+
+99
+00:07:00,050 --> 00:07:02,830
+And it's already got a get name, and a get
+occupation.
+
+100
+00:07:02,830 --> 00:07:05,350
+But I'm gonna give it a private.
+
+101
+00:07:05,350 --> 00:07:07,570
+Int ageCategory.
+
+102
+00:07:08,850 --> 00:07:13,150
+And I'm gonna let's put this here.
+
+103
+00:07:13,150 --> 00:07:18,760
+Let's say int age, ageCat.
+
+104
+00:07:18,760 --> 00:07:25,700
+And let's say, this.ageCategory equals
+ageCat.
+
+105
+00:07:25,700 --> 00:07:28,390
+And let's give it a get age category.
+
+106
+00:07:28,390 --> 00:07:29,328
+So public.
+
+107
+00:07:29,328 --> 00:07:34,810
+Void getAgeCategory and all that has to
+
+108
+00:07:34,810 --> 00:07:38,480
+do is just return ageCat of course,
+ageCategory.
+
+109
+00:07:40,080 --> 00:07:44,320
+So yeah, it's not public void actually
+it's int and so
+
+110
+00:07:44,320 --> 00:07:48,560
+all I've done here is just make this event
+object capable
+
+111
+00:07:48,560 --> 00:07:52,000
+of storing a bit more information and then
+here in the
+
+112
+00:07:52,000 --> 00:07:54,950
+form panel, I can pass in not only the
+name and.
+
+113
+00:07:54,950 --> 00:08:00,350
+Patient, also the age cut dot, dot get ID.
+
+114
+00:08:00,350 --> 00:08:05,910
+And now finally in my main
+
+115
+00:08:05,910 --> 00:08:12,050
+frame here I can add to the text panel
+some more stuff here.
+
+116
+00:08:12,050 --> 00:08:20,280
+I can say So, I've got name and occupation
+and, and I could also output,
+
+117
+00:08:22,640 --> 00:08:29,240
+Let's see, I could say int age cut equals
+e dot get h cut.
+
+118
+00:08:29,240 --> 00:08:33,850
+So, I'm just using the method I've just
+declared on the form we found.
+
+119
+00:08:33,850 --> 00:08:35,900
+And here, I can output.
+
+120
+00:08:39,050 --> 00:08:44,550
+The age category, so let's do plus age
+cap,
+
+121
+00:08:44,550 --> 00:08:48,100
+age capped, and I'll still have the new
+line there.
+
+122
+00:08:49,970 --> 00:08:54,120
+So, eclipse itself hopefully putting in a
+double quote I don't want.
+
+123
+00:08:54,120 --> 00:08:56,548
+And if I run that.
+
+124
+00:08:56,548 --> 00:09:00,610
+So [COUGH] so now excuse me if I fill this
+
+125
+00:09:00,610 --> 00:09:06,070
+in John software say software, and I'm
+believe I'm 1865.
+
+126
+00:09:06,070 --> 00:09:12,410
+So, if I run that it's it's gonna output
+here John software one, h category one.
+
+127
+00:09:14,240 --> 00:09:16,270
+So you see this, this using an event model
+is
+
+128
+00:09:16,270 --> 00:09:19,610
+very flexible because you can transfer a
+lot of information.
+
+129
+00:09:19,610 --> 00:09:21,500
+From this form, just using your object.
+
+130
+00:09:21,500 --> 00:09:24,970
+You don't have to keep you don't have to
+make this
+
+131
+00:09:24,970 --> 00:09:27,970
+form event occurred have more and more
+arguments all the time.
+
+132
+00:09:29,300 --> 00:09:31,000
+In the next tutorial, we're gonna look at
+
+133
+00:09:31,000 --> 00:09:33,920
+another wonderful form widget that you can
+use.
+
+134
+00:09:33,920 --> 00:09:36,360
+We're gonna look at the combo box.
+
+135
+00:09:36,360 --> 00:09:37,500
+So, join me again then.
+
+136
+00:09:37,500 --> 00:09:40,185
+And until next time, happy coding.
+
+137
+00:09:40,185 --> 00:09:43,444
+[SOUND]
+

@@ -1,0 +1,1077 @@
+1
+00:00:00,025 --> 00:00:05,205
+[SOUND] Hello this is John from
+Kevolveprogramming.com and in this
+
+2
+00:00:05,205 --> 00:00:11,507
+tutorial, we'll gonna log cuts, grid back
+layout, which is layout manager.
+
+3
+00:00:11,507 --> 00:00:15,370
+So in the last tutorial, I created this
+little,.
+
+4
+00:00:15,370 --> 00:00:16,030
+Program.
+
+5
+00:00:16,030 --> 00:00:18,530
+And in this panel here, I've actually
+given
+
+6
+00:00:18,530 --> 00:00:20,260
+it, it's called form panel and I've
+actually
+
+7
+00:00:20,260 --> 00:00:24,540
+given it some, some text fields and
+labels,
+
+8
+00:00:24,540 --> 00:00:26,500
+which I now want to add to the panel.
+
+9
+00:00:27,930 --> 00:00:32,690
+And to do that I'm gonna use the most
+powerful but also perhaps the trickiest of
+
+10
+00:00:32,690 --> 00:00:39,350
+the layout managers and you're probably
+gonna wonder, as I show you this, if
+
+11
+00:00:39,350 --> 00:00:45,940
+it isn't easier to use a visual designer,
+such as the Window Builder Pro, which
+
+12
+00:00:45,940 --> 00:00:51,860
+is free, a free Eclipse plugin I showed
+you in the first tutorial in the series.
+
+13
+00:00:51,860 --> 00:00:57,490
+And the answer is that it could be perhaps
+quicker but the
+
+14
+00:00:57,490 --> 00:01:02,720
+window the visual designers for Java at
+the moment don't seem to be very good,
+
+15
+00:01:02,720 --> 00:01:06,070
+to be honest and you kind of, it's gonna
+help a lot if
+
+16
+00:01:06,070 --> 00:01:10,900
+you know this stuff anyway and all the
+Java Developers that I've actually worked.
+
+17
+00:01:10,900 --> 00:01:12,940
+Out with, or moan.
+
+18
+00:01:12,940 --> 00:01:15,710
+And, personally have pretty much shunned
+visual
+
+19
+00:01:15,710 --> 00:01:18,530
+designers in favor of doing this by hand.
+
+20
+00:01:18,530 --> 00:01:21,040
+This seems to be a real culture of it in
+Java.
+
+21
+00:01:21,040 --> 00:01:23,290
+And you'll probably see why if you start
+using the Visual
+
+22
+00:01:23,290 --> 00:01:26,050
+Designers and you see how rubbish they
+are, to be honest.
+
+23
+00:01:26,050 --> 00:01:30,380
+But, nevertheless, Window Builder Pro is
+probably the best of the bunch.
+
+24
+00:01:31,400 --> 00:01:36,130
+So let's get on with it, having said that
+and the
+
+25
+00:01:36,130 --> 00:01:40,758
+first thing I'm gonna do is I'm gonna say
+setLayout
+
+26
+00:01:40,758 --> 00:01:46,015
+of course setLayout new grid,
+GridBagLayout and
+
+27
+00:01:46,015 --> 00:01:51,350
+GridBagLayout is so flexible that The
+developers I've
+
+28
+00:01:51,350 --> 00:01:56,560
+knows including myself, tend to just stick
+with this one layout and we don't really
+
+29
+00:01:56,560 --> 00:02:00,570
+use for example boxLayout or gridLayout
+much.
+
+30
+00:02:00,570 --> 00:02:04,840
+Because this is so flexible once you've
+learned the quirks of this.
+
+31
+00:02:04,840 --> 00:02:08,080
+You you can pretty much just use this for
+most purposes.
+
+32
+00:02:09,830 --> 00:02:14,610
+So I'm gonna start by, now GridBagLayout.
+
+33
+00:02:14,610 --> 00:02:20,240
+you, you have a GridBagConstraints object
+that you use
+
+34
+00:02:20,240 --> 00:02:25,054
+with grid back there, so I'll call that GC
+and set that equal to a new
+
+35
+00:02:25,054 --> 00:02:30,486
+grid bag constraints, and
+
+36
+00:02:30,486 --> 00:02:35,170
+GridBagConstraints has a whole
+
+37
+00:02:35,170 --> 00:02:39,790
+bunch of fields, and you've got to
+initialize those fields, before you use
+
+38
+00:02:39,790 --> 00:02:41,558
+it in any serious way.
+
+39
+00:02:41,558 --> 00:02:45,720
+So, I'm gonna to start by doing that, I'll
+say GC.,
+
+40
+00:02:46,850 --> 00:02:51,360
+and perhaps the most important is the grid
+X and grid Y,
+
+41
+00:02:51,360 --> 00:02:55,190
+and grid X and grid Y so the idea is that
+you're laying
+
+42
+00:02:55,190 --> 00:02:58,980
+out your components in a grid, but the
+cells in the grid
+
+43
+00:02:58,980 --> 00:03:04,590
+can be very flexibly sized and they can
+also span columns or rows.
+
+44
+00:03:04,590 --> 00:03:10,560
+And the cell at position zero zero is in
+the top left hand corner here.
+
+45
+00:03:10,560 --> 00:03:11,240
+So we.
+
+46
+00:03:11,240 --> 00:03:16,460
+As we increase X we go from left to right,
+and as we increase Y, we go
+
+47
+00:03:16,460 --> 00:03:21,520
+from top down to bottom, but if you just
+have one grid cell, then its gonna
+
+48
+00:03:21,520 --> 00:03:26,346
+be in the middle, so you see how this
+works as I go along here, nd I'm gonna say
+
+49
+00:03:26,346 --> 00:03:31,380
+DC.grid Y equals null.
+
+50
+00:03:31,380 --> 00:03:35,440
+Now another very important thing to set
+here is the weight.
+
+51
+00:03:36,610 --> 00:03:42,682
+I'm gonna say 2C.weight x equals one, one
+and
+
+52
+00:03:42,682 --> 00:03:50,370
+GC.weight Y equals one as well.
+
+53
+00:03:50,370 --> 00:03:54,170
+And the weight controls for a given cell,
+the weight will control
+
+54
+00:03:54,170 --> 00:03:58,200
+how much space it takes up relative to, to
+the other cells.
+
+55
+00:03:58,200 --> 00:04:00,500
+So this number here it doesn't have to
+
+56
+00:04:01,680 --> 00:04:04,190
+it's not important what the number is in
+itself.
+
+57
+00:04:04,190 --> 00:04:07,200
+What is important is how this number
+compares to
+
+58
+00:04:07,200 --> 00:04:09,579
+the other weights that you assign to the
+other cells.
+
+59
+00:04:11,650 --> 00:04:16,450
+And finally, you might want to set
+GC.fill.
+
+60
+00:04:16,450 --> 00:04:20,670
+That can be set to horizontal, vertical,
+none, or both,
+
+61
+00:04:20,670 --> 00:04:24,490
+and that tells your components, whether to
+take up all the
+
+62
+00:04:24,490 --> 00:04:28,350
+space in the cell, or not, and I probably
+don't want
+
+63
+00:04:28,350 --> 00:04:33,662
+mine to, so I'm going to say grid back /u
+constraints.none.
+
+64
+00:04:35,080 --> 00:04:39,110
+And it's pretty important to set this lot
+at the start, because if you leave any of
+
+65
+00:04:39,110 --> 00:04:41,920
+it out you tend to get problems later
+
+66
+00:04:41,920 --> 00:04:44,070
+which can really have you tearing your
+hair out.
+
+67
+00:04:46,730 --> 00:04:51,560
+So, first I'm going to add the, the top
+
+68
+00:04:51,560 --> 00:04:54,160
+leftmost component which is going to be
+name labels.
+
+69
+00:04:54,160 --> 00:04:55,500
+We'll say addNameLabel.
+
+70
+00:04:55,500 --> 00:05:02,730
+These are the components I created in the
+last tutorial in this series.
+
+71
+00:05:02,730 --> 00:05:04,760
+And I pass addGC there.
+
+72
+00:05:06,890 --> 00:05:10,130
+Now if I run this, name is also appearing
+in the
+
+73
+00:05:10,130 --> 00:05:14,500
+center of the panel, because there's only
+one cell at the moment.
+
+74
+00:05:14,500 --> 00:05:18,750
+So, whether you call it top left or top
+right, or what you like,
+
+75
+00:05:18,750 --> 00:05:23,280
+makes no difference because if it's only
+one it's gonna be in the middle.
+
+76
+00:05:23,280 --> 00:05:29,820
+But let's now, say, GC.gridX equals one.
+
+77
+00:05:29,820 --> 00:05:35,942
+So I'm going from left to right, and
+GC.gridY still equals zero, and
+
+78
+00:05:35,942 --> 00:05:42,000
+soGC.gridY is not changing and I'm gonna
+reuse this grid back constraints, but
+
+79
+00:05:42,000 --> 00:05:46,550
+the reason that I'm a typing this again is
+just to make it
+
+80
+00:05:46,550 --> 00:05:48,920
+clearer the code, what's that link, and
+
+81
+00:05:48,920 --> 00:05:50,900
+that is a big problem with
+GridBagConstraints.
+
+82
+00:05:50,900 --> 00:05:53,290
+You tend to lose track of what's
+happening.
+
+83
+00:05:53,290 --> 00:05:58,480
+So you really need to divide up your form
+into kind of logical parts, you
+
+84
+00:05:58,480 --> 00:06:02,710
+know, and la, maybe put comments in in the
+code and that kind of thing.
+
+85
+00:06:02,710 --> 00:06:04,510
+Or use tricks like this as well
+
+86
+00:06:04,510 --> 00:06:07,440
+of redefining variables that you don't
+need to.
+
+87
+00:06:07,440 --> 00:06:10,399
+Okay, so let's do add name field.
+
+88
+00:06:12,230 --> 00:06:13,770
+Co, comma GC.
+
+89
+00:06:13,770 --> 00:06:17,450
+And if I add that it's gonna be one along
+an X.
+
+90
+00:06:17,450 --> 00:06:18,980
+It's gonna be here.
+
+91
+00:06:18,980 --> 00:06:24,650
+If your text field appears extremely tiny,
+you've probably forgotten to
+
+92
+00:06:24,650 --> 00:06:29,920
+set the text field width here, so don't
+forget that.
+
+93
+00:06:31,720 --> 00:06:37,072
+And, so let's go ahead and say DC.gridY
+now equals one
+
+94
+00:06:37,072 --> 00:06:42,320
+and DC.gridX, I'm going to set that to
+zero and to add
+
+95
+00:06:42,320 --> 00:06:48,056
+occupation label, occupation label
+
+96
+00:06:48,056 --> 00:06:53,510
+comma DC, so this is adding a new row, so
+I've gone down one in Y and it's down
+
+97
+00:06:53,510 --> 00:06:59,230
+here, and, then I'll say GC.gridY
+
+98
+00:06:59,230 --> 00:07:09,079
+still equals 1 and GC.gridX equals 1 as
+well and add occupationField.
+
+99
+00:07:09,079 --> 00:07:13,950
+OccupationField, GC.
+
+100
+00:07:13,950 --> 00:07:16,420
+And so now, I've got my field in here.
+
+101
+00:07:16,420 --> 00:07:19,850
+And finally, I'm going to add a button
+down here.
+
+102
+00:07:19,850 --> 00:07:25,680
+So, i'm going to say GC.gridY equals 2 and
+GC.
+
+103
+00:07:25,680 --> 00:07:27,640
+GridX equals 1.
+
+104
+00:07:27,640 --> 00:07:30,280
+So I'm adding it in the second column.
+
+105
+00:07:30,280 --> 00:07:37,700
+The first column is number zero of course,
+and add Okay button, [UNKNOWN] see this?
+
+106
+00:07:39,170 --> 00:07:41,830
+Now if I run that, that button's going to
+appear down here.
+
+107
+00:07:43,030 --> 00:07:43,350
+Okay.
+
+108
+00:07:43,350 --> 00:07:46,760
+So that's great except that it looks like
+a donkey's
+
+109
+00:07:46,760 --> 00:07:50,670
+ass because of the alignment and
+everything's completely spread out.
+
+110
+00:07:52,410 --> 00:07:54,000
+So the first thing I'm going to do is I'm
+gonna
+
+111
+00:07:54,000 --> 00:07:58,150
+to move these labels over to the right,
+set it there flush
+
+112
+00:07:58,150 --> 00:08:00,580
+with the text fields and I'm gonna make
+sure that the
+
+113
+00:08:00,580 --> 00:08:03,590
+text fields are moved over to the left,
+rather than being centered.
+
+114
+00:08:03,590 --> 00:08:11,510
+And the way I do that is before I add the
+labels, I have to say GC.anchor.
+
+115
+00:08:11,510 --> 00:08:18,810
+And this specifies the side of the cell
+that the control sticks to if you like.
+
+116
+00:08:18,810 --> 00:08:23,050
+So I'm gonna say GC.anchor equals grid.
+
+117
+00:08:23,050 --> 00:08:29,180
+And let's try
+GridBagConstraints.LINE_STAR_LINE_START.
+
+118
+00:08:29,180 --> 00:08:32,600
+So LINE_STAR means, it's like the start of
+a line.
+
+119
+00:08:32,600 --> 00:08:35,640
+It's like, basically East is down here.
+
+120
+00:08:35,640 --> 00:08:37,530
+There's also first line start, which would
+be up
+
+121
+00:08:37,530 --> 00:08:43,620
+here top left or last line start down
+here.
+
+122
+00:08:43,620 --> 00:08:51,310
+Last line end is bottom left and first
+line end top, sorry bottom right.
+
+123
+00:08:51,310 --> 00:08:55,600
+First line end top right, you, you
+probably get the idea.
+
+124
+00:08:55,600 --> 00:08:56,960
+So me, I'm gonna use lines start here.
+
+125
+00:08:56,960 --> 00:09:01,910
+And I'll copy that because I want to also
+make the
+
+126
+00:09:01,910 --> 00:09:05,640
+second label go to the, actually I don't
+want a line start.
+
+127
+00:09:05,640 --> 00:09:08,980
+I, I actually want it to be line end
+because I want it to
+
+128
+00:09:08,980 --> 00:09:14,490
+stick to the right hand side of the cell,
+which is in the first column.
+
+129
+00:09:14,490 --> 00:09:21,740
+And, and I also want my my button and my
+label,
+
+130
+00:09:21,740 --> 00:09:28,810
+my text fields to the LINE_START, to the
+left hand side of the second column.
+
+131
+00:09:28,810 --> 00:09:35,410
+So here if I go to the field and I, change
+this to LINE_START
+
+132
+00:09:35,410 --> 00:09:40,160
+and before I add the occupation field,
+I'll have LINE_START as well.
+
+133
+00:09:40,160 --> 00:09:43,790
+And I don't actually need to repeat it,
+but just for clarity here.
+
+134
+00:09:43,790 --> 00:09:45,330
+I'll set this to line stop as well,
+
+135
+00:09:45,330 --> 00:09:48,490
+although it's still LINE_STOP because I
+used it here.
+
+136
+00:09:49,490 --> 00:09:52,840
+Okay, so there we go.
+
+137
+00:09:52,840 --> 00:09:59,180
+The alignment is just a little bit better
+and know I would like I'd like these
+
+138
+00:10:01,200 --> 00:10:03,530
+the, the, controls to be up here somewhere
+
+139
+00:10:03,530 --> 00:10:06,880
+rather than spreading out vertically like
+this and the
+
+140
+00:10:06,880 --> 00:10:11,290
+way I'm gonna do that is I'm gonna make
+the first and second row is very small.
+
+141
+00:10:11,290 --> 00:10:16,690
+And I'm gonna make the last row take up
+all the space, just to start with.
+
+142
+00:10:16,690 --> 00:10:24,670
+So, I'm gonna go to the weight Y, and this
+is the weight Y for first row here, and,
+
+143
+00:10:26,180 --> 00:10:30,430
+let's take this out because I have to set
+this out, I have to set this every time.
+
+144
+00:10:30,430 --> 00:10:31,790
+I'm gonna.
+
+145
+00:10:31,790 --> 00:10:32,760
+Move this to here.
+
+146
+00:10:34,440 --> 00:10:41,480
+And let's let's maybe, rearrange this a
+bit.
+
+147
+00:10:41,480 --> 00:10:43,400
+I know, it's as good as it is because this
+is all the
+
+148
+00:10:43,400 --> 00:10:47,340
+first row so let's put some comments in
+here which will help a lot.
+
+149
+00:10:47,340 --> 00:10:48,680
+First.
+
+150
+00:10:48,680 --> 00:10:49,750
+First row.
+
+151
+00:10:52,570 --> 00:11:00,590
+And let's have a comment here so in the
+next section I've got gridY equal to one.
+
+152
+00:11:01,590 --> 00:11:03,610
+So then it's going to be second row.
+
+153
+00:11:04,790 --> 00:11:05,870
+And finally.
+
+154
+00:11:05,870 --> 00:11:11,190
+I've got the button which is in the third
+row down here and these are the kind
+
+155
+00:11:11,190 --> 00:11:16,210
+of lengths you' have to go to keep things
+clearly with GridBagLayouts this is the
+
+156
+00:11:16,210 --> 00:11:24,020
+third row and for the first row I'm gonna
+set the the weight text
+
+157
+00:11:24,020 --> 00:11:30,510
+and weight wanna set the weight Y I can
+leave the weight text as it is I think.
+
+158
+00:11:30,510 --> 00:11:35,280
+I can set the weight Y, to a very small
+value like 0.1.
+
+159
+00:11:35,280 --> 00:11:42,590
+And, I can have, that set to 0.1 for the
+second row as well.
+
+160
+00:11:43,650 --> 00:11:48,030
+And then for the third row, I'm gonna set
+the weight Y, to a much
+
+161
+00:11:48,030 --> 00:11:51,850
+bigger value, like 1.9, so the third row
+takes up the most to the space.
+
+162
+00:11:51,850 --> 00:11:56,800
+And if I run that it looks like this,
+which is an improvement.
+
+163
+00:11:56,800 --> 00:12:01,340
+If I, let's make this last row even bigger
+and see how that looks.
+
+164
+00:12:01,340 --> 00:12:03,580
+So yeah now these are more bunched
+together.
+
+165
+00:12:03,580 --> 00:12:10,310
+And I want the button here to be not
+[UNKNOWN] which is here on the left.
+
+166
+00:12:10,310 --> 00:12:12,830
+The first LINE_START which is here.
+
+167
+00:12:12,830 --> 00:12:15,760
+Because conceptually it's like this is the
+first line here.
+
+168
+00:12:15,760 --> 00:12:17,780
+Then the, the line.
+
+169
+00:12:17,780 --> 00:12:19,250
+And then the last line.
+
+170
+00:12:19,250 --> 00:12:22,500
+And then we've got lines start and end.
+
+171
+00:12:22,500 --> 00:12:26,500
+So let's make that first LINE_START for
+bottom, the anchor.
+
+172
+00:12:26,500 --> 00:12:28,600
+So here I can say, instead of lines.
+
+173
+00:12:28,600 --> 00:12:30,745
+Start first.
+
+174
+00:12:30,745 --> 00:12:34,570
+LINE_START and if I run that, the buttons
+now can
+
+175
+00:12:34,570 --> 00:12:37,050
+appear, which I think you'll agree looks a
+lot better.
+
+176
+00:12:38,540 --> 00:12:41,790
+And there's one last little change that
+I'd like to make here, because I
+
+177
+00:12:41,790 --> 00:12:45,770
+want my labels to have a little bit of
+space up to the end.
+
+178
+00:12:45,770 --> 00:12:51,570
+And I could do that actually by by just
+
+179
+00:12:51,570 --> 00:12:55,120
+putting some some space actually in the
+label text
+
+180
+00:12:55,120 --> 00:12:57,600
+itself, but because I want to show you
+something
+
+181
+00:12:57,600 --> 00:13:00,000
+quite important, I'm gonna do it a
+slightly different way.
+
+182
+00:13:01,030 --> 00:13:02,650
+I'm gonna use a indent.
+
+183
+00:13:02,650 --> 00:13:05,980
+So I'm gonna look for where the labels are
+now.
+
+184
+00:13:05,980 --> 00:13:11,290
+So here's the occupation label and up here
+is the name label.
+
+185
+00:13:11,290 --> 00:13:18,215
+And before writing those, I'm gonna say
+GC.indent, I think it's called indent.
+
+186
+00:13:18,215 --> 00:13:20,140
+GC.inset.
+
+187
+00:13:20,140 --> 00:13:20,640
+Sorry.
+
+188
+00:13:21,680 --> 00:13:28,910
+Equals new insets and if you look at the
+insets class, so
+
+189
+00:13:28,910 --> 00:13:34,140
+you Ctrl+ Shift+O type the import and put
+the cursors there and let's have a look.
+
+190
+00:13:35,180 --> 00:13:38,790
+It's got the arguments or.
+
+191
+00:13:38,790 --> 00:13:39,940
+Top left, bottom right.
+
+192
+00:13:39,940 --> 00:13:44,550
+Although, to be honest with you, sometimes
+I try inserting values
+
+193
+00:13:44,550 --> 00:13:47,400
+for insets and they seem to be in the
+wrong order.
+
+194
+00:13:47,400 --> 00:13:49,750
+So let's try this today and see what
+happens anyway.
+
+195
+00:13:49,750 --> 00:13:52,330
+I want to have an inset on the right
+there.
+
+196
+00:13:52,330 --> 00:13:59,390
+So what I'm gonna try doing is, this is
+top left bottom
+
+197
+00:13:59,390 --> 00:14:05,270
+right, like that, and I'm gonna have the
+
+198
+00:14:05,270 --> 00:14:11,500
+same insects before the, occupation label
+and.
+
+199
+00:14:11,500 --> 00:14:15,560
+For the other controls I'm going to have
+the inserts.
+
+200
+00:14:15,560 --> 00:14:19,590
+If I remember right I can just set set
+these to null.
+
+201
+00:14:19,590 --> 00:14:25,200
+But if that doesn't work, I'm going to set
+it to like a blank inset object.
+
+202
+00:14:25,200 --> 00:14:29,060
+So after I've set the insets there, I've
+then done away with that.
+
+203
+00:14:29,060 --> 00:14:33,500
+And I've set the inserts here so I'll do
+away with that again here.
+
+204
+00:14:33,500 --> 00:14:37,530
+And let's also do away with it before I
+add the button here.
+
+205
+00:14:37,530 --> 00:14:39,490
+And let's see if that works.
+
+206
+00:14:39,490 --> 00:14:41,080
+So if I run that.
+
+207
+00:14:41,080 --> 00:14:44,270
+And I've got an error because my memory
+[UNKNOWN] part here.
+
+208
+00:14:46,140 --> 00:14:51,080
+And I actually need to do just a need
+blank insets instead of null.
+
+209
+00:14:52,640 --> 00:14:58,570
+Accept that, there's no there's no
+construct with no parameters, so
+
+210
+00:14:58,570 --> 00:15:02,010
+let's set it to naught, and I'm confident
+this will work.
+
+211
+00:15:02,010 --> 00:15:07,350
+So wherever I've got insets equal to null,
+I'm gonna set it equal to naught.
+
+212
+00:15:07,350 --> 00:15:08,490
+So that there's no cutting.
+
+213
+00:15:09,610 --> 00:15:13,470
+And of course if I was worried about
+efficiency here, I could create
+
+214
+00:15:13,470 --> 00:15:17,930
+just one insets subject or two in this
+case, and I could reuse them.
+
+215
+00:15:17,930 --> 00:15:21,120
+Where I need them, if I run that.
+
+216
+00:15:21,120 --> 00:15:23,520
+Now we've got a little bit of space.
+
+217
+00:15:23,520 --> 00:15:26,460
+It should be five pixels, but who knows if
+it really
+
+218
+00:15:26,460 --> 00:15:30,830
+is exactly five pixels, right on the side
+of the labels here.
+
+219
+00:15:32,030 --> 00:15:36,450
+That's it for this tutorial, in the next
+tutorial, I'm.
+
+220
+00:15:36,450 --> 00:15:40,385
+Hooking this little panel up to that so it
+does something.
+
+221
+00:15:40,385 --> 00:15:44,250
+And we're gonna use [UNKNOWN] listener
+model that I've already explained.
+
+222
+00:15:44,250 --> 00:15:45,930
+But then if you didn't fully understand it
+
+223
+00:15:45,930 --> 00:15:48,320
+last time cuz we're gonna go over it
+again.
+
+224
+00:15:49,330 --> 00:15:54,290
+And I'm actually gonna use an event object
+to carry
+
+225
+00:15:54,290 --> 00:15:58,810
+information from here up to the
+controller, the main frame.
+
+226
+00:15:58,810 --> 00:16:01,380
+And I'm gonna output it.
+
+227
+00:16:01,380 --> 00:16:03,840
+In this text area here.
+
+228
+00:16:03,840 --> 00:16:06,390
+So until next time, happy coding.
+

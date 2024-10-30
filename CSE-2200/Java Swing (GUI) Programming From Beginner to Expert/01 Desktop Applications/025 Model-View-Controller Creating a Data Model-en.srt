@@ -1,0 +1,892 @@
+1
+00:00:01,820 --> 00:00:05,228
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,228 --> 00:00:06,180
+Welcome back.
+
+3
+00:00:06,180 --> 00:00:09,710
+In this tutorial we're gonna look at
+creating
+
+4
+00:00:09,710 --> 00:00:14,720
+a very simple data model for our
+application here.
+
+5
+00:00:14,720 --> 00:00:17,590
+So the stuff we've been working on so far,
+
+6
+00:00:17,590 --> 00:00:19,950
+is all the, the gooey part of the
+application.
+
+7
+00:00:19,950 --> 00:00:20,500
+It's the view.
+
+8
+00:00:21,660 --> 00:00:24,500
+And now I wanna create some way of
+
+9
+00:00:24,500 --> 00:00:29,570
+storing the people the whose details are
+entered here,
+
+10
+00:00:30,940 --> 00:00:34,410
+So we're gonna be looking at kind of the
+back end whereas this is the front end.
+
+11
+00:00:36,270 --> 00:00:40,054
+And I'm gonna start by creating a new
+package.
+
+12
+00:00:40,054 --> 00:00:45,290
+So I'm gonna go to new package and I'm
+going to call that
+
+13
+00:00:45,290 --> 00:00:49,240
+gooey and I'm gonna take all the code that
+I've got at the moment.
+
+14
+00:00:49,240 --> 00:00:51,350
+So I'll just Shift+Select these files.
+
+15
+00:00:51,350 --> 00:00:53,520
+And I'm gonna drag and drop them into GUI.
+
+16
+00:00:54,750 --> 00:00:57,050
+And that's gonna re-factor my codes a
+little bit so
+
+17
+00:00:57,050 --> 00:01:01,040
+that it puts package GUI at the top of my
+files.
+
+18
+00:01:01,040 --> 00:01:03,040
+If I run that, it should still run just
+fine.
+
+19
+00:01:03,040 --> 00:01:07,610
+And I'm gonna create a new, another new
+package.
+
+20
+00:01:07,610 --> 00:01:12,880
+So, New Package, which I'll call I'll call
+it Model.
+
+21
+00:01:14,490 --> 00:01:18,590
+And Model is gonna contain classes that
+deal.
+
+22
+00:01:18,590 --> 00:01:23,960
+With my database and in fact just to start
+with I'm just gonna store the data
+
+23
+00:01:23,960 --> 00:01:28,900
+in Java code here where my application
+runs.
+
+24
+00:01:28,900 --> 00:01:32,810
+And later will occur connecting this to a
+database.
+
+25
+00:01:32,810 --> 00:01:35,620
+But for the moment I'm just gonna
+
+26
+00:01:35,620 --> 00:01:39,710
+create some very, very simple data
+handling classes.
+
+27
+00:01:39,710 --> 00:01:43,730
+And now the golden rule here is that stuff
+in your
+
+28
+00:01:43,730 --> 00:01:49,650
+model should absolutely never reference
+stuff in your, in your view.
+
+29
+00:01:49,650 --> 00:01:53,760
+The stuff in the back end should never
+reference stuff
+
+30
+00:01:53,760 --> 00:01:57,200
+in the front end to say in, in another
+way.
+
+31
+00:01:57,200 --> 00:02:00,290
+So in the classes end model I should never
+ever have.
+
+32
+00:02:00,290 --> 00:02:04,418
+A statement that says import GUI whereas
+the
+
+33
+00:02:04,418 --> 00:02:09,097
+GUI may well reference the the model
+although often
+
+34
+00:02:09,097 --> 00:02:13,781
+the GUI communicates through the model
+exclusively through
+
+35
+00:02:13,781 --> 00:02:18,960
+controller classes, which we'll look at in
+the future.
+
+36
+00:02:18,960 --> 00:02:24,040
+But right now I'm gonna start by creating
+a class in my model and I'm gonna
+
+37
+00:02:24,040 --> 00:02:29,188
+call this person, and person is gonna be a
+class
+
+38
+00:02:29,188 --> 00:02:34,210
+that stores people while the application
+is running.
+
+39
+00:02:35,980 --> 00:02:38,510
+So it's gonna be a lot like.
+
+40
+00:02:38,510 --> 00:02:41,405
+This form event class.
+
+41
+00:02:41,405 --> 00:02:45,170
+Except that whereas the form event just
+takes whatever data
+
+42
+00:02:45,170 --> 00:02:49,380
+comes back form the form and transmits it
+to the mainframe.
+
+43
+00:02:49,380 --> 00:02:55,020
+My person class should be much more tight
+in terms of the way it stores data.
+
+44
+00:02:56,540 --> 00:03:02,970
+The person class we'll see in a minute,
+but it's gonna store
+
+45
+00:03:02,970 --> 00:03:07,420
+data in a kind of clearest form possible,
+and it's gonna you know, we're gonna have
+
+46
+00:03:07,420 --> 00:03:14,510
+some notion of really trying to ensure
+data integrity here, so here, so
+
+47
+00:03:14,510 --> 00:03:18,730
+I've got, my person's gonna have a name,
+but I'm also gonna give it a private.
+
+48
+00:03:18,730 --> 00:03:24,240
+ID, and the ID is gonna be the unique key
+of my persons,
+
+49
+00:03:24,240 --> 00:03:30,240
+my people in the database, which I'm gonna
+connect up in future.
+
+50
+00:03:30,240 --> 00:03:32,610
+Now string name is fine.
+
+51
+00:03:33,830 --> 00:03:37,340
+Let's take a look at this form actually.
+
+52
+00:03:38,470 --> 00:03:41,620
+So occupation again is just a string.
+
+53
+00:03:41,620 --> 00:03:46,680
+But each category here, there's only three
+choices.
+
+54
+00:03:46,680 --> 00:03:49,190
+So it shouldn't really be a string.
+
+55
+00:03:49,190 --> 00:03:52,890
+It should be something which is limited to
+three values when we
+
+56
+00:03:52,890 --> 00:03:56,900
+store it in the actual kind of data model
+or in a database.
+
+57
+00:03:57,910 --> 00:03:59,150
+And in your.
+
+58
+00:03:59,150 --> 00:04:01,040
+If you have a sequel database you'd
+probably use
+
+59
+00:04:01,040 --> 00:04:03,820
+some kind of a non type and we can
+
+60
+00:04:03,820 --> 00:04:06,635
+do the same thing in Java, so let's create
+
+61
+00:04:06,635 --> 00:04:10,860
+a let's create a new class here in the
+model.
+
+62
+00:04:12,118 --> 00:04:15,621
+And you, I'll make it actually a new
+enumeration,
+
+63
+00:04:15,621 --> 00:04:18,419
+a new non, and I'm gonna call that anon.
+
+64
+00:04:19,820 --> 00:04:26,813
+Age category, age category and the age
+category's only gonna have
+
+65
+00:04:26,813 --> 00:04:33,670
+three possible values under 18, 18 65, and
+65 or over.
+
+66
+00:04:34,850 --> 00:04:38,390
+So let's call those, let's call those
+categories child.
+
+67
+00:04:39,535 --> 00:04:41,005
+Adult senior.
+
+68
+00:04:42,755 --> 00:04:50,265
+So it goes this is a anon and then in my
+person here
+
+69
+00:04:50,265 --> 00:04:57,215
+I can change the age category from an int
+which could be anything to a AgeCategory
+
+70
+00:04:59,460 --> 00:05:05,760
+Okay, and the employment category is gonna
+be similar because employment
+
+71
+00:05:05,760 --> 00:05:11,999
+here is well, actually, it's probably not
+gonna be sim, similar,
+
+72
+00:05:11,999 --> 00:05:17,430
+similar, because the thing is that people
+can type what they want in here.
+
+73
+00:05:17,430 --> 00:05:17,930
+Yeah.
+
+74
+00:05:19,200 --> 00:05:26,580
+So let's probably, leave that as a string.
+
+75
+00:05:26,580 --> 00:05:28,330
+I'm just kind of thinking on my feet here.
+
+76
+00:05:28,330 --> 00:05:32,820
+I think actually I'm gonna create a
+employment category as well.
+
+77
+00:05:32,820 --> 00:05:35,100
+So, I'll right click the model again.
+
+78
+00:05:35,100 --> 00:05:36,080
+And I go to new
+
+79
+00:05:38,690 --> 00:05:43,190
+class and I'll call that employment
+category.
+
+80
+00:05:46,210 --> 00:05:50,730
+And let's, let's just say here that we can
+have
+
+81
+00:05:52,904 --> 00:05:56,510
+employed in here.
+
+82
+00:05:56,510 --> 00:05:58,080
+Self employed.
+
+83
+00:05:58,080 --> 00:05:58,580
+So
+
+84
+00:06:00,330 --> 00:06:02,760
+maybe capitalize this, employed.
+
+85
+00:06:03,790 --> 00:06:07,220
+Some people put these enumeration
+constants in all capital
+
+86
+00:06:07,220 --> 00:06:11,040
+letters but I'm not gonna worry too much
+here.
+
+87
+00:06:11,040 --> 00:06:11,670
+unemployed.
+
+88
+00:06:13,480 --> 00:06:18,620
+And we could have a category buffer, for
+if they type something in themselves and
+
+89
+00:06:18,620 --> 00:06:23,380
+you could go to the trouble of storing of
+exactly or actually I meant not to
+
+90
+00:06:23,380 --> 00:06:28,020
+make that a class, but, in so you,
+whatever they type in over there you
+
+91
+00:06:28,020 --> 00:06:29,790
+might wanna store it separately, but I
+think
+
+92
+00:06:29,790 --> 00:06:32,770
+for this little application here I'm just
+gonna.
+
+93
+00:06:32,770 --> 00:06:37,610
+Store other if someone types something
+into this combo box.
+
+94
+00:06:38,640 --> 00:06:42,350
+And then the other stuff we need, we need
+to boolean for US citizen probably int for
+
+95
+00:06:42,350 --> 00:06:47,570
+tax ID, I don't know, or string and we've
+got male or female as well, so I
+
+96
+00:06:47,570 --> 00:06:52,305
+think since, again, male or female has two
+values, or it may
+
+97
+00:06:52,305 --> 00:06:58,400
+have,um, three cuz apparently, These days
+after you can put author
+
+98
+00:06:58,400 --> 00:07:03,670
+on the agenda form, then let's give this
+a, let's create a
+
+99
+00:07:03,670 --> 00:07:08,155
+new anon here, so not a new class, but a
+new anom.
+
+100
+00:07:09,870 --> 00:07:16,880
+And let's make this let's call this
+gender, and let's get this.
+
+101
+00:07:16,880 --> 00:07:19,460
+Values of male and female.
+
+102
+00:07:20,720 --> 00:07:22,450
+So that'll do.
+
+103
+00:07:22,450 --> 00:07:24,070
+And now, in my person
+
+104
+00:07:26,140 --> 00:07:32,220
+class here, I can say that the gender has
+type gender.
+
+105
+00:07:33,910 --> 00:07:35,807
+So I'm just using anoms.
+
+106
+00:07:35,807 --> 00:07:39,120
+For the situations where I've got like,
+you
+
+107
+00:07:39,120 --> 00:07:42,080
+know, three strings or two strings, but
+they can
+
+108
+00:07:42,080 --> 00:07:47,490
+only actually have two or, you know, they
+can only take one of two or three values.
+
+109
+00:07:47,490 --> 00:07:49,140
+They're not actually free text.
+
+110
+00:07:49,140 --> 00:07:53,138
+It makes sense to have an enom to store
+them.
+
+111
+00:07:53,138 --> 00:07:58,290
+So I think that's all okay now, so
+employment category.
+
+112
+00:07:58,290 --> 00:08:02,450
+Yeah, that's gonna be type employment
+category.
+
+113
+00:08:02,450 --> 00:08:03,490
+Like this.
+
+114
+00:08:03,490 --> 00:08:08,370
+Tax ID property string really.
+
+115
+00:08:08,370 --> 00:08:09,560
+Looks okay.
+
+116
+00:08:09,560 --> 00:08:11,630
+So now that's let's go ahead and.
+
+117
+00:08:11,630 --> 00:08:12,890
+Create the getters and setters.
+
+118
+00:08:12,890 --> 00:08:17,470
+So, I'll right click, go to source,
+generate getter and setters and I wanna
+
+119
+00:08:17,470 --> 00:08:24,320
+generate getters and setters for all of
+them here, like this.
+
+120
+00:08:24,320 --> 00:08:27,550
+And for the moment, I'll just give it I
+don't know if I really.
+
+121
+00:08:27,550 --> 00:08:30,180
+Want to construct it, because to create a
+constructor
+
+122
+00:08:30,180 --> 00:08:32,810
+with all these values is going to be quite
+long.
+
+123
+00:08:32,810 --> 00:08:42,160
+I mean to actually let's say, public
+person and let's, yeah, why not?
+
+124
+00:08:42,160 --> 00:08:43,780
+So let's, let's say int ID.
+
+125
+00:08:44,980 --> 00:08:46,710
+In fact, I miss our ID.
+
+126
+00:08:46,710 --> 00:08:52,112
+For the moment, so I got set ID, I'll just
+give it a string name, string
+
+127
+00:08:52,112 --> 00:08:57,840
+occupation, occupation
+
+128
+00:08:58,890 --> 00:09:04,230
+age category, agecat, let's say, well
+let's make it agecategory, why not?
+
+129
+00:09:06,116 --> 00:09:13,380
+Employment category employmentCategory
+
+130
+00:09:13,380 --> 00:09:17,374
+String taxID, boolean US
+
+131
+00:09:17,374 --> 00:09:22,100
+citizen, and Gender gender.
+
+132
+00:09:23,860 --> 00:09:25,820
+And this of course will have.
+
+133
+00:09:25,820 --> 00:09:27,470
+To this.name equals name.
+
+134
+00:09:27,470 --> 00:09:28,170
+This is a
+
+135
+00:09:30,240 --> 00:09:30,780
+bit boring.
+
+136
+00:09:30,780 --> 00:09:33,790
+So this.occupation equals occupation.
+
+137
+00:09:33,790 --> 00:09:35,450
+I don't know if there are any shortcuts
+
+138
+00:09:35,450 --> 00:09:39,820
+in Eclipse, for dealing with this kind of
+thing.
+
+139
+00:09:39,820 --> 00:09:41,258
+I suspect not.
+
+140
+00:09:41,258 --> 00:09:46,555
+And this.employmentCategory.
+
+141
+00:09:49,335 --> 00:09:52,715
+Oh yeah, I've called it m category, mcat
+there.
+
+142
+00:09:52,715 --> 00:09:54,365
+So let's call it mcat here as well then.
+
+143
+00:09:55,455 --> 00:10:03,154
+Mcat equals mcat, and this.taxId equals
+taxId.
+
+144
+00:10:03,154 --> 00:10:08,216
+This.USCitizen, we're almost there.
+
+145
+00:10:08,216 --> 00:10:16,870
+Equals US citizen and this.gender equals
+gender.
+
+146
+00:10:16,870 --> 00:10:21,750
+Now I will make the ID increment itself.
+
+147
+00:10:21,750 --> 00:10:26,006
+I'll put a private static count.
+
+148
+00:10:26,006 --> 00:10:28,540
+Let's just.
+
+149
+00:10:28,540 --> 00:10:31,148
+Explicitly set it to null although it will
+be initialized
+
+150
+00:10:31,148 --> 00:10:35,110
+to null anyway and that should be a type
+int.
+
+151
+00:10:37,606 --> 00:10:47,560
+And then in here I can say this.id equals
+count and count plus plus.
+
+152
+00:10:47,560 --> 00:10:49,470
+So every time I create a new person,
+
+153
+00:10:49,470 --> 00:10:54,140
+it'll increment the count which will be
+semicolon and
+
+154
+00:10:54,140 --> 00:10:56,930
+if I then set the idea explicitly
+afterwards
+
+155
+00:10:56,930 --> 00:11:00,940
+it will override this value here, which is
+good.
+
+156
+00:11:00,940 --> 00:11:06,060
+So, I'm just using This static variable,
+classic use of static variable, just
+
+157
+00:11:06,060 --> 00:11:10,160
+to count how many people there are, and to
+create an ID there.
+
+158
+00:11:11,220 --> 00:11:16,120
+So now I've got a person class that can
+store people
+
+159
+00:11:16,120 --> 00:11:20,190
+in some kind of database, and I'm just
+gonna do something.
+
+160
+00:11:20,190 --> 00:11:22,040
+Really simple here.
+
+161
+00:11:22,040 --> 00:11:27,440
+I'm just gonna right click and create a
+new class and I'm gonna call that
+
+162
+00:11:29,640 --> 00:11:34,680
+let's call it database for the moment and
+database
+
+163
+00:11:36,110 --> 00:11:40,030
+I'm gonna give it a private array.
+
+164
+00:11:41,320 --> 00:11:47,660
+ListofPeople, so let's put person, in this
+array list
+
+165
+00:11:47,660 --> 00:11:50,870
+and set that equal to well, let's give it
+constructor.
+
+166
+00:11:50,870 --> 00:11:55,860
+So public database, Database.
+
+167
+00:11:55,860 --> 00:12:01,506
+And let's s, say that, people
+
+168
+00:12:01,506 --> 00:12:07,628
+equals new ArrayListOfPerson.
+
+169
+00:12:07,628 --> 00:12:10,232
+And this is, this is gonna be the class,
+I'm just
+
+170
+00:12:10,232 --> 00:12:13,150
+gonna use for the moment to store people
+in my database.
+
+171
+00:12:14,860 --> 00:12:17,070
+And then we can have a method, for
+example, I'll
+
+172
+00:12:17,070 --> 00:12:19,770
+add to this as we go along, but like
+public void.
+
+173
+00:12:19,770 --> 00:12:27,885
+Add person which just accepts a person,
+and just says people.addperson.
+
+174
+00:12:29,200 --> 00:12:36,700
+And we could have a method that gets the
+array list, so public let's say list of.
+
+175
+00:12:37,990 --> 00:12:42,750
+Person, so use the list interface and say
+
+176
+00:12:42,750 --> 00:12:47,940
+get people like this and just return
+people.
+
+177
+00:12:47,940 --> 00:12:51,960
+You have to be careful because you can
+modify this using your
+
+178
+00:12:51,960 --> 00:12:55,700
+return value like this, but I won't worry
+about it too much.
+
+179
+00:12:55,700 --> 00:12:56,920
+It's I just have to input that.
+
+180
+00:12:56,920 --> 00:12:58,110
+Java util list.
+
+181
+00:12:59,440 --> 00:13:01,239
+So now I've got a little data base
+
+182
+00:13:01,239 --> 00:13:04,642
+thing that can store people while the
+application's running.
+
+183
+00:13:04,642 --> 00:13:08,900
+I'm gonna work on this and later on we're
+gonna connect it to an actual data base.
+
+184
+00:13:10,630 --> 00:13:16,920
+And in the next tutorial I'm gonna create
+some controller codes.
+
+185
+00:13:16,920 --> 00:13:22,296
+That's gonna kind of interface between the
+view here and
+
+186
+00:13:22,296 --> 00:13:27,784
+the model here and it's gonna allow me to
+add people to this
+
+187
+00:13:27,784 --> 00:13:33,640
+sort of database and then [INAUDIBLE]
+wecan look at.
+
+188
+00:13:33,640 --> 00:13:35,740
+Representing those people visually.
+
+189
+00:13:37,010 --> 00:13:39,860
+So that's it for this tutorial and the
+next
+
+190
+00:13:39,860 --> 00:13:42,280
+tutorial, as I say, we'll extend this a
+bit
+
+191
+00:13:42,280 --> 00:13:48,110
+further and we'll actually start storing
+people, so join
+
+192
+00:13:48,110 --> 00:13:51,410
+me again then, and until next time, happy
+coding.
+

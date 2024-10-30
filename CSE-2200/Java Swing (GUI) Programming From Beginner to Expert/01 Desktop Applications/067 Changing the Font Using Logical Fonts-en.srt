@@ -1,0 +1,315 @@
+1
+00:00:02,050 --> 00:00:05,860
+Hello, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,860 --> 00:00:09,230
+And in this tutorial, we're gonna look at
+setting the font.
+
+3
+00:00:09,230 --> 00:00:12,520
+So if I run the application here in this
+
+4
+00:00:12,520 --> 00:00:16,720
+mess, message panel above, you've got a
+text window here.
+
+5
+00:00:16,720 --> 00:00:21,940
+It's, it's actually a J text area, and I'm
+gonna show you how to set the font on that
+
+6
+00:00:21,940 --> 00:00:28,980
+text area, but actually, Swing components
+in general, the ones that display text
+
+7
+00:00:28,980 --> 00:00:36,300
+usually have a set font method, and I'm
+going to show you the set font for J text
+
+8
+00:00:36,300 --> 00:00:41,309
+area that equally well applies to labels
+and buttons and all kinds of things.
+
+9
+00:00:42,410 --> 00:00:46,910
+So my text area is actually within this
+text panel class I created.
+
+10
+00:00:46,910 --> 00:00:52,880
+And I'm going to call here textArea, so
+this is the J text area here.
+
+11
+00:00:52,880 --> 00:00:59,580
+I'm going to call text area.setfont.
+
+12
+00:00:59,580 --> 00:01:05,520
+And to set font, and this method as I say
+is the same for labels and all kinds
+
+13
+00:01:05,520 --> 00:01:10,850
+of controls, I'm gonna pass a new font
+object,
+
+14
+00:01:10,850 --> 00:01:13,830
+and let's have the input load, Ctrl +
+Shift load.
+
+15
+00:01:13,830 --> 00:01:19,210
+Now this has a constructor that takes
+three arguments, and
+
+16
+00:01:19,210 --> 00:01:22,140
+the first argument specifies what kind of
+font you want.
+
+17
+00:01:23,150 --> 00:01:26,530
+So actually in this tutorial I'm gonna
+show you
+
+18
+00:01:26,530 --> 00:01:31,080
+how to use what's called logical fonts and
+Swing.
+
+19
+00:01:31,080 --> 00:01:34,350
+And the way the logical fonts work is that
+you say what kind of
+
+20
+00:01:34,350 --> 00:01:39,970
+fonts you want and Swing then chooses an
+appropriate font from the system for you.
+
+21
+00:01:41,040 --> 00:01:45,900
+You can also load specific font files, and
+we'll look at that in the next tutorial.
+
+22
+00:01:47,280 --> 00:01:51,140
+So the first argument here is a string.
+
+23
+00:01:51,140 --> 00:01:55,165
+And the string can be one of serif,
+
+24
+00:01:55,165 --> 00:02:01,150
+sans-serif monospaced, dialogue or
+dialogue input.
+
+25
+00:02:02,220 --> 00:02:06,240
+So dialogue and dialogue input are kinds
+of fonts for dialogue boxes.
+
+26
+00:02:06,240 --> 00:02:11,580
+And monospaced means a font where each
+character takes up
+
+27
+00:02:11,580 --> 00:02:15,970
+the same amount of space, and that's
+useful for displaying data.
+
+28
+00:02:15,970 --> 00:02:22,663
+For example, if someone sent you a, like a
+file that's in CSV format exactly,
+
+29
+00:02:22,663 --> 00:02:27,220
+that's a bad example; well, a file where
+they've protect file, where they've tried
+
+30
+00:02:27,220 --> 00:02:32,080
+to sort of create a table using text; now,
+then you want all the
+
+31
+00:02:32,080 --> 00:02:35,380
+characters to be the same lengths, so the
+different rows of the table line up.
+
+32
+00:02:37,620 --> 00:02:42,920
+And serif mean a font that has
+
+33
+00:02:42,920 --> 00:02:45,780
+basically twiddles on it and sans-serif
+without twiddles.
+
+34
+00:02:45,780 --> 00:02:49,060
+Let's take a look at examples rather than
+me just talking.
+
+35
+00:02:49,060 --> 00:02:54,710
+So let's start with serif here and the
+second argument is whether
+
+36
+00:02:54,710 --> 00:02:57,350
+you want it to be plain, bold or italic,
+and I'm going to
+
+37
+00:02:57,350 --> 00:03:04,230
+go for plain here and certainly is
+aesthetic variable
+
+38
+00:03:04,230 --> 00:03:08,690
+of the font class, and the final argument
+is the size of the font in points.
+
+39
+00:03:08,690 --> 00:03:12,150
+I'm going to try setting a 20 point font
+here.
+
+40
+00:03:13,260 --> 00:03:14,290
+So let's take a look at that.
+
+41
+00:03:15,330 --> 00:03:21,170
+And if I run that and now, we can see that
+we've got a serif font here.
+
+42
+00:03:21,170 --> 00:03:24,840
+And you can tell it's serif because if you
+look, for example, at
+
+43
+00:03:24,840 --> 00:03:29,010
+the bottom of the Y here, it's got a
+little bulb on it.
+
+44
+00:03:29,010 --> 00:03:32,900
+It has various twiddles that you wouldn't
+get in a sans-serif.
+
+45
+00:03:32,900 --> 00:03:34,970
+Let's take a look at some more examples.
+
+46
+00:03:34,970 --> 00:03:39,992
+If I set here sans-serif, sans-serif and
+run that,
+
+47
+00:03:39,992 --> 00:03:45,234
+sans-serif font doesn't have those
+twiddles, so
+
+48
+00:03:45,234 --> 00:03:50,607
+now you can see there's no bulb at the
+bottom of the Y.
+
+49
+00:03:50,607 --> 00:03:53,150
+The H doesn't have like bulbs on it.
+
+50
+00:03:53,150 --> 00:03:56,010
+If you look at the serif font, H is like,
+at
+
+51
+00:03:56,010 --> 00:03:59,040
+the ends of the lines, it's got like a
+little thing.
+
+52
+00:03:59,040 --> 00:04:00,602
+And that's missing in the sans-serif.
+
+53
+00:04:00,602 --> 00:04:03,776
+So sans-serif fonts are just plainer than
+serif fonts.
+
+54
+00:04:03,776 --> 00:04:09,080
+Actually, I don't want to turn this in to
+a lesson on types
+
+55
+00:04:09,080 --> 00:04:14,062
+of fonts, but I'll just show you the three
+most useful
+
+56
+00:04:14,062 --> 00:04:19,714
+types, and the other one, monospaced is
+sometimes useful.
+
+57
+00:04:19,714 --> 00:04:22,118
+So if we look now, kind of looks a
+
+58
+00:04:22,118 --> 00:04:25,780
+bit like a sort of, sort of teletype type
+thing.
+
+59
+00:04:27,160 --> 00:04:29,870
+And, but I think actually, the one that
+looks best for
+
+60
+00:04:29,870 --> 00:04:35,920
+this message dialogue is the serif, so
+let's stick with that.
+
+61
+00:04:37,630 --> 00:04:43,190
+And as I say, you can make that, bold or
+italic, instead of plain.
+
+62
+00:04:43,190 --> 00:04:45,830
+Okay, so I'm going to leave it there for
+this tutorial, and
+
+63
+00:04:45,830 --> 00:04:49,500
+in the next tutorial, we're gonna look at
+how to load font
+
+64
+00:04:49,500 --> 00:04:53,100
+files so you can set specific font if you
+want if you
+
+65
+00:04:53,100 --> 00:04:56,800
+want to, so join me again then and until
+then, happy coding.
+

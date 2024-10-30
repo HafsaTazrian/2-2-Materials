@@ -1,0 +1,346 @@
+1
+00:00:02,030 --> 00:00:02,390
+Hello.
+
+2
+00:00:02,390 --> 00:00:04,820
+This is John from caveofprogramming.com.
+
+3
+00:00:04,820 --> 00:00:09,270
+And in this tutorial, we're gonna look at
+the JToolbar class and
+
+4
+00:00:09,270 --> 00:00:13,360
+we're gonna make this toolbar up here look
+a bit more interesting.
+
+5
+00:00:13,360 --> 00:00:17,210
+So at the moment I've got text on my
+buttons as well as icons.
+
+6
+00:00:17,210 --> 00:00:23,800
+So often what you what is a tool bar like
+this one here, that just has icons on it.
+
+7
+00:00:23,800 --> 00:00:30,020
+Now if I go to my tool bar class here,
+which is actually a kind of J panel,
+
+8
+00:00:30,020 --> 00:00:36,676
+and I remove the text from the buttons
+like this, [SOUND] and run that.
+
+9
+00:00:36,676 --> 00:00:38,568
+They actually look a bit rubbish cuz
+they're
+
+10
+00:00:38,568 --> 00:00:40,970
+rectangular and it doesn't really look
+like a toolbar.
+
+11
+00:00:40,970 --> 00:00:44,140
+And I'm gonna fix that now.
+
+12
+00:00:44,140 --> 00:00:46,373
+And one thing I'm gonna do to start
+
+13
+00:00:46,373 --> 00:00:49,688
+with actually, is I'm gonna add tool tips
+there.
+
+14
+00:00:49,688 --> 00:00:57,377
+So I'm gonna say,
+saveButton.setToolTipText save.
+
+15
+00:00:57,377 --> 00:01:06,732
+[SOUND] And, I'm also gonna say
+refreshButton.setToolTipText.
+
+16
+00:01:06,732 --> 00:01:07,508
+Refresh.
+
+17
+00:01:07,508 --> 00:01:13,312
+[SOUND] And you can use set tool tip, text
+or any kind of buttons anywhere
+
+18
+00:01:13,312 --> 00:01:18,584
+and you then get these tool tips that come
+up, which is rather nice.
+
+19
+00:01:18,584 --> 00:01:25,430
+Okay, now I'm gonna change this J panel
+into a toolbar.
+
+20
+00:01:25,430 --> 00:01:27,840
+So I'm gonna say, search J panel here.
+
+21
+00:01:27,840 --> 00:01:33,240
+I'm gonna say extends JToolBar with
+capital B and I'll add
+
+22
+00:01:33,240 --> 00:01:38,640
+the input there and I'll get rid of, the
+set layout thing here.
+
+23
+00:01:40,270 --> 00:01:45,050
+And to add buttons to a tool bar you just
+call ads, and a button name.
+
+24
+00:01:45,050 --> 00:01:51,020
+And sometimes you wanna make a separator,
+between two groups of buttons.
+
+25
+00:01:51,020 --> 00:01:53,725
+And then you could say add separator.
+
+26
+00:01:53,725 --> 00:01:59,298
+[SOUND] And if I run that now, you can see
+that the buttons are square.
+
+27
+00:01:59,298 --> 00:02:02,102
+And I've got a separator, just a blank
+space between them.
+
+28
+00:02:02,102 --> 00:02:04,560
+I'm gonna get rid of the separator because
+it doesn't look
+
+29
+00:02:04,560 --> 00:02:08,050
+that good in this application because
+there are only about two buttons.
+
+30
+00:02:08,050 --> 00:02:11,420
+and, and now I've [UNKNOWN] like that and
+they've got tool tips as well.
+
+31
+00:02:12,530 --> 00:02:14,810
+And, they should still work.
+
+32
+00:02:14,810 --> 00:02:15,310
+There
+
+33
+00:02:17,000 --> 00:02:17,470
+you go.
+
+34
+00:02:17,470 --> 00:02:22,320
+And, now you can make the toolbar
+draggable as well.
+
+35
+00:02:22,320 --> 00:02:23,890
+If you want.
+
+36
+00:02:23,890 --> 00:02:28,990
+And one thing that I need to do, is get
+rid of this border here.
+
+37
+00:02:28,990 --> 00:02:36,130
+And if I, if I run that, it's gonna be
+with a bit of luck trackable.
+
+38
+00:02:36,130 --> 00:02:38,370
+So, it, in a moment, I can, you
+
+39
+00:02:38,370 --> 00:02:41,440
+can actually drag it completely out of the
+application.
+
+40
+00:02:41,440 --> 00:02:42,740
+And you can fix that if you want.
+
+41
+00:02:42,740 --> 00:02:45,980
+But I'm having trouble here docking it.
+
+42
+00:02:45,980 --> 00:02:50,230
+And I think that's because, when you add,
+toolbar.
+
+43
+00:02:50,230 --> 00:02:51,540
+If I go to MainFrame here.
+
+44
+00:02:52,670 --> 00:03:00,120
+You need to add toolbars using where are
+we, so we've added it using.
+
+45
+00:03:00,120 --> 00:03:01,280
+Let's look for the border layout.
+
+46
+00:03:01,280 --> 00:03:02,220
+Here we go.
+
+47
+00:03:02,220 --> 00:03:04,380
+I've added it using BorderLayout.North.
+
+48
+00:03:04,380 --> 00:03:08,303
+But, you, you need to add it using
+page_start like that,
+
+49
+00:03:08,303 --> 00:03:13,260
+and you also wanna be careful about what
+other components you're adding.
+
+50
+00:03:13,260 --> 00:03:15,319
+So here I've got a FormPanel to the West.
+
+51
+00:03:16,500 --> 00:03:22,500
+And that will stop my toolbar docking to
+the west, so to speak.
+
+52
+00:03:22,500 --> 00:03:26,960
+But, I think I can still dock it here.
+
+53
+00:03:26,960 --> 00:03:27,710
+There we go.
+
+54
+00:03:27,710 --> 00:03:28,930
+On the right.
+
+55
+00:03:28,930 --> 00:03:31,080
+So we're gonna drag and drop the toolbox.
+
+56
+00:03:31,080 --> 00:03:32,326
+It's quite difficult to get [UNKNOWN].
+
+57
+00:03:33,520 --> 00:03:34,770
+Here at top sometimes.
+
+58
+00:03:36,680 --> 00:03:39,760
+And okay, I think that's just about it for
+this tutorial.
+
+59
+00:03:39,760 --> 00:03:45,500
+If you don't want your toolbar to be to be
+floatable.
+
+60
+00:03:45,500 --> 00:03:46,740
+If you don't want it floating.
+
+61
+00:03:46,740 --> 00:03:53,460
+Then say set floatable, false and then if
+I run this.
+
+62
+00:03:53,460 --> 00:03:59,880
+It's no longer, gonna be actually even
+dragable, and
+
+63
+00:03:59,880 --> 00:04:04,750
+you can also like there's nothing stopping
+you setting borders around your toolbar.
+
+64
+00:04:04,750 --> 00:04:08,140
+But, if you set a too, a border around the
+
+65
+00:04:08,140 --> 00:04:14,790
+toolbar, it's not gonna be not usually
+gonna be draggable so.
+
+66
+00:04:14,790 --> 00:04:17,280
+And these have it with not bother, it's
+draggable.
+
+67
+00:04:17,280 --> 00:04:20,397
+But actually I'm, I'm not really convinced
+in
+
+68
+00:04:20,397 --> 00:04:23,740
+the value of draggable tool bars on the
+whole.
+
+69
+00:04:23,740 --> 00:04:28,070
+I actually quite like the look of it with
+set border.
+
+70
+00:04:28,070 --> 00:04:32,185
+let's just put a comment here.
+
+71
+00:04:32,185 --> 00:04:39,129
+Get rid of the border if you want the
+toolbar draggable.
+
+72
+00:04:39,129 --> 00:04:43,009
+[SOUND] Okay, so that's it for this
+tutorial.
+
+73
+00:04:43,009 --> 00:04:48,377
+And in the next tutorial, we're gonna look
+at splitter windows,
+
+74
+00:04:48,377 --> 00:04:52,676
+so join me again then and until next time,
+happy coding.
+
+75
+00:04:52,676 --> 00:04:52,747
+[SOUND]
+

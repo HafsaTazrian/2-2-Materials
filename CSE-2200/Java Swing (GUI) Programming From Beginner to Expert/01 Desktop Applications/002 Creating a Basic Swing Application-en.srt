@@ -1,0 +1,480 @@
+1
+00:00:01,930 --> 00:00:03,110
+Hi, welcome back.
+
+2
+00:00:03,110 --> 00:00:05,050
+And in this tutorial we're going to look
+
+3
+00:00:05,050 --> 00:00:10,610
+at creating a basic Hello World Swing
+application.
+
+4
+00:00:10,610 --> 00:00:13,000
+So, I've got clips running here.
+
+5
+00:00:13,000 --> 00:00:16,670
+I'm going to click on this workbench icon.
+
+6
+00:00:16,670 --> 00:00:19,470
+And if you're using a different IDE then
+it's going
+
+7
+00:00:19,470 --> 00:00:22,060
+to work pretty much the same as it does
+any clips.
+
+8
+00:00:22,060 --> 00:00:24,890
+Because they're all basically similar.
+
+9
+00:00:24,890 --> 00:00:29,630
+So I'm gonna go into File > New Project,
+new job or project, here.
+
+10
+00:00:29,630 --> 00:00:31,710
+And I'll give this a name, I'll call it
+swing1.
+
+11
+00:00:31,710 --> 00:00:34,990
+And I'm just gonna accept all the
+defaults.
+
+12
+00:00:34,990 --> 00:00:36,500
+And so I'll click Finish.
+
+13
+00:00:39,250 --> 00:00:42,250
+And I'm gonna right-click my project
+folder here or I
+
+14
+00:00:42,250 --> 00:00:45,470
+could optionally go to the, alternatively
+go to the File Menu.
+
+15
+00:00:45,470 --> 00:00:51,870
+And I'm gonna do New > Class, and I'm
+going to call this Class App, and
+
+16
+00:00:51,870 --> 00:00:58,540
+I'm going to tick this check box here to
+generate a main method automatically.
+
+17
+00:01:00,480 --> 00:01:07,030
+So, this is just an ordinary kind of Hello
+World Java program
+
+18
+00:01:07,030 --> 00:01:11,370
+without the Hello World, but I can already
+run that by clicking the green Run button.
+
+19
+00:01:11,370 --> 00:01:14,180
+And it would just run and finish.
+
+20
+00:01:14,180 --> 00:01:15,980
+So, I want to run it as a Java
+application.
+
+21
+00:01:17,570 --> 00:01:18,070
+There we go.
+
+22
+00:01:19,580 --> 00:01:23,900
+And now I wanna turn this into a basic
+swing program.
+
+23
+00:01:25,030 --> 00:01:27,070
+So we're gonna be using classes from
+
+24
+00:01:27,070 --> 00:01:32,490
+the built-in Java swing window toolkit
+package.
+
+25
+00:01:32,490 --> 00:01:34,980
+And they mostly begin with J.
+
+26
+00:01:34,980 --> 00:01:39,230
+And in this tutorial I'm going to be using
+one called JFrame.
+
+27
+00:01:39,230 --> 00:01:42,550
+So, I'll create a variable, I've type
+JFrame which I'll call frame.
+
+28
+00:01:42,550 --> 00:01:46,870
+And I'll set that equal to a new JFrame.
+
+29
+00:01:46,870 --> 00:01:49,040
+And in the constructor here I can pass in
+
+30
+00:01:49,040 --> 00:01:52,800
+a string which will be the title of my
+window.
+
+31
+00:01:52,800 --> 00:01:56,450
+So I'm going to set that equal to hello
+world, like that.
+
+32
+00:01:58,560 --> 00:02:03,170
+Now the the JFrame, is not visible, by
+default.
+
+33
+00:02:04,170 --> 00:02:07,850
+And to make it visible, you have to call a
+method called set visible.
+
+34
+00:02:07,850 --> 00:02:10,720
+But before I do that actually, I'm gonna
+add the import.
+
+35
+00:02:10,720 --> 00:02:15,100
+Which I could do by clicking on this error
+icon here and going to Import JFrame
+
+36
+00:02:15,100 --> 00:02:18,670
+or, in Eclipse, you can do Ctrl+Shift+O
+which
+
+37
+00:02:18,670 --> 00:02:22,970
+stands for organize imports and that does
+the trick.
+
+38
+00:02:22,970 --> 00:02:26,086
+So, I've imported Java.swing.JFrame.
+
+39
+00:02:27,520 --> 00:02:33,609
+And now to make the frame visible, I'm
+gonna do frame.set visible,
+
+40
+00:02:33,609 --> 00:02:41,140
+brackets true, and that's all there is to
+an absolutely minimal swing
+
+41
+00:02:41,140 --> 00:02:45,440
+program, but as you'll see in a second,
+it's not very satisfactory,
+
+42
+00:02:45,440 --> 00:02:49,430
+so if I run this, it creates this tiny
+window up here.
+
+43
+00:02:50,780 --> 00:02:55,280
+And I can expand it and it's got the title
+Hello World there.
+
+44
+00:02:55,280 --> 00:02:59,990
+And if I click the cross in the corner
+here, let's get rid of it.
+
+45
+00:03:01,840 --> 00:03:04,500
+The application doesn't actually quit.
+
+46
+00:03:04,500 --> 00:03:08,800
+And the way that you know that is usually
+you'll see like a red button down
+
+47
+00:03:08,800 --> 00:03:11,910
+in the bottom right corner here in Eclipse
+
+48
+00:03:11,910 --> 00:03:14,880
+and I think it's pretty similar in,
+NetBeans [UNKNOWN].
+
+49
+00:03:14,880 --> 00:03:20,510
+If you don't see it like I'm not seeing it
+now, then, in Eclipse, go
+
+50
+00:03:20,510 --> 00:03:26,170
+to Window > Show View > Console and then
+you'll see that button there.
+
+51
+00:03:26,170 --> 00:03:29,100
+And the fact that it's red tells me that
+the
+
+52
+00:03:29,100 --> 00:03:32,040
+application is actually still running even
+though the window is gone.
+
+53
+00:03:32,040 --> 00:03:35,500
+So let's click that to terminate it.
+
+54
+00:03:35,500 --> 00:03:36,730
+So now it's finished.
+
+55
+00:03:37,970 --> 00:03:40,650
+So to fix the two problems there,
+
+56
+00:03:40,650 --> 00:03:45,850
+I'm gonna do frame.set default, close
+operation.
+
+57
+00:03:45,850 --> 00:03:52,120
+And I'm gonna pass to that a static member
+of j frame which is exit on close.
+
+58
+00:03:52,120 --> 00:03:55,120
+And what that does is it tells the
+application to
+
+59
+00:03:55,120 --> 00:03:58,920
+quit when you click that cross to close
+the window.
+
+60
+00:03:58,920 --> 00:04:01,270
+So, when you close the window, your
+application is now going
+
+61
+00:04:01,270 --> 00:04:04,220
+to terminate and you can see the red
+button goes gray.
+
+62
+00:04:06,280 --> 00:04:08,460
+The other thing that's wrong with that is
+
+63
+00:04:09,460 --> 00:04:12,640
+its very small, so lets make the size
+bigger.
+
+64
+00:04:12,640 --> 00:04:19,023
+I'll say, frame.setsize, frame.setsize and
+
+65
+00:04:19,023 --> 00:04:25,830
+let's make this maybe 600 by, I don't
+know, 500.
+
+66
+00:04:25,830 --> 00:04:27,180
+And if I run this.
+
+67
+00:04:28,270 --> 00:04:31,990
+Now I've got a, quite nice Hello World
+program.
+
+68
+00:04:33,130 --> 00:04:34,710
+Which quits when I click cross.
+
+69
+00:04:35,830 --> 00:04:38,320
+And there is still a little problem with
+this.
+
+70
+00:04:38,320 --> 00:04:42,720
+Now in in previous versions of Swing, like
+I
+
+71
+00:04:42,720 --> 00:04:46,810
+dunno, maybe Java four, possibly Java
+five, I'm not sure.
+
+72
+00:04:46,810 --> 00:04:52,584
+It used to be the case that this was all
+you need for a Hello World swing app.
+
+73
+00:04:53,610 --> 00:04:57,700
+But, at some point, some started saying
+that you need
+
+74
+00:04:57,700 --> 00:05:02,010
+to run your swing app in a special thread
+and I
+
+75
+00:05:02,010 --> 00:05:04,420
+think this is only of concern if you're
+gonna be
+
+76
+00:05:04,420 --> 00:05:09,510
+doing, multithreading in your swing
+application, but better safe than sorry.
+
+77
+00:05:10,550 --> 00:05:14,050
+What you need to do is, I'm gonna
+
+78
+00:05:14,050 --> 00:05:17,449
+use a static method of the swing utilities
+class.
+
+79
+00:05:19,460 --> 00:05:25,460
+So, the swing utilities class has a method
+called invoke later
+
+80
+00:05:25,460 --> 00:05:31,190
+and invoke later needs a class implements,
+the runnable interface.
+
+81
+00:05:31,190 --> 00:05:35,270
+So I'm going to implement that interface
+with just an anonymous object,
+
+82
+00:05:35,270 --> 00:05:41,100
+an anonymous class here by saying new
+inside the, function brackets there.
+
+83
+00:05:41,100 --> 00:05:45,760
+Actually, I'll put the semicolon in
+already and inside these brackets, I'll
+
+84
+00:05:45,760 --> 00:05:52,160
+say new runnable like this, new runnable
+round brackets.
+
+85
+00:05:52,160 --> 00:05:56,250
+And then open a curly parenthesis and
+Swing has
+
+86
+00:05:56,250 --> 00:05:59,310
+just put the closing one in automatically
+for me.
+
+87
+00:06:00,630 --> 00:06:06,950
+And the runnable you may know has one
+method, called public void run.
+
+88
+00:06:06,950 --> 00:06:11,968
+And if I click this warning icon here, I
+can add this automatically in Eclipse.
+
+89
+00:06:11,968 --> 00:06:15,320
+Public void run, or I could just type it
+on myself.
+
+90
+00:06:16,530 --> 00:06:22,500
+And let's get rid of this, this stuff
+here, a few blank lines and things.
+
+91
+00:06:22,500 --> 00:06:27,190
+And you just need to put your code here in
+this public void run method.
+
+92
+00:06:27,190 --> 00:06:31,610
+And now you've got a, hopefully more
+robust
+
+93
+00:06:31,610 --> 00:06:35,230
+swing application than runs in the
+approved manner.
+
+94
+00:06:35,230 --> 00:06:37,970
+So, if I run that, it just looks the same
+as before.
+
+95
+00:06:37,970 --> 00:06:41,260
+And but presumably, it won't crash in some
+circumstance where
+
+96
+00:06:41,260 --> 00:06:44,050
+otherwise it would if you hadn't done that
+extra step.
+
+97
+00:06:44,050 --> 00:06:46,210
+But nobody really seems to know, to be
+honest with you.
+
+98
+00:06:47,330 --> 00:06:51,830
+Okay, so in the next tutorial we're going
+to start
+
+99
+00:06:51,830 --> 00:06:55,889
+looking at adding some components to this
+basic Swing app.
+
+100
+00:06:55,889 --> 00:06:57,200
+So, join me again then.
+
+101
+00:06:57,200 --> 00:06:59,700
+And until then, happy coding.
+

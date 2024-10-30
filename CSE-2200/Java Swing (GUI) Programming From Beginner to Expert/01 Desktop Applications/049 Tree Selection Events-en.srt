@@ -1,0 +1,296 @@
+1
+00:00:01,960 --> 00:00:05,590
+Hello, this is John from
+caveofprogramming.com, and in this
+
+2
+00:00:05,590 --> 00:00:10,210
+tutorial we're gonna look at responding to
+tree selection events.
+
+3
+00:00:10,210 --> 00:00:13,786
+Now one thing I'm gonna do here is, at the
+moment in my tree here.
+
+4
+00:00:13,786 --> 00:00:19,010
+I can Shift+Click to select, or Ctrl+click
+
+5
+00:00:19,010 --> 00:00:24,320
+to select more than one tree node, and
+responding to tree selection events
+
+6
+00:00:24,320 --> 00:00:29,240
+only makes sense, if you can only select
+one node at a time.
+
+7
+00:00:30,470 --> 00:00:34,190
+And for that reason I'm gonna select the
+selection mode on the tree here.
+
+8
+00:00:34,190 --> 00:00:43,090
+I'm gonna say server tree is the name of
+my JTree component .getTreeSelectionModel.
+
+9
+00:00:43,090 --> 00:00:48,607
+getTreeSelection, .getSelectionModel,
+
+10
+00:00:48,607 --> 00:00:55,033
+actually .getSelectionModel, and
+setSelectionMode.
+
+11
+00:00:55,033 --> 00:00:59,869
+I'm gonna ask that static constant from
+the class,
+
+12
+00:00:59,869 --> 00:01:05,109
+TreeSelectionModel there and I'm gonna
+set, and that's,
+
+13
+00:01:05,109 --> 00:01:10,166
+I'm gonna used that constant
+SINGLE_TREE_SELECTION.
+
+14
+00:01:10,166 --> 00:01:13,144
+So once it's doing is it's quite complex.
+
+15
+00:01:13,144 --> 00:01:14,801
+So I've got the selection model,
+
+16
+00:01:14,801 --> 00:01:17,610
+and called getSetSelectionMode on the
+selection model.
+
+17
+00:01:18,820 --> 00:01:21,900
+And then pass that tree selection model,
+that SINGLE_TREE_SELECTION.
+
+18
+00:01:21,900 --> 00:01:24,530
+And what that does is now, if I look at
+
+19
+00:01:24,530 --> 00:01:29,140
+my tree I'm holding down Ctrl here, but I
+can only
+
+20
+00:01:29,140 --> 00:01:32,760
+select one node at a time, and that's what
+I
+
+21
+00:01:32,760 --> 00:01:35,740
+want, because otherwise what I'm about to
+do won't make sense.
+
+22
+00:01:35,740 --> 00:01:37,980
+And later on, we'll look at, a much
+
+23
+00:01:37,980 --> 00:01:40,820
+more flexible way of dealing with tree
+selection.
+
+24
+00:01:40,820 --> 00:01:46,560
+But for now, I'm gonna to say now, we're
+going to ask to serverTree,
+
+25
+00:01:46,560 --> 00:01:51,496
+I'm gonna to say addSelection, actually I
+think it's that
+
+26
+00:01:51,496 --> 00:01:57,360
+TreeSelectionListener part about it, and
+let's add a semicolon in there.
+
+27
+00:01:57,360 --> 00:01:58,900
+And here I could make
+
+28
+00:01:58,900 --> 00:02:02,180
+MessagePanel implement
+TreeSelectionListener but instead
+
+29
+00:02:02,180 --> 00:02:06,786
+I'll just use an anonymous parse here I'll
+say, new TreeSelectionListener.
+
+30
+00:02:06,786 --> 00:02:12,480
+Round brackets, Scala parenthesis and
+implement the missing methods here.
+
+31
+00:02:14,200 --> 00:02:17,930
+And, this will be called every time
+someone selects a node in the tree.
+
+32
+00:02:19,270 --> 00:02:24,808
+And, when you do select a node in a tree,
+I'll say ServerTree,
+
+33
+00:02:24,808 --> 00:02:31,480
+that's my JTree,
+ServerTree.getLastSelectedPathComponent.
+
+34
+00:02:31,480 --> 00:02:35,200
+And so I have to select, set this to
+single tree selection
+
+35
+00:02:35,200 --> 00:02:39,930
+cuz otherwise there's not gonna be one
+unique get last selected path component.
+
+36
+00:02:40,960 --> 00:02:42,995
+And that component is gonna be a
+
+37
+00:02:42,995 --> 00:02:49,540
+DefaultMutableTreeNode, so it's actually
+gonna return an object.
+
+38
+00:02:49,540 --> 00:02:53,630
+Because I've only added
+DefaultMutableTreeNode into my tree.
+
+39
+00:02:53,630 --> 00:02:55,955
+So it's gotta be a DefaultMutableTreeNode.
+
+40
+00:02:55,955 --> 00:03:01,451
+So set that equal to, see this returns a
+object, i'm
+
+41
+00:03:01,451 --> 00:03:06,470
+gonna cast it to default mutable tree node
+here.
+
+42
+00:03:06,470 --> 00:03:09,484
+Because I know that's what it will
+actually be,
+
+43
+00:03:09,484 --> 00:03:11,841
+cuz that's what my is tree made up of.
+
+44
+00:03:11,841 --> 00:03:20,109
+And when I've done that I can say
+nodes.GetUserObject, user object.
+
+45
+00:03:20,109 --> 00:03:24,975
+And you might wonder what the user object
+is, and the answer is, it's
+
+46
+00:03:24,975 --> 00:03:29,679
+whatever you passed the constructor of
+DefaultMutableTreeNode,
+
+47
+00:03:29,679 --> 00:03:32,832
+and in this case my user object strings.
+
+48
+00:03:32,832 --> 00:03:38,722
+So I can say string, userObject equals,
+
+49
+00:03:38,722 --> 00:03:44,673
+cast it to String, node.getUserObject.
+
+50
+00:03:44,673 --> 00:03:50,458
+And actually, let's not see it's going to
+be a string, let's just say
+
+51
+00:03:50,458 --> 00:03:56,514
+Objust userObject, this maybe more
+eloquent, equals node.getUserObject.
+
+52
+00:03:56,514 --> 00:04:02,857
+And then, all I'm going to do here is sys
+out on the user OBJECT.
+
+53
+00:04:02,857 --> 00:04:08,467
+So now if I run this, and I go to my tree,
+and I select something, select
+
+54
+00:04:08,467 --> 00:04:14,290
+service, you can see it's, it's got the
+text service down here, USA, UK.
+
+55
+00:04:14,290 --> 00:04:17,890
+And if I expand those I can click on these
+individual ones
+
+56
+00:04:17,890 --> 00:04:22,910
+and now the console is getting the string
+associated with the, nodes.
+
+57
+00:04:25,000 --> 00:04:29,340
+so, Now that's all very well, but it's not
+terribly flexible.
+
+58
+00:04:29,340 --> 00:04:33,585
+And, and for that reason, in the next
+tutorial
+
+59
+00:04:33,585 --> 00:04:38,800
+we're going to look at associating data
+with tree nodes.
+
+60
+00:04:38,800 --> 00:04:42,850
+So we're gonna look more closely at these
+user objects.
+
+61
+00:04:42,850 --> 00:04:46,458
+So join me again then, and until next
+time, happy coding.
+
+62
+00:04:46,458 --> 00:04:50,520
+[BLANK_AUDIO]
+

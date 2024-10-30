@@ -1,0 +1,635 @@
+1
+00:00:02,120 --> 00:00:05,270
+Hello there, this is John from
+caveofprogramming.com.
+
+2
+00:00:05,270 --> 00:00:10,850
+And in this tutorial we're gonna look at
+intercepting the window closing event.
+
+3
+00:00:10,850 --> 00:00:16,520
+And one reason to do that, is so that you
+can clear up clean up resources in
+
+4
+00:00:16,520 --> 00:00:22,500
+there, and in this case, we're gonna use
+it to disconnect from a database.
+
+5
+00:00:22,500 --> 00:00:24,510
+So actually, one thing to do, is to make
+sure that
+
+6
+00:00:24,510 --> 00:00:30,170
+you can disconnect from your database,
+even if you haven't connected.
+
+7
+00:00:30,170 --> 00:00:33,190
+So let's go to the Connect method in the
+database here.
+
+8
+00:00:33,190 --> 00:00:36,730
+And you can see that I've checked, but the
+connection's not null.
+
+9
+00:00:36,730 --> 00:00:37,770
+Because that can lead to a a very
+
+10
+00:00:37,770 --> 00:00:41,708
+nasty error, if you try to disconnect from
+something.
+
+11
+00:00:41,708 --> 00:00:45,750
+And it's, it's null where you get that no
+point reception.
+
+12
+00:00:45,750 --> 00:00:51,150
+Okay, so let's go in to the mainframe code
+here.
+
+13
+00:00:51,150 --> 00:00:57,996
+And at the moment, I've, I've got this
+exit on close thing happening, so I've,
+
+14
+00:00:57,996 --> 00:01:01,743
+I've caught Set Default close operation
+for the
+
+15
+00:01:01,743 --> 00:01:05,830
+JFrame, and I've said JFrame exit on
+close.
+
+16
+00:01:05,830 --> 00:01:09,970
+And I'm gonna change that, that means that
+when
+
+17
+00:01:09,970 --> 00:01:15,830
+you close the JFrame, it's gonna quit the
+application.
+
+18
+00:01:15,830 --> 00:01:22,298
+I'm gonna change that to do nothing on
+close for the moment,
+
+19
+00:01:22,298 --> 00:01:28,310
+and now, I'm gonna add a Window Listener
+to my JFrame.
+
+20
+00:01:29,398 --> 00:01:36,195
+So I'm gonna say Add Window Listener, and
+I'll say New, and I'm not
+
+21
+00:01:36,195 --> 00:01:37,950
+gonna use the Window Listener itself,
+because
+
+22
+00:01:37,950 --> 00:01:41,580
+Window Listener has like 5 million
+different methods.
+
+23
+00:01:41,580 --> 00:01:46,660
+I'm gonna use a window adapter, which is a
+class that implements all the
+
+24
+00:01:46,660 --> 00:01:51,960
+methods of Window Listener, and let's me
+override just the ones that I need.
+
+25
+00:01:53,360 --> 00:01:58,200
+And it's been sent to a mouse adapter if
+you know how that kinda code works.
+
+26
+00:01:58,200 --> 00:01:59,788
+But don't worry if you don't.
+
+27
+00:01:59,788 --> 00:02:04,261
+So I'm gonna do go and I'm gonna say
+import Window Adapter there.
+
+28
+00:02:04,261 --> 00:02:06,480
+And then let's right click in there,
+
+29
+00:02:06,480 --> 00:02:10,198
+and go to Source, overwrite and implement
+message.
+
+30
+00:02:10,198 --> 00:02:13,420
+And I'm gonna override the window closing,
+because
+
+31
+00:02:13,420 --> 00:02:18,218
+I wanna get the window as it's closing.
+
+32
+00:02:18,218 --> 00:02:22,020
+And in here, let's close this out just for
+the moment
+
+33
+00:02:22,020 --> 00:02:27,840
+and say, window closing, cuz we wanna see
+when it actually arises.
+
+34
+00:02:29,470 --> 00:02:33,240
+And now, I I mentioned earlier, well I
+mentioned
+
+35
+00:02:33,240 --> 00:02:36,050
+in the last tutorial that sometimes, if
+you quit
+
+36
+00:02:36,050 --> 00:02:38,510
+the application here, really clicking the
+cross in the
+
+37
+00:02:38,510 --> 00:02:46,000
+corner, you see like stack trays here,
+about interrupting threads.
+
+38
+00:02:46,000 --> 00:02:48,150
+And if you search on Google, that seems to
+be, be
+
+39
+00:02:48,150 --> 00:02:53,320
+a, a bookend swing, and it may be related
+to JFile chosers.
+
+40
+00:02:53,320 --> 00:02:58,620
+but, I, I've, I've found, and this seems
+to help.
+
+41
+00:02:58,620 --> 00:03:03,770
+But if you do system, system.gc.
+
+42
+00:03:03,770 --> 00:03:08,970
+So you run the Garbage Collector, like
+this, before quitting the application.
+
+43
+00:03:08,970 --> 00:03:10,350
+That seems to help.
+
+44
+00:03:10,350 --> 00:03:14,051
+And I'm also here, because, I'm gonna
+
+45
+00:03:14,051 --> 00:03:16,870
+enter Set Window Closing, print out this
+message,
+
+46
+00:03:16,870 --> 00:03:20,270
+and then I'm gonna call the JFrame dispose
+
+47
+00:03:20,270 --> 00:03:24,200
+method, which is gonna dispose of my
+window.
+
+48
+00:03:24,200 --> 00:03:30,660
+And when you've disposed of your windows
+in Swing, then it, it quits automatically.
+
+49
+00:03:30,660 --> 00:03:33,500
+I'm just gonna run the garbage collector
+at the
+
+50
+00:03:33,500 --> 00:03:38,060
+last possible moment before the thing
+finally bows out.
+
+51
+00:03:38,060 --> 00:03:42,940
+So let's just see how, how that looks if I
+run that as a Java application,
+
+52
+00:03:44,740 --> 00:03:48,670
+I need to select main class and click the
+Run button.
+
+53
+00:03:48,670 --> 00:03:52,230
+When I click the cross in the corner and
+we've got the window closing
+
+54
+00:03:52,230 --> 00:03:53,990
+event, and there's no trace about, which
+
+55
+00:03:53,990 --> 00:03:56,940
+is nice although it was intermittent as
+before.
+
+56
+00:03:56,940 --> 00:03:59,870
+But it looks good as far as I can see.
+
+57
+00:03:59,870 --> 00:04:00,940
+I'm pretty happy with that.
+
+58
+00:04:02,120 --> 00:04:06,150
+But now, you can still quit the
+application by going CTRL+X or
+
+59
+00:04:06,150 --> 00:04:10,150
+going to the window of the file menu and
+go into File Exit.
+
+60
+00:04:10,150 --> 00:04:14,830
+So, and that doesn't produce a window
+closing event.
+
+61
+00:04:14,830 --> 00:04:17,218
+So I wanna make that work, and
+
+62
+00:04:17,218 --> 00:04:22,200
+I've actually called system.exit somewhere
+in here.
+
+63
+00:04:22,200 --> 00:04:27,286
+So I've set system.exit here, and that's
+the, this
+
+64
+00:04:27,286 --> 00:04:31,970
+is the Action Listener on the Exit Menu
+item.
+
+65
+00:04:31,970 --> 00:04:34,322
+And actually one alternative to calling
+systems that
+
+66
+00:04:34,322 --> 00:04:36,200
+I've set there, to simply log with
+Cleaner.
+
+67
+00:04:36,200 --> 00:04:38,850
+I used to call it dispose method cuz if
+you dispose your
+
+68
+00:04:38,850 --> 00:04:41,700
+windows, then your frame, your swing
+
+69
+00:04:41,700 --> 00:04:44,520
+application will exit automatically and if
+you
+
+70
+00:04:44,520 --> 00:04:47,650
+actually just want to do a manage to be,
+your windows to become
+
+71
+00:04:47,650 --> 00:04:51,630
+invisible, but for the application not to
+quit then you would just call.
+
+72
+00:04:51,630 --> 00:04:53,490
+That physical fonts on them.
+
+73
+00:04:54,990 --> 00:04:59,870
+So, here on this point, I want to create a
+window closing event,
+
+74
+00:05:01,030 --> 00:05:06,940
+because I've added a window adapter that
+listens for the window closing event.
+
+75
+00:05:06,940 --> 00:05:14,700
+And what I could do there is my main frame
+actually has a method called Get.
+
+76
+00:05:16,040 --> 00:05:19,120
+Window listeners not window status
+
+77
+00:05:19,120 --> 00:05:21,860
+cause that's something different, but
+getWindowListeners.
+
+78
+00:05:21,860 --> 00:05:25,390
+And that returns an array of Window
+Listeners.
+
+79
+00:05:25,390 --> 00:05:34,160
+So Window Listener, and that is an array.
+
+80
+00:05:34,160 --> 00:05:39,063
+So having trouble here because
+unfortunately, the
+
+81
+00:05:39,063 --> 00:05:44,460
+right bracket on my system conflicts with
+another shortcut.
+
+82
+00:05:44,460 --> 00:05:48,490
+I've got like a Hungarian keyboard here.
+
+83
+00:05:48,490 --> 00:05:53,370
+I'm trying desperately to type that
+[INAUDIBLE] and that have ellipse put in.
+
+84
+00:05:53,370 --> 00:05:54,278
+There we go.
+
+85
+00:05:54,278 --> 00:05:56,447
+So WindowListener, Listeners.
+
+86
+00:05:56,447 --> 00:05:58,598
+And one of the listeners is the, the
+
+87
+00:05:58,598 --> 00:06:02,100
+listener that I just started, the window
+adapter.
+
+88
+00:06:02,100 --> 00:06:03,750
+That's probably the only one.
+
+89
+00:06:03,750 --> 00:06:10,293
+So I'm gonna say let's get rid of this
+extra text, and say WindowListener array.
+
+90
+00:06:10,293 --> 00:06:15,900
+Listeners equals getWindowListeners at the
+import
+
+91
+00:06:15,900 --> 00:06:21,000
+and then, I can say let's see why it
+doesn't load that?
+
+92
+00:06:21,000 --> 00:06:22,702
+Cannot be resolved to a type.
+
+93
+00:06:22,702 --> 00:06:25,150
+Window [UNKNOWN].
+
+94
+00:06:25,150 --> 00:06:26,160
+WindowListener.
+
+95
+00:06:26,160 --> 00:06:28,500
+Not WindowsListener.
+
+96
+00:06:28,500 --> 00:06:30,200
+There we go.
+
+97
+00:06:30,200 --> 00:06:34,465
+Then I can say 4, or at least this is
+
+98
+00:06:34,465 --> 00:06:37,060
+one way of doing this, but there are other
+ways, certainly.
+
+99
+00:06:37,060 --> 00:06:41,620
+For WindowListener, Listener, and
+Listeners.
+
+100
+00:06:41,620 --> 00:06:43,693
+I can just say listener.,
+
+101
+00:06:43,693 --> 00:06:47,841
+and it's not gotten many methods, I don't
+wanna call
+
+102
+00:06:47,841 --> 00:06:52,800
+the window closing method here, and that
+accepts the window
+
+103
+00:06:52,800 --> 00:06:58,026
+event, so you say new window event, the
+source I could make
+
+104
+00:06:58,026 --> 00:07:03,660
+mainframe.this, let's say, and does it
+have another argument?
+
+105
+00:07:03,660 --> 00:07:05,700
+Yeah, so let's just press in 0 for that
+
+106
+00:07:05,700 --> 00:07:08,880
+second [INAUDIBLE] argument, which is just
+an ID interface
+
+107
+00:07:08,880 --> 00:07:11,820
+integrating inside of your [INAUDIBLE] but
+it doesn't, it
+
+108
+00:07:11,820 --> 00:07:15,690
+doesn't matter, it's not gonna make any
+difference here.
+
+109
+00:07:15,690 --> 00:07:21,130
+As long as this does the trick, because
+all this has to do here is basically make
+
+110
+00:07:21,130 --> 00:07:25,103
+sure that the the window adapter, which is
+listening,
+
+111
+00:07:25,103 --> 00:07:29,210
+.task, this code's gonna be a bit long
+actually.
+
+112
+00:07:30,540 --> 00:07:32,100
+It just, we just need to call that
+
+113
+00:07:32,100 --> 00:07:36,020
+window closing method, and that's what
+we've done here.
+
+114
+00:07:36,020 --> 00:07:37,830
+That's exactly what I've done.
+
+115
+00:07:37,830 --> 00:07:39,640
+So let's go back there.
+
+116
+00:07:39,640 --> 00:07:44,240
+So, Control > Home > Window > Closing.
+
+117
+00:07:44,240 --> 00:07:49,700
+And now, if I run this, and if I, if I
+
+118
+00:07:49,700 --> 00:07:55,110
+invoke this File Exit menu item, you still
+get Window Closing when you print it out,
+
+119
+00:07:55,110 --> 00:07:56,690
+so whichever way we're quitting the
+application
+
+120
+00:07:56,690 --> 00:07:58,910
+now, through the File menu or through
+
+121
+00:07:58,910 --> 00:08:03,510
+the cross in the corner, we get this
+window closing, which is rather nice.
+
+122
+00:08:03,510 --> 00:08:08,035
+So, all I need to do now hopefully, is
+just call
+
+123
+00:08:08,035 --> 00:08:14,590
+controller.disconnect and if if I haven't
+connected, cuz I haven't
+
+124
+00:08:14,590 --> 00:08:18,920
+clicked Save or Refresh then it's fine,
+we've accounted for that possibility.
+
+125
+00:08:18,920 --> 00:08:20,670
+And if I have clicked.
+
+126
+00:08:22,648 --> 00:08:25,120
+It's okay to click Save actually.
+
+127
+00:08:25,120 --> 00:08:27,284
+If I, if I hit Refresh I'd quit,
+
+128
+00:08:27,284 --> 00:08:30,760
+then it's gonna disconnect from my
+database, hopefully.
+
+129
+00:08:32,515 --> 00:08:34,687
+Okay, so that's it for this tutorial.
+
+130
+00:08:34,687 --> 00:08:38,886
+In the next tutorial, we're gonna get away
+from this
+
+131
+00:08:38,886 --> 00:08:44,371
+database related stuff and, we're gonna
+look at setting icon, icons
+
+132
+00:08:44,371 --> 00:08:48,997
+on buttons, and that'll be a step towards
+using a JToolbar
+
+133
+00:08:48,997 --> 00:08:54,083
+component, yeah, so we'll turn this into a
+fully fledged toolbar.
+
+134
+00:08:54,083 --> 00:08:57,493
+So join me again then, and until next
+time, happy coding.
+
+135
+00:08:57,493 --> 00:08:57,497
+[BLANK_AUDIO]
+

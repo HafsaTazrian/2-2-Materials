@@ -1,0 +1,313 @@
+1
+00:00:01,480 --> 00:00:05,650
+Hello this is John from
+caveofprogramming.com, and this is a
+
+2
+00:00:05,650 --> 00:00:12,190
+tutorial on selecting rows in tables and
+getting selected rows.
+
+3
+00:00:12,190 --> 00:00:15,888
+So it's actually possible to select
+multiple rows in J
+
+4
+00:00:15,888 --> 00:00:19,970
+tables, but we're not gonna look at that
+in this tutorial.
+
+5
+00:00:19,970 --> 00:00:24,700
+We're just, in this tutorial, we're just
+gonna look at selecting one table row.
+
+6
+00:00:24,700 --> 00:00:27,300
+And the idea is so I've got this
+application here.
+
+7
+00:00:27,300 --> 00:00:29,800
+And I can import data into it.
+
+8
+00:00:29,800 --> 00:00:34,440
+And I've got this pop-up menu which
+appears if I right click on the table.
+
+9
+00:00:34,440 --> 00:00:36,390
+And when I right click the table, I want
+to
+
+10
+00:00:36,390 --> 00:00:41,370
+select the table row that's directly
+underneath the mouse here.
+
+11
+00:00:42,440 --> 00:00:48,840
+So to do that I, in the last tutorial, I
+added a mouse listener to my table.
+
+12
+00:00:48,840 --> 00:00:53,340
+And when I click the right mouse button.
+
+13
+00:00:53,340 --> 00:00:56,090
+Actually, when I select the relevant table
+row.
+
+14
+00:00:56,090 --> 00:01:02,470
+In fact we can make so that the table row
+selected if the mouse is clicked at all.
+
+15
+00:01:03,650 --> 00:01:08,580
+And to do that I'm gonna use a method, a
+
+16
+00:01:08,580 --> 00:01:13,380
+table, that returns the row, that's at a
+certain point.
+
+17
+00:01:13,380 --> 00:01:16,150
+So in mouse pressed.
+
+18
+00:01:16,150 --> 00:01:20,900
+Actually, in here i'm gonna say.
+
+19
+00:01:20,900 --> 00:01:25,622
+[UNKNOWN] row equals table.row.
+
+20
+00:01:25,622 --> 00:01:28,300
+At point.
+
+21
+00:01:28,300 --> 00:01:34,030
+And row point, gives me the table row
+that's a particular point.
+
+22
+00:01:34,030 --> 00:01:38,074
+And to get the point where the mouse is
+at, I'm
+
+23
+00:01:38,074 --> 00:01:42,639
+just gonna use the method of this mouse
+and enter here
+
+24
+00:01:42,639 --> 00:01:48,447
+and say, E.getpoint, like that and now to
+show that works,
+
+25
+00:01:48,447 --> 00:01:52,539
+I can just assist that out here [SOUND] on
+my row.
+
+26
+00:01:52,539 --> 00:01:56,600
+And if I run this, Sync later.
+
+27
+00:01:56,600 --> 00:02:00,370
+And, right click, you can see down here in
+
+28
+00:02:00,370 --> 00:02:03,690
+the console pane, that I'm getting a
+number that
+
+29
+00:02:03,690 --> 00:02:07,840
+represents the row of the the row
+underneath where
+
+30
+00:02:07,840 --> 00:02:09,630
+I clicked the mouse which is exactly what
+I want.
+
+31
+00:02:11,250 --> 00:02:17,040
+Now to select that row I need to use these
+selection model at the table.
+
+32
+00:02:18,328 --> 00:02:21,439
+Because if I say table tops, I'll get
+
+33
+00:02:21,439 --> 00:02:26,020
+selection model, where are we, get
+selection model.
+
+34
+00:02:26,020 --> 00:02:31,040
+That returns me a object that deals with
+the selections on the table,
+
+35
+00:02:32,540 --> 00:02:39,142
+And I want to say getselectionmodel.select
+
+36
+00:02:39,142 --> 00:02:42,300
+dot add set selection.
+
+37
+00:02:42,300 --> 00:02:46,240
+So, set selection interval, that's one.
+
+38
+00:02:46,240 --> 00:02:49,800
+So with set selection interval, you can
+select rows in
+
+39
+00:02:49,800 --> 00:02:54,110
+your table starting at this row, finishing
+at this row
+
+40
+00:02:54,110 --> 00:02:56,885
+and I'm just gonna select one row here, so
+I
+
+41
+00:02:56,885 --> 00:03:00,595
+just wanna start it, the row that's under
+my mouse.
+
+42
+00:03:00,595 --> 00:03:02,575
+So I'm finishing that row as well.
+
+43
+00:03:04,445 --> 00:03:06,405
+So, if I run that now.
+
+44
+00:03:08,175 --> 00:03:15,265
+And import some data, then we select the
+row under the mouse which is very nice.
+
+45
+00:03:16,650 --> 00:03:21,680
+Now, the next step here, is when I select
+
+46
+00:03:21,680 --> 00:03:26,990
+this menu item, delete row, I wanna get
+the selected row from the table so that
+
+47
+00:03:26,990 --> 00:03:32,090
+I can delete it, and to do that, I'm gonna
+first add an
+
+48
+00:03:32,090 --> 00:03:36,920
+action listener, to write to my remove
+item in my pop up menu.
+
+49
+00:03:36,920 --> 00:03:41,220
+So I'll say remove item but add action
+listener.
+
+50
+00:03:41,220 --> 00:03:45,840
+Listener and, and new action listener.
+
+51
+00:03:45,840 --> 00:03:48,650
+I'll use then anonymous class in here
+again.
+
+52
+00:03:49,810 --> 00:03:55,170
+And put the brackets in the, and it's at
+the import.
+
+53
+00:03:55,170 --> 00:03:59,120
+And if I click on this error, I can go to
+at unimplementing methods.
+
+54
+00:04:00,560 --> 00:04:06,590
+Just maximize the editor here, and get rid
+of some extra lines.
+
+55
+00:04:06,590 --> 00:04:11,512
+And now, I can say Int row equals
+
+56
+00:04:11,512 --> 00:04:16,870
+table.getselectionmodel again, get
+
+57
+00:04:16,870 --> 00:04:22,180
+selection model and if I actually I could
+just use get a
+
+58
+00:04:22,180 --> 00:04:27,870
+selected row in this case which will be
+some place, and then to check as you just.
+
+59
+00:04:27,870 --> 00:04:33,490
+Sys out here, row and, now, so I got rid
+
+60
+00:04:33,490 --> 00:04:36,900
+of the other sys out, so now if I run
+this-
+
+61
+00:04:36,900 --> 00:04:41,260
+in fact, let's minimize the editor and
+show the console-
+
+62
+00:04:41,260 --> 00:04:47,500
+so if I run this, do control I, import
+some data then I right click and go
+
+63
+00:04:47,500 --> 00:04:53,000
+to delete row, and presto in the console
+down there, you can see that it's output.
+
+64
+00:04:53,000 --> 00:04:54,700
+Putting the selected row with the table.
+
+65
+00:04:56,200 --> 00:04:58,460
+Now in the next tutorial we're gonna look
+at
+
+66
+00:04:58,460 --> 00:05:03,730
+deleting rows from this table, so join me
+again then.
+
+67
+00:05:03,730 --> 00:05:07,640
+And, and until next time happy coding.
+

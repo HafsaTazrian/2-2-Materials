@@ -1,0 +1,509 @@
+1
+00:00:01,770 --> 00:00:06,770
+Hello, this is John from
+caveofprogramming.com and in this tutorial
+
+2
+00:00:06,770 --> 00:00:10,340
+we're going to look at setting editors on
+table cells.
+
+3
+00:00:10,340 --> 00:00:15,360
+So, I've already implemented a custom
+renderer in the last tutorial here.
+
+4
+00:00:15,360 --> 00:00:17,570
+This employment category table cell.
+
+5
+00:00:17,570 --> 00:00:23,245
+And the employment category column
+actually contains
+
+6
+00:00:23,245 --> 00:00:29,540
+a norm constants and an enumeration class
+I created.
+
+7
+00:00:29,540 --> 00:00:33,710
+And we're displaying this with this check
+box, with this combo box.
+
+8
+00:00:33,710 --> 00:00:37,100
+But what I want to do now is make this
+cell, these cells,
+
+9
+00:00:37,100 --> 00:00:40,770
+this column actually editable so we can
+change the values in this combo
+
+10
+00:00:43,000 --> 00:00:43,460
+box.
+
+11
+00:00:43,460 --> 00:00:49,330
+So, the first thing to do is, so I'm gonna
+go to my table panel here.
+
+12
+00:00:49,330 --> 00:00:54,070
+And I'm already setting a default renderer
+for the employment category class.
+
+13
+00:00:56,350 --> 00:00:59,190
+And I'm gonna do a similar thing for the
+editor.
+
+14
+00:00:59,190 --> 00:01:03,385
+I'm gonna say table.setdefault editor.
+
+15
+00:01:03,385 --> 00:01:10,220
+And I'm gonna sa employmentcategory.class
+which is the class of objects that's in
+
+16
+00:01:10,220 --> 00:01:17,950
+that stable column and then say new
+employment category editor.
+
+17
+00:01:17,950 --> 00:01:22,030
+So, let's change from renderer to edit
+all.
+
+18
+00:01:22,030 --> 00:01:24,210
+And that's what I've gotta implement in
+this tutorial.
+
+19
+00:01:24,210 --> 00:01:26,350
+So, I'm just gonna copy that.
+
+20
+00:01:27,500 --> 00:01:32,730
+Save it, and I'm gonna now right click my
+GUI
+
+21
+00:01:32,730 --> 00:01:38,430
+package and go to new class, let's paste
+in the employment category editor.
+
+22
+00:01:39,440 --> 00:01:46,740
+And this has to implement, implement,
+implements table cell
+
+23
+00:01:46,740 --> 00:01:53,820
+editor as you expect but since since table
+cell editor has quite a lot of methods
+
+24
+00:01:56,100 --> 00:01:57,130
+table cell editor.
+
+25
+00:01:57,130 --> 00:01:58,190
+I think that's right.
+
+26
+00:02:00,360 --> 00:02:05,680
+Let's see, so I'll just click this error
+message here and
+
+27
+00:02:05,680 --> 00:02:11,360
+because my renderer implements table cell
+renderer, so the editor is gonna
+
+28
+00:02:11,360 --> 00:02:15,920
+implement table cell editor here, I don't
+know why eclipse is being difficult there.
+
+29
+00:02:15,920 --> 00:02:17,030
+Okay.
+
+30
+00:02:17,030 --> 00:02:18,670
+But all's well that ends well.
+
+31
+00:02:18,670 --> 00:02:20,560
+Now the unimplemented methods, there's
+quite a lot of
+
+32
+00:02:20,560 --> 00:02:24,080
+them as you can see and to get default
+implementation.
+
+33
+00:02:24,080 --> 00:02:30,140
+So most of those I'm just gonna say,
+extends AbstractCellEditor.
+
+34
+00:02:33,560 --> 00:02:36,070
+I've struck cell editor, which will give
+me,
+
+35
+00:02:36,070 --> 00:02:38,220
+which will implement most of these methods
+for me.
+
+36
+00:02:39,500 --> 00:02:42,300
+I'm gonna go to add unimplemented methods.
+
+37
+00:02:42,300 --> 00:02:44,070
+Well that didn't work, hang on.
+
+38
+00:02:44,070 --> 00:02:48,340
+Let's add the imput there and then save
+that and add unimplemented
+
+39
+00:02:48,340 --> 00:02:51,990
+methods and then there are just two that I
+have to implement now.
+
+40
+00:02:51,990 --> 00:02:53,330
+And I'm also gonna right click here.
+
+41
+00:02:53,330 --> 00:02:58,110
+And I'm not sure, actually, if this is
+really strictly necessary.
+
+42
+00:02:58,110 --> 00:02:59,990
+But I'm gonna go to, is cell editable.
+
+43
+00:03:01,050 --> 00:03:02,590
+And let's return through there.
+
+44
+00:03:04,320 --> 00:03:06,530
+But this probably isn't necessary because
+I'm gonna
+
+45
+00:03:06,530 --> 00:03:08,270
+fix this in my table model as well.
+
+46
+00:03:08,270 --> 00:03:13,950
+But, might as well, change this just in
+case it makes a difference, I don't know.
+
+47
+00:03:13,950 --> 00:03:17,900
+And now, I'm going to use a combobox here
+and if
+
+48
+00:03:17,900 --> 00:03:20,629
+you had kind of jazzed up your combobox in
+your renderer.
+
+49
+00:03:21,680 --> 00:03:24,730
+And set the colors on it and things like
+that.
+
+50
+00:03:24,730 --> 00:03:29,370
+You probably wanna have your renderer here
+
+51
+00:03:29,370 --> 00:03:31,580
+as a private variable, or something like
+that.
+
+52
+00:03:31,580 --> 00:03:35,440
+And get the, get the convo maybe in the
+constructor or this class,
+
+53
+00:03:35,440 --> 00:03:39,220
+from a renderer so you get the same combo
+with the same colors.
+
+54
+00:03:39,220 --> 00:03:42,890
+But, in this case I'm just using a generic
+combo with my renderer.
+
+55
+00:03:42,890 --> 00:03:44,480
+So I'll use a generic.
+
+56
+00:03:44,480 --> 00:03:45,840
+Editor as well.
+
+57
+00:03:45,840 --> 00:03:47,400
+Let's add a constructor here.
+
+58
+00:03:49,870 --> 00:03:55,360
+In constructor, I can say, combo equals
+new J combo
+
+59
+00:03:55,360 --> 00:03:59,470
+box and in this case, since I want to
+render an
+
+60
+00:03:59,470 --> 00:04:03,990
+enumerated type, I am gonna add some
+values to my
+
+61
+00:04:03,990 --> 00:04:08,330
+combo box, just like in a renderer by
+saying, implement category.
+
+62
+00:04:09,700 --> 00:04:13,110
+This is my enumeration type.values.
+
+63
+00:04:13,110 --> 00:04:15,850
+Which will get my my enumeration
+constants.
+
+64
+00:04:15,850 --> 00:04:20,390
+And, you could add whatever values you
+want in there, of course.
+
+65
+00:04:20,390 --> 00:04:21,970
+As long as they're consistent with what's
+actually
+
+66
+00:04:21,970 --> 00:04:23,690
+in the table, or can be in the table.
+
+67
+00:04:24,700 --> 00:04:28,708
+So, n gets an editor, editor component,
+I'm gonna return that combo.
+
+68
+00:04:28,708 --> 00:04:37,710
+In Get Cell Editor Value, I'm going to
+return combo.getSelected item.
+
+69
+00:04:37,710 --> 00:04:41,070
+And finally, in getCellEditorComponent I
+need to
+
+70
+00:04:41,070 --> 00:04:44,900
+say combo.setSelectedValue, just like in
+the renderer.
+
+71
+00:04:44,900 --> 00:04:47,240
+setSelectedItem, sorry.
+
+72
+00:04:47,240 --> 00:04:49,540
+That's going to be set to value which is
+this here.
+
+73
+00:04:49,540 --> 00:04:51,810
+The actual value of the table cell passed
+in.
+
+74
+00:04:51,810 --> 00:04:54,610
+And I also want to add an actionListener
+to
+
+75
+00:04:54,610 --> 00:04:57,630
+my combo like you do with buttons.So new
+action.
+
+76
+00:04:58,660 --> 00:05:06,020
+I'll have an anonymous class here, where I
+implement the action performed method.
+
+77
+00:05:06,020 --> 00:05:11,070
+Let's import action listener, and an
+action performed method here.
+
+78
+00:05:12,540 --> 00:05:16,180
+And in here I just want to call fire
+editing stopped.
+
+79
+00:05:16,180 --> 00:05:21,270
+That's really important, to tell your
+table cell to stop using the editor and
+
+80
+00:05:21,270 --> 00:05:26,550
+go back to using the renderer and to
+update the value in the table modeler.
+
+81
+00:05:26,550 --> 00:05:30,120
+Now we have a little bit of work to do in
+the table model now.
+
+82
+00:05:30,120 --> 00:05:31,780
+I wanna make sure that in get column
+
+83
+00:05:31,780 --> 00:05:38,860
+class I am returning employment
+category.class for the class.
+
+84
+00:05:38,860 --> 00:05:41,680
+I already implemented this in my renderer
+so that's okay.
+
+85
+00:05:42,760 --> 00:05:48,020
+And I need to implement in
+
+86
+00:05:48,020 --> 00:05:53,610
+set value at so I need to say case four
+'cause we're working on common four here.
+
+87
+00:05:53,610 --> 00:05:54,790
+Don't forget break.
+
+88
+00:05:54,790 --> 00:05:59,360
+That's very important, otherwise you'll
+get strange errors.
+
+89
+00:05:59,360 --> 00:06:07,550
+And I'll say person.set untcut and pass in
+the value there.
+
+90
+00:06:07,550 --> 00:06:09,330
+And I'll probably need to cast this
+
+91
+00:06:09,330 --> 00:06:13,150
+value to the enumeration type, employment
+category.
+
+92
+00:06:14,930 --> 00:06:17,270
+So, I'm providing a set method to actually
+set the value of
+
+93
+00:06:17,270 --> 00:06:20,870
+the data, otherwise my comment would work
+but it wouldn't actually set the
+
+94
+00:06:20,870 --> 00:06:24,500
+value and as soon as you finish clicking
+the combobox it would
+
+95
+00:06:24,500 --> 00:06:28,510
+display whatever value was originally in
+the cell if you didn't implement this.
+
+96
+00:06:28,510 --> 00:06:33,500
+And in getCellEditable I also want to
+return
+
+97
+00:06:33,500 --> 00:06:38,240
+true, to say that that column is editable.
+
+98
+00:06:38,240 --> 00:06:39,530
+And I think that should do the trick so if
+
+99
+00:06:39,530 --> 00:06:44,010
+I run this now, I've got this now,
+editable comment box.
+
+100
+00:06:44,010 --> 00:06:47,223
+And if I set this to other, click save and
+then click refresh.
+
+101
+00:06:47,223 --> 00:06:49,710
+Still got a value over there just to prove
+that.
+
+102
+00:06:49,710 --> 00:06:50,250
+Let's quit that.
+
+103
+00:06:50,250 --> 00:06:52,566
+And let's run it again.
+
+104
+00:06:52,566 --> 00:06:56,844
+And we've still got other in there, but
+I'm gonna set
+
+105
+00:06:56,844 --> 00:07:01,830
+it back to employed, and maybe I'll set
+this to other.
+
+106
+00:07:01,830 --> 00:07:03,480
+Hit save, just for some variety.
+
+107
+00:07:05,470 --> 00:07:08,730
+Okay, that's it for this tutorial, join me
+again next time.
+
+108
+00:07:08,730 --> 00:07:11,520
+And until next time, happy programming.
+

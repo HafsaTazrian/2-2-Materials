@@ -1,0 +1,985 @@
+1
+00:00:00,000 --> 00:00:04,090
+[BLANK_AUDIO]
+
+2
+00:00:04,090 --> 00:00:07,504
+Hello, this is John from
+caveofprogramming.com and in
+
+3
+00:00:07,504 --> 00:00:10,847
+this tutorial we're going to look at
+cancelling worker
+
+4
+00:00:10,847 --> 00:00:14,046
+threats and more importantly, I'm going to
+show you
+
+5
+00:00:14,046 --> 00:00:18,200
+how to Implement this cancel button on
+this dialogue.
+
+6
+00:00:18,200 --> 00:00:22,620
+So, to get the dialogue bit working, the
+first
+
+7
+00:00:22,620 --> 00:00:25,339
+thing I'm going to do is create a new
+interface.
+
+8
+00:00:26,670 --> 00:00:33,890
+And this interface, I'm gonna call
+progress, progress, dialogue listener.
+
+9
+00:00:33,890 --> 00:00:40,530
+And I'm just gonna give that one method,
+public void,
+
+10
+00:00:41,760 --> 00:00:46,642
+cancel, let's call it cancelled, actually.
+
+11
+00:00:46,642 --> 00:00:48,520
+That'll do the trick.
+
+12
+00:00:48,520 --> 00:00:53,840
+now, in the, progress dialog, I'll give
+that a private,
+
+13
+00:00:55,660 --> 00:01:00,500
+member variable, of type progress dialog
+listener.
+
+14
+00:01:00,500 --> 00:01:03,000
+So that type is the interface that I've
+just implemented.
+
+15
+00:01:03,000 --> 00:01:07,460
+And I'll give it a method for setting
+that.
+
+16
+00:01:07,460 --> 00:01:11,010
+So, we'll say, public void, set.
+
+17
+00:01:12,990 --> 00:01:13,950
+Set listener, I'll call.
+
+18
+00:01:13,950 --> 00:01:15,370
+Call it.
+
+19
+00:01:15,370 --> 00:01:16,740
+Progress.
+
+20
+00:01:16,740 --> 00:01:19,520
+Then that's gonna accept progress dialogue
+list now.
+
+21
+00:01:19,520 --> 00:01:21,460
+And it's just gonna say disk top list now.
+
+22
+00:01:23,740 --> 00:01:25,300
+This top listener.
+
+23
+00:01:25,300 --> 00:01:30,258
+List and equals, listener.
+
+24
+00:01:30,258 --> 00:01:33,640
+And, and, and also well.
+
+25
+00:01:33,640 --> 00:01:38,250
+What I want to do is, ultimately, I want
+to have the message panel, listen to the
+
+26
+00:01:38,250 --> 00:01:43,960
+progress dialog, and if someone clicks
+that button, it's gonna invoke
+
+27
+00:01:43,960 --> 00:01:50,160
+the message panel's can't solve, function.
+
+28
+00:01:50,160 --> 00:01:52,360
+In fact, maybe I should call it something
+else, I'll just call it.
+
+29
+00:01:52,360 --> 00:01:58,050
+That's click progress dialog council cuz
+this
+
+30
+00:01:58,050 --> 00:02:01,420
+going to be a method in message panel.
+
+31
+00:02:01,420 --> 00:02:03,767
+I'm just going to have to implement this
+interface
+
+32
+00:02:03,767 --> 00:02:05,830
+so we want to give it a suitable name.
+
+33
+00:02:05,830 --> 00:02:10,000
+And, and, so I'm gonna add a listener to
+the cancel button here.
+
+34
+00:02:10,000 --> 00:02:14,830
+I'm gonna say add, well cancel button dot
+add action
+
+35
+00:02:14,830 --> 00:02:20,320
+listener, and it's gonna be, that's gonna
+be a new action listener.
+
+36
+00:02:23,310 --> 00:02:28,029
+Let's implement the missing method in our
+little anonymous class here.
+
+37
+00:02:29,760 --> 00:02:35,440
+And if someone clicks a cancel button, it
+will invoke this method.
+
+38
+00:02:35,440 --> 00:02:40,180
+And then I'm gonna say if listener is not
+equal
+
+39
+00:02:40,180 --> 00:02:43,119
+to naught, in other words if something's
+listening to this dialog.
+
+40
+00:02:44,510 --> 00:02:46,040
+Then, I'll call this naught, and it's
+
+41
+00:02:46,040 --> 00:02:49,170
+only got one method, progress, dialogue,
+cancelled.
+
+42
+00:02:52,540 --> 00:02:54,509
+Okay, so far so good.
+
+43
+00:02:54,509 --> 00:03:00,080
+And also actually while I'm at it I'm just
+gonna fix a
+
+44
+00:03:00,080 --> 00:03:04,830
+little thing here because this dialogue as
+we've written here is pretty generic.
+
+45
+00:03:04,830 --> 00:03:09,430
+And I wanna make it even more generic by
+just making this message customizable.
+
+46
+00:03:09,430 --> 00:03:10,030
+So I'll cut that.
+
+47
+00:03:10,030 --> 00:03:14,400
+And I'll put the string title here, and
+call this, title.
+
+48
+00:03:14,400 --> 00:03:17,570
+And now, let's go and do some work on
+message panel.
+
+49
+00:03:17,570 --> 00:03:21,520
+So, in message panel, for a start, I'll
+put a title in here.
+
+50
+00:03:22,520 --> 00:03:23,620
+That's better.
+
+51
+00:03:23,620 --> 00:03:28,688
+So now, progress, the progress dialog, is,
+I think, a fairly generic class.
+
+52
+00:03:28,688 --> 00:03:32,740
+And, I'm gonna make Message panel
+
+53
+00:03:32,740 --> 00:03:35,450
+implement that interface that I just
+created.
+
+54
+00:03:35,450 --> 00:03:44,330
+So, I'll say implement progress dialog
+listener, like that.
+
+55
+00:03:44,330 --> 00:03:45,560
+Save that.
+
+56
+00:03:45,560 --> 00:03:48,730
+Let's go to this and add an implemented
+method.
+
+57
+00:03:48,730 --> 00:03:53,070
+And on the bottom here now we've got our
+progress dialog cancelled.
+
+58
+00:03:53,070 --> 00:03:55,210
+And let's just see that working.
+
+59
+00:03:55,210 --> 00:03:59,800
+So, I'm gonna put these all in here
+because
+
+60
+00:03:59,800 --> 00:04:03,230
+I like to check things as I'm going along.
+
+61
+00:04:03,230 --> 00:04:07,640
+And I find that even software developers
+like me
+
+62
+00:04:07,640 --> 00:04:10,610
+with decades of experience, well I've got
+more than
+
+63
+00:04:10,610 --> 00:04:14,400
+a decade, we still make mistakes all the
+time,
+
+64
+00:04:14,400 --> 00:04:16,060
+so it's good to check things as you're
+going along.
+
+65
+00:04:17,460 --> 00:04:19,150
+And so, let's go, let's have a look.
+
+66
+00:04:20,750 --> 00:04:22,250
+I'll bring up the dialogue and click
+
+67
+00:04:22,250 --> 00:04:26,370
+cancel, and you should see down here,
+cancelled.
+
+68
+00:04:26,370 --> 00:04:30,490
+But, I'm not, so there must be something
+I've forgotten.
+
+69
+00:04:30,490 --> 00:04:31,700
+And, let's see.
+
+70
+00:04:31,700 --> 00:04:33,170
+So.
+
+71
+00:04:33,170 --> 00:04:36,010
+Yeah, I forgot to add the message panel as
+a listener.
+
+72
+00:04:36,010 --> 00:04:38,590
+See, this is exactly what I was talking
+about.
+
+73
+00:04:38,590 --> 00:04:48,898
+Okay, so I've got a say now, and progress
+dialogue dot add.
+
+74
+00:04:48,898 --> 00:04:52,958
+Add progress, add listener, I think I
+called that add listener.
+
+75
+00:04:52,958 --> 00:04:58,440
+And I'm not getting much success with the
+auto complete here.
+
+76
+00:04:58,440 --> 00:04:59,810
+Let me check, progress dialogue.
+
+77
+00:05:01,060 --> 00:05:04,750
+So, I have given it a message called set
+listener, that's what we want.
+
+78
+00:05:05,770 --> 00:05:07,650
+Let's save that, that might help.
+
+79
+00:05:07,650 --> 00:05:09,069
+And then auto complete set.
+
+80
+00:05:10,410 --> 00:05:12,890
+And this and that's the one I want.
+
+81
+00:05:12,890 --> 00:05:14,330
+And the list is going to be this dialogue.
+
+82
+00:05:15,470 --> 00:05:18,460
+So this is something I've done several
+times before now.
+
+83
+00:05:18,460 --> 00:05:22,249
+I, I've created an interface prefaced that
+of this note with one method.
+
+84
+00:05:23,750 --> 00:05:32,110
+I gave the progress dialog an instance
+variable of that type, and, I provided it
+
+85
+00:05:32,110 --> 00:05:37,230
+with a set method to set it this there and
+then if someone clicks the cancel button.
+
+86
+00:05:37,230 --> 00:05:40,020
+I, if that listener instance for example
+is not
+
+87
+00:05:40,020 --> 00:05:43,750
+null, I call it's progress style of cancel
+method.
+
+88
+00:05:43,750 --> 00:05:45,690
+And so you see, I'm keeping a clean
+separation
+
+89
+00:05:45,690 --> 00:05:48,370
+here between the progress dialog and the
+message dialog.
+
+90
+00:05:48,370 --> 00:05:51,620
+So the progress dialog doesn't know
+anything about a message panel.
+
+91
+00:05:51,620 --> 00:05:53,950
+And that makes it much more reusable
+
+92
+00:05:53,950 --> 00:05:57,920
+and your application hopefully easier to
+debug.
+
+93
+00:05:57,920 --> 00:06:02,300
+And I'm not saying the message panel, set
+listener this, and then
+
+94
+00:06:02,300 --> 00:06:07,340
+of course I have to implement progress
+dialog listener in the message panel.
+
+95
+00:06:07,340 --> 00:06:09,030
+Now, let's check that it works.
+
+96
+00:06:09,030 --> 00:06:11,850
+And this time I'm pretty confident that it
+will.
+
+97
+00:06:11,850 --> 00:06:15,070
+So I'm gonna bring up the dialog up there.
+
+98
+00:06:15,070 --> 00:06:16,220
+And I'm going to click Cancel.
+
+99
+00:06:16,220 --> 00:06:19,030
+And we've got Cancel coming up down there.
+
+100
+00:06:19,030 --> 00:06:21,440
+Now there's one other possibility here,
+because someone could
+
+101
+00:06:21,440 --> 00:06:25,650
+click Cross and in the dialogue to close
+it.
+
+102
+00:06:25,650 --> 00:06:29,376
+So let's say here in the progress dialog.
+
+103
+00:06:29,376 --> 00:06:36,830
+SetDefaultCloseOperation
+jDialog.doNothingOnClose.
+
+104
+00:06:36,830 --> 00:06:43,040
+Because I don't want it to do anything
+when someone clicks our cross.
+
+105
+00:06:44,220 --> 00:06:49,130
+And then I can say add window listener.
+
+106
+00:06:50,850 --> 00:06:53,440
+And I'll say in here, new window adapter.
+
+107
+00:06:53,440 --> 00:06:57,190
+And window adapter is a abstract class
+implement,
+
+108
+00:06:57,190 --> 00:07:00,780
+or the methods of of a window listener.
+
+109
+00:07:02,200 --> 00:07:04,447
+So now I can click in here
+
+110
+00:07:04,447 --> 00:07:09,060
+and go to override source, overwrite
+document methods.
+
+111
+00:07:09,060 --> 00:07:14,120
+And I just want the window closing method,
+because I want to stay in here.
+
+112
+00:07:14,120 --> 00:07:16,770
+Let's just check if this works.
+
+113
+00:07:16,770 --> 00:07:21,760
+In fact, what I'll do is say if this does
+not equal to null
+
+114
+00:07:21,760 --> 00:07:26,790
+again, I'll call the I'll call it, I'll
+call it progress dollar council method.
+
+115
+00:07:28,380 --> 00:07:30,460
+So let's check that that works as well.
+
+116
+00:07:30,460 --> 00:07:36,140
+Let's go here, bring up the dialog and
+click the cross in the corner.
+
+117
+00:07:36,140 --> 00:07:38,280
+And it also says can't sort, so that's
+what I wanted.
+
+118
+00:07:39,790 --> 00:07:42,280
+Now, let's actually get onto the business
+of terminating
+
+119
+00:07:42,280 --> 00:07:44,480
+the thread, and this is gonna be pretty
+simple.
+
+120
+00:07:44,480 --> 00:07:47,820
+It's just that there's gonna be a few
+little tiny complications here.
+
+121
+00:07:48,960 --> 00:07:56,800
+So, the first thing is that my swing
+worker thread, my reference to it is a
+
+122
+00:07:56,800 --> 00:07:58,890
+local variable and I want to be able
+
+123
+00:07:58,890 --> 00:08:03,100
+to access it from the Progress Style
+Console method.
+
+124
+00:08:03,100 --> 00:08:07,940
+So let's get rid of the declaration here,
+paste it up here.
+
+125
+00:08:07,940 --> 00:08:12,890
+Private, private SwingWorker worker.
+
+126
+00:08:12,890 --> 00:08:13,910
+There we go.
+
+127
+00:08:13,910 --> 00:08:19,810
+And now, in this cancel method, I can say
+if
+
+128
+00:08:19,810 --> 00:08:25,660
+worker is not equal to null, which it
+shouldn't be null because.
+
+129
+00:08:25,660 --> 00:08:31,000
+People shouldn't be seeing the progress
+dialog unless unless
+
+130
+00:08:31,000 --> 00:08:35,130
+they have actually unless the thread has
+actually been created.
+
+131
+00:08:35,130 --> 00:08:41,480
+But just in case they manage to because
+we've, I
+
+132
+00:08:41,480 --> 00:08:44,790
+think we create the, the dialog first and
+then the thread.
+
+133
+00:08:44,790 --> 00:08:48,730
+It's just in case they manage to click
+bottom in between that millisecond
+
+134
+00:08:48,730 --> 00:08:53,640
+interval in between the dialog being set
+physical and the worker being created.
+
+135
+00:08:53,640 --> 00:08:55,460
+Let's just check that it's not equal to
+null.
+
+136
+00:08:56,860 --> 00:09:00,750
+And then let's say worker.cancel.
+
+137
+00:09:00,750 --> 00:09:03,480
+So, and said equals true.
+
+138
+00:09:03,480 --> 00:09:09,390
+And I'm calling this swing work a cancel
+method and if you, this has this one
+
+139
+00:09:09,390 --> 00:09:12,660
+argument which I've set to true and the
+
+140
+00:09:12,660 --> 00:09:16,890
+argument actually says, is called may
+interrupt running.
+
+141
+00:09:16,890 --> 00:09:21,040
+So if this would be false, it would cancel
+the thread only and been
+
+142
+00:09:21,040 --> 00:09:26,600
+executed yet, and I want it to be
+cancelled, if it has been executed.
+
+143
+00:09:26,600 --> 00:09:31,230
+Now, what will actually happen at the
+moment, will be that wherever I've
+
+144
+00:09:31,230 --> 00:09:36,220
+got like a thread.sleep or a wait or
+something that could be interrupted in
+
+145
+00:09:36,220 --> 00:09:43,000
+my processing, if I call cancel on the
+thread, then that's gonna, dig
+
+146
+00:09:43,000 --> 00:09:45,760
+an interrupted exception will be thrown
+from
+
+147
+00:09:45,760 --> 00:09:49,490
+wherever it can within my, processing
+code.
+
+148
+00:09:49,490 --> 00:09:53,090
+And it may be that there's nowhere in your
+processing code that you call
+
+149
+00:09:53,090 --> 00:09:56,578
+try to sleep or wait, and there's no way
+that it can be interrupted.
+
+150
+00:09:56,578 --> 00:09:58,143
+I'll show you what I mean.
+
+151
+00:09:58,143 --> 00:10:00,770
+If I now cancel this thread I'm gonna get.
+
+152
+00:10:00,770 --> 00:10:02,930
+Like a horrible looking stat trace down
+here.
+
+153
+00:10:03,960 --> 00:10:06,340
+And let's have a look at where that's
+coming from.
+
+154
+00:10:06,340 --> 00:10:09,810
+So, if we can find any details in here.
+
+155
+00:10:11,070 --> 00:10:11,950
+It's coming from here.
+
+156
+00:10:11,950 --> 00:10:16,120
+So this get method, for a start, is I'm,
+in
+
+157
+00:10:16,120 --> 00:10:19,750
+my done, I'm still calling get, even
+though it's been cancelled.
+
+158
+00:10:19,750 --> 00:10:22,490
+Now, we wanna sort that out and fix that,
+so I'm gonna say
+
+159
+00:10:22,490 --> 00:10:29,030
+progress dialogue to set visible, we
+false, we always wanna do that in done.
+
+160
+00:10:29,030 --> 00:10:33,270
+But, then I'm gonna say if is cancelled
+and
+
+161
+00:10:33,270 --> 00:10:35,200
+this will tell me if the thread is being
+cancelled.
+
+162
+00:10:35,200 --> 00:10:39,180
+And if it has, I'm just gonna return
+because I don't wanna go any further.
+
+163
+00:10:39,180 --> 00:10:43,760
+I don't wanna try to get anything here if
+it has been cancelled.
+
+164
+00:10:43,760 --> 00:10:46,460
+And let's run it again, see what it looks
+like now.
+
+165
+00:10:46,460 --> 00:10:47,930
+I think I'm still gonna have some stack
+
+166
+00:10:47,930 --> 00:10:52,100
+trace, stack traces there, so we'll cancel
+it.
+
+167
+00:10:52,100 --> 00:10:53,460
+And we've still got stack trace.
+
+168
+00:10:53,460 --> 00:10:55,630
+And let's see where this is coming from.
+
+169
+00:10:55,630 --> 00:11:00,760
+So now if I look at this, it's coming from
+my message server.
+
+170
+00:11:00,760 --> 00:11:04,760
+And you see in my processing code, I've
+
+171
+00:11:04,760 --> 00:11:07,450
+got this thread.sleep, which can throw an
+interrupted
+
+172
+00:11:07,450 --> 00:11:10,460
+exception, and if the thread that it's in
+
+173
+00:11:10,460 --> 00:11:13,590
+is interrupted, it will throw this
+interrupted exception.
+
+174
+00:11:13,590 --> 00:11:19,110
+And by interrupted I mean if you call
+cancel on the worker, basically.
+
+175
+00:11:20,250 --> 00:11:24,020
+And so I'm just gonna get rid of this
+
+176
+00:11:24,020 --> 00:11:26,286
+message, 'cause if this is interrupted, I
+don't care.
+
+177
+00:11:26,286 --> 00:11:30,820
+I just wanted to shut up basically.
+
+178
+00:11:30,820 --> 00:11:34,130
+And let's now run it and see if we've got
+any more in there.
+
+179
+00:11:34,130 --> 00:11:34,930
+That might be it.
+
+180
+00:11:34,930 --> 00:11:36,290
+I'm not sure.
+
+181
+00:11:36,290 --> 00:11:37,640
+And click Cancel.
+
+182
+00:11:38,650 --> 00:11:42,320
+And now, it's failing silently, which is
+good, except I
+
+183
+00:11:42,320 --> 00:11:45,120
+want it to actually be cancelled, not to
+carry on.
+
+184
+00:11:45,120 --> 00:11:49,639
+And to fix that, because it's not enough
+in general to-
+
+185
+00:11:50,960 --> 00:11:55,900
+It's not enough to simply call cancel on
+the thread 'cause all cancel
+
+186
+00:11:55,900 --> 00:12:01,298
+does is it sets this flag which can detect
+by the isCancelled method.
+
+187
+00:12:01,298 --> 00:12:06,520
+And your thread.sleep's will detect that
+but I need to actually look at where I'm
+
+188
+00:12:06,520 --> 00:12:11,860
+processing stuff and to stop doing that
+processing if the threads cancelled.
+
+189
+00:12:11,860 --> 00:12:16,560
+So my message panel, I'm retrieving
+messages from the message server, and I
+
+190
+00:12:16,560 --> 00:12:22,280
+actually want to say if is cancelled,
+cancel, I just want to stop doing that.
+
+191
+00:12:22,280 --> 00:12:25,250
+So let's just call it break to break out
+of that for loop.
+
+192
+00:12:25,250 --> 00:12:31,540
+And I think that should do the trick, so
+let's
+
+193
+00:12:31,540 --> 00:12:35,820
+run it and I'll take the cross just for
+variety.
+
+194
+00:12:35,820 --> 00:12:38,650
+And now we've successfully cancelled it.
+
+195
+00:12:39,650 --> 00:12:46,460
+So, and the basic message is you can't
+cancel on your worker thread and use
+
+196
+00:12:46,460 --> 00:12:50,960
+is cancelled within your processing and
+doing background
+
+197
+00:12:50,960 --> 00:12:54,010
+to check whether the thread has been
+canceled.
+
+198
+00:12:54,010 --> 00:12:57,870
+And if it is, you, it's up to you to then
+stop doing processing
+
+199
+00:12:57,870 --> 00:12:59,350
+because string isn't going to barge in
+
+200
+00:12:59,350 --> 00:13:02,490
+there and, like physically terminate the
+thread.
+
+201
+00:13:02,490 --> 00:13:04,440
+All it's gonna do is set that flag
+basically.
+
+202
+00:13:05,650 --> 00:13:07,830
+And if you've gotten the thread.sleep or
+if you've got a
+
+203
+00:13:07,830 --> 00:13:11,670
+wait in there then that's going to throw
+an interrupted exception
+
+204
+00:13:11,670 --> 00:13:14,260
+and that's just something to be aware of
+because you might
+
+205
+00:13:14,260 --> 00:13:18,860
+want to have your interrupt exceptions
+just handled silently or you.
+
+206
+00:13:18,860 --> 00:13:22,750
+You might wanna handle 'em somehow by
+cancelling further processing.
+
+207
+00:13:22,750 --> 00:13:23,430
+I don't know.
+
+208
+00:13:23,430 --> 00:13:27,290
+So, that's it for this tutorial.
+
+209
+00:13:27,290 --> 00:13:28,280
+Join me again next time.
+
+210
+00:13:28,280 --> 00:13:30,535
+And until next time, happy coding.
+
+211
+00:13:30,535 --> 00:13:33,274
+[SOUND]
+

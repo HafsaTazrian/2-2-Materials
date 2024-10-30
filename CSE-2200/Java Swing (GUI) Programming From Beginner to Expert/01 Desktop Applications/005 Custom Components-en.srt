@@ -1,0 +1,464 @@
+1
+00:00:01,570 --> 00:00:05,980
+Hello, this is John from
+caveofprogramming.com again.
+
+2
+00:00:05,980 --> 00:00:09,680
+And in this tutorial we're gonna look at
+how
+
+3
+00:00:09,680 --> 00:00:14,550
+to take this text area in our basic Swing
+application
+
+4
+00:00:14,550 --> 00:00:18,450
+and turn it into a simple custom
+component, and we're
+
+5
+00:00:18,450 --> 00:00:20,540
+also gonna add some scroll bars to this
+text area.
+
+6
+00:00:21,680 --> 00:00:25,660
+So, at the moment the way this works is if
+I look at main
+
+7
+00:00:25,660 --> 00:00:31,620
+out, I've just got a text area, which I'm
+adding directly into the, main frame.
+
+8
+00:00:33,640 --> 00:00:37,730
+And, what I want to do is to begin to
+
+9
+00:00:37,730 --> 00:00:43,150
+break this application down, simple,
+though, it is into separate components.
+
+10
+00:00:43,150 --> 00:00:49,410
+So, that we can work and each component
+can kind of take care of itself, and that
+
+11
+00:00:49,410 --> 00:00:55,520
+the application as a whole, is basically
+simplified as we add more stuff to it.
+
+12
+00:00:56,960 --> 00:01:01,200
+So what I'll do is I'll create a new class
+here.
+
+13
+00:01:01,200 --> 00:01:06,500
+So new class and I'm gonna use something
+called a jPanel
+
+14
+00:01:06,500 --> 00:01:11,600
+and I'm gonna call my custom component my,
+my custom
+
+15
+00:01:11,600 --> 00:01:17,900
+class here, I'm gonna call it text panel
+because it's a kind of panel.
+
+16
+00:01:17,900 --> 00:01:23,760
+And I'm gonna say that the Superclass of
+text panel here is gonna be a jPanel.
+
+17
+00:01:23,760 --> 00:01:26,540
+So, I'll click Finish.
+
+18
+00:01:28,910 --> 00:01:35,669
+And, at the input there, and panels are,
+basically, just kind of
+
+19
+00:01:37,650 --> 00:01:43,340
+depending on your operating system colors,
+usually just sort of like gray flat areas.
+
+20
+00:01:43,340 --> 00:01:45,040
+Which you can add to your main frame.
+
+21
+00:01:45,040 --> 00:01:49,950
+But the great thing about them is that you
+can add other components into them.
+
+22
+00:01:49,950 --> 00:01:51,840
+And that's what I'm gonna do here.
+
+23
+00:01:51,840 --> 00:01:57,050
+So to start with, I will just go back
+here.
+
+24
+00:01:57,050 --> 00:02:01,442
+And, so currently I'm adding a text area
+and instead of this text
+
+25
+00:02:01,442 --> 00:02:05,310
+area, I'm gonna get rid of it for the
+moment and say private
+
+26
+00:02:07,340 --> 00:02:10,040
+text panel which is the class I just
+created.
+
+27
+00:02:11,080 --> 00:02:12,390
+I'll call that text panel
+
+28
+00:02:14,500 --> 00:02:19,660
+and down here where I created the text
+area previously, I'll say text
+
+29
+00:02:19,660 --> 00:02:24,070
+panel equals new text panel
+
+30
+00:02:25,680 --> 00:02:29,610
+and here I'll add the text panel instead
+of the text area.
+
+31
+00:02:30,740 --> 00:02:33,510
+And for the moment, I'm just gonna comment
+
+32
+00:02:33,510 --> 00:02:36,380
+this out, comment out this bit where in
+response
+
+33
+00:02:36,380 --> 00:02:42,770
+to the button click here, we pan text to
+the panel, so I just comment this out.
+
+34
+00:02:42,770 --> 00:02:46,780
+And if I run that now, this is what our
+panel looks like, doesn't
+
+35
+00:02:46,780 --> 00:02:50,170
+do anything, I can't add text to it or
+click on it or anything.
+
+36
+00:02:50,170 --> 00:02:54,520
+I can click on it, but nothing happens and
+so now I'm gonna add
+
+37
+00:02:54,520 --> 00:02:59,730
+a text area into this panel and turn it
+into a kind of custom control.
+
+38
+00:03:01,160 --> 00:03:06,430
+And, so, the way to do that is I'll go to
+this text panel class and I'll get an
+
+39
+00:03:06,430 --> 00:03:13,700
+constructor public text panel and in the
+constructor, I'll create a text area
+
+40
+00:03:13,700 --> 00:03:20,490
+so in fact I'll put a private j text area
+here, text area.
+
+41
+00:03:21,970 --> 00:03:27,440
+And in the constructor, I'll say that text
+area equals a new j text area.
+
+42
+00:03:29,300 --> 00:03:34,680
+And let's add the import, and I'm
+
+43
+00:03:34,680 --> 00:03:39,800
+gonna actually, I could just, well, I
+could set the layout on the text
+
+44
+00:03:39,800 --> 00:03:43,780
+panel, and I want this, I actually want
+this text
+
+45
+00:03:43,780 --> 00:03:47,070
+area, for the moment, just to take up the
+whole panel.
+
+46
+00:03:47,070 --> 00:03:50,490
+And I can use again border layout, so say
+set
+
+47
+00:03:50,490 --> 00:03:56,570
+layout, new border layout, so this is
+actually setting the layout.
+
+48
+00:03:56,570 --> 00:04:01,500
+Not on the mainframe but on the the jPanel
+here, on the
+
+49
+00:04:01,500 --> 00:04:05,290
+text panel which is just a kind of jPanel
+because it extends jPanel.
+
+50
+00:04:05,290 --> 00:04:11,990
+So I'll say, set layer, new border layer
+and then I can just do
+
+51
+00:04:11,990 --> 00:04:18,592
+that bad text area and border
+layout.center.
+
+52
+00:04:18,592 --> 00:04:20,890
+So it's very simple.
+
+53
+00:04:20,890 --> 00:04:24,320
+And I'm just gonna be adding in the
+center, and
+
+54
+00:04:24,320 --> 00:04:26,930
+since I'm adding nothing to the north,
+south, east or
+
+55
+00:04:26,930 --> 00:04:29,860
+west, this text panel is just gonna take
+up the
+
+56
+00:04:29,860 --> 00:04:32,530
+entire area of the panel, which is what I
+want.
+
+57
+00:04:34,540 --> 00:04:35,940
+Except that I'm gonna do something very
+
+58
+00:04:35,940 --> 00:04:37,990
+slightly different here because I want the
+text
+
+59
+00:04:37,990 --> 00:04:44,130
+panel to have scrollbars, if the text
+kinda goes off the edge or off the bottom.
+
+60
+00:04:44,130 --> 00:04:50,460
+So, to achieve that I just say here new
+JScrollPane
+
+61
+00:04:50,460 --> 00:04:54,330
+and to the constructor of this scroll pane
+I'll pass the textarea.
+
+62
+00:04:55,760 --> 00:04:59,470
+So, what I'm doing is just wrapping the
+text area
+
+63
+00:04:59,470 --> 00:05:04,090
+in a j-scroll pane and now if I run this,
+you
+
+64
+00:05:04,090 --> 00:05:07,120
+can see I've got, we've got this this is
+the text
+
+65
+00:05:07,120 --> 00:05:10,530
+panel and it's got this nice text area in
+it now.
+
+66
+00:05:10,530 --> 00:05:13,080
+And if I just put more text in than
+there's
+
+67
+00:05:13,080 --> 00:05:17,120
+room for, I get this, this scroll, scroll
+bar appears.
+
+68
+00:05:17,120 --> 00:05:19,840
+And the same if I hit return a bit,
+
+69
+00:05:19,840 --> 00:05:24,630
+like a vertical scroll bar here, which is
+very nice.
+
+70
+00:05:24,630 --> 00:05:26,440
+And you can use scroll bars with.
+
+71
+00:05:26,440 --> 00:05:28,830
+All kinds of different swing components.
+
+72
+00:05:28,830 --> 00:05:31,240
+And, just wrap them in a j scroll pane.
+
+73
+00:05:32,810 --> 00:05:38,550
+Now I want our text into my custom my text
+
+74
+00:05:38,550 --> 00:05:42,620
+panel, my custom component, when the
+button is clicked as before.
+
+75
+00:05:42,620 --> 00:05:49,210
+So what I'll do is I'll give this a public
+method called let's make it public void.
+
+76
+00:05:49,210 --> 00:05:52,380
+And append, appendText maybe.
+
+77
+00:05:53,420 --> 00:05:57,900
+And that can accept a String, called text,
+and
+
+78
+00:05:59,290 --> 00:06:05,930
+in this method I'll just call textarea, so
+the instance variable text area up here.
+
+79
+00:06:07,070 --> 00:06:11,980
+Textarea.append again and I'll just add
+the text in there like that.
+
+80
+00:06:13,360 --> 00:06:16,720
+So now to hook this on, get it working
+just as it was before, all I
+
+81
+00:06:16,720 --> 00:06:22,400
+have to do is back in my main frame here I
+can just call text panel.
+
+82
+00:06:23,570 --> 00:06:28,795
+So it was textarea.append, and now it's
+
+83
+00:06:28,795 --> 00:06:35,370
+textpanel.append, so I just call it append
+text,
+
+84
+00:06:35,370 --> 00:06:40,850
+yeah, append text, and if I run that, and
+click it, there you go.
+
+85
+00:06:43,630 --> 00:06:44,130
+Okay.
+
+86
+00:06:45,180 --> 00:06:51,340
+Now you see that the strategy I'm using
+here, that I'm working towards is,
+
+87
+00:06:51,340 --> 00:06:55,130
+that the mainframe is creating lots of
+
+88
+00:06:55,130 --> 00:06:58,020
+different components, just two at the
+moment actually.
+
+89
+00:06:58,020 --> 00:06:59,840
+And, and those components can each
+
+90
+00:06:59,840 --> 00:07:02,799
+be potentially quite sophisticated in
+themselves.
+
+91
+00:07:03,880 --> 00:07:05,920
+And this is the beginning of a kind of
+model for your
+
+92
+00:07:05,920 --> 00:07:11,490
+controller architecture, which we'll get
+into a bit more as the tutorials progress.
+
+93
+00:07:12,540 --> 00:07:15,610
+Now in the next tutorial we're gonna look
+at adding a toolbar.
+
+94
+00:07:15,610 --> 00:07:17,260
+So I'm gonna move that button to a
+toolbar.
+
+95
+00:07:17,260 --> 00:07:21,720
+And we're gonna have a second custom
+component instead of this button here.
+
+96
+00:07:22,840 --> 00:07:26,585
+So, join me again next time, and until
+then, happy coding.
+
+97
+00:07:26,585 --> 00:07:30,274
+[SOUND]
+

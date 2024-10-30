@@ -1,0 +1,1381 @@
+1
+00:00:01,740 --> 00:00:05,730
+Hello, this is John from Cave of
+Programming dot com.
+
+2
+00:00:05,730 --> 00:00:14,410
+And in this tutorial, we're gonna look at,
+the event object class in Java Swing.
+
+3
+00:00:14,410 --> 00:00:19,660
+And we're also gonna, take a look at,
+
+4
+00:00:19,660 --> 00:00:22,750
+getting the text from text fields in
+swing.
+
+5
+00:00:24,010 --> 00:00:26,210
+So, and form handling in general.
+
+6
+00:00:26,210 --> 00:00:33,650
+So in the last tutorial, I created this
+little application and at
+
+7
+00:00:33,650 --> 00:00:37,170
+the moment, actually these buttons still
+work but this form doesn't do anything.
+
+8
+00:00:38,260 --> 00:00:40,310
+And I wanna make this form work.
+
+9
+00:00:40,310 --> 00:00:46,590
+And in future tutorials, we're gonna look
+at the model part
+
+10
+00:00:46,590 --> 00:00:50,870
+of the model view controller architecture,
+which we're gonna get into.
+
+11
+00:00:50,870 --> 00:00:54,030
+But and that part handles data, sorting
+
+12
+00:00:54,030 --> 00:00:57,350
+data, and dealing with data in your
+application.
+
+13
+00:00:57,350 --> 00:01:01,520
+But for the moment, I just wanna fix this,
+so that if you fill something in here.
+
+14
+00:01:01,520 --> 00:01:03,140
+And you click okay.
+
+15
+00:01:03,140 --> 00:01:07,990
+Then it adds the text to this panel on the
+right here.
+
+16
+00:01:09,090 --> 00:01:12,580
+So I need to transmit data basically from
+this form,
+
+17
+00:01:12,580 --> 00:01:17,420
+to this panel control on the right, but I
+don't want
+
+18
+00:01:17,420 --> 00:01:21,990
+to send the data there directly and to
+keep the communication
+
+19
+00:01:21,990 --> 00:01:24,820
+streamlined and to keep it from getting
+tangled in my application.
+
+20
+00:01:24,820 --> 00:01:28,770
+I want all communication to be rooted
+through this
+
+21
+00:01:28,770 --> 00:01:32,970
+main frame here which is acting as my
+controller.
+
+22
+00:01:32,970 --> 00:01:37,090
+The main frame creates all the main
+components, my
+
+23
+00:01:37,090 --> 00:01:41,720
+toolbar, text bar and form panel and I
+want my.
+
+24
+00:01:41,720 --> 00:01:45,140
+The information from my form to reach main
+frame.
+
+25
+00:01:45,140 --> 00:01:47,280
+And then main frame decides what to do
+with it.
+
+26
+00:01:47,280 --> 00:01:49,770
+Processes it anyway it wants to.
+
+27
+00:01:49,770 --> 00:01:53,550
+And in this case, it's gonna tell the text
+panel to display it.
+
+28
+00:01:54,990 --> 00:01:56,600
+And that's one of the keys to keeping
+
+29
+00:01:56,600 --> 00:01:59,820
+your application from turning into a rat's
+nest.
+
+30
+00:02:01,020 --> 00:02:08,280
+So, to do that, I need to respond to
+clicks on this button.
+
+31
+00:02:08,280 --> 00:02:11,640
+And, beginners often make the mistake of
+trying
+
+32
+00:02:11,640 --> 00:02:16,000
+to detect when the user is entering text
+here.
+
+33
+00:02:16,000 --> 00:02:18,050
+And most of the time you don't need to do
+that, because.
+
+34
+00:02:18,050 --> 00:02:23,400
+Cuz you only want to submit your form
+information when the button is clicked.
+
+35
+00:02:23,400 --> 00:02:27,330
+So it's the button you have to listen to,
+and when the button's clicked,
+
+36
+00:02:27,330 --> 00:02:31,040
+you're gonna get a text from these text
+fields, and do something with it.
+
+37
+00:02:32,160 --> 00:02:34,310
+So let's first go into the form panel.
+
+38
+00:02:34,310 --> 00:02:37,650
+And I'm going to add a Listener, an Action
+Listener.
+
+39
+00:02:37,650 --> 00:02:40,920
+To the okay button.
+
+40
+00:02:40,920 --> 00:02:46,300
+So, I'll say, okay btn.add.actionlistener
+and I
+
+41
+00:02:46,300 --> 00:02:51,860
+could make my form class, my form panel
+class implement that.
+
+42
+00:02:51,860 --> 00:02:54,030
+Listener and passing this here.
+
+43
+00:02:54,030 --> 00:02:57,370
+But what I'm going to do instead is use
+
+44
+00:02:57,370 --> 00:03:00,330
+an anonymous class and put a semicolon
+right there.
+
+45
+00:03:00,330 --> 00:03:03,110
+I'm going to say new action listener,
+
+46
+00:03:03,110 --> 00:03:05,770
+which is the interface name, round
+brackets
+
+47
+00:03:05,770 --> 00:03:09,020
+and open the curly parenthesis hit return
+
+48
+00:03:09,020 --> 00:03:12,510
+eclipse puts the closing parenthesis in
+parenthesis.
+
+49
+00:03:13,750 --> 00:03:17,390
+And if I click on this here I can, if I
+
+50
+00:03:17,390 --> 00:03:22,670
+got the input there already which I have,
+then I can add
+
+51
+00:03:22,670 --> 00:03:26,930
+unimplemented methods here and that works
+the same in Net beans
+
+52
+00:03:26,930 --> 00:03:31,850
+I think, and probably an intelligent idea
+if you're using that IDE.
+
+53
+00:03:31,850 --> 00:03:33,590
+And then it adds this public void action
+
+54
+00:03:33,590 --> 00:03:38,820
+before method which receives a action
+event notice.
+
+55
+00:03:40,190 --> 00:03:42,280
+Now I'll get rid of these lines that I
+don't really need.
+
+56
+00:03:42,280 --> 00:03:43,170
+By the way this is a.
+
+57
+00:03:43,170 --> 00:03:45,220
+attribute that ensures, so it's an
+
+58
+00:03:45,220 --> 00:03:48,260
+annotation that this really is an
+override.
+
+59
+00:03:48,260 --> 00:03:51,160
+But I'm going to trust that it is the
+correct override.
+
+60
+00:03:51,160 --> 00:03:51,880
+Just delete that.
+
+61
+00:03:53,900 --> 00:03:59,620
+And now, so this is going to be called
+whenever the button is clicked.
+
+62
+00:03:59,620 --> 00:04:05,060
+So when the button is clicked, I can say
+string name equals.
+
+63
+00:04:05,060 --> 00:04:07,640
+In fields dot get text.
+
+64
+00:04:09,030 --> 00:04:15,480
+And string occupation equals occupation
+fields dot get text.
+
+65
+00:04:15,480 --> 00:04:17,460
+Like this, it's pretty simple.
+
+66
+00:04:17,460 --> 00:04:22,010
+And I'm just referring here, name field of
+course.
+
+67
+00:04:22,010 --> 00:04:26,860
+An occupation field, or kinda private
+instance variables in my containing class.
+
+68
+00:04:26,860 --> 00:04:28,580
+The form panel, which contains the form.
+
+69
+00:04:30,460 --> 00:04:35,380
+Now at this point, I somehow need to pass
+this information to
+
+70
+00:04:35,380 --> 00:04:39,980
+my main frame and, I'm not gonna try to
+call main frame directly.
+
+71
+00:04:39,980 --> 00:04:42,990
+I'm gonna do what I've done before and
+raise
+
+72
+00:04:42,990 --> 00:04:45,560
+an event, which the main frame is gonna
+listen to.
+
+73
+00:04:47,460 --> 00:04:49,560
+Now I'm gonna introduce a new little.
+
+74
+00:04:49,560 --> 00:04:51,730
+Kinda twist here, because I wanna kinda
+move
+
+75
+00:04:51,730 --> 00:04:56,390
+towards showing you how swing handles
+events natively.
+
+76
+00:04:56,390 --> 00:04:59,030
+So we see that swing's got this mechanism,
+where you
+
+77
+00:04:59,030 --> 00:05:03,860
+say things like add Action Listener, and
+then your Action Listener,
+
+78
+00:05:03,860 --> 00:05:07,110
+your class switch implements your switch
+action interface, in this case,
+
+79
+00:05:08,180 --> 00:05:12,060
+as a method got action perform, which
+receives an action event.
+
+80
+00:05:12,060 --> 00:05:13,660
+And the action event is used to.
+
+81
+00:05:13,660 --> 00:05:18,540
+To pass information from the control that
+raises the event, which is a button in
+
+82
+00:05:18,540 --> 00:05:21,250
+this case, to the listening class, which
+
+83
+00:05:21,250 --> 00:05:23,340
+is this synonymous class here, in this
+case.
+
+84
+00:05:25,480 --> 00:05:28,670
+So, I'm going to actually defined an event
+and my
+
+85
+00:05:28,670 --> 00:05:33,850
+event is gonna be used to temporary
+install name and occupation.
+
+86
+00:05:33,850 --> 00:05:37,810
+And also information I'm going to add to
+my form later on.
+
+87
+00:05:39,080 --> 00:05:43,270
+And it's gonna transmit, it's gonna be
+used to take that information up
+
+88
+00:05:43,270 --> 00:05:47,560
+to the main frame which is my controller
+class because the main frame
+
+89
+00:05:47,560 --> 00:05:52,270
+creates the toolbar, text panel and form
+panel, and it decides what to
+
+90
+00:05:52,270 --> 00:05:56,050
+do with the information that they generate
+and it hooks them all together.
+
+91
+00:05:58,100 --> 00:06:04,440
+So, I'll start here by creating a new
+class,
+
+92
+00:06:06,480 --> 00:06:09,230
+and I'm gonna call it form event.
+
+93
+00:06:09,230 --> 00:06:14,900
+This is a kind of event class and I'm, I
+don't have to, but I'm gonna make it
+
+94
+00:06:14,900 --> 00:06:20,560
+extend, Different objects which is a
+
+95
+00:06:20,560 --> 00:06:27,160
+standard Java class and if I had the
+import there that's
+
+96
+00:06:27,160 --> 00:06:33,350
+actually, this event object is the class,
+which.
+
+97
+00:06:34,400 --> 00:06:40,890
+All the kind of swing events like, for
+example, actually vent, derive from.
+
+98
+00:06:43,460 --> 00:06:47,150
+So if I, if I just extend this event
+object it's gonna help
+
+99
+00:06:47,150 --> 00:06:52,430
+us, kind of move towards More like the
+swing native architecture later on.
+
+100
+00:06:52,430 --> 00:06:57,210
+Although this native kind of swing event
+handling is a, kind of a bit overkill for
+
+101
+00:06:57,210 --> 00:07:03,560
+most purposes, which is why I haven't kind
+of immediately shown you how it works.
+
+102
+00:07:03,560 --> 00:07:07,670
+So so I've got a Form Event Object, which
+extends Event Object.
+
+103
+00:07:07,670 --> 00:07:08,810
+And I'm gonna start.
+
+104
+00:07:08,810 --> 00:07:11,200
+By, well I'll have to import that.
+
+105
+00:07:14,000 --> 00:07:16,700
+so, import, event, object.
+
+106
+00:07:19,380 --> 00:07:19,880
+And
+
+107
+00:07:22,130 --> 00:07:24,140
+I'm gonna add a construct here.
+
+108
+00:07:24,140 --> 00:07:26,970
+Because event object ask.
+
+109
+00:07:26,970 --> 00:07:29,760
+A constructor.
+
+110
+00:07:29,760 --> 00:07:34,160
+Which accepts an object, which is the
+source of the event.
+
+111
+00:07:34,160 --> 00:07:36,980
+And the source means the object that
+raises the event.
+
+112
+00:07:36,980 --> 00:07:40,170
+And in this case source is gonna be the
+form panel.
+
+113
+00:07:41,550 --> 00:07:45,855
+But for example, within the form panel, I
+listen to a.
+
+114
+00:07:45,855 --> 00:07:48,970
+Button, a J button and the source in that
+
+115
+00:07:48,970 --> 00:07:52,260
+case, is going to be the button itself
+that
+
+116
+00:07:52,260 --> 00:07:55,080
+actually, so this actually, then will have
+a source,
+
+117
+00:07:55,080 --> 00:07:57,520
+which will be the actual button that
+raises the event.
+
+118
+00:07:59,670 --> 00:08:02,600
+So now, once I've done that, so, I've,
+
+119
+00:08:02,600 --> 00:08:05,800
+I've just extended the event object, added
+a constructor.
+
+120
+00:08:05,800 --> 00:08:08,200
+Accepts the source of the event.
+
+121
+00:08:08,200 --> 00:08:13,270
+And, I'm just, this is really simple, I'm
+just gonna add a couple of fields now, so
+
+122
+00:08:13,270 --> 00:08:18,970
+private, string, name, and private,
+string,
+
+123
+00:08:18,970 --> 00:08:25,200
+occupation, because I just want this class
+to, to store that information temporarily.
+
+124
+00:08:25,200 --> 00:08:27,500
+It's just gonna take that information.
+
+125
+00:08:27,500 --> 00:08:32,890
+And relay it to my main frame and let's
+add getters and setters for that.
+
+126
+00:08:32,890 --> 00:08:34,310
+So, I'll use an Eclipse shortcut.
+
+127
+00:08:34,310 --> 00:08:40,680
+I'll right click and go to source and.
+
+128
+00:08:40,680 --> 00:08:47,770
+Generate getters and setters and every
+good IDE, as this facility, of course.
+
+129
+00:08:47,770 --> 00:08:49,760
+And click ok and there we go, I've got my
+
+130
+00:08:49,760 --> 00:08:52,840
+getters and setters, get occupation, set
+occupation, and so on.
+
+131
+00:08:55,480 --> 00:08:57,750
+and, I.
+
+132
+00:08:57,750 --> 00:09:02,840
+Will also, let's also alter their
+construct a bit here.
+
+133
+00:09:02,840 --> 00:09:07,520
+Because I might want to just bonk in the
+name and occupation here.
+
+134
+00:09:07,520 --> 00:09:10,580
+Actually, I'm not really sure about that.
+
+135
+00:09:10,580 --> 00:09:13,360
+Let's just have another construct so I can
+use it if I want to.
+
+136
+00:09:13,360 --> 00:09:14,470
+So let's say here.
+
+137
+00:09:16,950 --> 00:09:18,440
+String name.
+
+138
+00:09:18,440 --> 00:09:21,344
+String occupation.
+
+139
+00:09:21,344 --> 00:09:25,768
+And this dot name equals name.
+
+140
+00:09:25,768 --> 00:09:32,850
+And this dot occupation equals occupation.
+
+141
+00:09:32,850 --> 00:09:35,340
+And if you've been programming in Java for
+any length of time,
+
+142
+00:09:35,340 --> 00:09:39,370
+this kind of panel will be burnt into your
+brain by now
+
+143
+00:09:39,370 --> 00:09:42,900
+where you just have, you pass in some
+parameters and set the
+
+144
+00:09:42,900 --> 00:09:47,890
+instance variable parameters to the, to
+the arguments that are passed in.
+
+145
+00:09:50,110 --> 00:09:53,870
+Okay, so, so now I 've got a
+
+146
+00:09:53,870 --> 00:09:56,990
+event object that can store that
+information temporarily.
+
+147
+00:09:56,990 --> 00:10:00,860
+And back in my form panel, when the button
+is clicked, I can
+
+148
+00:10:00,860 --> 00:10:05,960
+say, I could create one of those events,
+such as a form event,
+
+149
+00:10:08,110 --> 00:10:13,000
+event, I'll just call it f actually equals
+new form event,
+
+150
+00:10:13,000 --> 00:10:18,530
+and I can pass in the source, which is
+this, and the name, and the occupation.
+
+151
+00:10:21,200 --> 00:10:25,740
+And now, the question is, how am I gonna
+get that back to my.
+
+152
+00:10:25,740 --> 00:10:29,610
+Main frame and I want the main frame to
+kind
+
+153
+00:10:29,610 --> 00:10:31,920
+of have some stuff that looks like this in
+it.
+
+154
+00:10:33,880 --> 00:10:40,330
+So if I go to the main frame you see that
+I've, I've got my, I already
+
+155
+00:10:40,330 --> 00:10:44,195
+set a listener on the tool bar and I want
+the main frame to do the same kind of.
+
+156
+00:10:44,195 --> 00:10:49,565
+Thing with the form panel, so I can say
+form panel dot,
+
+157
+00:10:49,565 --> 00:10:54,955
+and I want something that looks like this,
+set form
+
+158
+00:10:54,955 --> 00:10:59,765
+listener, and that method is not
+implemented yet, but this is what
+
+159
+00:10:59,765 --> 00:11:04,690
+it's gonna look like when it's finished,
+And in there, I want
+
+160
+00:11:04,690 --> 00:11:09,800
+to be able to say something like new form
+listener.
+
+161
+00:11:09,800 --> 00:11:11,120
+Which again, doesn't exist yet.
+
+162
+00:11:12,420 --> 00:11:17,420
+And form listener interface, which I'm
+going to create, should have a method.
+
+163
+00:11:17,420 --> 00:11:22,833
+Something like, public void form event.
+
+164
+00:11:24,480 --> 00:11:27,740
+For the, form event occurred, let's say.
+
+165
+00:11:29,260 --> 00:11:33,690
+And the form event occur method should
+accept a form event,
+
+166
+00:11:35,350 --> 00:11:41,240
+event, which I'll just call E, and then it
+should do something with it.
+
+167
+00:11:41,240 --> 00:11:44,740
+In fact, what it should do, is it should
+get the.
+
+168
+00:11:44,740 --> 00:11:49,890
+String name because e dot get name.
+
+169
+00:11:51,540 --> 00:11:55,800
+Because form events is just this event
+class that I've just created right here.
+
+170
+00:11:55,800 --> 00:11:58,830
+Which has the get name and the set name,
+and all that kind of stuff.
+
+171
+00:12:00,170 --> 00:12:02,321
+And string.
+
+172
+00:12:02,321 --> 00:12:08,746
+Occupation equals E dot get occupation,
+and
+
+173
+00:12:08,746 --> 00:12:15,337
+once it's got them, it can tell the text
+panel
+
+174
+00:12:15,337 --> 00:12:21,786
+what to do, it can say text panel dot
+append.
+
+175
+00:12:21,786 --> 00:12:28,680
+[SOUND] I think the text panel here, the
+text panel has the append text method.
+
+176
+00:12:28,680 --> 00:12:34,062
+So I can say append text and something
+
+177
+00:12:34,062 --> 00:12:39,660
+like main and let's add in a plus.
+
+178
+00:12:39,660 --> 00:12:42,160
+And some punctuation.
+
+179
+00:12:42,160 --> 00:12:49,080
+And then occupation and plus and maybe a
+backslash and new line.
+
+180
+00:12:51,300 --> 00:12:55,340
+Now if you're kinda losing the thread a
+bit at this point
+
+181
+00:12:57,480 --> 00:12:58,980
+don't worry too much.
+
+182
+00:12:58,980 --> 00:13:00,990
+I'd, I'd say like, take a look at the
+
+183
+00:13:00,990 --> 00:13:03,130
+example we went through earlier with the
+tool box.
+
+184
+00:13:03,130 --> 00:13:03,950
+This is very similar.
+
+185
+00:13:03,950 --> 00:13:07,510
+It's just that I've introduced this event
+object, this form event thing.
+
+186
+00:13:08,610 --> 00:13:13,010
+And try typing it out for yourself,
+because once you've typed this out
+
+187
+00:13:13,010 --> 00:13:16,560
+once or twice you, I think you will get
+the hang of it.
+
+188
+00:13:17,580 --> 00:13:21,540
+And the, the main points here are that I
+created this.
+
+189
+00:13:21,540 --> 00:13:25,230
+Form event object, which can store the
+name and occupation.
+
+190
+00:13:25,230 --> 00:13:26,040
+Actually, that should be called
+
+191
+00:13:26,040 --> 00:13:29,190
+occupation, spelling mistake there, let's
+just
+
+192
+00:13:29,190 --> 00:13:34,850
+fix that, so the form event stores the
+name and the occupation.
+
+193
+00:13:37,110 --> 00:13:42,880
+There we go, and it derives from
+
+194
+00:13:42,880 --> 00:13:49,730
+swing the swing Event, object, class.
+
+195
+00:13:49,730 --> 00:13:51,840
+And, and that has a constructor, that
+accepts
+
+196
+00:13:51,840 --> 00:13:53,350
+the source of the event, and the source of
+
+197
+00:13:53,350 --> 00:13:56,810
+the event is whichever component fired the
+event, which
+
+198
+00:13:56,810 --> 00:13:59,480
+is gonna be my form panel in this case.
+
+199
+00:14:01,070 --> 00:14:04,350
+And, the next step is, like, if you get
+
+200
+00:14:04,350 --> 00:14:08,900
+used to adding action business to buttons
+like here,
+
+201
+00:14:08,900 --> 00:14:12,640
+I've added an action list to this okay
+button,
+
+202
+00:14:12,640 --> 00:14:15,090
+you can then do the same thing with your
+own.
+
+203
+00:14:15,090 --> 00:14:19,920
+Controls, so instead of action listener, I
+just made up the names here, I've said set
+
+204
+00:14:19,920 --> 00:14:23,470
+form listener instead of add action
+listener and
+
+205
+00:14:23,470 --> 00:14:25,950
+instead of action listener, I've got form
+listener here.
+
+206
+00:14:27,240 --> 00:14:30,920
+Instead of action perform, I've got
+perform event occurred, so I'm just making
+
+207
+00:14:30,920 --> 00:14:35,140
+these up and now I'm gonna implement the
+relevant stuff to make that work.
+
+208
+00:14:37,370 --> 00:14:39,070
+And the way I'll do that is.
+
+209
+00:14:39,070 --> 00:14:44,810
+So I've got my form event, but I need to
+create the form listener interface.
+
+210
+00:14:44,810 --> 00:14:48,700
+So let's just oh I've still got one error
+in
+
+211
+00:14:48,700 --> 00:14:52,350
+here, yeah, I've just got one A missing
+there, okay.
+
+212
+00:14:52,350 --> 00:14:59,413
+So I'm gonna go right click here, and I'm
+gonna go to New, Interface, Form Listener.
+
+213
+00:15:00,620 --> 00:15:07,060
+And I want my FullListener interface to
+
+214
+00:15:07,060 --> 00:15:12,430
+have a method called FormEvent occurred,
+so that's all I want to have in it, which
+
+215
+00:15:12,430 --> 00:15:15,710
+accepts FormEvent, so I'm copying that,
+and I just paste it
+
+216
+00:15:15,710 --> 00:15:19,960
+in here, and just to make this more like
+the kind of.
+
+217
+00:15:19,960 --> 00:15:21,660
+Native swing way of doing this.
+
+218
+00:15:21,660 --> 00:15:28,898
+I can also make it implement, and event
+listener.
+
+219
+00:15:28,898 --> 00:15:33,560
+Listener and sorry not implement but
+extend.
+
+220
+00:15:35,530 --> 00:15:39,280
+The event listener class which is the
+drive utility event listener.
+
+221
+00:15:42,190 --> 00:15:45,010
+And that's the basis for all the listeners
+
+222
+00:15:45,010 --> 00:15:47,430
+in swing like the action listener for
+example.
+
+223
+00:15:49,050 --> 00:15:55,100
+And now, I just need to create this set,
+form this new method in the form panel.
+
+224
+00:15:56,140 --> 00:16:02,540
+So if I go to my form panel, then I can
+say here, let's have a private variable.
+
+225
+00:16:02,540 --> 00:16:02,835
+Private.
+
+226
+00:16:02,835 --> 00:16:13,270
+Form, form listener, form listener.
+
+227
+00:16:13,270 --> 00:16:16,950
+and, I want the method called set form
+listener, so let's go down
+
+228
+00:16:16,950 --> 00:16:23,170
+here, let's get rid of those blunt lines
+and say public for your set.
+
+229
+00:16:23,170 --> 00:16:28,160
+Form listener, and that accepts a form
+listener, in
+
+230
+00:16:28,160 --> 00:16:31,660
+other words, any class that implements a
+form listener interface.
+
+231
+00:16:31,660 --> 00:16:34,290
+So I'll call that listener, and I can just
+
+232
+00:16:34,290 --> 00:16:40,490
+set the this dot form listener equal to
+the listener.
+
+233
+00:16:40,490 --> 00:16:46,140
+And then the final step here, is.
+
+234
+00:16:46,140 --> 00:16:49,690
+At this point here, in my action list on
+the button,
+
+235
+00:16:49,690 --> 00:16:53,560
+I've created a form event that has the
+relevant information in it.
+
+236
+00:16:53,560 --> 00:16:58,620
+And now I just have to say that if the
+form listener
+
+237
+00:16:58,620 --> 00:17:03,250
+which I added as an instance variable, is
+not equal to null,
+
+238
+00:17:04,290 --> 00:17:10,280
+not equal to null, then I can call the one
+method.
+
+239
+00:17:10,280 --> 00:17:13,290
+That all form listeners have, which is the
+form event occurred.
+
+240
+00:17:14,470 --> 00:17:15,350
+I can say here,
+
+241
+00:17:18,510 --> 00:17:24,440
+in, where is it, in my form panel, so I'd
+say form listener,
+
+242
+00:17:24,440 --> 00:17:30,140
+if it's not equal to null, dot form event
+occurred and pass in the event there.
+
+243
+00:17:33,200 --> 00:17:33,700
+And
+
+244
+00:17:35,840 --> 00:17:39,850
+the whole kind of point of this is full
+panel doesn't contain any references.
+
+245
+00:17:39,850 --> 00:17:41,580
+It says to mainframe.
+
+246
+00:17:41,580 --> 00:17:45,850
+But nevertheless, mainframe has set
+itself, or it's set actually
+
+247
+00:17:45,850 --> 00:17:50,460
+in anonymous class as the form listener
+using this method.
+
+248
+00:17:50,460 --> 00:17:52,150
+So, it used to set form listener.
+
+249
+00:17:53,160 --> 00:17:55,460
+And that anonymous class here that
+implements form
+
+250
+00:17:55,460 --> 00:17:59,750
+listener interface can receive the form
+even occurred.
+
+251
+00:17:59,750 --> 00:18:04,340
+And it can, it has a method that will be
+called.
+
+252
+00:18:04,340 --> 00:18:10,380
+By the form panel when a form event
+occurs,
+
+253
+00:18:10,380 --> 00:18:13,670
+so the form kinda caused that form event
+occur method.
+
+254
+00:18:13,670 --> 00:18:20,400
+So this, here, is calling this method
+here, and
+
+255
+00:18:20,400 --> 00:18:24,940
+then this has been the mainframe and then
+mainframe tells the text panel what to do.
+
+256
+00:18:24,940 --> 00:18:26,682
+So if I run that.
+
+257
+00:18:26,682 --> 00:18:29,550
+I thought I'm feeling something here, like
+lets
+
+258
+00:18:29,550 --> 00:18:31,320
+try it with nothing in for the moment.
+
+259
+00:18:31,320 --> 00:18:33,820
+So I just get a colon being output.
+
+260
+00:18:33,820 --> 00:18:37,380
+And you might want to put some validation
+on this form of course.
+
+261
+00:18:37,380 --> 00:18:42,060
+So lets fill in the edge on Software
+Trainer.
+
+262
+00:18:42,060 --> 00:18:44,150
+Click ok, and every time I click.
+
+263
+00:18:44,150 --> 00:18:45,490
+Click on it fills it in.
+
+264
+00:18:48,920 --> 00:18:50,200
+So let's have another one.
+
+265
+00:18:50,200 --> 00:18:50,700
+Bob.
+
+266
+00:18:52,150 --> 00:18:53,220
+Lion Tamer.
+
+267
+00:18:54,720 --> 00:18:55,220
+There you go.
+
+268
+00:18:56,500 --> 00:18:59,830
+So this, I appreciate that this is pretty
+complex and a lot of people
+
+269
+00:18:59,830 --> 00:19:04,370
+are puzzled by this, but as I say, don't
+rack your brains over it.
+
+270
+00:19:04,370 --> 00:19:05,370
+Just type it out.
+
+271
+00:19:05,370 --> 00:19:07,970
+Just look at the example I've given you,
+
+272
+00:19:07,970 --> 00:19:10,900
+and try to implement the same thing, and
+if
+
+273
+00:19:10,900 --> 00:19:14,880
+you can spend that time doing it, you know
+just like a hour or two doing that.
+
+274
+00:19:14,880 --> 00:19:20,030
+It will really help you get your head
+around and understanding this stuff will
+
+275
+00:19:20,030 --> 00:19:27,299
+massively help you and create nicely
+structured swing applications.
+
+276
+00:19:27,299 --> 00:19:30,640
+And alternatively.
+
+277
+00:19:30,640 --> 00:19:34,410
+If you just want to bang out swing
+applications that just work, then yeah,
+
+278
+00:19:34,410 --> 00:19:40,410
+you could, you could pass in a reference,
+to the mainframe directly into your,
+
+279
+00:19:42,470 --> 00:19:44,090
+directly into your form panel.
+
+280
+00:19:44,090 --> 00:19:47,730
+And, or, even pass in a reference to the.
+
+281
+00:19:47,730 --> 00:19:53,150
+You could pass a reference to the text
+area panel here, to the form panel here.
+
+282
+00:19:53,150 --> 00:19:54,490
+But if you do that a lot.
+
+283
+00:19:54,490 --> 00:19:58,300
+And if your ambition is to create complex
+Swing applications.
+
+284
+00:19:58,300 --> 00:20:02,800
+Then that will get, unmanageably complex
+pretty quickly.
+
+285
+00:20:02,800 --> 00:20:06,850
+So, if you wanna create quite complex
+swing applications.
+
+286
+00:20:06,850 --> 00:20:08,490
+It's really worth just spending a little
+bit of
+
+287
+00:20:08,490 --> 00:20:11,450
+time looking at this code and getting used
+to it.
+
+288
+00:20:13,290 --> 00:20:16,830
+Okay, so that's more than enough for this
+tutorial and you'll be
+
+289
+00:20:16,830 --> 00:20:21,320
+pleased to know that after this, we're
+looked at kind of swing events,
+
+290
+00:20:21,320 --> 00:20:26,380
+and we've looked at we've looked at grid
+back layout, and after these
+
+291
+00:20:26,380 --> 00:20:32,020
+two immensely complicated things, it's
+Almost plain sailing from here on in.
+
+292
+00:20:32,020 --> 00:20:34,690
+So in the next tutorial, we're going to
+look at something nice and simple.
+
+293
+00:20:34,690 --> 00:20:38,890
+We're going to look at the J list control.
+
+294
+00:20:38,890 --> 00:20:42,635
+So join me again then and until next time,
+happy coding.
+
+295
+00:20:42,635 --> 00:20:46,604
+[SOUND]
+
