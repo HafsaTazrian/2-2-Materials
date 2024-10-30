@@ -1,0 +1,43 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.980 --> 00:00:16.870
+Possible error of Compilation with
+NetBeans
+
+00:00:20.330 --> 00:00:24.960
+only in case of errors when combining
+the project, you can try to clear the netbeans
+
+00:00:24.960 --> 00:00:29.340
+cache. To find the cache path on
+your PC, depending on the operating
+
+00:00:29.340 --> 00:00:34.410
+system that you have, you can follow the
+next steps. To see the NetBeans cache
+
+00:00:34.410 --> 00:00:43.020
+path open NetBeans, go to Help and select
+About. This shows us the catche
+
+00:00:43.020 --> 00:00:47.940
+directory, according to the operating
+system that we have. We take this path
+
+00:00:47.940 --> 00:00:57.690
+and follow the next step. Once the path
+is found, delete the cache folder. After
+
+00:00:57.690 --> 00:01:03.839
+that, close and reopen NetBeans and try
+to compile the project again. If it
+
+00:01:03.839 --> 00:01:08.670
+doesn't work uninstall and reinstall
+NetBeans again. As we said, these steps
+
+00:01:08.670 --> 00:01:12.350
+are only in case of problems
+

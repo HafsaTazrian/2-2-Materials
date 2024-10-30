@@ -1,0 +1,185 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:09.250 --> 00:00:13.210
+Hello, my name is Ubaldo Acosta and welcome again.
+
+00:00:13.210 --> 00:00:20.160
+In this first lesson we will study an introduction
+of Java technology. We'll see what is the
+
+00:00:20.160 --> 00:00:24.539
+Java language and why it is important to master
+this technology nowadays.
+
+00:00:24.539 --> 00:00:29.840
+One of the main reasons why becoming a Java
+expert is that there is an incredible demand
+
+00:00:29.840 --> 00:00:34.989
+for well-trained professionals in Java technology,
+but few people are prepared to face these
+
+00:00:34.989 --> 00:00:40.179
+challenges, so it is the best time for you
+to take advantage and become an specialist
+
+00:00:40.179 --> 00:00:42.100
+once and for all.
+
+00:00:42.100 --> 00:00:47.379
+Throughout this lesson we will study, among
+other topics, the different versions of Java,
+
+00:00:47.379 --> 00:00:50.660
+and the evolution of this technology until
+this day.
+
+00:00:50.660 --> 00:00:56.329
+Also, we will study the most important characteristics
+of Java and the important reasons why Java
+
+00:00:56.329 --> 00:00:59.909
+is considered the number one language in the
+world today.
+
+00:00:59.909 --> 00:01:05.640
+So, if you're ready, let’s start with this fabulous
+journey in learning the most popular programming
+
+00:01:05.640 --> 00:01:09.720
+language in the world, Java.
+
+00:01:09.720 --> 00:01:12.140
+Introduction to Java Tecnology.
+
+00:01:12.180 --> 00:01:17.520
+Java is more than a programming language,
+it is a very complete technology and considered
+
+00:01:17.520 --> 00:01:22.660
+as the number one option for many of the enterprise
+developments today.
+
+00:01:22.670 --> 00:01:28.430
+But let's start with the basic elements, so
+in these lessons we will study Java as a programming
+
+00:01:28.430 --> 00:01:31.780
+language developed by Sun Microsystems.
+
+00:01:31.780 --> 00:01:37.299
+I would like to tell you that although we
+are going to see some historical points, it
+
+00:01:37.299 --> 00:01:43.020
+is not our intention to make notes of obvious
+things that can be found on the internet,
+
+00:01:43.020 --> 00:01:48.560
+but only with the intention of putting them
+in context, and have a general picture of
+
+00:01:48.560 --> 00:01:50.490
+what we are going to learn.
+
+00:01:50.490 --> 00:01:56.909
+Java was born in the early 90s, created by
+James Gosling, with the aim of creating a
+
+00:01:56.909 --> 00:02:01.980
+programming language to be used in the new
+generation of smart devices.
+
+00:02:02.040 --> 00:02:12.220
+They tried to use C++ and extend it, however
+this language was complicated and James Gosling
+
+00:02:12.220 --> 00:02:19.030
+decided to create a new language called OAK,
+later changed the name to Java (the legend
+
+00:02:19.030 --> 00:02:24.070
+says that they decided to choose the name Java
+due to the coffee they used to drink,
+
+00:02:24.070 --> 00:02:27.070
+Java it's a type of coffee from Asia).
+
+00:02:27.070 --> 00:02:32.050
+Whatever may have been the origin of the name,
+Java is today a name that everyone who uses
+
+00:02:32.050 --> 00:02:38.580
+a computer is aware of, either by its Java
+Virtual Machine, or some Java plug-in, and
+
+00:02:38.580 --> 00:02:43.390
+this is because many applications installed
+on our computer use Java as a programming
+
+00:02:43.390 --> 00:02:44.390
+language.
+
+00:02:44.390 --> 00:02:49.400
+The success of Java was the possibility of
+installing a component, known as Applet, in
+
+00:02:49.400 --> 00:02:55.370
+a Web browser, and with the Internet boom
+it was possible to extend this concept to
+
+00:02:55.370 --> 00:02:59.380
+any Web page and start running Java applications
+anywhere in the world.
+
+00:02:59.380 --> 00:03:05.340
+Over the years, the success of Java, not only
+in the internet but in the creation of enterprise
+
+00:03:05.340 --> 00:03:11.750
+systems, made Oracle to put his eyes on this
+technology, and finally in 2009 was acquired
+
+00:03:11.750 --> 00:03:13.430
+by this mega software company.
+
+00:03:13.430 --> 00:03:20.420
+It has been several years since Oracle's acquisition
+of Java, and fortunately, the evolution of
+
+00:03:20.420 --> 00:03:26.110
+language, tools and support from large companies,
+as well as the community of Java programmers
+
+00:03:26.110 --> 00:03:32.250
+(counted by millions around the world), continues
+to make Java the number one language worldwide
+
+00:03:32.250 --> 00:03:35.080
+for the creation of general-purpose software.
+
+00:03:35.080 --> 00:03:42.040
+So much so that Google based the Android operating
+system on the Java language, creating an extension
+
+00:03:42.040 --> 00:03:45.860
+of the Java Virtual Machine (JVM) known as Dalvik.
+
+00:03:45.860 --> 00:03:51.420
+For all the above, the support for Java technology
+is not only still growing, but it’s back
+
+00:03:51.420 --> 00:03:56.840
+in fashion thanks to the new versions, large
+companies and their decision to continue creating
+
+00:03:56.840 --> 00:04:01.970
+software based on this programming language,
+as well as the incredible community of Java
+
+00:04:01.970 --> 00:04:09.740
+programmers that remains faithful and adding
+new followers day by day worldwide.
+

@@ -1,0 +1,253 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.540 --> 00:00:13.360
+Java Standard Edition Versions
+
+00:00:13.560 --> 00:00:18.740
+Next we'll see the different versions of
+the standard version of Java.
+
+00:00:18.750 --> 00:00:23.300
+In 1996 Java was born, originally called OAK.
+
+00:00:23.300 --> 00:00:30.760
+In 1997 the version 1.1 arises in which it
+includes the first visual form of Java known
+
+00:00:30.760 --> 00:00:39.260
+as AWT (Abstract Window Toolkit), among several
+other APIs.
+
+00:00:39.260 --> 00:00:45.290
+An API (Application Programming Interface)
+and is a set of classes and libraries to solve
+
+00:00:45.290 --> 00:00:51.530
+a specific problem, for example the JDBC API
+that allows us to connect to a database, among
+
+00:00:51.530 --> 00:00:54.280
+several other APIs.
+
+00:00:54.280 --> 00:00:58.320
+We'll see the evolution of the Java Standar Versions.
+
+00:00:58.320 --> 00:01:02.900
+One of the most important changes in the Java
+versions was made in the version
+
+00:01:03.000 --> 00:01:05.360
+5 version and the Java version 8.
+
+00:01:05.379 --> 00:01:10.830
+In the java version 5 the concept of Generics
+was introduced, which changed the way we did
+
+00:01:10.830 --> 00:01:15.380
+conversion between Java objects, assigning
+a specific type to be used especially when
+
+00:01:15.380 --> 00:01:17.330
+working with collections.
+
+00:01:17.330 --> 00:01:22.570
+This eliminated many of the execution errors
+when handling object types and specifying
+
+00:01:22.570 --> 00:01:26.049
+the type of data a collection should contain.
+
+00:01:26.049 --> 00:01:30.509
+And the biggest change for java, not only
+because of the years that have passed and
+
+00:01:30.509 --> 00:01:36.799
+the language has matured, but because it also
+implies a paradigm shift, is the inclusion
+
+00:01:36.799 --> 00:01:43.250
+of lambda expressions, with which we can combine
+the power of oriented programming to objects
+
+00:01:43.250 --> 00:01:47.890
+with functional programming, that although
+it is not a new paradigm, if it is something
+
+00:01:47.890 --> 00:01:49.680
+new for Java programmers.
+
+00:01:49.680 --> 00:01:55.130
+I know that several of these concepts or topics
+are new to many of the programmers that start
+
+00:01:55.130 --> 00:02:01.979
+with Java, however many of this topics are precisely what we are going to study studying in this and the following
+
+00:02:01.979 --> 00:02:08.149
+courses of their specialization in Java technology.
+
+00:02:08.149 --> 00:02:16.680
+Although there are already version 9 and 10
+of Java in the market, these versions are
+
+00:02:16.680 --> 00:02:22.130
+not yet supported by application servers such
+as Glassfish 5, therefore the version we will
+
+00:02:22.130 --> 00:02:27.200
+use throughout the course will be the Java
+SDK 8 version, which is the version currently
+
+00:02:27.200 --> 00:02:30.510
+supported by most application tools and servers.
+
+00:02:30.510 --> 00:02:36.019
+As we begin to support the current versions
+of Java we'll begin to include them as they
+
+00:02:36.020 --> 00:02:37.960
+apply to the real Java world.
+
+00:02:37.960 --> 00:02:42.840
+meanwhile it's our recommendation not to use it in production environment
+
+00:02:42.840 --> 00:02:47.880
+because it's not supported for many of out tools that we use today
+
+00:02:49.140 --> 00:02:51.140
+Current position of Java
+
+00:02:51.420 --> 00:02:56.440
+As we can see today Java technology continues
+to dominate the world of programming, and
+
+00:02:56.440 --> 00:03:01.510
+this is just one of the reasons why studying
+and mastering Java takes you one step ahead
+
+00:03:01.510 --> 00:03:04.470
+of any competition you have along the way.
+
+00:03:04.470 --> 00:03:09.650
+However, in many cases we have been told that
+learning Java is very difficult, and that
+
+00:03:09.650 --> 00:03:13.480
+is old fashion,  and it's not worth learning Java.
+
+00:03:13.480 --> 00:03:18.260
+That it's not true. Because the market demands a lot of Java Programmers. So if you want
+
+00:03:18.263 --> 00:03:19.700
+to be able to incorporate
+
+00:03:19.700 --> 00:03:24.850
+in the thousands of job opportunities,
+both national and international generated
+
+00:03:24.850 --> 00:03:30.669
+by the Java system development market, you have to be very well prepared in this language
+
+00:03:30.669 --> 00:03:34.980
+And although there is a lot of competition
+in the systems development market, there is
+
+00:03:34.980 --> 00:03:40.669
+still a shortage of Java programmers, so there
+will always be many opportunities for people
+
+00:03:40.669 --> 00:03:44.020
+who are well prepared and specialized like
+you
+
+00:03:46.320 --> 00:03:48.320
+Java and the Software Industry
+
+00:03:48.480 --> 00:03:52.699
+In addition to the features already described
+in Java, it is important to mention several
+
+00:03:52.699 --> 00:03:55.299
+other reasons why to be a Java expert.
+
+00:03:55.299 --> 00:04:00.470
+Fortunately, there is a community of millions
+of Java programmers worldwide, this allows
+
+00:04:00.470 --> 00:04:05.150
+fellow programmers to contribute knowledge
+and solutions to many of the problems that
+
+00:04:05.150 --> 00:04:10.260
+we can face on a day-to-day basis, and unlike
+other languages ​​and / or development
+
+00:04:10.260 --> 00:04:15.410
+platforms, in which knowledge is very closed,
+the Java community contributes abundant free
+
+00:04:15.410 --> 00:04:20.729
+content through the internet, so many solutions
+can be found through these communities and
+
+00:04:20.729 --> 00:04:24.290
+support forums that exist worldwide.
+
+00:04:24.290 --> 00:04:29.150
+The support to Java that the large software
+industries provide, allows Java to be the
+
+00:04:29.150 --> 00:04:34.620
+number one option today when we are about
+to select a new project, this in turn allows
+
+00:04:34.620 --> 00:04:40.490
+excellent job opportunities to be generated
+worldwide and although there are many programmers,
+
+00:04:40.490 --> 00:04:45.460
+the demand for them far exceeds the number
+of programmers needed to meet this demand.
+
+00:04:45.460 --> 00:04:50.220
+This allows us to have a
+lot of opportunities for our growth and professional
+
+00:04:50.220 --> 00:04:57.380
+development. And if we are well prepared, there are a lot of opportunities in this market.
+
+00:04:57.480 --> 00:05:02.880
+In addition, learning Java facilitates learning
+other programming languages, since good
+
+00:05:02.880 --> 00:05:07.250
+practices, design patterns, frameworks and
+other technologies that are generated due
+
+00:05:07.250 --> 00:05:12.370
+to Java development are usually adopted by
+other languages ​​and technologies to
+
+00:05:12.370 --> 00:05:15.850
+also facilitate their software developments.
+
+00:05:15.850 --> 00:05:21.480
+so, once Java is learned, it will be easier
+to understand and communicate with other programmers
+
+00:05:21.480 --> 00:05:23.350
+of other programming languages.
+
+00:05:23.350 --> 00:05:28.980
+These are just some of the most important
+reasons why to become a Java Expert.
+
+00:05:28.980 --> 00:05:34.030
+With this we already have more clear both
+the history, the main characteristics and
+
+00:05:34.030 --> 00:05:37.270
+the reasons for which to master Java.
+

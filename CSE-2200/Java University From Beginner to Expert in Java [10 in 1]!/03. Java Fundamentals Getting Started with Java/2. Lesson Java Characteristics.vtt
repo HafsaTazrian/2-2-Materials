@@ -1,0 +1,273 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:12.220 --> 00:00:16.920
+The success of Java resides in several of
+its characteristics, for example, Java is
+
+00:00:16.920 --> 00:00:22.240
+a simple language, since it simplifies most
+of the complexity of C++.
+
+00:00:22.240 --> 00:00:25.680
+Java is based on C and C++ languages.
+
+00:00:25.680 --> 00:00:30.040
+The Java language has the following general
+characteristics:
+
+00:00:30.040 --> 00:00:41.480
+It's a Platform. Bases on C and C++. Object Oriented: Unlike structured languages
+​​(such as the C language), Java defines
+
+00:00:41.480 --> 00:00:47.700
+classes in order to classify and model the
+information of information systems
+
+00:00:47.820 --> 00:00:53.680
+Objects group encapsulated structures and
+contain both their data and the methods (or
+
+00:00:53.680 --> 00:00:58.210
+functions) that manipulate the data.
+
+00:00:58.210 --> 00:01:04.830
+It's Simple: For simplicity we mean that Java used
+several of the characteristics of languages
+
+00:01:04.830 --> 00:01:10.369
+​​such as C and C ++, eliminating the
+issues considered more complex.
+
+00:01:10.369 --> 00:01:16.330
+Some characteristics of Java are simple inheritance,
+memory management, among many others, that
+
+00:01:16.330 --> 00:01:18.890
+we'll see throughout the course.
+
+00:01:18.890 --> 00:01:25.420
+Distributed: Java provides a collection of
+classes for use in network applications, which
+
+00:01:25.420 --> 00:01:30.650
+allow open connections with servers or remote
+clients, so that we can have applications
+
+00:01:30.650 --> 00:01:37.260
+installed on different servers or computers,
+and still access those Java components remotely
+
+00:01:37.420 --> 00:01:46.720
+Multithreading and Secure. Multi-threads: Java allows you to execute
+several tasks at once, in which each subprocess
+
+00:01:46.729 --> 00:01:51.420
+is a lighter process than if you create a
+new process from scratch, this concept is
+
+00:01:51.420 --> 00:01:58.270
+known as threads and one of the biggest advantages
+is that many of Java's advanced API tasks
+
+00:01:58.270 --> 00:02:03.890
+automatically consider the use of threads
+for the execution of many of the processes
+
+00:02:03.890 --> 00:02:05.940
+that are used in real life.
+
+00:02:05.940 --> 00:02:09.060
+So in various scenarios we will get these
+benefits automatically :)
+
+00:02:09.060 --> 00:02:15.200
+Secure: The Java Virtual Machine (JVM) doesn't allow our application to use resources
+
+00:02:15.200 --> 00:02:21.250
+outside the allocated space and resources,
+in this way, many of the Java applications
+
+00:02:21.250 --> 00:02:27.240
+are more secure than if the Java code were
+executed outside the Java box, the Java Virtual Machine.
+
+00:02:27.240 --> 00:02:33.060
+Java has platform independence
+because creates an intermediate code, which
+
+00:02:33.069 --> 00:02:35.450
+is known as Bytecode.
+
+00:02:35.450 --> 00:02:39.569
+This code can be executed on any platform
+or operating system.
+
+00:02:39.569 --> 00:02:45.069
+In this way we have several advantages, both
+when creating Java code, and when deploying
+
+00:02:45.069 --> 00:02:50.870
+or distributing our applications, since we
+can choose to create our code in one operating
+
+00:02:50.870 --> 00:02:53.810
+system and execute it in another.
+
+00:02:53.810 --> 00:02:59.160
+From here comes the saying "write once - run
+everywhere", as we will make the effort to
+
+00:02:59.160 --> 00:03:04.599
+write the code on a platform, but once created
+it is possible to run the application on multiple
+
+00:03:04.599 --> 00:03:10.300
+platforms, bringing many benefits for the
+programmer as well as for companies.
+
+00:03:10.300 --> 00:03:12.910
+These are just some of the main features of
+Java.
+
+00:03:12.910 --> 00:03:17.131
+As we progress in the course, we'll put
+into practice each one of them and you will
+
+00:03:17.140 --> 00:03:22.160
+be able to realize for yourself the power
+of Java.
+
+00:03:22.160 --> 00:03:26.200
+Java Technology Products
+
+00:03:26.620 --> 00:03:32.560
+Java is divided into different groups, depending
+on the type of solution that is required.
+
+00:03:32.570 --> 00:03:37.640
+However, all are based on the Java language
+and the Java Virtual Machine, so once we have
+
+00:03:37.640 --> 00:03:44.180
+knowledge of this incredible programming language,
+it is possible to go deeper into each of these technologies.
+
+00:03:44.180 --> 00:03:50.940
+Each version or edition includes its own SDK
+(Software Development Kit), which allows programmers
+
+00:03:50.940 --> 00:03:56.750
+to create, compile and execute the applications
+created in each version.
+
+00:03:56.750 --> 00:04:04.019
+The Java Standard Edition (JSE) is used to
+create software for Desktop or Applets applications.
+
+00:04:04.019 --> 00:04:08.640
+For example, the Netbeans software that we
+will use in this course is an example of a
+
+00:04:08.640 --> 00:04:10.680
+Desktop application.
+
+00:04:10.680 --> 00:04:15.500
+In this course we will focus precisely on
+this standard version and thus establish the
+
+00:04:15.500 --> 00:04:22.199
+foundations of the SDK, since these are the
+basics of Java that will allow us to go deeper
+
+00:04:22.199 --> 00:04:27.659
+in other courses, both in this same standard
+version and in enterprise versions that we
+
+00:04:27.659 --> 00:04:29.880
+will talk about next.
+
+00:04:29.880 --> 00:04:35.900
+The Java Enterprise Edition known as Java
+EE, or currently as Jakarta EE.
+
+00:04:35.900 --> 00:04:38.700
+is used to create large-scale, server-side
+
+00:04:38.740 --> 00:04:43.780
+enterprise applications, and this type of
+applications can be accessed from clients
+
+00:04:43.780 --> 00:04:49.210
+created with the standard version, or any
+other type of client, such as Web clients
+
+00:04:49.210 --> 00:04:52.270
+or Web Services, among others.
+
+00:04:52.270 --> 00:04:58.440
+The enterprise version of Java was previously
+known as J2EE, so if we find documentation
+
+00:04:58.440 --> 00:05:04.070
+of this version, we already know that it refers
+to the enterprise version of Java.
+
+00:05:04.070 --> 00:05:11.240
+Finally, the JME version is the Micro version
+of Java with the aim of creating applications
+
+00:05:11.240 --> 00:05:17.690
+for mobile phones and devices, as well as
+microchips for security cameras, GPS, routers,
+
+00:05:17.690 --> 00:05:22.270
+or any device with a much lower capacity for
+both processing and storage.
+
+00:05:22.270 --> 00:05:27.740
+It is worth mentioning that the Android system
+installed in thousands of cell phones and
+
+00:05:27.740 --> 00:05:33.090
+mobile devices is based on the Java language
+and the Java Virtual Machine, and creates
+
+00:05:33.090 --> 00:05:37.900
+an extension called Dalvik to be able to execute
+Java code on Android.
+
+00:05:37.900 --> 00:05:43.570
+This makes Java more relevant than ever before,
+not only in desktop applications and in the
+
+00:05:43.570 --> 00:05:48.290
+enterprise environment (in which it is the
+number one programming language), but now
+
+00:05:48.290 --> 00:05:53.630
+also with this growth of Android, the Java
+language has popularized on mobile devices
+
+00:05:53.630 --> 00:05:54.630
+with Android.
+
+00:05:54.630 --> 00:06:00.070
+In conclusion, we can see that Java is not
+only a programming language, but it is a whole
+
+00:06:00.070 --> 00:06:06.229
+technology that includes desktop applications,
+enterprise and mobile applications, so Java
+
+00:06:06.229 --> 00:06:10.450
+is HUGE and is so exciting to learn this technology.
+
+00:06:10.450 --> 00:06:16.550
+Besides hundreds or thousands projects, frameworks
+and technologies that extend, complement and
+
+00:06:16.550 --> 00:06:19.720
+enrich Java technology.
+
