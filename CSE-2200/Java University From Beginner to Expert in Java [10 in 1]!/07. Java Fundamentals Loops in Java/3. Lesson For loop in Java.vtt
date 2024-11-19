@@ -1,0 +1,123 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:09.120 --> 00:00:13.020
+flow diagram for loop
+
+00:00:19.310 --> 00:00:24.380
+there are several ways to create the for
+loop in Java in the figure we can
+
+00:00:24.380 --> 00:00:29.750
+observe the classic structure of the for
+loop the for loop already has predefined
+
+00:00:29.750 --> 00:00:38.629
+sections which are initialization check
+condition running the loop body increase
+
+00:00:38.629 --> 00:00:44.180
+or decrease the counter and ends the
+loop we will often use the counter
+
+00:00:44.180 --> 00:00:48.650
+concept to increase or decrease it
+according to the number of iterations
+
+00:00:48.650 --> 00:00:52.909
+that we need
+unlike the while or the while loop in
+
+00:00:52.909 --> 00:00:58.100
+which we must have control of the moment
+in which the condition no longer has to
+
+00:00:58.100 --> 00:01:03.619
+be fulfilled and thus avoid infinite
+loops, in the for loop we have sections
+
+00:01:03.619 --> 00:01:08.090
+already defined to have a greater
+control of this variable counter or
+
+00:01:08.090 --> 00:01:13.520
+variable counters that will allow us to
+reach a point where the condition is no
+
+00:01:13.520 --> 00:01:18.799
+longer true and therefore conclude the
+loop otherwise if we do not reach a
+
+00:01:18.799 --> 00:01:23.659
+point where the condition is false we
+would have an infinite loop and this
+
+00:01:23.659 --> 00:01:28.249
+would block our program and the
+resources of our application let's see
+
+00:01:28.249 --> 00:01:37.310
+now the syntax syntax for loop the for
+loop in Java in case you only have one
+
+00:01:37.310 --> 00:01:42.140
+line of code to repeat is not mandatory
+to carry curly braces but if the for
+
+00:01:42.140 --> 00:01:46.249
+loop is going to execute more than one
+statement then it must carry curly braces
+
+00:01:46.249 --> 00:01:51.950
+as we can see unlike the while or
+do-while loop the for loop is form of
+
+00:01:51.950 --> 00:01:58.579
+three elements initialization condition
+evaluation an increment or decrement
+
+00:01:58.579 --> 00:02:03.979
+counter in addition we have the body of
+the loop which will be repeated while
+
+00:02:03.979 --> 00:02:08.810
+the condition is true here is important
+to know the order in which the steps are
+
+00:02:08.810 --> 00:02:16.130
+executed first the control variable also
+known as counters are initialized it is
+
+00:02:16.130 --> 00:02:21.950
+check if the condition is true if so the
+loop block is executed if the condition
+
+00:02:21.950 --> 00:02:26.690
+is false the loop ends if the condition
+was true the control variable increases
+
+00:02:26.690 --> 00:02:32.090
+or decreases this element called
+iteration controls the way the loop
+
+00:02:32.090 --> 00:02:35.180
+progress
+and we usually take advantage of this
+
+00:02:35.180 --> 00:02:38.900
+element to increase or decrease our
+counter and lastly
+
+00:02:38.900 --> 00:02:44.300
+the condition is review again if it's
+true the loop is repeated if the
+
+00:02:44.300 --> 00:02:48.290
+condition is false the loop ends in the
+exercises that we're going to develop
+
+00:02:48.290 --> 00:02:52.840
+later we will put this loop into
+practice
+

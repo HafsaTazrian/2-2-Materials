@@ -1,0 +1,154 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.090 --> 00:00:15.710
+Hello, Ubaldo Acosta greets you again, I hope
+you're ready to start with this lesson
+
+00:00:15.710 --> 00:00:23.380
+we're going to study the subject of
+loops in Java are you ready let's go
+
+00:00:23.380 --> 00:00:31.279
+loops in Java. Loops will allow us to
+repeat a set of instructions a certain
+
+00:00:31.279 --> 00:00:36.920
+numbers of times this will depend on a
+condition which we must control in order
+
+00:00:36.920 --> 00:00:42.980
+to stop the loop at some point otherwise
+we could end up executing an infinite
+
+00:00:42.980 --> 00:00:49.040
+loop and there for blocked execution of the
+device that executes the loops the
+
+00:00:49.040 --> 00:00:53.420
+condition to be fulfilled can be
+determined by the user or by the program
+
+00:00:53.420 --> 00:00:56.510
+according to the logic that has been
+established
+
+00:00:56.510 --> 00:01:00.850
+let's see below the elements of a loop
+
+00:01:02.650 --> 00:01:09.470
+as we said a loop can be defined as a
+structure that allows to repeat or
+
+00:01:09.470 --> 00:01:14.510
+iterate a set of instructions or
+sentences as we can see in the figure we
+
+00:01:14.510 --> 00:01:19.820
+have the following elements we start the
+cycle after that a condition to be
+
+00:01:19.820 --> 00:01:26.090
+fulfilled may be true or false after
+that a sentence or sentences to be
+
+00:01:26.090 --> 00:01:31.760
+executed and the evaluation of the
+condition again and the loop is repeated
+
+00:01:31.760 --> 00:01:38.030
+if the condition was true again
+otherwise it ends in addition we can
+
+00:01:38.030 --> 00:01:42.830
+observe the following characteristics
+the set of instructions must be finite
+
+00:01:42.830 --> 00:01:47.780
+the number of times this set of
+instruction is repeated must also be
+
+00:01:47.780 --> 00:01:53.000
+finite, in some cases this number of
+times will depend on explicit condition
+
+00:01:53.000 --> 00:01:59.510
+and in others cases will depend on an
+implicit condition a condition is
+
+00:01:59.510 --> 00:02:04.130
+explicit when it depends only the
+execution of the program itself without
+
+00:02:04.130 --> 00:02:09.049
+the participation of the user likewise a
+condition is implicit
+
+00:02:09.049 --> 00:02:13.580
+when it depends only on the will of the
+user and therefore the number of
+
+00:02:13.580 --> 00:02:18.529
+iterations or repetitions of the cycle
+could vary depending on the final decision
+
+00:02:18.529 --> 00:02:22.280
+of the user within a loop you can go to
+any sentence
+
+00:02:22.280 --> 00:02:27.410
+including other loops this is
+known as nested loops there are
+
+00:02:27.410 --> 00:02:33.709
+different types of loops in Java such as
+while, do-while and for we will see each
+
+00:02:33.709 --> 00:02:46.130
+of them in more detail flowchart while
+loop the while loop in Java is the most
+
+00:02:46.130 --> 00:02:50.959
+fundamental to perform iterations
+basically as we can see in the figure a
+
+00:02:50.959 --> 00:02:56.470
+block of code is executed as many times
+as the condition being evaluated is true
+
+00:02:56.470 --> 00:03:02.450
+once the condition is false then the
+iteration is completed the expression to
+
+00:03:02.450 --> 00:03:12.050
+evaluate can be any value of type
+boolean the while loop in Java if we are
+
+00:03:12.050 --> 00:03:16.819
+going to use the while loop and repeat
+only one line of code it's not mandatory
+
+00:03:16.819 --> 00:03:21.680
+to use curly brackets but if the while
+loop is going to execute more than one
+
+00:03:21.680 --> 00:03:26.959
+code statement then it must have
+curly braces because the condition of
+
+00:03:26.959 --> 00:03:32.209
+the while loop is evaluated at startup
+the code block to be repeated will not be
+
+00:03:32.209 --> 00:03:38.150
+executed even once if this condition is
+not met for this there is the do-while
+
+00:03:38.150 --> 00:03:42.140
+loop that we will see next in the
+exercises that we're going to develop
+
+00:03:42.140 --> 00:03:46.450
+later we will implement the while loop
+

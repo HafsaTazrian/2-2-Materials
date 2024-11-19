@@ -1,0 +1,62 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.070 --> 00:00:22.529
+flow diagram do-while loop sometimes is
+desirable that the code to be repeated
+
+00:00:22.529 --> 00:00:28.710
+can be executed at least once before the
+end of the loop for this the do-while
+
+00:00:28.710 --> 00:00:33.899
+loop has been created it's sometimes
+desirable to evaluate the condition at
+
+00:00:33.899 --> 00:00:39.180
+the end of the loop instead of at the
+beginning because of this this loop
+
+00:00:39.180 --> 00:00:44.250
+evaluates the code to be repeated at
+least once and in each iteration the
+
+00:00:44.250 --> 00:00:49.770
+code to be repeated is executed first
+and then the condition is evaluated to
+
+00:00:49.770 --> 00:00:58.950
+know if the loop continues or not syntax
+do-while loop the dowhile loop in Java
+
+00:00:58.950 --> 00:01:04.229
+is not obligatory to use curly braces in
+case there is only one line to execute
+
+00:01:04.229 --> 00:01:07.920
+but if the while loop is going to
+execute more than one code statement
+
+00:01:07.920 --> 00:01:13.979
+then it must carry curly braces as we
+can see because the condition of the
+
+00:01:13.979 --> 00:01:19.499
+do-while loop is evaluated at the end
+the block of code to be repeated will be
+
+00:01:19.499 --> 00:01:25.439
+executed at least once even if this
+condition is not true in the exercises
+
+00:01:25.439 --> 00:01:29.249
+that we're going to develop later we
+will put this do-while loop into
+
+00:01:29.249 --> 00:01:31.729
+practice
+
+00:01:39.310 --> 00:01:41.369
+you
+
