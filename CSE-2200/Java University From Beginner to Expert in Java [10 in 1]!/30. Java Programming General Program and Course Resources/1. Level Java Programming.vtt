@@ -1,0 +1,199 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.710 --> 00:00:18.640
+My name is Ubaldo Acosta. I hope you're
+ready to begin. Let's review the general
+
+00:00:18.640 --> 00:00:26.520
+agenda of the Java Programming course.
+Are you ready? let's begin. A new behavior:
+
+00:00:26.520 --> 00:00:31.720
+Polymorphism. In this section we'll study
+the characteristics of polymorphism,
+
+00:00:31.720 --> 00:00:37.059
+what is polymorphism?, where will we use
+it? and its relation to object-oriented
+
+00:00:37.059 --> 00:00:40.630
+programming in Java.
+Likewise we'll see the use of the
+
+00:00:40.630 --> 00:00:46.210
+reserved words  this and super and in turn
+the use of this reserve words in Java.
+
+00:00:46.210 --> 00:00:52.450
+We'll create a project to put this
+concept into practice. Types, Conversions
+
+00:00:52.450 --> 00:00:57.730
+and more: Advanced topics of Objects. In
+this section we'll review the concept of
+
+00:00:57.730 --> 00:01:03.070
+instanceof, the conversion of types in
+Java. We'll study the class object and
+
+00:01:03.070 --> 00:01:08.619
+several of its methods such as toString,
+equals and hashCode methods and we'll
+
+00:01:08.619 --> 00:01:13.780
+see what each of them is for, among
+several more concepts. We'll create
+
+00:01:13.780 --> 00:01:18.250
+several exercises to put this concept
+into practice. Understanding the
+
+00:01:18.250 --> 00:01:22.750
+structure: Handling Code Blocks. We'll
+review the different existing code
+
+00:01:22.750 --> 00:01:28.210
+blocks in Java, such as initialization
+blocks and static code blocks. We'll show
+
+00:01:28.210 --> 00:01:32.890
+the syntax of each one, as well as create
+several exercises to put this concept
+
+00:01:32.890 --> 00:01:38.650
+into practice. We'll also study the scope
+of variables in Java. The scopes in Java
+
+00:01:38.650 --> 00:01:42.970
+are: public, protected, default and
+private. We'll see several practical
+
+00:01:42.970 --> 00:01:51.369
+examples to make clear each one of these
+reserved words in Java. Conceptualizing: Abstract
+
+00:01:51.369 --> 00:01:56.229
+Classes and Interfaces. In this section
+we'll analyze the subject of abstract
+
+00:01:56.229 --> 00:02:00.310
+classes in Java, we'll understand how
+to apply this concept to our class
+
+00:02:00.310 --> 00:02:05.170
+design that require to apply this
+concept. Likewise, we will see the syntax
+
+00:02:05.170 --> 00:02:09.489
+and the restrictions that apply in the
+case of using abstract classes in Java.
+
+00:02:09.489 --> 00:02:14.650
+In turn, will study the topic of
+interfaces, we'll also make a comparison
+
+00:02:14.650 --> 00:02:19.810
+between abstract classes and interfaces and
+when it's convenient to use one or
+
+00:02:19.810 --> 00:02:25.240
+another situation according to the class
+design problem that we face. We'll create
+
+00:02:25.240 --> 00:02:30.840
+several exercises to understand each
+concept in a very conscious way.
+
+00:02:31.560 --> 00:02:36.160
+Understanding the errors: Exception
+Handling. In this section we'll define
+
+00:02:36.160 --> 00:02:41.200
+the concepts for handling exceptions in
+Java. We'll study the types of exceptions
+
+00:02:41.200 --> 00:02:46.920
+that exist in Java and how to handle
+each of them. We'll see the syntax
+
+00:02:46.920 --> 00:02:52.120
+associated with exception handling, from
+how to throw an exception, how to catch
+
+00:02:52.120 --> 00:02:57.150
+and process it and in general how to
+handle the whole exception topic in Java.
+
+00:02:57.150 --> 00:03:04.060
+We'll create several exercises to put
+these concepts into practice. Beyond the
+
+00:03:04.060 --> 00:03:10.300
+Arrays: Collection Management. We'll review the
+API of collections in Java. We'll study the
+
+00:03:10.300 --> 00:03:16.270
+basis of this API. Since it's quite broad
+nevertheless with the basis that you
+
+00:03:16.270 --> 00:03:20.680
+will have once you have study the
+subject, you will be able to apply any
+
+00:03:20.680 --> 00:03:26.200
+kind of the collections API. We'll analyze
+the most common types which are the
+
+00:03:26.200 --> 00:03:31.180
+interfaces of Set, List and Map, as well
+as some concrete classes of the
+
+00:03:31.180 --> 00:03:36.700
+collections API such as ArrayList or
+HashMap. We'll develop several exercises
+
+00:03:36.700 --> 00:03:43.239
+to put this concept into practice.
+Abstracting types: Generics in Java. We'll
+
+00:03:43.239 --> 00:03:48.340
+study the concept of generic types in
+Java, also known as generics. We'll see
+
+00:03:48.340 --> 00:03:52.150
+how to define a class to handle the
+generic types, as well as the generic
+
+00:03:52.150 --> 00:03:57.160
+types that we can use. We will also
+review how to convert collections to
+
+00:03:57.160 --> 00:04:01.810
+generic types and those generate code
+less prone to errors. We'll create several
+
+00:04:01.810 --> 00:04:07.239
+exercises to put this conserving to
+practice. Saving information: File
+
+00:04:07.239 --> 00:04:12.280
+Management. We'll learn how to handle Java
+files, as well as the writing and reading
+
+00:04:12.280 --> 00:04:16.959
+process to them. We will conclude with an
+exercise to put this concept into
+
+00:04:16.959 --> 00:04:23.140
+practice. This is the general agenda of
+the Java Programming course. These are
+
+00:04:23.140 --> 00:04:27.430
+just some of the many more topics that
+we'll learn throughout this course. So, if
+
+00:04:27.430 --> 00:04:30.540
+you're ready, let's begin :)
+
