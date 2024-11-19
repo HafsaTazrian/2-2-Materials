@@ -1,0 +1,124 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.459 --> 00:00:18.910
+Exercise: Calculate Season
+if example. Create an exercise to put
+
+00:00:18.910 --> 00:00:24.689
+into practice the if-else statement at
+the end we should observe the following
+
+00:00:27.210 --> 00:00:33.430
+we create a new project the name of the
+project is CalculateMonthIf so we create
+
+00:00:33.430 --> 00:00:36.899
+a new project click on file new project
+
+00:00:38.760 --> 00:00:48.980
+select Java and Java application click
+on next the project name is CalculateSeasonIf
+
+00:00:48.980 --> 00:00:56.859
+and the project location is lesson04
+and click on finish. We will create a new
+
+00:00:56.859 --> 00:01:01.589
+class called CalculateSeasonIfTest
+
+00:01:05.430 --> 00:01:11.500
+the class name is CalculateSeasonIfTest
+the package name is test and click on
+
+00:01:11.500 --> 00:01:19.469
+finish. We will modify the code as shown
+below the package name is test the
+
+00:01:19.469 --> 00:01:28.630
+public class is calculate season if test
+and we create a main method with a clear
+
+00:01:28.630 --> 00:01:33.789
+a variable called month equal to 1 we
+will use this variable to represent the
+
+00:01:33.789 --> 00:01:38.969
+month of the year we declare a
+variable called season of type a string
+
+00:01:38.969 --> 00:01:48.100
+and we check using the if structure if
+month is equal to 1 or month is equal to
+
+00:01:48.100 --> 00:01:56.799
+2 or month is equal to 12
+the season is equal to winter, we
+
+00:01:56.799 --> 00:02:03.189
+can add and else if structure to check
+other months in this case if month is
+
+00:02:03.189 --> 00:02:11.940
+equal to 3 or month is equal to 4 or
+month is equal to 5 the season is spring
+
+00:02:11.940 --> 00:02:21.129
+in a similar way we can check else if
+month is equal to 6 7 or 8 the season is
+
+00:02:21.129 --> 00:02:27.370
+equal to summer
+and we can check if the month is equal
+
+00:02:27.370 --> 00:02:36.550
+to 9 10 or 11 the season is equal to
+autumn in any other case the season is
+
+00:02:36.550 --> 00:02:43.990
+equal to incorrect month and finally we
+print the season of the month is and we
+
+00:02:43.990 --> 00:02:49.060
+use the variables month and season to
+print every variable that we need so in
+
+00:02:49.060 --> 00:02:54.850
+this case because we are initializing
+the month variable to 1 the month will
+
+00:02:54.850 --> 00:03:00.100
+enter to the if statement and the season
+will be equal to winter but we can
+
+00:03:00.100 --> 00:03:05.410
+modify the value of month from 1 to 12
+to check every case that we have
+
+00:03:05.410 --> 00:03:12.000
+programmed in this application we finish
+the main method and we close the class
+
+00:03:12.000 --> 00:03:20.620
+we execute the project so right click on
+the class and Run File so as we have
+
+00:03:20.620 --> 00:03:26.530
+seen in the program the season for the
+month 1 is winter but you can test every
+
+00:03:26.530 --> 00:03:36.040
+month from 1 to 12 to check the season
+of every month with this exercise we are
+
+00:03:36.040 --> 00:03:41.290
+put into practice the handling of the if
+structure next we will implement the
+
+00:03:41.290 --> 00:03:44.700
+switch structure in Java
+
+00:03:47.880 --> 00:03:49.940
+you
+

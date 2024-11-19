@@ -1,0 +1,77 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.900 --> 00:00:17.280
+Another way to make decisions is to use the
+switch control structure, which, as the name
+
+00:00:17.280 --> 00:00:22.660
+implies, is like using a switch.
+
+00:00:22.660 --> 00:00:31.670
+Unlike the if / else structure, the switch
+structure will be used more when we have,
+
+00:00:31.670 --> 00:00:33.540
+for example, an options menu.
+
+00:00:33.540 --> 00:00:39.629
+For example, if we have 5 options, and each
+of them performs a different action, then
+
+00:00:39.629 --> 00:00:43.690
+the switch structure is ideal to handle these
+decisions.
+
+00:00:43.690 --> 00:00:49.049
+The switch structure is less used than the
+if / else control structure, however it will
+
+00:00:49.049 --> 00:00:54.540
+be useful for more specific questions when
+making decisions as we will see in the following
+
+00:00:54.540 --> 00:00:57.120
+example.
+
+00:01:01.320 --> 00:01:03.540
+We can observe the syntax of the switch structure.
+
+00:01:03.540 --> 00:01:14.640
+In versions prior to jdk 7, only these values were
+supported in the expression to be evaluated
+
+00:01:14.640 --> 00:01:19.650
+for example the type byte, short, int or char, and from
+version jdk 7 onwards, the type String is
+
+00:01:19.650 --> 00:01:24.930
+also supported, although it is not a primitive
+type , is one of the Object types that we
+
+00:01:24.930 --> 00:01:27.080
+will use the most.
+
+00:01:27.080 --> 00:01:32.640
+Once the evaluation of each of the cases 
+begins, one or more cases separated by colon
+
+00:01:32.640 --> 00:01:34.520
+may be included.
+
+00:01:34.520 --> 00:01:40.730
+The word break is used so that the flow is
+held and the evaluation of the other cases
+
+00:01:40.730 --> 00:01:46.850
+is finished, if we do not place it, the evaluation
+of each case will be followed.
+
+00:01:46.850 --> 00:01:52.979
+Finally, the word default is used to execute
+a block of code, if none of the cases coincided
+
+00:01:52.980 --> 00:01:56.100
+in its evaluation.
+

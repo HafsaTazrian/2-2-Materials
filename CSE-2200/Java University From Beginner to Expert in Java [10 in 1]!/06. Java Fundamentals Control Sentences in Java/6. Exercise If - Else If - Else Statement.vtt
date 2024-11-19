@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.500 --> 00:00:16.289
+exercise if-else if-else statement
+
+00:00:17.340 --> 00:00:22.419
+exercise objective create a program to
+implement the use of if-else if-else
+
+00:00:22.419 --> 00:00:31.630
+structure at the end we should observe
+the following create a new project
+
+00:00:31.630 --> 00:00:42.010
+called if-else if-else so click on file
+new project select java java application
+
+00:00:42.010 --> 00:00:52.329
+click on next the project name is IfElse
+IfElse the project location is lesson04
+
+00:00:52.329 --> 00:01:06.610
+and we click on finish so the project
+has the desired structure create a new
+
+00:01:06.610 --> 00:01:19.000
+class called if-else if-else test the
+class name is IfElseIfElseTest and
+
+00:01:19.000 --> 00:01:24.329
+the package name is test click on finish
+
+00:01:26.480 --> 00:01:36.820
+modify the code the package name is test
+the name of the class is IfElseIfElseTest
+
+00:01:36.820 --> 00:01:45.600
+we create a main method, declare a
+variable called x equals to 30 of type
+
+00:01:45.609 --> 00:01:53.770
+int and we use the if statement to check
+if the variable x is equal to 10 in
+
+00:01:53.770 --> 00:02:01.659
+that case we will print x equals to 10
+if not we execute the next statement in
+
+00:02:01.659 --> 00:02:12.520
+this case the else if so we check again
+if x is equal to 20 we print x equals to
+
+00:02:12.520 --> 00:02:19.510
+20 and we can add as many
+statements as we need of type else if in
+
+00:02:19.510 --> 00:02:22.360
+this case we add another statement
+x
+
+00:02:22.360 --> 00:02:31.630
+equals to 30 and print x equals to 30 and to
+finish we can use the else statement we
+
+00:02:31.630 --> 00:02:39.820
+print x is not equal to 10 20 or 30 and
+we close the else statement as we have
+
+00:02:39.820 --> 00:02:44.410
+mentioned before we can omit the curly
+braces if we have only one sentence
+
+00:02:44.410 --> 00:02:49.980
+inside the if or else if or else 
+statement if we have more sentences
+
+00:02:49.980 --> 00:02:56.860
+inside of any of these blocks of code we
+need to use the curly braces we close
+
+00:02:56.880 --> 00:03:01.260
+the main method and we close the class
+
+00:03:03.360 --> 00:03:08.760
+we execute the project so right-click
+on the class if-else if-else test run
+
+00:03:08.760 --> 00:03:20.460
+file and the result in this case x
+equals to 30 so with this exercise
+
+00:03:20.460 --> 00:03:27.800
+we have put into practice the handling
+of the if-else if-else statement
+

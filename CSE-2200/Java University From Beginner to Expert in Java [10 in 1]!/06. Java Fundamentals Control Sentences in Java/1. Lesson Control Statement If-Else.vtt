@@ -1,0 +1,111 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.830 --> 00:00:14.530
+Hello
+Ubaldo Acosta greets you again. I hope
+
+00:00:14.530 --> 00:00:18.009
+you're ready to start with this lesson
+we're going to study the topic of
+
+00:00:18.009 --> 00:00:25.390
+control statements in Java are you ready
+let's go. Through our life we live making
+
+00:00:25.390 --> 00:00:30.610
+decisions, decision like what career to
+study?, what job to choose?, to marry
+
+00:00:30.610 --> 00:00:36.430
+or not to marry? have children? start
+saving at an early age, among many more
+
+00:00:36.430 --> 00:00:44.170
+decisions. In the same way when we are
+solving a computational problem we face
+
+00:00:44.170 --> 00:00:53.170
+decision making and this is what we'll
+study in this lesson. Decisions exists in
+
+00:00:53.170 --> 00:01:01.899
+any modern programming language, since
+they are the basis for the flow that we
+
+00:01:01.899 --> 00:01:06.340
+define in the solution of a problem. To
+handle this concept we are going to use
+
+00:01:06.340 --> 00:01:11.920
+the if control structure with this we
+will ask the question if this is true
+
+00:01:11.920 --> 00:01:18.189
+then do this, we can also use the word
+else so that in case that question is
+
+00:01:18.189 --> 00:01:23.920
+not true then do something else. The
+basic structure is shown in the figure
+
+00:01:23.920 --> 00:01:29.850
+the if-else structure can be combined to
+generate more complex cases for example
+
+00:01:29.850 --> 00:01:36.969
+using if-else if-else the idea is to be
+able to add decisions according to the
+
+00:01:36.969 --> 00:01:43.030
+cases that arise when solving a problem,
+also the if-else structure may have
+
+00:01:43.030 --> 00:01:48.729
+nested statements that is one if within
+another. We will put this into practice
+
+00:01:48.729 --> 00:01:55.840
+as we progress through the course. In the
+figure we can see the syntax that is
+
+00:01:55.840 --> 00:02:01.240
+used in Java when using the if-else a
+structure. To start a condition is
+
+00:02:01.240 --> 00:02:05.950
+evaluated if this is true then the
+instructions contained in that block of
+
+00:02:05.950 --> 00:02:12.490
+code are executed. A block of code in the
+if structure can be bracket or not, we
+
+00:02:12.490 --> 00:02:16.629
+can do this in order to delimit the
+statements or instructions that the if
+
+00:02:16.629 --> 00:02:21.970
+should execute, in the event that curly
+brackets are not used then only one
+
+00:02:21.970 --> 00:02:25.120
+state
+can be added after the world if. In
+
+00:02:25.120 --> 00:02:30.790
+addition the else section is optional
+being able to have only the part of the
+
+00:02:30.790 --> 00:02:34.870
+if to execute the desired logic. We can
+see in the figure they must command
+
+00:02:34.870 --> 00:02:40.060
+syntax when using the if-else structure
+and later we will do some exercises to
+
+00:02:40.060 --> 00:02:43.590
+put the syntax into practice
+

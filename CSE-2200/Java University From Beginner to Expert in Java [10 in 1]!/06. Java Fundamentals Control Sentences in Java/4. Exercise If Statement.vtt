@@ -1,0 +1,81 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.050 --> 00:00:21.259
+Exercise. if Statement. Exercise
+objective. Create a program to implement
+
+00:00:21.259 --> 00:00:29.810
+the use of the if structure at the end
+we should observe the following. We will
+
+00:00:29.810 --> 00:00:39.260
+create a new project called if example
+so click on file, new project, select Java
+
+00:00:39.260 --> 00:00:44.200
+and Java application and click on next
+
+00:00:46.030 --> 00:00:52.280
+the project is called if example the project
+location is courses, Java fundamentals
+
+00:00:52.280 --> 00:01:07.880
+lesson04 and click on finish. So the
+project has a desired structure. Create a
+
+00:01:07.880 --> 00:01:13.280
+new class called IfTest so right click
+on the if example project select new and
+
+00:01:13.280 --> 00:01:24.620
+select Java class. The class name is IfTest and the package name is test, click
+
+00:01:24.620 --> 00:01:34.250
+on finish and we modify the code of this
+class the package name is test the class
+
+00:01:34.250 --> 00:01:41.990
+name is IfTest and we create a main
+method after that we add a comment: If
+
+00:01:41.990 --> 00:01:50.090
+Example. We declare a variable called x
+with value 10 of type int, after that we
+
+00:01:50.090 --> 00:01:57.799
+use the if structure and we are checking
+if the variable x is less than 20 if
+
+00:01:57.799 --> 00:02:07.189
+that is true we will log into the
+console x less than 20. We are not
+
+00:02:07.189 --> 00:02:12.200
+using the else structure yet, we are only
+putting into practice the if structure
+
+00:02:12.200 --> 00:02:18.560
+as we are using only one sentence inside
+the if structure it's optional to use
+
+00:02:18.560 --> 00:02:23.260
+the curly braces of the if statement
+
+00:02:23.410 --> 00:02:31.610
+we run the project as shown and the
+result we can see: x is less than
+
+00:02:31.610 --> 00:02:39.770
+20 because the evaluation of the
+expression was true. Exercise conclusion
+
+00:02:39.770 --> 00:02:43.490
+with this exercise we have put into
+practice the handling of the if
+
+00:02:43.490 --> 00:02:51.640
+statement. We will do more exercises
+regarding the issue of control sentences
+

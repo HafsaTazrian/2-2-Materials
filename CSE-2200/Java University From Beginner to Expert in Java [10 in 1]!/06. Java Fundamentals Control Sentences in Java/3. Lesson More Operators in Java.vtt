@@ -1,0 +1,123 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.799 --> 00:00:16.570
+Logical Operators. In addition to the
+operators already mentioned we will use
+
+00:00:16.570 --> 00:00:21.099
+logical operators so that in combination
+with the control structures we can
+
+00:00:21.099 --> 00:00:25.809
+create decisions that provide a
+solution to our needs. In the table you
+
+00:00:25.809 --> 00:00:30.910
+can see the logical operators with which
+we will be working. Unless we want to
+
+00:00:30.910 --> 00:00:36.550
+work with bits (ones and zeros) we will
+normally use the AND (&amp;&amp;) and OR (||) operators
+
+00:00:36.550 --> 00:00:42.780
+in short circuit mode. In the following
+table we will explain what this means
+
+00:00:42.780 --> 00:00:48.429
+Truth table of logical operators. In the
+figure we can see the application of the
+
+00:00:48.429 --> 00:00:53.769
+logical operators and the truth table
+that applies to each operator. This table
+
+00:00:53.769 --> 00:00:58.239
+must be known by heart, since it is what
+we'll be applying when we use the
+
+00:00:58.239 --> 00:01:04.150
+logical operators. The 1 means true and
+the 0 means false, however is not
+
+00:01:04.150 --> 00:01:09.460
+difficult to memorize, the only thing we
+have to apply is the following. In the
+
+00:01:09.460 --> 00:01:14.770
+case of the operator AND (&amp;&amp;) the result
+will be true only if both values are
+
+00:01:14.770 --> 00:01:21.460
+true, otherwise the final result will be
+false. In the case of the OR (||) operator the
+
+00:01:21.460 --> 00:01:28.149
+result will be true if any of the
+operands X or Y is true. Above we
+
+00:01:28.149 --> 00:01:34.119
+mentioned the AND and short-circuit OR
+operators, what it means is that if it's
+
+00:01:34.119 --> 00:01:39.939
+detected that a result no longer makes
+sense to evaluate it, for example if the
+
+00:01:39.939 --> 00:01:45.520
+operator AND the evaluation of the
+operand on the left side is false then
+
+00:01:45.520 --> 00:01:50.289
+the whole expression will be false and
+the remaining operand will no longer be
+
+00:01:50.289 --> 00:01:55.600
+evaluated. And in the case of the OR
+operator if the operand on the left side
+
+00:01:55.600 --> 00:02:00.880
+is true therefore the other operand on
+the right side is no longer evaluated
+
+00:02:00.880 --> 00:02:05.789
+because the whole result will be true
+and in the case of the negation operator
+
+00:02:05.789 --> 00:02:11.650
+the only thing it does is to invert the
+original value of the operand so it will
+
+00:02:11.650 --> 00:02:16.300
+be very simple to apply this truth table
+for each of the operators if we apply
+
+00:02:16.300 --> 00:02:21.040
+the rules described. In the next
+exercises we will practice this kind of
+
+00:02:21.040 --> 00:02:26.049
+operators in
+combination with the control structures
+
+00:02:28.209 --> 00:02:33.500
+Relational Operators. When using the
+decision structures we will find the need
+
+00:02:33.500 --> 00:02:38.829
+to compare values, that's why we will use
+different types of operators for this
+
+00:02:38.829 --> 00:02:43.459
+relational operators are listed on the
+figure and we will put them into
+
+00:02:43.459 --> 00:02:47.209
+practice in combination with the
+decision structures in the following
+
+00:02:47.209 --> 00:02:49.989
+exercises
+

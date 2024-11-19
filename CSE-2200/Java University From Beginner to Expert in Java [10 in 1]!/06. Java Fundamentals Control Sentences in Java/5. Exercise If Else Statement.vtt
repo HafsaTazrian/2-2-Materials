@@ -1,0 +1,103 @@
+WEBVTT
+
+0
+00:11.040 --> 00:20.500
+Exercise if-else statement. Exercise
+objective: Create a program to implement
+
+1
+00:20.500 --> 00:26.640
+the use of the if-else structure at the
+end we should observe the following
+
+2
+00:29.660 --> 00:37.880
+create a new project called if-else
+example so click on file new project
+
+3
+00:38.040 --> 00:47.940
+select java, java application and click
+on next. The project name is IfElseExample
+
+4
+00:47.940 --> 00:53.100
+and the project location is lesson04 and click on finish
+
+5
+00:54.390 --> 00:58.920
+so the project has the desired structure
+
+6
+00:59.820 --> 01:09.220
+we create a new class called IfElseTest.java so the class name is
+
+7
+01:09.220 --> 01:17.680
+IfElseTest the package name is test
+and click on finish. We modify the code
+
+8
+01:17.680 --> 01:26.049
+of the class IfElseTest the package is
+test we define the class IfElseTest
+
+9
+01:26.049 --> 01:34.960
+and we add the main method. We define a
+variable called x equals to 30 of type int
+
+10
+01:34.960 --> 01:44.640
+and we use the if statement. If x is less
+than 20 we print x is less than 20 and
+
+11
+01:44.640 --> 01:51.579
+we add the structure else, it means if
+not the application will print X greater
+
+12
+01:51.579 --> 01:56.890
+than 20 because we are using only one
+sentence inside the if and else
+
+13
+01:56.890 --> 02:03.009
+statement we can omit the use of curly
+braces we close the main method and we
+
+14
+02:03.009 --> 02:10.570
+close the class. We execute the project so
+right click on the IfElseTest class and
+
+15
+02:10.570 --> 02:19.660
+click on run file and the result is as
+follows so the result is x greater than
+
+16
+02:19.660 --> 02:22.210
+20 because the expression of the
+if
+
+17
+02:22.210 --> 02:28.150
+statement was false so the else
+structure was executed that's why we can
+
+18
+02:28.150 --> 02:35.080
+see the result X greater than 20.
+Exercise Conclusion: With this exercise
+
+19
+02:35.080 --> 02:40.600
+we have put into practice the handling of
+the else if statement, we will do some
+
+20
+02:40.600 --> 02:45.600
+more exercises regarding the topic of
+control sentences

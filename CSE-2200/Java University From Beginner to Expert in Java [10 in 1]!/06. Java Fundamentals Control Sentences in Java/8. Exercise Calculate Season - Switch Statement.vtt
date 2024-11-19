@@ -1,0 +1,136 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:10.720 --> 00:00:16.990
+exercise calculate season using the
+switch structure
+
+00:00:18.680 --> 00:00:23.580
+create an exercise to put into practice
+the switch statement at the end we
+
+00:00:23.580 --> 00:00:32.369
+should observe the following so we will
+create a new project called calculate
+
+00:00:32.369 --> 00:00:37.130
+MonthSwitch so click on file new project
+
+00:00:38.450 --> 00:00:47.640
+select Java Java application and click
+on next the project name is calculate
+
+00:00:47.640 --> 00:00:57.900
+SeasonSwitch and the project location is
+less04 and click on finish create a
+
+00:00:57.900 --> 00:01:04.380
+new class called CalculateSeasonSwitchTests so the name of the class is
+
+00:01:04.380 --> 00:01:11.149
+calculate season switch tests and the
+package name is test click on finish
+
+00:01:12.920 --> 00:01:18.990
+modify the code CalculateSeasonSwitchTest the package name is test the class
+
+00:01:18.990 --> 00:01:25.110
+name is CalculationSeasonIfTest we create a
+main method to execute our application
+
+00:01:25.110 --> 00:01:32.130
+the execute our class we define a variable
+called month in this case the initial
+
+00:01:32.130 --> 00:01:39.119
+value is equal to 11 and this variable
+represents the month of the year we
+
+00:01:39.119 --> 00:01:44.970
+define a variable called season and
+instead of using the if-else statement
+
+00:01:44.970 --> 00:01:50.490
+we will be using the switch statement so
+we pass as a parameter the month in the
+
+00:01:50.490 --> 00:01:56.189
+switch statement and we will check the
+value in every case so if the case is
+
+00:01:56.189 --> 00:02:05.430
+equal to 1, 2 or 12 the season is equal
+to winter and we add a break to finish
+
+00:02:05.430 --> 00:02:13.170
+these cases after that we can add the
+following cases the case 3 4 and 5 in
+
+00:02:13.170 --> 00:02:19.170
+these cases the season is equal to spring
+and we can add a break to finish these
+
+00:02:19.170 --> 00:02:24.180
+cases if we don't add a break because it
+is optional the flow of the switch
+
+00:02:24.180 --> 00:02:29.700
+statement will continue executing the
+next cases sometimes this logic is
+
+00:02:29.700 --> 00:02:34.209
+necessary but most of the
+cases we need to add a break to finish
+
+00:02:34.209 --> 00:02:42.750
+every case once it's executed. We add the
+following cases case 6 7 and 8
+
+00:02:42.750 --> 00:02:52.900
+in this cases the season is equal to
+summer and we add a break. case 9 case
+
+00:02:52.900 --> 00:03:03.040
+10 and case 11 the season is equal to
+autumn and we add a break. And the default
+
+00:03:03.040 --> 00:03:12.099
+case the season is equal to Incorrect
+Month. We close the switch and add to the
+
+00:03:12.099 --> 00:03:19.450
+log the season for the month is equal to
+the season that we have selected we
+
+00:03:19.450 --> 00:03:22.329
+close the main method and we close the
+class
+
+00:03:22.329 --> 00:03:28.060
+and because the month in this case is
+equal to 11 the season will be equal to
+
+00:03:28.060 --> 00:03:37.470
+autumn so we will execute the project to
+check this result so execute the project
+
+00:03:37.470 --> 00:03:45.519
+right click on the class and run file
+and the result is the season for the
+
+00:03:45.519 --> 00:03:51.819
+month 1 is equal to winter but if the
+value is equal to 11 the season is equal
+
+00:03:51.819 --> 00:03:59.889
+to Autumn. With this exercise we have put
+into practice the handling of the switch
+
+00:03:59.889 --> 00:04:04.660
+structure these are the control
+sentences that we will be using when
+
+00:04:04.660 --> 00:04:07.470
+working with Java
+
