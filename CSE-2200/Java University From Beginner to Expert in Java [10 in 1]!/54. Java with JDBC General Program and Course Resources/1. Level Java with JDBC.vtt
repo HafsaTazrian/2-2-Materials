@@ -1,0 +1,148 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:15.190 --> 00:00:20.750
+Hello, my name is Ubaldo Acosta. I hope
+you're ready to begin. Let's review the
+
+00:00:20.750 --> 00:00:28.449
+general agenda of the Java JDBC course.
+Are you ready? let's begin. Starting:
+
+00:00:28.449 --> 00:00:33.620
+Introduction to JDBC. In this section we
+will see an introduction to the SQL
+
+00:00:33.620 --> 00:00:39.170
+language and the JDBC technology. Both
+technologies are what we'll be using
+
+00:00:39.170 --> 00:00:43.820
+throughout the course. We'll also carry
+out the installation of the tools and
+
+00:00:43.820 --> 00:00:48.650
+databases that we'll be using throughout
+the course. In turn, we'll create the first
+
+00:00:48.650 --> 00:00:56.989
+Java project using JDBC. Connecting to
+the database with JDBC: Handling
+
+00:00:56.989 --> 00:01:02.900
+connections. In this section we'll review in
+more detail the management of JDBC. We'll
+
+00:01:02.900 --> 00:01:07.940
+see the driver concept to connect to a
+database using Java with JDBC. We'll also
+
+00:01:07.940 --> 00:01:12.860
+review the types of sentences that we
+have available in JDBC to communicate
+
+00:01:12.860 --> 00:01:17.240
+with the database. Likewise, we will
+review the handling of exceptions in
+
+00:01:17.240 --> 00:01:25.210
+JDBC and create some exercises to put
+into practice the management of JDBC
+
+00:01:26.020 --> 00:01:32.840
+Reading data: Select statements. We'll review
+the statements with JDBC that will allow
+
+00:01:32.840 --> 00:01:40.640
+us to read data from the database, that
+is: the Select statement. Manipulating
+
+00:01:40.640 --> 00:01:46.580
+data: Inserting, updating and deleting
+data. in this section we'll see the JDBC
+
+00:01:46.580 --> 00:01:51.200
+statement that will allow us to insert
+update and delete information from a
+
+00:01:51.200 --> 00:01:56.780
+database. We'll study the syntax of each
+one and create several exercises to
+
+00:01:56.780 --> 00:02:05.510
+learn each one of this concept. Knowing
+the structure: Metadata. In this section
+
+00:02:05.510 --> 00:02:10.550
+we'll define the concept of metadata and
+see how it can help us in our programs
+
+00:02:10.550 --> 00:02:16.690
+with JDBC. We'll create several exercises
+to put this concept into practice.
+
+00:02:17.170 --> 00:02:21.629
+Executing Functions:
+Store procedures. We'll define what
+
+00:02:21.629 --> 00:02:25.680
+Store procedure is and what a function
+is in a database.
+
+00:02:25.680 --> 00:02:30.540
+We'll use the Oracle database as a
+database manager to execute a method and
+
+00:02:30.540 --> 00:02:35.730
+a store procedure in Oracle from Java
+using JDBC. We'll create several
+
+00:02:35.730 --> 00:02:43.079
+exercises to put this concept into
+practice. Structuring our code. Data
+
+00:02:43.079 --> 00:02:49.859
+layer. We'll learn the concept of data layer
+and we create an example using JDBC. This
+
+00:02:49.859 --> 00:02:55.349
+is an important concept when we are
+working with JDBC. Applying best
+
+00:02:55.349 --> 00:03:00.269
+practices: Design patterns in the data
+layer. We'll study the design pattern
+
+00:03:00.269 --> 00:03:06.269
+concept and will apply some design
+patterns like DAO (Data Access Object) and
+
+00:03:06.269 --> 00:03:12.359
+DTO (Data Transfer Object). These are
+design patterns and we will add them to
+
+00:03:12.359 --> 00:03:17.010
+our data layer. We'll also see how to
+create a pool of connections to our
+
+00:03:17.010 --> 00:03:21.239
+connectivity with a database and we'll
+see how to connect to different
+
+00:03:21.239 --> 00:03:26.370
+databases such as MySql and Oracle
+at the same time. We'll create several
+
+00:03:26.370 --> 00:03:32.010
+exercises to make this concept clear.
+This is the general agenda of the Java
+
+00:03:32.010 --> 00:03:36.540
+JDBC course. These are just some of the
+many more topics that we'll learn
+
+00:03:36.540 --> 00:03:41.150
+throughout this course. So, if you're
+ready, let's begin :)
+
