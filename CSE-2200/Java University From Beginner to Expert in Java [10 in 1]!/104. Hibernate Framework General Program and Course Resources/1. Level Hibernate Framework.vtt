@@ -1,0 +1,197 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:15.880 --> 00:00:20.660
+My name is Ubaldo Acosta. I hope you're
+ready to begin. Let's review the general
+
+00:00:20.660 --> 00:00:26.680
+agenda of the Hibernate Framework course.
+Are you ready? let's go
+
+00:00:27.399 --> 00:00:32.660
+Starting: Introduction to Hibernate
+Framework and JPA. In this section will
+
+00:00:32.660 --> 00:00:36.379
+study an introduction to Hibernate
+Framework and JPA and how these two
+
+00:00:36.379 --> 00:00:40.670
+technologies are related. We'll also see
+the concept of Object Relational Mapping (ORM)
+
+00:00:40.670 --> 00:00:46.460
+and is the model on which Hibernate and
+JPA are based. We'll also review an
+
+00:00:46.460 --> 00:00:50.089
+architecture of 3 business layers
+and we'll see the role played by
+
+00:00:50.089 --> 00:00:55.129
+Hibernate and JPA within this enterprise
+architecture. Will also carry out the
+
+00:00:55.129 --> 00:00:58.460
+installation of the tools that we're
+going to use throughout the course and
+
+00:00:58.460 --> 00:01:04.989
+will create a first HelloWorld project
+using Hibernate Framework and JPA
+
+00:01:05.740 --> 00:01:10.159
+The basis: Basic Operations with
+Hibernate and JPA.
+
+00:01:10.159 --> 00:01:14.780
+In this section we'll review the basic
+operations with hibernate and JPA. These
+
+00:01:14.780 --> 00:01:19.820
+basic operations are select data, insert,
+update and delete data. We'll do an
+
+00:01:19.820 --> 00:01:27.020
+exercise to put this concept into
+practice. Relationships: Management of
+
+00:01:27.020 --> 00:01:31.670
+associations with Hibernate and JPA. We'll
+review the concept of association
+
+00:01:31.670 --> 00:01:36.020
+management with hibernate and JPA.
+We'll create an entity relationship
+
+00:01:36.020 --> 00:01:41.390
+scheme where we'll review the types of
+associations with hibernate and JPA. We'll
+
+00:01:41.390 --> 00:01:45.250
+review the associations of one-to-one
+one-to-many and many-to-many
+
+00:01:45.250 --> 00:01:53.150
+relationships. We'll create an exercise to
+put this associations into practice. State
+
+00:01:53.150 --> 00:01:56.300
+Management: Life cycle in Hibernate and
+JPA
+
+00:01:56.300 --> 00:02:01.400
+in this section we'll analyze the life
+cycle of entity objects when we use
+
+00:02:01.400 --> 00:02:05.659
+Hibernate and JPA.
+We'll see how to persist an object, how
+
+00:02:05.659 --> 00:02:09.140
+to recover it, how to modify it and how
+to delete it.
+
+00:02:09.140 --> 00:02:14.180
+We'll carry out an exercise to put into
+practice the life cycle of entity
+
+00:02:14.180 --> 00:02:16.569
+objects
+
+00:02:17.410 --> 00:02:21.400
+More Topics: Cascade Persistence with
+Hibernate and JPA.
+
+00:02:21.400 --> 00:02:25.990
+In this section we'll study the concept
+of cascade persistence which is one of
+
+00:02:25.990 --> 00:02:32.050
+the topics that can help us when we want
+to persist an entity object. We'll create an
+
+00:02:32.050 --> 00:02:38.980
+exercise to put this concept into
+practice. Queries: Queries with Hibernate and
+
+00:02:38.980 --> 00:02:44.590
+JPA. We'll see the topic of queries when
+working with hibernate and JPA. In
+
+00:02:44.590 --> 00:02:49.240
+Hibernate this language is known as
+hibernate query language (HQL) and in JPA is
+
+00:02:49.240 --> 00:02:54.400
+known as Java Persistence Query Language (JPQL). Will see
+the characteristics of these languages
+
+00:02:54.400 --> 00:03:01.840
+and in turn we'll perform several exercises
+to put this concept into practice. More
+
+00:03:01.840 --> 00:03:07.990
+Queries. Criteria API with Hibernate and
+JPA. in addition to HQL and JPQL
+
+00:03:07.990 --> 00:03:12.850
+languages there is Criteria API which
+you can also extract information from the
+
+00:03:12.850 --> 00:03:18.610
+database using this API.
+However this Criteria API is commonly
+
+00:03:18.610 --> 00:03:25.570
+used to create dynamic queries with Java
+code, instead of strings like HQL or JPQL
+
+00:03:25.570 --> 00:03:30.040
+languages. We will create several
+exercises to implement this type of
+
+00:03:30.040 --> 00:03:37.660
+queries. Integrating Everything: Real
+world web application with Hibernate and
+
+00:03:37.660 --> 00:03:40.510
+JPA.
+We'll create an application called
+
+00:03:40.510 --> 00:03:45.400
+Student Management System which will
+integrate everything seen in the course,
+
+00:03:45.400 --> 00:03:50.110
+from basic topics to more advanced
+topics of Hibernate and JPA. This
+
+00:03:50.110 --> 00:03:54.010
+application will have a 3-layer
+architecture and will perfectly define
+
+00:03:54.010 --> 00:03:58.750
+the role of each technology in this
+practical application which will serve
+
+00:03:58.750 --> 00:04:03.160
+as the basis for your own with Java Web
+and Enterprise Applications using
+
+00:04:03.160 --> 00:04:06.510
+Hibernate and JPA.
+
+00:04:07.350 --> 00:04:11.470
+Broadly speaking, this is the general
+agenda of the Hibernate and JPA course.
+
+00:04:11.470 --> 00:04:15.250
+These are just some of the many more
+topics we'll learn throughout this
+
+00:04:15.250 --> 00:04:28.720
+course. So, if you are ready, let's begin :)
+

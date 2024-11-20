@@ -1,0 +1,186 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:15.400 --> 00:00:20.930
+Hello, my name is Ubaldo Acosta. I hope
+you're ready to begin. Let's review the
+
+00:00:20.930 --> 00:00:29.660
+general agenda of a Struts Framework
+course. Are you ready? let's begin.
+
+00:00:29.660 --> 00:00:34.309
+Starting: Introduction to Struts
+Framework. In this section we'll study an
+
+00:00:34.309 --> 00:00:38.660
+introduction to Struts Framework. We'll
+review this MVC (Model-View-Controller)
+
+00:00:38.660 --> 00:00:43.809
+Java framework that has included a 3-layer architecture that can simplify
+
+00:00:43.809 --> 00:00:49.159
+considerably a Java Web application. We'll
+also carry out the installation of the
+
+00:00:49.159 --> 00:00:53.180
+tools we are going to use throughout the
+course, and will create the first Hello
+
+00:00:53.180 --> 00:00:56.979
+World project with Struts framework
+
+00:00:57.610 --> 00:01:03.620
+Basic Concepts: Conventions in Struts
+framework. In this section we'll review
+
+00:01:03.620 --> 00:01:08.270
+the concept of using conventions in
+Struts. Many of the configurations using
+
+00:01:08.270 --> 00:01:13.100
+Struts has been simplified and we're
+going to use as many conventions as we
+
+00:01:13.100 --> 00:01:17.120
+can in order to simplify the
+configuration when using Struts
+
+00:01:17.120 --> 00:01:24.710
+Framework. Actions: Actions in the Struts
+framework. The Actions in Struts are the
+
+00:01:24.710 --> 00:01:30.500
+most important part as every web request
+ends in a component called Action. We'll
+
+00:01:30.500 --> 00:01:35.210
+see what an action is, how to configure
+it and many more topics related to this
+
+00:01:35.210 --> 00:01:39.040
+important concept in Struts Framework
+
+00:01:40.420 --> 00:01:46.670
+Messages: Messages (Resource Bundle) in Struts. in this section will show the
+
+00:01:46.670 --> 00:01:52.040
+concept of messages. The messages are the labels that are used in a web
+
+00:01:52.040 --> 00:01:56.690
+applications, and we'll see that these
+labels can be included in different
+
+00:01:56.690 --> 00:02:01.670
+languages, not just the default language
+but any language that we want our
+
+00:02:01.670 --> 00:02:06.110
+application to be translated. We'll create
+some exercises to put this concept into
+
+00:02:06.110 --> 00:02:13.519
+practice. Flow between pages. Results in
+Struts. In this section we'll study the
+
+00:02:13.519 --> 00:02:19.069
+concept of Results in Struts. A result is
+used to decide where to go when an
+
+00:02:19.069 --> 00:02:25.819
+action ends, so you can go to a web page,
+another action, send an Excel, PDF, Audio,
+
+00:02:25.819 --> 00:02:31.310
+Video or any other kind of document or
+any other result that is supported by
+
+00:02:31.310 --> 00:02:35.269
+Struts Framework. We'll create several
+exercises to put this concept into
+
+00:02:35.269 --> 00:02:42.110
+practice. Annotations: Annotations in
+Struts. Many of the previous
+
+00:02:42.110 --> 00:02:47.810
+configuration using Struts were made
+using XML files but with annotations we
+
+00:02:47.810 --> 00:02:52.159
+can simplify and reduce XML
+configurations to zero. So, in this
+
+00:02:52.159 --> 00:02:55.730
+chapter, we'll see many of the
+annotations that we can use when working
+
+00:02:55.730 --> 00:03:02.569
+with Struts Framework. Data
+validation and conversion: Data
+
+00:03:02.569 --> 00:03:06.590
+Validation and Convention in Struts.
+We'll review the concept of validation
+
+00:03:06.590 --> 00:03:10.879
+and convention in Struts Framework.
+We'll see how easy is to implement these
+
+00:03:10.879 --> 00:03:14.810
+concepts because the struts already has
+included many conventions and
+
+00:03:14.810 --> 00:03:18.890
+validations automatically and
+implementing these concepts is a matter
+
+00:03:18.890 --> 00:03:24.440
+of extending a class or implementing
+an interface in our Action Classes. We'll
+
+00:03:24.440 --> 00:03:32.690
+create an exercise to pull this concept
+into practice. Integrating All: Creation
+
+00:03:32.690 --> 00:03:37.010
+of a real world web application. We'll
+create an application called a Student
+
+00:03:37.010 --> 00:03:41.599
+Management System (SMS) which will integrate
+everything seen in the course from basic
+
+00:03:41.599 --> 00:03:46.069
+topics to more advanced topics of
+Struts Framework. This application will
+
+00:03:46.069 --> 00:03:49.700
+have a 3-layer architecture and will
+perfectly define the role of each
+
+00:03:49.700 --> 00:03:54.199
+technology in this practical application,
+which will serve as the basis for your
+
+00:03:54.199 --> 00:03:58.699
+own Java Web applications using Struts
+and other technologies like Spring or
+
+00:03:58.699 --> 00:04:06.680
+Hibernate Framework or even EJB's and
+JPA Java EE technologies. Broadly
+
+00:04:06.680 --> 00:04:10.849
+speaking, this is the general agenda of
+the Struts Framework course. These are
+
+00:04:10.849 --> 00:04:14.780
+just some of the many more topics we
+will learn throughout this course. So if you are
+
+00:04:14.780 --> 00:04:17.739
+ready, let's begin :)
+
