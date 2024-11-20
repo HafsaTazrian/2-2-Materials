@@ -1,0 +1,210 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:14.100 --> 00:00:19.330
+Hello, my name is Ubaldo Acosta. I hope
+you're ready to begin. Let's review the
+
+00:00:19.330 --> 00:00:26.500
+general agenda of Spring Framework
+course. Are you ready? let's go
+
+00:00:26.500 --> 00:00:30.400
+Starting: Introduction to the Spring
+Framework. In this section we'll study an
+
+00:00:30.400 --> 00:00:34.720
+Introduction to the Spring Framework.
+We'll study some of the features of this
+
+00:00:34.720 --> 00:00:39.160
+incredible Framework. We'll review a
+3-layer architecture and the main
+
+00:00:39.160 --> 00:00:43.239
+role played by Spring Framework. We'll
+review a 3-layer architecture and
+
+00:00:43.239 --> 00:00:47.890
+the main role played by a Spring
+Framework. We'll discuss how he redefine
+
+00:00:47.890 --> 00:00:52.570
+the development of enterprise
+applications in Java. We'll also carry out
+
+00:00:52.570 --> 00:00:56.230
+the installation of the tools that we'll
+use throughout the course and we'll
+
+00:00:56.230 --> 00:01:03.760
+create a first hello world project using
+a Spring Framework. The basis: Spring
+
+00:01:03.760 --> 00:01:07.990
+Framework Philosophy. In this section
+we'll review the philosophy of Spring
+
+00:01:07.990 --> 00:01:12.880
+which promotes a high cohesion and low
+coupling between its components or Java
+
+00:01:12.880 --> 00:01:17.130
+classes. In addition to using concepts
+such as Aspect Oriented Programming (AOP)
+
+00:01:17.130 --> 00:01:22.060
+We'll also discuss the concept of Spring
+Factory, as well as the life cycle of
+
+00:01:22.060 --> 00:01:25.930
+the beans in the Spring. We'll do an
+exercise to put this concept into
+
+00:01:25.930 --> 00:01:33.280
+practice. Dependencies: Dependency
+Injection with Spring. We'll review the
+
+00:01:33.280 --> 00:01:38.549
+concept of dependency injection. We'll
+see what the control inversion is and
+
+00:01:38.549 --> 00:01:45.060
+how a Spring implements this in the
+factory or also known as a bean factory
+
+00:01:45.060 --> 00:01:52.030
+We'll create an exercise to put this
+topic into practice. AOP: Aspect
+
+00:01:52.030 --> 00:01:56.140
+Oriented Programming. In this section
+we'll analyze the concept of Aspect
+
+00:01:56.140 --> 00:02:01.299
+Oriented Programming AOP and how Spring
+implements this concept. In addition
+
+00:02:01.299 --> 00:02:05.469
+we'll see the concept of transversal
+functionality or cross calling and how
+
+00:02:05.469 --> 00:02:11.530
+it relates to AOP. We'll also study the
+AOP terminology. We'll do an exercise to
+
+00:02:11.530 --> 00:02:18.849
+put into practice the use of AOP with
+Spring Framework. Persistence: Spring
+
+00:02:18.849 --> 00:02:22.030
+JDBC. In this section We'll study the Spring
+
+00:02:22.030 --> 00:02:25.840
+JDBC theme and how he simplifies data
+access to a Spring Framework by
+
+00:02:25.840 --> 00:02:30.940
+improving several points of the JDBC API,
+for example exception handling
+
+00:02:30.940 --> 00:02:36.069
+JDBC template classes, among many
+more improvements. We'll also review the
+
+00:02:36.069 --> 00:02:40.630
+callback methods in Spring and how
+they help us when using Spring JDBC
+
+00:02:40.630 --> 00:02:46.860
+We'll create several exercises to put
+all these concepts into practice
+
+00:02:47.040 --> 00:02:51.880
+Applications of AOP: Handling
+transactions with Spring. We'll see the
+
+00:02:51.880 --> 00:02:55.600
+handling of transaction with Spring and
+the characteristics of a transaction
+
+00:02:55.600 --> 00:03:00.040
+We'll see how to define a transaction
+manager object in a Spring Framework. We'll
+
+00:03:00.040 --> 00:03:05.050
+review the types of transaction manager
+objects that we can use in a Spring and
+
+00:03:05.050 --> 00:03:09.790
+We'll see the attributes of a transaction.
+We'll carry out an exercise to put these
+
+00:03:09.790 --> 00:03:17.440
+concepts into practice. Integrations: 
+Spring Integration with JPA. We'll review a
+
+00:03:17.440 --> 00:03:21.850
+3-layer architecture and the role
+played by Spring and JPA in this
+
+00:03:21.850 --> 00:03:26.860
+architecture. We'll also see how a Spring
+integrates with JPA and the advantages
+
+00:03:26.860 --> 00:03:32.140
+of this integration in this exercise.
+We'll review an integration locally and
+
+00:03:32.140 --> 00:03:37.420
+in the following exercise we'll use an
+application server to use JTA in this
+
+00:03:37.420 --> 00:03:42.880
+integration (Java Transaction API). We'll
+create an exercise to put these concepts
+
+00:03:42.880 --> 00:03:50.230
+into practice. Integrating Everything:
+Real-world web application with JSF
+
+00:03:50.230 --> 00:03:55.329
+Primefaces, Spring and JPA. We'll create
+3-layer application where we'll use
+
+00:03:55.329 --> 00:04:00.549
+JSF with primefaces as a presentation
+layer and we'll see the integration with
+
+00:04:00.549 --> 00:04:05.590
+Spring Framework in the business layer
+and we will use JPA in the data layer
+
+00:04:05.590 --> 00:04:10.239
+configuring it to use
+JTA (Java Transaction API) to connect
+
+00:04:10.239 --> 00:04:12.670
+to a database from a Java application
+server
+
+00:04:12.670 --> 00:04:16.870
+This application will serve as the basis
+for your own Java Web and Enterprise
+
+00:04:16.870 --> 00:04:21.660
+applications combining the mentioned
+technologies
+
+00:04:21.710 --> 00:04:25.530
+Broadly speaking, this the general
+agenda of the Spring Framework course
+
+00:04:25.530 --> 00:04:29.130
+These are just some of the many more
+topics we learned throughout this course
+
+00:04:29.130 --> 00:04:33.199
+So, if you're ready, let's start immediately:)
+

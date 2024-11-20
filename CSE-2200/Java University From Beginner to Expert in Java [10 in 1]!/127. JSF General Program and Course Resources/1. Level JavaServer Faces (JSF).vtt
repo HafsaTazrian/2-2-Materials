@@ -1,0 +1,216 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:13.389 --> 00:00:19.100
+Hello my name is Ubaldo Acosta. I hope
+you're ready to begin, let's review the
+
+00:00:19.100 --> 00:00:30.289
+general agenda of Java Server Faces
+course. Are you ready? let's go. Getting
+
+00:00:30.289 --> 00:00:36.980
+Started: Introduction to JavaServer Faces. In
+this section will study an introduction
+
+00:00:36.980 --> 00:00:42.470
+to JavaServer Faces technology. We'ill review
+what JavaServer Faces is, we'll also study
+
+00:00:42.470 --> 00:00:46.640
+the characteristics of this technology.
+We'll see a 3-layer architecture and
+
+00:00:46.640 --> 00:00:52.909
+the role of JSF in this Java
+architecture. We'll see how JSF
+
+00:00:52.909 --> 00:00:57.769
+implements the MVC (Model-View-Controller)
+design pattern. We will also carry out
+
+00:00:57.769 --> 00:01:01.909
+the installation of the tools that we
+will use throughout the course and we'll
+
+00:01:01.909 --> 00:01:09.950
+create a first HelloWorld project with
+JSF. Basic Concepts: Managed Beans in
+
+00:01:09.950 --> 00:01:15.650
+JSF. in this section we will review
+the concept of managed beans in JSF, also
+
+00:01:15.650 --> 00:01:21.980
+the scopes of the Managed Beans in JSF, both
+using the JSF standard and the Java EE
+
+00:01:21.980 --> 00:01:28.100
+standard using the concept of CDI
+(Context and Dependency Injection). We'll
+
+00:01:28.100 --> 00:01:33.350
+also see how to inject Manage Beans
+dependencies with the JSF standard such
+
+00:01:33.350 --> 00:01:39.950
+as using the standard in Java EE using
+CDI. Likewise, we'll study the concept of
+
+00:01:39.950 --> 00:01:45.980
+Expression Language (EL) in JSF and how to
+apply it to our JSF pages. We'll review
+
+00:01:45.980 --> 00:01:52.460
+the faces-config.xml file that is
+the JSF configuration file and we'll do
+
+00:01:52.460 --> 00:01:58.460
+several exercises to implement the
+Managed Bean concepts in JSF. Flow
+
+00:01:58.460 --> 00:02:03.950
+between Pages: Navigation with JSF. We'll
+review the concept of navigation or flow
+
+00:02:03.950 --> 00:02:11.390
+between JSF pages and how it is
+implemented in JSF. We'll review how
+
+00:02:11.390 --> 00:02:15.980
+to define this concept explicitly: Static Navigation using the faces-config.xml
+
+00:02:15.980 --> 00:02:21.739
+file and in implicitly: Dynamic
+Navigation, which is the form we'll use
+
+00:02:21.739 --> 00:02:27.709
+most
+often. Validation of data: Validations in
+
+00:02:27.709 --> 00:02:32.300
+JSF. In this section we'll study the
+validation issue when sending
+
+00:02:32.300 --> 00:02:37.280
+information to the server using the JSF
+forms. These are the standard validations,
+
+00:02:37.280 --> 00:02:40.910
+validations in the methods of the
+managed beans, and personalized
+
+00:02:40.910 --> 00:02:45.920
+validations. We'll carry out an exercise to
+put this concept of validators into
+
+00:02:45.920 --> 00:02:53.330
+practice in JSF. Conversion of Data:
+Conversions in JSF.
+
+00:02:53.330 --> 00:02:57.140
+In this section we'll analyze the
+concept of Conversion in JSF. The
+
+00:02:57.140 --> 00:03:02.030
+converters cover the need to assign and
+convert values between the JSF pages and
+
+00:03:02.030 --> 00:03:07.010
+the attributes of the Managed Beans
+automatically. We'll study the implicit
+
+00:03:07.010 --> 00:03:11.989
+and explicit converters, as well as the
+custom converters and we'll create an
+
+00:03:11.989 --> 00:03:19.430
+exercise to implement the converters in
+JSF. Capturing events: Management of
+
+00:03:19.430 --> 00:03:25.160
+Events in JSF. Will see the topic of
+event management in JSF. This concept
+
+00:03:25.160 --> 00:03:30.519
+allow us to capture events when there are
+changes in the JSF pages, in the view, and
+
+00:03:30.519 --> 00:03:35.930
+execute a method in the managed bean. There are different types of events that
+
+00:03:35.930 --> 00:03:40.370
+we can detect. One of them is the valueChangeListener and another
+
+00:03:40.370 --> 00:03:45.700
+actionListener. We'll do several exercises to
+put this concept into practice
+
+00:03:45.700 --> 00:03:50.810
+Presentation. Facelets in JSF.
+We'll review the technology of the facelets
+
+00:03:50.810 --> 00:03:58.820
+in JSF. We'll see the
+characteristics. Presentation: Facelets
+
+00:03:58.820 --> 00:04:03.109
+in JSF. We'll review a technology
+of the phase let's enjoy yourself we'll
+
+00:04:03.109 --> 00:04:07.250
+see the characteristics of this
+technology and why they are the standard
+
+00:04:07.250 --> 00:04:11.510
+today instead of JSP's. We'll also
+see the concept of templates using
+
+00:04:11.510 --> 00:04:17.690
+Facelets and create an exercise to put
+this concept into practice. Integrating
+
+00:04:17.690 --> 00:04:21.680
+all: Real-world web application with JSF
+and Java EE
+
+00:04:21.680 --> 00:04:27.950
+We will create a web application using
+JSF and integrated it with Java EE by
+
+00:04:27.950 --> 00:04:32.060
+deploying it in a Java application
+server. This application will have a
+
+00:04:32.060 --> 00:04:36.080
+3-layer architecture and we'll
+define perfectly the role of each
+
+00:04:36.080 --> 00:04:40.840
+technology in this practical application.
+JSF in the presentation layer,
+
+00:04:40.840 --> 00:04:45.710
+integrating it with EJB in the
+business layer and integrating it with
+
+00:04:45.710 --> 00:04:50.300
+JPA in the data layer. This application
+will serve as the basis for your own
+
+00:04:50.300 --> 00:04:59.270
+Java Web and Enterprise applications
+using JSF and Java EE. Broadly speaking
+
+00:04:59.270 --> 00:05:03.710
+this is the general agenda of the JavaServer
+Faces course. These are just some of the
+
+00:05:03.710 --> 00:05:07.490
+many more topics we learned throughout
+this course so if you're ready let's
+
+00:05:07.490 --> 00:05:10.240
+start immediately :)
+

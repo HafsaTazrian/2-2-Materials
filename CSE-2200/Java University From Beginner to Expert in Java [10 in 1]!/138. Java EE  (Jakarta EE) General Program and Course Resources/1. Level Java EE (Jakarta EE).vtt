@@ -1,0 +1,207 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:15.280 --> 00:00:19.880
+My name is Ubaldo Acosta. I hope you're
+ready to begin. Let's review the general
+
+00:00:19.880 --> 00:00:26.080
+agenda of the Java Enterprise Edition
+course. Are you ready? let's go
+
+00:00:26.080 --> 00:00:31.460
+Starting: Introduction to Java EE. In this
+section we'll study an introduction to
+
+00:00:31.460 --> 00:00:37.059
+Java Enterprise Technology (Java EE). We'll
+see: What is an enterprise application?
+
+00:00:37.059 --> 00:00:43.670
+what is Java EE? and several of the API's
+that includes it. We'll look at the history
+
+00:00:43.670 --> 00:00:48.650
+of Java Enterprise versions from the
+time J2EE was named to the current
+
+00:00:48.650 --> 00:00:54.860
+evolution known as Jakarta EE, and we'll
+mention the architecture which will work
+
+00:00:54.860 --> 00:00:59.570
+throughout the course. We'll also carry out
+the installation of the tools that we'll
+
+00:00:59.570 --> 00:01:03.379
+use throughout the course and we'll
+create a first hello world project with
+
+00:01:03.379 --> 00:01:10.400
+Java EE. EJB's:
+Enterprise JavaBeans: In this section
+
+00:01:10.400 --> 00:01:15.950
+we'll review what Enterprise JavaBeans
+are. We'll see the characteristics of a
+
+00:01:15.950 --> 00:01:21.830
+EJB's, the configuration and the types
+of EJB's that exist in Java EE. We'll
+
+00:01:21.830 --> 00:01:26.660
+also review the way to communicate with
+an EJB by creating a Java client
+
+00:01:26.660 --> 00:01:32.240
+Likewise, we'll review the differences
+between EJB and EJB Light, since it's
+
+00:01:32.240 --> 00:01:38.720
+possible to deploy the EJB's in a web
+server or full Java servers. We'll do
+
+00:01:38.720 --> 00:01:42.940
+several exercises to put these concepts
+into practice
+
+00:01:43.390 --> 00:01:48.140
+Persistence: Java Persistence API. We'll
+review the Java Persistence API
+
+00:01:48.140 --> 00:01:53.570
+concept in Java EE. We'll study the
+characteristics of the JPA and the role
+
+00:01:53.570 --> 00:01:58.040
+they fulfill within a Java EE
+architecture. We'll see the concept of
+
+00:01:58.040 --> 00:02:03.260
+Entity Classes and the concept of Entity
+Manager and Persistence Unit. We'll create
+
+00:02:03.260 --> 00:02:11.709
+several exercises to put these issues
+into practice. Servlets and JSP's:
+
+00:02:11.709 --> 00:02:16.459
+Integration with Servlets and JSPs. In
+this section we'll analyze the
+
+00:02:16.459 --> 00:02:20.780
+Integration of Servlet technology and
+JavaServer Pages technologies within
+
+00:02:20.780 --> 00:02:24.830
+Java EE.
+We'll see how to use EJB's within
+
+00:02:24.830 --> 00:02:29.570
+Servlets and we'll apply the MVC design
+pattern to implement this integration of
+
+00:02:29.570 --> 00:02:36.560
+business technologies. JSF:
+Integration with JavaServer Faces. In
+
+00:02:36.560 --> 00:02:41.810
+this section will student integration of
+technologies between JSF and Java EE. The
+
+00:02:41.810 --> 00:02:46.970
+JavaServer faces layer will be extended
+with the PrimeFaces API, which is one of
+
+00:02:46.970 --> 00:02:52.610
+the most used JSF extension today. We
+will create an exercise with a 3
+
+00:02:52.610 --> 00:02:57.500
+layer architecture and implement the
+integration between JSF, Primefaces, EJB's
+
+00:02:57.500 --> 00:03:07.070
+and JPA. Intercommunication: Web Services
+(SOAP and REST) we will see the topic of
+
+00:03:07.070 --> 00:03:11.240
+Web Services in Java EE. There are
+different ways to create Web Services
+
+00:03:11.240 --> 00:03:18.350
+with Java EE, such as SOAP Web Services
+(JAX-WS API) and REST Web Services (JAX-RS
+
+00:03:18.350 --> 00:03:24.500
+API). We'll see how to create web services
+with this API's, and also the client of
+
+00:03:24.500 --> 00:03:28.850
+these Web Services. We'll do several
+exercises to put these concepts into
+
+00:03:28.850 --> 00:03:37.130
+practice. Security: Security in Java EE. We'll
+review the security topic in Java EE
+
+00:03:37.130 --> 00:03:42.230
+will add security to our web interface
+to our EJB's
+
+00:03:42.230 --> 00:03:46.690
+and Web Services. In addition, to validate
+each of the clients to pass the security
+
+00:03:46.690 --> 00:03:51.080
+established by the application will
+create several exercises to put this
+
+00:03:51.080 --> 00:03:58.700
+concept into practice. Integrating All:
+Creation of real-world web application
+
+00:03:58.700 --> 00:04:06.739
+with JSF, PrimeFaces, AJAX,  EJB, JPA, Web
+Services and Security. We'll create an
+
+00:04:06.739 --> 00:04:11.180
+application which will integrate
+everything seen in the course from basic
+
+00:04:11.180 --> 00:04:15.110
+topics to more advanced topics. This
+application will have a 3-layer
+
+00:04:15.110 --> 00:04:20.090
+architecture and will perfectly define
+the role of each technology in this
+
+00:04:20.090 --> 00:04:24.800
+practical application which will serve
+as the basis for your own Java and
+
+00:04:24.800 --> 00:04:29.330
+enterprise applications using
+technologies such as JSF with Prime
+
+00:04:29.330 --> 00:04:35.550
+Faces, including AJAX, EJB's and their
+clients, Web Services and its Customers
+
+00:04:35.550 --> 00:04:42.900
+and all adding security in our Java EE
+application. Broadly speaking this is a
+
+00:04:42.900 --> 00:04:47.130
+general agenda of the Java EE course
+these are just some of the many more
+
+00:04:47.130 --> 00:04:50.820
+topics we'll learn throughout this
+course, so if you're ready, let's start
+
+00:04:50.820 --> 00:04:53.630
+immediately :)
+
